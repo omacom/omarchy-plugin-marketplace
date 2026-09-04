@@ -96,6 +96,7 @@ import {
 import {
   catalogCategoryTotals,
   matchesKidsTaxonomy,
+  matchesVpnTaxonomy,
 } from "../site/assets/js/taxonomy.js";
 
 function contrastRatio(first, second) {
@@ -1177,6 +1178,52 @@ test("Kids catalog filtering uses only the exact controlled taxonomy", () => {
   assert.equal(catalogCategoryTotals([{ category: "Other", tags: [] }]).has("Kids"), false);
 });
 
+test("VPN catalog filtering requires exact category, VPN identity, or security-scoped description evidence", () => {
+  for (const plugin of [
+    { id: "example.client", name: "Client", category: "VPN", tags: [] },
+    { id: "example.airvpn", name: "AirVPN", tags: [] },
+    { id: "example.wireguard", name: "Tunnel", tags: [] },
+    { id: "jwhall.omanodes", name: "Omanodes", tags: ["system"], description: "Manage ZeroTier networks." },
+    { id: "example.client", name: "Mullvad", tags: [] },
+    { id: "example.client", name: "Tailscale", tags: [] },
+    { id: "example.client", name: "ZeroTier", tags: [] },
+    { id: "local.warp", name: "Cloudflare WARP", tags: ["security"] },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), true);
+  }
+  for (const plugin of [
+    undefined,
+    {},
+    { id: "example.network", name: "Network Monitor", category: "vpn", tags: [] },
+    { id: "example.client", name: "Client", category: "VPN ", repo: "https://github.com/example/tailscale", tags: [] },
+    { id: "example.companion", name: "Companion", tags: [], description: "Connects over a Tailscale VPN." },
+    { id: "example.warp", name: "Warp terminal", tags: [] },
+    { id: "io.github.wireguard.clock", name: "Clock", tags: [] },
+    { id: "vpnvendor.notes", name: "Notes", tags: [] },
+    { id: "example.notvpn", name: "Client", tags: [] },
+    { id: "example.client", name: "NotVPN", tags: [] },
+    { id: "example.client", name: "Client", tags: ["security"], description: "A notavpn helper." },
+    { id: "example.tunnel", name: "Tunnel", tags: "security", description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["Security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), false);
+  }
+
+  const totals = catalogCategoryTotals([
+    { id: "example.vpn", category: "System", tags: [] },
+    { id: "example.wireguard", category: "System", tags: ["security"], description: "VPN control." },
+    { id: "example.tunnel", category: "Other", tags: ["security"], description: "WireGuard control." },
+    { id: "example.network", category: "Other", tags: [] },
+  ]);
+  assert.equal([...totals.keys()].filter((category) => category === "VPN").length, 1);
+  assert.equal(totals.get("VPN"), 3);
+  assert.equal(totals.get("System"), 2);
+  assert.equal(totals.get("Other"), 2);
+  assert.equal(catalogCategoryTotals([{ id: "example.network", category: "Other", tags: [] }]).has("VPN"), false);
+});
+
 test("entry modules and their shared dependency use one cache key", async () => {
   const root = new URL("../", import.meta.url);
   const files = {
@@ -1224,9 +1271,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260831-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
+  assert.equal(keys[0], "20260911-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260911-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260911-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
@@ -1559,9 +1606,11 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
   assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
   assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
+  assert.match(files.app, /if \(filter === "VPN"\) return matchesVpnTaxonomy\(plugin\)/);
   assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)/);
+  assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
   assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
-  assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"kids"/);
+  assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"(?:kids|vpn)"/);
   assert.match(files.app, /value: `tag:\$\{tag\}`/);
   assert.match(files.app, /return labels\.length \? labels : \[category \|\| "System"\]/);
   assert.match(files.sharedJs, /function matchesVerificationStatus\(plugin, status\) \{[\s\S]*!plugin\?\.builtIn[\s\S]*plugin\?\.repositoryLayout !== "suite"[\s\S]*plugin\?\.verificationStatus === status/);
