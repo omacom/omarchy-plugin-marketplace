@@ -22,9 +22,9 @@ Use the single [plugin verification form](https://github.com/omacom/omarchy-plug
 
 ## Engagement Metrics
 
-The marketplace shows anonymous aggregate detail views, successful command copies, and hearts. These are marketplace interactions—not downloads, installations, unique people, verified votes, rankings, or security signals.
+The marketplace shows anonymous aggregate detail views, successful command copies, and hearts. These are marketplace interactions—not downloads, installations, unique people, verified votes, rankings, or security signals. Direct clients can inflate them; browser guards, origin checks, and rate limits only raise the cost of abuse.
 
-Event bodies contain only the catalog plugin ID and fixed action type. The marketplace stores no accounts, cookies, IP addresses, user-agent strings, command text, or repository URLs in D1. Cloudflare processes normal request metadata and uses the request IP only as an ephemeral edge rate-limit key; browser guards and rate limits remain best-effort controls.
+Event bodies contain only the catalog plugin ID and fixed action type. The marketplace stores no accounts, cookies, IP addresses, user-agent strings, command text, or repository URLs in D1. Cloudflare uses the request address only for ephemeral abuse controls, including burst limits and sliding-window quotas keyed on IPv4 or IPv6 /64. Those controls are not identity, and rotating addresses can still move the counters.
 
 ## Security Notice
 

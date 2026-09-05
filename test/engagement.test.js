@@ -21,8 +21,10 @@ import {
   pluginHeartButton,
 } from "../site/assets/js/shared.js";
 import {
+  consumeSlidingWindow,
   engagementUpsertStatement,
   handleRequest,
+  normalizeClientAddress,
   parseEngagementEvent,
 } from "../worker/src/index.js";
 
@@ -82,6 +84,31 @@ function fakeRateLimiter(success = true) {
       return { success };
     },
   };
+}
+
+function fakeCache() {
+  const values = new Map();
+  return {
+    values,
+    async match(request) {
+      return values.get(request.url)?.clone();
+    },
+    async put(request, response) {
+      values.set(request.url, response.clone());
+    },
+  };
+}
+
+function eventHeaders({
+  origin = "https://omarchyplugins.com",
+  ip = "192.0.2.1",
+} = {}) {
+  const headers = {
+    "Content-Type": "application/json",
+    Origin: origin,
+  };
+  if (ip) headers["CF-Connecting-IP"] = ip;
+  return headers;
 }
 
 const productionLocation = { hostname: "plugins.omarchy.org" };
@@ -519,10 +546,7 @@ test("Worker rejects streamed oversized event bodies without buffering or catalo
   const rateLimiter = fakeRateLimiter();
   const request = new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders(),
     body: JSON.stringify({ pluginId: "example.plugin", type: "copy", padding: "x".repeat(1100) }),
   });
   assert.equal(request.headers.has("Content-Length"), false);
@@ -563,7 +587,7 @@ test("Worker rate limiting runs before request body, catalog, and D1 access", as
   assert.equal(response.status, 429);
   assert.equal(bodyAccessed, false);
   assert.equal(response.headers.get("Retry-After"), "60");
-  assert.deepEqual(rateLimiter.keys, ["events:192.0.2.1"]);
+  assert.deepEqual(rateLimiter.keys, ["events:v4:192.0.2.1"]);
   assert.equal(database.calls.length, 0);
 });
 
@@ -571,10 +595,7 @@ test("Worker fails closed when its target limiter is unavailable", async () => {
   const database = fakeDatabase();
   const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders(),
     body: JSON.stringify({ pluginId: "example.plugin", type: "copy" }),
   }), {
     ENGAGEMENT_DB: database,
@@ -595,11 +616,7 @@ test("Worker applies a generic target limiter before D1 access", async () => {
   const targetRateLimiter = fakeRateLimiter(false);
   const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "CF-Connecting-IP": "192.0.2.8",
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders({ ip: "192.0.2.8" }),
     body: JSON.stringify({ pluginId: "example.plugin", type: "copy" }),
   }), {
     ENGAGEMENT_DB: database,
@@ -613,8 +630,8 @@ test("Worker applies a generic target limiter before D1 access", async () => {
   assert.equal(response.status, 429);
   assert.deepEqual(await response.json(), { error: "Rate limit exceeded" });
   assert.equal(response.headers.get("Retry-After"), "60");
-  assert.deepEqual(outerRateLimiter.keys, ["events:192.0.2.8"]);
-  assert.deepEqual(targetRateLimiter.keys, ["target:192.0.2.8:example.plugin:copy"]);
+  assert.deepEqual(outerRateLimiter.keys, ["events:v4:192.0.2.8"]);
+  assert.deepEqual(targetRateLimiter.keys, ["target:v4:192.0.2.8:example.plugin:copy"]);
   assert.equal(database.calls.length, 0);
 });
 
@@ -622,10 +639,7 @@ test("Worker fails closed when aggregate limit configuration is unavailable", as
   const database = fakeDatabase();
   const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders(),
     body: JSON.stringify({ pluginId: "example.plugin", type: "view" }),
   }), {
     ENGAGEMENT_DB: database,
@@ -644,10 +658,7 @@ test("Worker treats an aggregate event ceiling as a real no-op", async () => {
   const database = fakeDatabase([], { recorded: null });
   const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders(),
     body: JSON.stringify({ pluginId: "example.plugin", type: "view" }),
   }), {
     ENGAGEMENT_DB: database,
@@ -656,6 +667,7 @@ test("Worker treats an aggregate event ceiling as a real no-op", async () => {
     CATALOG_URL: "https://catalog-limit.example/catalog.json",
     ...testMinuteLimitVars,
   }, {
+    cache: fakeCache(),
     fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
   });
   assert.equal(response.status, 202);
@@ -668,10 +680,7 @@ test("Worker returns no success when its transactional write-and-totals batch fa
   const database = fakeDatabase([], { batchError: new Error("totals failed") });
   const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Origin: "https://omarchyplugins.com",
-    },
+    headers: eventHeaders(),
     body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
   }), {
     ENGAGEMENT_DB: database,
@@ -680,6 +689,7 @@ test("Worker returns no success when its transactional write-and-totals batch fa
     CATALOG_URL: "https://catalog-batch.example/catalog.json",
     ...testMinuteLimitVars,
   }, {
+    cache: fakeCache(),
     fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
   });
   assert.equal(response.status, 503);
@@ -868,12 +878,15 @@ test("Worker records only known catalog plugins from allowed origins", async () 
     "https://api.omarchyplugins.com/v1/events",
     {
       method: "POST",
-      headers: { "Content-Type": "application/json", Origin: origin },
+      headers: eventHeaders({ origin }),
       body: JSON.stringify({ pluginId, type }),
     },
   );
 
-  const response = await handleRequest(request("example.plugin"), env, { fetchImpl });
+  const response = await handleRequest(request("example.plugin"), env, {
+    cache: fakeCache(),
+    fetchImpl,
+  });
   assert.equal(response.status, 202);
   assert.deepEqual(await response.json(), {
     recorded: true,
@@ -891,7 +904,7 @@ test("Worker records only known catalog plugins from allowed origins", async () 
   const canonical = await handleRequest(
     request("example.plugin", "https://plugins.omarchy.org", "copy"),
     env,
-    { fetchImpl },
+    { cache: fakeCache(), fetchImpl },
   );
   assert.equal(canonical.status, 202);
   assert.equal(canonical.headers.get("Access-Control-Allow-Origin"), "https://plugins.omarchy.org");
@@ -901,6 +914,211 @@ test("Worker records only known catalog plugins from allowed origins", async () 
   const forbidden = await handleRequest(request("example.plugin", "https://attacker.example"), env, { fetchImpl });
   assert.equal(forbidden.status, 403);
   assert.equal(database.calls.length, 4);
+});
+
+test("Worker rejects events without a usable client address before reading the body", async () => {
+  const database = fakeDatabase();
+  const rateLimiter = fakeRateLimiter();
+  let bodyAccessed = false;
+  const request = {
+    url: "https://api.omarchyplugins.com/v1/events",
+    method: "POST",
+    headers: new Headers({
+      "Content-Type": "application/json",
+      Origin: "https://omarchyplugins.com",
+    }),
+    get body() {
+      bodyAccessed = true;
+      throw new Error("body must not be accessed");
+    },
+  };
+  const missing = await handleRequest(request, {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: rateLimiter,
+  });
+  assert.equal(missing.status, 429);
+  assert.equal(bodyAccessed, false);
+  assert.equal(rateLimiter.keys.length, 0);
+  assert.equal(database.calls.length, 0);
+
+  const invalid = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders({ ip: "not-an-ip" }),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  }), {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: rateLimiter,
+  });
+  assert.equal(invalid.status, 429);
+  assert.equal(database.calls.length, 0);
+});
+
+test("normalizeClientAddress maps IPv4, mapped IPv6, and IPv6 /64 prefixes", () => {
+  assert.equal(normalizeClientAddress("192.0.2.1"), "v4:192.0.2.1");
+  assert.equal(normalizeClientAddress("::ffff:192.0.2.1"), "v4:192.0.2.1");
+  assert.equal(normalizeClientAddress("0:0:0:0:0:ffff:192.0.2.1"), "v4:192.0.2.1");
+  assert.equal(normalizeClientAddress("::ffff:c000:201"), "v4:192.0.2.1");
+  assert.equal(normalizeClientAddress("2001:db8:1:2::1"), "v6:2001:0db8:0001:0002/64");
+  assert.equal(normalizeClientAddress("2001:DB8:1:2:0:0:0:ffff"), "v6:2001:0db8:0001:0002/64");
+  assert.equal(normalizeClientAddress("2001:db8:1:3::1"), "v6:2001:0db8:0001:0003/64");
+  assert.equal(normalizeClientAddress("[2001:db8:1:2::1]"), "v6:2001:0db8:0001:0002/64");
+  assert.equal(normalizeClientAddress("::1"), "v6:0000:0000:0000:0000/64");
+  assert.equal(normalizeClientAddress(""), "");
+  assert.equal(normalizeClientAddress("999.0.2.1"), "");
+  assert.equal(normalizeClientAddress("2001:db8::1::2"), "");
+});
+
+test("sliding windows reject overflow until the oldest event expires", async () => {
+  const cache = fakeCache();
+  const now = Date.parse("2026-08-21T12:00:00.000Z");
+  const first = await consumeSlidingWindow(cache, {
+    key: "hearts",
+    limit: 1,
+    windowSeconds: 60,
+    now,
+  });
+  const blocked = await consumeSlidingWindow(cache, {
+    key: "hearts",
+    limit: 1,
+    windowSeconds: 60,
+    now: now + 59_000,
+  });
+  const reopened = await consumeSlidingWindow(cache, {
+    key: "hearts",
+    limit: 1,
+    windowSeconds: 60,
+    now: now + 60_000,
+  });
+  assert.equal(first.success, true);
+  assert.equal(blocked.success, false);
+  assert.equal(blocked.retryAfter, 1);
+  assert.equal(reopened.success, true);
+});
+
+test("Worker address windows stop repeat hearts from one address without D1 actor keys", async () => {
+  const database = fakeDatabase();
+  const cache = fakeCache();
+  const now = Date.parse("2026-08-21T12:00:00.000Z");
+  const env = {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-address.example/catalog.json",
+    ...testMinuteLimitVars,
+  };
+  const options = {
+    cache,
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+    now,
+  };
+  const request = () => new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders(),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  });
+
+  const first = await handleRequest(request(), env, options);
+  assert.equal(first.status, 202);
+  assert.deepEqual(await first.json(), {
+    recorded: true,
+    plugin: { views: 9, copies: 4, hearts: 3 },
+  });
+  assert.equal(database.calls.length, 2);
+
+  const blocked = await handleRequest(request(), env, options);
+  assert.equal(blocked.status, 429);
+  assert.deepEqual(await blocked.json(), { error: "Rate limit exceeded" });
+  assert.equal(blocked.headers.get("Retry-After"), "86400");
+  assert.equal(database.calls.length, 2);
+  assert.equal([...cache.values.keys()].every((url) => (
+    url.startsWith("https://engagement-quota.invalid/")
+    && !url.includes("192.0.2.1")
+    && !url.includes("example.plugin")
+  )), true);
+
+  const later = await handleRequest(request(), env, {
+    ...options,
+    now: now + 86_400_000,
+  });
+  assert.equal(later.status, 202);
+  assert.equal(database.calls.length, 4);
+});
+
+test("Worker shares IPv6 /64 quota across interface IDs", async () => {
+  const database = fakeDatabase();
+  const cache = fakeCache();
+  const env = {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-v6.example/catalog.json",
+    ...testMinuteLimitVars,
+  };
+  const post = (ip) => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders({ ip }),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  }), env, {
+    cache,
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+    now: Date.parse("2026-08-21T15:00:00.000Z"),
+  });
+
+  assert.equal((await post("2001:db8:1:2::1")).status, 202);
+  assert.equal((await post("2001:db8:1:2:0:0:0:ffff")).status, 429);
+  assert.equal((await post("2001:db8:1:3::1")).status, 202);
+  assert.equal(database.calls.length, 4);
+});
+
+test("Worker hour windows cap spray across plugins from one address", async () => {
+  const database = fakeDatabase();
+  const cache = fakeCache();
+  const env = {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-spray.example/catalog.json",
+    HEART_ADDRESS_HOUR_EVENT_LIMIT: "2",
+    ...testMinuteLimitVars,
+  };
+  const plugins = [{ id: "alpha.plugin" }, { id: "beta.plugin" }, { id: "gamma.plugin" }];
+  const post = (pluginId) => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders(),
+    body: JSON.stringify({ pluginId, type: "heart" }),
+  }), env, {
+    cache,
+    fetchImpl: async () => responseJson({ plugins }),
+    now: Date.parse("2026-08-21T16:00:00.000Z"),
+  });
+
+  assert.equal((await post("alpha.plugin")).status, 202);
+  assert.equal((await post("beta.plugin")).status, 202);
+  const blocked = await post("gamma.plugin");
+  assert.equal(blocked.status, 429);
+  assert.equal(blocked.headers.get("Retry-After"), "3600");
+  assert.equal(database.calls.length, 4);
+});
+
+test("Worker fails closed when the address-window cache is unavailable", async () => {
+  const database = fakeDatabase();
+  const response = await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders(),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "copy" }),
+  }), {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-cache.example/catalog.json",
+    ...testMinuteLimitVars,
+  }, {
+    cache: {},
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+  });
+  assert.equal(response.status, 503);
+  assert.deepEqual(await response.json(), { error: "Event service unavailable" });
+  assert.equal(database.calls.length, 0);
 });
 
 test("Worker deployment files contain placeholders but no credentials", async () => {
@@ -940,4 +1158,7 @@ test("Worker deployment files contain placeholders but no credentials", async ()
   assert.match(checkMigration, /substr\(hearts_minute, 15, 2\) NOT GLOB '\*\[\^0-9\]\*'/);
   assert.doesNotMatch(checkMigration, /actor|browser|ip_address/i);
   assert.doesNotMatch(`${workerSource}${clientSource}`, /actorId|actor_hash|omarchy-plugin-actor/i);
+  assert.match(workerSource, /engagement-quota\.invalid/);
+  assert.match(workerSource, /normalizeClientAddress/);
+  assert.doesNotMatch(engagementUpsertStatement(), /ip_address|client_address|quota/i);
 });

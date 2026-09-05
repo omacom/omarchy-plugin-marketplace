@@ -13,7 +13,7 @@ Preserve these product qualities:
 - Fast, static, accessible, and usable without an application server
 - Curated, while stating clearly that listing is not a security review
 
-Do not introduce accounts, a database, a backend, a frontend framework, or a new dependency unless the maintainer explicitly approves that architectural change. The approved exception is the credential-free engagement feature under `worker/`: a narrowly scoped Cloudflare Worker and D1 database may store anonymous aggregate plugin detail views, successful command-copy actions, and hearts guarded by local browser storage. Hearts are anonymous reactions, not unique or verified votes. Do not expand it into identity, profiling, comments, scored ratings, installation telemetry, or general analytics without separate approval.
+Do not introduce accounts, a database, a backend, a frontend framework, or a new dependency unless the maintainer explicitly approves that architectural change. The approved exception is the credential-free engagement feature under `worker/`: a narrowly scoped Cloudflare Worker and D1 database may store anonymous aggregate plugin detail views, successful command-copy actions, and hearts guarded by local browser storage. Hearts are anonymous reactions, not unique or verified votes. Ephemeral edge burst limits and Cache-API sliding windows may use the request address (IPv4 or IPv6 /64) as a rate-limit key; they must not persist addresses or other request-derived keys in D1. Do not expand it into identity, profiling, comments, scored ratings, installation telemetry, or general analytics without separate approval.
 
 ## Project structure and sources of truth
 

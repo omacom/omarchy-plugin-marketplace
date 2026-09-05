@@ -10,6 +10,12 @@
     "VIEW_MINUTE_EVENT_LIMIT": "REPLACE_WITH_VIEW_MINUTE_LIMIT",
     "COPY_MINUTE_EVENT_LIMIT": "REPLACE_WITH_COPY_MINUTE_LIMIT",
     "HEART_MINUTE_EVENT_LIMIT": "REPLACE_WITH_HEART_MINUTE_LIMIT"
+    // Optional per-address sliding-window overrides. Unset values use Worker defaults:
+    // 60/240 view hour/day, 12/36 copy hour/day, 8/24 heart hour/day,
+    // 5 view and 1 copy per plugin per hour, and 1 heart per plugin per day.
+    // "VIEW_ADDRESS_HOUR_EVENT_LIMIT": "60",
+    // "COPY_ADDRESS_HOUR_EVENT_LIMIT": "12",
+    // "HEART_ADDRESS_HOUR_EVENT_LIMIT": "8"
   },
   "d1_databases": [
     {
