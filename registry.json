@@ -127851,6 +127851,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/djunho/omarchy-zmk-split-battery",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:38:13.038Z",
+      "listingValidatedCommit": "f0e89224f9dfef1ebade95e1c2a0bf5357d0345c",
+      "listingValidatedAt": "2026-09-05T22:38:13.038Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "djunho/omarchy-zmk-split-battery",
+        "pluginIds": [
+          "io.github.djunho.zmk-split-battery"
+        ],
+        "commit": "f0e89224f9dfef1ebade95e1c2a0bf5357d0345c",
+        "checkedAt": "2026-09-05T22:38:12.969Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.djunho.zmk-split-battery": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
