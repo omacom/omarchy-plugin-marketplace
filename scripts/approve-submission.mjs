@@ -75,6 +75,21 @@ export function parseApprovableSubmission(issue) {
   return parseIssueSubmission(issue);
 }
 
+export function assertApprovedIssueTitle(currentTitle, approvedTitle) {
+  if (typeof approvedTitle !== "string" || currentTitle !== approvedTitle) {
+    throw new SubmissionApprovalError(
+      "approval-body-changed",
+      "The submission title changed after approval; review it again before reapplying approved-and-verified",
+    );
+  }
+}
+
+export function parseApprovedSubmissionSnapshot(issue, approvedIssueBody, approvedIssueTitle) {
+  assertApprovedIssueBody(issue?.body, approvedIssueBody);
+  assertApprovedIssueTitle(issue?.title, approvedIssueTitle);
+  return parseApprovableSubmission(issue);
+}
+
 export function createRegistrySource({
   submission,
   manifests,
@@ -286,6 +301,12 @@ export async function githubIssueComments(repositoryName, issueNumber, token) {
       `/repos/${repositoryName}/issues/${issueNumber}/comments?per_page=100&page=${page}`,
       token,
     );
+    if (!Array.isArray(batch) || batch.length > 100) {
+      throw new SubmissionApprovalError(
+        "approval-security-baseline-invalid",
+        "GitHub returned an invalid or oversized issue comment page",
+      );
+    }
     comments.push(...batch);
     if (batch.length < 100) return comments;
   }
@@ -302,6 +323,12 @@ export async function githubIssueEvents(repositoryName, issueNumber, token) {
       `/repos/${repositoryName}/issues/${issueNumber}/events?per_page=100&page=${page}`,
       token,
     );
+    if (!Array.isArray(batch) || batch.length > 100) {
+      throw new SubmissionApprovalError(
+        "approval-event-invalid",
+        "GitHub returned an invalid or oversized issue event page",
+      );
+    }
     events.push(...batch);
     if (batch.length < 100) return events;
   }
@@ -323,8 +350,12 @@ export function approvalDecisionForEvents(events, {
   approver,
   expectedEventId,
   expectedRequestedAt,
+  expectedTriggeredAt,
 } = {}) {
   const requestedAt = approvalTimestamp(expectedRequestedAt);
+  const triggeredAt = approvalTimestamp(
+    expectedEventId === undefined ? expectedRequestedAt : expectedTriggeredAt,
+  );
   const invalid = () => {
     throw new SubmissionApprovalError(
       "approval-event-invalid",
@@ -335,6 +366,7 @@ export function approvalDecisionForEvents(events, {
     !Array.isArray(events)
     || typeof approver !== "string" || !approver
     || requestedAt === null
+    || triggeredAt === null
     || (expectedEventId !== undefined && (!Number.isSafeInteger(expectedEventId) || expectedEventId < 1))
   ) invalid();
 
@@ -357,19 +389,26 @@ export function approvalDecisionForEvents(events, {
     approvalTimestamp(left.created_at) - approvalTimestamp(right.created_at)
     || left.id - right.id
   ));
-  // The issues webhook has no timeline event ID. Resolve its immutable issue.updated_at
-  // to exactly one approval transition, not merely the latest event by the same actor.
-  // GitHub timestamps have second precision: any same-second approval transition is
-  // ambiguous on initial admission. Later checks must retain the selected ID and time.
-  const candidates = transitions.filter((event) => approvalTimestamp(event.created_at) === requestedAt);
-  if (expectedEventId === undefined && candidates.length !== 1) invalid();
+  // The issues webhook has no timeline event ID. On initial admission only, accept
+  // GitHub's observed event timestamp as either equal to issue.updated_at or exactly
+  // one second earlier. Count every approval transition in those two UTC seconds
+  // before checking actor or action, and fail closed on ambiguity. Once selected,
+  // later checks must retain the exact event ID and its actual timestamp while
+  // confirming that no delayed transition made the original window ambiguous.
+  const initialTimes = new Set([triggeredAt, triggeredAt - 1_000]);
+  const candidates = transitions.filter((event) => (
+    initialTimes.has(approvalTimestamp(event.created_at))
+  ));
+  if (candidates.length !== 1) invalid();
+  const resolvedEventId = expectedEventId ?? candidates[0].id;
+  if (candidates[0].id !== resolvedEventId) invalid();
   const latest = transitions.at(-1);
   if (
     !latest
+    || latest.id !== resolvedEventId
     || latest.event !== "labeled"
     || latest.actor.login !== approver
-    || approvalTimestamp(latest.created_at) !== requestedAt
-    || (expectedEventId !== undefined && latest.id !== expectedEventId)
+    || (expectedEventId !== undefined && approvalTimestamp(latest.created_at) !== requestedAt)
   ) {
     throw new SubmissionApprovalError(
       "approval-event-invalid",
@@ -441,10 +480,12 @@ export async function recheckApprovalState({
   issueNumber,
   token,
   approvedIssueBody,
+  approvedIssueTitle,
   repoUrl,
   approver,
   expectedEventId,
   expectedRequestedAt,
+  expectedTriggeredAt,
   expectedBaselineCommentId,
   expectedBaselineCommentUpdatedAt,
   expectedManualSetup,
@@ -472,6 +513,7 @@ export async function recheckApprovalState({
     );
   }
   assertApprovedIssueBody(issue.body, approvedIssueBody);
+  assertApprovedIssueTitle(issue.title, approvedIssueTitle);
   const labels = new Set((issue.labels || []).map((label) => typeof label === "string" ? label : label.name));
   for (const required of ["submission", "validated", approvedAndVerifiedLabel]) {
     if (!labels.has(required)) {
@@ -494,6 +536,7 @@ export async function recheckApprovalState({
     approver,
     expectedEventId,
     expectedRequestedAt,
+    expectedTriggeredAt,
   });
   const baselineComment = latestSecurityBaselineComment(comments);
   if (Date.parse(baselineComment.updatedAt) >= Date.parse(decision.requestedAt)) {
@@ -527,8 +570,10 @@ async function main() {
   const token = requiredEnvironment("GITHUB_TOKEN");
   const repositoryName = requiredEnvironment("GITHUB_REPOSITORY");
   const approver = requiredEnvironment("APPROVER_LOGIN");
+  const approvalTriggeredAt = requiredEnvironment("APPROVAL_TRIGGERED_AT");
   const issueNumber = Number.parseInt(requiredEnvironment("ISSUE_NUMBER"), 10);
   const approvedIssueBody = process.env.APPROVED_ISSUE_BODY;
+  const approvedIssueTitle = process.env.APPROVED_ISSUE_TITLE;
   const manualSetup = parseManualSetupApproval(requiredEnvironment("MANUAL_SETUP"));
   if (!Number.isSafeInteger(issueNumber) || issueNumber < 1) throw new Error("ISSUE_NUMBER must be positive");
   if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repositoryName)) {
@@ -536,7 +581,11 @@ async function main() {
   }
 
   const initialIssue = await githubApi(`/repos/${repositoryName}/issues/${issueNumber}`, token);
-  const submission = parseApprovableSubmission(initialIssue);
+  const submission = parseApprovedSubmissionSnapshot(
+    initialIssue,
+    approvedIssueBody,
+    approvedIssueTitle,
+  );
   const {
     issue,
     inspection,
@@ -548,9 +597,10 @@ async function main() {
     issueNumber,
     token,
     approvedIssueBody,
+    approvedIssueTitle,
     repoUrl: submission.repo,
     approver,
-    expectedRequestedAt: requiredEnvironment("APPROVAL_TRIGGERED_AT"),
+    expectedRequestedAt: approvalTriggeredAt,
     expectedManualSetup: manualSetup,
   });
   const pluginIds = inspection.manifests.map((manifest) => manifest.id);
@@ -626,7 +676,7 @@ async function main() {
     const safeName = String(firstPlugin.name).replace(/[\r\n]+/g, " ").trim();
     await appendFile(
       output,
-      `publication_kind=listing\nplugin_id=${firstPlugin.id}\nplugin_name=${safeName}\nplugin_name_markdown=${safeMarkdownText(safeName)}\nsubmission_repo_url=${submission.repo}\nsubmission_repository=${inspection.repository}\napproved_commit=${inspection.commitSha}\nverification_method=${verificationEvidence.verificationMethod}\napproval_event_id=${decision.eventId}\napproval_requested_at=${decision.requestedAt}\nbaseline_comment_id=${baselineComment.commentId}\nbaseline_comment_updated_at=${baselineComment.updatedAt}\n`,
+      `publication_kind=listing\nplugin_id=${firstPlugin.id}\nplugin_name=${safeName}\nplugin_name_markdown=${safeMarkdownText(safeName)}\nsubmission_repo_url=${submission.repo}\nsubmission_repository=${inspection.repository}\napproved_commit=${inspection.commitSha}\nverification_method=${verificationEvidence.verificationMethod}\napproval_event_id=${decision.eventId}\napproval_requested_at=${decision.requestedAt}\napproval_triggered_at=${approvalTriggeredAt}\nbaseline_comment_id=${baselineComment.commentId}\nbaseline_comment_updated_at=${baselineComment.updatedAt}\n`,
     );
   }
   console.log(
@@ -639,6 +689,7 @@ async function verifyMain() {
   const repositoryName = requiredEnvironment("GITHUB_REPOSITORY");
   const approver = requiredEnvironment("APPROVER_LOGIN");
   const requestedAt = requiredEnvironment("APPROVAL_REQUESTED_AT");
+  const triggeredAt = requiredEnvironment("APPROVAL_TRIGGERED_AT");
   const issueNumber = Number.parseInt(requiredEnvironment("ISSUE_NUMBER"), 10);
   const expectedEventId = Number.parseInt(requiredEnvironment("APPROVAL_EVENT_ID"), 10);
   const expectedBaselineCommentId = Number.parseInt(
@@ -649,6 +700,7 @@ async function verifyMain() {
     "BASELINE_COMMENT_UPDATED_AT",
   );
   const approvedIssueBody = process.env.APPROVED_ISSUE_BODY;
+  const approvedIssueTitle = process.env.APPROVED_ISSUE_TITLE;
   const repoUrl = requiredEnvironment("SUBMISSION_REPO_URL");
   const expectedManualSetup = parseManualSetupApproval(
     requiredEnvironment("MANUAL_SETUP"),
@@ -666,10 +718,12 @@ async function verifyMain() {
     issueNumber,
     token,
     approvedIssueBody,
+    approvedIssueTitle,
     repoUrl,
     approver,
     expectedEventId,
     expectedRequestedAt: requestedAt,
+    expectedTriggeredAt: triggeredAt,
     expectedBaselineCommentId,
     expectedBaselineCommentUpdatedAt,
     expectedManualSetup,

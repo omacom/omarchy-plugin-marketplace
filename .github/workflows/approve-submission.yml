@@ -33,6 +33,7 @@ jobs:
       verification_method: ${{ steps.approval.outputs.verification_method }}
       approval_event_id: ${{ steps.approval.outputs.approval_event_id }}
       approval_requested_at: ${{ steps.approval.outputs.approval_requested_at }}
+      approval_triggered_at: ${{ steps.approval.outputs.approval_triggered_at }}
       baseline_comment_id: ${{ steps.approval.outputs.baseline_comment_id }}
       baseline_comment_updated_at: ${{ steps.approval.outputs.baseline_comment_updated_at }}
       base_commit: ${{ steps.base.outputs.commit }}
@@ -166,6 +167,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPROVER_LOGIN: ${{ github.actor }}
           APPROVAL_REQUESTED_AT: ${{ steps.approval.outputs.approval_requested_at }}
+          APPROVAL_TRIGGERED_AT: ${{ steps.approval.outputs.approval_triggered_at }}
           APPROVAL_EVENT_ID: ${{ steps.approval.outputs.approval_event_id }}
           BASELINE_COMMENT_ID: ${{ steps.approval.outputs.baseline_comment_id }}
           BASELINE_COMMENT_UPDATED_AT: ${{ steps.approval.outputs.baseline_comment_updated_at }}
@@ -362,6 +364,7 @@ jobs:
           APPROVER_LOGIN: ${{ github.actor }}
           APPROVAL_EVENT_ID: ${{ needs.approve.outputs.approval_event_id }}
           APPROVAL_REQUESTED_AT: ${{ needs.approve.outputs.approval_requested_at }}
+          APPROVAL_TRIGGERED_AT: ${{ needs.approve.outputs.approval_triggered_at }}
           BASELINE_COMMENT_ID: ${{ needs.approve.outputs.baseline_comment_id }}
           BASELINE_COMMENT_UPDATED_AT: ${{ needs.approve.outputs.baseline_comment_updated_at }}
           SUBMISSION_REPOSITORY: ${{ needs.approve.outputs.submission_repository }}
@@ -370,7 +373,33 @@ jobs:
           EXPECTED_BASE_COMMIT: ${{ needs.approve.outputs.base_commit }}
         run: |
           set -euo pipefail
-          issue="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}")"
+          if ! issue_response="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}")"; then
+            echo "GitHub API issue request failed during the final check." >&2
+            exit 1
+          fi
+          if ! issue="$(
+            jq -ces --argjson issue_number "$ISSUE_NUMBER" '
+              if length == 1 then .[0] as $issue
+                | if ($issue | type) == "object"
+                    and ($issue.number | type) == "number"
+                    and $issue.number == $issue_number
+                    and ($issue.state | type) == "string"
+                    and ($issue.title | type) == "string"
+                    and ($issue.body | type) == "string"
+                    and (($issue | has("pull_request")) | not)
+                    and ($issue.labels | type) == "array"
+                    and all($issue.labels[];
+                      type == "object" and (.name | type) == "string")
+                  then $issue
+                  else error("invalid GitHub API issue response")
+                  end
+              else error("invalid GitHub API issue response")
+              end
+            ' <<< "$issue_response"
+          )"; then
+            echo "GitHub API returned an invalid final-check issue." >&2
+            exit 1
+          fi
           if ! jq -e '.state == "open" and (.pull_request | not)' <<< "$issue" >/dev/null; then
             echo "Publication issue is no longer open and approvable." >&2
             exit 1
@@ -414,10 +443,112 @@ jobs:
             echo "Publication issue body changed before publication." >&2
             exit 1
           fi
+          fetch_bounded_issue_pages() {
+            local endpoint="$1"
+            local pages='[]'
+            local batch canonical_batch page page_length
+            for page in {1..10}; do
+              if ! batch="$(gh api "${endpoint}?per_page=100&page=${page}")"; then
+                echo "GitHub API page request failed during the final check." >&2
+                return 1
+              fi
+              if ! canonical_batch="$(
+                jq -ces 'if length == 1 and (.[0] | type) == "array"
+                    and (.[0] | length) <= 100
+                  then .[0]
+                  else error("invalid or oversized GitHub API page")
+                  end' <<< "$batch"
+              )"; then
+                echo "GitHub API returned an invalid final-check page." >&2
+                return 1
+              fi
+              if ! page_length="$(jq -er 'length' <<< "$canonical_batch")"; then
+                echo "GitHub API page length validation failed during the final check." >&2
+                return 1
+              fi
+              if ! pages="$(
+                jq -ces 'if length == 2
+                    and (.[0] | type) == "array" and (.[1] | type) == "array"
+                  then .[0] + [.[1]]
+                  else error("invalid bounded page aggregation")
+                  end' \
+                  <(printf '%s\n' "$pages") <(printf '%s\n' "$canonical_batch")
+              )"; then
+                echo "GitHub API page aggregation failed during the final check." >&2
+                return 1
+              fi
+              if [ "$page_length" -lt 100 ]; then
+                printf '%s\n' "$pages"
+                return 0
+              fi
+            done
+            echo "GitHub API pagination exceeded the safe final-check limit." >&2
+            return 1
+          }
+          approval_events="$(
+            fetch_bounded_issue_pages \
+              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events"
+          )"
+          approval_state="$(
+            jq -ce --arg triggered "$APPROVAL_TRIGGERED_AT" '
+              def positive_safe_integer:
+                type == "number" and . == floor and . >= 1 and . <= 9007199254740991;
+              def event_epoch:
+                if type != "string"
+                  or (test("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.000)?Z$") | not)
+                then error("invalid approval timestamp")
+                else sub("\\.000Z$"; "Z") as $normalized
+                  | ($normalized | fromdateiso8601) as $epoch
+                  | if ($epoch | todateiso8601) != $normalized
+                    then error("invalid approval timestamp")
+                    else $epoch
+                    end
+                end;
+              ($triggered | event_epoch) as $triggered_at
+              | if type != "array" or length < 1 or length > 10
+                  or any(.[]; type != "array" or length > 100)
+                  or ([.[][]] | length) > 999
+                then error("invalid approval event pages")
+                else [.[][]
+                  | if type != "object" or (.event | type) != "string"
+                    then error("invalid issue event")
+                    elif .event != "labeled" and .event != "unlabeled" then empty
+                    elif (.label.name | type) != "string"
+                    then error("invalid label event")
+                    elif .label.name != "approved-and-verified" then empty
+                    elif ((.id | positive_safe_integer) | not)
+                      or (.actor.login | type) != "string" or .actor.login == ""
+                    then error("invalid approval event")
+                    else (.created_at | event_epoch) as $created_epoch
+                      | {
+                          id,
+                          event,
+                          actor: .actor.login,
+                          created_at,
+                          created_epoch: $created_epoch
+                        }
+                    end] as $transitions
+                  | if (($transitions | map(.id) | unique | length) != ($transitions | length))
+                    then error("invalid approval event set")
+                    else {
+                      window: [$transitions[]
+                        | select(.created_epoch == $triggered_at
+                          or .created_epoch == ($triggered_at - 1))],
+                      latest: ($transitions | sort_by(.created_epoch, .id) | last)
+                    }
+                    end
+                end
+            ' <<< "$approval_events"
+          )"
+          approval_window="$(jq -r '[(.window | length), (.window[0].id // "")] | @tsv' <<< "$approval_state")"
+          expected_approval_window="$(printf '1\t%s' "$APPROVAL_EVENT_ID")"
+          if [ "$approval_window" != "$expected_approval_window" ]; then
+            echo "The initial approval event window became missing or ambiguous before publication." >&2
+            exit 1
+          fi
           latest_approval_transition="$(
-            gh api --paginate --slurp \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events?per_page=100" \
-              | jq -r '[.[][] | select((.event == "labeled" or .event == "unlabeled") and .label.name == "approved-and-verified")] | sort_by(.created_at, .id) | last | [.id, .event, .actor.login, .created_at] | @tsv'
+            jq -r '[.latest.id // "", .latest.event // "", .latest.actor // "", .latest.created_at // ""] | @tsv' \
+              <<< "$approval_state"
           )"
           expected_approval_transition="$(printf '%s\tlabeled\t%s\t%s' "$APPROVAL_EVENT_ID" "$APPROVER_LOGIN" "$APPROVAL_REQUESTED_AT")"
           if [ "$latest_approval_transition" != "$expected_approval_transition" ]; then
@@ -429,10 +560,13 @@ jobs:
             admin|maintain|write) ;;
             *) echo "Approval permission changed before publication." >&2; exit 1 ;;
           esac
+          approval_comments="$(
+            fetch_bounded_issue_pages \
+              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments"
+          )"
           latest_baseline_comment="$(
-            gh api --paginate --slurp \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments?per_page=100" \
-              | jq -r '[.[][] | select(.user.login == "github-actions[bot]" and ((.body | test("<!-- marketplace-security-baseline:v[0-9]+ ")) or (.body | test("<!-- marketplace-security-baseline-error:v[0-9]+ -->"))))] | sort_by(.created_at, .id) | last | [.id, .updated_at] | @tsv'
+            jq -r '[.[][] | select(.user.login == "github-actions[bot]" and ((.body | test("<!-- marketplace-security-baseline:v[0-9]+ ")) or (.body | test("<!-- marketplace-security-baseline-error:v[0-9]+ -->"))))] | sort_by(.created_at, .id) | last | [.id, .updated_at] | @tsv' \
+              <<< "$approval_comments"
           )"
           expected_baseline_comment="$(printf '%s\t%s' "$BASELINE_COMMENT_ID" "$BASELINE_COMMENT_UPDATED_AT")"
           if [ "$latest_baseline_comment" != "$expected_baseline_comment" ]; then

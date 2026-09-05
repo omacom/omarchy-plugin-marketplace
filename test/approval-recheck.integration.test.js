@@ -29,6 +29,7 @@ test("listing and update live rechecks reject stale approvals before evidence ca
     const { recheckApprovalState } = await import(new URL("scripts/approve-submission.mjs", root));
     const { recheckPluginUpdateApproval } = await import(new URL("scripts/approve-plugin-update.mjs", root));
     const first = { id: 100, event: "labeled", label: { name: "approved-and-verified" }, actor: { login: "maintainer" }, created_at: "2026-09-04T21:49:24Z" };
+    const triggeredAt = "2026-09-04T21:49:25Z";
     const removed = { ...first, id: 101, event: "unlabeled", created_at: "2026-09-04T21:49:30Z" };
     const second = { ...first, id: 102, created_at: "2026-09-04T21:50:00Z" };
     const marker = serializeSecurityBaselineMarker({
@@ -58,7 +59,7 @@ test("listing and update live rechecks reject stale approvals before evidence ca
       repositoryName: "example/marketplace", issueNumber: 3380, token: "inert-token",
       approvedIssueBody: "approved body", approvedIssueTitle: "[Verify]: Example",
       repoUrl: "https://github.com/" + repo, approver: "maintainer",
-      expectedRequestedAt: first.created_at, expectedManualSetup: false,
+      expectedRequestedAt: triggeredAt, expectedManualSetup: false,
     };
     for (const [type, check] of [["submission", recheckApprovalState], ["plugin-update", recheckPluginUpdateApproval]]) {
       issue = { state: "open", body: options.approvedIssueBody, title: options.approvedIssueTitle,
@@ -67,11 +68,56 @@ test("listing and update live rechecks reject stale approvals before evidence ca
       calls.length = 0;
       let result = await check(options);
       assert.equal(result.decision.eventId, first.id);
+      assert.equal(result.decision.requestedAt, first.created_at);
       // No additional history request is introduced by trigger resolution.
       assert.equal(calls.splice(0).filter((path) => path.endsWith("/events")).length, 1);
+      if (type === "submission") {
+        issue.title = "[Plugin]: Transient title";
+        await assert.rejects(check(options), { code: "approval-body-changed" });
+        issue.title = options.approvedIssueTitle;
+      }
+      result = await check({
+        ...options,
+        expectedEventId: first.id,
+        expectedRequestedAt: first.created_at,
+        expectedTriggeredAt: triggeredAt,
+      });
+      assert.equal(result.decision.eventId, first.id);
+      // Rechecks do not retain the initial one-second compatibility allowance.
+      await assert.rejects(check({
+        ...options,
+        expectedEventId: first.id,
+        expectedTriggeredAt: triggeredAt,
+      }), { code: "approval-event-invalid" });
+      const exact = { ...first, id: 104, created_at: triggeredAt };
+      events = [exact];
+      result = await check(options);
+      assert.equal(result.decision.eventId, exact.id);
+      events = [first, exact];
+      await assert.rejects(check(options), { code: "approval-event-invalid" });
+      await assert.rejects(check({
+        ...options,
+        expectedEventId: exact.id,
+        expectedRequestedAt: exact.created_at,
+        expectedTriggeredAt: triggeredAt,
+      }), { code: "approval-event-invalid" });
+      const delayed = { ...first, id: 103, created_at: triggeredAt };
+      events = [first, delayed];
+      await assert.rejects(check(options), { code: "approval-event-invalid" });
+      await assert.rejects(check({
+        ...options,
+        expectedEventId: first.id,
+        expectedRequestedAt: first.created_at,
+        expectedTriggeredAt: triggeredAt,
+      }), { code: "approval-event-invalid" });
       events = [first, removed, second];
       await assert.rejects(check(options), { code: "approval-event-invalid" });
-      await assert.rejects(check({ ...options, expectedEventId: first.id }), { code: "approval-event-invalid" });
+      await assert.rejects(check({
+        ...options,
+        expectedEventId: first.id,
+        expectedRequestedAt: first.created_at,
+        expectedTriggeredAt: triggeredAt,
+      }), { code: "approval-event-invalid" });
       result = await check({ ...options, expectedRequestedAt: second.created_at });
       assert.equal(result.decision.eventId, second.id);
       events = [first, { ...removed, created_at: first.created_at }, { ...second, created_at: first.created_at }];

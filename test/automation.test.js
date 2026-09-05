@@ -18,6 +18,7 @@ import {
   legacyApprovalLabel,
   manualSetupNote,
   parseApprovableSubmission,
+  parseApprovedSubmissionSnapshot,
   parseManualSetupApproval,
   parseSubmissionBody,
   rightsStatement,
@@ -1972,6 +1973,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.equal((approve.match(/MANUAL_SETUP:/g) || []).length, 3);
   assert.match(approvalScript, /submission_repository=\$\{inspection\.repository\}/);
   assert.match(approvalScript, /approved_commit=\$\{inspection\.commitSha\}/);
+  assert.match(approvalScript, /approval_triggered_at=\$\{approvalTriggeredAt\}/);
+  assert.match(approve, /approval_triggered_at: \$\{\{ steps\.approval\.outputs\.approval_triggered_at \}\}/);
 
   assert.match(
     approve,
@@ -2044,6 +2047,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(approvalFinalPushStep, /gh api "repos\/\$\{GITHUB_REPOSITORY\}\/issues\/\$\{ISSUE_NUMBER\}"/);
   assert.match(approvalFinalPushStep, /blocking_label in needs-fixes security-needs-fixes/);
   assert.match(approvalFinalPushStep, /approved-and-verified[\s\S]*APPROVAL_EVENT_ID/);
+  assert.match(approvalFinalPushStep, /APPROVAL_TRIGGERED_AT:[\s\S]*expected_approval_window/);
+  assert.match(approvalFinalPushStep, /fromdateiso8601[\s\S]*initial approval event window became missing or ambiguous/);
   assert.match(approvalFinalPushStep, /BASELINE_COMMENT_ID:[\s\S]*marketplace-security-baseline:v\[0-9\]/);
   assert.match(approvalFinalPushStep, /collaborators\/\$\{APPROVER_LOGIN\}\/permission/);
   assert.match(approvalFinalPushStep, /commits\/HEAD[\s\S]*APPROVED_COMMIT/);
@@ -2734,6 +2739,63 @@ test("approval processes exactly the issue body seen when the label was applied"
   );
 });
 
+test("approval cannot mix transient first-fetch metadata with the approved snapshot", async () => {
+  const approvedBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "System",
+    tags: "Launcher",
+  });
+  const transientBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "Desktop",
+    tags: "Workspaces",
+  });
+  const approvedTitle = "[Plugin]: Approved snapshot";
+  const issue = { created_at: "2026-08-07T00:00:00Z" };
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: transientBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: "[Plugin]: Transient title", body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      undefined,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.deepEqual(
+    parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    {
+      repo: "https://github.com/example/same-plugin",
+      category: "System",
+      tags: ["launcher"],
+    },
+  );
+
+  const source = await readFile(new URL("../scripts/approve-submission.mjs", import.meta.url), "utf8");
+  assert.match(
+    source,
+    /const submission = parseApprovedSubmissionSnapshot\([\s\S]*initialIssue,[\s\S]*approvedIssueBody,[\s\S]*approvedIssueTitle,[\s\S]*\)[\s\S]*createRegistrySource\(\{\s*submission,/,
+  );
+});
+
 test("approval revalidates the complete current submission", () => {
   const currentIssue = {
     created_at: "2026-08-07T00:00:00Z",
@@ -2974,6 +3036,7 @@ test("approved submissions become registry sources without duplicates", () => {
       approver: "maintainer",
       expectedEventId: 44001,
       expectedRequestedAt: "2026-07-28T12:00:01.000Z",
+      expectedTriggeredAt: "2026-07-28T12:00:01.000Z",
     }),
     (error) => error.code === "approval-event-invalid",
   );
