@@ -127278,6 +127278,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tnperron/omarchy-wired-vlan-picker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T19:01:12.855Z",
+      "listingValidatedCommit": "7d3c48b718707c09d0cc9e76cefde704f9cb3473",
+      "listingValidatedAt": "2026-09-05T19:01:12.855Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tnperron/omarchy-wired-vlan-picker",
+        "pluginIds": [
+          "io.github.tnperron.wired-vlan"
+        ],
+        "commit": "7d3c48b718707c09d0cc9e76cefde704f9cb3473",
+        "checkedAt": "2026-09-05T19:01:12.788Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tnperron/omarchy-wired-vlan-picker",
+        "pluginIds": [
+          "io.github.tnperron.wired-vlan"
+        ],
+        "commit": "7d3c48b718707c09d0cc9e76cefde704f9cb3473",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-05T19:01:12.788Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T01:59:34.428Z",
+        "requestEventId": 30617029946,
+        "requestedAt": "2026-09-05T18:45:21Z",
+        "reviewedAt": "2026-09-05T19:01:12.788Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tnperron.wired-vlan": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
