@@ -5,3 +5,7 @@ worker/.dev.vars*
 worker/.env*
 worker/.wrangler/
 worker/wrangler.jsonc
+mcp/.dev.vars*
+mcp/.env*
+mcp/.wrangler/
+mcp/wrangler.jsonc

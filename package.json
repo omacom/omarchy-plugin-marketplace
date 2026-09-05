@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "python3 -m http.server 4173 --directory site",
+    "mcp": "node mcp/server.mjs",
     "build": "node scripts/build-catalog.mjs && node scripts/build-explorer-data.mjs",
     "build:explorer": "node scripts/build-explorer-data.mjs",
     "check:catalog-write-admission": "node scripts/check-catalog-write-admission.mjs",

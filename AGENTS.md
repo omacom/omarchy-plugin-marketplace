@@ -41,6 +41,8 @@ Do not introduce accounts, a database, a backend, a frontend framework, or a new
 - `SECURITY.md` is the unified security policy: it defines private vulnerability reporting, public reporting boundaries, high-level scope, and the deterministic scanner policy, limits, outcomes, enforcement, exact-SHA rules, and contributor requirements
 - `VERIFICATION.md` defines the public meaning, request flow, publication safeguards, and display contract for `Verified` and `Unverified`
 - `SUBMISSION.md` defines the public command-line and AI-assisted submission contract
+- `mcp/` contains the read-only Marketplace MCP service, stdio transport, separately deployable HTTP Worker adapter, and operator documentation
+- `test/mcp.test.js` covers the MCP tool/resource contract, static candidate inspection, duplicate analysis, image delivery, transports, and trust boundaries
 - `worker/src/index.js`, `worker/migrations/`, and `worker/wrangler.example.jsonc` define the approved engagement service, D1 schema, and credential-free deployment template
 - `PLAN.md` is the living implementation and security roadmap; current code, tests, workflows, and focused policy documents remain authoritative for implemented behavior
 
@@ -137,6 +139,8 @@ Plugins run as unsandboxed upstream code. Never describe marketplace validation 
 
 Treat registry, catalog, submission, and upstream manifest values as untrusted input. Escape every dynamic value inserted into HTML with the existing `escapeHtml` helper. Encode URL path segments with `encodeURIComponent`, build query strings with `URLSearchParams`, and reject unsupported URL protocols. Never render raw HTML supplied by a plugin repository.
 
+Keep MCP access read-only and separate from the engagement Worker. MCP tools may expose public catalog data, inspect a bounded public GitHub snapshot, return preview content, and provide advisory duplicate signals. They must not execute plugin code, create or mutate Issues, manage labels, edit registry or generated catalog files, determine security or approval outcomes, or receive a marketplace write token. Exact duplicate conflicts remain deterministic; fuzzy similarity must remain explicitly advisory. A hosted MCP deployment requires a separate maintainer decision and must preserve origin checks, bounded input, exact modern protocol routing headers, fail-closed rate limiting, and token isolation.
+
 New automated submissions use one public GitHub repository per plugin, with `manifest.json`, README, and license files at the repository root. Preserve the exact submission headings, checklist, controlled categories, and tags defined in `SUBMISSION.md`.
 
 The Automated Security Baseline statically scans the exact validated commit without executing plugin code. The **Automated Security Baseline** section in `SECURITY.md` is the public policy for all contributors; keep implementation, reports, tests, and contributor documentation aligned with it. Preserve deterministic outcomes (`passed`, `review-required`, and `needs-fixes`), evidence templates, exact-SHA binding, and the required disclaimer. Do not use AI to determine outcomes, enforcement, labels, or approval. Selective enforcement determines verified-publication label disposition: every new listing must be published through `approved-and-verified`, a current `passed` result is automatic, a complete review-required disposition for capabilities or non-selectively-blocking findings requires exact authorized maintainer attestation, and selectively blocking findings or scan failures block publication until resolved. Existing-snapshot `maintainer-verified` remains capability-only. Treat executable binaries as review capabilities, narrowly scoped root-owned helpers as review cases rather than automatic blockers, and execution sourced only from the submitted repository as self-installation requiring review rather than as external mutable-code rejection.
@@ -184,6 +188,7 @@ Also run the relevant checks:
 - UI or CSS: runtime review at the affected viewport matrix
 - Catalog or registry: `npm run build`, then inspect generated changes and rerun tests
 - Submission workflow: validate successful and rejected input paths
+- MCP: run `node --test test/mcp.test.js`; for protocol changes also test current and legacy stdio plus Streamable HTTP with an official MCP client or Inspector
 - GitHub Actions: preserve least-privilege permissions, pinned action commits, timeouts, and concurrency controls
 
 Structural tests that match HTML, CSS, or JavaScript source do not replace runtime browser verification for visual or responsive changes.

@@ -20,6 +20,10 @@ Submit one public GitHub repository containing the required manifest, README, an
 
 Use the single [plugin verification form](https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml) and choose whether to verify the currently listed snapshot or publish a newer upstream commit. A listed-snapshot request accepts only the exact recorded SHA. A newer-commit request keeps the current snapshot unchanged until the target SHA passes compatibility validation, the Automated Security Baseline, explicit maintainer approval, testing, and deployment. The [verification guide](VERIFICATION.md) explains both paths, display states, required values, and limits.
 
+## AI Agent Access
+
+The read-only [Marketplace MCP server](mcp/README.md) gives AI agents structured catalog search, plugin details, exact-commit candidate inspection, duplicate signals, and preview images without scraping the website. It does not execute plugin code, change marketplace state, create submissions, determine security, or approve listings. The repository includes a local stdio server and a separately deployable Streamable HTTP Worker adapter; no public MCP endpoint is provisioned by the source alone.
+
 ## Engagement Metrics
 
 The marketplace shows anonymous aggregate detail views, successful command copies, and hearts. These are marketplace interactions—not downloads, installations, unique people, verified votes, rankings, or security signals.
