@@ -127335,6 +127335,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vitorcanoas/omarchy-nightlight",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T19:03:24.600Z",
+      "listingValidatedCommit": "78d9fb490bb3e0aad0fe599d4ed48a9f3ec8f16b",
+      "listingValidatedAt": "2026-09-05T19:03:24.600Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vitorcanoas/omarchy-nightlight",
+        "pluginIds": [
+          "vitorcanoas.nightlight"
+        ],
+        "commit": "78d9fb490bb3e0aad0fe599d4ed48a9f3ec8f16b",
+        "checkedAt": "2026-09-05T19:03:24.543Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vitorcanoas/omarchy-nightlight",
+        "pluginIds": [
+          "vitorcanoas.nightlight"
+        ],
+        "commit": "78d9fb490bb3e0aad0fe599d4ed48a9f3ec8f16b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-05T19:03:24.543Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T13:01:46.959Z",
+        "requestEventId": 30617034234,
+        "requestedAt": "2026-09-05T18:45:31Z",
+        "reviewedAt": "2026-09-05T19:03:24.543Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vitorcanoas.nightlight": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
