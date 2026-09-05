@@ -127606,6 +127606,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rainan16/omarchy-workspace-touch-swipe",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:21:36.236Z",
+      "listingValidatedCommit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
+      "listingValidatedAt": "2026-09-05T22:21:36.236Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rainan16/omarchy-workspace-touch-swipe",
+        "pluginIds": [
+          "rainan16.workspace-touch-swipe"
+        ],
+        "commit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
+        "checkedAt": "2026-09-05T22:21:36.162Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rainan16.workspace-touch-swipe": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
