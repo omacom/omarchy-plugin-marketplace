@@ -127466,6 +127466,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/xshubhamg/omafocus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:12:32.529Z",
+      "listingValidatedCommit": "c7784428ae519a5773f960c7740c0544845cbf58",
+      "listingValidatedAt": "2026-09-05T22:12:32.529Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xshubhamg/omafocus",
+        "pluginIds": [
+          "io.github.xshubhamg.omafocus"
+        ],
+        "commit": "c7784428ae519a5773f960c7740c0544845cbf58",
+        "checkedAt": "2026-09-05T22:12:32.458Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.xshubhamg.omafocus": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
