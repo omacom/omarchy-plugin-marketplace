@@ -90,6 +90,9 @@ function fakeCache() {
   const values = new Map();
   return {
     values,
+    async delete(request) {
+      return values.delete(request.url);
+    },
     async match(request) {
       return values.get(request.url)?.clone();
     },
@@ -995,6 +998,26 @@ test("sliding windows reject overflow until the oldest event expires", async () 
   assert.equal(reopened.success, true);
 });
 
+test("sliding window cache entries live until the newest event expires", async () => {
+  const cache = fakeCache();
+  const now = Date.parse("2026-08-21T12:00:00.000Z");
+  await consumeSlidingWindow(cache, {
+    key: "views",
+    limit: 3,
+    windowSeconds: 3600,
+    now,
+  });
+  await consumeSlidingWindow(cache, {
+    key: "views",
+    limit: 3,
+    windowSeconds: 3600,
+    now: now + 1800_000,
+  });
+
+  const cached = [...cache.values.values()][0];
+  assert.equal(cached.headers.get("Cache-Control"), "max-age=3600");
+});
+
 test("Worker address windows stop repeat hearts from one address without D1 actor keys", async () => {
   const database = fakeDatabase();
   const cache = fakeCache();
@@ -1042,6 +1065,68 @@ test("Worker address windows stop repeat hearts from one address without D1 acto
   });
   assert.equal(later.status, 202);
   assert.equal(database.calls.length, 4);
+});
+
+test("Worker serializes concurrent address-window consumption", async () => {
+  const database = fakeDatabase();
+  const cache = fakeCache();
+  const immediateMatch = cache.match.bind(cache);
+  cache.match = async (request) => {
+    const snapshot = await immediateMatch(request);
+    await new Promise((resolve) => setImmediate(resolve));
+    return snapshot;
+  };
+  const env = {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-concurrent-address.example/catalog.json",
+    ...testMinuteLimitVars,
+  };
+  const post = () => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders(),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  }), env, {
+    cache,
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+    now: Date.parse("2026-08-21T14:00:00.000Z"),
+  });
+
+  const responses = await Promise.all([post(), post()]);
+  assert.deepEqual(responses.map(({ status }) => status).sort(), [202, 429]);
+  assert.equal(database.calls.length, 2);
+});
+
+test("Worker releases address windows when D1 fails or rejects an event", async () => {
+  const cache = fakeCache();
+  const env = (database) => ({
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-address-rollback.example/catalog.json",
+    ...testMinuteLimitVars,
+  });
+  const post = (database, ip) => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders({ ip }),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  }), env(database), {
+    cache,
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+    now: Date.parse("2026-08-21T14:30:00.000Z"),
+  });
+
+  const failed = await post(fakeDatabase([], { batchError: new Error("D1 unavailable") }), "192.0.2.20");
+  assert.equal(failed.status, 503);
+  const afterFailure = await post(fakeDatabase(), "192.0.2.20");
+  assert.equal(afterFailure.status, 202);
+
+  const rejected = await post(fakeDatabase([], { recorded: null }), "192.0.2.21");
+  assert.equal(rejected.status, 202);
+  assert.deepEqual(await rejected.json(), { recorded: false, reason: "limit" });
+  const afterRejection = await post(fakeDatabase(), "192.0.2.21");
+  assert.equal(afterRejection.status, 202);
 });
 
 test("Worker shares IPv6 /64 quota across interface IDs", async () => {
@@ -1139,6 +1224,7 @@ test("Worker deployment files contain placeholders but no credentials", async ()
   assert.match(template, /"simple": \{ "limit": 60, "period": 60 \}/);
   assert.match(template, /"name": "ENGAGEMENT_TARGET_RATE_LIMITER"/);
   assert.match(template, /REPLACE_WITH_TARGET_RATE_LIMIT/);
+  assert.match(template, /"HEART_MINUTE_EVENT_LIMIT": "REPLACE_WITH_HEART_MINUTE_LIMIT",\s*\/\/ Optional/);
   const configuredTemplate = template.replace('"REPLACE_WITH_TARGET_RATE_LIMIT"', "7");
   assert.match(configuredTemplate, /"simple": \{ "limit": 7, "period": 60 \}/);
   assert.doesNotMatch(configuredTemplate, /"limit": "7"/);

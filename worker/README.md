@@ -53,8 +53,9 @@ Address windows add a longer-lived per-address cost on top of the 60-second edge
 limits. Defaults are 1 heart per plugin per day, 1 copy per plugin per hour, and 5 views
 per plugin per hour, plus coarser hourly and daily caps across plugins. IPv6 addresses
 in the same /64 share a quota. Missing or unusable `CF-Connecting-IP` values are rejected.
-These windows live in the edge cache, can be evicted or split across locations, and are
-not unique identity.
+Same-address operations are serialized within a Worker isolate. The windows live in the
+edge cache, can be evicted or split across isolates or locations, and are not unique
+identity. Reservations are released when D1 rejects or fails an event.
 
 Public stats are cached at the edge for up to five minutes, while browser storage is
 disabled and successful event responses return authoritative fresh counts for immediate

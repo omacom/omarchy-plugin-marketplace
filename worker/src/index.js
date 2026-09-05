@@ -19,6 +19,7 @@ const defaultAddressWindows = {
   heart: { hour: 8, day: 24, pluginDay: 1 },
 };
 let catalogCache = { url: "", expiresAt: 0, pluginIds: new Set() };
+const addressOperationTails = new Map();
 
 function validPluginId(value) {
   return pluginIdPattern.test(value) && !unsafeObjectKeys.has(value.toLowerCase());
@@ -105,6 +106,22 @@ async function quotaRequest(parts) {
   return new Request(`https://engagement-quota.invalid/${hexDigest(digest)}`);
 }
 
+async function serializeAddressOperation(address, operation) {
+  const previous = addressOperationTails.get(address) || Promise.resolve();
+  let release;
+  const tail = new Promise((resolve) => {
+    release = resolve;
+  });
+  addressOperationTails.set(address, tail);
+  await previous;
+  try {
+    return await operation();
+  } finally {
+    release();
+    if (addressOperationTails.get(address) === tail) addressOperationTails.delete(address);
+  }
+}
+
 function addressLimit(value, fallback) {
   return configuredEventLimit(value) || fallback;
 }
@@ -159,7 +176,9 @@ export async function consumeSlidingWindow(cache, {
   now = Date.now(),
   record = true,
 } = {}) {
-  if (!cache?.match || !cache?.put) return { success: false, retryAfter: 60, unavailable: true };
+  if (!cache?.match || !cache?.put || !cache?.delete) {
+    return { success: false, retryAfter: 60, unavailable: true };
+  }
   const request = typeof key === "string"
     ? new Request(`https://engagement-quota.invalid/${key}`)
     : key;
@@ -167,7 +186,9 @@ export async function consumeSlidingWindow(cache, {
   let events = cached ? await cached.json() : [];
   if (!Array.isArray(events)) throw new Error("invalid sliding window");
   const cutoff = now - windowSeconds * 1000;
-  events = events.filter((value) => Number.isSafeInteger(value) && value > cutoff);
+  events = events
+    .filter((value) => Number.isSafeInteger(value) && value > cutoff)
+    .sort((left, right) => left - right);
   if (events.length >= limit) {
     return {
       success: false,
@@ -176,17 +197,40 @@ export async function consumeSlidingWindow(cache, {
   }
   if (!record) return { success: true, retryAfter: 0, events, request };
   events.push(now);
-  const ttl = Math.max(1, Math.ceil((events[0] + windowSeconds * 1000 - now) / 1000));
+  await writeSlidingWindow(cache, request, events, windowSeconds, now);
+  return { success: true, retryAfter: 0 };
+}
+
+async function writeSlidingWindow(cache, request, events, windowSeconds, now) {
+  if (!events.length) {
+    await cache.delete(request);
+    return;
+  }
+  const newest = events[events.length - 1];
+  const ttl = Math.max(1, Math.ceil((newest + windowSeconds * 1000 - now) / 1000));
   await cache.put(request, new Response(JSON.stringify(events), {
     headers: {
       "Cache-Control": `max-age=${ttl}`,
       "Content-Type": "application/json",
     },
   }));
-  return { success: true, retryAfter: 0 };
 }
 
-async function consumeAddressWindows(cache, address, pluginId, type, env, now) {
+async function restoreAddressWindows(cache, reservations, now) {
+  const results = await Promise.allSettled(reservations.map((reservation) => (
+    writeSlidingWindow(
+      cache,
+      reservation.request,
+      reservation.previousEvents,
+      reservation.windowSeconds,
+      now,
+    )
+  )));
+  const failed = results.find((result) => result.status === "rejected");
+  if (failed) throw failed.reason;
+}
+
+async function reserveAddressWindows(cache, address, pluginId, type, env, now) {
   const windows = addressWindowsFor(type, pluginId, addressWindowLimits(env));
   const pending = [];
   let retryAfter = 0;
@@ -203,17 +247,28 @@ async function consumeAddressWindows(cache, address, pluginId, type, env, now) {
     else pending.push({ ...window, result });
   }
   if (retryAfter) return { success: false, retryAfter };
-  for (const { result, windowSeconds } of pending) {
-    const events = [...result.events, now];
-    const ttl = Math.max(1, Math.ceil((events[0] + windowSeconds * 1000 - now) / 1000));
-    await cache.put(result.request, new Response(JSON.stringify(events), {
-      headers: {
-        "Cache-Control": `max-age=${ttl}`,
-        "Content-Type": "application/json",
-      },
-    }));
+  const reservations = [];
+  try {
+    for (const { result, windowSeconds } of pending) {
+      const reservation = {
+        previousEvents: result.events,
+        request: result.request,
+        windowSeconds,
+      };
+      reservations.push(reservation);
+      await writeSlidingWindow(
+        cache,
+        result.request,
+        [...result.events, now],
+        windowSeconds,
+        now,
+      );
+    }
+  } catch (error) {
+    await restoreAddressWindows(cache, reservations, now);
+    throw error;
   }
-  return { success: true, retryAfter: 0 };
+  return { success: true, retryAfter: 0, reservations };
 }
 
 function corsHeaders(origin) {
@@ -545,55 +600,65 @@ async function eventResponse(request, env, origin, fetchImpl, cache, now) {
     );
   }
 
-  const addressLimitResult = await consumeAddressWindows(
-    cache,
-    address,
-    event.pluginId,
-    event.type,
-    env,
-    now,
-  );
-  if (addressLimitResult.unavailable) {
-    return json({ error: "Event service unavailable" }, 503, corsHeaders(origin));
-  }
-  if (!addressLimitResult.success) {
-    return json(
-      { error: "Rate limit exceeded" },
-      429,
-      { ...corsHeaders(origin), "Retry-After": String(addressLimitResult.retryAfter) },
-    );
-  }
-
-  const timestamp = new Date(now).toISOString();
-  const day = timestamp.slice(0, 10);
-  const minute = timestamp.slice(0, 16);
-  const views = event.type === "view" ? 1 : 0;
-  const copies = event.type === "copy" ? 1 : 0;
-  const hearts = event.type === "heart" ? 1 : 0;
-  const limit = eventLimit(env.DAILY_EVENT_LIMIT);
-  const [writeResult, totalsResult] = await env.ENGAGEMENT_DB.batch([
-    env.ENGAGEMENT_DB.prepare(engagementUpsertSql).bind(
+  return serializeAddressOperation(address, async () => {
+    const addressLimitResult = await reserveAddressWindows(
+      cache,
+      address,
       event.pluginId,
-      day,
-      minute,
-      views,
-      copies,
-      hearts,
-      limit,
-      minuteLimits.views,
-      minuteLimits.copies,
-      minuteLimits.hearts,
-    ),
-    env.ENGAGEMENT_DB.prepare(engagementTotalsSql).bind(event.pluginId),
-  ]);
+      event.type,
+      env,
+      now,
+    );
+    if (addressLimitResult.unavailable) {
+      return json({ error: "Event service unavailable" }, 503, corsHeaders(origin));
+    }
+    if (!addressLimitResult.success) {
+      return json(
+        { error: "Rate limit exceeded" },
+        429,
+        { ...corsHeaders(origin), "Retry-After": String(addressLimitResult.retryAfter) },
+      );
+    }
 
-  if (!writeResult?.results?.length) {
-    return json({ recorded: false, reason: "limit" }, 202, corsHeaders(origin));
-  }
-  return json({
-    recorded: true,
-    plugin: normalizedTotals(totalsResult?.results?.[0]),
-  }, 202, corsHeaders(origin));
+    const timestamp = new Date(now).toISOString();
+    const day = timestamp.slice(0, 10);
+    const minute = timestamp.slice(0, 16);
+    const views = event.type === "view" ? 1 : 0;
+    const copies = event.type === "copy" ? 1 : 0;
+    const hearts = event.type === "heart" ? 1 : 0;
+    const limit = eventLimit(env.DAILY_EVENT_LIMIT);
+    let writeResult;
+    let totalsResult;
+    try {
+      [writeResult, totalsResult] = await env.ENGAGEMENT_DB.batch([
+        env.ENGAGEMENT_DB.prepare(engagementUpsertSql).bind(
+          event.pluginId,
+          day,
+          minute,
+          views,
+          copies,
+          hearts,
+          limit,
+          minuteLimits.views,
+          minuteLimits.copies,
+          minuteLimits.hearts,
+        ),
+        env.ENGAGEMENT_DB.prepare(engagementTotalsSql).bind(event.pluginId),
+      ]);
+    } catch (error) {
+      await restoreAddressWindows(cache, addressLimitResult.reservations, now);
+      throw error;
+    }
+
+    if (!writeResult?.results?.length) {
+      await restoreAddressWindows(cache, addressLimitResult.reservations, now);
+      return json({ recorded: false, reason: "limit" }, 202, corsHeaders(origin));
+    }
+    return json({
+      recorded: true,
+      plugin: normalizedTotals(totalsResult?.results?.[0]),
+    }, 202, corsHeaders(origin));
+  });
 }
 
 export async function handleRequest(request, env, {
