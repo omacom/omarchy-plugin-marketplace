@@ -4,7 +4,11 @@ import { chmod, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { approvalDecisionForEvents } from "../scripts/approve-submission.mjs";
+import {
+  approvalDecisionForEvents,
+  githubIssueComments,
+  githubIssueEvents,
+} from "../scripts/approve-submission.mjs";
 import { publicSubmissionFailure } from "../scripts/submission-feedback.mjs";
 
 const root = new URL("../", import.meta.url);
@@ -18,6 +22,57 @@ const first = transition(100, firstTime);
 const removed = transition(101, "2026-09-04T21:49:30Z", "unlabeled");
 const second = transition(102, secondTime);
 const initial = { approver: actor, expectedRequestedAt: firstTime };
+const productionIssue = Object.freeze({
+  repository: "omacom/omarchy-plugin-marketplace",
+  number: "3322",
+  title: "[Plugin]: Steelseries mouse controllers",
+  submissionRepository: "Djjamonconqueso/steelseries.mouse-controller",
+  approver: "HANCORE-linux",
+  manualSetup: true,
+  triggeredAt: "2026-09-05T16:22:31Z",
+  eventId: 30612835180,
+  requestedAt: "2026-09-05T16:22:30Z",
+});
+// Exact approval-label history through the failed #3322 run; later live transitions
+// are exercised separately at the final publication boundary below.
+const productionApprovalHistory = Object.freeze([
+  transition(30574873638, "2026-09-04T18:44:54Z", "labeled", "HANCORE-linux"),
+  transition(30578870183, "2026-09-04T20:05:16Z", "unlabeled", "github-actions[bot]"),
+  transition(30602247282, "2026-09-05T09:22:59Z", "labeled", "HANCORE-linux"),
+  transition(30602278011, "2026-09-05T09:24:25Z", "unlabeled", "github-actions[bot]"),
+  transition(productionIssue.eventId, productionIssue.requestedAt, "labeled", productionIssue.approver),
+]);
+const productionIssue4116 = Object.freeze({
+  repository: "omacom/omarchy-plugin-marketplace",
+  number: "4116",
+  title: "[Plugin]: Plugin Switcher",
+  submissionRepository: "houz42/omarchy-plugin-switcher",
+  approver: "HANCORE-linux",
+  manualSetup: false,
+  triggeredAt: "2026-09-05T18:43:59Z",
+  eventId: 30616991870,
+  requestedAt: "2026-09-05T18:43:58Z",
+});
+const productionApprovalHistory4116 = Object.freeze([
+  transition(30575208949, "2026-09-04T18:51:12Z", "labeled", "HANCORE-linux"),
+  transition(30580502956, "2026-09-04T20:37:18Z", "unlabeled", "github-actions[bot]"),
+  transition(
+    productionIssue4116.eventId,
+    productionIssue4116.requestedAt,
+    "labeled",
+    productionIssue4116.approver,
+  ),
+]);
+const productionIncidents = Object.freeze({
+  [productionIssue.number]: Object.freeze({
+    ...productionIssue,
+    history: productionApprovalHistory,
+  }),
+  [productionIssue4116.number]: Object.freeze({
+    ...productionIssue4116,
+    history: productionApprovalHistory4116,
+  }),
+});
 
 function rejected(events, options = initial) {
   assert.throws(() => approvalDecisionForEvents(events, options), { code: "approval-event-invalid" });
@@ -28,17 +83,124 @@ test("approval admission selects only the unique trigger, and rechecks preserve 
   const decision = approvalDecisionForEvents(events, initial);
   assert.deepEqual(decision, { eventId: 100, requestedAt: firstTime, reviewer: actor });
   assert.deepEqual(approvalDecisionForEvents(events, {
-    ...initial, expectedEventId: decision.eventId, expectedRequestedAt: decision.requestedAt,
+    ...initial,
+    expectedEventId: decision.eventId,
+    expectedRequestedAt: decision.requestedAt,
+    expectedTriggeredAt: firstTime,
   }), decision);
   assert.deepEqual(approvalDecisionForEvents(events, {
     ...initial, expectedRequestedAt: "2026-09-04T21:49:24.000Z",
   }), decision);
 });
 
+test("production issue #3322 resolves its exact one-second GitHub lag and prior history", () => {
+  const productionTrigger = {
+    approver: productionIssue.approver,
+    expectedRequestedAt: productionIssue.triggeredAt,
+  };
+  const decision = approvalDecisionForEvents(productionApprovalHistory, productionTrigger);
+  assert.deepEqual(decision, {
+    eventId: productionIssue.eventId,
+    requestedAt: productionIssue.requestedAt,
+    reviewer: productionIssue.approver,
+  });
+  assert.deepEqual(approvalDecisionForEvents(productionApprovalHistory, {
+    ...productionTrigger,
+    expectedEventId: decision.eventId,
+    expectedRequestedAt: decision.requestedAt,
+    expectedTriggeredAt: productionIssue.triggeredAt,
+  }), decision);
+  // Tolerance is initial-only: a recheck must use the event's actual timestamp.
+  rejected(productionApprovalHistory, {
+    ...productionTrigger,
+    expectedEventId: decision.eventId,
+    expectedTriggeredAt: productionIssue.triggeredAt,
+  });
+});
+
+test("production issue #4116 independently resolves the same exact one-second lag", () => {
+  const productionTrigger = {
+    approver: productionIssue4116.approver,
+    expectedRequestedAt: productionIssue4116.triggeredAt,
+  };
+  const decision = approvalDecisionForEvents(productionApprovalHistory4116, productionTrigger);
+  assert.deepEqual(decision, {
+    eventId: productionIssue4116.eventId,
+    requestedAt: productionIssue4116.requestedAt,
+    reviewer: productionIssue4116.approver,
+  });
+  assert.deepEqual(approvalDecisionForEvents(productionApprovalHistory4116, {
+    ...productionTrigger,
+    expectedEventId: decision.eventId,
+    expectedRequestedAt: decision.requestedAt,
+    expectedTriggeredAt: productionIssue4116.triggeredAt,
+  }), decision);
+});
+
+test("GitHub issue pagination requires arrays of at most 100 records", async () => {
+  const originalFetch = globalThis.fetch;
+  try {
+    for (const [acquire, code] of [
+      [githubIssueEvents, "approval-event-invalid"],
+      [githubIssueComments, "approval-security-baseline-invalid"],
+    ]) {
+      for (const batch of [{}, "not-an-array", Array.from({ length: 101 }, (_, id) => ({ id }))]) {
+        let requests = 0;
+        globalThis.fetch = async () => {
+          requests += 1;
+          return { ok: true, json: async () => batch };
+        };
+        await assert.rejects(
+          () => acquire("example/marketplace", 1, "inert-token"),
+          (error) => error?.code === code,
+        );
+        assert.equal(requests, 1);
+      }
+
+      const pages = [Array.from({ length: 100 }, (_, id) => ({ id })), []];
+      let requests = 0;
+      globalThis.fetch = async () => {
+        const batch = pages[requests];
+        requests += 1;
+        return { ok: true, json: async () => batch };
+      };
+      assert.equal((await acquire("example/marketplace", 1, "inert-token")).length, 100);
+      assert.equal(requests, 2);
+    }
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("initial timestamp compatibility is asymmetric and limited to one second", () => {
+  // The event must never be later than the webhook's issue.updated_at.
+  rejected([first], { approver: actor, expectedRequestedAt: "2026-09-04T21:49:23Z" });
+  // An event two seconds before issue.updated_at remains invalid.
+  rejected([first], { approver: actor, expectedRequestedAt: "2026-09-04T21:49:26Z" });
+  // A unique event in the one-second fallback still requires the triggering actor.
+  rejected([{ ...first, actor: { login: "other-maintainer" } }], {
+    approver: actor,
+    expectedRequestedAt: "2026-09-04T21:49:25Z",
+  });
+  // Other labels do not make an otherwise unique approval transition ambiguous.
+  const unrelated = {
+    ...transition(101, "2026-09-04T21:49:25Z"),
+    label: { name: "manual-setup" },
+  };
+  assert.equal(approvalDecisionForEvents([first, unrelated], {
+    approver: actor,
+    expectedRequestedAt: "2026-09-04T21:49:25Z",
+  }).eventId, first.id);
+});
+
 test("an old request cannot adopt a newer approval by the same actor", () => {
   const events = [second, first, removed]; // API order must not choose the decision.
   rejected(events);
-  rejected(events, { ...initial, expectedEventId: first.id });
+  rejected(events, {
+    ...initial,
+    expectedEventId: first.id,
+    expectedTriggeredAt: firstTime,
+  });
   assert.deepEqual(approvalDecisionForEvents(events, {
     approver: actor, expectedRequestedAt: secondTime,
   }), { eventId: second.id, requestedAt: secondTime, reviewer: actor });
@@ -51,14 +213,46 @@ test("a removed approval and another actor cannot authorize publication", () => 
   });
 });
 
-test("initial same-second approval transitions fail closed, including different actors", () => {
+test("multiple approval transitions in either initial second fail closed", () => {
   for (const login of [actor, "other-maintainer"]) {
     rejected([first, transition(101, firstTime, "unlabeled", login), transition(102, firstTime)]);
+    rejected([first, transition(101, "2026-09-04T21:49:25Z", "unlabeled", login)], {
+      approver: actor,
+      expectedRequestedAt: "2026-09-04T21:49:25Z",
+    });
   }
   rejected([first, transition(99, firstTime, "unlabeled")]);
   // A later transition with a larger ID must invalidate an already selected ID too.
   rejected([first, transition(101, firstTime, "unlabeled"), transition(102, firstTime)], {
-    ...initial, expectedEventId: first.id,
+    ...initial,
+    expectedEventId: first.id,
+    expectedTriggeredAt: firstTime,
+  });
+});
+
+test("a delayed transition invalidates an initially resolved fallback identity", () => {
+  const trigger = { approver: actor, expectedRequestedAt: "2026-09-04T21:49:25Z" };
+  const provisional = approvalDecisionForEvents([first], trigger);
+  assert.equal(provisional.eventId, first.id);
+  const delayed = transition(102, "2026-09-04T21:49:25Z");
+  rejected([first, delayed], trigger);
+  rejected([first, delayed], {
+    approver: actor,
+    expectedEventId: provisional.eventId,
+    expectedRequestedAt: provisional.requestedAt,
+    expectedTriggeredAt: trigger.expectedRequestedAt,
+  });
+});
+
+test("a delayed earlier transition invalidates an initially exact identity", () => {
+  const decision = approvalDecisionForEvents([first], initial);
+  const delayedEarlier = transition(99, "2026-09-04T21:49:23Z", "unlabeled", "other-maintainer");
+  rejected([delayedEarlier, first], initial);
+  rejected([delayedEarlier, first], {
+    approver: actor,
+    expectedEventId: decision.eventId,
+    expectedRequestedAt: decision.requestedAt,
+    expectedTriggeredAt: initial.expectedRequestedAt,
   });
 });
 
@@ -70,7 +264,13 @@ test("missing, malformed and ambiguous approval identity never fall back to late
     { ...initial, expectedRequestedAt: firstTime + "\n" },
     { ...initial, expectedRequestedAt: 1788558564000 },
     { ...initial, approver: "" }, { ...initial, approver: "other" },
-    ...[0, -1, 100.5, "100", null, NaN, Number.MAX_SAFE_INTEGER + 1, 101].map((expectedEventId) => ({ ...initial, expectedEventId })),
+    { ...initial, expectedEventId: first.id },
+    { ...initial, expectedEventId: first.id, expectedTriggeredAt: "bad" },
+    ...[0, -1, 100.5, "100", null, NaN, Number.MAX_SAFE_INTEGER + 1, 101].map((expectedEventId) => ({
+      ...initial,
+      expectedEventId,
+      expectedTriggeredAt: firstTime,
+    })),
   ]) rejected([first], options);
   for (const events of [null, {}, [], [null], [first, first],
     [{ ...first, id: "100" }], [{ ...first, id: 0 }],
@@ -106,31 +306,37 @@ test("both approval entry points bind trigger time before selecting any event", 
   const workflow = await readFile(new URL(".github/workflows/approve-submission.yml", root), "utf8");
   assert.match(workflow, /github\.event_name == 'issues'[\s\S]*github\.event\.action == 'labeled'/);
   assert.match(workflow, /APPROVAL_TRIGGERED_AT: \$\{\{ github\.event\.issue\.updated_at \}\}/);
+  assert.equal((workflow.match(/APPROVAL_TRIGGERED_AT:/g) || []).length, 3);
   for (const file of ["approve-submission.mjs", "approve-plugin-update.mjs"]) {
     const source = await readFile(new URL(`scripts/${file}`, root), "utf8");
-    assert.match(source, /expectedRequestedAt: requiredEnvironment\("APPROVAL_TRIGGERED_AT"\)/);
+    assert.match(source, /approvalTriggeredAt = requiredEnvironment\("APPROVAL_TRIGGERED_AT"\)/);
+    assert.match(source, /expectedRequestedAt: approvalTriggeredAt/);
+    assert.match(source, /approval_triggered_at=\$\{approvalTriggeredAt\}/);
     assert.match(source, /requiredEnvironment\("APPROVAL_REQUESTED_AT"\)/);
     assert.match(source, /requiredEnvironment\("APPROVAL_EVENT_ID"\)/);
+    assert.match(source, /expectedTriggeredAt:/);
   }
   // Preserve the original setup snapshot checks, not a relaxed live-state adoption.
   assert.equal((workflow.match(/MANUAL_SETUP: \$\{\{ contains\(github.event.issue.labels.\*.name, 'manual-setup'\) \}\}/g) || []).length, 3);
   assert.match(workflow, /has_manual_setup.*EXPECTED_MANUAL_SETUP/);
 });
 
-test("the final write-token recheck rejects a withdrawal after publication preparation", async () => {
+test("the final write-token recheck enforces both production incidents, revocation, actor, and bounds", async () => {
   const workflow = await readFile(new URL(".github/workflows/approve-submission.yml", root), "utf8");
   const script = stepScript(
     workflow,
     "Recheck mutable approval state and push tested plugin publication",
   );
   assert.doesNotMatch(script, /git add|git commit|git fetch/);
-  assert.match(script, /commits\/HEAD[\s\S]*push origin HEAD:main/);
+  assert.doesNotMatch(script, /--paginate|--slurp/);
+  assert.match(script, /fetch_bounded_issue_pages[\s\S]*commits\/HEAD[\s\S]*push origin HEAD:main/);
   const directory = await mkdtemp(join(tmpdir(), "approval-final-push-race-"));
   try {
     const bin = join(directory, "bin");
     await mkdir(bin);
     const ghCalls = join(directory, "gh-calls.jsonl");
     const gitCalls = join(directory, "git-calls.jsonl");
+    const output = join(directory, "output");
     await writeFile(ghCalls, "");
     await writeFile(gitCalls, "");
     await writeFile(join(bin, "gh"), `#!${process.execPath}
@@ -139,46 +345,238 @@ const args = process.argv.slice(2);
 appendFileSync(process.env.GH_CALLS, JSON.stringify(args) + "\\n");
 if (args[0] !== "api") process.exit(91);
 const endpoint = args.find((arg) => arg.startsWith("repos/"));
-if (endpoint === "repos/example/marketplace/issues/3380") {
-  console.log(JSON.stringify({
-    state: "open", title: "[Plugin]: Example", body: "approved body",
-    labels: ["submission", "validated", "approved-and-verified"].map((name) => ({ name })),
-  }));
-} else if (endpoint === "repos/example/marketplace/issues/3380/events?per_page=100") {
-  console.log(JSON.stringify([[
-    { id: 100, event: "labeled", label: { name: "approved-and-verified" }, actor: { login: "maintainer" }, created_at: "${firstTime}" },
-    { id: 101, event: "unlabeled", label: { name: "approved-and-verified" }, actor: { login: "maintainer" }, created_at: "2026-09-04T21:49:30Z" },
-  ]]));
+const incidents = ${JSON.stringify(productionIncidents)};
+const incident = incidents[process.env.ISSUE_NUMBER];
+if (!incident) process.exit(94);
+const productionHistory = incident.history;
+const issueEndpoint = "repos/" + incident.repository + "/issues/" + incident.number;
+const eventsPrefix = issueEndpoint + "/events?per_page=100&page=";
+const commentsPrefix = issueEndpoint + "/comments?per_page=100&page=";
+if (endpoint === issueEndpoint) {
+  const validIssue = {
+    number: Number(incident.number),
+    state: "open", title: incident.title, body: "approved body",
+    labels: [
+      "submission", "validated",
+      ...(incident.manualSetup ? ["manual-setup"] : []),
+      "approved-and-verified",
+    ].map((name) => ({ name })),
+  };
+  if (process.env.EVENT_MODE === "issue-api-failure") {
+    console.log(JSON.stringify(validIssue));
+    process.exit(75);
+  }
+  if (process.env.EVENT_MODE === "multiple-issue-documents") {
+    console.log(JSON.stringify({
+      number: Number(incident.number),
+      state: "closed", title: "ignored", body: "",
+      labels: [{ name: "needs-fixes" }],
+    }));
+    console.log(JSON.stringify(validIssue));
+    process.exit(0);
+  }
+  if (process.env.EVENT_MODE === "labels-object") {
+    console.log(JSON.stringify({
+      ...validIssue,
+      labels: Object.fromEntries([
+        ...validIssue.labels.map((label) => [label.name, label]),
+        ["needs-fixes", { name: "not-a-blocking-label" }],
+      ]),
+    }));
+    process.exit(0);
+  }
+  if (process.env.EVENT_MODE === "malformed-label-element") {
+    console.log(JSON.stringify({ ...validIssue, labels: [...validIssue.labels, { name: 42 }] }));
+    process.exit(0);
+  }
+  console.log(JSON.stringify(validIssue));
+} else if (endpoint.startsWith(eventsPrefix)) {
+  const page = Number(endpoint.slice(eventsPrefix.length));
+  if (page === 1 && process.env.EVENT_MODE === "api-failure") {
+    console.log(JSON.stringify(productionHistory));
+    process.exit(75);
+  }
+  if (page === 1 && process.env.EVENT_MODE === "multiple-documents") {
+    console.log(JSON.stringify(productionHistory));
+    console.log(JSON.stringify([
+      { id: 30613232468, event: "unlabeled", label: { name: "approved-and-verified" }, actor: { login: incident.approver }, created_at: "2026-09-05T16:36:09Z" },
+    ]));
+    process.exit(0);
+  }
+  let events;
+  if (process.env.EVENT_MODE === "pagination-limit") {
+    events = Array.from({ length: 100 }, (_, index) => ({ event: "commented", page, index }));
+  } else if (page !== 1) {
+    events = [];
+  } else if (process.env.EVENT_MODE === "ambiguous") {
+    events = [
+      { id: 99, event: "unlabeled", label: { name: "approved-and-verified" }, actor: { login: "other-maintainer" }, created_at: "2026-09-04T21:49:23Z" },
+      { id: 100, event: "labeled", label: { name: "approved-and-verified" }, actor: { login: incident.approver }, created_at: "${firstTime}" },
+    ];
+  } else if (process.env.EVENT_MODE === "malformed") {
+    events = [...productionHistory,
+      { id: 30612835181, event: "labeled", actor: { login: incident.approver }, created_at: incident.triggeredAt }];
+  } else if (process.env.EVENT_MODE === "withdrawn") {
+    events = [...productionHistory,
+      { id: 30613232468, event: "unlabeled", label: { name: "approved-and-verified" }, actor: { login: incident.approver }, created_at: "2026-09-05T16:36:09Z" }];
+  } else if (process.env.EVENT_MODE === "newer-approval") {
+    events = [...productionHistory,
+      { id: 30613235058, event: "labeled", label: { name: "approved-and-verified" }, actor: { login: incident.approver }, created_at: "2026-09-05T16:36:15Z" }];
+  } else if (process.env.EVENT_MODE === "wrong-actor") {
+    events = productionHistory.map((event) => event.id === incident.eventId
+      ? { ...event, actor: { login: "other-maintainer" } }
+      : event);
+  } else {
+    events = productionHistory;
+  }
+  console.log(JSON.stringify(events));
+} else if (endpoint === "repos/" + incident.repository + "/collaborators/" + incident.approver + "/permission") {
+  console.log("write");
+} else if (endpoint.startsWith(commentsPrefix)) {
+  const page = Number(endpoint.slice(commentsPrefix.length));
+  console.log(JSON.stringify(page === 1 ? [
+    { id: 200, user: { login: "github-actions[bot]" }, body: "<!-- marketplace-security-baseline:v4 inert -->", created_at: "2026-09-04T21:40:00Z", updated_at: "2026-09-04T21:40:01Z" },
+  ] : []));
+} else if (endpoint === "repos/" + incident.submissionRepository + "/commits/HEAD") {
+  console.log("a".repeat(40));
 } else process.exit(92);
 `);
     await writeFile(join(bin, "git"), `#!${process.execPath}
 const { appendFileSync } = require("node:fs");
-appendFileSync(process.env.GIT_CALLS, JSON.stringify(process.argv.slice(2)) + "\\n");
-process.exit(0);
+const args = process.argv.slice(2);
+appendFileSync(process.env.GIT_CALLS, JSON.stringify(args) + "\\n");
+if (args[0] === "rev-parse" && args[1] === "HEAD") console.log("c".repeat(40));
+else if (!args.includes("push")) process.exit(93);
 `);
     await chmod(join(bin, "gh"), 0o755);
     await chmod(join(bin, "git"), 0o755);
-    const result = spawnSync("bash", ["--noprofile", "--norc", "-e", "-o", "pipefail"], {
-      input: script, encoding: "utf8", timeout: 10000, cwd: directory,
-      env: {
-        PATH: `${bin}:/usr/bin:/bin`, HOME: directory,
-        GH_TOKEN: "inert-token", GITHUB_TOKEN: "inert-token",
-        GH_CALLS: ghCalls, GIT_CALLS: gitCalls, GITHUB_OUTPUT: join(directory, "output"),
-        GITHUB_REPOSITORY: "example/marketplace", ISSUE_NUMBER: "3380",
-        APPROVED_ISSUE_TITLE: "[Plugin]: Example", APPROVED_ISSUE_BODY: "approved body",
-        EXPECTED_MANUAL_SETUP: "false", APPROVER_LOGIN: actor,
-        APPROVAL_EVENT_ID: "100", APPROVAL_REQUESTED_AT: firstTime,
-        BASELINE_COMMENT_ID: "200", BASELINE_COMMENT_UPDATED_AT: "2026-09-04T21:40:01Z",
-        SUBMISSION_REPOSITORY: "example/plugin", APPROVED_COMMIT: "a".repeat(40),
-        PUBLICATION_KIND: "listing", EXPECTED_BASE_COMMIT: "b".repeat(40),
+    const run = (event, overrides) => spawnSync(
+      "bash",
+      ["--noprofile", "--norc", "-e", "-o", "pipefail"],
+      {
+        input: script, encoding: "utf8", timeout: 10000, cwd: directory,
+        env: {
+          PATH: `${bin}:/usr/bin:/bin`, HOME: directory,
+          GH_TOKEN: "inert-token", GITHUB_TOKEN: "inert-token",
+          GH_CALLS: ghCalls, GIT_CALLS: gitCalls, GITHUB_OUTPUT: output,
+          GITHUB_REPOSITORY: productionIssue.repository, ISSUE_NUMBER: productionIssue.number,
+          APPROVED_ISSUE_TITLE: productionIssue.title, APPROVED_ISSUE_BODY: "approved body",
+          EXPECTED_MANUAL_SETUP: String(productionIssue.manualSetup),
+          APPROVER_LOGIN: productionIssue.approver,
+          BASELINE_COMMENT_ID: "200", BASELINE_COMMENT_UPDATED_AT: "2026-09-04T21:40:01Z",
+          SUBMISSION_REPOSITORY: productionIssue.submissionRepository,
+          APPROVED_COMMIT: "a".repeat(40),
+          PUBLICATION_KIND: "listing", EXPECTED_BASE_COMMIT: "b".repeat(40),
+          EVENT_MODE: event,
+          ...overrides,
+        },
       },
+    );
+    const assertFinalRejected = async (
+      eventMode,
+      environment,
+      errorPattern,
+      expectedCallCount = 2,
+    ) => {
+      await writeFile(ghCalls, "");
+      await writeFile(gitCalls, "");
+      const result = run(eventMode, environment);
+      assert.notEqual(result.status, 0, `${eventMode} unexpectedly passed`);
+      assert.match(result.stderr, errorPattern);
+      assert.doesNotMatch(await readFile(gitCalls, "utf8"), /push/);
+      const calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
+      assert.equal(calls.length, expectedCallCount);
+      return calls;
+    };
+    let calls = await assertFinalRejected("ambiguous", {
+      APPROVAL_EVENT_ID: "100",
+      APPROVAL_REQUESTED_AT: firstTime,
+      APPROVAL_TRIGGERED_AT: firstTime,
+    }, /initial approval event window became missing or ambiguous/i);
+    assert.ok(calls[1].includes(
+      `repos/${productionIssue.repository}/issues/${productionIssue.number}/events?per_page=100&page=1`,
+    ));
+
+    const productionEnvironment = {
+      APPROVAL_EVENT_ID: String(productionIssue.eventId),
+      APPROVAL_REQUESTED_AT: productionIssue.requestedAt,
+      APPROVAL_TRIGGERED_AT: productionIssue.triggeredAt,
+    };
+    await assertFinalRejected(
+      "multiple-issue-documents",
+      productionEnvironment,
+      /invalid final-check issue/i,
+      1,
+    );
+    await assertFinalRejected(
+      "issue-api-failure",
+      productionEnvironment,
+      /issue request failed during the final check/i,
+      1,
+    );
+    for (const eventMode of ["labels-object", "malformed-label-element"]) {
+      await assertFinalRejected(
+        eventMode,
+        productionEnvironment,
+        /invalid final-check issue/i,
+        1,
+      );
+    }
+    await assertFinalRejected("malformed", productionEnvironment, /invalid label event/i);
+    await assertFinalRejected(
+      "multiple-documents",
+      productionEnvironment,
+      /invalid final-check page/i,
+    );
+    await assertFinalRejected(
+      "api-failure",
+      productionEnvironment,
+      /page request failed during the final check/i,
+    );
+    for (const eventMode of ["withdrawn", "newer-approval", "wrong-actor"]) {
+      await assertFinalRejected(
+        eventMode,
+        productionEnvironment,
+        /approved-and-verified label event changed before publication/i,
+      );
+    }
+    calls = await assertFinalRejected(
+      "pagination-limit",
+      productionEnvironment,
+      /pagination exceeded the safe final-check limit/i,
+      11,
+    );
+    assert.equal(calls.filter((call) => call.some((argument) => (
+      argument.includes(`/issues/${productionIssue.number}/events?per_page=100&page=`)
+    ))).length, 10);
+
+    await writeFile(ghCalls, "");
+    await writeFile(gitCalls, "");
+    await writeFile(output, "");
+    const production = run("production", productionEnvironment);
+    assert.equal(production.status, 0, production.stderr);
+    assert.match(await readFile(gitCalls, "utf8"), /"push","origin","HEAD:main"/);
+    assert.match(await readFile(output, "utf8"), new RegExp(`commit=${"c".repeat(40)}`));
+    calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
+    assert.equal(calls.length, 5);
+
+    await writeFile(ghCalls, "");
+    await writeFile(gitCalls, "");
+    await writeFile(output, "");
+    const production4116 = run("production", {
+      ISSUE_NUMBER: productionIssue4116.number,
+      APPROVED_ISSUE_TITLE: productionIssue4116.title,
+      EXPECTED_MANUAL_SETUP: String(productionIssue4116.manualSetup),
+      APPROVER_LOGIN: productionIssue4116.approver,
+      SUBMISSION_REPOSITORY: productionIssue4116.submissionRepository,
+      APPROVAL_EVENT_ID: String(productionIssue4116.eventId),
+      APPROVAL_REQUESTED_AT: productionIssue4116.requestedAt,
+      APPROVAL_TRIGGERED_AT: productionIssue4116.triggeredAt,
     });
-    assert.notEqual(result.status, 0);
-    assert.match(result.stderr, /approved-and-verified label event changed before publication/i);
-    assert.doesNotMatch(await readFile(gitCalls, "utf8"), /push/);
-    const calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
-    assert.equal(calls.length, 2);
-    assert.ok(calls[1].includes("repos/example/marketplace/issues/3380/events?per_page=100"));
+    assert.equal(production4116.status, 0, production4116.stderr);
+    assert.match(await readFile(gitCalls, "utf8"), /"push","origin","HEAD:main"/);
+    calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
+    assert.equal(calls.length, 5);
   } finally {
     await rm(directory, { recursive: true, force: true });
   }
