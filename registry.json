@@ -127673,6 +127673,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/komagata/omarchy-input-method",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:26:17.874Z",
+      "listingValidatedCommit": "dd9e00ac417edb8306d41e80f8f90ea869409395",
+      "listingValidatedAt": "2026-09-05T22:26:17.874Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "komagata/omarchy-input-method",
+        "pluginIds": [
+          "komagata.input-method"
+        ],
+        "commit": "dd9e00ac417edb8306d41e80f8f90ea869409395",
+        "checkedAt": "2026-09-05T22:26:17.811Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "komagata.input-method": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
