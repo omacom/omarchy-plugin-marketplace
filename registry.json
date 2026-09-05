@@ -128391,6 +128391,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DailenG/omi",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T23:43:24.876Z",
+      "listingValidatedCommit": "752896e94ee6260b1dd0e53ec9e954e79acf9727",
+      "listingValidatedAt": "2026-09-05T23:43:24.876Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "daileng/omi",
+        "pluginIds": [
+          "dailen.omi"
+        ],
+        "commit": "752896e94ee6260b1dd0e53ec9e954e79acf9727",
+        "checkedAt": "2026-09-05T23:43:24.813Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dailen.omi": {
+          "category": "Kids",
+          "tags": [
+            "kids",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
