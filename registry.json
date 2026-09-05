@@ -128051,6 +128051,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/linuxg33k76/omanetmonitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:54:19.099Z",
+      "listingValidatedCommit": "ee37f35eb91799653386f82890eded84200e1d7c",
+      "listingValidatedAt": "2026-09-05T22:54:19.099Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "linuxg33k76/omanetmonitor",
+        "pluginIds": [
+          "omanetmonitor"
+        ],
+        "commit": "ee37f35eb91799653386f82890eded84200e1d7c",
+        "checkedAt": "2026-09-05T22:54:19.029Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omanetmonitor": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
