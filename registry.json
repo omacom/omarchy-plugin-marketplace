@@ -128358,6 +128358,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/orospakr/omarchy-environment-canada-radar-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T23:41:07.430Z",
+      "listingValidatedCommit": "6510d6f7d9fd6e0ea0198b42e0a27d259b13e697",
+      "listingValidatedAt": "2026-09-05T23:41:07.430Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "orospakr/omarchy-environment-canada-radar-weather",
+        "pluginIds": [
+          "ca.orospakr.ec-radar-weather"
+        ],
+        "commit": "6510d6f7d9fd6e0ea0198b42e0a27d259b13e697",
+        "checkedAt": "2026-09-05T23:41:07.365Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ca.orospakr.ec-radar-weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
