@@ -127639,6 +127639,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kristijanw/omarchy-password-generator",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:23:56.856Z",
+      "listingValidatedCommit": "3fb8b34738c45c748e7ea5a8b2474d121fae9f90",
+      "listingValidatedAt": "2026-09-05T22:23:56.856Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kristijanw/omarchy-password-generator",
+        "pluginIds": [
+          "io.github.kristijanw.password-generator"
+        ],
+        "commit": "3fb8b34738c45c748e7ea5a8b2474d121fae9f90",
+        "checkedAt": "2026-09-05T22:23:56.789Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kristijanw.password-generator": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "security",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
