@@ -1570,10 +1570,7 @@ function builtInKind(kinds) {
   return kinds.map((kind) => labels[kind] || kind).join(" + ");
 }
 
-function builtInCommand(id, kinds) {
-  if (kinds.includes("bar-widget")) {
-    return { command: `omarchy bar plugin add ${id}`, label: "Add to bar" };
-  }
+function builtInCommand(id) {
   return { command: `omarchy plugin enable ${id}`, label: "Enable plugin" };
 }
 
@@ -1611,7 +1608,7 @@ async function discoveredBuiltIns(source, context) {
     validateManifestFiles(manifest, manifestPath, context);
     if (excluded.has(manifest.id)) return null;
     const kinds = manifest.kinds.map(String);
-    const officialCommand = builtInCommand(manifest.id, kinds);
+    const officialCommand = builtInCommand(manifest.id);
     const sourceDirectory = dirname(manifestPath);
     return {
       id: manifest.id,
