@@ -127500,6 +127500,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/r3mcos3/omarchy-zsh-alias-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:14:43.784Z",
+      "listingValidatedCommit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
+      "listingValidatedAt": "2026-09-05T22:14:43.784Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "r3mcos3/omarchy-zsh-alias-manager",
+        "pluginIds": [
+          "r3mcos3.zsh-aliases"
+        ],
+        "commit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
+        "checkedAt": "2026-09-05T22:14:43.717Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "r3mcos3.zsh-aliases": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
