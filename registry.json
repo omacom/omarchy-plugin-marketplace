@@ -127950,6 +127950,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/luwojtaszek/omarchy-alt-tab",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:47:49.914Z",
+      "listingValidatedCommit": "dca3e9526f3ba4d4a68bbed81bd1a26e890b0ff1",
+      "listingValidatedAt": "2026-09-05T22:47:49.914Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "luwojtaszek/omarchy-alt-tab",
+        "pluginIds": [
+          "io.github.luwojtaszek.alt-tab"
+        ],
+        "commit": "dca3e9526f3ba4d4a68bbed81bd1a26e890b0ff1",
+        "checkedAt": "2026-09-05T22:47:49.855Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.luwojtaszek.alt-tab": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
