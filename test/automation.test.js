@@ -1231,7 +1231,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260820-21");
+  assert.equal(styleKeys[0], "20260820-22");
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
@@ -1540,7 +1540,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /const pluginsPerPage = 9/);
   assert.match(files.app, /\["updated", "Recent activity"\]/);
   assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
-  assert.match(files.app, /function publisherLogin\(plugin\)/);
+  assert.match(files.sharedJs, /export function publisherLogin\(plugin\)/);
+  assert.doesNotMatch(files.app, /function publisherLogin\(plugin\)/);
+  assert.match(files.app, /publisherLogin/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
   assert.match(files.app, /function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\)/);

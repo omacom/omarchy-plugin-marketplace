@@ -209,6 +209,7 @@ svg {
   font-variant-numeric: tabular-nums;
 }
 .page-meta > span + span::before { margin-right: 15px; color: var(--faint); content: "|"; }
+.page-meta a:hover, .page-meta a:focus-visible { color: var(--accent); }
 .plugin-detail-article .page-meta { column-gap: 37px; }
 .plugin-detail-article .page-meta > span { position: relative; }
 .plugin-detail-article .page-meta > span + span::before {
@@ -388,7 +389,7 @@ svg {
 .aside-meta { display: grid; gap: 12px; }
 .aside-meta div { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .aside-meta dd { margin: 0; color: var(--text); text-align: right; }
-.aside-meta a:hover { color: var(--accent); }
+.aside-meta a:hover, .aside-meta a:focus-visible { color: var(--accent); }
 .aside-meta time { display: flex; align-items: flex-end; flex-direction: column; }
 .aside-meta time small { color: var(--muted); font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 1.4; }
 .aside-meta .status-label {
