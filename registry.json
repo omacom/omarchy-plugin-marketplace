@@ -128123,6 +128123,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tsubaie/omarchy-next-match",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T23:18:44.602Z",
+      "listingValidatedCommit": "ff68787e62bf092a8e723c1600d9a40557745d12",
+      "listingValidatedAt": "2026-09-05T23:18:44.602Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tsubaie/omarchy-next-match",
+        "pluginIds": [
+          "tsubaie.next-match"
+        ],
+        "commit": "ff68787e62bf092a8e723c1600d9a40557745d12",
+        "checkedAt": "2026-09-05T23:18:44.537Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tsubaie.next-match": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
