@@ -210,18 +210,85 @@ jobs:
           fi
           printf 'reason=%s\naction=%s\n' "$reason" "$action" >> "$GITHUB_OUTPUT"
 
-  publish:
-    # Every admitted analysis generation is retained. Stale generations are
-    # rejected by the current-state guards before any issue mutation.
+  mutation-route:
     if: >-
       always() &&
       (needs.validate.result == 'failure' ||
        (needs.validate.result == 'success' && needs.validate.outputs.should_continue == 'true'))
     needs: validate
     runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      issues: read
+    outputs:
+      group: ${{ steps.route.outputs.group }}
+    steps:
+      - name: Select live validation mutation group
+        id: route
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ANALYSIS_RESULT: ${{ needs.validate.result }}
+        run: |
+          set -euo pipefail
+          global_group=plugin-catalog-writes
+          if ! [[ $ISSUE_NUMBER =~ ^[1-9][0-9]*$ ]] || [ "$ANALYSIS_RESULT" != success ]; then
+            echo "group=${global_group}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          issue_file="$RUNNER_TEMP/live-issue.json"
+          if ! gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" > "$issue_file"; then
+            echo "Issue state lookup failed; routing through the global mutation group."
+            echo "group=${global_group}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! jq -e '
+            type == "object"
+            and (.state | type == "string")
+            and (.title | type == "string")
+            and ((.body | type) == "string" or (.body | type) == "null")
+            and (.labels | type == "array")
+            and (.labels | all(type == "object" and (.name | type == "string")))
+            and ([.labels[].name] | length == (unique | length))
+          ' "$issue_file" >/dev/null; then
+            echo "Issue state was malformed; routing through the global mutation group."
+            echo "group=${global_group}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if jq -e '
+            def has_label($name): any(.labels[]; .name == $name);
+            has_label("plugin-update")
+            or has_label("approved-and-verified")
+            or has_label("approved-for-listing")
+            or has_label("maintainer-verified")
+            or has_label("standard-installation-approved")
+            or (has_label("validated") and has_label("needs-fixes"))
+            or (has_label("needs-fixes") and
+                (has_label("security-needs-fixes") or has_label("security-review-required")))
+            or (has_label("security-needs-fixes") and has_label("security-review-required"))
+            or ((has_label("security-needs-fixes") or has_label("security-review-required")) and
+                (has_label("validated") | not))
+          ' "$issue_file" >/dev/null; then
+            echo "group=${global_group}" >> "$GITHUB_OUTPUT"
+          else
+            echo "group=issue-validation-${ISSUE_NUMBER}" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    # Every admitted analysis generation is retained. The live route keeps
+    # ordinary feedback per issue and sends approval-sensitive state through
+    # the global writer. Later guards can request the same global fallback.
+    if: >-
+      always() &&
+      (needs.validate.result == 'failure' ||
+       (needs.validate.result == 'success' && needs.validate.outputs.should_continue == 'true'))
+    needs: [validate, mutation-route]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:
-      group: plugin-catalog-writes
+      group: ${{ needs.mutation-route.outputs.group == format('issue-validation-{0}', github.event.issue.number) && format('issue-validation-{0}', github.event.issue.number) || 'plugin-catalog-writes' }}
       cancel-in-progress: false
       queue: max
     permissions:
@@ -229,7 +296,148 @@ jobs:
       issues: write
     env:
       GH_REPO: ${{ github.repository }}
-    steps:
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      EXPECTED_TITLE: ${{ github.event.issue.title }}
+      EXPECTED_BODY: ${{ github.event.issue.body }}
+      EXPECTED_TYPE_LABEL: submission
+      MUTATION_CONCURRENCY_GROUP: ${{ needs.mutation-route.outputs.group == format('issue-validation-{0}', github.event.issue.number) && format('issue-validation-{0}', github.event.issue.number) || 'plugin-catalog-writes' }}
+    outputs:
+      requires_global_fallback: ${{ steps.fallback.outputs.required }}
+    steps: &submission-mutation-steps
+      - name: Initialize live issue mutation guard
+        id: initialize
+        env:
+          EXPECTED_TITLE: ${{ github.event.issue.title }}
+          EXPECTED_BODY: ${{ github.event.issue.body }}
+          EXPECTED_TYPE_LABEL: submission
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+          guard="$RUNNER_TEMP/guard-issue-mutation"
+          helpers="$RUNNER_TEMP/issue-mutation-helpers"
+          cat > "$guard" <<'GUARD'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          mode="${1:-general}"
+          case "$mode" in general|trust|postflight) ;; *) printf '%s\n' error; exit 0 ;; esac
+          global_group=plugin-catalog-writes
+          stop_file="$RUNNER_TEMP/issue-mutation-stop"
+          mutated_file="$RUNNER_TEMP/issue-mutation-performed"
+          issue_file="$RUNNER_TEMP/live-issue.json"
+
+          if [ -f "$stop_file" ]; then
+            cat "$stop_file"
+            exit 0
+          fi
+          uncertain() {
+            if [ "$MUTATION_CONCURRENCY_GROUP" = "$global_group" ]; then
+              printf '%s\n' error
+            else
+              printf '%s\n' fallback | tee "$stop_file"
+            fi
+          }
+          if ! gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" > "$issue_file"; then
+            uncertain
+            exit 0
+          fi
+          if ! jq -e '
+            type == "object"
+            and (.state | type == "string")
+            and (.title | type == "string")
+            and ((.body | type) == "string" or (.body | type) == "null")
+            and (has("pull_request") | not)
+            and (.labels | type == "array")
+            and (.labels | all(type == "object" and (.name | type == "string")))
+            and ([.labels[].name] | length == (unique | length))
+          ' "$issue_file" >/dev/null; then
+            uncertain
+            exit 0
+          fi
+          if ! jq -e --arg title "$EXPECTED_TITLE" --arg body "$EXPECTED_BODY" '
+            .state == "open"
+            and .title == $title
+            and (.body // "") == $body
+            and (.labels | all(.name != "listed"))
+            and ((.title | startswith("[Plugin]:")) or (.labels | any(.name == "submission")))
+          ' "$issue_file" >/dev/null; then
+            if [ -f "$mutated_file" ] && [ "$MUTATION_CONCURRENCY_GROUP" != "$global_group" ]; then
+              printf '%s\n' fallback | tee "$stop_file"
+            else
+              printf '%s\n' stale | tee "$stop_file"
+            fi
+            exit 0
+          fi
+          if [ "$mode" = trust ] && ! jq -e --arg label "$EXPECTED_TYPE_LABEL" '
+            (.labels | any(.name == $label))
+            and (.labels | all(.name != "plugin-update"))
+          ' "$issue_file" >/dev/null; then
+            uncertain
+            exit 0
+          fi
+          if [ "$MUTATION_CONCURRENCY_GROUP" != "$global_group" ] && jq -e '
+            def has_label($name): any(.labels[]; .name == $name);
+            has_label("plugin-update")
+            or has_label("approved-and-verified")
+            or has_label("approved-for-listing")
+            or has_label("maintainer-verified")
+            or has_label("standard-installation-approved")
+            or (has_label("validated") and has_label("needs-fixes"))
+            or (has_label("needs-fixes") and
+                (has_label("security-needs-fixes") or has_label("security-review-required")))
+            or (has_label("security-needs-fixes") and has_label("security-review-required"))
+            or ((has_label("security-needs-fixes") or has_label("security-review-required")) and
+                (has_label("validated") | not))
+          ' "$issue_file" >/dev/null; then
+            printf '%s\n' fallback | tee "$stop_file"
+            exit 0
+          fi
+          printf '%s\n' safe
+          GUARD
+          cat > "$helpers" <<'HELPERS'
+          set -E
+          route_issue_mutation_error() {
+            status=$?
+            trap - ERR
+            if [ "$MUTATION_CONCURRENCY_GROUP" != plugin-catalog-writes ]; then
+              printf '%s\n' fallback > "$RUNNER_TEMP/issue-mutation-stop"
+              echo "Deferring incomplete issue mutation to the global fallback."
+              exit 0
+            fi
+            exit "$status"
+          }
+          trap route_issue_mutation_error ERR
+          require_issue_mutation() {
+            decision="$("$RUNNER_TEMP/guard-issue-mutation" "${1:-general}")"
+            case "$decision" in
+              safe) ;;
+              fallback|stale) exit 0 ;;
+              *) return 1 ;;
+            esac
+          }
+          mark_issue_mutation() {
+            : > "$RUNNER_TEMP/issue-mutation-performed"
+          }
+          remove_issue_label() {
+            label="$1"
+            guard_mode="${2:-trust}"
+            require_issue_mutation "$guard_mode"
+            if jq -e --arg label "$label" '.labels | any(.name == $label)' \
+              "$RUNNER_TEMP/live-issue.json" >/dev/null; then
+              if ! gh api --method DELETE \
+                "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels/${label}" >/dev/null 2>&1; then
+                rm -f "$RUNNER_TEMP/issue-mutation-stop"
+                decision="$("$RUNNER_TEMP/guard-issue-mutation" "$guard_mode")"
+                if [ "$decision" != safe ] || jq -e --arg label "$label" \
+                  '.labels | any(.name == $label)' "$RUNNER_TEMP/live-issue.json" >/dev/null; then
+                  return 1
+                fi
+              fi
+              mark_issue_mutation
+            fi
+          }
+          HELPERS
+          chmod 700 "$guard" "$helpers"
+
       - name: Confirm analyzed issue state is still current
         id: current
         if: needs.validate.result == 'success'
@@ -240,17 +448,13 @@ jobs:
           EXPECTED_BODY: ${{ github.event.issue.body }}
         run: |
           set -euo pipefail
-          issue="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}")"
-          if [ "$(jq -r '.state' <<<"$issue")" != "open" ] || \
-             ! jq -e '(.pull_request | not)' <<<"$issue" >/dev/null || \
-             ! jq -e '(.title | startswith("[Plugin]:")) or (.labels | any(.name == "submission"))' <<<"$issue" >/dev/null || \
-             jq -e '.labels | any(.name == "listed")' <<<"$issue" >/dev/null || \
-             ! jq -e --arg title "$EXPECTED_TITLE" --arg body "$EXPECTED_BODY" \
-               '.title == $title and .body == $body' <<<"$issue" >/dev/null; then
-            echo "should_publish=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "should_publish=true" >> "$GITHUB_OUTPUT"
-          fi
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          decision="$("$RUNNER_TEMP/guard-issue-mutation" general)"
+          case "$decision" in
+            safe) echo "should_publish=true" >> "$GITHUB_OUTPUT" ;;
+            fallback|stale) echo "should_publish=false" >> "$GITHUB_OUTPUT" ;;
+            *) exit 1 ;;
+          esac
 
       - name: Add submission label
         id: submission-label
@@ -258,11 +462,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: gh issue edit "$ISSUE_NUMBER" --add-label submission
+        run: |
+          set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          require_issue_mutation general
+          gh issue edit "$ISSUE_NUMBER" --add-label submission
+          mark_issue_mutation
 
       - name: Download analyzed validation reports
         id: download
         if: steps.current.outputs.should_publish == 'true' && needs.validate.outputs.should_validate == 'true'
+        continue-on-error: ${{ env.MUTATION_CONCURRENCY_GROUP != 'plugin-catalog-writes' }}
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: ${{ needs.validate.outputs.reports_artifact_name }}
@@ -270,7 +480,11 @@ jobs:
 
       - name: Verify analyzed validation reports
         id: reports
-        if: steps.current.outputs.should_publish == 'true' && needs.validate.outputs.should_validate == 'true'
+        if: >-
+          steps.current.outputs.should_publish == 'true' &&
+          needs.validate.outputs.should_validate == 'true' &&
+          steps.download.outcome == 'success'
+        continue-on-error: ${{ env.MUTATION_CONCURRENCY_GROUP != 'plugin-catalog-writes' }}
         env:
           VALIDATION_RESULT: ${{ needs.validate.outputs.validation_result }}
           BASELINE_RESULT: ${{ needs.validate.outputs.baseline_result }}
@@ -314,12 +528,17 @@ jobs:
 
       - name: Publish validation report
         id: report
-        if: steps.current.outputs.should_publish == 'true' && needs.validate.outputs.should_validate == 'true'
+        if: >-
+          steps.current.outputs.should_publish == 'true' &&
+          needs.validate.outputs.should_validate == 'true' &&
+          steps.reports.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          require_issue_mutation trust
           report="$RUNNER_TEMP/validation-reports/validation-report.md"
           comment_id="$(
             gh api --paginate \
@@ -327,6 +546,7 @@ jobs:
               --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- marketplace-validation -->"))) | .id' \
               | tail -n 1
           )"
+          require_issue_mutation trust
           if [ -n "$comment_id" ]; then
             jq -Rs '{body: .}' "$report" > "$RUNNER_TEMP/validation-comment.json"
             gh api --method PATCH \
@@ -335,15 +555,21 @@ jobs:
           else
             gh issue comment "$ISSUE_NUMBER" --body-file "$report"
           fi
+          mark_issue_mutation
 
       - name: Publish automated security baseline
         id: baseline-report
-        if: steps.current.outputs.should_publish == 'true' && needs.validate.outputs.validation_result == 'validated'
+        if: >-
+          steps.current.outputs.should_publish == 'true' &&
+          needs.validate.outputs.validation_result == 'validated' &&
+          steps.reports.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          require_issue_mutation trust
           report="$RUNNER_TEMP/validation-reports/security-baseline-report.md"
           comment_id="$(
             gh api --paginate \
@@ -351,6 +577,7 @@ jobs:
               --jq '.[] | select(.user.login == "github-actions[bot]" and ((.body | test("<!-- marketplace-security-baseline:v[0-9]+ ")) or (.body | test("<!-- marketplace-security-baseline-error:v[0-9]+ -->")))) | .id' \
               | tail -n 1
           )"
+          require_issue_mutation trust
           if [ -n "$comment_id" ]; then
             jq -Rs '{body: .}' "$report" > "$RUNNER_TEMP/security-baseline-comment.json"
             gh api --method PATCH \
@@ -359,10 +586,14 @@ jobs:
           else
             gh issue comment "$ISSUE_NUMBER" --body-file "$report"
           fi
+          mark_issue_mutation
 
       - name: Update validation labels
         id: labels
-        if: steps.current.outputs.should_publish == 'true' && needs.validate.outputs.should_validate == 'true'
+        if: >-
+          steps.current.outputs.should_publish == 'true' &&
+          needs.validate.outputs.should_validate == 'true' &&
+          steps.reports.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -371,43 +602,44 @@ jobs:
           BASELINE_DISPOSITION: ${{ needs.validate.outputs.baseline_disposition }}
         run: |
           set -euo pipefail
-          remove_label() {
-            gh api --method DELETE \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels/$1" \
-              >/dev/null 2>&1 || true
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          add_label() {
+            require_issue_mutation trust
+            gh issue edit "$ISSUE_NUMBER" --add-label "$1"
+            mark_issue_mutation
           }
 
-          # Any fresh validation invalidates an earlier human decision. Applying
-          # approved-and-verified does not trigger this workflow, so the label a
-          # maintainer applies after these checks remains intact.
-          remove_label approved-and-verified
-          remove_label approved-for-listing
+          # Any fresh validation invalidates an earlier human decision. A live
+          # decision discovered on the per-issue path is never removed there;
+          # it moves the exact artifact to the globally locked fallback.
+          remove_issue_label approved-and-verified
+          remove_issue_label approved-for-listing
 
           if [ "$RESULT" = "validated" ] && [ "$BASELINE_RESULT" = "scan-error" ]; then
             test -z "$BASELINE_DISPOSITION"
-            gh issue edit "$ISSUE_NUMBER" --add-label needs-fixes
-            remove_label validated
-            remove_label security-needs-fixes
-            remove_label security-review-required
+            add_label needs-fixes
+            remove_issue_label validated
+            remove_issue_label security-needs-fixes
+            remove_issue_label security-review-required
           elif [ "$RESULT" = "validated" ]; then
             case "$BASELINE_RESULT" in
               passed|review-required|needs-fixes) ;;
               *) echo "A validated submission requires a complete security baseline." >&2; exit 1 ;;
             esac
-            gh issue edit "$ISSUE_NUMBER" --add-label validated
-            remove_label needs-fixes
+            add_label validated
+            remove_issue_label needs-fixes
             case "$BASELINE_DISPOSITION" in
               clear)
-                remove_label security-needs-fixes
-                remove_label security-review-required
+                remove_issue_label security-needs-fixes
+                remove_issue_label security-review-required
                 ;;
               review-required)
-                gh issue edit "$ISSUE_NUMBER" --add-label security-review-required
-                remove_label security-needs-fixes
+                add_label security-review-required
+                remove_issue_label security-needs-fixes
                 ;;
               needs-fixes)
-                gh issue edit "$ISSUE_NUMBER" --add-label security-needs-fixes
-                remove_label security-review-required
+                add_label security-needs-fixes
+                remove_issue_label security-review-required
                 ;;
               *)
                 echo "A validated submission requires a security label disposition." >&2
@@ -417,18 +649,43 @@ jobs:
           elif [ "$RESULT" = "needs-fixes" ]; then
             test -z "$BASELINE_RESULT"
             test -z "$BASELINE_DISPOSITION"
-            gh issue edit "$ISSUE_NUMBER" --add-label needs-fixes
-            remove_label validated
-            remove_label security-needs-fixes
-            remove_label security-review-required
+            add_label needs-fixes
+            remove_issue_label validated
+            remove_issue_label security-needs-fixes
+            remove_issue_label security-review-required
           else
             echo "Validation result is invalid." >&2
             exit 1
           fi
 
+      - name: Recheck issue trust state after validation mutations
+        id: postflight
+        if: steps.current.outputs.should_publish == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          decision="$("$RUNNER_TEMP/guard-issue-mutation" postflight)"
+          case "$decision" in
+            safe|fallback|stale) ;;
+            *) exit 1 ;;
+          esac
+
       - name: Record validation publication failure
         id: failure
-        if: failure() && needs.validate.result == 'success'
+        if: >-
+          always() &&
+          needs.validate.result == 'success' &&
+          (steps.initialize.outcome == 'failure' ||
+           steps.current.outcome == 'failure' ||
+           steps.submission-label.outcome == 'failure' ||
+           steps.download.outcome == 'failure' ||
+           steps.reports.outcome == 'failure' ||
+           steps.report.outcome == 'failure' ||
+           steps.baseline-report.outcome == 'failure' ||
+           steps.labels.outcome == 'failure' ||
+           steps.postflight.outcome == 'failure')
         env:
           CURRENT_OUTCOME: ${{ steps.current.outcome }}
           SUBMISSION_LABEL_OUTCOME: ${{ steps.submission-label.outcome }}
@@ -462,7 +719,7 @@ jobs:
         id: failure-current
         if: >-
           always() &&
-          (needs.validate.result == 'failure' || failure())
+          (needs.validate.result == 'failure' || steps.failure.outcome == 'success')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -488,22 +745,24 @@ jobs:
       - name: Clear stale approval state after workflow failure
         if: >-
           always() &&
-          (needs.validate.result == 'failure' || failure()) &&
+          env.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes' &&
+          (needs.validate.result == 'failure' || steps.failure.outcome == 'success') &&
           steps.failure-current.outputs.matches == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
+          set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
           for label in validated approved-and-verified approved-for-listing security-needs-fixes security-review-required; do
-            gh api --method DELETE \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels/${label}" \
-              >/dev/null 2>&1 || true
+            remove_issue_label "$label" general
           done
 
       - name: Report validation workflow failure
         if: >-
           always() &&
-          (needs.validate.result == 'failure' || failure()) &&
+          env.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes' &&
+          (needs.validate.result == 'failure' || steps.failure.outcome == 'success') &&
           steps.failure-current.outputs.matches == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -514,6 +773,8 @@ jobs:
           FAILURE_ACTION: ${{ steps.failure.outputs.action || needs.validate.outputs.failure_action }}
         run: |
           set -euo pipefail
+          source "$RUNNER_TEMP/issue-mutation-helpers"
+          require_issue_mutation general
           reason="${FAILURE_REASON:-The validation workflow did not complete.}"
           action="${FAILURE_ACTION:-A maintainer must review the workflow before validation is retried.}"
           report_file="$RUNNER_TEMP/validation-report.md"
@@ -525,6 +786,7 @@ jobs:
               --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- marketplace-validation -->"))) | .id' \
               | tail -n 1
           )"
+          require_issue_mutation general
           if [ -n "$comment_id" ]; then
             jq -Rs '{body: .}' "$report_file" > "$RUNNER_TEMP/validation-report.json"
             gh api --method PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${comment_id}" \
@@ -532,3 +794,62 @@ jobs:
           else
             gh issue comment "$ISSUE_NUMBER" --body-file "$report_file"
           fi
+          mark_issue_mutation
+
+      - name: Route incomplete validation mutation through the global fallback
+        id: fallback
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          INITIALIZE_OUTCOME: ${{ steps.initialize.outcome }}
+          DOWNLOAD_OUTCOME: ${{ steps.download.outcome }}
+          REPORTS_OUTCOME: ${{ steps.reports.outcome }}
+          REPORT_OUTCOME: ${{ steps.report.outcome }}
+          BASELINE_REPORT_OUTCOME: ${{ steps.baseline-report.outcome }}
+          LABELS_OUTCOME: ${{ steps.labels.outcome }}
+          POSTFLIGHT_OUTCOME: ${{ steps.postflight.outcome }}
+        run: |
+          set -euo pipefail
+          required=false
+          if [ "$MUTATION_CONCURRENCY_GROUP" != plugin-catalog-writes ]; then
+            if [ -f "$RUNNER_TEMP/issue-mutation-stop" ] && \
+               [ "$(cat "$RUNNER_TEMP/issue-mutation-stop")" = fallback ]; then
+              required=true
+            fi
+            for outcome in "$INITIALIZE_OUTCOME" "$DOWNLOAD_OUTCOME" "$REPORTS_OUTCOME" \
+              "$REPORT_OUTCOME" "$BASELINE_REPORT_OUTCOME" "$LABELS_OUTCOME" \
+              "$POSTFLIGHT_OUTCOME"; do
+              if [ "$outcome" = failure ]; then
+                required=true
+              fi
+            done
+            if [ "$JOB_STATUS" = failure ]; then
+              required=true
+            fi
+          fi
+          echo "required=${required}" >> "$GITHUB_OUTPUT"
+
+  publish-fallback:
+    if: >-
+      always() &&
+      (needs.publish.outputs.requires_global_fallback == 'true' ||
+       (needs.publish.result == 'failure' &&
+        needs.mutation-route.outputs.group == format('issue-validation-{0}', github.event.issue.number)))
+    needs: [validate, mutation-route, publish]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: plugin-catalog-writes
+      cancel-in-progress: false
+      queue: max
+    permissions:
+      actions: read
+      issues: write
+    env:
+      GH_REPO: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      EXPECTED_TITLE: ${{ github.event.issue.title }}
+      EXPECTED_BODY: ${{ github.event.issue.body }}
+      EXPECTED_TYPE_LABEL: submission
+      MUTATION_CONCURRENCY_GROUP: plugin-catalog-writes
+    steps: *submission-mutation-steps

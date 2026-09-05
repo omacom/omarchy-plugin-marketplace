@@ -286,3 +286,79 @@ jobs:
 
           echo "::error::Pages deployment failed and the expected catalog and Explorer data did not become live."
           exit 1
+
+  alert:
+    if: always()
+    needs: [refresh, publish, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      issues: write
+    steps:
+      - name: Reconcile catalog refresh failure alert
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REFRESH_RESULT: ${{ needs.refresh.result }}
+          PUBLISH_RESULT: ${{ needs.publish.result }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+          TRIGGER_EVENT: ${{ github.event_name }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          title="Marketplace catalog refresh failure"
+          for result in "$REFRESH_RESULT" "$PUBLISH_RESULT" "$DEPLOY_RESULT"; do
+            case "$result" in success|failure|cancelled|skipped) ;;
+              *) echo "Unexpected refresh job result." >&2; exit 1 ;;
+            esac
+          done
+          case "$TRIGGER_EVENT" in schedule|workflow_dispatch) ;;
+            *) echo "Unexpected refresh trigger." >&2; exit 1 ;;
+          esac
+
+          alert_state=active
+          if [ "$REFRESH_RESULT" = success ] && \
+             [ "$PUBLISH_RESULT" = success ] && \
+             [ "$DEPLOY_RESULT" = success ]; then
+            alert_state=resolved
+          fi
+          body_file="$RUNNER_TEMP/catalog-refresh-alert.md"
+          printf '## Marketplace catalog refresh failure\n\nState: **%s**\n\n- Refresh: `%s`\n- Publish: `%s`\n- Deploy: `%s`\n- Trigger: `%s`\n- Workflow: %s\n\nThis operational alert does not change plugin trust labels.\n' \
+            "$alert_state" "$REFRESH_RESULT" "$PUBLISH_RESULT" "$DEPLOY_RESULT" \
+            "$TRIGGER_EVENT" "$RUN_URL" > "$body_file"
+
+          issue_ids="$(
+            gh api --paginate "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100" \
+              --jq ".[] | select((.pull_request | not) and .title == \"${title}\" and .user.login == \"github-actions[bot]\") | .number"
+          )"
+          count=0
+          issue_number=""
+          while IFS= read -r candidate; do
+            [ -z "$candidate" ] && continue
+            [[ $candidate =~ ^[1-9][0-9]*$ ]]
+            count=$((count + 1))
+            issue_number="$candidate"
+          done <<< "$issue_ids"
+          if [ "$count" -gt 1 ]; then
+            echo "Multiple open catalog refresh alerts exist; refusing an ambiguous update." >&2
+            exit 1
+          fi
+
+          jq -Rs --arg title "$title" '{title: $title, body: ., labels: []}' "$body_file" \
+            > "$RUNNER_TEMP/catalog-refresh-alert.json"
+          if [ "$alert_state" = active ]; then
+            if [ "$count" -eq 1 ]; then
+              jq -Rs '{body: ., labels: []}' "$body_file" > "$RUNNER_TEMP/catalog-refresh-alert-update.json"
+              gh api --method PATCH \
+                "repos/${GITHUB_REPOSITORY}/issues/${issue_number}" \
+                --input "$RUNNER_TEMP/catalog-refresh-alert-update.json"
+            else
+              gh api --method POST "repos/${GITHUB_REPOSITORY}/issues" \
+                --input "$RUNNER_TEMP/catalog-refresh-alert.json"
+            fi
+          elif [ "$count" -eq 1 ]; then
+            jq -Rs '{body: ., labels: [], state: "closed", state_reason: "completed"}' "$body_file" \
+              > "$RUNNER_TEMP/catalog-refresh-alert-resolved.json"
+            gh api --method PATCH \
+              "repos/${GITHUB_REPOSITORY}/issues/${issue_number}" \
+              --input "$RUNNER_TEMP/catalog-refresh-alert-resolved.json"
+          fi

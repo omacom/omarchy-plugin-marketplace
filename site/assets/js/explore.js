@@ -918,7 +918,10 @@ function renderGrowth({ updateUrl = true } = {}) {
     ? "since the Quattro release"
     : `${shortDate.format(new Date(`${from}T00:00:00Z`))}–${shortDate.format(new Date(`${to}T00:00:00Z`))}`;
   document.querySelector("#growth-as-of").textContent = `As of ${posterDate.format(new Date(`${to}T00:00:00Z`)).toUpperCase()}`;
-  document.querySelector("#growth-chart-description").textContent = `Active community plugin listings changed from ${number.format(start.total)} to ${number.format(end.total)} between ${posterDate.format(new Date(`${from}T00:00:00Z`))} and ${posterDate.format(new Date(`${to}T00:00:00Z`))}${percentage === null ? "" : `, a ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(Math.abs(percentage))} percent ${trendWord}`}.`;
+  const finalityDescription = end.date === explorer.growth.at(-1).date
+    ? "The latest UTC day in this range is provisional until a successful later-day build finalizes it."
+    : "All UTC days in this range are final.";
+  document.querySelector("#growth-chart-description").textContent = `Active community plugin listings changed from ${number.format(start.total)} to ${number.format(end.total)} between ${posterDate.format(new Date(`${from}T00:00:00Z`))} and ${posterDate.format(new Date(`${to}T00:00:00Z`))}${percentage === null ? "" : `, a ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(Math.abs(percentage))} percent ${trendWord}`}. ${finalityDescription}`;
   if (updateUrl) setGrowthUrl(from, to);
 
   let activePreset = "";
@@ -1003,6 +1006,7 @@ function setupGrowth() {
   const toInput = document.querySelector("#growth-to");
   const minimum = explorer.growth[0].date;
   const maximum = explorer.growth.at(-1).date;
+  document.querySelector("#growth-finality-copy").textContent = `Earlier UTC days are final. The latest day (${maximum}, UTC) is provisional until a successful later-day build finalizes it.`;
   const growthMeta = explorer.growthMeta || {};
   const timezone = growthMeta.timezone || "UTC";
   document.querySelector("#growth-method-copy").textContent = growthMeta.historical

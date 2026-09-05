@@ -95,11 +95,15 @@ export function assertGrowthContinuity(previousExplorer, nextGrowth, generatedAt
     throw new Error("Explorer growth does not extend the committed historical series");
   }
 
-  const mutableIndex = elapsedDays === 0 ? previousGrowth.length - 1 : -1;
+  // The committed series' last point came from an in-progress catalog build,
+  // not necessarily the final Git commit on that UTC day. It remains provisional
+  // until a later-day build finalizes it from complete Git history (including
+  // builds committed across midnight). Every earlier point is already final.
+  const mutableIndex = previousGrowth.length - 1;
   for (let index = 0; index < previousGrowth.length; index++) {
     if (index === mutableIndex) {
-      if (nextGrowth[index]?.date !== currentDate) {
-        throw new Error("Explorer growth changed the current UTC day boundary");
+      if (nextGrowth[index]?.date !== previousDate) {
+        throw new Error("Explorer growth changed the provisional UTC day boundary");
       }
     } else if (!sameGrowthPoint(previousGrowth[index], nextGrowth[index])) {
       throw new Error("Explorer growth changed or removed a completed UTC day");

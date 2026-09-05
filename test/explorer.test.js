@@ -35,7 +35,10 @@ function workflowJobSource(workflow, name, nextName = "") {
   return end > start ? workflow.slice(start, end) : workflow.slice(start);
 }
 
-function createExplorerBuilderFixture(growth, plugins = []) {
+function createExplorerBuilderFixture(growth, plugins = [], {
+  generatedAt = "2026-08-28T10:00:00.000Z",
+  committedAt = "2026-08-28T09:00:00Z",
+} = {}) {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), "explorer-builder-history-"));
   fs.mkdirSync(path.join(directory, "scripts"));
   fs.mkdirSync(path.join(directory, "site", "assets", "js"), { recursive: true });
@@ -43,11 +46,11 @@ function createExplorerBuilderFixture(growth, plugins = []) {
   fs.copyFileSync(new URL("../scripts/explorer-growth-history.mjs", import.meta.url), path.join(directory, "scripts", "explorer-growth-history.mjs"));
   fs.copyFileSync(new URL("../site/assets/js/taxonomy.js", import.meta.url), path.join(directory, "site", "assets", "js", "taxonomy.js"));
   fs.writeFileSync(path.join(directory, "site", "catalog.json"), JSON.stringify({
-    generatedAt: "2026-08-28T10:00:00.000Z",
+    generatedAt,
     plugins,
   }));
   fs.writeFileSync(path.join(directory, "site", "explorer-data.json"), JSON.stringify({
-    generatedAt: "2026-08-28T10:00:00.000Z",
+    generatedAt,
     growthMeta: { method: "git-catalog-snapshots" },
     growth,
   }));
@@ -61,8 +64,8 @@ function createExplorerBuilderFixture(growth, plugins = []) {
     cwd: directory,
     env: {
       ...process.env,
-      GIT_AUTHOR_DATE: "2026-08-28T09:00:00Z",
-      GIT_COMMITTER_DATE: "2026-08-28T09:00:00Z",
+      GIT_AUTHOR_DATE: committedAt,
+      GIT_COMMITTER_DATE: committedAt,
     },
   });
   return directory;
@@ -100,6 +103,7 @@ test("growth series uses daily end-of-day catalog history snapshots", () => {
   assert.equal(explorer.growthMeta.method, "git-catalog-snapshots");
   assert.equal(explorer.growthMeta.historical, true);
   assert.equal(explorer.growthMeta.timezone, "UTC");
+  assert.match(explorer.growthMeta.detail, /Earlier UTC days use the final committed catalog state\. The latest UTC day is provisional until a successful later-day build finalizes it\./);
   for (let index = 1; index < explorer.growth.length; index++) {
     const previous = explorer.growth[index - 1];
     const current = explorer.growth[index];
@@ -135,7 +139,7 @@ test("Explorer growth rejects shallow Git history", () => {
   }
 });
 
-test("Explorer growth only changes the current day or appends valid later days", () => {
+test("Explorer growth only changes its previously provisional day or appends valid later days", () => {
   const previous = {
     generatedAt: "2026-08-28T10:00:00.000Z",
     growthMeta: { method: "git-catalog-snapshots" },
@@ -189,6 +193,156 @@ test("Explorer growth only changes the current day or appends valid later days",
     () => assertGrowthContinuity(previous, previous.growth, "2026-08-27T18:00:00.000Z"),
     /does not extend the committed historical series/,
   );
+});
+
+test("Explorer finalizes only the last previous point across one or more UTC days", () => {
+  const previous = {
+    generatedAt: "2026-09-04T23:59:21.243Z",
+    growthMeta: { method: "git-catalog-snapshots" },
+    growth: [
+      { date: "2026-09-03", total: 2159, added: 2159 },
+      { date: "2026-09-04", total: 2369, added: 210 },
+    ],
+  };
+  for (const total of [2368, 2369, 2370]) {
+    const finalized = { date: "2026-09-04", total, added: total - 2159 };
+    const next = [previous.growth[0], finalized, { date: "2026-09-05", total: 2371, added: 2371 - total }];
+    assert.doesNotThrow(() => assertGrowthContinuity(previous, next, "2026-09-05T00:01:00.000Z"));
+    // The corrected predecessor, not the old provisional total, determines added.
+    assert.throws(() => assertGrowthContinuity(previous, [
+      previous.growth[0], { ...finalized, added: finalized.added + 1 }, next[2],
+    ], "2026-09-05T00:01:00.000Z"), /not a contiguous daily series/);
+    assert.throws(() => assertGrowthContinuity(previous, [
+      previous.growth[0], finalized, { ...next[2], added: next[2].added + 1 },
+    ], "2026-09-05T00:01:00.000Z"), /not a contiguous daily series/);
+    const gap = [...next, { date: "2026-09-06", total: 2371, added: 0 }, { date: "2026-09-07", total: 2372, added: 1 }];
+    assert.doesNotThrow(() => assertGrowthContinuity(previous, gap, "2026-09-07T01:00:00.000Z"));
+    const committedNext = { ...previous, growth: next, generatedAt: "2026-09-05T00:01:00.000Z" };
+    const secondRollover = [previous.growth[0], finalized, { date: "2026-09-05", total: 2370, added: 2370 - total }, { date: "2026-09-06", total: 2373, added: 3 }];
+    assert.doesNotThrow(() => assertGrowthContinuity(committedNext, secondRollover, "2026-09-06T01:00:00.000Z"));
+    // Yesterday's finalized value cannot become mutable again on a later rollover.
+    assert.throws(() => assertGrowthContinuity(committedNext, [
+      previous.growth[0], { ...finalized, total: total + 1, added: finalized.added + 1 },
+      { ...secondRollover[2], added: secondRollover[2].added - 1 }, secondRollover[3],
+    ], "2026-09-06T01:00:00.000Z"), /changed or removed a completed UTC day/);
+  }
+});
+
+function fixturePlugins(count) {
+  return Array.from({ length: count }, (_, index) => ({
+    id: `fixture.plugin-${index}`, name: `Fixture ${index}`, sourceType: "community",
+    description: "Inert test metadata", category: "Other", tags: [],
+  }));
+}
+
+function writeFixtureCatalog(directory, generatedAt, count) {
+  fs.writeFileSync(path.join(directory, "site", "catalog.json"), JSON.stringify({ generatedAt, plugins: fixturePlugins(count) }));
+}
+
+function buildFixtureExplorer(directory, success = true) {
+  const output = path.join(directory, "site", "explorer-data.json");
+  const before = fs.readFileSync(output);
+  const result = spawnSync(process.execPath, ["scripts/build-explorer-data.mjs"], {
+    cwd: directory, encoding: "utf8", timeout: 30_000,
+    env: { ...process.env, MARKETPLACE_EXPLORER_CATALOG_PATH: path.join(directory, "site", "catalog.json"), MARKETPLACE_EXPLORER_OUTPUT_PATH: output },
+  });
+  if (success) assert.equal(result.status, 0, result.stderr);
+  else {
+    assert.notEqual(result.status, 0);
+    assert.equal(result.error, undefined);
+    assert.deepEqual(fs.readFileSync(output), before, "Rejected builds must leave output bytes unchanged");
+    return result;
+  }
+  return JSON.parse(fs.readFileSync(output, "utf8"));
+}
+
+function commitFixtureSnapshot(directory, committedAt, authoredAt = committedAt) {
+  execFileSync("git", ["add", "site"], { cwd: directory });
+  execFileSync("git", ["-c", "user.name=Explorer Test", "-c", "user.email=explorer-test@example.invalid", "commit", "--quiet", "-m", "Record inert catalog snapshot"], {
+    cwd: directory, env: { ...process.env, GIT_AUTHOR_DATE: authoredAt, GIT_COMMITTER_DATE: committedAt },
+  });
+}
+
+test("Explorer builder reproduces the 2369-to-2368 midnight incident using committer UTC time", () => {
+  const directory = createExplorerBuilderFixture([{ date: "2026-09-03", total: 2159, added: 2159 }], fixturePlugins(2159), {
+    generatedAt: "2026-09-03T12:00:00.000Z", committedAt: "2026-09-03T12:01:00Z",
+  });
+  try {
+    writeFixtureCatalog(directory, "2026-09-04T23:57:06.641Z", 2368);
+    buildFixtureExplorer(directory);
+    commitFixtureSnapshot(directory, "2026-09-04T23:58:06Z");
+    writeFixtureCatalog(directory, "2026-09-04T23:59:21.243Z", 2369);
+    const provisional = buildFixtureExplorer(directory);
+    assert.deepEqual(provisional.growth.at(-1), { date: "2026-09-04", total: 2369, added: 210 });
+    commitFixtureSnapshot(directory, "2026-09-05T00:00:19Z", "2026-09-04T23:59:21Z");
+    // A standalone/no-op rebuild must not advance the logical day just because
+    // this catalog was committed on a later UTC day than its generatedAt.
+    const noOp = buildFixtureExplorer(directory);
+    assert.deepEqual(noOp, provisional);
+    writeFixtureCatalog(directory, "2026-09-05T00:01:00.000Z", 2369);
+    const next = buildFixtureExplorer(directory);
+    assert.deepEqual(next.growth, [
+      { date: "2026-09-03", total: 2159, added: 2159 },
+      { date: "2026-09-04", total: 2368, added: 209 },
+      { date: "2026-09-05", total: 2369, added: 1 },
+    ]);
+    assert.equal(next.nodes.length, 2369);
+    assert.match(next.growthMeta.detail, /latest UTC day is provisional/);
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("Explorer builder finalizes at exact midnight, across offsets, gaps and successive rollovers", () => {
+  for (const midnight of ["2026-09-05T00:00:00Z", "2026-09-05T02:00:00+02:00", "2026-09-04T20:00:00-04:00"]) {
+    const directory = createExplorerBuilderFixture([{ date: "2026-09-03", total: 2, added: 2 }], fixturePlugins(2), {
+      generatedAt: "2026-09-03T12:00:00.000Z", committedAt: "2026-09-03T12:01:00Z",
+    });
+    try {
+      writeFixtureCatalog(directory, "2026-09-04T20:00:00.000Z", 3);
+      buildFixtureExplorer(directory);
+      commitFixtureSnapshot(directory, "2026-09-04T20:01:00Z");
+      writeFixtureCatalog(directory, "2026-09-04T23:59:21.243Z", 4);
+      buildFixtureExplorer(directory);
+      commitFixtureSnapshot(directory, midnight, "2026-09-04T23:59:21Z");
+      writeFixtureCatalog(directory, "2026-09-05T12:00:00.000Z", 5);
+      const next = buildFixtureExplorer(directory);
+      assert.deepEqual(next.growth.slice(-2), [{ date: "2026-09-04", total: 3, added: 1 }, { date: "2026-09-05", total: 5, added: 2 }]);
+      // The next day's open value is itself committed over another UTC boundary.
+      commitFixtureSnapshot(directory, "2026-09-06T00:00:00Z");
+      writeFixtureCatalog(directory, "2026-09-06T12:00:00.000Z", 6);
+      const second = buildFixtureExplorer(directory);
+      assert.deepEqual(second.growth.slice(-3), [{ date: "2026-09-04", total: 3, added: 1 }, { date: "2026-09-05", total: 4, added: 1 }, { date: "2026-09-06", total: 6, added: 2 }]);
+      assert.deepEqual(second.growth.slice(0, -2), next.growth.slice(0, -1));
+      commitFixtureSnapshot(directory, "2026-09-06T12:01:00Z");
+      writeFixtureCatalog(directory, "2026-09-09T12:00:00.000Z", 7);
+      const gap = buildFixtureExplorer(directory);
+      assert.deepEqual(gap.growth.slice(-4), [
+        { date: "2026-09-06", total: 6, added: 2 }, { date: "2026-09-07", total: 6, added: 0 },
+        { date: "2026-09-08", total: 6, added: 0 }, { date: "2026-09-09", total: 7, added: 1 },
+      ]);
+    } finally {
+      fs.rmSync(directory, { recursive: true, force: true });
+    }
+  }
+});
+
+test("Explorer builder rejects older history changes without replacing output", () => {
+  const directory = createExplorerBuilderFixture([
+    { date: "2026-09-03", total: 2, added: 2 },
+  ], fixturePlugins(2), { generatedAt: "2026-09-03T12:00:00.000Z", committedAt: "2026-09-03T12:01:00Z" });
+  try {
+    writeFixtureCatalog(directory, "2026-09-04T12:00:00.000Z", 3);
+    const valid = buildFixtureExplorer(directory);
+    // Preserve contiguity and arithmetic while corrupting an older finalized point.
+    const corrupt = { ...valid, growth: [{ date: "2026-09-03", total: 1, added: 1 }, { date: "2026-09-04", total: 3, added: 2 }] };
+    fs.writeFileSync(path.join(directory, "site", "explorer-data.json"), JSON.stringify(corrupt));
+    commitFixtureSnapshot(directory, "2026-09-04T12:01:00Z");
+    writeFixtureCatalog(directory, "2026-09-05T12:00:00.000Z", 4);
+    assert.match(buildFixtureExplorer(directory, false).stderr, /changed or removed a completed UTC day/);
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
 });
 
 test("Kids taxonomy activates its graph community without publishing empty clusters", () => {
@@ -305,12 +459,14 @@ test("Explorer builder fails closed for shallow and truncated repositories", () 
 
     const head = execFileSync("git", ["rev-parse", "HEAD"], { cwd: complete, encoding: "utf8" }).trim();
     fs.writeFileSync(path.join(complete, ".git", "shallow"), `${head}\n`);
+    const beforeShallow = fs.readFileSync(path.join(complete, "site", "explorer-data.json"));
     const shallowResult = spawnSync(process.execPath, ["scripts/build-explorer-data.mjs"], {
       cwd: complete,
       encoding: "utf8",
     });
     assert.notEqual(shallowResult.status, 0);
     assert.match(shallowResult.stderr, /complete Git history \(shallow repository detected\)/);
+    assert.deepEqual(fs.readFileSync(path.join(complete, "site", "explorer-data.json")), beforeShallow);
 
     const previousOutput = fs.readFileSync(path.join(truncated, "site", "explorer-data.json"), "utf8");
     const truncatedResult = spawnSync(process.execPath, ["scripts/build-explorer-data.mjs"], {
@@ -345,6 +501,10 @@ test("growth view preserves the source graphic's presentation hierarchy", () => 
   assert.match(script, /growthDelta\.querySelector\("strong"\)\.textContent = `\$\{change > 0 \? "\+" : ""\}\$\{number\.format\(change\)\}`[\s\S]*plugin\$\{absoluteChange === 1 \? "" : "s"\} \$\{trendWord\} over the selected period/);
   assert.match(page, /class="growth-plot-meta"[\s\S]*Plugin Count[\s\S]*class="growth-plot-frame"[\s\S]*viewBox="0 0 1728 620"/);
   assert.match(page, /id="growth-chart"[^>]+aria-label="Community plugin growth"[^>]+aria-describedby="growth-chart-description"/);
+  assert.match(page, /<p id="growth-finality-copy">Earlier UTC days are final\. The latest day is provisional until a successful later-day build finalizes it\.<\/p>/);
+  assert.match(script, /querySelector\("#growth-finality-copy"\)\.textContent = `Earlier UTC days are final\. The latest day \(\$\{maximum\}, UTC\) is provisional/);
+  assert.match(script, /end\.date === explorer\.growth\.at\(-1\)\.date[\s\S]*latest UTC day in this range is provisional[\s\S]*All UTC days in this range are final/);
+  assert.match(script, /querySelector\("#growth-chart-description"\)\.textContent = .*\$\{finalityDescription\}/);
   assert.doesNotMatch(page, /<title id="growth-chart-title">/);
   assert.doesNotMatch(script, /\.title\s*=\s*growthMeta\.detail/);
   assert.match(page, /class="explore-freshness"[\s\S]*Data updated[\s\S]*id="explorer-updated"[\s\S]*Daily refresh start[\s\S]*id="explorer-refresh-time"/);

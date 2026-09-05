@@ -311,16 +311,20 @@ function historicalCatalogGrowth() {
   }).sort((first, second) => Date.parse(first.timestamp) - Date.parse(second.timestamp));
   for (const entry of commits) latestCommitByDay.set(entry.date, entry);
 
-  const snapshots = [...latestCommitByDay.values()].map(({ commit, date }) => {
-    const snapshot = JSON.parse(execFileSync("git", ["show", `${commit}:site/catalog.json`], {
-      cwd: projectRoot,
-      encoding: "utf8",
-      maxBuffer: 64 * 1024 * 1024,
-    }));
-    return { date, total: communityCount(snapshot) };
-  });
-
+  // generatedAt is the logical horizon, even on standalone/no-op rebuilds.
+  // A cross-midnight commit must not create a day beyond that catalog's day.
+  // Later snapshots become eligible when a later-day catalog is supplied.
   const currentDate = String(catalog.generatedAt).slice(0, 10);
+  const snapshots = [...latestCommitByDay.values()]
+    .filter(({ date }) => date <= currentDate)
+    .map(({ commit, date }) => {
+      const snapshot = JSON.parse(execFileSync("git", ["show", `${commit}:site/catalog.json`], {
+        cwd: projectRoot,
+        encoding: "utf8",
+        maxBuffer: 64 * 1024 * 1024,
+      }));
+      return { date, total: communityCount(snapshot) };
+    });
   const current = { date: currentDate, total: communityCount(catalog) };
   const currentIndex = snapshots.findIndex((snapshot) => snapshot.date === currentDate);
   if (currentIndex >= 0) snapshots[currentIndex] = current;
@@ -331,7 +335,7 @@ function historicalCatalogGrowth() {
     meta: {
       method: "git-catalog-snapshots",
       label: "End-of-day Git catalog snapshots",
-      detail: "Active community listings from the final catalog state committed on each UTC day.",
+      detail: "Earlier UTC days use the final committed catalog state. The latest UTC day is provisional until a successful later-day build finalizes it.",
       timezone: "UTC",
       historical: true,
     },

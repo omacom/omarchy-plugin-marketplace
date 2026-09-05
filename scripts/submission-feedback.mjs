@@ -85,7 +85,7 @@ const feedback = Object.freeze({
     action: "A marketplace maintainer must review and approve the submission.",
   },
   "approval-event-invalid": {
-    reason: "The approved-and-verified label event is missing, stale, or does not match the workflow request.",
+    reason: "The approved-and-verified trigger is missing, ambiguous, or superseded by another label event.",
     action: "Review the current report, then remove and reapply `approved-and-verified`.",
   },
   "approval-issue-closed": {
@@ -94,11 +94,11 @@ const feedback = Object.freeze({
   },
   "approval-label-missing": {
     reason: "A required submission or approval label is missing.",
-    action: "Restore the required labels after review instead of rerunning the failed workflow.",
+    action: "Check whether approval was withdrawn. Do not restore it while blockers remain. A new approval requires review of the current evidence; do not rerun this workflow.",
   },
   "approval-label-changed": {
-    reason: "The submission setup labels changed after approval started.",
-    action: "Review the current setup requirements and reapply `approved-and-verified`.",
+    reason: "The manual-setup label differs from the state captured when approval was requested.",
+    action: "Review and finalize setup labels first. Then remove any remaining `approved-and-verified` label and set it last to request approval again.",
   },
   "approval-source-changed": {
     reason: "The repository is already registered with a different plugin set.",

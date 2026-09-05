@@ -18,6 +18,7 @@ import {
   legacyApprovalLabel,
   manualSetupNote,
   parseApprovableSubmission,
+  parseApprovedSubmissionSnapshot,
   parseManualSetupApproval,
   parseSubmissionBody,
   rightsStatement,
@@ -1224,7 +1225,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
   assert.equal(keys[0], "20260831-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260831-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
   assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
@@ -1972,6 +1973,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.equal((approve.match(/MANUAL_SETUP:/g) || []).length, 3);
   assert.match(approvalScript, /submission_repository=\$\{inspection\.repository\}/);
   assert.match(approvalScript, /approved_commit=\$\{inspection\.commitSha\}/);
+  assert.match(approvalScript, /approval_triggered_at=\$\{approvalTriggeredAt\}/);
+  assert.match(approve, /approval_triggered_at: \$\{\{ steps\.approval\.outputs\.approval_triggered_at \}\}/);
 
   assert.match(
     approve,
@@ -2012,11 +2015,24 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
     const end = nextName ? workflow.indexOf(`\n  ${nextName}:\n`, start + 1) : -1;
     return end > start ? workflow.slice(start, end) : workflow.slice(start);
   };
+  const stepSource = (job, name, nextName = "") => {
+    const start = job.indexOf(`\n      - name: ${name}\n`);
+    assert.ok(start > 0, `${name} step must exist`);
+    const end = nextName ? job.indexOf(`\n      - name: ${nextName}\n`, start + 1) : -1;
+    return end > start ? job.slice(start, end) : job.slice(start);
+  };
   const approveJob = jobSource(approve, "approve", "publish");
   const approvalPublishJob = jobSource(approve, "publish", "deploy");
+  const approvalFinalPushStep = stepSource(
+    approvalPublishJob,
+    "Recheck mutable approval state and push tested plugin publication",
+    "Record publication failure",
+  );
   const approvalDeployJob = jobSource(approve, "deploy", "finalize");
-  const validationAnalyzeJob = jobSource(validate, "validate", "publish");
-  const validationPublishJob = jobSource(validate, "publish");
+  const validationAnalyzeJob = jobSource(validate, "validate", "mutation-route");
+  const validationMutationRouteJob = jobSource(validate, "mutation-route", "publish");
+  const validationPublishJob = jobSource(validate, "publish", "publish-fallback");
+  const validationFallbackJob = jobSource(validate, "publish-fallback");
   assert.match(approveJob, /permissions:\s+contents: read\s+issues: read/);
   assert.doesNotMatch(approveJob, /contents: write|pages: write|id-token: write/);
   assert.doesNotMatch(approveJob, /APPROVAL_REQUESTED_AT: \$\{\{ github\.event\.issue\.updated_at \}\}/);
@@ -2024,13 +2040,20 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.ok(approveJob.indexOf("run: npm test") < approveJob.indexOf("actions/upload-pages-artifact@"));
   assert.ok(approveJob.indexOf("actions/upload-pages-artifact@") < approveJob.indexOf("name: Recheck approval"));
   assert.match(approvalPublishJob, /permissions:\s+contents: write\s+issues: read/);
-  assert.match(approvalPublishJob, /name: Recheck mutable approval state before push/);
-  assert.match(approvalPublishJob, /gh api "repos\/\$\{GITHUB_REPOSITORY\}\/issues\/\$\{ISSUE_NUMBER\}"/);
-  assert.match(approvalPublishJob, /blocking_label in needs-fixes security-needs-fixes/);
-  assert.match(approvalPublishJob, /approved-and-verified[\s\S]*APPROVAL_EVENT_ID/);
-  assert.match(approvalPublishJob, /BASELINE_COMMENT_ID:[\s\S]*marketplace-security-baseline:v\[0-9\]/);
-  assert.match(approvalPublishJob, /collaborators\/\$\{APPROVER_LOGIN\}\/permission/);
-  assert.match(approvalPublishJob, /commits\/HEAD[\s\S]*APPROVED_COMMIT/);
+  assert.ok(
+    approvalPublishJob.indexOf("name: Prepare tested plugin publication")
+      < approvalPublishJob.indexOf("name: Recheck mutable approval state and push tested plugin publication"),
+  );
+  assert.match(approvalFinalPushStep, /gh api "repos\/\$\{GITHUB_REPOSITORY\}\/issues\/\$\{ISSUE_NUMBER\}"/);
+  assert.match(approvalFinalPushStep, /blocking_label in needs-fixes security-needs-fixes/);
+  assert.match(approvalFinalPushStep, /approved-and-verified[\s\S]*APPROVAL_EVENT_ID/);
+  assert.match(approvalFinalPushStep, /APPROVAL_TRIGGERED_AT:[\s\S]*expected_approval_window/);
+  assert.match(approvalFinalPushStep, /fromdateiso8601[\s\S]*initial approval event window became missing or ambiguous/);
+  assert.match(approvalFinalPushStep, /BASELINE_COMMENT_ID:[\s\S]*marketplace-security-baseline:v\[0-9\]/);
+  assert.match(approvalFinalPushStep, /collaborators\/\$\{APPROVER_LOGIN\}\/permission/);
+  assert.match(approvalFinalPushStep, /commits\/HEAD[\s\S]*APPROVED_COMMIT/);
+  assert.match(approvalFinalPushStep, /commits\/HEAD[\s\S]*push origin HEAD:main/);
+  assert.doesNotMatch(approvalFinalPushStep, /git add|git commit|git fetch/);
   assert.doesNotMatch(approvalPublishJob, /npm ci|npm run build|npm test|setup-node/);
   assert.match(approvalPublishJob, /git fetch origin main[\s\S]*remote_main[\s\S]*EXPECTED_BASE_COMMIT/);
   assert.match(validationAnalyzeJob, /permissions:\s+contents: read\s+issues: read/);
@@ -2042,8 +2065,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.doesNotMatch(validationAnalyzeJob, /group: plugin-catalog-writes/);
   assert.match(
     validationPublishJob,
-    /concurrency:\s+group: plugin-catalog-writes\s+cancel-in-progress: false\s+queue: max/,
+    /concurrency:\s+group: \$\{\{ needs\.mutation-route\.outputs\.group == format\('issue-validation-\{0\}'[\s\S]*'plugin-catalog-writes' \}\}\s+cancel-in-progress: false\s+queue: max/,
   );
+  assert.match(validationMutationRouteJob, /permissions:\s+issues: read/);
+  assert.match(validationMutationRouteJob, /group=issue-validation-\$\{ISSUE_NUMBER\}/);
+  assert.match(validationFallbackJob, /group: plugin-catalog-writes[\s\S]*steps: \*submission-mutation-steps/);
   assert.match(validationAnalyzeJob, /startsWith\(github\.event\.issue\.title, '\[Plugin\]:'\)[\s\S]*contains\(github\.event\.issue\.labels\.\*\.name, 'submission'\)/);
   assert.match(validationAnalyzeJob, /npm ci[\s\S]*scripts\/validate-submission\.mjs[\s\S]*scripts\/security-baseline\.mjs/);
   assert.doesNotMatch(validationAnalyzeJob, /issues: write|gh issue edit|gh issue comment|--method PATCH/);
@@ -2055,10 +2081,9 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validationPublishJob, /symbolic link[\s\S]*expected_files[\s\S]*sha256sum --check SHA256SUMS/);
   assert.doesNotMatch(validationPublishJob, /actions\/checkout|setup-node|npm ci|npm run|node scripts\//);
   assert.match(validationPublishJob, /Confirm failed run still matches the submission[\s\S]*skipping stale failure mutations/);
-  assert.equal(
-    (validationPublishJob.match(/needs\.validate\.result == 'failure' \|\| failure\(\)/g) || []).length,
-    3,
-  );
+  assert.match(validationPublishJob, /guard-issue-mutation/);
+  assert.match(validationPublishJob, /requires_global_fallback/);
+  assert.match(validationPublishJob, /env\.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes'/);
   assert.doesNotMatch(validationPublishJob, /result == 'cancelled'/);
   assert.match(approvalPublishJob, /push origin HEAD:main/);
   assert.match(approvalDeployJob, /needs: \[approve, publish\]/);
@@ -2068,12 +2093,17 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
 
   const refreshJob = jobSource(refresh, "refresh", "publish");
   const refreshPublishJob = jobSource(refresh, "publish", "deploy");
-  const refreshDeployJob = jobSource(refresh, "deploy");
+  const refreshDeployJob = jobSource(refresh, "deploy", "alert");
+  const refreshAlertJob = jobSource(refresh, "alert");
   assert.match(refreshJob, /^    timeout-minutes:[ \t]+90[ \t]*$/m);
   assert.match(refreshJob, /permissions:\s+contents: read/);
   assert.ok(refreshJob.indexOf("run: npm run build") < refreshJob.indexOf("run: npm test"));
   assert.doesNotMatch(refreshPublishJob, /npm ci|npm run build|npm test|setup-node/);
   assert.doesNotMatch(refreshDeployJob, /actions\/checkout|npm ci|npm run build|npm test|upload-pages-artifact/);
+  assert.match(refreshAlertJob, /if: always\(\)[\s\S]*permissions:\s+issues: write/);
+  assert.match(refreshAlertJob, /Marketplace catalog refresh failure/);
+  assert.match(refreshAlertJob, /github-actions\[bot\]/);
+  assert.doesNotMatch(refreshAlertJob, /--add-label|--remove-label|labels\//);
 
   const pushPrepareJob = jobSource(deploy, "prepare", "deploy");
   const pushDeployJob = jobSource(deploy, "deploy");
@@ -2110,11 +2140,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(approve, /<!-- marketplace-publication-status -->/);
   assert.match(approve, /<!-- marketplace-publication -->/);
   assert.match(approve, /contains\("<!-- marketplace-publication -->"\)[\s\S]*issues\/comments\/\$\{comment_id\}/);
-  assert.match(approve, /name: Clear stale publication failure status[\s\S]*contains\("<!-- marketplace-publication-status -->"\)[\s\S]*--method DELETE/);
+  assert.doesNotMatch(approve, /Clear stale publication failure status|CLEAR_STATUS_OUTCOME|--method DELETE/);
   assert.match(approve, /state=lookup-failed[\s\S]*state=stale/);
   assert.match(approve, /CURRENT_STATE: \$\{\{ steps\.current\.outputs\.state \}\}/);
   assert.match(approve, /Do not reapply \\`approved-and-verified\\`/);
-  assert.equal((approve.match(/labels\/approved-and-verified/g) || []).length, 2);
+  assert.equal((approve.match(/labels\/approved-and-verified/g) || []).length, 0);
   assert.equal((approve.match(/approved-for-listing/g) || []).length, 0);
 
   assert.match(
@@ -2140,7 +2170,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /\(\.pull_request \| not\)/);
   assert.match(validate, /any\(\.name == "listed"\)/);
   assert.match(validate, /name: Record validation workflow failure\s+id: failure\s+if: failure\(\)/);
-  assert.match(validate, /name: Record validation publication failure\s+id: failure\s+if: failure\(\)/);
+  assert.match(
+    validate,
+    /name: Record validation publication failure\s+id: failure\s+if: >-[\s\S]*steps\.initialize\.outcome == 'failure'/,
+  );
+  assert.match(validate, /steps\.failure\.outcome == 'success'/);
   assert.match(validate, /name: Report validation workflow failure/);
   assert.match(validate, /always\(\)[\s\S]*needs\.validate\.result == 'failure'[\s\S]*needs\.validate\.result == 'success'/);
   assert.match(validate, /status=\$\?[\s\S]*"\$status" -eq 1[\s\S]*exit "\$status"/);
@@ -2154,8 +2188,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /disposition="\$\(jq -r '\.verifiedPublicationDisposition' security-baseline\.json\)"/);
   assert.match(validate, /marketplace-security-baseline:v\[0-9\]\+/);
   assert.match(validate, /marketplace-security-baseline-error:v\[0-9\]\+/);
-  assert.match(validate, /--add-label security-needs-fixes/);
-  assert.match(validate, /--add-label security-review-required/);
+  assert.match(validate, /add_label security-needs-fixes/);
+  assert.match(validate, /add_label security-review-required/);
   assert.match(validate, /verifiedPublicationDisposition/);
   assert.match(validate, /clear\|review-required\|needs-fixes/);
   assert.match(validate, /BASELINE_DISPOSITION: \$\{\{ needs\.validate\.outputs\.baseline_disposition \}\}/);
@@ -2167,7 +2201,7 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /name: Clear stale approval state after workflow failure/);
   assert.match(validate, /steps\.failure-current\.outputs\.matches == 'true'/);
   assert.match(validate, /labels\/\$\{label\}/);
-  assert.match(validate, /remove_label approved-and-verified[\s\S]*remove_label approved-for-listing/);
+  assert.match(validate, /remove_issue_label approved-and-verified[\s\S]*remove_issue_label approved-for-listing/);
   assert.match(approvalScript, /findLatestSecurityBaseline\(\[latest\]\)/);
   assert.match(approvalScript, /assertApprovalAllowed\(issue, baselineComment\.baseline, inspection, repoUrl\)/);
   assert.match(approvalScript, /runSecurityBaseline[\s\S]*listedPlugins: inspection\.manifests\.map[\s\S]*pluginId: manifest\.id[\s\S]*manifestPathHint: manifest\.path[\s\S]*createApprovedVerificationEvidence/);
@@ -2617,7 +2651,8 @@ test("shared submission rules stay aligned with the public issue form", async ()
   assert.match(guide, /io\.github\.yourname\.plugin-name/);
   assert.match(guide, /## Respond to validation and publication feedback/);
   assert.match(guide, /failed status includes a concise reason and the next action/);
-  assert.match(guide, /rerunning the old failed workflow does not restore the event/);
+  assert.match(guide, /Rerunning the old failed workflow does not create a new request/);
+  assert.match(guide, /failure handler leaves `approved-and-verified` unchanged/);
   assert.match(guide, /\[security policy and baseline\]\(SECURITY\.md#automated-security-baseline\)/i);
 
   const baselineGuide = await readFile(new URL("../SECURITY.md", import.meta.url), "utf8");
@@ -2701,6 +2736,63 @@ test("approval processes exactly the issue body seen when the label was applied"
   assert.throws(
     () => assertApprovedIssueBody(approved, undefined),
     /APPROVED_ISSUE_BODY is required/,
+  );
+});
+
+test("approval cannot mix transient first-fetch metadata with the approved snapshot", async () => {
+  const approvedBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "System",
+    tags: "Launcher",
+  });
+  const transientBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "Desktop",
+    tags: "Workspaces",
+  });
+  const approvedTitle = "[Plugin]: Approved snapshot";
+  const issue = { created_at: "2026-08-07T00:00:00Z" };
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: transientBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: "[Plugin]: Transient title", body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      undefined,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.deepEqual(
+    parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    {
+      repo: "https://github.com/example/same-plugin",
+      category: "System",
+      tags: ["launcher"],
+    },
+  );
+
+  const source = await readFile(new URL("../scripts/approve-submission.mjs", import.meta.url), "utf8");
+  assert.match(
+    source,
+    /const submission = parseApprovedSubmissionSnapshot\([\s\S]*initialIssue,[\s\S]*approvedIssueBody,[\s\S]*approvedIssueTitle,[\s\S]*\)[\s\S]*createRegistrySource\(\{\s*submission,/,
   );
 });
 
@@ -2893,6 +2985,7 @@ test("approved submissions become registry sources without duplicates", () => {
     },
   ], {
     approver: "maintainer",
+    expectedRequestedAt: "2026-07-28T12:00:00.000Z",
   });
   assert.deepEqual(approvalDecision, {
     eventId: 44001,
@@ -2928,6 +3021,7 @@ test("approved submissions become registry sources without duplicates", () => {
       },
     ], {
       approver: "maintainer",
+      expectedRequestedAt: "2026-07-28T12:00:00.000Z",
     }),
     (error) => error.code === "approval-event-invalid",
   );
@@ -2942,6 +3036,7 @@ test("approved submissions become registry sources without duplicates", () => {
       approver: "maintainer",
       expectedEventId: 44001,
       expectedRequestedAt: "2026-07-28T12:00:01.000Z",
+      expectedTriggeredAt: "2026-07-28T12:00:01.000Z",
     }),
     (error) => error.code === "approval-event-invalid",
   );

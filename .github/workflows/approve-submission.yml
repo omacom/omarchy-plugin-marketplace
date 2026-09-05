@@ -11,6 +11,8 @@ concurrency:
 jobs:
   approve:
     if: >-
+      github.event_name == 'issues' &&
+      github.event.action == 'labeled' &&
       github.event.label.name == 'approved-and-verified' &&
       github.event.issue.state == 'open' &&
       (contains(github.event.issue.labels.*.name, 'submission') ||
@@ -31,6 +33,7 @@ jobs:
       verification_method: ${{ steps.approval.outputs.verification_method }}
       approval_event_id: ${{ steps.approval.outputs.approval_event_id }}
       approval_requested_at: ${{ steps.approval.outputs.approval_requested_at }}
+      approval_triggered_at: ${{ steps.approval.outputs.approval_triggered_at }}
       baseline_comment_id: ${{ steps.approval.outputs.baseline_comment_id }}
       baseline_comment_updated_at: ${{ steps.approval.outputs.baseline_comment_updated_at }}
       base_commit: ${{ steps.base.outputs.commit }}
@@ -75,6 +78,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           APPROVED_ISSUE_TITLE: ${{ github.event.issue.title }}
           APPROVED_ISSUE_BODY: ${{ github.event.issue.body }}
+          APPROVAL_TRIGGERED_AT: ${{ github.event.issue.updated_at }}
           MANUAL_SETUP: ${{ contains(github.event.issue.labels.*.name, 'manual-setup') }}
           PLUGIN_UPDATE: ${{ contains(github.event.issue.labels.*.name, 'plugin-update') }}
         run: |
@@ -163,6 +167,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPROVER_LOGIN: ${{ github.actor }}
           APPROVAL_REQUESTED_AT: ${{ steps.approval.outputs.approval_requested_at }}
+          APPROVAL_TRIGGERED_AT: ${{ steps.approval.outputs.approval_triggered_at }}
           APPROVAL_EVENT_ID: ${{ steps.approval.outputs.approval_event_id }}
           BASELINE_COMMENT_ID: ${{ steps.approval.outputs.baseline_comment_id }}
           BASELINE_COMMENT_UPDATED_AT: ${{ steps.approval.outputs.baseline_comment_updated_at }}
@@ -320,10 +325,38 @@ jobs:
           rm -rf site/assets/img/plugins
           cp -a "$bundle/site/assets/img/plugins" site/assets/img/plugins
 
-      - name: Recheck mutable approval state before push
-        id: guard
+      - name: Prepare tested plugin publication
+        id: prepare
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PLUGIN_NAME: ${{ needs.approve.outputs.plugin_name }}
+          PUBLICATION_KIND: ${{ needs.approve.outputs.publication_kind }}
+          EXPECTED_BASE_COMMIT: ${{ needs.approve.outputs.base_commit }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add registry.json site/catalog.json site/explorer-data.json site/assets/img/plugins/
+          if ! git diff --cached --quiet; then
+            if [ "$PUBLICATION_KIND" = update ]; then
+              git commit -m "Update ${PLUGIN_NAME} plugin (#${ISSUE_NUMBER})"
+            else
+              git commit -m "Add ${PLUGIN_NAME} plugin (#${ISSUE_NUMBER})"
+            fi
+          fi
+
+          git fetch origin main
+          remote_main="$(git rev-parse origin/main)"
+          if [ "$remote_main" != "$EXPECTED_BASE_COMMIT" ]; then
+            echo "main changed after the tested build; refusing to rebase or publish stale artifacts." >&2
+            exit 1
+          fi
+
+      - name: Recheck mutable approval state and push tested plugin publication
+        id: publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           APPROVED_ISSUE_TITLE: ${{ github.event.issue.title }}
           APPROVED_ISSUE_BODY: ${{ github.event.issue.body }}
@@ -331,14 +364,42 @@ jobs:
           APPROVER_LOGIN: ${{ github.actor }}
           APPROVAL_EVENT_ID: ${{ needs.approve.outputs.approval_event_id }}
           APPROVAL_REQUESTED_AT: ${{ needs.approve.outputs.approval_requested_at }}
+          APPROVAL_TRIGGERED_AT: ${{ needs.approve.outputs.approval_triggered_at }}
           BASELINE_COMMENT_ID: ${{ needs.approve.outputs.baseline_comment_id }}
           BASELINE_COMMENT_UPDATED_AT: ${{ needs.approve.outputs.baseline_comment_updated_at }}
           SUBMISSION_REPOSITORY: ${{ needs.approve.outputs.submission_repository }}
           APPROVED_COMMIT: ${{ needs.approve.outputs.approved_commit }}
           PUBLICATION_KIND: ${{ needs.approve.outputs.publication_kind }}
+          EXPECTED_BASE_COMMIT: ${{ needs.approve.outputs.base_commit }}
         run: |
           set -euo pipefail
-          issue="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}")"
+          if ! issue_response="$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}")"; then
+            echo "GitHub API issue request failed during the final check." >&2
+            exit 1
+          fi
+          if ! issue="$(
+            jq -ces --argjson issue_number "$ISSUE_NUMBER" '
+              if length == 1 then .[0] as $issue
+                | if ($issue | type) == "object"
+                    and ($issue.number | type) == "number"
+                    and $issue.number == $issue_number
+                    and ($issue.state | type) == "string"
+                    and ($issue.title | type) == "string"
+                    and ($issue.body | type) == "string"
+                    and (($issue | has("pull_request")) | not)
+                    and ($issue.labels | type) == "array"
+                    and all($issue.labels[];
+                      type == "object" and (.name | type) == "string")
+                  then $issue
+                  else error("invalid GitHub API issue response")
+                  end
+              else error("invalid GitHub API issue response")
+              end
+            ' <<< "$issue_response"
+          )"; then
+            echo "GitHub API returned an invalid final-check issue." >&2
+            exit 1
+          fi
           if ! jq -e '.state == "open" and (.pull_request | not)' <<< "$issue" >/dev/null; then
             echo "Publication issue is no longer open and approvable." >&2
             exit 1
@@ -382,10 +443,112 @@ jobs:
             echo "Publication issue body changed before publication." >&2
             exit 1
           fi
+          fetch_bounded_issue_pages() {
+            local endpoint="$1"
+            local pages='[]'
+            local batch canonical_batch page page_length
+            for page in {1..10}; do
+              if ! batch="$(gh api "${endpoint}?per_page=100&page=${page}")"; then
+                echo "GitHub API page request failed during the final check." >&2
+                return 1
+              fi
+              if ! canonical_batch="$(
+                jq -ces 'if length == 1 and (.[0] | type) == "array"
+                    and (.[0] | length) <= 100
+                  then .[0]
+                  else error("invalid or oversized GitHub API page")
+                  end' <<< "$batch"
+              )"; then
+                echo "GitHub API returned an invalid final-check page." >&2
+                return 1
+              fi
+              if ! page_length="$(jq -er 'length' <<< "$canonical_batch")"; then
+                echo "GitHub API page length validation failed during the final check." >&2
+                return 1
+              fi
+              if ! pages="$(
+                jq -ces 'if length == 2
+                    and (.[0] | type) == "array" and (.[1] | type) == "array"
+                  then .[0] + [.[1]]
+                  else error("invalid bounded page aggregation")
+                  end' \
+                  <(printf '%s\n' "$pages") <(printf '%s\n' "$canonical_batch")
+              )"; then
+                echo "GitHub API page aggregation failed during the final check." >&2
+                return 1
+              fi
+              if [ "$page_length" -lt 100 ]; then
+                printf '%s\n' "$pages"
+                return 0
+              fi
+            done
+            echo "GitHub API pagination exceeded the safe final-check limit." >&2
+            return 1
+          }
+          approval_events="$(
+            fetch_bounded_issue_pages \
+              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events"
+          )"
+          approval_state="$(
+            jq -ce --arg triggered "$APPROVAL_TRIGGERED_AT" '
+              def positive_safe_integer:
+                type == "number" and . == floor and . >= 1 and . <= 9007199254740991;
+              def event_epoch:
+                if type != "string"
+                  or (test("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.000)?Z$") | not)
+                then error("invalid approval timestamp")
+                else sub("\\.000Z$"; "Z") as $normalized
+                  | ($normalized | fromdateiso8601) as $epoch
+                  | if ($epoch | todateiso8601) != $normalized
+                    then error("invalid approval timestamp")
+                    else $epoch
+                    end
+                end;
+              ($triggered | event_epoch) as $triggered_at
+              | if type != "array" or length < 1 or length > 10
+                  or any(.[]; type != "array" or length > 100)
+                  or ([.[][]] | length) > 999
+                then error("invalid approval event pages")
+                else [.[][]
+                  | if type != "object" or (.event | type) != "string"
+                    then error("invalid issue event")
+                    elif .event != "labeled" and .event != "unlabeled" then empty
+                    elif (.label.name | type) != "string"
+                    then error("invalid label event")
+                    elif .label.name != "approved-and-verified" then empty
+                    elif ((.id | positive_safe_integer) | not)
+                      or (.actor.login | type) != "string" or .actor.login == ""
+                    then error("invalid approval event")
+                    else (.created_at | event_epoch) as $created_epoch
+                      | {
+                          id,
+                          event,
+                          actor: .actor.login,
+                          created_at,
+                          created_epoch: $created_epoch
+                        }
+                    end] as $transitions
+                  | if (($transitions | map(.id) | unique | length) != ($transitions | length))
+                    then error("invalid approval event set")
+                    else {
+                      window: [$transitions[]
+                        | select(.created_epoch == $triggered_at
+                          or .created_epoch == ($triggered_at - 1))],
+                      latest: ($transitions | sort_by(.created_epoch, .id) | last)
+                    }
+                    end
+                end
+            ' <<< "$approval_events"
+          )"
+          approval_window="$(jq -r '[(.window | length), (.window[0].id // "")] | @tsv' <<< "$approval_state")"
+          expected_approval_window="$(printf '1\t%s' "$APPROVAL_EVENT_ID")"
+          if [ "$approval_window" != "$expected_approval_window" ]; then
+            echo "The initial approval event window became missing or ambiguous before publication." >&2
+            exit 1
+          fi
           latest_approval_transition="$(
-            gh api --paginate --slurp \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events?per_page=100" \
-              | jq -r '[.[][] | select((.event == "labeled" or .event == "unlabeled") and .label.name == "approved-and-verified")] | sort_by(.created_at, .id) | last | [.id, .event, .actor.login, .created_at] | @tsv'
+            jq -r '[.latest.id // "", .latest.event // "", .latest.actor // "", .latest.created_at // ""] | @tsv' \
+              <<< "$approval_state"
           )"
           expected_approval_transition="$(printf '%s\tlabeled\t%s\t%s' "$APPROVAL_EVENT_ID" "$APPROVER_LOGIN" "$APPROVAL_REQUESTED_AT")"
           if [ "$latest_approval_transition" != "$expected_approval_transition" ]; then
@@ -397,10 +560,13 @@ jobs:
             admin|maintain|write) ;;
             *) echo "Approval permission changed before publication." >&2; exit 1 ;;
           esac
+          approval_comments="$(
+            fetch_bounded_issue_pages \
+              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments"
+          )"
           latest_baseline_comment="$(
-            gh api --paginate --slurp \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments?per_page=100" \
-              | jq -r '[.[][] | select(.user.login == "github-actions[bot]" and ((.body | test("<!-- marketplace-security-baseline:v[0-9]+ ")) or (.body | test("<!-- marketplace-security-baseline-error:v[0-9]+ -->"))))] | sort_by(.created_at, .id) | last | [.id, .updated_at] | @tsv'
+            jq -r '[.[][] | select(.user.login == "github-actions[bot]" and ((.body | test("<!-- marketplace-security-baseline:v[0-9]+ ")) or (.body | test("<!-- marketplace-security-baseline-error:v[0-9]+ -->"))))] | sort_by(.created_at, .id) | last | [.id, .updated_at] | @tsv' \
+              <<< "$approval_comments"
           )"
           expected_baseline_comment="$(printf '%s\t%s' "$BASELINE_COMMENT_ID" "$BASELINE_COMMENT_UPDATED_AT")"
           if [ "$latest_baseline_comment" != "$expected_baseline_comment" ]; then
@@ -413,34 +579,8 @@ jobs:
             exit 1
           fi
 
-      - name: Commit and push tested plugin publication
-        id: publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          PLUGIN_NAME: ${{ needs.approve.outputs.plugin_name }}
-          PUBLICATION_KIND: ${{ needs.approve.outputs.publication_kind }}
-          EXPECTED_BASE_COMMIT: ${{ needs.approve.outputs.base_commit }}
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add registry.json site/catalog.json site/explorer-data.json site/assets/img/plugins/
-          if ! git diff --cached --quiet; then
-            if [ "$PUBLICATION_KIND" = update ]; then
-              git commit -m "Update ${PLUGIN_NAME} plugin (#${ISSUE_NUMBER})"
-            else
-              git commit -m "Add ${PLUGIN_NAME} plugin (#${ISSUE_NUMBER})"
-            fi
-          fi
-
-          git fetch origin main
-          remote_main="$(git rev-parse origin/main)"
-          if [ "$remote_main" != "$EXPECTED_BASE_COMMIT" ]; then
-            echo "main changed after the tested build; refusing to rebase or publish stale artifacts." >&2
-            exit 1
-          fi
-
+          # Keep the final mutable-state check and push in one shell step. A main
+          # race remains protected by the non-fast-forward push after preparation.
           if [ "$(git rev-parse HEAD)" != "$EXPECTED_BASE_COMMIT" ]; then
             authorization="$(printf 'x-access-token:%s' "$GITHUB_TOKEN" | base64 -w0)"
             git -c http.https://github.com/.extraheader="AUTHORIZATION: basic ${authorization}" \
@@ -455,7 +595,7 @@ jobs:
           CHECKOUT_OUTCOME: ${{ steps.checkout.outcome }}
           DOWNLOAD_OUTCOME: ${{ steps.download.outcome }}
           APPLY_OUTCOME: ${{ steps.apply.outcome }}
-          GUARD_OUTCOME: ${{ steps.guard.outcome }}
+          PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
           PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
         run: |
           set -euo pipefail
@@ -466,10 +606,10 @@ jobs:
             reason="The tested publication artifact could not be downloaded."
           elif [ "$APPLY_OUTCOME" = failure ]; then
             reason="The tested publication artifact failed integrity verification."
-          elif [ "$GUARD_OUTCOME" = failure ]; then
-            reason="The publication issue or upstream repository changed before the tested publication could be pushed."
+          elif [ "$PREPARE_OUTCOME" = failure ]; then
+            reason="The tested plugin publication could not be prepared against the current main branch."
           elif [ "$PUBLISH_OUTCOME" = failure ]; then
-            reason="The tested plugin publication could not be committed and pushed without rebasing."
+            reason="The publication issue, approval, upstream repository, or guarded push changed before publication completed."
           else
             reason="Plugin publication did not complete."
           fi
@@ -644,20 +784,6 @@ jobs:
             gh issue comment "$ISSUE_NUMBER" --body-file "$publication_file"
           fi
 
-      - name: Clear stale publication failure status
-        id: clear-status
-        run: |
-          set -euo pipefail
-          status_ids="$(
-            gh api --paginate \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments?per_page=100" \
-              --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- marketplace-publication-status -->"))) | .id'
-          )"
-          while IFS= read -r status_id; do
-            [ -z "$status_id" ] && continue
-            gh api --method DELETE "repos/${GITHUB_REPOSITORY}/issues/comments/${status_id}"
-          done <<< "$status_ids"
-
       - name: Close publication issue
         id: close
         run: gh issue close "$ISSUE_NUMBER" --reason completed
@@ -668,7 +794,6 @@ jobs:
         env:
           LABEL_OUTCOME: ${{ steps.label.outcome }}
           COMMENT_OUTCOME: ${{ steps.comment.outcome }}
-          CLEAR_STATUS_OUTCOME: ${{ steps.clear-status.outcome }}
           CLOSE_OUTCOME: ${{ steps.close.outcome }}
         run: |
           set -euo pipefail
@@ -677,8 +802,6 @@ jobs:
             reason="The initial submission could not be marked as listed."
           elif [ "$COMMENT_OUTCOME" = failure ]; then
             reason="The published snapshot link could not be added to the issue."
-          elif [ "$CLEAR_STATUS_OUTCOME" = failure ]; then
-            reason="A stale publication failure status could not be cleared."
           elif [ "$CLOSE_OUTCOME" = failure ]; then
             reason="The publication issue could not be closed."
           else
@@ -722,12 +845,10 @@ jobs:
             title="Snapshot approval failed"
             reason="${APPROVE_REASON:-The approval workflow did not complete.}"
             action="${APPROVE_ACTION:-A maintainer must review the workflow before reapplying \`approved-and-verified\`.}"
-            gh api --method DELETE "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels/approved-and-verified" >/dev/null 2>&1 || true
           elif [ "$PUBLISH_RESULT" != success ]; then
             title="Snapshot publication failed"
             reason="${PUBLISH_REASON:-The tested publication could not be pushed.}"
             action="${PUBLISH_ACTION:-A maintainer must review the workflow before reapplying \`approved-and-verified\`.}"
-            gh api --method DELETE "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels/approved-and-verified" >/dev/null 2>&1 || true
           elif [ "$DEPLOY_RESULT" != success ]; then
             title="Marketplace deployment failed"
             reason="${DEPLOY_REASON:-The marketplace deployment did not complete.}"
@@ -738,19 +859,14 @@ jobs:
             action="${FINALIZE_ACTION:-A maintainer must complete issue finalization manually. Do not reapply \`approved-and-verified\`.}"
           fi
 
-          status_file="$RUNNER_TEMP/submission-status.md"
-          printf '<!-- marketplace-publication-status -->\n**%s:** %s %s\n\nWorkflow: %s\n' \
-            "$title" "$reason" "$action" "$RUN_URL" > "$status_file"
-          comment_id="$(
-            gh api --paginate \
-              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments?per_page=100" \
-              --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- marketplace-publication-status -->"))) | .id' \
-              | tail -n 1
-          )"
-          if [ -n "$comment_id" ]; then
-            jq -Rs '{body: .}' "$status_file" > "$RUNNER_TEMP/submission-status.json"
-            gh api --method PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${comment_id}" \
-              --input "$RUNNER_TEMP/submission-status.json"
-          else
-            gh issue comment "$ISSUE_NUMBER" --body-file "$status_file"
+          # A queued failure belongs to this run, not to the current approval.
+          # Never delete a shared approval label or overwrite another run's report.
+          # A live GET followed by DELETE/PATCH would still leave a race window.
+          recovery=""
+          if [ "$APPROVE_RESULT" != success ] || [ "$PUBLISH_RESULT" != success ]; then
+            recovery='This run did not clear approval labels. If approval was withdrawn or blockers remain, do not restore it. Otherwise, after reviewing the current evidence and finalizing all setup labels, remove any remaining `approved-and-verified` label and set it last to create a new request. Do not rerun this workflow.'
           fi
+          status_file="$RUNNER_TEMP/submission-status.md"
+          printf '<!-- marketplace-publication-status -->\n<!-- marketplace-publication-run:%s -->\n**%s — historical run report:** %s %s\n\n%s\n\nThis report describes only the linked run, not any later approval or publication.\n\nWorkflow: %s\n' \
+            "$GITHUB_RUN_ID" "$title" "$reason" "$action" "$recovery" "$RUN_URL" > "$status_file"
+          gh issue comment "$ISSUE_NUMBER" --body-file "$status_file"

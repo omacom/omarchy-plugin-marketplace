@@ -511,7 +511,8 @@ test("plugin update workflows preserve read-only analysis and atomic publication
   assert.match(validation, /analyze:[\s\S]*if: needs\.route\.outputs\.action == 'update'[\s\S]*needs: route/);
   assert.doesNotMatch(validation, /^concurrency:/m);
   assert.match(validation, /analyze:[\s\S]*group: issue-validation-\$\{\{ github\.event\.issue\.number \}\}[\s\S]*queue: max/);
-  assert.match(validation, /publish:[\s\S]*group: plugin-catalog-writes[\s\S]*queue: max/);
+  assert.match(validation, /publish:[\s\S]*needs\.mutation-route\.outputs\.group == format\('issue-validation-\{0\}'[\s\S]*queue: max/);
+  assert.match(validation, /publish-fallback:[\s\S]*group: plugin-catalog-writes[\s\S]*steps: \*update-mutation-steps/);
   assert.doesNotMatch(validation, /\n  report-failure:\n/);
   assert.match(validation, /permissions:\s+contents: read\s+issues: read/);
   assert.match(validation, /npm ci[\s\S]*validate-plugin-update\.mjs[\s\S]*security-baseline\.mjs/);
@@ -522,16 +523,20 @@ test("plugin update workflows preserve read-only analysis and atomic publication
   );
   assert.match(validation, /actions\/upload-artifact@[a-f0-9]{40}/);
   assert.match(validation, /actions\/download-artifact@[a-f0-9]{40}/);
-  assert.equal((validation.match(/GH_REPO: \$\{\{ github\.repository \}\}/g) || []).length, 1);
+  assert.equal((validation.match(/GH_REPO: \$\{\{ github\.repository \}\}/g) || []).length, 2);
   assert.match(validation, /sha256sum --check SHA256SUMS/);
-  assert.match(validation, /remove_label approved-and-verified/);
-  assert.match(validation, /remove_label maintainer-verified/);
+  assert.match(validation, /remove_issue_label approved-and-verified/);
+  assert.match(validation, /remove_issue_label maintainer-verified/);
   assert.match(validation, /Confirm failed run still matches the issue[\s\S]*skipping stale failure mutations/);
-  const publishJob = validation.slice(validation.indexOf("\n  publish:\n"));
-  assert.equal((publishJob.match(/needs\.route\.result == 'failure'/g) || []).length, 4);
-  assert.equal((publishJob.match(/needs\.analyze\.result == 'failure'/g) || []).length, 4);
+  const publishJob = validation.slice(
+    validation.indexOf("\n  publish:\n"),
+    validation.indexOf("\n  publish-fallback:\n"),
+  );
+  assert.match(publishJob, /guard-issue-mutation[\s\S]*approved-and-verified/);
+  assert.match(publishJob, /requires_global_fallback/);
+  assert.match(publishJob, /env\.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes'/);
   assert.doesNotMatch(publishJob, /result == 'cancelled'/);
-  assert.ok((validation.match(/\.title == \$title and \.body == \$body/g) || []).length >= 5);
+  assert.match(validation, /\.title == \$title[\s\S]*\(\.body \/\/ ""\) == \$body/);
   assert.match(validation, /\.verifiedPublicationDisposition/);
   assert.doesNotMatch(validation, /contents: write|push origin/);
 
