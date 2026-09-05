@@ -127782,6 +127782,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulohenrique000/omarchy-follow-your-team",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:32:42.325Z",
+      "listingValidatedCommit": "db255a77d28073e1459ac0b00c624680eed9aecc",
+      "listingValidatedAt": "2026-09-05T22:32:42.325Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulohenrique000/omarchy-follow-your-team",
+        "pluginIds": [
+          "io.github.paulohenrique000.team-matches"
+        ],
+        "commit": "db255a77d28073e1459ac0b00c624680eed9aecc",
+        "checkedAt": "2026-09-05T22:32:42.258Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.paulohenrique000.team-matches": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
