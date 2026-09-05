@@ -128018,6 +128018,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nzkritik/omarchy-matrix-rain",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:52:08.427Z",
+      "listingValidatedCommit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
+      "listingValidatedAt": "2026-09-05T22:52:08.427Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nzkritik/omarchy-matrix-rain",
+        "pluginIds": [
+          "nzkritik.matrix-rain"
+        ],
+        "commit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
+        "checkedAt": "2026-09-05T22:52:08.373Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nzkritik.matrix-rain": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
