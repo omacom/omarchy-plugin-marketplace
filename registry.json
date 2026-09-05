@@ -127534,6 +127534,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/owainharris/omarchy-span-wallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:17:01.893Z",
+      "listingValidatedCommit": "a49719c755e1e49976db1dda16c29f07d7c7bba8",
+      "listingValidatedAt": "2026-09-05T22:17:01.893Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "owainharris/omarchy-span-wallpaper",
+        "pluginIds": [
+          "kudos.span-wallpaper"
+        ],
+        "commit": "a49719c755e1e49976db1dda16c29f07d7c7bba8",
+        "checkedAt": "2026-09-05T22:17:01.826Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kudos.span-wallpaper": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
