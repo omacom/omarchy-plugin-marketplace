@@ -128255,6 +128255,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gladimdim/omarchy-air-raid-alert-ukraine-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T23:27:26.158Z",
+      "listingValidatedCommit": "1d410d8fbe3870b536bd008fa701822199532da8",
+      "listingValidatedAt": "2026-09-05T23:27:26.158Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gladimdim/omarchy-air-raid-alert-ukraine-plugin",
+        "pluginIds": [
+          "gladimdim.air-raid-alert"
+        ],
+        "commit": "1d410d8fbe3870b536bd008fa701822199532da8",
+        "checkedAt": "2026-09-05T23:27:26.089Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gladimdim.air-raid-alert": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
