@@ -127744,6 +127744,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hank-dev/omalisten",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:30:31.161Z",
+      "listingValidatedCommit": "d4151dac0f18807cfbc9852e841f38270148a042",
+      "listingValidatedAt": "2026-09-05T22:30:31.161Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hank-dev/omalisten",
+        "pluginIds": [
+          "io.github.hank-dev.listen"
+        ],
+        "commit": "d4151dac0f18807cfbc9852e841f38270148a042",
+        "checkedAt": "2026-09-05T22:30:31.089Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hank-dev.listen": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
