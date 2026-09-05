@@ -127572,6 +127572,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/arazgray/omalang",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T22:19:16.910Z",
+      "listingValidatedCommit": "c0b27c4b0f410d9982c472e517126a8f5793ce6b",
+      "listingValidatedAt": "2026-09-05T22:19:16.910Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "arazgray/omalang",
+        "pluginIds": [
+          "io.github.arazgray.omalang"
+        ],
+        "commit": "c0b27c4b0f410d9982c472e517126a8f5793ce6b",
+        "checkedAt": "2026-09-05T22:19:16.848Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.arazgray.omalang": {
+          "category": "Widgets",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
