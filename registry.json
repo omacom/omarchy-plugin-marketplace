@@ -128326,6 +128326,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ronald2wing/Omarchy-Quran",
+      "type": "plugin-source",
+      "addedAt": "2026-09-05",
+      "listedAt": "2026-09-05T23:38:51.661Z",
+      "listingValidatedCommit": "a62c9ff7666f7fab6161281df21878ce7c57e1fc",
+      "listingValidatedAt": "2026-09-05T23:38:51.661Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ronald2wing/omarchy-quran",
+        "pluginIds": [
+          "quran"
+        ],
+        "commit": "a62c9ff7666f7fab6161281df21878ce7c57e1fc",
+        "checkedAt": "2026-09-05T23:38:51.596Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "quran": {
+          "category": "Widgets",
+          "tags": [
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
