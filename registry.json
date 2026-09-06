@@ -129594,6 +129594,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GrantAbell/Omarchy-Mic-Gain-Over-100",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:34:40.958Z",
+      "listingValidatedCommit": "009e91af1784d8e384bedcc0d7ac8895b06218c5",
+      "listingValidatedAt": "2026-09-06T01:34:40.958Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grantabell/omarchy-mic-gain-over-100",
+        "pluginIds": [
+          "grantabell.mic-gain-audio"
+        ],
+        "commit": "009e91af1784d8e384bedcc0d7ac8895b06218c5",
+        "checkedAt": "2026-09-06T01:34:40.900Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "grantabell/omarchy-mic-gain-over-100",
+        "pluginIds": [
+          "grantabell.mic-gain-audio"
+        ],
+        "commit": "009e91af1784d8e384bedcc0d7ac8895b06218c5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T01:34:40.900Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T05:50:21.881Z",
+        "requestEventId": 30626221979,
+        "requestedAt": "2026-09-06T01:16:01Z",
+        "reviewedAt": "2026-09-06T01:34:40.900Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "grantabell.mic-gain-audio": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
