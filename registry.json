@@ -132950,6 +132950,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/xeTaiz/dome.power",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T21:16:01.414Z",
+      "listingValidatedCommit": "3e0c6860c60feb86eeeae09cd918f17c55ca2a1d",
+      "listingValidatedAt": "2026-09-06T21:16:01.414Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xetaiz/dome.power",
+        "pluginIds": [
+          "dome.power"
+        ],
+        "commit": "3e0c6860c60feb86eeeae09cd918f17c55ca2a1d",
+        "checkedAt": "2026-09-06T21:16:01.363Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "sudoers-modification"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "xetaiz/dome.power",
+        "pluginIds": [
+          "dome.power"
+        ],
+        "commit": "3e0c6860c60feb86eeeae09cd918f17c55ca2a1d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T21:16:01.363Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T09:14:49.170Z",
+        "requestEventId": 30653553677,
+        "requestedAt": "2026-09-06T21:15:14Z",
+        "reviewedAt": "2026-09-06T21:16:01.363Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dome.power": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
