@@ -132036,6 +132036,42 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dechnik/omarchy-zabbix",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T17:09:02.370Z",
+      "listingValidatedCommit": "e038e3acce4ec9fee96b0d0f3fe2758182caefd0",
+      "listingValidatedAt": "2026-09-06T17:09:02.370Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dechnik/omarchy-zabbix",
+        "pluginIds": [
+          "dechnik.zabbix"
+        ],
+        "commit": "e038e3acce4ec9fee96b0d0f3fe2758182caefd0",
+        "checkedAt": "2026-09-06T17:09:02.309Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dechnik.zabbix": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
