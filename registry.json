@@ -130824,6 +130824,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Cees-Kettenis/omarchy-ai-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:50:55.788Z",
+      "listingValidatedCommit": "31eb0fae61eafad4bf767da32b562dea39db538c",
+      "listingValidatedAt": "2026-09-06T02:50:55.788Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cees-kettenis/omarchy-ai-usage",
+        "pluginIds": [
+          "ai-usage"
+        ],
+        "commit": "31eb0fae61eafad4bf767da32b562dea39db538c",
+        "checkedAt": "2026-09-06T02:50:55.718Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ai-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
