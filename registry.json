@@ -129182,6 +129182,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ming-Bao/omarchy-simplemonitortool",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:09:35.629Z",
+      "listingValidatedCommit": "41ec3a6698170ff1d9b904c7f045978298379ff3",
+      "listingValidatedAt": "2026-09-06T01:09:35.629Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ming-bao/omarchy-simplemonitortool",
+        "pluginIds": [
+          "ming.simplemonitortool"
+        ],
+        "commit": "41ec3a6698170ff1d9b904c7f045978298379ff3",
+        "checkedAt": "2026-09-06T01:09:35.560Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ming.simplemonitortool": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
