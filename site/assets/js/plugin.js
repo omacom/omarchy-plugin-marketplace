@@ -15,13 +15,14 @@ import {
   pluginHeartButton,
   pluginVerificationDetailState,
   pluginVersionLabel,
+  repositoryPublisher,
   setupControlTooltips,
   setupSectionNavigation,
   setupThemeToggle,
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260906-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,7 +30,7 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260906-01";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -85,6 +86,19 @@ function asideVerificationBadge(verification) {
     return `<span class="aside-verification-marker status-label${tone}">${escapeHtml(label)}</span>`;
   }).join("");
   return `<span class="aside-verification is-${verification.status}" aria-label="${escapeHtml(verification.label)}">${markers}</span>`;
+}
+
+export function pluginPublisher(plugin) {
+  return plugin.builtIn ? "" : repositoryPublisher(plugin.repo);
+}
+
+export function catalogHref(plugin, filters = {}) {
+  const params = new URLSearchParams();
+  if (plugin.builtIn) params.set("source", "builtin");
+  Object.entries(filters).forEach(([key, value]) => {
+    if (value) params.set(key, value);
+  });
+  return `index.html${params.size ? `?${params}` : ""}#catalog`;
 }
 
 function setupDetailMetaLineStarts(root) {
@@ -153,7 +167,13 @@ export function detailTemplate(plugin, engagement, {
 } = {}) {
   const securityReportUrl = "https://github.com/omacom/omarchy-plugin-marketplace/security/advisories/new";
   const verificationRequestUrl = "https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml";
-  const tags = (plugin.tags || []).map((tag) => `<span class="tag">${escapeHtml(displayTaxonomyTag(tag))}</span>`).join("");
+  const tags = (plugin.tags || [])
+    .map((tag) => `<a class="tag" href="${escapeHtml(catalogHref(plugin, { tag }))}">${escapeHtml(displayTaxonomyTag(tag))}</a>`)
+    .join("");
+  const publisher = pluginPublisher(plugin);
+  const authorLine = publisher
+    ? `<a href="${escapeHtml(catalogHref(plugin, { author: publisher }))}">${escapeHtml(plugin.author)}</a>`
+    : escapeHtml(plugin.author);
   const preview = plugin.previewImage
     ? `<button class="detail-preview" type="button" data-preview-open data-full-src="${escapeHtml(plugin.previewImage)}" aria-label="${escapeHtml(`Open ${plugin.name} preview`)}"><img src="${escapeHtml(plugin.previewImage)}" alt="${escapeHtml(plugin.name)} desktop preview" width="${Number(plugin.previewWidth) || 1600}" height="${Number(plugin.previewHeight) || 900}"></button>`
     : "";
@@ -298,9 +318,9 @@ export function detailTemplate(plugin, engagement, {
 
   return `
     <article class="plugin-detail-article" style="--card-accent:${accentColor(plugin.accent)}">
-      <header class="page-header" id="overview"><div class="page-eyebrow">${escapeHtml(plugin.category)}</div>
+      <header class="page-header" id="overview"><div class="page-eyebrow"><a href="${escapeHtml(catalogHref(plugin, { category: plugin.category }))}">${escapeHtml(plugin.category)}</a></div>
         <div class="detail-title"><span class="detail-icon">${escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
-        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${escapeHtml(plugin.author)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
+        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${authorLine}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
         ${engagementEnabled ? `<div class="detail-engagement-cluster">
           ${engagementSummary(plugin, engagement, { detail: true, pending: pendingEngagement })}
           ${pluginHeartButton(plugin, engagement, { detail: true, hearted, pending: pendingEngagement })}
@@ -424,7 +444,10 @@ async function init() {
       ? versionLabel.replace(/^manifest\s+/, "")
       : "—";
     document.querySelector("#aside-license").textContent = plugin.license || "Unknown";
-    document.querySelector("#aside-owner").textContent = plugin.author;
+    const publisher = pluginPublisher(plugin);
+    document.querySelector("#aside-owner").innerHTML = publisher
+      ? `<a href="${escapeHtml(catalogHref(plugin, { author: publisher }))}">${escapeHtml(plugin.author)}</a>`
+      : escapeHtml(plugin.author);
     if (plugin.builtIn || plugin.placeholder || !marketplaceInstallAvailable(plugin)) {
       const navigationLabel = plugin.builtIn ? plugin.officialCommandLabel : "Availability";
       document.querySelector("#aside-install-link").textContent = navigationLabel;

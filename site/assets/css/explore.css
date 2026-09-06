@@ -148,13 +148,15 @@
   margin: 5px 0 0; overflow: hidden; color: var(--muted); font-family: var(--mono); font-size: 10px;
   letter-spacing: .03em; text-overflow: ellipsis; white-space: nowrap;
 }
+.detail-publisher a:hover, .detail-publisher a:focus-visible { color: var(--accent); }
 .detail-card-context {
   display: flex; min-width: 0; min-height: 25px; margin-top: 10px; align-items: center; justify-content: space-between; gap: 8px;
 }
 .detail-community {
-  display: inline-flex; min-width: 0; align-items: center; gap: 7px; color: var(--muted); font-family: var(--mono);
-  font-size: 10px; letter-spacing: .03em;
+  display: inline-flex; min-width: 0; padding: 0; border: 0; background: transparent; align-items: center; gap: 7px;
+  color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .03em; text-align: left; cursor: pointer;
 }
+.detail-community:hover span, .detail-community:focus-visible span, .detail-community[aria-pressed="true"] span { color: var(--text); }
 .detail-community i { width: 7px; height: 7px; flex: 0 0 7px; background: var(--community); }
 .detail-community span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .detail-stars {
@@ -222,11 +224,13 @@
 .detail-metrics dt { color: var(--faint); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .detail-metrics dd { margin: 6px 0 0; color: var(--text); font-family: var(--mono); font-size: 12px; font-weight: 700; }
 .detail-tags { display: flex; min-width: 0; height: 25px; margin-top: 9px; overflow: hidden; flex-wrap: nowrap; gap: 4px; }
-.detail-tags span {
+.detail-tags span, .detail-tags a {
   display: inline-flex; min-width: 0; height: 25px; padding: 0 6px; overflow: hidden; border: 1px solid var(--line); background: var(--code-bg);
   align-items: center; color: var(--muted); font-family: var(--mono); font-size: 10px; text-overflow: ellipsis; white-space: nowrap;
 }
 .detail-tags .is-more { margin-left: auto; color: var(--detail-accent); flex: 0 0 auto; }
+.detail-tags a:hover, .detail-tags a:focus-visible { border-color: var(--accent); color: var(--accent); }
+.detail-tags a:focus-visible { outline-offset: -2px; }
 .detail-actions { display: grid; margin-top: 10px; grid-template-columns: 1fr 1fr; gap: 6px; }
 .detail-actions .button { justify-content: center; }
 .neighbor-list { border-top: 1px solid var(--line); gap: 0; }

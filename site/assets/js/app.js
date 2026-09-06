@@ -19,20 +19,21 @@ import {
   pluginHeartButton,
   pluginVerificationState,
   readCatalogViewState,
+  repositoryPublisher,
   setupControlTooltips,
   setupCopyButtons,
   setupThemeToggle,
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260906-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260906-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -59,8 +60,8 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260831-01";
-import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260831-01";
+} from "./search.js?v=20260906-01";
+import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260906-01";
 
 const pluginsPerPage = 9;
 const hiddenCardTags = new Set([
@@ -105,6 +106,13 @@ function cardTaxonomyLabels(plugin) {
     : cardCategoryNames.get(category) || category;
   const labels = [displayCategory, ...specific].filter(Boolean).slice(0, 2);
   return labels.length ? labels : [category || "System"];
+}
+
+function cardTaxonomyFilter(plugin, label) {
+  const category = String(plugin.category || "").trim();
+  if (category && label === (cardCategoryNames.get(category) || category)) return category;
+  const tag = (plugin.tags || []).find((value) => displayTaxonomyTag(value) === label);
+  return tag ? `tag:${tag}` : "";
 }
 
 const engagementSorts = new Set(["views", "copies", "hearts"]);
@@ -185,13 +193,7 @@ function sourcePlugins() {
 }
 
 function publisherLogin(plugin) {
-  try {
-    const url = new URL(plugin.repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
-  } catch {
-    return "";
-  }
+  return repositoryPublisher(plugin.repo);
 }
 
 function pluginSearchText(plugin) {
@@ -648,7 +650,9 @@ function pluginCardFocusToken(element = document.activeElement) {
   if (element.matches?.("[data-plugin-heart]")) control = "heart";
   else if (element.matches?.("[data-verification-tooltip]")) control = "verification";
   else if (element.matches?.("[data-copy-command]")) control = "copy";
-  else if (element.matches?.(".plugin-author button")) control = "author";
+  else if (element.matches?.("[data-author]")) control = "author";
+  else if (element.matches?.("[data-kind]")) control = "kind";
+  else if (element.matches?.("[data-card-filter]")) control = `filter:${element.dataset.cardFilter}`;
   else if (element.matches?.(".builtin-source-action")) control = "source";
   return { pluginId: card.dataset.cardPlugin, control };
 }
@@ -659,14 +663,17 @@ function restorePluginCardFocus(token) {
     .find((candidate) => candidate.dataset.cardPlugin === token.pluginId);
   if (!card) return false;
   const selectors = {
-    author: ".plugin-author button",
+    author: "[data-author]",
     copy: "[data-copy-command]",
     details: ".plugin-card-link",
     heart: "[data-plugin-heart]",
+    kind: "[data-kind]",
     source: ".builtin-source-action",
     verification: "[data-verification-tooltip]",
   };
-  const target = card.querySelector(selectors[token.control]) || card.querySelector(".plugin-card-link");
+  const target = (token.control.startsWith("filter:")
+    ? card.querySelector(`[data-card-filter="${CSS.escape(token.control.slice(7))}"]`)
+    : card.querySelector(selectors[token.control])) || card.querySelector(".plugin-card-link");
   target?.focus({ preventScroll: true });
   return Boolean(target);
 }
@@ -754,7 +761,12 @@ function closeVerificationTooltips(except = null) {
 
 function pluginCard(plugin, { showNew = false } = {}) {
   const tags = cardTaxonomyLabels(plugin)
-    .map((label) => `<span class="tag">${escapeHtml(label)}</span>`)
+    .map((label) => {
+      const filter = cardTaxonomyFilter(plugin, label);
+      return filter
+        ? `<button class="tag" type="button" data-card-filter="${escapeHtml(filter)}" aria-label="Show all ${escapeHtml(catalogFilterLabel(filter))} plugins">${escapeHtml(label)}</button>`
+        : `<span class="tag">${escapeHtml(label)}</span>`;
+    })
     .join("");
   const badge = plugin.builtIn
     ? '<span class="builtin-badge">Built-in</span>'
@@ -797,9 +809,12 @@ function pluginCard(plugin, { showNew = false } = {}) {
     : "";
   const social = stars || heart ? `<div class="card-social">${stars}${heart}</div>` : "";
   const publisher = publisherLogin(plugin);
+  const kindLabel = plugin.kind
+    ? `<button type="button" data-kind="${escapeHtml(plugin.kind)}" aria-label="Show all ${escapeHtml(plugin.kind)} plugins">${escapeHtml(plugin.kind)}</button>`
+    : escapeHtml(plugin.category);
   const authorLine = publisher && !plugin.builtIn
-    ? `<span class="plugin-author">by <button type="button" data-author="${escapeHtml(publisher)}" aria-label="Show all plugins by @${escapeHtml(publisher)}">@${escapeHtml(publisher)}</button> · ${escapeHtml(plugin.kind || plugin.category)}</span>`
-    : `<span class="plugin-author">by ${escapeHtml(plugin.author)} · ${escapeHtml(plugin.kind || plugin.category)}</span>`;
+    ? `<span class="plugin-author">by <button type="button" data-author="${escapeHtml(publisher)}" aria-label="Show all plugins by @${escapeHtml(publisher)}">@${escapeHtml(publisher)}</button> · ${kindLabel}</span>`
+    : `<span class="plugin-author">by ${escapeHtml(plugin.author)} · ${kindLabel}</span>`;
 
   return `
     <article class="plugin-card${plugin.builtIn ? " built-in-card" : ""}" data-card-plugin="${escapeHtml(plugin.id)}" style="--card-accent:${accentColor(plugin.accent)}">
@@ -864,25 +879,81 @@ function bindCardActions(root) {
   root.querySelectorAll("[data-author]").forEach((button) => {
     button.addEventListener("click", () => {
       const publisher = button.dataset.author;
-      state.source = "community";
-      state.terms = [createSearchTerm("author", publisher)].filter(Boolean);
-      state.query = "";
-      state.category = "all";
-      state.sort = sourceDefaultSort("community");
-      state.page = 1;
-      search.value = "";
-      closeSearchSuggestions();
-      renderSearchTerms();
-      renderSourceFilters();
-      renderSortOptions();
-      renderCategories();
-      render();
-      searchSuggestionStatus.textContent = `Showing all plugins by @${publisher}`;
-      document.querySelector("#catalog")?.scrollIntoView({
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-        block: "start"
+      applyCardSearchTerm(createSearchTerm("author", publisher), `Showing all plugins by @${publisher}`, {
+        source: "community",
       });
     });
+  });
+  root.querySelectorAll("[data-kind]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const kind = button.dataset.kind;
+      applyCardSearchTerm(createSearchTerm("kind", kind), `Showing all ${kind} plugins`, {
+        source: cardSource(button),
+      });
+    });
+  });
+  root.querySelectorAll("[data-card-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.cardFilter;
+      if (filter.startsWith("tag:")) {
+        applyCardSearchTerm(
+          createSearchTerm("tag", filter.slice(4)),
+          `Showing all plugins tagged ${catalogFilterLabel(filter)}`,
+          { source: cardSource(button) },
+        );
+        return;
+      }
+      applyCardCategory(filter, cardSource(button));
+    });
+  });
+}
+
+function cardSource(button) {
+  return button.closest("[data-card-plugin]")?.classList.contains("built-in-card") ? "builtin" : "community";
+}
+
+function applyCardCategory(filter, source) {
+  if (state.source !== source) {
+    state.source = source;
+    state.terms = [];
+    state.query = "";
+    state.sort = sourceDefaultSort(source);
+    search.value = "";
+    closeSearchSuggestions();
+    renderSearchTerms();
+    renderSourceFilters();
+    renderSortOptions();
+  }
+  state.category = filter;
+  state.page = 1;
+  renderCategories();
+  render({ announce: true });
+  scrollToCatalog();
+}
+
+function applyCardSearchTerm(term, message, { source = state.source } = {}) {
+  if (!term) return;
+  state.source = source;
+  state.terms = [term];
+  state.query = "";
+  state.category = "all";
+  state.sort = sourceDefaultSort(source);
+  state.page = 1;
+  search.value = "";
+  closeSearchSuggestions();
+  renderSearchTerms();
+  renderSourceFilters();
+  renderSortOptions();
+  renderCategories();
+  render();
+  searchSuggestionStatus.textContent = message;
+  scrollToCatalog();
+}
+
+function scrollToCatalog() {
+  document.querySelector("#catalog")?.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start"
   });
 }
 
