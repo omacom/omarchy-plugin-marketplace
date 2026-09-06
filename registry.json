@@ -130790,6 +130790,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/studioxvii/omarchy-intake",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:48:10.402Z",
+      "listingValidatedCommit": "61006eb1ad974fd1b720c849356e79b55bcf41dc",
+      "listingValidatedAt": "2026-09-06T02:48:10.402Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "studioxvii/omarchy-intake",
+        "pluginIds": [
+          "io.github.studioxvii.intake"
+        ],
+        "commit": "61006eb1ad974fd1b720c849356e79b55bcf41dc",
+        "checkedAt": "2026-09-06T02:48:10.347Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.studioxvii.intake": {
+          "category": "Productivity",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
