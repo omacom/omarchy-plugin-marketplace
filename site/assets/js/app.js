@@ -25,14 +25,14 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260906-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260906-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -59,8 +59,8 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260831-01";
-import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260831-01";
+} from "./search.js?v=20260906-01";
+import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260906-01";
 
 const pluginsPerPage = 9;
 const hiddenCardTags = new Set([
@@ -179,19 +179,32 @@ let viewScrollFrame = 0;
 let searchCompletions = [];
 let activeSuggestion = -1;
 let searchBlurTimer = 0;
+let searchInputTimer = 0;
+const searchInputDelay = 120;
+const publisherLoginCache = new Map();
+const pluginSearchContextCache = new WeakMap();
+let cachedDraftQuery = null;
+let cachedDraftTerms = [];
 
 function sourcePlugins() {
   return state.plugins.filter((plugin) => (plugin.sourceType || "community") === state.source);
 }
 
 function publisherLogin(plugin) {
+  const cacheKey = plugin?.repo || "";
+  if (publisherLoginCache.has(cacheKey)) return publisherLoginCache.get(cacheKey);
+  let login = "";
   try {
     const url = new URL(plugin.repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
+    if (url.hostname.toLowerCase() === "github.com") {
+      login = url.pathname.split("/").filter(Boolean)[0] || "";
+    }
   } catch {
-    return "";
+    login = "";
   }
+  if (publisherLoginCache.size > 5000) publisherLoginCache.clear();
+  publisherLoginCache.set(cacheKey, login);
+  return login;
 }
 
 function pluginSearchText(plugin) {
@@ -210,17 +223,28 @@ function pluginSearchText(plugin) {
 }
 
 function pluginSearchContext(plugin) {
-  return {
+  const cached = pluginSearchContextCache.get(plugin);
+  if (cached) return cached;
+  const context = {
     publisher: publisherLogin(plugin),
     primaryText: [plugin.name, plugin.id, ...(plugin.tags || [])].join(" "),
     searchText: pluginSearchText(plugin),
   };
+  pluginSearchContextCache.set(plugin, context);
+  return context;
+}
+
+function cachedDraftSearchTerms(query) {
+  if (query === cachedDraftQuery) return cachedDraftTerms;
+  cachedDraftQuery = query;
+  cachedDraftTerms = parseSearchDraft(query);
+  return cachedDraftTerms;
 }
 
 function pluginMatchesActiveSearch(plugin) {
   const { publisher, primaryText, searchText } = pluginSearchContext(plugin);
   const hasTerms = state.terms.length > 0;
-  const draftTerms = parseSearchDraft(state.query);
+  const draftTerms = cachedDraftSearchTerms(state.query);
   if (!hasTerms && !draftTerms.length) return true;
   const matchContext = {
     publisher,
@@ -462,6 +486,7 @@ function updateSearchAffordances() {
 }
 
 function removeSearchTerm(index) {
+  cancelScheduledSearchInput();
   const [removed] = state.terms.splice(index, 1);
   const presentation = searchTermPresentation(removed);
   if (!presentation) return;
@@ -500,6 +525,7 @@ function renderSearchTerms() {
 }
 
 function commitSearchDraft(completion) {
+  cancelScheduledSearchInput();
   const draftedTerms = committedTermsFromDraft(search.value, completion);
   if (!draftedTerms.length) return false;
   const existing = new Set(state.terms.map(searchTermKey));
@@ -531,6 +557,7 @@ function commitSearchDraft(completion) {
 }
 
 function clearSearchTerms({ focus = true } = {}) {
+  cancelScheduledSearchInput();
   state.terms = [];
   state.query = "";
   search.value = "";
@@ -540,6 +567,22 @@ function clearSearchTerms({ focus = true } = {}) {
   render();
   if (focus) search.focus();
   searchSuggestionStatus.textContent = searchResultMessage("Cleared all search terms");
+}
+
+function cancelScheduledSearchInput() {
+  if (searchInputTimer) {
+    window.clearTimeout(searchInputTimer);
+    searchInputTimer = 0;
+  }
+}
+
+function scheduleSearchInput() {
+  cancelScheduledSearchInput();
+  searchInputTimer = window.setTimeout(() => {
+    searchInputTimer = 0;
+    if (document.activeElement === search) updateSearchSuggestions();
+    render();
+  }, searchInputDelay);
 }
 
 function updateSearchSuggestions() {
@@ -1412,16 +1455,19 @@ async function init() {
     state.query = search.value;
     state.page = 1;
     updateSearchAffordances();
-    updateSearchSuggestions();
-    render();
+    scheduleSearchInput();
   });
 
   search.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
-      closeSuggestions: closeSearchSuggestions,
+      closeSuggestions: () => {
+        cancelScheduledSearchInput();
+        closeSearchSuggestions();
+      },
       clearSearch: () => {
+        cancelScheduledSearchInput();
         search.value = "";
         state.query = "";
         state.page = 1;
@@ -1431,6 +1477,7 @@ async function init() {
       },
     })) return;
     if (event.key === "Tab") {
+      cancelScheduledSearchInput();
       closeSearchSuggestions();
       return;
     }
