@@ -132220,6 +132220,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Anes-03/keyboard-brightness-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T17:57:48.829Z",
+      "listingValidatedCommit": "4cef467ed5dbd8b5e65310ad64bd51b0ec9c3aa6",
+      "listingValidatedAt": "2026-09-06T17:57:48.829Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anes-03/keyboard-brightness-plugin",
+        "pluginIds": [
+          "io.github.anes-03.keyboard-brightness"
+        ],
+        "commit": "4cef467ed5dbd8b5e65310ad64bd51b0ec9c3aa6",
+        "checkedAt": "2026-09-06T17:57:48.768Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "anes-03/keyboard-brightness-plugin",
+        "pluginIds": [
+          "io.github.anes-03.keyboard-brightness"
+        ],
+        "commit": "4cef467ed5dbd8b5e65310ad64bd51b0ec9c3aa6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T17:57:48.768Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T23:34:48.503Z",
+        "requestEventId": 30648642461,
+        "requestedAt": "2026-09-06T17:56:55Z",
+        "reviewedAt": "2026-09-06T17:57:48.768Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.anes-03.keyboard-brightness": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
