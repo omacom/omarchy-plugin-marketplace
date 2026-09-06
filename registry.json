@@ -131885,6 +131885,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/andershfranzen/omarchy-atv-remote",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T16:45:36.437Z",
+      "listingValidatedCommit": "e1c37572de4225ef530f7650451fc941ce51694b",
+      "listingValidatedAt": "2026-09-06T16:45:36.437Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andershfranzen/omarchy-atv-remote",
+        "pluginIds": [
+          "anders.appletv-remote"
+        ],
+        "commit": "e1c37572de4225ef530f7650451fc941ce51694b",
+        "checkedAt": "2026-09-06T16:45:36.370Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andershfranzen/omarchy-atv-remote",
+        "pluginIds": [
+          "anders.appletv-remote"
+        ],
+        "commit": "e1c37572de4225ef530f7650451fc941ce51694b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T16:45:36.370Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T14:17:36.043Z",
+        "requestEventId": 30646835398,
+        "requestedAt": "2026-09-06T16:44:33Z",
+        "reviewedAt": "2026-09-06T16:45:36.370Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "anders.appletv-remote": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
