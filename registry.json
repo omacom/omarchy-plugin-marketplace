@@ -132822,6 +132822,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/seth-wood/keyarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T20:59:24.364Z",
+      "listingValidatedCommit": "d24af354254658ddfc56f9d7c82e986ca158594f",
+      "listingValidatedAt": "2026-09-06T20:59:24.364Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "seth-wood/keyarchy",
+        "pluginIds": [
+          "slw.keyarchy"
+        ],
+        "commit": "d24af354254658ddfc56f9d7c82e986ca158594f",
+        "checkedAt": "2026-09-06T20:59:24.296Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "seth-wood/keyarchy",
+        "pluginIds": [
+          "slw.keyarchy"
+        ],
+        "commit": "d24af354254658ddfc56f9d7c82e986ca158594f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T20:59:24.296Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T15:40:30.811Z",
+        "requestEventId": 30653153370,
+        "requestedAt": "2026-09-06T20:58:24Z",
+        "reviewedAt": "2026-09-06T20:59:24.296Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "slw.keyarchy": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
