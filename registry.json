@@ -128560,6 +128560,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kidultx/omarchy-any-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:27:37.942Z",
+      "listingValidatedCommit": "f1d7aac7a398aec777f3f3d10dd9ac10c113de90",
+      "listingValidatedAt": "2026-09-06T00:27:37.942Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kidultx/omarchy-any-monitor",
+        "pluginIds": [
+          "anydoor.sys-monitor"
+        ],
+        "commit": "f1d7aac7a398aec777f3f3d10dd9ac10c113de90",
+        "checkedAt": "2026-09-06T00:27:37.882Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anydoor.sys-monitor": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
