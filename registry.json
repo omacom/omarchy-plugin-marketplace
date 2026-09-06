@@ -130230,6 +130230,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kiryuuki/oma-netscan",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:14:07.505Z",
+      "listingValidatedCommit": "ddb1440407bc6a578eaacea707a457511e6822a7",
+      "listingValidatedAt": "2026-09-06T02:14:07.505Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kiryuuki/oma-netscan",
+        "pluginIds": [
+          "kiryuuki.oma-netscan"
+        ],
+        "commit": "ddb1440407bc6a578eaacea707a457511e6822a7",
+        "checkedAt": "2026-09-06T02:14:07.442Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kiryuuki.oma-netscan": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
