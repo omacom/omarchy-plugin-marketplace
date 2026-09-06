@@ -130128,6 +130128,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ellion369/Omarchy-Omagent",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:07:29.492Z",
+      "listingValidatedCommit": "2979e9728b11ada6a29c9b315a2ac8e0a48380c4",
+      "listingValidatedAt": "2026-09-06T02:07:29.492Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ellion369/omarchy-omagent",
+        "pluginIds": [
+          "io.github.ellion369.omagent"
+        ],
+        "commit": "2979e9728b11ada6a29c9b315a2ac8e0a48380c4",
+        "checkedAt": "2026-09-06T02:07:29.428Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ellion369.omagent": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
