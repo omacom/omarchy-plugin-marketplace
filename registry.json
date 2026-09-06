@@ -129653,6 +129653,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/shavenking/omarchy-mouse-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:36:55.177Z",
+      "listingValidatedCommit": "17b35e6499a5e0dc0fd3480c42b7915e4907bdfc",
+      "listingValidatedAt": "2026-09-06T01:36:55.177Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shavenking/omarchy-mouse-mode",
+        "pluginIds": [
+          "humarchy.mouse-mode"
+        ],
+        "commit": "17b35e6499a5e0dc0fd3480c42b7915e4907bdfc",
+        "checkedAt": "2026-09-06T01:36:55.112Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shavenking/omarchy-mouse-mode",
+        "pluginIds": [
+          "humarchy.mouse-mode"
+        ],
+        "commit": "17b35e6499a5e0dc0fd3480c42b7915e4907bdfc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T01:36:55.112Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T03:29:02.207Z",
+        "requestEventId": 30626221613,
+        "requestedAt": "2026-09-06T01:15:59Z",
+        "reviewedAt": "2026-09-06T01:36:55.112Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "humarchy.mouse-mode": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
