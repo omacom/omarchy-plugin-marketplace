@@ -129899,6 +129899,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GrantAbell/Omarchy-Mic-Gain-Microphone-Widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:52:43.981Z",
+      "listingValidatedCommit": "28b0df8b7817089f30731a8ecc74c24c79e68b20",
+      "listingValidatedAt": "2026-09-06T01:52:43.981Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grantabell/omarchy-mic-gain-microphone-widget",
+        "pluginIds": [
+          "grantabell.mic-gain-microphone"
+        ],
+        "commit": "28b0df8b7817089f30731a8ecc74c24c79e68b20",
+        "checkedAt": "2026-09-06T01:52:43.907Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "grantabell/omarchy-mic-gain-microphone-widget",
+        "pluginIds": [
+          "grantabell.mic-gain-microphone"
+        ],
+        "commit": "28b0df8b7817089f30731a8ecc74c24c79e68b20",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T01:52:43.907Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T05:50:25.028Z",
+        "requestEventId": 30626692523,
+        "requestedAt": "2026-09-06T01:38:45Z",
+        "reviewedAt": "2026-09-06T01:52:43.907Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "grantabell.mic-gain-microphone": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
