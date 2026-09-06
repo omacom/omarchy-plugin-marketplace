@@ -129381,6 +129381,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NeroSong/omabark",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:23:10.809Z",
+      "listingValidatedCommit": "b23681823c8312e7ddba1cf30e25f3b89fde4351",
+      "listingValidatedAt": "2026-09-06T01:23:10.809Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nerosong/omabark",
+        "pluginIds": [
+          "nerosong.omabark"
+        ],
+        "commit": "b23681823c8312e7ddba1cf30e25f3b89fde4351",
+        "checkedAt": "2026-09-06T01:23:10.747Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nerosong.omabark": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
