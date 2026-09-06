@@ -133010,6 +133010,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stackingturtles/t480batteries",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T21:23:15.724Z",
+      "listingValidatedCommit": "b084cef9710909c6baafad99f17689a8bc014d9d",
+      "listingValidatedAt": "2026-09-06T21:23:15.724Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stackingturtles/t480batteries",
+        "pluginIds": [
+          "io.github.stackingturtles.t480batteries"
+        ],
+        "commit": "b084cef9710909c6baafad99f17689a8bc014d9d",
+        "checkedAt": "2026-09-06T21:23:15.648Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stackingturtles/t480batteries",
+        "pluginIds": [
+          "io.github.stackingturtles.t480batteries"
+        ],
+        "commit": "b084cef9710909c6baafad99f17689a8bc014d9d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T21:23:15.648Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T06:20:32.260Z",
+        "requestEventId": 30653720303,
+        "requestedAt": "2026-09-06T21:22:21Z",
+        "reviewedAt": "2026-09-06T21:23:15.648Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.stackingturtles.t480batteries": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
