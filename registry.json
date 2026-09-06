@@ -130432,6 +130432,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/plasticcupgames/Omachy-Pixels",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:28:45.588Z",
+      "listingValidatedCommit": "ad8ff2cc5891dc8b73b6990054e3e5b15da90aa2",
+      "listingValidatedAt": "2026-09-06T02:28:45.588Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "plasticcupgames/omachy-pixels",
+        "pluginIds": [
+          "plasticcupgames.omachy-pixels"
+        ],
+        "commit": "ad8ff2cc5891dc8b73b6990054e3e5b15da90aa2",
+        "checkedAt": "2026-09-06T02:28:45.528Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "plasticcupgames.omachy-pixels": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
