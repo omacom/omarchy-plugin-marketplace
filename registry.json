@@ -128982,6 +128982,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PongAlmighty/beat-time-revival",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:54:52.370Z",
+      "listingValidatedCommit": "6af3f4bc9a7fcc8c585b01cc1f1fdf5d3ed5abf1",
+      "listingValidatedAt": "2026-09-06T00:54:52.370Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pongalmighty/beat-time-revival",
+        "pluginIds": [
+          "io.github.pongalmighty.beattime"
+        ],
+        "commit": "6af3f4bc9a7fcc8c585b01cc1f1fdf5d3ed5abf1",
+        "checkedAt": "2026-09-06T00:54:52.304Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.pongalmighty.beattime": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
