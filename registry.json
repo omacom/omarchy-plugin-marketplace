@@ -131138,6 +131138,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/johnsideserf/omarchy-h4x0r",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:08:22.478Z",
+      "listingValidatedCommit": "6ae81e65d2a817a5bcd30246325febe2cba626ed",
+      "listingValidatedAt": "2026-09-06T03:08:22.478Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "johnsideserf/omarchy-h4x0r",
+        "pluginIds": [
+          "io.github.johnsideserf.h4x0r"
+        ],
+        "commit": "6ae81e65d2a817a5bcd30246325febe2cba626ed",
+        "checkedAt": "2026-09-06T03:08:22.411Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "johnsideserf/omarchy-h4x0r",
+        "pluginIds": [
+          "io.github.johnsideserf.h4x0r"
+        ],
+        "commit": "6ae81e65d2a817a5bcd30246325febe2cba626ed",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T03:08:22.411Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T12:09:31.802Z",
+        "requestEventId": 30628067486,
+        "requestedAt": "2026-09-06T02:50:48Z",
+        "reviewedAt": "2026-09-06T03:08:22.411Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.johnsideserf.h4x0r": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
