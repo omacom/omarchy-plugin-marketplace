@@ -128526,6 +128526,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rickbacci/quattrograph",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:25:13.564Z",
+      "listingValidatedCommit": "edf4547e1fd1d9d414cc2a9d2c9917c6287a1e10",
+      "listingValidatedAt": "2026-09-06T00:25:13.564Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rickbacci/quattrograph",
+        "pluginIds": [
+          "richardb-quattrograph"
+        ],
+        "commit": "edf4547e1fd1d9d414cc2a9d2c9917c6287a1e10",
+        "checkedAt": "2026-09-06T00:25:13.502Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "richardb-quattrograph": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
