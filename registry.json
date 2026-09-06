@@ -131353,6 +131353,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/e1i3or-commits/scrim",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:19:48.201Z",
+      "listingValidatedCommit": "b4bd6baf1d8a2213e7b6520d0b9c3e81a0e622de",
+      "listingValidatedAt": "2026-09-06T03:19:48.201Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "e1i3or-commits/scrim",
+        "pluginIds": [
+          "io.github.e1i3or-commits.scrim"
+        ],
+        "commit": "b4bd6baf1d8a2213e7b6520d0b9c3e81a0e622de",
+        "checkedAt": "2026-09-06T03:19:48.133Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.e1i3or-commits.scrim": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
