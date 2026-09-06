@@ -131672,6 +131672,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/josejaguirre/omarchy-custom-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T15:33:36.761Z",
+      "listingValidatedCommit": "6c81dd96561ad821e7280e8ca9152376c43c01f1",
+      "listingValidatedAt": "2026-09-06T15:33:36.761Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "josejaguirre/omarchy-custom-bar",
+        "pluginIds": [
+          "josejaguirre.bar"
+        ],
+        "commit": "6c81dd96561ad821e7280e8ca9152376c43c01f1",
+        "checkedAt": "2026-09-06T15:33:36.696Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "josejaguirre.bar": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
