@@ -129116,6 +129116,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dbohry/omarchy-plugin-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:04:57.091Z",
+      "listingValidatedCommit": "86f65a395b0aabc920d0bd69b12e8c25b17f3df1",
+      "listingValidatedAt": "2026-09-06T01:04:57.091Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dbohry/omarchy-plugin-manager",
+        "pluginIds": [
+          "plugin-manager"
+        ],
+        "commit": "86f65a395b0aabc920d0bd69b12e8c25b17f3df1",
+        "checkedAt": "2026-09-06T01:04:57.024Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "plugin-manager": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
