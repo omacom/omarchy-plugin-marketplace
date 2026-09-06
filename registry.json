@@ -130858,6 +130858,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imcmurray/omarchy-capture-overlay",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:53:32.470Z",
+      "listingValidatedCommit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
+      "listingValidatedAt": "2026-09-06T02:53:32.470Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imcmurray/omarchy-capture-overlay",
+        "pluginIds": [
+          "ianm.capture-overlay"
+        ],
+        "commit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
+        "checkedAt": "2026-09-06T02:53:32.413Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ianm.capture-overlay": {
+          "category": "Desktop",
+          "tags": [
+            "media",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
