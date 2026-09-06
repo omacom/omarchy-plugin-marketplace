@@ -129812,6 +129812,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/avibarit/snappy-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:47:10.628Z",
+      "listingValidatedCommit": "e6e39fc5d752f201502fa4da427ae4e7f0dbef44",
+      "listingValidatedAt": "2026-09-06T01:47:10.628Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "avibarit/snappy-omarchy",
+        "pluginIds": [
+          "avibarit.snappy"
+        ],
+        "commit": "e6e39fc5d752f201502fa4da427ae4e7f0dbef44",
+        "checkedAt": "2026-09-06T01:47:10.569Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "avibarit.snappy": {
+          "category": "Other",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
