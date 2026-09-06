@@ -130060,6 +130060,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/omarchy-syscare",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:02:58.508Z",
+      "listingValidatedCommit": "5deb7d461633d042b235ba9783750e18259e2839",
+      "listingValidatedAt": "2026-09-06T02:02:58.508Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/omarchy-syscare",
+        "pluginIds": [
+          "io.github.cytracon.syscare"
+        ],
+        "commit": "5deb7d461633d042b235ba9783750e18259e2839",
+        "checkedAt": "2026-09-06T02:02:58.436Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cytracon.syscare": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
