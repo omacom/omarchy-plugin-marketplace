@@ -128459,6 +128459,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Wian47/omarchy-siphon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:20:31.206Z",
+      "listingValidatedCommit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
+      "listingValidatedAt": "2026-09-06T00:20:31.206Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wian47/omarchy-siphon",
+        "pluginIds": [
+          "wian47.siphon"
+        ],
+        "commit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
+        "checkedAt": "2026-09-06T00:20:31.133Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "wian47.siphon": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
