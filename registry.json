@@ -130296,6 +130296,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/duketopceo/omarchy-agents",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:18:59.986Z",
+      "listingValidatedCommit": "3e84c4237ca835c5125cfdde8b60da7a9dc26f99",
+      "listingValidatedAt": "2026-09-06T02:18:59.986Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "duketopceo/omarchy-agents",
+        "pluginIds": [
+          "lukedaduke.agents"
+        ],
+        "commit": "3e84c4237ca835c5125cfdde8b60da7a9dc26f99",
+        "checkedAt": "2026-09-06T02:18:59.917Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lukedaduke.agents": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
