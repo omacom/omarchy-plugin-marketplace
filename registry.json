@@ -130643,6 +130643,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Danubii/omarchy-cockpit",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:41:28.745Z",
+      "listingValidatedCommit": "59940205a5edebc100f3b4f5ce1ab13ebef506e3",
+      "listingValidatedAt": "2026-09-06T02:41:28.745Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danubii/omarchy-cockpit",
+        "pluginIds": [
+          "zeq0r.cockpit"
+        ],
+        "commit": "59940205a5edebc100f3b4f5ce1ab13ebef506e3",
+        "checkedAt": "2026-09-06T02:41:28.676Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "danubii/omarchy-cockpit",
+        "pluginIds": [
+          "zeq0r.cockpit"
+        ],
+        "commit": "59940205a5edebc100f3b4f5ce1ab13ebef506e3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T02:41:28.676Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T14:47:26.559Z",
+        "requestEventId": 30627671760,
+        "requestedAt": "2026-09-06T02:28:48Z",
+        "reviewedAt": "2026-09-06T02:41:28.676Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "zeq0r.cockpit": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
