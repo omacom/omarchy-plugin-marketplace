@@ -131638,6 +131638,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/larrywcox/omarchy-site-thread",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T15:29:56.799Z",
+      "listingValidatedCommit": "45c4fcadde05d661dcf84c151c6f17740a4873b1",
+      "listingValidatedAt": "2026-09-06T15:29:56.799Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "larrywcox/omarchy-site-thread",
+        "pluginIds": [
+          "larrywcox.site-thread"
+        ],
+        "commit": "45c4fcadde05d661dcf84c151c6f17740a4873b1",
+        "checkedAt": "2026-09-06T15:29:56.738Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "larrywcox.site-thread": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
