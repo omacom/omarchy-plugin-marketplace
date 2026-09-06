@@ -130162,6 +130162,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/omarchy-catsync",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:09:48.280Z",
+      "listingValidatedCommit": "56099c7885a0d7d6354083334dbd97212f3edca8",
+      "listingValidatedAt": "2026-09-06T02:09:48.280Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/omarchy-catsync",
+        "pluginIds": [
+          "io.github.cytracon.catsync"
+        ],
+        "commit": "56099c7885a0d7d6354083334dbd97212f3edca8",
+        "checkedAt": "2026-09-06T02:09:48.224Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cytracon.catsync": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
