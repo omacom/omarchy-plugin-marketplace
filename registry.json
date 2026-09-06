@@ -128916,6 +128916,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/asdfsnlr/omabricktanks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:50:17.467Z",
+      "listingValidatedCommit": "1b8782f8dcc4573adc39a9055a017736fa4e2605",
+      "listingValidatedAt": "2026-09-06T00:50:17.467Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "asdfsnlr/omabricktanks",
+        "pluginIds": [
+          "asdfsnlr.omabricktanks"
+        ],
+        "commit": "1b8782f8dcc4573adc39a9055a017736fa4e2605",
+        "checkedAt": "2026-09-06T00:50:17.406Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "asdfsnlr.omabricktanks": {
+          "category": "Other",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
