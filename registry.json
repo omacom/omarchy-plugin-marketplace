@@ -129844,6 +129844,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aerorohit/omarchy-nextcloud",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:49:45.295Z",
+      "listingValidatedCommit": "02e8d136009a11c5dd6e2df122b7e595c5d5e774",
+      "listingValidatedAt": "2026-09-06T01:49:45.295Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aerorohit/omarchy-nextcloud",
+        "pluginIds": [
+          "aerorohit.nextcloud"
+        ],
+        "commit": "02e8d136009a11c5dd6e2df122b7e595c5d5e774",
+        "checkedAt": "2026-09-06T01:49:45.230Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aerorohit/omarchy-nextcloud",
+        "pluginIds": [
+          "aerorohit.nextcloud"
+        ],
+        "commit": "02e8d136009a11c5dd6e2df122b7e595c5d5e774",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T01:49:45.230Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T04:29:28.914Z",
+        "requestEventId": 30626674432,
+        "requestedAt": "2026-09-06T01:37:51Z",
+        "reviewedAt": "2026-09-06T01:49:45.230Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "aerorohit.nextcloud": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
