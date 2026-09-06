@@ -128814,6 +128814,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/shortcuts",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:43:35.071Z",
+      "listingValidatedCommit": "a7213b3220da521683a623655673039244288836",
+      "listingValidatedAt": "2026-09-06T00:43:35.071Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/shortcuts",
+        "pluginIds": [
+          "io.github.cytracon.shortcuts"
+        ],
+        "commit": "a7213b3220da521683a623655673039244288836",
+        "checkedAt": "2026-09-06T00:43:35.013Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cytracon.shortcuts": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
