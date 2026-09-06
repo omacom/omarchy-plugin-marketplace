@@ -130586,6 +130586,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/p-kania/omarchy-passwd-reminder",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:39:03.912Z",
+      "listingValidatedCommit": "9c772c7bd6dfce7ac87a7d32bcc1fce5c901740e",
+      "listingValidatedAt": "2026-09-06T02:39:03.912Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "p-kania/omarchy-passwd-reminder",
+        "pluginIds": [
+          "io.github.p-kania.passwd-reminder"
+        ],
+        "commit": "9c772c7bd6dfce7ac87a7d32bcc1fce5c901740e",
+        "checkedAt": "2026-09-06T02:39:03.842Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "p-kania/omarchy-passwd-reminder",
+        "pluginIds": [
+          "io.github.p-kania.passwd-reminder"
+        ],
+        "commit": "9c772c7bd6dfce7ac87a7d32bcc1fce5c901740e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T02:39:03.842Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T10:51:50.225Z",
+        "requestEventId": 30627543442,
+        "requestedAt": "2026-09-06T02:21:39Z",
+        "reviewedAt": "2026-09-06T02:39:03.842Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.p-kania.passwd-reminder": {
+          "category": "Desktop",
+          "tags": [
+            "security",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
