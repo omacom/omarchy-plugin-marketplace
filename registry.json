@@ -131017,6 +131017,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JMThomas00/omarchy-waveform",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:02:38.409Z",
+      "listingValidatedCommit": "b908168acb688adff15f0d6d11c263970a003099",
+      "listingValidatedAt": "2026-09-06T03:02:38.409Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmthomas00/omarchy-waveform",
+        "pluginIds": [
+          "jmthomas00.waveform"
+        ],
+        "commit": "b908168acb688adff15f0d6d11c263970a003099",
+        "checkedAt": "2026-09-06T03:02:38.334Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jmthomas00/omarchy-waveform",
+        "pluginIds": [
+          "jmthomas00.waveform"
+        ],
+        "commit": "b908168acb688adff15f0d6d11c263970a003099",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T03:02:38.334Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T18:48:11.047Z",
+        "requestEventId": 30627979318,
+        "requestedAt": "2026-09-06T02:45:56Z",
+        "reviewedAt": "2026-09-06T03:02:38.334Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jmthomas00.waveform": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
