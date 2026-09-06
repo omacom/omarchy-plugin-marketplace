@@ -130026,6 +130026,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mechurisr/omarchy-media-search",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:00:36.830Z",
+      "listingValidatedCommit": "d7dcedeb1c4dbf90bfe34685b095778e56a1c48c",
+      "listingValidatedAt": "2026-09-06T02:00:36.830Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mechurisr/omarchy-media-search",
+        "pluginIds": [
+          "mechurisr.media-search"
+        ],
+        "commit": "d7dcedeb1c4dbf90bfe34685b095778e56a1c48c",
+        "checkedAt": "2026-09-06T02:00:36.761Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mechurisr.media-search": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
