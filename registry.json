@@ -129958,6 +129958,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/omarchy-tilix",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:54:54.228Z",
+      "listingValidatedCommit": "785f7558117489fefa13546cae913409448b91a3",
+      "listingValidatedAt": "2026-09-06T01:54:54.228Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/omarchy-tilix",
+        "pluginIds": [
+          "io.github.cytracon.tilix"
+        ],
+        "commit": "785f7558117489fefa13546cae913409448b91a3",
+        "checkedAt": "2026-09-06T01:54:54.175Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cytracon.tilix": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
