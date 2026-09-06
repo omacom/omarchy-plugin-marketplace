@@ -129082,6 +129082,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/delay/lumen",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:02:38.442Z",
+      "listingValidatedCommit": "a7ae1056e66d92764421a749f82aa858f2d4c6e1",
+      "listingValidatedAt": "2026-09-06T01:02:38.442Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "delay/lumen",
+        "pluginIds": [
+          "delay.lumen"
+        ],
+        "commit": "a7ae1056e66d92764421a749f82aa858f2d4c6e1",
+        "checkedAt": "2026-09-06T01:02:38.395Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "delay.lumen": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
