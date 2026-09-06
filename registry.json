@@ -131477,6 +131477,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mahziyarng98/omarchy-gravity",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:27:12.647Z",
+      "listingValidatedCommit": "9a15b14d4e618fa5105125010049876da93e05d6",
+      "listingValidatedAt": "2026-09-06T03:27:12.647Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mahziyarng98/omarchy-gravity",
+        "pluginIds": [
+          "io.github.mahziyarng98.gravity"
+        ],
+        "commit": "9a15b14d4e618fa5105125010049876da93e05d6",
+        "checkedAt": "2026-09-06T03:27:12.595Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mahziyarng98.gravity": {
+          "category": "Widgets",
+          "tags": [
+            "launcher",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
