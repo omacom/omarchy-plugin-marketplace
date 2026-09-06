@@ -129148,6 +129148,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MisterHutch/omarchy-plugin-marketplace-button",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:07:15.860Z",
+      "listingValidatedCommit": "d1c9e6f8a3f3632a172f1a36f86da12ea724c00d",
+      "listingValidatedAt": "2026-09-06T01:07:15.860Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "misterhutch/omarchy-plugin-marketplace-button",
+        "pluginIds": [
+          "shannon.plugin-marketplace"
+        ],
+        "commit": "d1c9e6f8a3f3632a172f1a36f86da12ea724c00d",
+        "checkedAt": "2026-09-06T01:07:15.783Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shannon.plugin-marketplace": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
