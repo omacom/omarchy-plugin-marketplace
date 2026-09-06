@@ -131942,6 +131942,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/irhop/omarchy-mouse-odometer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T16:52:20.828Z",
+      "listingValidatedCommit": "fe0420ba4549d424bf293be5946037750f414721",
+      "listingValidatedAt": "2026-09-06T16:52:20.828Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "irhop/omarchy-mouse-odometer",
+        "pluginIds": [
+          "io.github.irhop.mouse-odometer"
+        ],
+        "commit": "fe0420ba4549d424bf293be5946037750f414721",
+        "checkedAt": "2026-09-06T16:52:20.777Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "irhop/omarchy-mouse-odometer",
+        "pluginIds": [
+          "io.github.irhop.mouse-odometer"
+        ],
+        "commit": "fe0420ba4549d424bf293be5946037750f414721",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T16:52:20.777Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T12:52:41.608Z",
+        "requestEventId": 30647007934,
+        "requestedAt": "2026-09-06T16:51:28Z",
+        "reviewedAt": "2026-09-06T16:52:20.777Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.irhop.mouse-odometer": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
