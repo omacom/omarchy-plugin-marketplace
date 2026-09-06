@@ -130757,6 +130757,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0-CYBERDYNE-SYSTEMS-0/terminal-theme-studio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:46:06.012Z",
+      "listingValidatedCommit": "80f4e347c35e73eaacd5e95270e9b81b7335adff",
+      "listingValidatedAt": "2026-09-06T02:46:06.012Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0-cyberdyne-systems-0/terminal-theme-studio",
+        "pluginIds": [
+          "scrimwiggins.terminal-theme-studio"
+        ],
+        "commit": "80f4e347c35e73eaacd5e95270e9b81b7335adff",
+        "checkedAt": "2026-09-06T02:46:05.947Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "scrimwiggins.terminal-theme-studio": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
