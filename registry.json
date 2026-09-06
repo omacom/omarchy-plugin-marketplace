@@ -132072,6 +132072,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/illegalstudio/omarchy-insta360",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T17:16:17.685Z",
+      "listingValidatedCommit": "dda991cd3fa81041f6a3d4b90592b24ba9b3d466",
+      "listingValidatedAt": "2026-09-06T17:16:17.685Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "illegalstudio/omarchy-insta360",
+        "pluginIds": [
+          "illegalstudio.omarchy-insta360"
+        ],
+        "commit": "dda991cd3fa81041f6a3d4b90592b24ba9b3d466",
+        "checkedAt": "2026-09-06T17:16:17.625Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "illegalstudio.omarchy-insta360": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
