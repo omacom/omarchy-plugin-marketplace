@@ -129992,6 +129992,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gokivego/omarchy-antigravity-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:57:39.405Z",
+      "listingValidatedCommit": "898f8e35d47426c3b35a0026dc5f268bbd412b4a",
+      "listingValidatedAt": "2026-09-06T01:57:39.405Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gokivego/omarchy-antigravity-usage",
+        "pluginIds": [
+          "io.github.gokivego.antigravity-usage"
+        ],
+        "commit": "898f8e35d47426c3b35a0026dc5f268bbd412b4a",
+        "checkedAt": "2026-09-06T01:57:39.337Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.gokivego.antigravity-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
