@@ -131444,6 +131444,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Bert0424/omarchy-sigil",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:24:47.895Z",
+      "listingValidatedCommit": "08fc7141dae88425bc714fb40371c4427c73afba",
+      "listingValidatedAt": "2026-09-06T03:24:47.895Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bert0424/omarchy-sigil",
+        "pluginIds": [
+          "io.github.bert0424.sigil"
+        ],
+        "commit": "08fc7141dae88425bc714fb40371c4427c73afba",
+        "checkedAt": "2026-09-06T03:24:47.822Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.bert0424.sigil": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
