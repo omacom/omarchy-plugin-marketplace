@@ -130896,6 +130896,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Shirak-Semonian/deepspend-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:55:42.300Z",
+      "listingValidatedCommit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
+      "listingValidatedAt": "2026-09-06T02:55:42.300Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shirak-semonian/deepspend-omarchy-plugin",
+        "pluginIds": [
+          "io.github.shirak-semonian.deepspend"
+        ],
+        "commit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
+        "checkedAt": "2026-09-06T02:55:42.250Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.shirak-semonian.deepspend": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
