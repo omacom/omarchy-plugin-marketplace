@@ -132456,6 +132456,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/meviusisback/omarchy-hw-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T19:01:18.585Z",
+      "listingValidatedCommit": "f1373fba766fc1702e96eef0c9fe844ffeaafddb",
+      "listingValidatedAt": "2026-09-06T19:01:18.585Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "meviusisback/omarchy-hw-monitor",
+        "pluginIds": [
+          "meviusisback.hw-monitor"
+        ],
+        "commit": "f1373fba766fc1702e96eef0c9fe844ffeaafddb",
+        "checkedAt": "2026-09-06T19:01:18.517Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "meviusisback.hw-monitor": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
