@@ -131262,6 +131262,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tymurbogach/omarchy-any-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:15:06.944Z",
+      "listingValidatedCommit": "cea73c4acad1656faa53e48a497aaabe064a83b0",
+      "listingValidatedAt": "2026-09-06T03:15:06.944Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tymurbogach/omarchy-any-monitor",
+        "pluginIds": [
+          "io.github.tymurbogach.any-monitor"
+        ],
+        "commit": "cea73c4acad1656faa53e48a497aaabe064a83b0",
+        "checkedAt": "2026-09-06T03:15:06.871Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tymurbogach.any-monitor": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
