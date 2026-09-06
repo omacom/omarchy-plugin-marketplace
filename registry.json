@@ -129505,6 +129505,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/IuriAmauri/Omapaper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:30:02.192Z",
+      "listingValidatedCommit": "452af8096c076fdf90a077f5c61ee23a7b9e1ef9",
+      "listingValidatedAt": "2026-09-06T01:30:02.192Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iuriamauri/omapaper",
+        "pluginIds": [
+          "omapaper"
+        ],
+        "commit": "452af8096c076fdf90a077f5c61ee23a7b9e1ef9",
+        "checkedAt": "2026-09-06T01:30:02.131Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omapaper": {
+          "category": "Appearance",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
