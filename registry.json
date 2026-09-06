@@ -131704,6 +131704,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Johnathicc/omarchy-bios-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T16:08:50.485Z",
+      "listingValidatedCommit": "0480aebfcc1dafc051290a9cdfe85545a5d22e44",
+      "listingValidatedAt": "2026-09-06T16:08:50.485Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "johnathicc/omarchy-bios-plugin",
+        "pluginIds": [
+          "siob.power-actions"
+        ],
+        "commit": "0480aebfcc1dafc051290a9cdfe85545a5d22e44",
+        "checkedAt": "2026-09-06T16:08:50.428Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "johnathicc/omarchy-bios-plugin",
+        "pluginIds": [
+          "siob.power-actions"
+        ],
+        "commit": "0480aebfcc1dafc051290a9cdfe85545a5d22e44",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T16:08:50.428Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T02:50:04.790Z",
+        "requestEventId": 30645901880,
+        "requestedAt": "2026-09-06T16:07:45Z",
+        "reviewedAt": "2026-09-06T16:08:50.428Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "siob.power-actions": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
