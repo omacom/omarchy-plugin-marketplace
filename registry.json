@@ -129048,6 +129048,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bjarkimg/omarchy-population-pyramid",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:00:33.776Z",
+      "listingValidatedCommit": "bbec05b878a39ff372976d6ff49f97e04292b4fa",
+      "listingValidatedAt": "2026-09-06T01:00:33.776Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bjarkimg/omarchy-population-pyramid",
+        "pluginIds": [
+          "bmg.population-pyramid"
+        ],
+        "commit": "bbec05b878a39ff372976d6ff49f97e04292b4fa",
+        "checkedAt": "2026-09-06T01:00:33.715Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bmg.population-pyramid": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
