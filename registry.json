@@ -132580,6 +132580,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/digitalbase/omarchy-tailscale-services",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T19:44:11.629Z",
+      "listingValidatedCommit": "43143ba728a57394d082734eb129b50b6d4717c6",
+      "listingValidatedAt": "2026-09-06T19:44:11.629Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "digitalbase/omarchy-tailscale-services",
+        "pluginIds": [
+          "io.github.digitalbase.tailscale-services"
+        ],
+        "commit": "43143ba728a57394d082734eb129b50b6d4717c6",
+        "checkedAt": "2026-09-06T19:44:11.555Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "digitalbase/omarchy-tailscale-services",
+        "pluginIds": [
+          "io.github.digitalbase.tailscale-services"
+        ],
+        "commit": "43143ba728a57394d082734eb129b50b6d4717c6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T19:44:11.555Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T11:12:35.770Z",
+        "requestEventId": 30651302732,
+        "requestedAt": "2026-09-06T19:42:12Z",
+        "reviewedAt": "2026-09-06T19:44:11.555Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.digitalbase.tailscale-services": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
