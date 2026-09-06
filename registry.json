@@ -131387,6 +131387,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Firstp1ck/omarchy-keybindings",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:22:26.957Z",
+      "listingValidatedCommit": "6fe86995e5aa13f8cd79f509a558b16fff493477",
+      "listingValidatedAt": "2026-09-06T03:22:26.957Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "firstp1ck/omarchy-keybindings",
+        "pluginIds": [
+          "firstpick.keybindings"
+        ],
+        "commit": "6fe86995e5aa13f8cd79f509a558b16fff493477",
+        "checkedAt": "2026-09-06T03:22:26.882Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "firstp1ck/omarchy-keybindings",
+        "pluginIds": [
+          "firstpick.keybindings"
+        ],
+        "commit": "6fe86995e5aa13f8cd79f509a558b16fff493477",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T03:22:26.882Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T01:21:04.542Z",
+        "requestEventId": 30628322512,
+        "requestedAt": "2026-09-06T03:05:17Z",
+        "reviewedAt": "2026-09-06T03:22:26.882Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "firstpick.keybindings": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
