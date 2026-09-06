@@ -132732,6 +132732,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/luizeof/omarchy-sshmanager-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T20:48:12.068Z",
+      "listingValidatedCommit": "fd0c8cef804bc7a5e5601f06a2a5810731d51993",
+      "listingValidatedAt": "2026-09-06T20:48:12.068Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "luizeof/omarchy-sshmanager-plugin",
+        "pluginIds": [
+          "io.github.luizeof.omarchy-sshmanager"
+        ],
+        "commit": "fd0c8cef804bc7a5e5601f06a2a5810731d51993",
+        "checkedAt": "2026-09-06T20:48:11.996Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "luizeof/omarchy-sshmanager-plugin",
+        "pluginIds": [
+          "io.github.luizeof.omarchy-sshmanager"
+        ],
+        "commit": "fd0c8cef804bc7a5e5601f06a2a5810731d51993",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T20:48:11.996Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T23:26:30.526Z",
+        "requestEventId": 30652895106,
+        "requestedAt": "2026-09-06T20:47:19Z",
+        "reviewedAt": "2026-09-06T20:48:11.996Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.luizeof.omarchy-sshmanager": {
+          "category": "Developer Tools",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
