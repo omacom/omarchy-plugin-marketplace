@@ -132523,6 +132523,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0x1ocean/omarchy-server-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T19:41:55.167Z",
+      "listingValidatedCommit": "a9c2d8ca215451360f6a877696146ac940c3ae9e",
+      "listingValidatedAt": "2026-09-06T19:41:55.167Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0x1ocean/omarchy-server-mode",
+        "pluginIds": [
+          "io.github.0x1ocean.server-mode"
+        ],
+        "commit": "a9c2d8ca215451360f6a877696146ac940c3ae9e",
+        "checkedAt": "2026-09-06T19:41:55.108Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0x1ocean/omarchy-server-mode",
+        "pluginIds": [
+          "io.github.0x1ocean.server-mode"
+        ],
+        "commit": "a9c2d8ca215451360f6a877696146ac940c3ae9e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T19:41:55.108Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T12:01:07.382Z",
+        "requestEventId": 30651273653,
+        "requestedAt": "2026-09-06T19:41:05Z",
+        "reviewedAt": "2026-09-06T19:41:55.108Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.0x1ocean.server-mode": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
