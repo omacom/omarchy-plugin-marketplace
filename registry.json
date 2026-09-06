@@ -128882,6 +128882,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/IntelligentWolf-Ltd/omarchy-pop-corner",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:48:00.377Z",
+      "listingValidatedCommit": "40ad2eca87f4e501b479937bfa834c350adbfd5e",
+      "listingValidatedAt": "2026-09-06T00:48:00.377Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "intelligentwolf-ltd/omarchy-pop-corner",
+        "pluginIds": [
+          "intelligentwolf.pop-corner"
+        ],
+        "commit": "40ad2eca87f4e501b479937bfa834c350adbfd5e",
+        "checkedAt": "2026-09-06T00:48:00.318Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "intelligentwolf.pop-corner": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
