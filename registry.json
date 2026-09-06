@@ -132490,6 +132490,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Thelost77/omarchy-courier",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T19:09:56.056Z",
+      "listingValidatedCommit": "c14caa2b97e69c8f6f55cad9836ef8c1cdb390a6",
+      "listingValidatedAt": "2026-09-06T19:09:56.056Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thelost77/omarchy-courier",
+        "pluginIds": [
+          "io.github.thelost77.omacourier"
+        ],
+        "commit": "c14caa2b97e69c8f6f55cad9836ef8c1cdb390a6",
+        "checkedAt": "2026-09-06T19:09:55.984Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.thelost77.omacourier": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
