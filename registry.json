@@ -128848,6 +128848,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jayosays/omacheatsheet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:45:51.547Z",
+      "listingValidatedCommit": "5a8e5977d8e137fc1b05da4670ee7abff7eafd7a",
+      "listingValidatedAt": "2026-09-06T00:45:51.547Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jayosays/omacheatsheet",
+        "pluginIds": [
+          "jo.omacheatsheet"
+        ],
+        "commit": "5a8e5977d8e137fc1b05da4670ee7abff7eafd7a",
+        "checkedAt": "2026-09-06T00:45:51.476Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jo.omacheatsheet": {
+          "category": "System",
+          "tags": [
+            "system",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
