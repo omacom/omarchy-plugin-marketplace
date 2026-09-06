@@ -130962,6 +130962,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alexanderpuschkinberlin/omarchy-keyboard-backlight",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T03:00:29.140Z",
+      "listingValidatedCommit": "11613fb86afe9d01eda1d317c53f38812ec3a1d5",
+      "listingValidatedAt": "2026-09-06T03:00:29.140Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alexanderpuschkinberlin/omarchy-keyboard-backlight",
+        "pluginIds": [
+          "io.github.alexanderpuschkinberlin.keyboard-backlight"
+        ],
+        "commit": "11613fb86afe9d01eda1d317c53f38812ec3a1d5",
+        "checkedAt": "2026-09-06T03:00:29.068Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alexanderpuschkinberlin/omarchy-keyboard-backlight",
+        "pluginIds": [
+          "io.github.alexanderpuschkinberlin.keyboard-backlight"
+        ],
+        "commit": "11613fb86afe9d01eda1d317c53f38812ec3a1d5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T03:00:29.068Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T23:13:39.473Z",
+        "requestEventId": 30627950393,
+        "requestedAt": "2026-09-06T02:44:25Z",
+        "reviewedAt": "2026-09-06T03:00:29.068Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.alexanderpuschkinberlin.keyboard-backlight": {
+          "category": "Hardware",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
