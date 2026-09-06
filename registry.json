@@ -132883,6 +132883,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/xxsteven69xx/qol-desktop-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T21:02:46.593Z",
+      "listingValidatedCommit": "928f44fe40741fd832f1395af872b1ac60b33782",
+      "listingValidatedAt": "2026-09-06T21:02:46.593Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xxsteven69xx/qol-desktop-plus",
+        "pluginIds": [
+          "qol-desktop-plus"
+        ],
+        "commit": "928f44fe40741fd832f1395af872b1ac60b33782",
+        "checkedAt": "2026-09-06T21:02:46.528Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "qol-desktop-plus": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
