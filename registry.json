@@ -131763,6 +131763,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/caio-hat/omarchy-pen",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T16:15:59.069Z",
+      "listingValidatedCommit": "bed60bd2056ce6f62808580330b6baac77667c4e",
+      "listingValidatedAt": "2026-09-06T16:15:59.069Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "caio-hat/omarchy-pen",
+        "pluginIds": [
+          "caiohat.pen"
+        ],
+        "commit": "bed60bd2056ce6f62808580330b6baac77667c4e",
+        "checkedAt": "2026-09-06T16:15:59.011Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "caio-hat/omarchy-pen",
+        "pluginIds": [
+          "caiohat.pen"
+        ],
+        "commit": "bed60bd2056ce6f62808580330b6baac77667c4e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T16:15:59.011Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T01:20:19.947Z",
+        "requestEventId": 30646085135,
+        "requestedAt": "2026-09-06T16:15:00Z",
+        "reviewedAt": "2026-09-06T16:15:59.011Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "caiohat.pen": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
