@@ -129537,6 +129537,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/austindixson/omarchy-input",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:32:22.183Z",
+      "listingValidatedCommit": "30d985a7c2c44698604129197242deb65bff7190",
+      "listingValidatedAt": "2026-09-06T01:32:22.183Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "austindixson/omarchy-input",
+        "pluginIds": [
+          "austindixson.ominput"
+        ],
+        "commit": "30d985a7c2c44698604129197242deb65bff7190",
+        "checkedAt": "2026-09-06T01:32:22.111Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "austindixson/omarchy-input",
+        "pluginIds": [
+          "austindixson.ominput"
+        ],
+        "commit": "30d985a7c2c44698604129197242deb65bff7190",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T01:32:22.111Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T02:29:25.478Z",
+        "requestEventId": 30626190290,
+        "requestedAt": "2026-09-06T01:14:25Z",
+        "reviewedAt": "2026-09-06T01:32:22.111Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "austindixson.ominput": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
