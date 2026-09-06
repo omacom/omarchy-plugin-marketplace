@@ -128592,6 +128592,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/thetxeagle/omarchy-monitor-blanker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:30:08.648Z",
+      "listingValidatedCommit": "eaf24766718c589459959e8420dc4c6107d98618",
+      "listingValidatedAt": "2026-09-06T00:30:08.648Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thetxeagle/omarchy-monitor-blanker",
+        "pluginIds": [
+          "io.github.omarchy.monitor-blanker"
+        ],
+        "commit": "eaf24766718c589459959e8420dc4c6107d98618",
+        "checkedAt": "2026-09-06T00:30:08.579Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.omarchy.monitor-blanker": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
