@@ -129281,6 +129281,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PtrckM/quattro-stats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:16:30.093Z",
+      "listingValidatedCommit": "38be08b9d6615a103553c93fd887966c318f9283",
+      "listingValidatedAt": "2026-09-06T01:16:30.093Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ptrckm/quattro-stats",
+        "pluginIds": [
+          "ptrck.quattro-stats"
+        ],
+        "commit": "38be08b9d6615a103553c93fd887966c318f9283",
+        "checkedAt": "2026-09-06T01:16:30.033Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ptrck.quattro-stats": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
