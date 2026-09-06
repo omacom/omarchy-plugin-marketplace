@@ -129712,6 +129712,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TechLuddite/luddite-gestures",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T01:39:56.070Z",
+      "listingValidatedCommit": "28f4822b42cd423e2ac4c1041ec1f2b25293f863",
+      "listingValidatedAt": "2026-09-06T01:39:56.070Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "techluddite/luddite-gestures",
+        "pluginIds": [
+          "io.github.techluddite.gestures"
+        ],
+        "commit": "28f4822b42cd423e2ac4c1041ec1f2b25293f863",
+        "checkedAt": "2026-09-06T01:39:56.001Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.techluddite.gestures": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
