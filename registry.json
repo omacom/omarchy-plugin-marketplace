@@ -132106,6 +132106,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jasonzondor/omarchy-tidalweb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T17:20:15.002Z",
+      "listingValidatedCommit": "e84836bc8be2bd64a2dc505886a656e768f6aeff",
+      "listingValidatedAt": "2026-09-06T17:20:15.002Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jasonzondor/omarchy-tidalweb",
+        "pluginIds": [
+          "com.zondor.tidalweb"
+        ],
+        "commit": "e84836bc8be2bd64a2dc505886a656e768f6aeff",
+        "checkedAt": "2026-09-06T17:20:14.943Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jasonzondor/omarchy-tidalweb",
+        "pluginIds": [
+          "com.zondor.tidalweb"
+        ],
+        "commit": "e84836bc8be2bd64a2dc505886a656e768f6aeff",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T17:20:14.943Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T19:22:14.700Z",
+        "requestEventId": 30647700247,
+        "requestedAt": "2026-09-06T17:19:21Z",
+        "reviewedAt": "2026-09-06T17:20:14.943Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.zondor.tidalweb": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
