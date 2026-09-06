@@ -130700,6 +130700,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hylkw213/omaclaude-swap",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:43:55.507Z",
+      "listingValidatedCommit": "8c17c9953d88876e9cc010635d840bb2961707f0",
+      "listingValidatedAt": "2026-09-06T02:43:55.507Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hylkw213/omaclaude-swap",
+        "pluginIds": [
+          "cswap.accounts"
+        ],
+        "commit": "8c17c9953d88876e9cc010635d840bb2961707f0",
+        "checkedAt": "2026-09-06T02:43:55.443Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hylkw213/omaclaude-swap",
+        "pluginIds": [
+          "cswap.accounts"
+        ],
+        "commit": "8c17c9953d88876e9cc010635d840bb2961707f0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T02:43:55.443Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T14:51:59.532Z",
+        "requestEventId": 30627673512,
+        "requestedAt": "2026-09-06T02:28:54Z",
+        "reviewedAt": "2026-09-06T02:43:55.443Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "cswap.accounts": {
+          "category": "Productivity",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
