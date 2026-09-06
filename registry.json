@@ -130196,6 +130196,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/digitaljohn/omarchy-spond",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T02:11:56.250Z",
+      "listingValidatedCommit": "96ede47ae66ed54f1fad8add0740fd84726c69b7",
+      "listingValidatedAt": "2026-09-06T02:11:56.250Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "digitaljohn/omarchy-spond",
+        "pluginIds": [
+          "digitaljohn.spond"
+        ],
+        "commit": "96ede47ae66ed54f1fad8add0740fd84726c69b7",
+        "checkedAt": "2026-09-06T02:11:56.188Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "digitaljohn.spond": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "kids"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
