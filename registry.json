@@ -128493,6 +128493,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mahziyarng98/jalali-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T00:22:56.881Z",
+      "listingValidatedCommit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
+      "listingValidatedAt": "2026-09-06T00:22:56.881Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mahziyarng98/jalali-calendar",
+        "pluginIds": [
+          "io.github.mahziyarng98.jalali-calendar"
+        ],
+        "commit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
+        "checkedAt": "2026-09-06T00:22:56.823Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mahziyarng98.jalali-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
