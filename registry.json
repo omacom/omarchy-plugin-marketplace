@@ -131578,6 +131578,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hehh2001/omarchy-tailscale-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T15:18:56.177Z",
+      "listingValidatedCommit": "426b3cc02f02bc084aac29c7e3a523c9c08b1fbc",
+      "listingValidatedAt": "2026-09-06T15:18:56.177Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hehh2001/omarchy-tailscale-plus",
+        "pluginIds": [
+          "hehh2001.tailscale-plus"
+        ],
+        "commit": "426b3cc02f02bc084aac29c7e3a523c9c08b1fbc",
+        "checkedAt": "2026-09-06T15:18:56.115Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hehh2001/omarchy-tailscale-plus",
+        "pluginIds": [
+          "hehh2001.tailscale-plus"
+        ],
+        "commit": "426b3cc02f02bc084aac29c7e3a523c9c08b1fbc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T15:18:56.115Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T10:42:49.322Z",
+        "requestEventId": 30644596167,
+        "requestedAt": "2026-09-06T15:18:00Z",
+        "reviewedAt": "2026-09-06T15:18:56.115Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "hehh2001.tailscale-plus": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
