@@ -131824,6 +131824,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/maslinedwin/nowah-travel",
+      "type": "plugin-source",
+      "addedAt": "2026-09-06",
+      "listedAt": "2026-09-06T16:28:35.622Z",
+      "listingValidatedCommit": "577ecbef11da517b75b8df305a844a23c41aaa6f",
+      "listingValidatedAt": "2026-09-06T16:28:35.622Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "maslinedwin/nowah-travel",
+        "pluginIds": [
+          "xyz.nowah.travel"
+        ],
+        "commit": "577ecbef11da517b75b8df305a844a23c41aaa6f",
+        "checkedAt": "2026-09-06T16:28:35.561Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "maslinedwin/nowah-travel",
+        "pluginIds": [
+          "xyz.nowah.travel"
+        ],
+        "commit": "577ecbef11da517b75b8df305a844a23c41aaa6f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-06T16:28:35.561Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T06:50:41.334Z",
+        "requestEventId": 30646407422,
+        "requestedAt": "2026-09-06T16:27:43Z",
+        "reviewedAt": "2026-09-06T16:28:35.561Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "xyz.nowah.travel": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
