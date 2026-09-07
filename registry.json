@@ -134289,6 +134289,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sierrab1989/omarchy-pingscope",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:54:00.853Z",
+      "listingValidatedCommit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+      "listingValidatedAt": "2026-09-07T10:54:00.853Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sierrab1989/omarchy-pingscope",
+        "pluginIds": [
+          "pingscope.latency"
+        ],
+        "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+        "checkedAt": "2026-09-07T10:54:00.783Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sierrab1989/omarchy-pingscope",
+        "pluginIds": [
+          "pingscope.latency"
+        ],
+        "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T10:54:00.783Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T03:12:23.001Z",
+        "requestEventId": 30685162646,
+        "requestedAt": "2026-09-07T10:49:54Z",
+        "reviewedAt": "2026-09-07T10:54:00.783Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pingscope.latency": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
