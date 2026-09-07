@@ -136368,6 +136368,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dovydasv0/omafile",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:49:54.409Z",
+      "listingValidatedCommit": "455369c97b9e1867b86612faf83517bb94be87cf",
+      "listingValidatedAt": "2026-09-07T23:49:54.409Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dovydasv0/omafile",
+        "pluginIds": [
+          "omafile.menu"
+        ],
+        "commit": "455369c97b9e1867b86612faf83517bb94be87cf",
+        "checkedAt": "2026-09-07T23:49:54.337Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omafile.menu": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
