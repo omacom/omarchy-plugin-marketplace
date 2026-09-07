@@ -135051,6 +135051,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/parker-brown-family/omarchy-crook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:10:00.976Z",
+      "listingValidatedCommit": "2359ab843ef6a471dc11cc36ca9221752593c4c3",
+      "listingValidatedAt": "2026-09-07T22:10:00.976Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "parker-brown-family/omarchy-crook",
+        "pluginIds": [
+          "brownfamilysports.crook"
+        ],
+        "commit": "2359ab843ef6a471dc11cc36ca9221752593c4c3",
+        "checkedAt": "2026-09-07T22:10:00.903Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "brownfamilysports.crook": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
