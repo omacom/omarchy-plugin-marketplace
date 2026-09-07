@@ -134681,6 +134681,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vitally/omarchy-spot-price",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T21:35:09.001Z",
+      "listingValidatedCommit": "f21bdd958835d05c6bbb232c1587e6a4378a5918",
+      "listingValidatedAt": "2026-09-07T21:35:09.001Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vitally/omarchy-spot-price",
+        "pluginIds": [
+          "vt.spot"
+        ],
+        "commit": "f21bdd958835d05c6bbb232c1587e6a4378a5918",
+        "checkedAt": "2026-09-07T21:35:08.958Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vitally/omarchy-spot-price",
+        "pluginIds": [
+          "vt.spot"
+        ],
+        "commit": "f21bdd958835d05c6bbb232c1587e6a4378a5918",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T21:35:08.958Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T14:18:07.394Z",
+        "requestEventId": 30714929929,
+        "requestedAt": "2026-09-07T21:34:23Z",
+        "reviewedAt": "2026-09-07T21:35:08.958Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vt.spot": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
