@@ -135085,6 +135085,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AdemBenAbdallah/omarchy-port-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:15:06.108Z",
+      "listingValidatedCommit": "b04f2ea641241928682e6c9b9a0366bced7cb8f4",
+      "listingValidatedAt": "2026-09-07T22:15:06.108Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "adembenabdallah/omarchy-port-manager",
+        "pluginIds": [
+          "io.github.adembenabdallah.port-manager"
+        ],
+        "commit": "b04f2ea641241928682e6c9b9a0366bced7cb8f4",
+        "checkedAt": "2026-09-07T22:15:06.037Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.adembenabdallah.port-manager": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
