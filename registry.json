@@ -133425,6 +133425,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Shirak-Semonian/nvag-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T09:02:20.973Z",
+      "listingValidatedCommit": "072df92ae5db174a214c566105f395b1cef6af57",
+      "listingValidatedAt": "2026-09-07T09:02:20.973Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shirak-semonian/nvag-omarchy-plugin",
+        "pluginIds": [
+          "io.github.shirak-semonian.nvag"
+        ],
+        "commit": "072df92ae5db174a214c566105f395b1cef6af57",
+        "checkedAt": "2026-09-07T09:02:20.909Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shirak-semonian/nvag-omarchy-plugin",
+        "pluginIds": [
+          "io.github.shirak-semonian.nvag"
+        ],
+        "commit": "072df92ae5db174a214c566105f395b1cef6af57",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T09:02:20.909Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T18:47:47.108Z",
+        "requestEventId": 30678582665,
+        "requestedAt": "2026-09-07T09:00:47Z",
+        "reviewedAt": "2026-09-07T09:02:20.909Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.shirak-semonian.nvag": {
+          "category": "Developer Tools",
+          "tags": [
+            "launcher",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
