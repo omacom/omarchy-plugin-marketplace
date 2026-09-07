@@ -111641,8 +111641,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T23:19:21.088Z",
-      "listingValidatedCommit": "829f82fbc2222c4ed92ea3a7ee2c70b3bd04918d",
-      "listingValidatedAt": "2026-09-01T23:19:21.088Z",
+      "listingValidatedCommit": "31458e7c20be6dcbd89833d1927a4d93e9184da3",
+      "listingValidatedAt": "2026-09-07T23:01:15.931Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -111651,8 +111651,8 @@
         "pluginIds": [
           "io.github.idr4n.bookmarks"
         ],
-        "commit": "829f82fbc2222c4ed92ea3a7ee2c70b3bd04918d",
-        "checkedAt": "2026-09-01T23:19:21.032Z",
+        "commit": "31458e7c20be6dcbd89833d1927a4d93e9184da3",
+        "checkedAt": "2026-09-07T23:01:15.931Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -111671,7 +111671,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "829f82fbc2222c4ed92ea3a7ee2c70b3bd04918d",
+          "validatedAt": "2026-09-01T23:19:21.088Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T23:01:15.931Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "idr4n/omarchy-bookmarks",
+            "pluginIds": [
+              "io.github.idr4n.bookmarks"
+            ],
+            "commit": "829f82fbc2222c4ed92ea3a7ee2c70b3bd04918d",
+            "checkedAt": "2026-09-01T23:19:21.032Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/falser101/falser-window-preview",
