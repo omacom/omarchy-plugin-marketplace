@@ -136303,6 +136303,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yenst/NightsWatch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:44:11.849Z",
+      "listingValidatedCommit": "e5c60d703e736867dce8bbe17302c5625e02f791",
+      "listingValidatedAt": "2026-09-07T23:44:11.849Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yenst/nightswatch",
+        "pluginIds": [
+          "yenst.nightswatch"
+        ],
+        "commit": "e5c60d703e736867dce8bbe17302c5625e02f791",
+        "checkedAt": "2026-09-07T23:44:11.780Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yenst.nightswatch": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
