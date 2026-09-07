@@ -135430,6 +135430,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rliessum/omarchy-luxafor-dot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:40:29.990Z",
+      "listingValidatedCommit": "7164fda255bdc3185143cd9e470f6ebe0aa2238e",
+      "listingValidatedAt": "2026-09-07T22:40:29.990Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rliessum/omarchy-luxafor-dot",
+        "pluginIds": [
+          "io.github.rliessum.luxafor-dot"
+        ],
+        "commit": "7164fda255bdc3185143cd9e470f6ebe0aa2238e",
+        "checkedAt": "2026-09-07T22:40:29.917Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rliessum.luxafor-dot": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
