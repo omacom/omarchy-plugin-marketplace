@@ -135250,6 +135250,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danthemadnorweign/repo-keybindings-king",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:30:51.826Z",
+      "listingValidatedCommit": "fa379f6ff3c7c381ec9bcf734c48f6dc7c571f12",
+      "listingValidatedAt": "2026-09-07T22:30:51.826Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danthemadnorweign/repo-keybindings-king",
+        "pluginIds": [
+          "keybindings.king"
+        ],
+        "commit": "fa379f6ff3c7c381ec9bcf734c48f6dc7c571f12",
+        "checkedAt": "2026-09-07T22:30:51.758Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "danthemadnorweign/repo-keybindings-king",
+        "pluginIds": [
+          "keybindings.king"
+        ],
+        "commit": "fa379f6ff3c7c381ec9bcf734c48f6dc7c571f12",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:30:51.758Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T15:30:45.920Z",
+        "requestEventId": 30716600854,
+        "requestedAt": "2026-09-07T22:29:03Z",
+        "reviewedAt": "2026-09-07T22:30:51.759Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "keybindings.king": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
