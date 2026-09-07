@@ -135828,6 +135828,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/adamtcroft/omarchy-pipewire-control",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:09:19.308Z",
+      "listingValidatedCommit": "d567f4b93a5e47c21b5bc0e21e8e06be575d1eec",
+      "listingValidatedAt": "2026-09-07T23:09:19.308Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "adamtcroft/omarchy-pipewire-control",
+        "pluginIds": [
+          "io.github.adamtcroft.pipewire-control"
+        ],
+        "commit": "d567f4b93a5e47c21b5bc0e21e8e06be575d1eec",
+        "checkedAt": "2026-09-07T23:09:19.236Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "adamtcroft/omarchy-pipewire-control",
+        "pluginIds": [
+          "io.github.adamtcroft.pipewire-control"
+        ],
+        "commit": "d567f4b93a5e47c21b5bc0e21e8e06be575d1eec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T23:09:19.236Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T05:34:46.542Z",
+        "requestEventId": 30717299987,
+        "requestedAt": "2026-09-07T22:51:56Z",
+        "reviewedAt": "2026-09-07T23:09:19.236Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.adamtcroft.pipewire-control": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "media",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
