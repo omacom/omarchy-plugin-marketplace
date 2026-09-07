@@ -134346,6 +134346,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hehh2001/omarchy-lunar-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:56:12.453Z",
+      "listingValidatedCommit": "5d5abc0f2eadae544bc0a4d7888c880d14778530",
+      "listingValidatedAt": "2026-09-07T10:56:12.453Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hehh2001/omarchy-lunar-clock",
+        "pluginIds": [
+          "hehh2001.lunar-clock"
+        ],
+        "commit": "5d5abc0f2eadae544bc0a4d7888c880d14778530",
+        "checkedAt": "2026-09-07T10:56:12.382Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "hehh2001.lunar-clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
