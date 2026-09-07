@@ -112068,8 +112068,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T05:39:10.675Z",
-      "listingValidatedCommit": "93c7dbefa4629273b8e820a3d171cf002d3bdf01",
-      "listingValidatedAt": "2026-09-02T05:39:10.675Z",
+      "listingValidatedCommit": "c15474df57b9313c8a25f60e0c7dbe1b0653e7f3",
+      "listingValidatedAt": "2026-09-07T08:14:51.845Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -112078,8 +112078,8 @@
         "pluginIds": [
           "dansmith888.gpu"
         ],
-        "commit": "93c7dbefa4629273b8e820a3d171cf002d3bdf01",
-        "checkedAt": "2026-09-02T05:39:10.621Z",
+        "commit": "c15474df57b9313c8a25f60e0c7dbe1b0653e7f3",
+        "checkedAt": "2026-09-07T08:14:51.845Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -112095,7 +112095,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "93c7dbefa4629273b8e820a3d171cf002d3bdf01",
+          "validatedAt": "2026-09-02T05:39:10.675Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T08:14:51.845Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dansmith888/omarchy-gpu",
+            "pluginIds": [
+              "dansmith888.gpu"
+            ],
+            "commit": "93c7dbefa4629273b8e820a3d171cf002d3bdf01",
+            "checkedAt": "2026-09-02T05:39:10.621Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/DanSmith888/omarchy-cpu",
