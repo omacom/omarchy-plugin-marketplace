@@ -129275,8 +129275,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:58:28.879Z",
-      "listingValidatedCommit": "82e6a937c08622c497432f4641710b9e63eb6c56",
-      "listingValidatedAt": "2026-09-06T00:58:28.879Z",
+      "listingValidatedCommit": "fe31b92db8ccf41b5f06d7e63c263747645a7bf4",
+      "listingValidatedAt": "2026-09-07T08:37:40.855Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -129285,8 +129285,8 @@
         "pluginIds": [
           "ruan-omarchy.nocom"
         ],
-        "commit": "82e6a937c08622c497432f4641710b9e63eb6c56",
-        "checkedAt": "2026-09-06T00:58:28.838Z",
+        "commit": "fe31b92db8ccf41b5f06d7e63c263747645a7bf4",
+        "checkedAt": "2026-09-07T08:37:40.855Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -129301,7 +129301,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "82e6a937c08622c497432f4641710b9e63eb6c56",
+          "validatedAt": "2026-09-06T00:58:28.879Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T08:37:40.855Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zheonatan/omarchy-nocom",
+            "pluginIds": [
+              "ruan-omarchy.nocom"
+            ],
+            "commit": "82e6a937c08622c497432f4641710b9e63eb6c56",
+            "checkedAt": "2026-09-06T00:58:28.838Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/bjarkimg/omarchy-population-pyramid",
