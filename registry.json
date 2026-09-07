@@ -133487,6 +133487,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/leonaffi-byte/omarchygram-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T09:15:27.104Z",
+      "listingValidatedCommit": "84a038f2051e7f0f06937eef65f2a50c8894c6ac",
+      "listingValidatedAt": "2026-09-07T09:15:27.104Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "leonaffi-byte/omarchygram-bar",
+        "pluginIds": [
+          "leoom.omarchygram"
+        ],
+        "commit": "84a038f2051e7f0f06937eef65f2a50c8894c6ac",
+        "checkedAt": "2026-09-07T09:15:27.025Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "leoom.omarchygram": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
