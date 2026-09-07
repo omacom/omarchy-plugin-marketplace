@@ -133888,6 +133888,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ShahinMohamed/omarchy-daybook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:18:56.024Z",
+      "listingValidatedCommit": "220bd346e9cfb7dcbd5c0e4941fccc8a92cce494",
+      "listingValidatedAt": "2026-09-07T10:18:56.024Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shahinmohamed/omarchy-daybook",
+        "pluginIds": [
+          "shahin.daybook"
+        ],
+        "commit": "220bd346e9cfb7dcbd5c0e4941fccc8a92cce494",
+        "checkedAt": "2026-09-07T10:18:55.953Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shahinmohamed/omarchy-daybook",
+        "pluginIds": [
+          "shahin.daybook"
+        ],
+        "commit": "220bd346e9cfb7dcbd5c0e4941fccc8a92cce494",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T10:18:55.953Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T10:16:57.621Z",
+        "requestEventId": 30683402803,
+        "requestedAt": "2026-09-07T10:17:46Z",
+        "reviewedAt": "2026-09-07T10:18:55.953Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shahin.daybook": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
