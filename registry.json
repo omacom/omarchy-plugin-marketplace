@@ -133520,6 +133520,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RIAL0/omarchy-gpu-status",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T09:29:28.118Z",
+      "listingValidatedCommit": "f7245f361a851094c5ba88e240bc2d0033b71768",
+      "listingValidatedAt": "2026-09-07T09:29:28.118Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rial0/omarchy-gpu-status",
+        "pluginIds": [
+          "io.github.rial0.gpu-status"
+        ],
+        "commit": "f7245f361a851094c5ba88e240bc2d0033b71768",
+        "checkedAt": "2026-09-07T09:29:28.044Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rial0/omarchy-gpu-status",
+        "pluginIds": [
+          "io.github.rial0.gpu-status"
+        ],
+        "commit": "f7245f361a851094c5ba88e240bc2d0033b71768",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T09:29:28.044Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T23:17:02.276Z",
+        "requestEventId": 30679922691,
+        "requestedAt": "2026-09-07T09:20:34Z",
+        "reviewedAt": "2026-09-07T09:29:28.044Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rial0.gpu-status": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
