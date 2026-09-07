@@ -35124,8 +35124,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T04:41:22.152Z",
-      "listingValidatedCommit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
-      "listingValidatedAt": "2026-08-21T10:24:59.568Z",
+      "listingValidatedCommit": "f46e1b94b9da69b326340f174a6878b010b535b2",
+      "listingValidatedAt": "2026-09-07T22:52:05.539Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -35134,14 +35134,12 @@
         "pluginIds": [
           "com.mirashif.omalauncher"
         ],
-        "commit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
-        "checkedAt": "2026-08-21T10:24:59.568Z",
-        "outcome": "review-required",
+        "commit": "f46e1b94b9da69b326340f174a6878b010b535b2",
+        "checkedAt": "2026-09-07T22:52:05.539Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "package-manager"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "com.mirashif.omalauncher": {
@@ -35153,27 +35151,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mirashif/omalauncher",
-        "pluginIds": [
-          "com.mirashif.omalauncher"
-        ],
-        "commit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-21T10:24:59.568Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-21T10:19:57.290Z",
-        "requestEventId": 29798633049,
-        "requestedAt": "2026-08-21T10:24:31Z",
-        "reviewedAt": "2026-08-21T10:24:59.568Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -35194,6 +35171,49 @@
             "enforcementMode": "selective",
             "findings": [],
             "capabilities": []
+          }
+        },
+        {
+          "commit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
+          "validatedAt": "2026-08-21T10:24:59.568Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T22:52:05.539Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mirashif/omalauncher",
+            "pluginIds": [
+              "com.mirashif.omalauncher"
+            ],
+            "commit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
+            "checkedAt": "2026-08-21T10:24:59.568Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mirashif/omalauncher",
+            "pluginIds": [
+              "com.mirashif.omalauncher"
+            ],
+            "commit": "10bf91c173b6a490ad6eb2095ae417030b72c07f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-21T10:24:59.568Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-21T10:19:57.290Z",
+            "requestEventId": 29798633049,
+            "requestedAt": "2026-08-21T10:24:31Z",
+            "reviewedAt": "2026-08-21T10:24:59.568Z",
+            "reviewer": "HANCORE-linux"
           }
         }
       ]
