@@ -133730,6 +133730,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rame0/omarchy-workspace-icons",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T09:57:43.962Z",
+      "listingValidatedCommit": "8fe88e962f84615975673987d39326b2302ec507",
+      "listingValidatedAt": "2026-09-07T09:57:43.962Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rame0/omarchy-workspace-icons",
+        "pluginIds": [
+          "rame0.workspace-icons"
+        ],
+        "commit": "8fe88e962f84615975673987d39326b2302ec507",
+        "checkedAt": "2026-09-07T09:57:43.903Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rame0.workspace-icons": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
