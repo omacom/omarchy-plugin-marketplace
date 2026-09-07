@@ -128684,8 +128684,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:30:08.648Z",
-      "listingValidatedCommit": "eaf24766718c589459959e8420dc4c6107d98618",
-      "listingValidatedAt": "2026-09-06T00:30:08.648Z",
+      "listingValidatedCommit": "5f25c9ef1f455cda6afb48dc41e78086d38a2b4f",
+      "listingValidatedAt": "2026-09-07T08:17:11.297Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -128694,8 +128694,8 @@
         "pluginIds": [
           "io.github.omarchy.monitor-blanker"
         ],
-        "commit": "eaf24766718c589459959e8420dc4c6107d98618",
-        "checkedAt": "2026-09-06T00:30:08.579Z",
+        "commit": "5f25c9ef1f455cda6afb48dc41e78086d38a2b4f",
+        "checkedAt": "2026-09-07T08:17:11.297Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -128711,7 +128711,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "eaf24766718c589459959e8420dc4c6107d98618",
+          "validatedAt": "2026-09-06T00:30:08.648Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T08:17:11.297Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "thetxeagle/omarchy-monitor-blanker",
+            "pluginIds": [
+              "io.github.omarchy.monitor-blanker"
+            ],
+            "commit": "eaf24766718c589459959e8420dc4c6107d98618",
+            "checkedAt": "2026-09-06T00:30:08.579Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Bert0424/omarchy-wisps",
