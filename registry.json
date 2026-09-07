@@ -136402,6 +136402,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/skuthus/omarchy-workspace-pillswap",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:57:33.065Z",
+      "listingValidatedCommit": "30e24bcf16561cfe7a63f83bb8e3a1fd09ac0699",
+      "listingValidatedAt": "2026-09-07T23:57:33.065Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "skuthus/omarchy-workspace-pillswap",
+        "pluginIds": [
+          "skuthus.workspace-pillswap"
+        ],
+        "commit": "30e24bcf16561cfe7a63f83bb8e3a1fd09ac0699",
+        "checkedAt": "2026-09-07T23:57:32.991Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "skuthus.workspace-pillswap": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
