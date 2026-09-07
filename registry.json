@@ -136049,6 +136049,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/oliverlukschander/omarchy-mac-option",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:21:55.314Z",
+      "listingValidatedCommit": "07cd6b43d6943f9975cd7d559c87b293bd88bfe5",
+      "listingValidatedAt": "2026-09-07T23:21:55.314Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "oliverlukschander/omarchy-mac-option",
+        "pluginIds": [
+          "oliverlukschander.mac-option"
+        ],
+        "commit": "07cd6b43d6943f9975cd7d559c87b293bd88bfe5",
+        "checkedAt": "2026-09-07T23:21:55.239Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "oliverlukschander/omarchy-mac-option",
+        "pluginIds": [
+          "oliverlukschander.mac-option"
+        ],
+        "commit": "07cd6b43d6943f9975cd7d559c87b293bd88bfe5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T23:21:55.239Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T08:39:07.103Z",
+        "requestEventId": 30717854801,
+        "requestedAt": "2026-09-07T23:09:26Z",
+        "reviewedAt": "2026-09-07T23:21:55.239Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "oliverlukschander.mac-option": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
