@@ -135187,6 +135187,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimg4/oncekey",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:28:35.363Z",
+      "listingValidatedCommit": "a51ab9eca41a80dc5978446652b958b825f1d89d",
+      "listingValidatedAt": "2026-09-07T22:28:35.363Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimg4/oncekey",
+        "pluginIds": [
+          "dimef.oncekey"
+        ],
+        "commit": "a51ab9eca41a80dc5978446652b958b825f1d89d",
+        "checkedAt": "2026-09-07T22:28:35.288Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jimg4/oncekey",
+        "pluginIds": [
+          "dimef.oncekey"
+        ],
+        "commit": "a51ab9eca41a80dc5978446652b958b825f1d89d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:28:35.288Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T19:29:48.909Z",
+        "requestEventId": 30716536347,
+        "requestedAt": "2026-09-07T22:26:51Z",
+        "reviewedAt": "2026-09-07T22:28:35.288Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dimef.oncekey": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
