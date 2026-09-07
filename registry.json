@@ -136213,6 +136213,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulsp94/omakeychron",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:32:09.508Z",
+      "listingValidatedCommit": "f9a120435d6990103afe93a45ef548f6e07ec592",
+      "listingValidatedAt": "2026-09-07T23:32:09.508Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulsp94/omakeychron",
+        "pluginIds": [
+          "io.github.paulsp94.omakeychron"
+        ],
+        "commit": "f9a120435d6990103afe93a45ef548f6e07ec592",
+        "checkedAt": "2026-09-07T23:32:09.434Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paulsp94/omakeychron",
+        "pluginIds": [
+          "io.github.paulsp94.omakeychron"
+        ],
+        "commit": "f9a120435d6990103afe93a45ef548f6e07ec592",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T23:32:09.434Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T15:02:05.671Z",
+        "requestEventId": 30718300683,
+        "requestedAt": "2026-09-07T23:24:12Z",
+        "reviewedAt": "2026-09-07T23:32:09.434Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.paulsp94.omakeychron": {
+          "category": "Hardware",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
