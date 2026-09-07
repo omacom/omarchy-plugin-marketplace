@@ -136016,6 +136016,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/axelfontaine/omarchy-window-close-buttons",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:19:15.913Z",
+      "listingValidatedCommit": "3ee3a10804d9ddebbb43b4ec660c3026980214fe",
+      "listingValidatedAt": "2026-09-07T23:19:15.913Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "axelfontaine/omarchy-window-close-buttons",
+        "pluginIds": [
+          "axel.window-close-buttons"
+        ],
+        "commit": "3ee3a10804d9ddebbb43b4ec660c3026980214fe",
+        "checkedAt": "2026-09-07T23:19:15.845Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "axel.window-close-buttons": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
