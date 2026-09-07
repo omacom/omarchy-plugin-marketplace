@@ -135530,6 +135530,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/avalgott/gnome-like-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:47:34.741Z",
+      "listingValidatedCommit": "790fa4e73be018bfac51717cfc575e246fc58b42",
+      "listingValidatedAt": "2026-09-07T22:47:34.741Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "avalgott/gnome-like-workspaces",
+        "pluginIds": [
+          "avalgott.gnome-like-workspaces"
+        ],
+        "commit": "790fa4e73be018bfac51717cfc575e246fc58b42",
+        "checkedAt": "2026-09-07T22:47:34.672Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "avalgott/gnome-like-workspaces",
+        "pluginIds": [
+          "avalgott.gnome-like-workspaces"
+        ],
+        "commit": "790fa4e73be018bfac51717cfc575e246fc58b42",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:47:34.672Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T02:58:10.771Z",
+        "requestEventId": 30717098970,
+        "requestedAt": "2026-09-07T22:45:19Z",
+        "reviewedAt": "2026-09-07T22:47:34.672Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "avalgott.gnome-like-workspaces": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
