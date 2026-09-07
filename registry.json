@@ -136269,6 +136269,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imargorsi/QuranVerse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:34:34.482Z",
+      "listingValidatedCommit": "5709908d453e36e4a60f988369c0e776f8d507c8",
+      "listingValidatedAt": "2026-09-07T23:34:34.482Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imargorsi/quranverse",
+        "pluginIds": [
+          "io.github.imargorsi.quran-verse"
+        ],
+        "commit": "5709908d453e36e4a60f988369c0e776f8d507c8",
+        "checkedAt": "2026-09-07T23:34:34.410Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.imargorsi.quran-verse": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
