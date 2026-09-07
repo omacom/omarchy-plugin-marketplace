@@ -112763,9 +112763,9 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T07:19:16.892Z",
-      "listingValidatedCommit": "9c22b5cb3cefddc935663d36464c57d1b317c174",
-      "listingValidatedAt": "2026-09-02T07:19:16.892Z",
-      "listingValidatedBranch": "master",
+      "listingValidatedCommit": "2f333fb396fdf59178dfc159cc49983d53e2e634",
+      "listingValidatedAt": "2026-09-07T08:12:21.215Z",
+      "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
         "version": "3",
@@ -112773,8 +112773,8 @@
         "pluginIds": [
           "dansmith888.momentum4"
         ],
-        "commit": "9c22b5cb3cefddc935663d36464c57d1b317c174",
-        "checkedAt": "2026-09-02T07:19:16.836Z",
+        "commit": "2f333fb396fdf59178dfc159cc49983d53e2e634",
+        "checkedAt": "2026-09-07T08:12:21.215Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -112790,7 +112790,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9c22b5cb3cefddc935663d36464c57d1b317c174",
+          "validatedAt": "2026-09-02T07:19:16.892Z",
+          "branch": "master",
+          "supersededAt": "2026-09-07T08:12:21.215Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dansmith888/omarchy-momentum4",
+            "pluginIds": [
+              "dansmith888.momentum4"
+            ],
+            "commit": "9c22b5cb3cefddc935663d36464c57d1b317c174",
+            "checkedAt": "2026-09-02T07:19:16.836Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/iryzhkov/omarchy-glide-workspaces",
