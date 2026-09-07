@@ -134136,6 +134136,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wolften/omarchy-youtube-music",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:42:44.866Z",
+      "listingValidatedCommit": "2ac4d38d4f48e749f2896d7d6081779bdcd64890",
+      "listingValidatedAt": "2026-09-07T10:42:44.866Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wolften/omarchy-youtube-music",
+        "pluginIds": [
+          "wolften.youtube-music"
+        ],
+        "commit": "2ac4d38d4f48e749f2896d7d6081779bdcd64890",
+        "checkedAt": "2026-09-07T10:42:44.795Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wolften/omarchy-youtube-music",
+        "pluginIds": [
+          "wolften.youtube-music"
+        ],
+        "commit": "2ac4d38d4f48e749f2896d7d6081779bdcd64890",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T10:42:44.795Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T14:52:02.371Z",
+        "requestEventId": 30684711427,
+        "requestedAt": "2026-09-07T10:41:50Z",
+        "reviewedAt": "2026-09-07T10:42:44.795Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "wolften.youtube-music": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
