@@ -134797,6 +134797,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/andersdosen/omarchy-imdbsearch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T21:41:33.612Z",
+      "listingValidatedCommit": "11f6c32980985357625250fc52b1861407c02c67",
+      "listingValidatedAt": "2026-09-07T21:41:33.612Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andersdosen/omarchy-imdbsearch",
+        "pluginIds": [
+          "andersdosen.imdbsearch"
+        ],
+        "commit": "11f6c32980985357625250fc52b1861407c02c67",
+        "checkedAt": "2026-09-07T21:41:33.537Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "andersdosen.imdbsearch": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
