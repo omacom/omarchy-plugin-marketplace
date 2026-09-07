@@ -134593,6 +134593,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ollywarren/sparks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T11:24:36.320Z",
+      "listingValidatedCommit": "4c89f5c5f0730677d85a67933803de1b99834f79",
+      "listingValidatedAt": "2026-09-07T11:24:36.320Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ollywarren/sparks",
+        "pluginIds": [
+          "ollywarren.sparks"
+        ],
+        "commit": "4c89f5c5f0730677d85a67933803de1b99834f79",
+        "checkedAt": "2026-09-07T11:24:36.262Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ollywarren/sparks",
+        "pluginIds": [
+          "ollywarren.sparks"
+        ],
+        "commit": "4c89f5c5f0730677d85a67933803de1b99834f79",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T11:24:36.262Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T20:54:16.249Z",
+        "requestEventId": 30686890539,
+        "requestedAt": "2026-09-07T11:20:49Z",
+        "reviewedAt": "2026-09-07T11:24:36.263Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ollywarren.sparks": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
