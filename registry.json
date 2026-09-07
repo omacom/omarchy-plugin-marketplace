@@ -10695,8 +10695,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-17",
       "listedAt": "2026-08-17T02:20:22.745Z",
-      "listingValidatedCommit": "198204b84a205425673153db38e09f539817f042",
-      "listingValidatedAt": "2026-08-17T02:20:22.745Z",
+      "listingValidatedCommit": "a6daf681e9d20021898e9ea06f672279ea17f4d3",
+      "listingValidatedAt": "2026-09-07T22:56:31.899Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -10705,8 +10705,8 @@
         "pluginIds": [
           "yordanbuilds.rig"
         ],
-        "commit": "198204b84a205425673153db38e09f539817f042",
-        "checkedAt": "2026-08-17T01:21:34.298Z",
+        "commit": "a6daf681e9d20021898e9ea06f672279ea17f4d3",
+        "checkedAt": "2026-09-07T22:56:31.899Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -10723,7 +10723,52 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yordanbuilds/rig",
+        "pluginIds": [
+          "yordanbuilds.rig"
+        ],
+        "commit": "a6daf681e9d20021898e9ea06f672279ea17f4d3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:56:31.899Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T12:16:49.094Z",
+        "requestEventId": 30717142778,
+        "requestedAt": "2026-09-07T22:46:38Z",
+        "reviewedAt": "2026-09-07T22:56:31.899Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "198204b84a205425673153db38e09f539817f042",
+          "validatedAt": "2026-08-17T02:20:22.745Z",
+          "branch": "master",
+          "supersededAt": "2026-09-07T22:56:31.899Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "yordanbuilds/rig",
+            "pluginIds": [
+              "yordanbuilds.rig"
+            ],
+            "commit": "198204b84a205425673153db38e09f539817f042",
+            "checkedAt": "2026-08-17T01:21:34.298Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/keithnyc/omafmail",
