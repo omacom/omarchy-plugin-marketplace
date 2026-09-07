@@ -134379,6 +134379,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/franck/omapower",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:58:38.584Z",
+      "listingValidatedCommit": "04ab79db5a13157916f40514ebfcdb3155f5166a",
+      "listingValidatedAt": "2026-09-07T10:58:38.584Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "franck/omapower",
+        "pluginIds": [
+          "io.github.franck.omapower"
+        ],
+        "commit": "04ab79db5a13157916f40514ebfcdb3155f5166a",
+        "checkedAt": "2026-09-07T10:58:38.523Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.franck.omapower": {
+          "category": "System",
+          "tags": [
+            "power-management",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
