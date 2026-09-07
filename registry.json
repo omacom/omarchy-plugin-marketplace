@@ -36367,8 +36367,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T08:00:01.967Z",
-      "listingValidatedCommit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
-      "listingValidatedAt": "2026-08-26T21:59:30.032Z",
+      "listingValidatedCommit": "86756d11594296c6f5226a284a16383e4f1cb705",
+      "listingValidatedAt": "2026-09-07T23:11:42.886Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -36377,8 +36377,8 @@
         "pluginIds": [
           "nosignal.omasend"
         ],
-        "commit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
-        "checkedAt": "2026-08-26T21:59:30.032Z",
+        "commit": "86756d11594296c6f5226a284a16383e4f1cb705",
+        "checkedAt": "2026-09-07T23:11:42.886Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -36403,30 +36403,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "28allday/omasend-quattro",
-        "pluginIds": [
-          "nosignal.omasend"
-        ],
-        "commit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-26T21:59:30.032Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-25T21:05:47.537Z",
-        "requestEventId": 30067746578,
-        "requestedAt": "2026-08-26T20:48:46Z",
-        "reviewedAt": "2026-08-26T21:59:30.032Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -36477,8 +36453,81 @@
             "reviewedAt": "2026-08-21T08:00:01.949Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
+          "validatedAt": "2026-08-26T21:59:30.032Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T23:11:42.886Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "28allday/omasend-quattro",
+            "pluginIds": [
+              "nosignal.omasend"
+            ],
+            "commit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
+            "checkedAt": "2026-08-26T21:59:30.032Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "28allday/omasend-quattro",
+            "pluginIds": [
+              "nosignal.omasend"
+            ],
+            "commit": "3b9c13ad00a86bac911dd359357b68a2ac546164",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-26T21:59:30.032Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-25T21:05:47.537Z",
+            "requestEventId": 30067746578,
+            "requestedAt": "2026-08-26T20:48:46Z",
+            "reviewedAt": "2026-08-26T21:59:30.032Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "28allday/omasend-quattro",
+        "pluginIds": [
+          "nosignal.omasend"
+        ],
+        "commit": "86756d11594296c6f5226a284a16383e4f1cb705",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T23:11:42.886Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T06:15:11.152Z",
+        "requestEventId": 30717430760,
+        "requestedAt": "2026-09-07T22:56:05Z",
+        "reviewedAt": "2026-09-07T23:11:42.886Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/juancasanueva/omarchy-plugin-manager",
