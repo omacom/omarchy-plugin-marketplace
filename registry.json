@@ -134191,6 +134191,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Saikomantisu/omarchy-todos",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:45:42.584Z",
+      "listingValidatedCommit": "78bec90596520ebd4f7f2ad559d6934a8a926b4e",
+      "listingValidatedAt": "2026-09-07T10:45:42.584Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "saikomantisu/omarchy-todos",
+        "pluginIds": [
+          "io.github.saikomantisu.todos"
+        ],
+        "commit": "78bec90596520ebd4f7f2ad559d6934a8a926b4e",
+        "checkedAt": "2026-09-07T10:45:42.501Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.saikomantisu.todos": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
