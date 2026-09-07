@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T23:44:12.258Z",
+  "generatedAt": "2026-09-07T23:47:26.099Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -141706,6 +141706,56 @@
       "upstreamValidatedAt": "2026-09-07T23:44:12.258Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "1c0374b91fb78eb3a166f29338a0ea1f6e873b8dd267d77b4c170ce15ce4af87",
+      "status": "Available"
+    },
+    {
+      "id": "io.github.beijingrong.red-chamber-petals",
+      "name": "Red Chamber Petals",
+      "description": "Gentle falling chrysanthemum petals for opt-in Omarchy themes, designed for Dream of the Red Chamber.",
+      "author": "beijingrong",
+      "version": "1.0.0",
+      "repo": "https://github.com/beijingrong/omarchy-dream-of-the-red-chamber-petals",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "af0e535e995af41f3dc17c640dbf46b273125570",
+      "verificationCheckedAt": "2026-09-07T23:47:25.587Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:47:25.660Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/beijingrong/omarchy-dream-of-the-red-chamber-petals.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Appearance",
+      "tags": [
+        "hyprland",
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-07T16:08:24Z",
+      "repositoryRelease": {
+        "tag": "v1.0.0",
+        "url": "https://github.com/beijingrong/omarchy-dream-of-the-red-chamber-petals/releases/tag/v1.0.0",
+        "publishedAt": "2026-09-07T16:08:51Z"
+      },
+      "accent": "cyan",
+      "initials": "RC",
+      "kind": "Service",
+      "listingValidatedCommit": "af0e535e995af41f3dc17c640dbf46b273125570",
+      "listingValidatedAt": "2026-09-07T23:47:25.660Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "af0e535e995af41f3dc17c640dbf46b273125570",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-07T23:47:26.099Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "af0e535e995af41f3dc17c640dbf46b273125570",
+      "upstreamValidatedAt": "2026-09-07T23:47:26.099Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "bcfcb857ad9f8be25d514dce97b73ea70cb3144a0db15f16df3ba20569667dc7",
       "status": "Available"
     },
     {

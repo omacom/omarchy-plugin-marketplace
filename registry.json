@@ -136335,6 +136335,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/beijingrong/omarchy-dream-of-the-red-chamber-petals",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:47:25.660Z",
+      "listingValidatedCommit": "af0e535e995af41f3dc17c640dbf46b273125570",
+      "listingValidatedAt": "2026-09-07T23:47:25.660Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "beijingrong/omarchy-dream-of-the-red-chamber-petals",
+        "pluginIds": [
+          "io.github.beijingrong.red-chamber-petals"
+        ],
+        "commit": "af0e535e995af41f3dc17c640dbf46b273125570",
+        "checkedAt": "2026-09-07T23:47:25.587Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.beijingrong.red-chamber-petals": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
