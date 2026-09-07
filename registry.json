@@ -135960,6 +135960,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jankeesvw/omarchy-nag",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:16:57.808Z",
+      "listingValidatedCommit": "fdf731495eb1c52151cb662f3b137b05080ae9ee",
+      "listingValidatedAt": "2026-09-07T23:16:57.808Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jankeesvw/omarchy-nag",
+        "pluginIds": [
+          "jankeesvw.nag"
+        ],
+        "commit": "fdf731495eb1c52151cb662f3b137b05080ae9ee",
+        "checkedAt": "2026-09-07T23:16:57.740Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jankeesvw/omarchy-nag",
+        "pluginIds": [
+          "jankeesvw.nag"
+        ],
+        "commit": "fdf731495eb1c52151cb662f3b137b05080ae9ee",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T23:16:57.740Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T08:49:04.872Z",
+        "requestEventId": 30717472599,
+        "requestedAt": "2026-09-07T22:57:31Z",
+        "reviewedAt": "2026-09-07T23:16:57.740Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jankeesvw.nag": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
