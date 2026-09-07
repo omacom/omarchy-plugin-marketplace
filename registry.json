@@ -134925,6 +134925,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/data-goblin/fileblade-skills",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T21:56:22.795Z",
+      "listingValidatedCommit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
+      "listingValidatedAt": "2026-09-07T21:56:22.795Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "data-goblin/fileblade-skills",
+        "pluginIds": [
+          "data-goblin.fileblade-skills"
+        ],
+        "commit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
+        "checkedAt": "2026-09-07T21:56:22.743Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "data-goblin.fileblade-skills": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
