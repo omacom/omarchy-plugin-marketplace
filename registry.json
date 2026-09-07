@@ -101617,8 +101617,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T01:09:36.417Z",
-      "listingValidatedCommit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
-      "listingValidatedAt": "2026-08-31T01:09:36.417Z",
+      "listingValidatedCommit": "06d53b731915c1032934973d5ec21bc15a1206a4",
+      "listingValidatedAt": "2026-09-07T22:54:09.781Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -101627,35 +101627,14 @@
         "pluginIds": [
           "knappkevin.terminal-wallpaper"
         ],
-        "commit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
-        "checkedAt": "2026-08-31T01:09:36.368Z",
+        "commit": "06d53b731915c1032934973d5ec21bc15a1206a4",
+        "checkedAt": "2026-09-07T22:54:09.781Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "knappkevin/terminal-wallpaper",
-        "pluginIds": [
-          "knappkevin.terminal-wallpaper"
-        ],
-        "commit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-31T01:09:36.368Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-31T01:03:34.326Z",
-        "requestEventId": 30251832881,
-        "requestedAt": "2026-08-31T01:08:54Z",
-        "reviewedAt": "2026-08-31T01:09:36.368Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "knappkevin.terminal-wallpaper": {
@@ -101665,7 +101644,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "knappkevin/terminal-wallpaper",
+        "pluginIds": [
+          "knappkevin.terminal-wallpaper"
+        ],
+        "commit": "06d53b731915c1032934973d5ec21bc15a1206a4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:54:09.781Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T00:37:17.963Z",
+        "requestEventId": 30717140901,
+        "requestedAt": "2026-09-07T22:46:34Z",
+        "reviewedAt": "2026-09-07T22:54:09.781Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
+          "validatedAt": "2026-08-31T01:09:36.417Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T22:54:09.781Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "knappkevin/terminal-wallpaper",
+            "pluginIds": [
+              "knappkevin.terminal-wallpaper"
+            ],
+            "commit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
+            "checkedAt": "2026-08-31T01:09:36.368Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "knappkevin/terminal-wallpaper",
+            "pluginIds": [
+              "knappkevin.terminal-wallpaper"
+            ],
+            "commit": "6ae51577936f87526a714142fc2e44a5e92c88d5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-31T01:09:36.368Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T01:03:34.326Z",
+            "requestEventId": 30251832881,
+            "requestedAt": "2026-08-31T01:08:54Z",
+            "reviewedAt": "2026-08-31T01:09:36.368Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/esemczak/omarchy-theme-modes",
