@@ -135307,6 +135307,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brinksmatt/omarchy-worktimer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:33:26.380Z",
+      "listingValidatedCommit": "b03ec303cc1d439ca464e4b722f1d65e2e1a220d",
+      "listingValidatedAt": "2026-09-07T22:33:26.380Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brinksmatt/omarchy-worktimer",
+        "pluginIds": [
+          "io.github.brinksmatt.worktimer"
+        ],
+        "commit": "b03ec303cc1d439ca464e4b722f1d65e2e1a220d",
+        "checkedAt": "2026-09-07T22:33:26.304Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.brinksmatt.worktimer": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
