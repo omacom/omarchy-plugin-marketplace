@@ -133674,6 +133674,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CrsMthw/omageddon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T09:48:31.106Z",
+      "listingValidatedCommit": "d4f5a134411c7745e6e06d5f925b4405902bed91",
+      "listingValidatedAt": "2026-09-07T09:48:31.106Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crsmthw/omageddon",
+        "pluginIds": [
+          "io.github.crsmthw.omageddon"
+        ],
+        "commit": "d4f5a134411c7745e6e06d5f925b4405902bed91",
+        "checkedAt": "2026-09-07T09:48:31.044Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crsmthw/omageddon",
+        "pluginIds": [
+          "io.github.crsmthw.omageddon"
+        ],
+        "commit": "d4f5a134411c7745e6e06d5f925b4405902bed91",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T09:48:31.044Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T02:40:13.410Z",
+        "requestEventId": 30681583320,
+        "requestedAt": "2026-09-07T09:47:37Z",
+        "reviewedAt": "2026-09-07T09:48:31.044Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.crsmthw.omageddon": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
