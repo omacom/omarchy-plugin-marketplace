@@ -134537,6 +134537,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aesko/omarchy-ichi",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T11:22:17.027Z",
+      "listingValidatedCommit": "f77af93108304a574446f5908d9cf5b814b0a1e4",
+      "listingValidatedAt": "2026-09-07T11:22:17.027Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aesko/omarchy-ichi",
+        "pluginIds": [
+          "io.github.aesko.ichi"
+        ],
+        "commit": "f77af93108304a574446f5908d9cf5b814b0a1e4",
+        "checkedAt": "2026-09-07T11:22:16.956Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aesko/omarchy-ichi",
+        "pluginIds": [
+          "io.github.aesko.ichi"
+        ],
+        "commit": "f77af93108304a574446f5908d9cf5b814b0a1e4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T11:22:16.956Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T19:58:44.615Z",
+        "requestEventId": 30686849107,
+        "requestedAt": "2026-09-07T11:20:04Z",
+        "reviewedAt": "2026-09-07T11:22:16.956Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.aesko.ichi": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
