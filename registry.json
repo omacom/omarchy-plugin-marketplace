@@ -91476,8 +91476,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T18:12:09.982Z",
-      "listingValidatedCommit": "afd5c0335cbf1d97f73594b6b40157339e246b1c",
-      "listingValidatedAt": "2026-08-30T08:24:03.493Z",
+      "listingValidatedCommit": "3d2a95eaea3a629d3327e84549fc42d24c603de5",
+      "listingValidatedAt": "2026-09-07T08:33:10.088Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -91486,8 +91486,8 @@
         "pluginIds": [
           "io.github.orthodox.omarchy-chord-expander"
         ],
-        "commit": "afd5c0335cbf1d97f73594b6b40157339e246b1c",
-        "checkedAt": "2026-08-30T08:24:03.493Z",
+        "commit": "3d2a95eaea3a629d3327e84549fc42d24c603de5",
+        "checkedAt": "2026-09-07T08:33:10.088Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -91519,6 +91519,26 @@
             ],
             "commit": "1d17281571363619d7e221686ef13be680138df7",
             "checkedAt": "2026-08-29T18:12:09.924Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "afd5c0335cbf1d97f73594b6b40157339e246b1c",
+          "validatedAt": "2026-08-30T08:24:03.493Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T08:33:10.088Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "orthodox/omarchy-chord-expander",
+            "pluginIds": [
+              "io.github.orthodox.omarchy-chord-expander"
+            ],
+            "commit": "afd5c0335cbf1d97f73594b6b40157339e246b1c",
+            "checkedAt": "2026-08-30T08:24:03.493Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
