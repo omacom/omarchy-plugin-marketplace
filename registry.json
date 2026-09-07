@@ -135496,6 +135496,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/clickety-clacks/vimarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:45:02.653Z",
+      "listingValidatedCommit": "d2a0880993ee01ab91195cc7ed162c983bd6a9d0",
+      "listingValidatedAt": "2026-09-07T22:45:02.653Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "clickety-clacks/vimarchy",
+        "pluginIds": [
+          "vimarchy"
+        ],
+        "commit": "d2a0880993ee01ab91195cc7ed162c983bd6a9d0",
+        "checkedAt": "2026-09-07T22:45:02.577Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "vimarchy": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
