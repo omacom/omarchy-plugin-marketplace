@@ -134447,6 +134447,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/evindor/keystroke-timer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T11:04:43.113Z",
+      "listingValidatedCommit": "f0e456dd4251f5a5ebeee5b8891c87917937fadd",
+      "listingValidatedAt": "2026-09-07T11:04:43.113Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "evindor/keystroke-timer",
+        "pluginIds": [
+          "io.github.evindor.keystroke-timer"
+        ],
+        "commit": "f0e456dd4251f5a5ebeee5b8891c87917937fadd",
+        "checkedAt": "2026-09-07T11:04:43.039Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "evindor/keystroke-timer",
+        "pluginIds": [
+          "io.github.evindor.keystroke-timer"
+        ],
+        "commit": "f0e456dd4251f5a5ebeee5b8891c87917937fadd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T11:04:43.039Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T16:32:18.437Z",
+        "requestEventId": 30685830470,
+        "requestedAt": "2026-09-07T11:02:01Z",
+        "reviewedAt": "2026-09-07T11:04:43.039Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.evindor.keystroke-timer": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
