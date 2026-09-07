@@ -134413,6 +134413,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdil/omarchy-omarank",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T11:02:15.620Z",
+      "listingValidatedCommit": "6cca69e816555ff2046619f89d3787e315f2b150",
+      "listingValidatedAt": "2026-09-07T11:02:15.620Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdil/omarchy-omarank",
+        "pluginIds": [
+          "ozdil.omarank"
+        ],
+        "commit": "6cca69e816555ff2046619f89d3787e315f2b150",
+        "checkedAt": "2026-09-07T11:02:15.557Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ozdil.omarank": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
