@@ -2661,8 +2661,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-12",
       "listedAt": "2026-08-12T13:13:51.439Z",
-      "listingValidatedCommit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
-      "listingValidatedAt": "2026-08-21T21:33:58.094Z",
+      "listingValidatedCommit": "bfe58e5546d6a315f870a022473ce07fca300cf0",
+      "listingValidatedAt": "2026-09-07T22:58:55.644Z",
       "listingValidatedBranch": "main",
       "plugins": {
         "ilyazar.btop": {
@@ -2677,43 +2677,19 @@
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
         "version": "3",
-        "repository": "ilyazar/btop-quattro-plugin",
+        "repository": "omarchy-qol/omarchy-btop-activity",
         "pluginIds": [
           "ilyazar.btop"
         ],
-        "commit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
-        "checkedAt": "2026-08-21T21:33:58.094Z",
+        "commit": "bfe58e5546d6a315f870a022473ce07fca300cf0",
+        "checkedAt": "2026-09-07T22:58:55.644Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege",
-          "package-manager",
-          "installer"
+          "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ilyazar/btop-quattro-plugin",
-        "pluginIds": [
-          "ilyazar.btop"
-        ],
-        "commit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-21T21:33:58.094Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-21T20:48:20.850Z",
-        "requestEventId": 29829264871,
-        "requestedAt": "2026-08-21T21:33:45Z",
-        "reviewedAt": "2026-08-21T21:33:58.094Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -2721,8 +2697,77 @@
           "validatedAt": "2026-08-12T13:13:51.439Z",
           "branch": "main",
           "supersededAt": "2026-08-21T21:33:58.094Z"
+        },
+        {
+          "commit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
+          "validatedAt": "2026-08-21T21:33:58.094Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T22:58:55.644Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ilyazar/btop-quattro-plugin",
+            "pluginIds": [
+              "ilyazar.btop"
+            ],
+            "commit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
+            "checkedAt": "2026-08-21T21:33:58.094Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ilyazar/btop-quattro-plugin",
+            "pluginIds": [
+              "ilyazar.btop"
+            ],
+            "commit": "452e4aee6d1839c8cf125de756e4906d10e27a36",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-21T21:33:58.094Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-21T20:48:20.850Z",
+            "requestEventId": 29829264871,
+            "requestedAt": "2026-08-21T21:33:45Z",
+            "reviewedAt": "2026-08-21T21:33:58.094Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "omarchy-qol/omarchy-btop-activity",
+        "pluginIds": [
+          "ilyazar.btop"
+        ],
+        "commit": "bfe58e5546d6a315f870a022473ce07fca300cf0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T22:58:55.644Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T03:34:54.504Z",
+        "requestEventId": 30717144732,
+        "requestedAt": "2026-09-07T22:46:42Z",
+        "reviewedAt": "2026-09-07T22:58:55.644Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/SaifOmar/WorkspaceIcons",
