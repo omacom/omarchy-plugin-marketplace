@@ -133854,6 +133854,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tonybeal40/fieldknown-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:05:24.602Z",
+      "listingValidatedCommit": "7eccd69c39db89341d7678708ac27e28de1e6905",
+      "listingValidatedAt": "2026-09-07T10:05:24.602Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tonybeal40/fieldknown-omarchy",
+        "pluginIds": [
+          "io.github.tonybeal40.fieldknown"
+        ],
+        "commit": "7eccd69c39db89341d7678708ac27e28de1e6905",
+        "checkedAt": "2026-09-07T10:05:24.536Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tonybeal40.fieldknown": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
