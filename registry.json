@@ -134503,6 +134503,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MADS0LADEN/omarchy-multi-output",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T11:19:08.856Z",
+      "listingValidatedCommit": "05fcc22f8ee4d1858891fce819758a71977ba8f2",
+      "listingValidatedAt": "2026-09-07T11:19:08.856Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mads0laden/omarchy-multi-output",
+        "pluginIds": [
+          "omarchy-multi-output"
+        ],
+        "commit": "05fcc22f8ee4d1858891fce819758a71977ba8f2",
+        "checkedAt": "2026-09-07T11:19:08.777Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy-multi-output": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
