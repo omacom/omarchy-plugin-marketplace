@@ -136145,6 +136145,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/perfektnacht/glow-studio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T23:27:15.150Z",
+      "listingValidatedCommit": "4c2b1582986e85d34dc5b64561e2ac99ec3b1f3d",
+      "listingValidatedAt": "2026-09-07T23:27:15.150Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "perfektnacht/glow-studio",
+        "pluginIds": [
+          "perfektnacht.glow-studio"
+        ],
+        "commit": "4c2b1582986e85d34dc5b64561e2ac99ec3b1f3d",
+        "checkedAt": "2026-09-07T23:27:15.081Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "perfektnacht.glow-studio": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "bar",
+            "kids"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
