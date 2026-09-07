@@ -134959,6 +134959,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ricardosuman/omarchy-pretty-screenshot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:05:24.093Z",
+      "listingValidatedCommit": "5fc021c11173cc37796def3fd6d74b4abc395aed",
+      "listingValidatedAt": "2026-09-07T22:05:24.093Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ricardosuman/omarchy-pretty-screenshot",
+        "pluginIds": [
+          "ricardosuman.pretty-screenshot"
+        ],
+        "commit": "5fc021c11173cc37796def3fd6d74b4abc395aed",
+        "checkedAt": "2026-09-07T22:05:24.020Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ricardosuman.pretty-screenshot": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
