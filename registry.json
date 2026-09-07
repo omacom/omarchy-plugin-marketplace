@@ -124218,8 +124218,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T20:44:24.983Z",
-      "listingValidatedCommit": "72dc9e3e1e9a5fbb4a144eb03d2a75ec7e7c5456",
-      "listingValidatedAt": "2026-09-04T20:44:24.983Z",
+      "listingValidatedCommit": "b5966d94b9746f9513049b5fe48b0995ae97f489",
+      "listingValidatedAt": "2026-09-07T08:10:14.532Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -124228,8 +124228,8 @@
         "pluginIds": [
           "dansmith888.bandwidth"
         ],
-        "commit": "72dc9e3e1e9a5fbb4a144eb03d2a75ec7e7c5456",
-        "checkedAt": "2026-09-04T20:44:24.915Z",
+        "commit": "b5966d94b9746f9513049b5fe48b0995ae97f489",
+        "checkedAt": "2026-09-07T08:10:14.532Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -124245,7 +124245,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "72dc9e3e1e9a5fbb4a144eb03d2a75ec7e7c5456",
+          "validatedAt": "2026-09-04T20:44:24.983Z",
+          "branch": "main",
+          "supersededAt": "2026-09-07T08:10:14.532Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dansmith888/omarchy-bandwidth",
+            "pluginIds": [
+              "dansmith888.bandwidth"
+            ],
+            "commit": "72dc9e3e1e9a5fbb4a144eb03d2a75ec7e7c5456",
+            "checkedAt": "2026-09-04T20:44:24.915Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/prdlk/omarchy-beeper",
