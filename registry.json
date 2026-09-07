@@ -133980,6 +133980,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ollywarren/prompt-guide",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T10:26:54.529Z",
+      "listingValidatedCommit": "5e469ca2b69ff7de6eec7942f6ac8152ba7f9f80",
+      "listingValidatedAt": "2026-09-07T10:26:54.529Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ollywarren/prompt-guide",
+        "pluginIds": [
+          "ollywarren.prompt-guide"
+        ],
+        "commit": "5e469ca2b69ff7de6eec7942f6ac8152ba7f9f80",
+        "checkedAt": "2026-09-07T10:26:54.450Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ollywarren/prompt-guide",
+        "pluginIds": [
+          "ollywarren.prompt-guide"
+        ],
+        "commit": "5e469ca2b69ff7de6eec7942f6ac8152ba7f9f80",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-07T10:26:54.450Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T11:32:02.230Z",
+        "requestEventId": 30683776390,
+        "requestedAt": "2026-09-07T10:24:30Z",
+        "reviewedAt": "2026-09-07T10:26:54.450Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ollywarren.prompt-guide": {
+          "category": "Widgets",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
