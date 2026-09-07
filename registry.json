@@ -135119,6 +135119,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paudelsamir/minimize-pill",
+      "type": "plugin-source",
+      "addedAt": "2026-09-07",
+      "listedAt": "2026-09-07T22:17:36.837Z",
+      "listingValidatedCommit": "5e009e85401abca13ca138677475ef8efd55f9b3",
+      "listingValidatedAt": "2026-09-07T22:17:36.837Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paudelsamir/minimize-pill",
+        "pluginIds": [
+          "paudelsamir.minimize-pill"
+        ],
+        "commit": "5e009e85401abca13ca138677475ef8efd55f9b3",
+        "checkedAt": "2026-09-07T22:17:36.763Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "paudelsamir.minimize-pill": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
