@@ -139883,6 +139883,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cfaulkingham/quickmap",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T12:43:15.610Z",
+      "listingValidatedCommit": "4a8135851706c06db1e21f539f15b0dd64f85685",
+      "listingValidatedAt": "2026-09-08T12:43:15.610Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cfaulkingham/quickmap",
+        "pluginIds": [
+          "io.github.cfaulkingham.quickmap"
+        ],
+        "commit": "4a8135851706c06db1e21f539f15b0dd64f85685",
+        "checkedAt": "2026-09-08T12:43:15.555Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cfaulkingham.quickmap": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
