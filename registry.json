@@ -137599,6 +137599,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/i12bp8/fmhy-deck",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:22:37.742Z",
+      "listingValidatedCommit": "49ad7da20ea77b14cf316d0c3098e54662567899",
+      "listingValidatedAt": "2026-09-08T10:22:37.742Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "i12bp8/fmhy-deck",
+        "pluginIds": [
+          "io.github.i12bp8.fmhy-deck"
+        ],
+        "commit": "49ad7da20ea77b14cf316d0c3098e54662567899",
+        "checkedAt": "2026-09-08T10:22:37.668Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.i12bp8.fmhy-deck": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
