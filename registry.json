@@ -137544,6 +137544,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LFDM-85/omarchy-vox-portrait",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:19:29.199Z",
+      "listingValidatedCommit": "4a9e0e46f4d8bf89357a99720d3c979c934a99e7",
+      "listingValidatedAt": "2026-09-08T10:19:29.199Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lfdm-85/omarchy-vox-portrait",
+        "pluginIds": [
+          "luismelo.vox-portrait"
+        ],
+        "commit": "4a9e0e46f4d8bf89357a99720d3c979c934a99e7",
+        "checkedAt": "2026-09-08T10:19:29.124Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lfdm-85/omarchy-vox-portrait",
+        "pluginIds": [
+          "luismelo.vox-portrait"
+        ],
+        "commit": "4a9e0e46f4d8bf89357a99720d3c979c934a99e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T10:19:29.124Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T09:49:57.934Z",
+        "requestEventId": 30746935244,
+        "requestedAt": "2026-09-08T10:18:34Z",
+        "reviewedAt": "2026-09-08T10:19:29.124Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "luismelo.vox-portrait": {
+          "category": "Other",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
