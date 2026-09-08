@@ -27985,8 +27985,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T04:51:03.374Z",
-      "listingValidatedCommit": "2d212a1da0cfd0c709498e09a7754f948b1849ea",
-      "listingValidatedAt": "2026-08-31T13:22:07.570Z",
+      "listingValidatedCommit": "f46384be00f030e67d6be10d5e60bf6a20a8001d",
+      "listingValidatedAt": "2026-09-08T09:06:25.583Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -27995,8 +27995,8 @@
         "pluginIds": [
           "wian47.removable-drives"
         ],
-        "commit": "2d212a1da0cfd0c709498e09a7754f948b1849ea",
-        "checkedAt": "2026-08-31T13:22:07.570Z",
+        "commit": "f46384be00f030e67d6be10d5e60bf6a20a8001d",
+        "checkedAt": "2026-09-08T09:06:25.583Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -28091,6 +28091,26 @@
             ],
             "commit": "4a5d850de763dae2dd7e0581dccda744a157993c",
             "checkedAt": "2026-08-26T20:58:45.015Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "2d212a1da0cfd0c709498e09a7754f948b1849ea",
+          "validatedAt": "2026-08-31T13:22:07.570Z",
+          "branch": "main",
+          "supersededAt": "2026-09-08T09:06:25.583Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wian47/omarchy-removable-drives",
+            "pluginIds": [
+              "wian47.removable-drives"
+            ],
+            "commit": "2d212a1da0cfd0c709498e09a7754f948b1849ea",
+            "checkedAt": "2026-08-31T13:22:07.570Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
