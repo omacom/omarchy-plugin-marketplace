@@ -136920,6 +136920,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ThatPikaga/AuraBind",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T07:42:06.343Z",
+      "listingValidatedCommit": "f7505336259be6fc397d3e6e575ddd878023860e",
+      "listingValidatedAt": "2026-09-08T07:42:06.343Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thatpikaga/aurabind",
+        "pluginIds": [
+          "thatpikaga.aurabind"
+        ],
+        "commit": "f7505336259be6fc397d3e6e575ddd878023860e",
+        "checkedAt": "2026-09-08T07:42:06.290Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thatpikaga/aurabind",
+        "pluginIds": [
+          "thatpikaga.aurabind"
+        ],
+        "commit": "f7505336259be6fc397d3e6e575ddd878023860e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T07:42:06.290Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T10:47:17.477Z",
+        "requestEventId": 30737537128,
+        "requestedAt": "2026-09-08T07:41:13Z",
+        "reviewedAt": "2026-09-08T07:42:06.290Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "thatpikaga.aurabind": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
