@@ -143477,6 +143477,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/atoslins/omarchy-plugin-dualsense",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T18:37:09.421Z",
+      "listingValidatedCommit": "cff565986035fe1aa1adf6e39af30bfec0c8b9a5",
+      "listingValidatedAt": "2026-09-08T18:37:09.421Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "atoslins/omarchy-plugin-dualsense",
+        "pluginIds": [
+          "atoslins.dualsense"
+        ],
+        "commit": "cff565986035fe1aa1adf6e39af30bfec0c8b9a5",
+        "checkedAt": "2026-09-08T18:37:09.354Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "atoslins/omarchy-plugin-dualsense",
+        "pluginIds": [
+          "atoslins.dualsense"
+        ],
+        "commit": "cff565986035fe1aa1adf6e39af30bfec0c8b9a5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T18:37:09.354Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T15:02:44.163Z",
+        "requestEventId": 30777037092,
+        "requestedAt": "2026-09-08T18:35:33Z",
+        "reviewedAt": "2026-09-08T18:37:09.354Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "atoslins.dualsense": {
+          "category": "Hardware",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
