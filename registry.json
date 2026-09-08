@@ -142604,6 +142604,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chalkers/omarchy-read-aloud",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:18:59.201Z",
+      "listingValidatedCommit": "47af86d54cecf168e784691eec7490af536b1b50",
+      "listingValidatedAt": "2026-09-08T17:18:59.201Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chalkers/omarchy-read-aloud",
+        "pluginIds": [
+          "chalkers.read-aloud"
+        ],
+        "commit": "47af86d54cecf168e784691eec7490af536b1b50",
+        "checkedAt": "2026-09-08T17:18:59.121Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "chalkers/omarchy-read-aloud",
+        "pluginIds": [
+          "chalkers.read-aloud"
+        ],
+        "commit": "47af86d54cecf168e784691eec7490af536b1b50",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T17:18:59.121Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T22:57:31.005Z",
+        "requestEventId": 30772800105,
+        "requestedAt": "2026-09-08T17:17:31Z",
+        "reviewedAt": "2026-09-08T17:18:59.122Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "chalkers.read-aloud": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
