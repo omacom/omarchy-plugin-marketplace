@@ -141321,6 +141321,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/samara-hub-ro/samara-folder-shelf",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T15:01:05.148Z",
+      "listingValidatedCommit": "81e4e130f4e2602ec41a42f3b91fd5df840b874e",
+      "listingValidatedAt": "2026-09-08T15:01:05.148Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "samara-hub-ro/samara-folder-shelf",
+        "pluginIds": [
+          "samara-hub-ro.folder-shelf"
+        ],
+        "commit": "81e4e130f4e2602ec41a42f3b91fd5df840b874e",
+        "checkedAt": "2026-09-08T15:01:05.069Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "samara-hub-ro.folder-shelf": {
+          "category": "Widgets",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
