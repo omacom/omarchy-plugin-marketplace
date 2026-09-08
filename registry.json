@@ -137072,6 +137072,42 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/harryxu/omarchy-dropspace",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T08:19:34.726Z",
+      "listingValidatedCommit": "a2dfdc72e604a3d818c033cb6c070b4c8b3a85ce",
+      "listingValidatedAt": "2026-09-08T08:19:34.726Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harryxu/omarchy-dropspace",
+        "pluginIds": [
+          "harryxu.dropspace"
+        ],
+        "commit": "a2dfdc72e604a3d818c033cb6c070b4c8b3a85ce",
+        "checkedAt": "2026-09-08T08:19:34.667Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "harryxu.dropspace": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
