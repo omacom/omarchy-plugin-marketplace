@@ -144391,6 +144391,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/HANCORE-linux/OmaQ",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T21:11:48.824Z",
+      "listingValidatedCommit": "33f3b8d5b84b34e7a96dbd373286487de9afedd3",
+      "listingValidatedAt": "2026-09-08T21:11:48.824Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hancore-linux/omaq",
+        "pluginIds": [
+          "hancore.omaq"
+        ],
+        "commit": "33f3b8d5b84b34e7a96dbd373286487de9afedd3",
+        "checkedAt": "2026-09-08T21:11:48.750Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hancore-linux/omaq",
+        "pluginIds": [
+          "hancore.omaq"
+        ],
+        "commit": "33f3b8d5b84b34e7a96dbd373286487de9afedd3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T21:11:48.750Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T21:03:36.191Z",
+        "requestEventId": 30785162327,
+        "requestedAt": "2026-09-08T21:10:37Z",
+        "reviewedAt": "2026-09-08T21:11:48.750Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "hancore.omaq": {
+          "category": "Other",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
