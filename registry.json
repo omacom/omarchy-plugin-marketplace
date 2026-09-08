@@ -144546,6 +144546,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hikari112/omarchy-tts",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T22:01:22.276Z",
+      "listingValidatedCommit": "f7d4df81f09a9a4a9d94790fbe5ec5a3dd7ca1a3",
+      "listingValidatedAt": "2026-09-08T22:01:22.276Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hikari112/omarchy-tts",
+        "pluginIds": [
+          "io.github.hikari112.tts"
+        ],
+        "commit": "f7d4df81f09a9a4a9d94790fbe5ec5a3dd7ca1a3",
+        "checkedAt": "2026-09-08T22:01:22.199Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hikari112/omarchy-tts",
+        "pluginIds": [
+          "io.github.hikari112.tts"
+        ],
+        "commit": "f7d4df81f09a9a4a9d94790fbe5ec5a3dd7ca1a3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T22:01:22.199Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T03:56:23.022Z",
+        "requestEventId": 30787490975,
+        "requestedAt": "2026-09-08T22:00:17Z",
+        "reviewedAt": "2026-09-08T22:01:22.199Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hikari112.tts": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
