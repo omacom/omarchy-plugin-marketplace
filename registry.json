@@ -144727,6 +144727,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mbot11/omarchy-hermes-deck",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T22:14:27.617Z",
+      "listingValidatedCommit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+      "listingValidatedAt": "2026-09-08T22:14:27.617Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mbot11/omarchy-hermes-deck",
+        "pluginIds": [
+          "io.github.mbot11.hermes-deck"
+        ],
+        "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+        "checkedAt": "2026-09-08T22:14:27.555Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mbot11/omarchy-hermes-deck",
+        "pluginIds": [
+          "io.github.mbot11.hermes-deck"
+        ],
+        "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T22:14:27.555Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T19:40:51.177Z",
+        "requestEventId": 30788045458,
+        "requestedAt": "2026-09-08T22:13:29Z",
+        "reviewedAt": "2026-09-08T22:14:27.555Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mbot11.hermes-deck": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
