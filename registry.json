@@ -137959,6 +137959,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/omarchy-foot-bookmarks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:49:05.907Z",
+      "listingValidatedCommit": "68164242a97b3bd2860ad316ebd24c8ecc3b9d93",
+      "listingValidatedAt": "2026-09-08T10:49:05.907Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/omarchy-foot-bookmarks",
+        "pluginIds": [
+          "bbachmann.foot-bookmarks"
+        ],
+        "commit": "68164242a97b3bd2860ad316ebd24c8ecc3b9d93",
+        "checkedAt": "2026-09-08T10:49:05.841Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bbachmann.foot-bookmarks": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
