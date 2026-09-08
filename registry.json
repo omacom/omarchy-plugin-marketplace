@@ -141421,6 +141421,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sorena100/remminarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T15:14:00.407Z",
+      "listingValidatedCommit": "bc3b5d2a7e84f6e8d80de1d19db6e1db667a6a57",
+      "listingValidatedAt": "2026-09-08T15:14:00.407Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sorena100/remminarchy",
+        "pluginIds": [
+          "io.github.sorena100.remminarchy"
+        ],
+        "commit": "bc3b5d2a7e84f6e8d80de1d19db6e1db667a6a57",
+        "checkedAt": "2026-09-08T15:14:00.331Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sorena100/remminarchy",
+        "pluginIds": [
+          "io.github.sorena100.remminarchy"
+        ],
+        "commit": "bc3b5d2a7e84f6e8d80de1d19db6e1db667a6a57",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T15:14:00.331Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T07:54:25.415Z",
+        "requestEventId": 30765064975,
+        "requestedAt": "2026-09-08T15:09:24Z",
+        "reviewedAt": "2026-09-08T15:14:00.331Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sorena100.remminarchy": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
