@@ -142513,6 +142513,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Fluffet/omarchy-advanced-displays",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:12:43.100Z",
+      "listingValidatedCommit": "046112ab39b1a820134e92b8c1440e0426e32e94",
+      "listingValidatedAt": "2026-09-08T17:12:43.100Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fluffet/omarchy-advanced-displays",
+        "pluginIds": [
+          "io.github.fluffet.display"
+        ],
+        "commit": "046112ab39b1a820134e92b8c1440e0426e32e94",
+        "checkedAt": "2026-09-08T17:12:43.026Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.fluffet.display": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
