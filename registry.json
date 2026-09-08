@@ -142915,6 +142915,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/blazejkapala/omarchy-bananet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:48:44.804Z",
+      "listingValidatedCommit": "47048e1dcc1eacadbf0d94af3a9107a7e584e491",
+      "listingValidatedAt": "2026-09-08T17:48:44.804Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "blazejkapala/omarchy-bananet",
+        "pluginIds": [
+          "banan.bananet"
+        ],
+        "commit": "47048e1dcc1eacadbf0d94af3a9107a7e584e491",
+        "checkedAt": "2026-09-08T17:48:44.737Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "blazejkapala/omarchy-bananet",
+        "pluginIds": [
+          "banan.bananet"
+        ],
+        "commit": "47048e1dcc1eacadbf0d94af3a9107a7e584e491",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T17:48:44.737Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T10:57:03.506Z",
+        "requestEventId": 30774360918,
+        "requestedAt": "2026-09-08T17:46:43Z",
+        "reviewedAt": "2026-09-08T17:48:44.737Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "banan.bananet": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
