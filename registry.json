@@ -138083,6 +138083,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-devquest",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:57:29.703Z",
+      "listingValidatedCommit": "dbb0926574b929542ae6fa3b1dda7a3c669e6d4d",
+      "listingValidatedAt": "2026-09-08T10:57:29.703Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-devquest",
+        "pluginIds": [
+          "harshith.devquest"
+        ],
+        "commit": "dbb0926574b929542ae6fa3b1dda7a3c669e6d4d",
+        "checkedAt": "2026-09-08T10:57:29.631Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "harshith.devquest": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
