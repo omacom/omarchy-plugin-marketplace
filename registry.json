@@ -139246,6 +139246,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Doghouse-Mike/omatasknotes",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T12:04:51.810Z",
+      "listingValidatedCommit": "84eb7b32d0cb60c753e2d0e5923e772bbef59057",
+      "listingValidatedAt": "2026-09-08T12:04:51.810Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "doghouse-mike/omatasknotes",
+        "pluginIds": [
+          "doghouse-mike.omatasknotes"
+        ],
+        "commit": "84eb7b32d0cb60c753e2d0e5923e772bbef59057",
+        "checkedAt": "2026-09-08T12:04:51.745Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "doghouse-mike/omatasknotes",
+        "pluginIds": [
+          "doghouse-mike.omatasknotes"
+        ],
+        "commit": "84eb7b32d0cb60c753e2d0e5923e772bbef59057",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T12:04:51.745Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T10:20:23.552Z",
+        "requestEventId": 30752514708,
+        "requestedAt": "2026-09-08T11:55:35Z",
+        "reviewedAt": "2026-09-08T12:04:51.745Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "doghouse-mike.omatasknotes": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
