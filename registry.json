@@ -117529,8 +117529,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T02:19:45.599Z",
-      "listingValidatedCommit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
-      "listingValidatedAt": "2026-09-04T14:19:24.045Z",
+      "listingValidatedCommit": "36c089bbfa27f4465dd03bd293c057470d0643ae",
+      "listingValidatedAt": "2026-09-08T09:08:43.976Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -117539,14 +117539,12 @@
         "pluginIds": [
           "pretty.omadeck"
         ],
-        "commit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
-        "checkedAt": "2026-09-04T14:19:24.045Z",
-        "outcome": "review-required",
+        "commit": "36c089bbfa27f4465dd03bd293c057470d0643ae",
+        "checkedAt": "2026-09-08T09:08:43.976Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "pretty.omadeck": {
@@ -117649,29 +117647,51 @@
             "reviewedAt": "2026-09-04T09:48:31.740Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
+          "validatedAt": "2026-09-04T14:19:24.045Z",
+          "branch": "main",
+          "supersededAt": "2026-09-08T09:08:43.976Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "theairick/omadeck",
+            "pluginIds": [
+              "pretty.omadeck"
+            ],
+            "commit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
+            "checkedAt": "2026-09-04T14:19:24.045Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "theairick/omadeck",
+            "pluginIds": [
+              "pretty.omadeck"
+            ],
+            "commit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T14:19:24.045Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T10:03:03.658Z",
+            "requestEventId": 30559709321,
+            "requestedAt": "2026-09-04T14:16:53Z",
+            "reviewedAt": "2026-09-04T14:19:24.045Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ],
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "theairick/omadeck",
-        "pluginIds": [
-          "pretty.omadeck"
-        ],
-        "commit": "36578b3ba701db709b69ac6dccb32e61d53e34a0",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T14:19:24.045Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T10:03:03.658Z",
-        "requestEventId": 30559709321,
-        "requestedAt": "2026-09-04T14:16:53Z",
-        "reviewedAt": "2026-09-04T14:19:24.045Z",
-        "reviewer": "HANCORE-linux"
-      }
+      ]
     },
     {
       "repo": "https://github.com/PixelatedContinuum/omarchy-sysmonitor",
