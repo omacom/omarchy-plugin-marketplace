@@ -145842,6 +145842,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/leonaffi-byte/switchboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T23:49:05.400Z",
+      "listingValidatedCommit": "3e08146ca809ec524da865e4816c24e81eed5c9e",
+      "listingValidatedAt": "2026-09-08T23:49:05.400Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "leonaffi-byte/switchboard",
+        "pluginIds": [
+          "leoom.switchboard"
+        ],
+        "commit": "3e08146ca809ec524da865e4816c24e81eed5c9e",
+        "checkedAt": "2026-09-08T23:49:05.336Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "leoom.switchboard": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
