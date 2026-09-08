@@ -141970,6 +141970,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ErikBurdett/omcursor-forge",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:18:24.365Z",
+      "listingValidatedCommit": "5ee497e35af1cd8c18b963f87627ed8eee4694d2",
+      "listingValidatedAt": "2026-09-08T16:18:24.365Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erikburdett/omcursor-forge",
+        "pluginIds": [
+          "io.github.erikburdett.cursorforge"
+        ],
+        "commit": "5ee497e35af1cd8c18b963f87627ed8eee4694d2",
+        "checkedAt": "2026-09-08T16:18:24.296Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "erikburdett/omcursor-forge",
+        "pluginIds": [
+          "io.github.erikburdett.cursorforge"
+        ],
+        "commit": "5ee497e35af1cd8c18b963f87627ed8eee4694d2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:18:24.296Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T21:17:57.386Z",
+        "requestEventId": 30769377674,
+        "requestedAt": "2026-09-08T16:17:08Z",
+        "reviewedAt": "2026-09-08T16:18:24.296Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.erikburdett.cursorforge": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
