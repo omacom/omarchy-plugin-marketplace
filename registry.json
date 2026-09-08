@@ -143780,6 +143780,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pepler1993-dot/omarchy-omen-rgb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T19:13:11.680Z",
+      "listingValidatedCommit": "753cffe4cf60f9b678b276570cd24ef7a7e0008b",
+      "listingValidatedAt": "2026-09-08T19:13:11.680Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pepler1993-dot/omarchy-omen-rgb",
+        "pluginIds": [
+          "kevin.omen-rgb"
+        ],
+        "commit": "753cffe4cf60f9b678b276570cd24ef7a7e0008b",
+        "checkedAt": "2026-09-08T19:13:11.613Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pepler1993-dot/omarchy-omen-rgb",
+        "pluginIds": [
+          "kevin.omen-rgb"
+        ],
+        "commit": "753cffe4cf60f9b678b276570cd24ef7a7e0008b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T19:13:11.613Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T16:45:27.058Z",
+        "requestEventId": 30779005823,
+        "requestedAt": "2026-09-08T19:11:57Z",
+        "reviewedAt": "2026-09-08T19:13:11.613Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kevin.omen-rgb": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
