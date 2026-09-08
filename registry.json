@@ -141482,6 +141482,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ninepointlabs/barkeep",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T15:17:05.039Z",
+      "listingValidatedCommit": "c71683e764aee36f3ad32bf14bf14bcc618cdfc2",
+      "listingValidatedAt": "2026-09-08T15:17:05.039Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ninepointlabs/barkeep",
+        "pluginIds": [
+          "ninepointlabs.barkeep"
+        ],
+        "commit": "c71683e764aee36f3ad32bf14bf14bcc618cdfc2",
+        "checkedAt": "2026-09-08T15:17:04.970Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ninepointlabs/barkeep",
+        "pluginIds": [
+          "ninepointlabs.barkeep"
+        ],
+        "commit": "c71683e764aee36f3ad32bf14bf14bcc618cdfc2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T15:17:04.970Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T00:31:19.402Z",
+        "requestEventId": 30765457939,
+        "requestedAt": "2026-09-08T15:15:16Z",
+        "reviewedAt": "2026-09-08T15:17:04.970Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ninepointlabs.barkeep": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
