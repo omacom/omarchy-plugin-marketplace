@@ -139915,6 +139915,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sam0110/oma-aux",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T12:45:48.843Z",
+      "listingValidatedCommit": "6c031bb4b0a6f1c21685347fa332b61373dd0e6d",
+      "listingValidatedAt": "2026-09-08T12:45:48.843Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sam0110/oma-aux",
+        "pluginIds": [
+          "sam0110.oma-aux"
+        ],
+        "commit": "6c031bb4b0a6f1c21685347fa332b61373dd0e6d",
+        "checkedAt": "2026-09-08T12:45:48.770Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sam0110.oma-aux": {
+          "category": "System",
+          "tags": [
+            "media",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
