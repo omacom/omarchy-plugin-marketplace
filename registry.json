@@ -137759,6 +137759,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yewhochen/voice-memo",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:34:16.746Z",
+      "listingValidatedCommit": "089a82e4533b5cf6ae32ca4c83ef45bf739d9d23",
+      "listingValidatedAt": "2026-09-08T10:34:16.746Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yewhochen/voice-memo",
+        "pluginIds": [
+          "yewho.voice-note"
+        ],
+        "commit": "089a82e4533b5cf6ae32ca4c83ef45bf739d9d23",
+        "checkedAt": "2026-09-08T10:34:16.694Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yewho.voice-note": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
