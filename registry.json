@@ -145880,6 +145880,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/mapleroyal/theme-come-true",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T23:53:04.146Z",
+      "listingValidatedCommit": "438ba923c8b0c11f84e16204a3e01d7c72f16142",
+      "listingValidatedAt": "2026-09-08T23:53:04.146Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mapleroyal/theme-come-true",
+        "pluginIds": [
+          "io.github.mapleroyal.theme-come-true"
+        ],
+        "commit": "438ba923c8b0c11f84e16204a3e01d7c72f16142",
+        "checkedAt": "2026-09-08T23:53:04.068Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mapleroyal.theme-come-true": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
