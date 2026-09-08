@@ -140208,6 +140208,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Realrandombacon/lavalamp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:09:16.486Z",
+      "listingValidatedCommit": "e05c960d1f11bc443e6e70f835b265c0136f5aff",
+      "listingValidatedAt": "2026-09-08T13:09:16.486Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "realrandombacon/lavalamp",
+        "pluginIds": [
+          "io.github.realrandombacon.lavalamp"
+        ],
+        "commit": "e05c960d1f11bc443e6e70f835b265c0136f5aff",
+        "checkedAt": "2026-09-08T13:09:16.430Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.realrandombacon.lavalamp": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
