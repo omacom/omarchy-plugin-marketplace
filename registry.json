@@ -136826,6 +136826,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cyprusad/voxtype-hal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T07:18:33.937Z",
+      "listingValidatedCommit": "d5b3309f5c723ffbe62f5273d9f93066581b819b",
+      "listingValidatedAt": "2026-09-08T07:18:33.937Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cyprusad/voxtype-hal",
+        "pluginIds": [
+          "io.github.cyprusad.vox-hal"
+        ],
+        "commit": "d5b3309f5c723ffbe62f5273d9f93066581b819b",
+        "checkedAt": "2026-09-08T07:18:33.865Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cyprusad/voxtype-hal",
+        "pluginIds": [
+          "io.github.cyprusad.vox-hal"
+        ],
+        "commit": "d5b3309f5c723ffbe62f5273d9f93066581b819b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T07:18:33.865Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T01:48:25.020Z",
+        "requestEventId": 30736265126,
+        "requestedAt": "2026-09-08T07:17:36Z",
+        "reviewedAt": "2026-09-08T07:18:33.865Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cyprusad.vox-hal": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
