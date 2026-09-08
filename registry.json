@@ -137993,6 +137993,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-dynamic-island",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:51:50.890Z",
+      "listingValidatedCommit": "1e0a72b825b51dcd6a44fe0b7bc05492fd07bdbf",
+      "listingValidatedAt": "2026-09-08T10:51:50.890Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-dynamic-island",
+        "pluginIds": [
+          "harshith.dynamic-island"
+        ],
+        "commit": "1e0a72b825b51dcd6a44fe0b7bc05492fd07bdbf",
+        "checkedAt": "2026-09-08T10:51:50.817Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "harshith.dynamic-island": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
