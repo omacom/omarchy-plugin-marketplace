@@ -136436,6 +136436,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/anders81fin/omfasty",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T00:00:32.463Z",
+      "listingValidatedCommit": "c2f8ea3eb6566406b05d13b65c2391cc7432bbf7",
+      "listingValidatedAt": "2026-09-08T00:00:32.463Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anders81fin/omfasty",
+        "pluginIds": [
+          "anders81fin.omfasty"
+        ],
+        "commit": "c2f8ea3eb6566406b05d13b65c2391cc7432bbf7",
+        "checkedAt": "2026-09-08T00:00:32.388Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anders81fin.omfasty": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
