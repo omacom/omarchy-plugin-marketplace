@@ -143661,6 +143661,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kostadinkadiev/omarchy-remote-desktop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T18:59:22.422Z",
+      "listingValidatedCommit": "baaf8b23edb2ca86f174c7ce5fd3dfcd281f8156",
+      "listingValidatedAt": "2026-09-08T18:59:22.422Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kostadinkadiev/omarchy-remote-desktop",
+        "pluginIds": [
+          "kokd.remote-desktop"
+        ],
+        "commit": "baaf8b23edb2ca86f174c7ce5fd3dfcd281f8156",
+        "checkedAt": "2026-09-08T18:59:22.357Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kostadinkadiev/omarchy-remote-desktop",
+        "pluginIds": [
+          "kokd.remote-desktop"
+        ],
+        "commit": "baaf8b23edb2ca86f174c7ce5fd3dfcd281f8156",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T18:59:22.357Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T06:00:18.562Z",
+        "requestEventId": 30778268280,
+        "requestedAt": "2026-09-08T18:58:19Z",
+        "reviewedAt": "2026-09-08T18:59:22.357Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kokd.remote-desktop": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
