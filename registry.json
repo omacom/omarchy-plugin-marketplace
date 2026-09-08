@@ -136635,6 +136635,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/1vecera/omarchy-mluva",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T06:59:47.632Z",
+      "listingValidatedCommit": "fc054ff97ced203a566a03ad3c465876186f09de",
+      "listingValidatedAt": "2026-09-08T06:59:47.632Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "1vecera/omarchy-mluva",
+        "pluginIds": [
+          "mluva.dictation"
+        ],
+        "commit": "fc054ff97ced203a566a03ad3c465876186f09de",
+        "checkedAt": "2026-09-08T06:59:47.565Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mluva.dictation": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
