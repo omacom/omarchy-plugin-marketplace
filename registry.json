@@ -144963,6 +144963,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lucasbertoni/omazork",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T22:31:28.571Z",
+      "listingValidatedCommit": "4e11e347025f51eb55b1455d86b0f407c9f35985",
+      "listingValidatedAt": "2026-09-08T22:31:28.571Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lucasbertoni/omazork",
+        "pluginIds": [
+          "omazork"
+        ],
+        "commit": "4e11e347025f51eb55b1455d86b0f407c9f35985",
+        "checkedAt": "2026-09-08T22:31:28.520Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omazork": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
