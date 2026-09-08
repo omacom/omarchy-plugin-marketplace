@@ -90453,8 +90453,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T16:07:37.160Z",
-      "listingValidatedCommit": "cc987779f9a629d3e2eacfd29987097fba6d5319",
-      "listingValidatedAt": "2026-08-29T16:07:37.160Z",
+      "listingValidatedCommit": "c870e4ecf34da258304f585c9a0ba8926f8b2f00",
+      "listingValidatedAt": "2026-09-08T09:04:20.096Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -90463,8 +90463,8 @@
         "pluginIds": [
           "io.github.kvm404.laser-pointer"
         ],
-        "commit": "cc987779f9a629d3e2eacfd29987097fba6d5319",
-        "checkedAt": "2026-08-29T16:07:37.113Z",
+        "commit": "c870e4ecf34da258304f585c9a0ba8926f8b2f00",
+        "checkedAt": "2026-09-08T09:04:20.095Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -90480,7 +90480,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cc987779f9a629d3e2eacfd29987097fba6d5319",
+          "validatedAt": "2026-08-29T16:07:37.160Z",
+          "branch": "main",
+          "supersededAt": "2026-09-08T09:04:20.096Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kvm404/omarchy-laser-pointer",
+            "pluginIds": [
+              "io.github.kvm404.laser-pointer"
+            ],
+            "commit": "cc987779f9a629d3e2eacfd29987097fba6d5319",
+            "checkedAt": "2026-08-29T16:07:37.113Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/baranskyi/omacash",
