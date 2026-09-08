@@ -141132,6 +141132,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LoupiBe/omarchy-plugin-wifi-privacy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:49:01.304Z",
+      "listingValidatedCommit": "f8bcefe503310fb5afa45239e8cdd9e17326b8c1",
+      "listingValidatedAt": "2026-09-08T14:49:01.304Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "loupibe/omarchy-plugin-wifi-privacy",
+        "pluginIds": [
+          "io.github.loupibe.omarchy-wifi-privacy"
+        ],
+        "commit": "f8bcefe503310fb5afa45239e8cdd9e17326b8c1",
+        "checkedAt": "2026-09-08T14:49:01.219Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "loupibe/omarchy-plugin-wifi-privacy",
+        "pluginIds": [
+          "io.github.loupibe.omarchy-wifi-privacy"
+        ],
+        "commit": "f8bcefe503310fb5afa45239e8cdd9e17326b8c1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T14:49:01.219Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T11:11:34.451Z",
+        "requestEventId": 30763190784,
+        "requestedAt": "2026-09-08T14:43:17Z",
+        "reviewedAt": "2026-09-08T14:49:01.219Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.loupibe.omarchy-wifi-privacy": {
+          "category": "System",
+          "tags": [
+            "security",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
