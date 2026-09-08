@@ -137725,6 +137725,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/qwlp/omarchy-workspace-apps",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:31:25.887Z",
+      "listingValidatedCommit": "eb42c10ce8b18f9fabe64a6e063ca9156664072d",
+      "listingValidatedAt": "2026-09-08T10:31:25.887Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "qwlp/omarchy-workspace-apps",
+        "pluginIds": [
+          "io.github.qwlp.workspace-apps"
+        ],
+        "commit": "eb42c10ce8b18f9fabe64a6e063ca9156664072d",
+        "checkedAt": "2026-09-08T10:31:25.817Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.qwlp.workspace-apps": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
