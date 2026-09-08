@@ -143226,6 +143226,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alanfortlink/clipboard-history",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T18:15:07.820Z",
+      "listingValidatedCommit": "f4fc81eefe52052ce100eb9db579cf91c0f04889",
+      "listingValidatedAt": "2026-09-08T18:15:07.820Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alanfortlink/clipboard-history",
+        "pluginIds": [
+          "alanfortlink.clipboard"
+        ],
+        "commit": "f4fc81eefe52052ce100eb9db579cf91c0f04889",
+        "checkedAt": "2026-09-08T18:15:07.752Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alanfortlink/clipboard-history",
+        "pluginIds": [
+          "alanfortlink.clipboard"
+        ],
+        "commit": "f4fc81eefe52052ce100eb9db579cf91c0f04889",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T18:15:07.752Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T17:07:36.465Z",
+        "requestEventId": 30775775028,
+        "requestedAt": "2026-09-08T18:12:58Z",
+        "reviewedAt": "2026-09-08T18:15:07.752Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "alanfortlink.clipboard": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
