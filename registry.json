@@ -140810,6 +140810,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pjgeutjens/omarchy-seismic-atlas",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:10:06.011Z",
+      "listingValidatedCommit": "f8f56c72ec062c5a2f8b61181218f2f9504900ad",
+      "listingValidatedAt": "2026-09-08T14:10:06.011Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pjgeutjens/omarchy-seismic-atlas",
+        "pluginIds": [
+          "io.github.pjgeutjens.seismic-atlas"
+        ],
+        "commit": "f8f56c72ec062c5a2f8b61181218f2f9504900ad",
+        "checkedAt": "2026-09-08T14:10:05.959Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pjgeutjens/omarchy-seismic-atlas",
+        "pluginIds": [
+          "io.github.pjgeutjens.seismic-atlas"
+        ],
+        "commit": "f8f56c72ec062c5a2f8b61181218f2f9504900ad",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T14:10:05.959Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T05:34:29.162Z",
+        "requestEventId": 30760842818,
+        "requestedAt": "2026-09-08T14:09:12Z",
+        "reviewedAt": "2026-09-08T14:10:05.959Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.pjgeutjens.seismic-atlas": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
