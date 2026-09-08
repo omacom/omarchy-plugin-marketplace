@@ -142151,6 +142151,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MariusGhizdavet/omarchy-rss",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:42:10.569Z",
+      "listingValidatedCommit": "f4b3dade904e01895911af1f224cf9c1a08ab0bd",
+      "listingValidatedAt": "2026-09-08T16:42:10.569Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mariusghizdavet/omarchy-rss",
+        "pluginIds": [
+          "mghizdavet.rss"
+        ],
+        "commit": "f4b3dade904e01895911af1f224cf9c1a08ab0bd",
+        "checkedAt": "2026-09-08T16:42:10.505Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mghizdavet.rss": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
