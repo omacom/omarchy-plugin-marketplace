@@ -145267,6 +145267,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lolu13/onote",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T22:56:31.891Z",
+      "listingValidatedCommit": "62c1b1a2c93fe6f2b340a53d16db5f5ea5a89ff6",
+      "listingValidatedAt": "2026-09-08T22:56:31.891Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lolu13/onote",
+        "pluginIds": [
+          "io.github.lolu13.onote"
+        ],
+        "commit": "62c1b1a2c93fe6f2b340a53d16db5f5ea5a89ff6",
+        "checkedAt": "2026-09-08T22:56:31.819Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lolu13/onote",
+        "pluginIds": [
+          "io.github.lolu13.onote"
+        ],
+        "commit": "62c1b1a2c93fe6f2b340a53d16db5f5ea5a89ff6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T22:56:31.819Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T22:57:59.726Z",
+        "requestEventId": 30789862230,
+        "requestedAt": "2026-09-08T22:55:17Z",
+        "reviewedAt": "2026-09-08T22:56:31.819Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.lolu13.onote": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
