@@ -140984,6 +140984,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimg4/omaresume",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:41:30.882Z",
+      "listingValidatedCommit": "a8c602b21fd7c5d9924e7ddffbad8d33305ffa80",
+      "listingValidatedAt": "2026-09-08T14:41:30.882Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimg4/omaresume",
+        "pluginIds": [
+          "dimef.omaresume"
+        ],
+        "commit": "a8c602b21fd7c5d9924e7ddffbad8d33305ffa80",
+        "checkedAt": "2026-09-08T14:41:30.824Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jimg4/omaresume",
+        "pluginIds": [
+          "dimef.omaresume"
+        ],
+        "commit": "a8c602b21fd7c5d9924e7ddffbad8d33305ffa80",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T14:41:30.824Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T16:08:02.355Z",
+        "requestEventId": 30762960419,
+        "requestedAt": "2026-09-08T14:39:57Z",
+        "reviewedAt": "2026-09-08T14:41:30.824Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dimef.omaresume": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
