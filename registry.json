@@ -48775,8 +48775,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-22",
       "listedAt": "2026-08-22T23:24:39.413Z",
-      "listingValidatedCommit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
-      "listingValidatedAt": "2026-08-22T23:24:39.413Z",
+      "listingValidatedCommit": "4f4b5f6223b4c18a822853ddde9efba13c63580f",
+      "listingValidatedAt": "2026-09-08T08:38:11.630Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -48785,37 +48785,19 @@
         "pluginIds": [
           "pretty.omagen"
         ],
-        "commit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
-        "checkedAt": "2026-08-22T23:24:39.384Z",
+        "commit": "4f4b5f6223b4c18a822853ddde9efba13c63580f",
+        "checkedAt": "2026-09-08T08:38:11.630Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "bundled-executable-binary",
-          "installer"
+          "privilege",
+          "installer",
+          "remote-build",
+          "service-management",
+          "sudoers-modification"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "prettyletto/omagen",
-        "pluginIds": [
-          "pretty.omagen"
-        ],
-        "commit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-22T23:24:39.384Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-22T23:19:40.072Z",
-        "requestEventId": 29859407680,
-        "requestedAt": "2026-08-22T23:23:11Z",
-        "reviewedAt": "2026-08-22T23:24:39.385Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "pretty.omagen": {
@@ -48827,7 +48809,80 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "prettyletto/omagen",
+        "pluginIds": [
+          "pretty.omagen"
+        ],
+        "commit": "4f4b5f6223b4c18a822853ddde9efba13c63580f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T08:38:11.630Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "installer",
+          "remote-build",
+          "service-management",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T06:36:07.963Z",
+        "requestEventId": 30740816707,
+        "requestedAt": "2026-09-08T08:37:11Z",
+        "reviewedAt": "2026-09-08T08:38:11.630Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
+          "validatedAt": "2026-08-22T23:24:39.413Z",
+          "branch": "main",
+          "supersededAt": "2026-09-08T08:38:11.630Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "prettyletto/omagen",
+            "pluginIds": [
+              "pretty.omagen"
+            ],
+            "commit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
+            "checkedAt": "2026-08-22T23:24:39.384Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "prettyletto/omagen",
+            "pluginIds": [
+              "pretty.omagen"
+            ],
+            "commit": "48261e8418c22ca5999a15fd7c7d85eb9f67de9e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-22T23:24:39.384Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-22T23:19:40.072Z",
+            "requestEventId": 29859407680,
+            "requestedAt": "2026-08-22T23:23:11Z",
+            "reviewedAt": "2026-08-22T23:24:39.385Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/elixirblend/omarchy-calendar-plus",
