@@ -142547,6 +142547,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kszx11/grammarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:15:45.814Z",
+      "listingValidatedCommit": "0b5989cf6c8d29abed007d8bc2ca5a1e5d1ac8bf",
+      "listingValidatedAt": "2026-09-08T17:15:45.814Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kszx11/grammarchy",
+        "pluginIds": [
+          "io.github.kszx11.grammarchy"
+        ],
+        "commit": "0b5989cf6c8d29abed007d8bc2ca5a1e5d1ac8bf",
+        "checkedAt": "2026-09-08T17:15:45.739Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kszx11/grammarchy",
+        "pluginIds": [
+          "io.github.kszx11.grammarchy"
+        ],
+        "commit": "0b5989cf6c8d29abed007d8bc2ca5a1e5d1ac8bf",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T17:15:45.739Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T03:03:22.731Z",
+        "requestEventId": 30772565483,
+        "requestedAt": "2026-09-08T17:13:14Z",
+        "reviewedAt": "2026-09-08T17:15:45.740Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kszx11.grammarchy": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
