@@ -143930,6 +143930,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Davedes83/fossfetch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T19:30:32.982Z",
+      "listingValidatedCommit": "2b2713f3c9186ec7dd723121d3241c6b23ecd64f",
+      "listingValidatedAt": "2026-09-08T19:30:32.982Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davedes83/fossfetch",
+        "pluginIds": [
+          "davedes.fossfetch"
+        ],
+        "commit": "2b2713f3c9186ec7dd723121d3241c6b23ecd64f",
+        "checkedAt": "2026-09-08T19:30:32.902Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davedes83/fossfetch",
+        "pluginIds": [
+          "davedes.fossfetch"
+        ],
+        "commit": "2b2713f3c9186ec7dd723121d3241c6b23ecd64f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T19:30:32.902Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T15:46:40.929Z",
+        "requestEventId": 30779776140,
+        "requestedAt": "2026-09-08T19:26:19Z",
+        "reviewedAt": "2026-09-08T19:30:32.902Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "davedes.fossfetch": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
