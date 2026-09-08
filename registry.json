@@ -141287,6 +141287,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jankeesvw/omableep",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:57:57.927Z",
+      "listingValidatedCommit": "f0d95d16456f029db8d9f1a8c81d6cce485dc4e3",
+      "listingValidatedAt": "2026-09-08T14:57:57.927Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jankeesvw/omableep",
+        "pluginIds": [
+          "jankeesvw.omableep"
+        ],
+        "commit": "f0d95d16456f029db8d9f1a8c81d6cce485dc4e3",
+        "checkedAt": "2026-09-08T14:57:57.863Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jankeesvw.omableep": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
