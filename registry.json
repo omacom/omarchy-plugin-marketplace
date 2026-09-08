@@ -143132,6 +143132,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TheFlngDutchman/omarchy-dashboard-dl",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:59:43.245Z",
+      "listingValidatedCommit": "bf4c83f0dbef2f1a2588cf6d9923bafbe731a739",
+      "listingValidatedAt": "2026-09-08T17:59:43.245Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "theflngdutchman/omarchy-dashboard-dl",
+        "pluginIds": [
+          "io.github.theflngdutchman.dashboard-dl"
+        ],
+        "commit": "bf4c83f0dbef2f1a2588cf6d9923bafbe731a739",
+        "checkedAt": "2026-09-08T17:59:43.175Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.theflngdutchman.dashboard-dl": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
