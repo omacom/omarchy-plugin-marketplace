@@ -141194,6 +141194,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Dooooooks/omaclippr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:52:01.214Z",
+      "listingValidatedCommit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
+      "listingValidatedAt": "2026-09-08T14:52:01.214Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dooooooks/omaclippr",
+        "pluginIds": [
+          "dooooooks.omaclippr"
+        ],
+        "commit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
+        "checkedAt": "2026-09-08T14:52:01.140Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dooooooks.omaclippr": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
