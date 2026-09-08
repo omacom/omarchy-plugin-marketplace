@@ -138027,6 +138027,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/atascg01/omarchy-keycaps",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:54:48.062Z",
+      "listingValidatedCommit": "c6fdc9b0d533c1cb81e93b7da02d4af3f29260b0",
+      "listingValidatedAt": "2026-09-08T10:54:48.062Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "atascg01/omarchy-keycaps",
+        "pluginIds": [
+          "omarchy-keycaps"
+        ],
+        "commit": "c6fdc9b0d533c1cb81e93b7da02d4af3f29260b0",
+        "checkedAt": "2026-09-08T10:54:47.989Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "atascg01/omarchy-keycaps",
+        "pluginIds": [
+          "omarchy-keycaps"
+        ],
+        "commit": "c6fdc9b0d533c1cb81e93b7da02d4af3f29260b0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T10:54:47.989Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T10:09:44.748Z",
+        "requestEventId": 30748552517,
+        "requestedAt": "2026-09-08T10:45:51Z",
+        "reviewedAt": "2026-09-08T10:54:47.989Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omarchy-keycaps": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
