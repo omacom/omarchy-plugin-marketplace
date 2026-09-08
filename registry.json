@@ -142027,6 +142027,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rubenassink/omarchy-tally",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:21:01.209Z",
+      "listingValidatedCommit": "de1a6f10e61084e59484947daf186821bb75f506",
+      "listingValidatedAt": "2026-09-08T16:21:01.209Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rubenassink/omarchy-tally",
+        "pluginIds": [
+          "rubenassink.tally"
+        ],
+        "commit": "de1a6f10e61084e59484947daf186821bb75f506",
+        "checkedAt": "2026-09-08T16:21:01.135Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rubenassink/omarchy-tally",
+        "pluginIds": [
+          "rubenassink.tally"
+        ],
+        "commit": "de1a6f10e61084e59484947daf186821bb75f506",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:21:01.135Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T13:12:34.703Z",
+        "requestEventId": 30769490232,
+        "requestedAt": "2026-09-08T16:19:09Z",
+        "reviewedAt": "2026-09-08T16:21:01.135Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rubenassink.tally": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
