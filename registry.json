@@ -140242,6 +140242,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/parker-brown-family/omarchy-agent-wool",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:20:57.915Z",
+      "listingValidatedCommit": "028b7f199bb0b5c265b2d62af608d0a957938dc1",
+      "listingValidatedAt": "2026-09-08T13:20:57.915Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "parker-brown-family/omarchy-agent-wool",
+        "pluginIds": [
+          "brownfamilysports.wool"
+        ],
+        "commit": "028b7f199bb0b5c265b2d62af608d0a957938dc1",
+        "checkedAt": "2026-09-08T13:20:57.840Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "parker-brown-family/omarchy-agent-wool",
+        "pluginIds": [
+          "brownfamilysports.wool"
+        ],
+        "commit": "028b7f199bb0b5c265b2d62af608d0a957938dc1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T13:20:57.840Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T11:18:35.581Z",
+        "requestEventId": 30757570030,
+        "requestedAt": "2026-09-08T13:19:42Z",
+        "reviewedAt": "2026-09-08T13:20:57.841Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brownfamilysports.wool": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
