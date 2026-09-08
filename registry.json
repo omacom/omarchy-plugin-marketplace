@@ -136502,6 +136502,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/surfacedP/omarchy-xmb-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T00:06:58.168Z",
+      "listingValidatedCommit": "e708ada8bc37cdd592b02de733283e77e66ef776",
+      "listingValidatedAt": "2026-09-08T00:06:58.168Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "surfacedp/omarchy-xmb-menu",
+        "pluginIds": [
+          "io.github.surfacedp.xmb-menu"
+        ],
+        "commit": "e708ada8bc37cdd592b02de733283e77e66ef776",
+        "checkedAt": "2026-09-08T00:06:58.095Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.surfacedp.xmb-menu": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
