@@ -145324,6 +145324,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/decadentsavant/bookmark-everything",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T23:00:22.913Z",
+      "listingValidatedCommit": "4a1407ae1700b3d08cdf60f100666a611245197d",
+      "listingValidatedAt": "2026-09-08T23:00:22.913Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "decadentsavant/bookmark-everything",
+        "pluginIds": [
+          "io.github.decadentsavant.bookmark-everything"
+        ],
+        "commit": "4a1407ae1700b3d08cdf60f100666a611245197d",
+        "checkedAt": "2026-09-08T23:00:22.847Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.decadentsavant.bookmark-everything": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
