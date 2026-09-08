@@ -141075,6 +141075,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/shadyuop/omarchy-wireless-display-cast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T14:46:29.400Z",
+      "listingValidatedCommit": "3b60d8425b3e1a46fc240c2e81271cf2f2400041",
+      "listingValidatedAt": "2026-09-08T14:46:29.400Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shadyuop/omarchy-wireless-display-cast",
+        "pluginIds": [
+          "shady.wireless-display-cast"
+        ],
+        "commit": "3b60d8425b3e1a46fc240c2e81271cf2f2400041",
+        "checkedAt": "2026-09-08T14:46:29.322Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shadyuop/omarchy-wireless-display-cast",
+        "pluginIds": [
+          "shady.wireless-display-cast"
+        ],
+        "commit": "3b60d8425b3e1a46fc240c2e81271cf2f2400041",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T14:46:29.322Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T13:51:03.629Z",
+        "requestEventId": 30763146104,
+        "requestedAt": "2026-09-08T14:42:40Z",
+        "reviewedAt": "2026-09-08T14:46:29.322Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shady.wireless-display-cast": {
+          "category": "System",
+          "tags": [
+            "media",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
