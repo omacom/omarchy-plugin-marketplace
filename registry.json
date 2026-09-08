@@ -145485,6 +145485,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jaabell/sshuttledeck",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T23:16:23.982Z",
+      "listingValidatedCommit": "0148ae1809d4f76f260c11738f7ed461af6237e4",
+      "listingValidatedAt": "2026-09-08T23:16:23.982Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jaabell/sshuttledeck",
+        "pluginIds": [
+          "jaabell.sshuttledeck"
+        ],
+        "commit": "0148ae1809d4f76f260c11738f7ed461af6237e4",
+        "checkedAt": "2026-09-08T23:16:23.926Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jaabell/sshuttledeck",
+        "pluginIds": [
+          "jaabell.sshuttledeck"
+        ],
+        "commit": "0148ae1809d4f76f260c11738f7ed461af6237e4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T23:16:23.926Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T19:49:54.339Z",
+        "requestEventId": 30790613293,
+        "requestedAt": "2026-09-08T23:15:30Z",
+        "reviewedAt": "2026-09-08T23:16:23.926Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jaabell.sshuttledeck": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
