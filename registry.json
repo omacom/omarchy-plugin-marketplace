@@ -138943,6 +138943,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jkwuc89/omarchy-wallpaper-screensaver-settings-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:42:39.777Z",
+      "listingValidatedCommit": "e0b9cbf66d3657a418dd15afe88dadcdf52ac6ba",
+      "listingValidatedAt": "2026-09-08T11:42:39.777Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jkwuc89/omarchy-wallpaper-screensaver-settings-plugin",
+        "pluginIds": [
+          "jkwuc89.wallpaper-screensaver-settings"
+        ],
+        "commit": "e0b9cbf66d3657a418dd15afe88dadcdf52ac6ba",
+        "checkedAt": "2026-09-08T11:42:39.707Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jkwuc89/omarchy-wallpaper-screensaver-settings-plugin",
+        "pluginIds": [
+          "jkwuc89.wallpaper-screensaver-settings"
+        ],
+        "commit": "e0b9cbf66d3657a418dd15afe88dadcdf52ac6ba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:42:39.707Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T18:25:34.795Z",
+        "requestEventId": 30751596888,
+        "requestedAt": "2026-09-08T11:38:26Z",
+        "reviewedAt": "2026-09-08T11:42:39.707Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jkwuc89.wallpaper-screensaver-settings": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
