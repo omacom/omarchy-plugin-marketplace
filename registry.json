@@ -139002,6 +139002,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TNEP4/recast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:44:55.460Z",
+      "listingValidatedCommit": "e6d940770ce0e159f6fcfff6bac0346462c8da41",
+      "listingValidatedAt": "2026-09-08T11:44:55.460Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tnep4/recast",
+        "pluginIds": [
+          "io.github.tnep4.recast"
+        ],
+        "commit": "e6d940770ce0e159f6fcfff6bac0346462c8da41",
+        "checkedAt": "2026-09-08T11:44:55.392Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tnep4.recast": {
+          "category": "Productivity",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
