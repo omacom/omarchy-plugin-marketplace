@@ -142790,6 +142790,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdil/omarchy-git-radar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:39:35.138Z",
+      "listingValidatedCommit": "ccb7bf4a94ec6e29f9ee18c72c090e3811a41589",
+      "listingValidatedAt": "2026-09-08T17:39:35.138Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdil/omarchy-git-radar",
+        "pluginIds": [
+          "ozdil.git-radar"
+        ],
+        "commit": "ccb7bf4a94ec6e29f9ee18c72c090e3811a41589",
+        "checkedAt": "2026-09-08T17:39:35.059Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ozdil/omarchy-git-radar",
+        "pluginIds": [
+          "ozdil.git-radar"
+        ],
+        "commit": "ccb7bf4a94ec6e29f9ee18c72c090e3811a41589",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T17:39:35.059Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T15:00:30.052Z",
+        "requestEventId": 30773919291,
+        "requestedAt": "2026-09-08T17:38:17Z",
+        "reviewedAt": "2026-09-08T17:39:35.059Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ozdil.git-radar": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
