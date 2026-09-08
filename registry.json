@@ -138643,6 +138643,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/szaidi-code/scoring-matrix",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:24:57.548Z",
+      "listingValidatedCommit": "52959a120f4ee529af517e221ad8ed8b31e22d89",
+      "listingValidatedAt": "2026-09-08T11:24:57.548Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "szaidi-code/scoring-matrix",
+        "pluginIds": [
+          "szaidi.scoring-matrix"
+        ],
+        "commit": "52959a120f4ee529af517e221ad8ed8b31e22d89",
+        "checkedAt": "2026-09-08T11:24:57.478Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "szaidi-code/scoring-matrix",
+        "pluginIds": [
+          "szaidi.scoring-matrix"
+        ],
+        "commit": "52959a120f4ee529af517e221ad8ed8b31e22d89",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:24:57.478Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T01:39:12.783Z",
+        "requestEventId": 30750193145,
+        "requestedAt": "2026-09-08T11:14:14Z",
+        "reviewedAt": "2026-09-08T11:24:57.478Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "szaidi.scoring-matrix": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
