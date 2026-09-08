@@ -136469,6 +136469,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PhilippBellia/omarchy-coffee-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T00:03:28.203Z",
+      "listingValidatedCommit": "59b2378d728885c6bf7c06b3959516df01b9c533",
+      "listingValidatedAt": "2026-09-08T00:03:28.203Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "philippbellia/omarchy-coffee-tracker",
+        "pluginIds": [
+          "io.github.philippbellia.coffee-tracker"
+        ],
+        "commit": "59b2378d728885c6bf7c06b3959516df01b9c533",
+        "checkedAt": "2026-09-08T00:03:28.138Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.philippbellia.coffee-tracker": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
