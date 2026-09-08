@@ -136535,6 +136535,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nick1udwig/omarchy-desktops",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T06:46:40.267Z",
+      "listingValidatedCommit": "ab43fd8d6b82b80d6d5f5524ecd29c17a4af1830",
+      "listingValidatedAt": "2026-09-08T06:46:40.267Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nick1udwig/omarchy-desktops",
+        "pluginIds": [
+          "nick1udwig.desktops"
+        ],
+        "commit": "ab43fd8d6b82b80d6d5f5524ecd29c17a4af1830",
+        "checkedAt": "2026-09-08T06:46:40.118Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nick1udwig.desktops": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
