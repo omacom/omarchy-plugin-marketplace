@@ -138326,6 +138326,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/itchyfeetleech/omarchy-op1we",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:09:41.106Z",
+      "listingValidatedCommit": "f6de5190c6d9de4541e0087f5cd8577104274afa",
+      "listingValidatedAt": "2026-09-08T11:09:41.106Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "itchyfeetleech/omarchy-op1we",
+        "pluginIds": [
+          "hoppcx.op1we"
+        ],
+        "commit": "f6de5190c6d9de4541e0087f5cd8577104274afa",
+        "checkedAt": "2026-09-08T11:09:41.047Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "itchyfeetleech/omarchy-op1we",
+        "pluginIds": [
+          "hoppcx.op1we"
+        ],
+        "commit": "f6de5190c6d9de4541e0087f5cd8577104274afa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:09:41.047Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T05:34:05.078Z",
+        "requestEventId": 30749325208,
+        "requestedAt": "2026-09-08T10:59:13Z",
+        "reviewedAt": "2026-09-08T11:09:41.047Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "hoppcx.op1we": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
