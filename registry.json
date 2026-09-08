@@ -100858,18 +100858,18 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T00:02:20.871Z",
-      "listingValidatedCommit": "f34d40528ab6507376a086f32aaa8a22353b7c52",
-      "listingValidatedAt": "2026-08-31T00:02:20.871Z",
+      "listingValidatedCommit": "a33ad42aaf3f938f21eb050d1bd5e48107a317fc",
+      "listingValidatedAt": "2026-09-08T08:24:08.473Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
         "version": "3",
-        "repository": "angel-ventura/angelv.clock",
+        "repository": "angel-ventura/omarchy-clock-zones-calendar",
         "pluginIds": [
           "angelv.clock"
         ],
-        "commit": "f34d40528ab6507376a086f32aaa8a22353b7c52",
-        "checkedAt": "2026-08-31T00:02:20.812Z",
+        "commit": "a33ad42aaf3f938f21eb050d1bd5e48107a317fc",
+        "checkedAt": "2026-09-08T08:24:08.473Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -100884,7 +100884,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f34d40528ab6507376a086f32aaa8a22353b7c52",
+          "validatedAt": "2026-08-31T00:02:20.871Z",
+          "branch": "main",
+          "supersededAt": "2026-09-08T08:24:08.473Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "angel-ventura/angelv.clock",
+            "pluginIds": [
+              "angelv.clock"
+            ],
+            "commit": "f34d40528ab6507376a086f32aaa8a22353b7c52",
+            "checkedAt": "2026-08-31T00:02:20.812Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dpulpeiro/omarchy-herdr-collie",
