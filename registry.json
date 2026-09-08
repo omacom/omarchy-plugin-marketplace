@@ -138117,6 +138117,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-autoheal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:00:05.911Z",
+      "listingValidatedCommit": "4b3c161f36e5c6447004f2191e7f8c7b5bce8c6d",
+      "listingValidatedAt": "2026-09-08T11:00:05.911Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-autoheal",
+        "pluginIds": [
+          "harshith.autoheal"
+        ],
+        "commit": "4b3c161f36e5c6447004f2191e7f8c7b5bce8c6d",
+        "checkedAt": "2026-09-08T11:00:05.851Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "harshithnadig/omarchy-autoheal",
+        "pluginIds": [
+          "harshith.autoheal"
+        ],
+        "commit": "4b3c161f36e5c6447004f2191e7f8c7b5bce8c6d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:00:05.851Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T08:26:18.550Z",
+        "requestEventId": 30748818126,
+        "requestedAt": "2026-09-08T10:50:33Z",
+        "reviewedAt": "2026-09-08T11:00:05.851Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "harshith.autoheal": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
