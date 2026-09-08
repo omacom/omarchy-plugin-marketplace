@@ -136769,6 +136769,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ztrek7/omarchy-system-metrics",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T07:13:45.456Z",
+      "listingValidatedCommit": "646290eefd885813865442b56acd3b6a3ca9fcb9",
+      "listingValidatedAt": "2026-09-08T07:13:45.456Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ztrek7/omarchy-system-metrics",
+        "pluginIds": [
+          "io.github.ztrek7.system-metrics"
+        ],
+        "commit": "646290eefd885813865442b56acd3b6a3ca9fcb9",
+        "checkedAt": "2026-09-08T07:13:45.417Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ztrek7/omarchy-system-metrics",
+        "pluginIds": [
+          "io.github.ztrek7.system-metrics"
+        ],
+        "commit": "646290eefd885813865442b56acd3b6a3ca9fcb9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T07:13:45.417Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T22:46:24.741Z",
+        "requestEventId": 30736004719,
+        "requestedAt": "2026-09-08T07:13:00Z",
+        "reviewedAt": "2026-09-08T07:13:45.417Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ztrek7.system-metrics": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
