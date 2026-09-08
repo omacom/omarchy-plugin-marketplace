@@ -144045,6 +144045,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sam-blakeman/OmarchyIPTV",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T19:42:18.556Z",
+      "listingValidatedCommit": "7b630342d1ea149df9628fdb1338b072c79bb607",
+      "listingValidatedAt": "2026-09-08T19:42:18.556Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sam-blakeman/omarchyiptv",
+        "pluginIds": [
+          "io.github.sam-blakeman.iptv"
+        ],
+        "commit": "7b630342d1ea149df9628fdb1338b072c79bb607",
+        "checkedAt": "2026-09-08T19:42:18.481Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sam-blakeman/omarchyiptv",
+        "pluginIds": [
+          "io.github.sam-blakeman.iptv"
+        ],
+        "commit": "7b630342d1ea149df9628fdb1338b072c79bb607",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T19:42:18.481Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T18:41:34.321Z",
+        "requestEventId": 30780525632,
+        "requestedAt": "2026-09-08T19:40:55Z",
+        "reviewedAt": "2026-09-08T19:42:18.481Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sam-blakeman.iptv": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
