@@ -140174,6 +140174,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ClumZeez/omarchy-binaural",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:06:19.333Z",
+      "listingValidatedCommit": "9c1a9245fd9ef6ba2c1d7a883c2cb8d263692a6d",
+      "listingValidatedAt": "2026-09-08T13:06:19.333Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "clumzeez/omarchy-binaural",
+        "pluginIds": [
+          "callum.binaural"
+        ],
+        "commit": "9c1a9245fd9ef6ba2c1d7a883c2cb8d263692a6d",
+        "checkedAt": "2026-09-08T13:06:19.246Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "callum.binaural": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
