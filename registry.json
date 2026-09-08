@@ -140358,6 +140358,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nkarl/omachords",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:26:34.701Z",
+      "listingValidatedCommit": "d786bd760e1c6fa92217f71cd91e9576ed7bd9f1",
+      "listingValidatedAt": "2026-09-08T13:26:34.701Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nkarl/omachords",
+        "pluginIds": [
+          "nkarl.omachords"
+        ],
+        "commit": "d786bd760e1c6fa92217f71cd91e9576ed7bd9f1",
+        "checkedAt": "2026-09-08T13:26:34.628Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nkarl/omachords",
+        "pluginIds": [
+          "nkarl.omachords"
+        ],
+        "commit": "d786bd760e1c6fa92217f71cd91e9576ed7bd9f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T13:26:34.628Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T23:15:05.968Z",
+        "requestEventId": 30757856194,
+        "requestedAt": "2026-09-08T13:24:11Z",
+        "reviewedAt": "2026-09-08T13:26:34.629Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nkarl.omachords": {
+          "category": "Productivity",
+          "tags": [
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
