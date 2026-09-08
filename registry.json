@@ -140697,6 +140697,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TIerTek/omarchy-scratchpad-deck",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:57:15.250Z",
+      "listingValidatedCommit": "78a5d5e62364cfca51ac9bdd29fde48b3681642a",
+      "listingValidatedAt": "2026-09-08T13:57:15.250Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiertek/omarchy-scratchpad-deck",
+        "pluginIds": [
+          "tiertek.scratchpad-deck"
+        ],
+        "commit": "78a5d5e62364cfca51ac9bdd29fde48b3681642a",
+        "checkedAt": "2026-09-08T13:57:15.174Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tiertek/omarchy-scratchpad-deck",
+        "pluginIds": [
+          "tiertek.scratchpad-deck"
+        ],
+        "commit": "78a5d5e62364cfca51ac9bdd29fde48b3681642a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T13:57:15.174Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T19:15:26.048Z",
+        "requestEventId": 30759955932,
+        "requestedAt": "2026-09-08T13:56:17Z",
+        "reviewedAt": "2026-09-08T13:57:15.174Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tiertek.scratchpad-deck": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
