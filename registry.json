@@ -138763,6 +138763,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zendarc147/omarchy-zen-awake",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:29:48.751Z",
+      "listingValidatedCommit": "9f8d6ed1221043363753ce3662e1710fabb5d0d5",
+      "listingValidatedAt": "2026-09-08T11:29:48.751Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zendarc147/omarchy-zen-awake",
+        "pluginIds": [
+          "zen.awake"
+        ],
+        "commit": "9f8d6ed1221043363753ce3662e1710fabb5d0d5",
+        "checkedAt": "2026-09-08T11:29:48.686Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zendarc147/omarchy-zen-awake",
+        "pluginIds": [
+          "zen.awake"
+        ],
+        "commit": "9f8d6ed1221043363753ce3662e1710fabb5d0d5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:29:48.686Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T15:10:12.266Z",
+        "requestEventId": 30750378412,
+        "requestedAt": "2026-09-08T11:17:23Z",
+        "reviewedAt": "2026-09-08T11:29:48.687Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "zen.awake": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
