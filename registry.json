@@ -137892,6 +137892,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marvreichmann/omathought",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:44:05.982Z",
+      "listingValidatedCommit": "7768b0ff7030008485f744b283273948889956b4",
+      "listingValidatedAt": "2026-09-08T10:44:05.982Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marvreichmann/omathought",
+        "pluginIds": [
+          "com.github.marvreichmann.omathought"
+        ],
+        "commit": "7768b0ff7030008485f744b283273948889956b4",
+        "checkedAt": "2026-09-08T10:44:05.908Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.github.marvreichmann.omathought": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
