@@ -137034,6 +137034,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/glorics/omarchy-grok-bots",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T08:14:07.575Z",
+      "listingValidatedCommit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
+      "listingValidatedAt": "2026-09-08T08:14:07.575Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "glorics/omarchy-grok-bots",
+        "pluginIds": [
+          "glorics.grok-bots"
+        ],
+        "commit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
+        "checkedAt": "2026-09-08T08:14:07.501Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "glorics.grok-bots": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
