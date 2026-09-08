@@ -137925,6 +137925,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/janaki-sasidhar/omarchy-codex-lb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T10:46:35.339Z",
+      "listingValidatedCommit": "7e672c168a6a55106c00922c8594022d78189d11",
+      "listingValidatedAt": "2026-09-08T10:46:35.339Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "janaki-sasidhar/omarchy-codex-lb",
+        "pluginIds": [
+          "janaki-sasidhar.codex-lb"
+        ],
+        "commit": "7e672c168a6a55106c00922c8594022d78189d11",
+        "checkedAt": "2026-09-08T10:46:35.266Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "janaki-sasidhar.codex-lb": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
