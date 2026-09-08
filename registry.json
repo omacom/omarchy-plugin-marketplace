@@ -142332,6 +142332,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevincardwell/omarchy-spectra",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:56:04.656Z",
+      "listingValidatedCommit": "94b31577ed3dc1cf40916188b9900b78dc449d54",
+      "listingValidatedAt": "2026-09-08T16:56:04.656Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevincardwell/omarchy-spectra",
+        "pluginIds": [
+          "radius.spectra"
+        ],
+        "commit": "94b31577ed3dc1cf40916188b9900b78dc449d54",
+        "checkedAt": "2026-09-08T16:56:04.576Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kevincardwell/omarchy-spectra",
+        "pluginIds": [
+          "radius.spectra"
+        ],
+        "commit": "94b31577ed3dc1cf40916188b9900b78dc449d54",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:56:04.576Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T16:39:05.430Z",
+        "requestEventId": 30771467676,
+        "requestedAt": "2026-09-08T16:54:14Z",
+        "reviewedAt": "2026-09-08T16:56:04.576Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "radius.spectra": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
