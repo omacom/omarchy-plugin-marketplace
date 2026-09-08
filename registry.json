@@ -142974,6 +142974,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vornashev/omarchy-yandex-music",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:51:24.275Z",
+      "listingValidatedCommit": "f2b51d3eaa772ed8d6d6fed6449ac64f23c20fad",
+      "listingValidatedAt": "2026-09-08T17:51:24.275Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vornashev/omarchy-yandex-music",
+        "pluginIds": [
+          "vornashev.yandex-music"
+        ],
+        "commit": "f2b51d3eaa772ed8d6d6fed6449ac64f23c20fad",
+        "checkedAt": "2026-09-08T17:51:24.201Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vornashev/omarchy-yandex-music",
+        "pluginIds": [
+          "vornashev.yandex-music"
+        ],
+        "commit": "f2b51d3eaa772ed8d6d6fed6449ac64f23c20fad",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T17:51:24.201Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T11:15:06.171Z",
+        "requestEventId": 30774482821,
+        "requestedAt": "2026-09-08T17:49:04Z",
+        "reviewedAt": "2026-09-08T17:51:24.201Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vornashev.yandex-music": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
