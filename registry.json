@@ -140299,6 +140299,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidboulay/omarchy-truenas-apps-watcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:24:06.951Z",
+      "listingValidatedCommit": "04011ad877e9d99c7fe4ff9167956bfdb2b7b4a1",
+      "listingValidatedAt": "2026-09-08T13:24:06.951Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidboulay/omarchy-truenas-apps-watcher",
+        "pluginIds": [
+          "io.github.davidboulay.truenas-apps-watcher"
+        ],
+        "commit": "04011ad877e9d99c7fe4ff9167956bfdb2b7b4a1",
+        "checkedAt": "2026-09-08T13:24:06.886Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davidboulay/omarchy-truenas-apps-watcher",
+        "pluginIds": [
+          "io.github.davidboulay.truenas-apps-watcher"
+        ],
+        "commit": "04011ad877e9d99c7fe4ff9167956bfdb2b7b4a1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T13:24:06.886Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T12:43:45.457Z",
+        "requestEventId": 30757783894,
+        "requestedAt": "2026-09-08T13:23:02Z",
+        "reviewedAt": "2026-09-08T13:24:06.886Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.davidboulay.truenas-apps-watcher": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
