@@ -136669,6 +136669,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mbilenko03/omarchy-sol",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T07:02:26.578Z",
+      "listingValidatedCommit": "7c07a722f77a2a5d8ff2f2c6f72ef0c0c67ac262",
+      "listingValidatedAt": "2026-09-08T07:02:26.578Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mbilenko03/omarchy-sol",
+        "pluginIds": [
+          "mbilenko.sol"
+        ],
+        "commit": "7c07a722f77a2a5d8ff2f2c6f72ef0c0c67ac262",
+        "checkedAt": "2026-09-08T07:02:26.506Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mbilenko.sol": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
