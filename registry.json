@@ -145912,6 +145912,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CostaFot/omarchy-android-dev",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T23:57:23.949Z",
+      "listingValidatedCommit": "91acdb892a94eb53d7639ae88463b41390c3c2e7",
+      "listingValidatedAt": "2026-09-08T23:57:23.949Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "costafot/omarchy-android-dev",
+        "pluginIds": [
+          "costafot.android-dev"
+        ],
+        "commit": "91acdb892a94eb53d7639ae88463b41390c3c2e7",
+        "checkedAt": "2026-09-08T23:57:23.871Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "costafot/omarchy-android-dev",
+        "pluginIds": [
+          "costafot.android-dev"
+        ],
+        "commit": "91acdb892a94eb53d7639ae88463b41390c3c2e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T23:57:23.871Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T07:27:59.659Z",
+        "requestEventId": 30792047581,
+        "requestedAt": "2026-09-08T23:56:21Z",
+        "reviewedAt": "2026-09-08T23:57:23.871Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "costafot.android-dev": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
