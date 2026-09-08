@@ -139880,7 +139880,11 @@
             "bar",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "The widget requires the full OmaCalendar app, installed separately. Download OmaCalendar 1.0.0-beta.1 for Omarchy (the x86_64 Arch package) from https://github.com/brdweb/omacalendar/releases/tag/v1.0.0-beta.1. Follow the app installation steps in the widget README: verify and install the package, enable the omacalendard.socket user service, then open OmaCalendar to add your calendars. Install the widget after completing app setup. The app window can then be closed; the daemon starts on demand. App and widget are public-testing betas."
+          }
         }
       }
     },
