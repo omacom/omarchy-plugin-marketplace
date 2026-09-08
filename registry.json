@@ -144161,6 +144161,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jcputney/omarchy-media-float-youtube",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T20:10:21.060Z",
+      "listingValidatedCommit": "6e14006a7abf66f0f3b2b3871fbf87d24e496609",
+      "listingValidatedAt": "2026-09-08T20:10:21.060Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jcputney/omarchy-media-float-youtube",
+        "pluginIds": [
+          "io.github.jcputney.media-float-youtube"
+        ],
+        "commit": "6e14006a7abf66f0f3b2b3871fbf87d24e496609",
+        "checkedAt": "2026-09-08T20:10:20.983Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jcputney/omarchy-media-float-youtube",
+        "pluginIds": [
+          "io.github.jcputney.media-float-youtube"
+        ],
+        "commit": "6e14006a7abf66f0f3b2b3871fbf87d24e496609",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T20:10:20.983Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T19:45:56.762Z",
+        "requestEventId": 30781999949,
+        "requestedAt": "2026-09-08T20:08:33Z",
+        "reviewedAt": "2026-09-08T20:10:20.983Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jcputney.media-float-youtube": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
