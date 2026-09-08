@@ -142423,6 +142423,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimg4/omarchy-hidden-wifi",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T17:01:32.296Z",
+      "listingValidatedCommit": "fe85b843273c2e15f7455c1f098e091815355a25",
+      "listingValidatedAt": "2026-09-08T17:01:32.296Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimg4/omarchy-hidden-wifi",
+        "pluginIds": [
+          "dimef.network"
+        ],
+        "commit": "fe85b843273c2e15f7455c1f098e091815355a25",
+        "checkedAt": "2026-09-08T17:01:32.241Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dimef.network": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
