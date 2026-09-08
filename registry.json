@@ -143409,6 +143409,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bronder/omarchy-tuner-v2",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T18:28:57.719Z",
+      "listingValidatedCommit": "c1d39dcf58b59e23f7184396f68788b2ab444c73",
+      "listingValidatedAt": "2026-09-08T18:28:57.719Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bronder/omarchy-tuner-v2",
+        "pluginIds": [
+          "bronder.tuner"
+        ],
+        "commit": "c1d39dcf58b59e23f7184396f68788b2ab444c73",
+        "checkedAt": "2026-09-08T18:28:57.651Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bronder.tuner": {
+          "category": "Other",
+          "tags": [
+            "media",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
