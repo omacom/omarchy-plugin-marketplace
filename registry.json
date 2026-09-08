@@ -140754,6 +140754,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vbtwo31984/omarchy-hebrew-calendar-zmanim",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T13:59:58.907Z",
+      "listingValidatedCommit": "c8cb0229fc13e65e6b2bd4f8ae54696853f17710",
+      "listingValidatedAt": "2026-09-08T13:59:58.907Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vbtwo31984/omarchy-hebrew-calendar-zmanim",
+        "pluginIds": [
+          "vbtwo.hebrew-calendar"
+        ],
+        "commit": "c8cb0229fc13e65e6b2bd4f8ae54696853f17710",
+        "checkedAt": "2026-09-08T13:59:58.848Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vbtwo31984/omarchy-hebrew-calendar-zmanim",
+        "pluginIds": [
+          "vbtwo.hebrew-calendar"
+        ],
+        "commit": "c8cb0229fc13e65e6b2bd4f8ae54696853f17710",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T13:59:58.848Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T18:47:53.525Z",
+        "requestEventId": 30760079356,
+        "requestedAt": "2026-09-08T13:58:07Z",
+        "reviewedAt": "2026-09-08T13:59:58.848Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vbtwo.hebrew-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
