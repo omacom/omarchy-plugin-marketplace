@@ -142276,6 +142276,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Shirak-Semonian/newsflash-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:53:08.958Z",
+      "listingValidatedCommit": "e66ecef86855d8cc1daf6fe84e7016e286fe9341",
+      "listingValidatedAt": "2026-09-08T16:53:08.958Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shirak-semonian/newsflash-omarchy-plugin",
+        "pluginIds": [
+          "io.github.shirak-semonian.newsflash"
+        ],
+        "commit": "e66ecef86855d8cc1daf6fe84e7016e286fe9341",
+        "checkedAt": "2026-09-08T16:53:08.897Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shirak-semonian/newsflash-omarchy-plugin",
+        "pluginIds": [
+          "io.github.shirak-semonian.newsflash"
+        ],
+        "commit": "e66ecef86855d8cc1daf6fe84e7016e286fe9341",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:53:08.897Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T16:43:39.100Z",
+        "requestEventId": 30771344976,
+        "requestedAt": "2026-09-08T16:51:55Z",
+        "reviewedAt": "2026-09-08T16:53:08.897Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.shirak-semonian.newsflash": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
