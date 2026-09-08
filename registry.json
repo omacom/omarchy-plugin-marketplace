@@ -141880,6 +141880,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alanfortlink/speech-to-text",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:02:29.021Z",
+      "listingValidatedCommit": "e5020d24febf65a5db05e253ec88c351a071e28e",
+      "listingValidatedAt": "2026-09-08T16:02:29.021Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alanfortlink/speech-to-text",
+        "pluginIds": [
+          "alanfortlink.speech-to-text"
+        ],
+        "commit": "e5020d24febf65a5db05e253ec88c351a071e28e",
+        "checkedAt": "2026-09-08T16:02:28.950Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alanfortlink/speech-to-text",
+        "pluginIds": [
+          "alanfortlink.speech-to-text"
+        ],
+        "commit": "e5020d24febf65a5db05e253ec88c351a071e28e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:02:28.950Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T15:17:52.585Z",
+        "requestEventId": 30768362123,
+        "requestedAt": "2026-09-08T16:00:12Z",
+        "reviewedAt": "2026-09-08T16:02:28.950Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "alanfortlink.speech-to-text": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
