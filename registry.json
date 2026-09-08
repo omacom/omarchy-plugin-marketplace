@@ -144491,6 +144491,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/l1qu1d/jotpin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T21:49:44.782Z",
+      "listingValidatedCommit": "16ba2462967ff1cb9457e1a2216773ee584fe42f",
+      "listingValidatedAt": "2026-09-08T21:49:44.782Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "l1qu1d/jotpin",
+        "pluginIds": [
+          "dev.jotpin"
+        ],
+        "commit": "16ba2462967ff1cb9457e1a2216773ee584fe42f",
+        "checkedAt": "2026-09-08T21:49:44.716Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "l1qu1d/jotpin",
+        "pluginIds": [
+          "dev.jotpin"
+        ],
+        "commit": "16ba2462967ff1cb9457e1a2216773ee584fe42f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T21:49:44.716Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T17:29:17.641Z",
+        "requestEventId": 30786987898,
+        "requestedAt": "2026-09-08T21:48:39Z",
+        "reviewedAt": "2026-09-08T21:49:44.716Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dev.jotpin": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
