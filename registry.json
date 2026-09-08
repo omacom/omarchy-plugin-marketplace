@@ -138267,6 +138267,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/austindixson/omarchy-touchbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T11:07:06.495Z",
+      "listingValidatedCommit": "60c4466daddfe7bd0de8f54cd07766c7842519a7",
+      "listingValidatedAt": "2026-09-08T11:07:06.495Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "austindixson/omarchy-touchbar",
+        "pluginIds": [
+          "io.github.austindixson.touchbar"
+        ],
+        "commit": "60c4466daddfe7bd0de8f54cd07766c7842519a7",
+        "checkedAt": "2026-09-08T11:07:06.424Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "austindixson/omarchy-touchbar",
+        "pluginIds": [
+          "io.github.austindixson.touchbar"
+        ],
+        "commit": "60c4466daddfe7bd0de8f54cd07766c7842519a7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T11:07:06.424Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T06:41:08.426Z",
+        "requestEventId": 30749049985,
+        "requestedAt": "2026-09-08T10:54:31Z",
+        "reviewedAt": "2026-09-08T11:07:06.424Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.austindixson.touchbar": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
