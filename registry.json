@@ -141657,6 +141657,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chr0nzz/omarchy-pigeon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T15:42:35.584Z",
+      "listingValidatedCommit": "20b631a6433dd82eafb47fcfebe23df489c91e50",
+      "listingValidatedAt": "2026-09-08T15:42:35.584Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chr0nzz/omarchy-pigeon",
+        "pluginIds": [
+          "xyzlab.pigeon"
+        ],
+        "commit": "20b631a6433dd82eafb47fcfebe23df489c91e50",
+        "checkedAt": "2026-09-08T15:42:35.520Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "xyzlab.pigeon": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
