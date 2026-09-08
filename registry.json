@@ -139507,6 +139507,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/soojy/omaproxy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T12:20:40.294Z",
+      "listingValidatedCommit": "f61b92f02b3e75f75dc6c6cbd8c1556fdc3c5901",
+      "listingValidatedAt": "2026-09-08T12:20:40.294Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "soojy/omaproxy",
+        "pluginIds": [
+          "soojy.omaproxy"
+        ],
+        "commit": "f61b92f02b3e75f75dc6c6cbd8c1556fdc3c5901",
+        "checkedAt": "2026-09-08T12:20:40.224Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "soojy/omaproxy",
+        "pluginIds": [
+          "soojy.omaproxy"
+        ],
+        "commit": "f61b92f02b3e75f75dc6c6cbd8c1556fdc3c5901",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T12:20:40.224Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T11:52:12.189Z",
+        "requestEventId": 30753343880,
+        "requestedAt": "2026-09-08T12:10:48Z",
+        "reviewedAt": "2026-09-08T12:20:40.224Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "soojy.omaproxy": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
