@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T15:14:00.840Z",
+  "generatedAt": "2026-09-08T15:19:25.076Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -145741,9 +145741,9 @@
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:40:11.102Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": true,
-      "installCommand": "omarchy plugin add https://github.com/brdweb/omacalendar-widget.git --enable",
-      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "installAvailable": false,
+      "installCommand": "",
+      "installNote": "The widget requires the full OmaCalendar app, installed separately. Download OmaCalendar 1.0.0-beta.1 for Omarchy (the x86_64 Arch package) from https://github.com/brdweb/omacalendar/releases/tag/v1.0.0-beta.1. Follow the app installation steps in the widget README: verify and install the package, enable the omacalendard.socket user service, then open OmaCalendar to add your calendars. Install the widget after completing app setup. The app window can then be closed; the daemon starts on demand. App and widget are public-testing betas.",
       "category": "Widgets",
       "tags": [
         "bar",
@@ -145772,13 +145772,13 @@
       "listingValidatedBranch": "main",
       "upstreamObservedCommit": "3940df1465bd5fa85541880058ac93745f69cfca",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-09-08T12:40:11.529Z",
+      "upstreamCheckedAt": "2026-09-08T15:19:25.076Z",
       "upstreamCheckStatus": "passed",
       "upstreamValidatedCommit": "3940df1465bd5fa85541880058ac93745f69cfca",
-      "upstreamValidatedAt": "2026-09-08T12:40:11.529Z",
+      "upstreamValidatedAt": "2026-09-08T15:19:25.076Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "84d619525357edf2e98af56da3ae9f515e26e7473ee8ed1f0fefc0c1ee82937b",
-      "status": "Available"
+      "upstreamSourceFingerprint": "d45518f22a65aab27ed847808f21e6bd78771ebd7fc5cd89c08ac9dc6735b973",
+      "status": "Manual setup"
     },
     {
       "id": "io.github.cfaulkingham.quickmap",
