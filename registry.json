@@ -142217,6 +142217,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mfilm77/omarchy-keypad",
+      "type": "plugin-source",
+      "addedAt": "2026-09-08",
+      "listedAt": "2026-09-08T16:50:34.679Z",
+      "listingValidatedCommit": "165ecb5273ea3ca755e0f7b118bdf149c8f45af7",
+      "listingValidatedAt": "2026-09-08T16:50:34.679Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mfilm77/omarchy-keypad",
+        "pluginIds": [
+          "io.github.mfilm77.keypad"
+        ],
+        "commit": "165ecb5273ea3ca755e0f7b118bdf149c8f45af7",
+        "checkedAt": "2026-09-08T16:50:34.600Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mfilm77/omarchy-keypad",
+        "pluginIds": [
+          "io.github.mfilm77.keypad"
+        ],
+        "commit": "165ecb5273ea3ca755e0f7b118bdf149c8f45af7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-08T16:50:34.600Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T16:42:45.583Z",
+        "requestEventId": 30771196969,
+        "requestedAt": "2026-09-08T16:49:21Z",
+        "reviewedAt": "2026-09-08T16:50:34.600Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mfilm77.keypad": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
