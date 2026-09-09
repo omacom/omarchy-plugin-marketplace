@@ -146612,6 +146612,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/evindor/keystroke",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:23:08.579Z",
+      "listingValidatedCommit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+      "listingValidatedAt": "2026-09-09T01:23:08.579Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "evindor/keystroke",
+        "pluginIds": [
+          "evindor.keystroke"
+        ],
+        "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+        "checkedAt": "2026-09-09T01:23:08.495Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "evindor/keystroke",
+        "pluginIds": [
+          "evindor.keystroke"
+        ],
+        "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T01:23:08.495Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T13:06:55.152Z",
+        "requestEventId": 30795202044,
+        "requestedAt": "2026-09-09T01:22:02Z",
+        "reviewedAt": "2026-09-09T01:23:08.495Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "evindor.keystroke": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
