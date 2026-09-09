@@ -147762,6 +147762,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pxllbt/better-screen-recorder-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T16:02:31.426Z",
+      "listingValidatedCommit": "7936a7cf53452c42e1fd2ad3d2388471665778d3",
+      "listingValidatedAt": "2026-09-09T16:02:31.426Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pxllbt/better-screen-recorder-omarchy",
+        "pluginIds": [
+          "io.github.pxllbt.gpu-screen-recorder"
+        ],
+        "commit": "7936a7cf53452c42e1fd2ad3d2388471665778d3",
+        "checkedAt": "2026-09-09T16:02:31.348Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pxllbt/better-screen-recorder-omarchy",
+        "pluginIds": [
+          "io.github.pxllbt.gpu-screen-recorder"
+        ],
+        "commit": "7936a7cf53452c42e1fd2ad3d2388471665778d3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T16:02:31.348Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T08:39:33.649Z",
+        "requestEventId": 30842058252,
+        "requestedAt": "2026-09-09T16:01:21Z",
+        "reviewedAt": "2026-09-09T16:02:31.348Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.pxllbt.gpu-screen-recorder": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
