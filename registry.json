@@ -146578,6 +146578,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/h3nr1-d14z/omarchy-jenkins",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:13:08.005Z",
+      "listingValidatedCommit": "429e2de03d7a97bafd7fecb19cbaca9005237e5b",
+      "listingValidatedAt": "2026-09-09T01:13:08.005Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "h3nr1-d14z/omarchy-jenkins",
+        "pluginIds": [
+          "h3nr1.d14z.jenkins"
+        ],
+        "commit": "429e2de03d7a97bafd7fecb19cbaca9005237e5b",
+        "checkedAt": "2026-09-09T01:13:07.943Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "h3nr1.d14z.jenkins": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
