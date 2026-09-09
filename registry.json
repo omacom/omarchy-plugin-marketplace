@@ -147287,6 +147287,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ahmed-Sinkeat/keysmith",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T02:31:50.398Z",
+      "listingValidatedCommit": "64b9f2cee2dd5857de74ba1a61f5190a7f7a0d26",
+      "listingValidatedAt": "2026-09-09T02:31:50.398Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ahmed-sinkeat/keysmith",
+        "pluginIds": [
+          "sinkeat.keysmith"
+        ],
+        "commit": "64b9f2cee2dd5857de74ba1a61f5190a7f7a0d26",
+        "checkedAt": "2026-09-09T02:31:50.326Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sinkeat.keysmith": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
