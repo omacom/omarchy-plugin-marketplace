@@ -147607,6 +147607,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidkim-sometimes-davekim/omarchy-capture",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T15:31:56.974Z",
+      "listingValidatedCommit": "bccb0c82bd1eff3cb8b762b7687ffef12d0eac33",
+      "listingValidatedAt": "2026-09-09T15:31:56.974Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidkim-sometimes-davekim/omarchy-capture",
+        "pluginIds": [
+          "io.github.davidkim-sometimes-davekim.capture"
+        ],
+        "commit": "bccb0c82bd1eff3cb8b762b7687ffef12d0eac33",
+        "checkedAt": "2026-09-09T15:31:56.905Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.davidkim-sometimes-davekim.capture": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
