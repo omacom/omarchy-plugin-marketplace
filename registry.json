@@ -146677,6 +146677,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/luinbytes/omarchy-dynamic-island",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:28:19.601Z",
+      "listingValidatedCommit": "2061ece13593d945b1e64da7b24d477adfb8bdf8",
+      "listingValidatedAt": "2026-09-09T01:28:19.601Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "luinbytes/omarchy-dynamic-island",
+        "pluginIds": [
+          "luinbytes.island"
+        ],
+        "commit": "2061ece13593d945b1e64da7b24d477adfb8bdf8",
+        "checkedAt": "2026-09-09T01:28:19.530Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "luinbytes/omarchy-dynamic-island",
+        "pluginIds": [
+          "luinbytes.island"
+        ],
+        "commit": "2061ece13593d945b1e64da7b24d477adfb8bdf8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T01:28:19.530Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T01:22:42.816Z",
+        "requestEventId": 30795418153,
+        "requestedAt": "2026-09-09T01:27:13Z",
+        "reviewedAt": "2026-09-09T01:28:19.530Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "luinbytes.island": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
