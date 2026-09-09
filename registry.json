@@ -147857,6 +147857,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MichaelCodeToLimit/omarchy-tea-counter",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T16:16:13.996Z",
+      "listingValidatedCommit": "4e1bd93499fb3616780b9e3640706e4196633278",
+      "listingValidatedAt": "2026-09-09T16:16:13.996Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "michaelcodetolimit/omarchy-tea-counter",
+        "pluginIds": [
+          "michael.tea"
+        ],
+        "commit": "4e1bd93499fb3616780b9e3640706e4196633278",
+        "checkedAt": "2026-09-09T16:16:13.928Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "michael.tea": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
