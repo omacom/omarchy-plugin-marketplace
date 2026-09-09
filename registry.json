@@ -147705,6 +147705,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/radres/omarchy-plugin-call-me",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T15:52:51.126Z",
+      "listingValidatedCommit": "bc64880d2db28252e7726cb1375f89a6b8f8286f",
+      "listingValidatedAt": "2026-09-09T15:52:51.126Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "radres/omarchy-plugin-call-me",
+        "pluginIds": [
+          "radres.call-me"
+        ],
+        "commit": "bc64880d2db28252e7726cb1375f89a6b8f8286f",
+        "checkedAt": "2026-09-09T15:52:51.048Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "radres/omarchy-plugin-call-me",
+        "pluginIds": [
+          "radres.call-me"
+        ],
+        "commit": "bc64880d2db28252e7726cb1375f89a6b8f8286f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T15:52:51.048Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T06:46:44.648Z",
+        "requestEventId": 30841429197,
+        "requestedAt": "2026-09-09T15:51:38Z",
+        "reviewedAt": "2026-09-09T15:52:51.048Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "radres.call-me": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
