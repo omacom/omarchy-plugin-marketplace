@@ -147924,6 +147924,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/POSO-PocketSolutions/omarchy-backup-history",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T16:26:48.245Z",
+      "listingValidatedCommit": "896d7c13c61a8a748e53d1c953d46f51e9f54516",
+      "listingValidatedAt": "2026-09-09T16:26:48.245Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "poso-pocketsolutions/omarchy-backup-history",
+        "pluginIds": [
+          "io.github.mnsosa.backup-history"
+        ],
+        "commit": "896d7c13c61a8a748e53d1c953d46f51e9f54516",
+        "checkedAt": "2026-09-09T16:26:48.168Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "poso-pocketsolutions/omarchy-backup-history",
+        "pluginIds": [
+          "io.github.mnsosa.backup-history"
+        ],
+        "commit": "896d7c13c61a8a748e53d1c953d46f51e9f54516",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T16:26:48.168Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T03:44:18.983Z",
+        "requestEventId": 30843558443,
+        "requestedAt": "2026-09-09T16:25:42Z",
+        "reviewedAt": "2026-09-09T16:26:48.168Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mnsosa.backup-history": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
