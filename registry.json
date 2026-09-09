@@ -147640,6 +147640,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/scrambletools/omarchy-zmk-battery",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T15:36:24.779Z",
+      "listingValidatedCommit": "8a552797547366b80ca9c8ba33180c23232851b3",
+      "listingValidatedAt": "2026-09-09T15:36:24.779Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "scrambletools/omarchy-zmk-battery",
+        "pluginIds": [
+          "io.github.scrambletools.zmk-battery"
+        ],
+        "commit": "8a552797547366b80ca9c8ba33180c23232851b3",
+        "checkedAt": "2026-09-09T15:36:24.702Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.scrambletools.zmk-battery": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
