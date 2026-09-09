@@ -146311,6 +146311,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/oliwier-xiao/agent-skills-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:48:39.984Z",
+      "listingValidatedCommit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
+      "listingValidatedAt": "2026-09-09T00:48:39.984Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "oliwier-xiao/agent-skills-manager",
+        "pluginIds": [
+          "oliwier.agent-skills-manager"
+        ],
+        "commit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
+        "checkedAt": "2026-09-09T00:48:39.907Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "oliwier.agent-skills-manager": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
