@@ -146031,6 +146031,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/clartek/omamesh",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:07:24.001Z",
+      "listingValidatedCommit": "c25e63efaadc1a1eeecab228b9b91f1dd5392190",
+      "listingValidatedAt": "2026-09-09T00:07:24.001Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "clartek/omamesh",
+        "pluginIds": [
+          "clartek.omamesh"
+        ],
+        "commit": "c25e63efaadc1a1eeecab228b9b91f1dd5392190",
+        "checkedAt": "2026-09-09T00:07:23.924Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "clartek/omamesh",
+        "pluginIds": [
+          "clartek.omamesh"
+        ],
+        "commit": "c25e63efaadc1a1eeecab228b9b91f1dd5392190",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T00:07:23.924Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T16:55:32.367Z",
+        "requestEventId": 30792405812,
+        "requestedAt": "2026-09-09T00:06:22Z",
+        "reviewedAt": "2026-09-09T00:07:23.924Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "clartek.omamesh": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
