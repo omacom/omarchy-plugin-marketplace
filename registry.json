@@ -146802,6 +146802,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dreed47/omarchy-print-center",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:40:33.009Z",
+      "listingValidatedCommit": "633b6e73d4efc53d42686bb6b56be9fc92c267a1",
+      "listingValidatedAt": "2026-09-09T01:40:33.009Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dreed47/omarchy-print-center",
+        "pluginIds": [
+          "io.github.dreed47.print-center"
+        ],
+        "commit": "633b6e73d4efc53d42686bb6b56be9fc92c267a1",
+        "checkedAt": "2026-09-09T01:40:32.940Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dreed47/omarchy-print-center",
+        "pluginIds": [
+          "io.github.dreed47.print-center"
+        ],
+        "commit": "633b6e73d4efc53d42686bb6b56be9fc92c267a1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T01:40:32.940Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T23:40:09.821Z",
+        "requestEventId": 30795930174,
+        "requestedAt": "2026-09-09T01:39:31Z",
+        "reviewedAt": "2026-09-09T01:40:32.940Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dreed47.print-center": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
