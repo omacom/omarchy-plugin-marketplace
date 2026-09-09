@@ -147434,6 +147434,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jeremielumandong/omarchy-screenhop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T02:44:35.627Z",
+      "listingValidatedCommit": "764fc51ee30f6a3a6e6c47c9bb3dd4acfbabdced",
+      "listingValidatedAt": "2026-09-09T02:44:35.627Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jeremielumandong/omarchy-screenhop",
+        "pluginIds": [
+          "arkane.screenhop"
+        ],
+        "commit": "764fc51ee30f6a3a6e6c47c9bb3dd4acfbabdced",
+        "checkedAt": "2026-09-09T02:44:35.543Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jeremielumandong/omarchy-screenhop",
+        "pluginIds": [
+          "arkane.screenhop"
+        ],
+        "commit": "764fc51ee30f6a3a6e6c47c9bb3dd4acfbabdced",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T02:44:35.543Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T01:59:04.697Z",
+        "requestEventId": 30798369443,
+        "requestedAt": "2026-09-09T02:43:19Z",
+        "reviewedAt": "2026-09-09T02:44:35.543Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "arkane.screenhop": {
+          "category": "Developer Tools",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
