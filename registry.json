@@ -147673,6 +147673,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/miharekar/omarchy-studio-display-auto-brightness",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T15:43:58.948Z",
+      "listingValidatedCommit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
+      "listingValidatedAt": "2026-09-09T15:43:58.948Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "miharekar/omarchy-studio-display-auto-brightness",
+        "pluginIds": [
+          "miharekar.studio-display-auto-brightness"
+        ],
+        "commit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
+        "checkedAt": "2026-09-09T15:43:58.873Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "miharekar.studio-display-auto-brightness": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
