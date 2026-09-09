@@ -147983,6 +147983,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jhonoryza/omarchy-steam-progress",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T16:34:06.531Z",
+      "listingValidatedCommit": "49daf3ffd85239724432057aed19921a4211c216",
+      "listingValidatedAt": "2026-09-09T16:34:06.531Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jhonoryza/omarchy-steam-progress",
+        "pluginIds": [
+          "vm.steam-progress"
+        ],
+        "commit": "49daf3ffd85239724432057aed19921a4211c216",
+        "checkedAt": "2026-09-09T16:34:06.463Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "vm.steam-progress": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
