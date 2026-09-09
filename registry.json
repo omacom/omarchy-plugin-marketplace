@@ -147321,6 +147321,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/coxdylan7/life-alert",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T02:35:58.395Z",
+      "listingValidatedCommit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+      "listingValidatedAt": "2026-09-09T02:35:58.395Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "coxdylan7/life-alert",
+        "pluginIds": [
+          "djc.life-alert"
+        ],
+        "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+        "checkedAt": "2026-09-09T02:35:58.327Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "coxdylan7/life-alert",
+        "pluginIds": [
+          "djc.life-alert"
+        ],
+        "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T02:35:58.327Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T01:37:59.303Z",
+        "requestEventId": 30798084175,
+        "requestedAt": "2026-09-09T02:34:56Z",
+        "reviewedAt": "2026-09-09T02:35:58.327Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "djc.life-alert": {
+          "category": "System",
+          "tags": [
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
