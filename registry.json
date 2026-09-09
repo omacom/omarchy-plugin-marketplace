@@ -148049,6 +148049,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jhaney3/omarchy-bluetooth-modes",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T16:46:52.853Z",
+      "listingValidatedCommit": "faf293f558aad3021cda748e295f98c526b2017f",
+      "listingValidatedAt": "2026-09-09T16:46:52.853Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jhaney3/omarchy-bluetooth-modes",
+        "pluginIds": [
+          "io.github.jhaney3.bluetooth-modes"
+        ],
+        "commit": "faf293f558aad3021cda748e295f98c526b2017f",
+        "checkedAt": "2026-09-09T16:46:52.774Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jhaney3.bluetooth-modes": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
