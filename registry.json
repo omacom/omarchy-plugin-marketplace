@@ -146345,6 +146345,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jcputney/omarchy-media-float-plex",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:54:10.378Z",
+      "listingValidatedCommit": "a0028382d726e69051875da9dcb79bc188d0c328",
+      "listingValidatedAt": "2026-09-09T00:54:10.378Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jcputney/omarchy-media-float-plex",
+        "pluginIds": [
+          "io.github.jcputney.media-float-plex"
+        ],
+        "commit": "a0028382d726e69051875da9dcb79bc188d0c328",
+        "checkedAt": "2026-09-09T00:54:10.305Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jcputney/omarchy-media-float-plex",
+        "pluginIds": [
+          "io.github.jcputney.media-float-plex"
+        ],
+        "commit": "a0028382d726e69051875da9dcb79bc188d0c328",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T00:54:10.305Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T23:34:59.549Z",
+        "requestEventId": 30794096173,
+        "requestedAt": "2026-09-09T00:53:06Z",
+        "reviewedAt": "2026-09-09T00:54:10.306Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jcputney.media-float-plex": {
+          "category": "Desktop",
+          "tags": [
+            "media",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
