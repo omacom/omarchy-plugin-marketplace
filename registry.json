@@ -147048,6 +147048,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/eszanon/omarchy-herdr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:57:14.230Z",
+      "listingValidatedCommit": "0e744e99240f0f7c3329d6965c6d50ccb0ad58aa",
+      "listingValidatedAt": "2026-09-09T01:57:14.230Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eszanon/omarchy-herdr",
+        "pluginIds": [
+          "io.github.eszanon.herdr"
+        ],
+        "commit": "0e744e99240f0f7c3329d6965c6d50ccb0ad58aa",
+        "checkedAt": "2026-09-09T01:57:14.156Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.eszanon.herdr": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
