@@ -146177,6 +146177,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/l1qu1d/themertoggle",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:18:48.027Z",
+      "listingValidatedCommit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
+      "listingValidatedAt": "2026-09-09T00:18:48.027Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "l1qu1d/themertoggle",
+        "pluginIds": [
+          "io.github.l1qu1d.themertoggle"
+        ],
+        "commit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
+        "checkedAt": "2026-09-09T00:18:47.952Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.l1qu1d.themertoggle": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
