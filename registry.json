@@ -146985,6 +146985,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/modpunk/omarchy-help",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:53:53.481Z",
+      "listingValidatedCommit": "851e471db704e4310e83f878de9180ab888e5c56",
+      "listingValidatedAt": "2026-09-09T01:53:53.481Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "modpunk/omarchy-help",
+        "pluginIds": [
+          "io.github.modpunk.omarchy-help"
+        ],
+        "commit": "851e471db704e4310e83f878de9180ab888e5c56",
+        "checkedAt": "2026-09-09T01:53:53.407Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "modpunk/omarchy-help",
+        "pluginIds": [
+          "io.github.modpunk.omarchy-help"
+        ],
+        "commit": "851e471db704e4310e83f878de9180ab888e5c56",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T01:53:53.407Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T01:36:32.894Z",
+        "requestEventId": 30796534297,
+        "requestedAt": "2026-09-09T01:52:51Z",
+        "reviewedAt": "2026-09-09T01:53:53.407Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.modpunk.omarchy-help": {
+          "category": "System",
+          "tags": [
+            "ai",
+            "education",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
