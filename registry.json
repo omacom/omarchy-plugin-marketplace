@@ -147228,6 +147228,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marty-schneider/sports-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T02:23:24.846Z",
+      "listingValidatedCommit": "128a5f46ad87d4c59a79bbba67d20936debcfb6f",
+      "listingValidatedAt": "2026-09-09T02:23:24.846Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marty-schneider/sports-tracker",
+        "pluginIds": [
+          "io.github.marty-schneider.sports-tracker"
+        ],
+        "commit": "128a5f46ad87d4c59a79bbba67d20936debcfb6f",
+        "checkedAt": "2026-09-09T02:23:24.761Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "marty-schneider/sports-tracker",
+        "pluginIds": [
+          "io.github.marty-schneider.sports-tracker"
+        ],
+        "commit": "128a5f46ad87d4c59a79bbba67d20936debcfb6f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T02:23:24.761Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T01:48:39.878Z",
+        "requestEventId": 30797639439,
+        "requestedAt": "2026-09-09T02:22:18Z",
+        "reviewedAt": "2026-09-09T02:23:24.762Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.marty-schneider.sports-tracker": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
