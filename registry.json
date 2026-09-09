@@ -146734,6 +146734,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vladimirstempel/omapen",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:32:00.329Z",
+      "listingValidatedCommit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
+      "listingValidatedAt": "2026-09-09T01:32:00.329Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vladimirstempel/omapen",
+        "pluginIds": [
+          "omapen"
+        ],
+        "commit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
+        "checkedAt": "2026-09-09T01:32:00.250Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omapen": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
