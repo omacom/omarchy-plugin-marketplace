@@ -147377,6 +147377,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mythopoios/omarchy-stream-view",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T02:39:57.425Z",
+      "listingValidatedCommit": "9928856fe65cd86ae870e813f14258ec4a9ef6ac",
+      "listingValidatedAt": "2026-09-09T02:39:57.425Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mythopoios/omarchy-stream-view",
+        "pluginIds": [
+          "io.github.mythopoios.stream-view"
+        ],
+        "commit": "9928856fe65cd86ae870e813f14258ec4a9ef6ac",
+        "checkedAt": "2026-09-09T02:39:57.352Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mythopoios/omarchy-stream-view",
+        "pluginIds": [
+          "io.github.mythopoios.stream-view"
+        ],
+        "commit": "9928856fe65cd86ae870e813f14258ec4a9ef6ac",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T02:39:57.352Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T01:45:54.361Z",
+        "requestEventId": 30798212085,
+        "requestedAt": "2026-09-09T02:38:46Z",
+        "reviewedAt": "2026-09-09T02:39:57.352Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mythopoios.stream-view": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
