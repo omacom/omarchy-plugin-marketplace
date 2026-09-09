@@ -146279,6 +146279,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/blafusel/omarchy-wm-actions",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:31:55.914Z",
+      "listingValidatedCommit": "286c577c4882f05f0fd0445fb5ebeb93044dc1e4",
+      "listingValidatedAt": "2026-09-09T00:31:55.914Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "blafusel/omarchy-wm-actions",
+        "pluginIds": [
+          "io.github.blafusel.wm-actions"
+        ],
+        "commit": "286c577c4882f05f0fd0445fb5ebeb93044dc1e4",
+        "checkedAt": "2026-09-09T00:31:55.836Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.blafusel.wm-actions": {
+          "category": "System",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
