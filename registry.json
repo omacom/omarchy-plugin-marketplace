@@ -146404,6 +146404,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jcputney/omarchy-media-float-twitch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:58:01.610Z",
+      "listingValidatedCommit": "5044c255501f8eb787dccc6a2cf06189e25ee5d9",
+      "listingValidatedAt": "2026-09-09T00:58:01.610Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jcputney/omarchy-media-float-twitch",
+        "pluginIds": [
+          "io.github.jcputney.media-float-twitch"
+        ],
+        "commit": "5044c255501f8eb787dccc6a2cf06189e25ee5d9",
+        "checkedAt": "2026-09-09T00:58:01.538Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jcputney/omarchy-media-float-twitch",
+        "pluginIds": [
+          "io.github.jcputney.media-float-twitch"
+        ],
+        "commit": "5044c255501f8eb787dccc6a2cf06189e25ee5d9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T00:58:01.538Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T23:35:18.612Z",
+        "requestEventId": 30794236362,
+        "requestedAt": "2026-09-09T00:56:57Z",
+        "reviewedAt": "2026-09-09T00:58:01.538Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jcputney.media-float-twitch": {
+          "category": "Desktop",
+          "tags": [
+            "media",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
