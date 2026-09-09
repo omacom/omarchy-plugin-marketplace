@@ -146211,6 +146211,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ErikBurdett/omarchy-diskspace",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T00:22:10.687Z",
+      "listingValidatedCommit": "27e486efb9bad5c98fe976161cae04630419c1dd",
+      "listingValidatedAt": "2026-09-09T00:22:10.687Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erikburdett/omarchy-diskspace",
+        "pluginIds": [
+          "io.github.erikburdett.diskspace"
+        ],
+        "commit": "27e486efb9bad5c98fe976161cae04630419c1dd",
+        "checkedAt": "2026-09-09T00:22:10.610Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.erikburdett.diskspace": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
