@@ -146865,6 +146865,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bussdeeAI/at.familienfabrik_omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-09",
+      "listedAt": "2026-09-09T01:45:50.865Z",
+      "listingValidatedCommit": "eccd60bf3d1a02e6ab5fdc969e6fd728d743e043",
+      "listingValidatedAt": "2026-09-09T01:45:50.865Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bussdeeai/at.familienfabrik_omarchy",
+        "pluginIds": [
+          "at.familienfabrik.omarchy"
+        ],
+        "commit": "eccd60bf3d1a02e6ab5fdc969e6fd728d743e043",
+        "checkedAt": "2026-09-09T01:45:50.783Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bussdeeai/at.familienfabrik_omarchy",
+        "pluginIds": [
+          "at.familienfabrik.omarchy"
+        ],
+        "commit": "eccd60bf3d1a02e6ab5fdc969e6fd728d743e043",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-09T01:45:50.783Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T23:26:35.609Z",
+        "requestEventId": 30796176823,
+        "requestedAt": "2026-09-09T01:44:40Z",
+        "reviewedAt": "2026-09-09T01:45:50.783Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "at.familienfabrik.omarchy": {
+          "category": "Other",
+          "tags": [
+            "hyprland",
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
