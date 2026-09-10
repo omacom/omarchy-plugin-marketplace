@@ -153375,6 +153375,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/powerk1977/openhab-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T22:19:07.500Z",
+      "listingValidatedCommit": "6d24e4e171023baadf19ed67be1762354419baca",
+      "listingValidatedAt": "2026-09-10T22:19:07.500Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "powerk1977/openhab-omarchy",
+        "pluginIds": [
+          "io.github.powerk1977.openhab"
+        ],
+        "commit": "6d24e4e171023baadf19ed67be1762354419baca",
+        "checkedAt": "2026-09-10T22:19:07.443Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.powerk1977.openhab": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
