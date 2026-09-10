@@ -149307,6 +149307,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gmantoha/omarchy-claude-effort",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T15:47:21.038Z",
+      "listingValidatedCommit": "15da23aa2c984d576f0e41e9efb44028fbe97170",
+      "listingValidatedAt": "2026-09-10T15:47:21.038Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gmantoha/omarchy-claude-effort",
+        "pluginIds": [
+          "io.github.gmantoha.claude-effort"
+        ],
+        "commit": "15da23aa2c984d576f0e41e9efb44028fbe97170",
+        "checkedAt": "2026-09-10T15:47:20.960Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gmantoha/omarchy-claude-effort",
+        "pluginIds": [
+          "io.github.gmantoha.claude-effort"
+        ],
+        "commit": "15da23aa2c984d576f0e41e9efb44028fbe97170",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T15:47:20.960Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T09:33:07.799Z",
+        "requestEventId": 30914161092,
+        "requestedAt": "2026-09-10T15:46:06Z",
+        "reviewedAt": "2026-09-10T15:47:20.960Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.gmantoha.claude-effort": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
