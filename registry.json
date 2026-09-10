@@ -151025,6 +151025,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wisangdg/omarchy-magnify-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:10:04.825Z",
+      "listingValidatedCommit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
+      "listingValidatedAt": "2026-09-10T19:10:04.825Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wisangdg/omarchy-magnify-dock",
+        "pluginIds": [
+          "wdg.dock"
+        ],
+        "commit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
+        "checkedAt": "2026-09-10T19:10:04.743Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "wdg.dock": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
