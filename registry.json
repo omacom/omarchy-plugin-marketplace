@@ -60895,8 +60895,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T15:39:41.235Z",
-      "listingValidatedCommit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
-      "listingValidatedAt": "2026-08-24T15:39:41.235Z",
+      "listingValidatedCommit": "e97ecd2384e06ee173104d5ea22fbda80b4c10b6",
+      "listingValidatedAt": "2026-09-10T21:16:16.286Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -60905,8 +60905,8 @@
         "pluginIds": [
           "io.github.rohan-patnaik.zenpdf"
         ],
-        "commit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
-        "checkedAt": "2026-08-24T15:39:41.209Z",
+        "commit": "e97ecd2384e06ee173104d5ea22fbda80b4c10b6",
+        "checkedAt": "2026-09-10T21:16:16.286Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -60915,29 +60915,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "rohan-patnaik/zenpdf",
-        "pluginIds": [
-          "io.github.rohan-patnaik.zenpdf"
-        ],
-        "commit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-24T15:39:41.209Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-24T13:47:12.562Z",
-        "requestEventId": 29923247963,
-        "requestedAt": "2026-08-24T15:36:41Z",
-        "reviewedAt": "2026-08-24T15:39:41.209Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.rohan-patnaik.zenpdf": {
@@ -60953,7 +60930,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rohan-patnaik/zenpdf",
+        "pluginIds": [
+          "io.github.rohan-patnaik.zenpdf"
+        ],
+        "commit": "e97ecd2384e06ee173104d5ea22fbda80b4c10b6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:16:16.286Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T06:51:03.437Z",
+        "requestEventId": 30929848593,
+        "requestedAt": "2026-09-10T20:31:26Z",
+        "reviewedAt": "2026-09-10T21:16:16.286Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
+          "validatedAt": "2026-08-24T15:39:41.235Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:16:16.286Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rohan-patnaik/zenpdf",
+            "pluginIds": [
+              "io.github.rohan-patnaik.zenpdf"
+            ],
+            "commit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
+            "checkedAt": "2026-08-24T15:39:41.209Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "rohan-patnaik/zenpdf",
+            "pluginIds": [
+              "io.github.rohan-patnaik.zenpdf"
+            ],
+            "commit": "5426d12462a6ec2bc419dd00b5573b7df9bc609c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-24T15:39:41.209Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-24T13:47:12.562Z",
+            "requestEventId": 29923247963,
+            "requestedAt": "2026-08-24T15:36:41Z",
+            "reviewedAt": "2026-08-24T15:39:41.209Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Kristijan-K/omarchy-youtube-suggester",
