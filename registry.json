@@ -59651,8 +59651,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T06:53:29.792Z",
-      "listingValidatedCommit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
-      "listingValidatedAt": "2026-08-24T06:53:29.792Z",
+      "listingValidatedCommit": "bd1980fd1879d4d215397e6ce0ae75b0fe1bfa9b",
+      "listingValidatedAt": "2026-09-10T21:13:44.249Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -59661,8 +59661,8 @@
         "pluginIds": [
           "io.github.rohan-patnaik.solitaire"
         ],
-        "commit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
-        "checkedAt": "2026-08-24T06:53:29.758Z",
+        "commit": "bd1980fd1879d4d215397e6ce0ae75b0fe1bfa9b",
+        "checkedAt": "2026-09-10T21:13:44.249Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -59670,28 +59670,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "rohan-patnaik/solitaire",
-        "pluginIds": [
-          "io.github.rohan-patnaik.solitaire"
-        ],
-        "commit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-24T06:53:29.758Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-24T05:39:42.998Z",
-        "requestEventId": 29896273649,
-        "requestedAt": "2026-08-24T06:53:12Z",
-        "reviewedAt": "2026-08-24T06:53:29.758Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.rohan-patnaik.solitaire": {
@@ -59707,7 +59685,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rohan-patnaik/solitaire",
+        "pluginIds": [
+          "io.github.rohan-patnaik.solitaire"
+        ],
+        "commit": "bd1980fd1879d4d215397e6ce0ae75b0fe1bfa9b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:13:44.249Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T06:51:05.879Z",
+        "requestEventId": 30929841693,
+        "requestedAt": "2026-09-10T20:31:18Z",
+        "reviewedAt": "2026-09-10T21:13:44.249Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
+          "validatedAt": "2026-08-24T06:53:29.792Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:13:44.249Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rohan-patnaik/solitaire",
+            "pluginIds": [
+              "io.github.rohan-patnaik.solitaire"
+            ],
+            "commit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
+            "checkedAt": "2026-08-24T06:53:29.758Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "rohan-patnaik/solitaire",
+            "pluginIds": [
+              "io.github.rohan-patnaik.solitaire"
+            ],
+            "commit": "0b6325f847cb72cf8ed9c0e9d2641525380c6464",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-24T06:53:29.758Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-24T05:39:42.998Z",
+            "requestEventId": 29896273649,
+            "requestedAt": "2026-08-24T06:53:12Z",
+            "reviewedAt": "2026-08-24T06:53:29.758Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chameleonbr/omarchy_superrun",
