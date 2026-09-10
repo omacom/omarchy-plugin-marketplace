@@ -116746,8 +116746,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T18:15:58.543Z",
-      "listingValidatedCommit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
-      "listingValidatedAt": "2026-09-02T18:15:58.543Z",
+      "listingValidatedCommit": "f22fd73223befc47d39f9cb636cd31cc0a057768",
+      "listingValidatedAt": "2026-09-10T18:00:09.051Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -116756,8 +116756,8 @@
         "pluginIds": [
           "io.github.imryiuk.workspace-profiles"
         ],
-        "commit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
-        "checkedAt": "2026-09-02T18:15:58.499Z",
+        "commit": "f22fd73223befc47d39f9cb636cd31cc0a057768",
+        "checkedAt": "2026-09-10T18:00:09.051Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -116765,28 +116765,6 @@
           "remote-build",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "imryiuk/omarchy-workspace-profiles",
-        "pluginIds": [
-          "io.github.imryiuk.workspace-profiles"
-        ],
-        "commit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T18:15:58.499Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T12:02:39.203Z",
-        "requestEventId": 30435669466,
-        "requestedAt": "2026-09-02T18:06:15Z",
-        "reviewedAt": "2026-09-02T18:15:58.499Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.imryiuk.workspace-profiles": {
@@ -116802,7 +116780,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imryiuk/omarchy-workspace-profiles",
+        "pluginIds": [
+          "io.github.imryiuk.workspace-profiles"
+        ],
+        "commit": "f22fd73223befc47d39f9cb636cd31cc0a057768",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:00:09.051Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T18:27:13.960Z",
+        "requestEventId": 30920342742,
+        "requestedAt": "2026-09-10T17:34:19Z",
+        "reviewedAt": "2026-09-10T18:00:09.051Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
+          "validatedAt": "2026-09-02T18:15:58.543Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:00:09.051Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "imryiuk/omarchy-workspace-profiles",
+            "pluginIds": [
+              "io.github.imryiuk.workspace-profiles"
+            ],
+            "commit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
+            "checkedAt": "2026-09-02T18:15:58.499Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "imryiuk/omarchy-workspace-profiles",
+            "pluginIds": [
+              "io.github.imryiuk.workspace-profiles"
+            ],
+            "commit": "d6a4e2a6d02b02aeee7121ef9f50cd733d93f526",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T18:15:58.499Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T12:02:39.203Z",
+            "requestEventId": 30435669466,
+            "requestedAt": "2026-09-02T18:06:15Z",
+            "reviewedAt": "2026-09-02T18:15:58.499Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/taisau/omarchy-bottom-launcher",
