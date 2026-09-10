@@ -151093,6 +151093,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cbennudr/videodevices_quickshell_plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:15:22.433Z",
+      "listingValidatedCommit": "a389f6f0aba075031de61d871b609af320f28df0",
+      "listingValidatedAt": "2026-09-10T19:15:22.433Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cbennudr/videodevices_quickshell_plugin",
+        "pluginIds": [
+          "connor.videodevices"
+        ],
+        "commit": "a389f6f0aba075031de61d871b609af320f28df0",
+        "checkedAt": "2026-09-10T19:15:22.358Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cbennudr/videodevices_quickshell_plugin",
+        "pluginIds": [
+          "connor.videodevices"
+        ],
+        "commit": "a389f6f0aba075031de61d871b609af320f28df0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:15:22.358Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T01:58:03.534Z",
+        "requestEventId": 30923546146,
+        "requestedAt": "2026-09-10T18:33:19Z",
+        "reviewedAt": "2026-09-10T19:15:22.358Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "connor.videodevices": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
