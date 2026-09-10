@@ -6959,8 +6959,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T12:01:57.095Z",
-      "listingValidatedCommit": "10407a6b4d4b7a728ab33742490de6c4dcd499dc",
-      "listingValidatedAt": "2026-08-22T14:48:04.077Z",
+      "listingValidatedCommit": "06e1c6ae8606c34fa532bff828e9d1763546891d",
+      "listingValidatedAt": "2026-09-10T21:02:00.974Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -6969,8 +6969,8 @@
         "pluginIds": [
           "sudhakar.tomatask"
         ],
-        "commit": "10407a6b4d4b7a728ab33742490de6c4dcd499dc",
-        "checkedAt": "2026-08-22T14:48:04.077Z",
+        "commit": "06e1c6ae8606c34fa532bff828e9d1763546891d",
+        "checkedAt": "2026-09-10T21:02:00.974Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -6994,6 +6994,26 @@
             "version": "3",
             "commit": "65b20c29e8f4a42463f35a46bee590794822a808",
             "checkedAt": "2026-08-15T11:59:30.568Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "10407a6b4d4b7a728ab33742490de6c4dcd499dc",
+          "validatedAt": "2026-08-22T14:48:04.077Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:02:00.974Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sudhakarkarunaiprakasam/tomatask",
+            "pluginIds": [
+              "sudhakar.tomatask"
+            ],
+            "commit": "10407a6b4d4b7a728ab33742490de6c4dcd499dc",
+            "checkedAt": "2026-08-22T14:48:04.077Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
