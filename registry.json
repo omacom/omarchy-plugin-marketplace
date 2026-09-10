@@ -114541,8 +114541,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T05:41:06.877Z",
-      "listingValidatedCommit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
-      "listingValidatedAt": "2026-09-02T05:41:06.877Z",
+      "listingValidatedCommit": "8c10f8ed91fc330b5172b45d14c5756b5cc1224e",
+      "listingValidatedAt": "2026-09-10T23:32:39.125Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -114551,35 +114551,14 @@
         "pluginIds": [
           "dansmith888.cpu"
         ],
-        "commit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
-        "checkedAt": "2026-09-02T05:41:06.822Z",
+        "commit": "8c10f8ed91fc330b5172b45d14c5756b5cc1224e",
+        "checkedAt": "2026-09-10T23:32:39.125Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dansmith888/omarchy-cpu",
-        "pluginIds": [
-          "dansmith888.cpu"
-        ],
-        "commit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T05:41:06.822Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T05:20:44.265Z",
-        "requestEventId": 30393703878,
-        "requestedAt": "2026-09-02T05:39:40Z",
-        "reviewedAt": "2026-09-02T05:41:06.822Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "dansmith888.cpu": {
@@ -114591,7 +114570,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dansmith888/omarchy-cpu",
+        "pluginIds": [
+          "dansmith888.cpu"
+        ],
+        "commit": "8c10f8ed91fc330b5172b45d14c5756b5cc1224e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T23:32:39.125Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T02:01:44.136Z",
+        "requestEventId": 30937234852,
+        "requestedAt": "2026-09-10T23:19:36Z",
+        "reviewedAt": "2026-09-10T23:32:39.125Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
+          "validatedAt": "2026-09-02T05:41:06.877Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:32:39.125Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dansmith888/omarchy-cpu",
+            "pluginIds": [
+              "dansmith888.cpu"
+            ],
+            "commit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
+            "checkedAt": "2026-09-02T05:41:06.822Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dansmith888/omarchy-cpu",
+            "pluginIds": [
+              "dansmith888.cpu"
+            ],
+            "commit": "adf21ef51e6444ac0d8fbebbb35aab6243d72b7c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T05:41:06.822Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T05:20:44.265Z",
+            "requestEventId": 30393703878,
+            "requestedAt": "2026-09-02T05:39:40Z",
+            "reviewedAt": "2026-09-02T05:41:06.822Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/AdamMusa/omarchy-config-prism",
