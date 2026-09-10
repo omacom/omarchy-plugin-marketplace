@@ -153409,6 +153409,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ESHAYAT102/omawispr-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T22:28:48.447Z",
+      "listingValidatedCommit": "e33d9c415dcce7f2c2a9d4563d89a66ae231a021",
+      "listingValidatedAt": "2026-09-10T22:28:48.447Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eshayat102/omawispr-omarchy-plugin",
+        "pluginIds": [
+          "esh.omawispr"
+        ],
+        "commit": "e33d9c415dcce7f2c2a9d4563d89a66ae231a021",
+        "checkedAt": "2026-09-10T22:28:48.377Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "esh.omawispr": {
+          "category": "Appearance",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
