@@ -154073,6 +154073,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Dahep/omarchy-plugin-opencode-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T23:45:28.437Z",
+      "listingValidatedCommit": "9343c3a3000d5ee3e2bc7544911b48512cbeb1d0",
+      "listingValidatedAt": "2026-09-10T23:45:28.437Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dahep/omarchy-plugin-opencode-usage",
+        "pluginIds": [
+          "io.github.dahep.opencode-usage"
+        ],
+        "commit": "9343c3a3000d5ee3e2bc7544911b48512cbeb1d0",
+        "checkedAt": "2026-09-10T23:45:28.371Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dahep.opencode-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
