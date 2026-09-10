@@ -57642,8 +57642,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T22:10:39.575Z",
-      "listingValidatedCommit": "3074930554598e3322c54b47ca97c61f3d9618df",
-      "listingValidatedAt": "2026-08-23T22:10:39.575Z",
+      "listingValidatedCommit": "26b5abdb2aeea0f8745ee8b9cdff6c22664f6c1a",
+      "listingValidatedAt": "2026-09-10T20:16:53.244Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -57652,8 +57652,8 @@
         "pluginIds": [
           "gigor.folder"
         ],
-        "commit": "3074930554598e3322c54b47ca97c61f3d9618df",
-        "checkedAt": "2026-08-23T22:10:39.550Z",
+        "commit": "26b5abdb2aeea0f8745ee8b9cdff6c22664f6c1a",
+        "checkedAt": "2026-09-10T20:16:53.244Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -57668,7 +57668,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3074930554598e3322c54b47ca97c61f3d9618df",
+          "validatedAt": "2026-08-23T22:10:39.575Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T20:16:53.244Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gigor/omarchy-folder",
+            "pluginIds": [
+              "gigor.folder"
+            ],
+            "commit": "3074930554598e3322c54b47ca97c61f3d9618df",
+            "checkedAt": "2026-08-23T22:10:39.550Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/EF-Code/omarchy-access-profiles",
