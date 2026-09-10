@@ -149853,6 +149853,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/agata/omarchy-browser-settings",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T17:17:17.834Z",
+      "listingValidatedCommit": "3416adf9784c93831643f7b3de379c21cef96fce",
+      "listingValidatedAt": "2026-09-10T17:17:17.834Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "agata/omarchy-browser-settings",
+        "pluginIds": [
+          "io.github.agata.browser-settings"
+        ],
+        "commit": "3416adf9784c93831643f7b3de379c21cef96fce",
+        "checkedAt": "2026-09-10T17:17:17.756Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "agata/omarchy-browser-settings",
+        "pluginIds": [
+          "io.github.agata.browser-settings"
+        ],
+        "commit": "3416adf9784c93831643f7b3de379c21cef96fce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T17:17:17.756Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T17:03:51.070Z",
+        "requestEventId": 30919332253,
+        "requestedAt": "2026-09-10T17:16:10Z",
+        "reviewedAt": "2026-09-10T17:17:17.756Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.agata.browser-settings": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
