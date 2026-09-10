@@ -58396,8 +58396,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T00:42:52.835Z",
-      "listingValidatedCommit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
-      "listingValidatedAt": "2026-08-24T00:42:52.835Z",
+      "listingValidatedCommit": "26d080082da007d3b9357e93c42febe27014aace",
+      "listingValidatedAt": "2026-09-10T20:45:56.942Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -58406,8 +58406,8 @@
         "pluginIds": [
           "tyrsolution.app-launcher"
         ],
-        "commit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
-        "checkedAt": "2026-08-24T00:42:52.812Z",
+        "commit": "26d080082da007d3b9357e93c42febe27014aace",
+        "checkedAt": "2026-09-10T20:45:56.942Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -58416,29 +58416,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "tyrsolution/omarchy-app-launcher",
-        "pluginIds": [
-          "tyrsolution.app-launcher"
-        ],
-        "commit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-24T00:42:52.812Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-23T23:47:02.181Z",
-        "requestEventId": 29885620342,
-        "requestedAt": "2026-08-24T00:40:06Z",
-        "reviewedAt": "2026-08-24T00:42:52.812Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "tyrsolution.app-launcher": {
@@ -58449,7 +58426,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tyrsolution/omarchy-app-launcher",
+        "pluginIds": [
+          "tyrsolution.app-launcher"
+        ],
+        "commit": "26d080082da007d3b9357e93c42febe27014aace",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:45:56.942Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T14:12:39.159Z",
+        "requestEventId": 30929319894,
+        "requestedAt": "2026-09-10T20:21:16Z",
+        "reviewedAt": "2026-09-10T20:45:56.942Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
+          "validatedAt": "2026-08-24T00:42:52.835Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:45:56.942Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tyrsolution/omarchy-app-launcher",
+            "pluginIds": [
+              "tyrsolution.app-launcher"
+            ],
+            "commit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
+            "checkedAt": "2026-08-24T00:42:52.812Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "tyrsolution/omarchy-app-launcher",
+            "pluginIds": [
+              "tyrsolution.app-launcher"
+            ],
+            "commit": "ebf72cb8ca0059a9832da0ad3838fae44fc14769",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-24T00:42:52.812Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-23T23:47:02.181Z",
+            "requestEventId": 29885620342,
+            "requestedAt": "2026-08-24T00:40:06Z",
+            "reviewedAt": "2026-08-24T00:42:52.812Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mic-kul/quakattro",
