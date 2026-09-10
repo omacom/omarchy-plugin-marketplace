@@ -77076,8 +77076,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T20:42:20.296Z",
-      "listingValidatedCommit": "dedf14a2ab88891df66e0a54b0bf7bb273b19775",
-      "listingValidatedAt": "2026-08-26T20:42:20.296Z",
+      "listingValidatedCommit": "b169d65b11e83373cf617cd21273dea3fb2552d2",
+      "listingValidatedAt": "2026-09-10T21:21:52.077Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -77086,8 +77086,8 @@
         "pluginIds": [
           "ikekavas.ikea"
         ],
-        "commit": "dedf14a2ab88891df66e0a54b0bf7bb273b19775",
-        "checkedAt": "2026-08-26T20:42:20.272Z",
+        "commit": "b169d65b11e83373cf617cd21273dea3fb2552d2",
+        "checkedAt": "2026-09-10T21:21:52.077Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -77103,7 +77103,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "dedf14a2ab88891df66e0a54b0bf7bb273b19775",
+          "validatedAt": "2026-08-26T20:42:20.296Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:21:52.077Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ike-kavas/ikea",
+            "pluginIds": [
+              "ikekavas.ikea"
+            ],
+            "commit": "dedf14a2ab88891df66e0a54b0bf7bb273b19775",
+            "checkedAt": "2026-08-26T20:42:20.272Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nikbos/Omalive",
