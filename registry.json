@@ -129986,8 +129986,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T22:14:43.784Z",
-      "listingValidatedCommit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
-      "listingValidatedAt": "2026-09-05T22:14:43.784Z",
+      "listingValidatedCommit": "6dcdca1ecaa415e65e525ee3a428475bee33e83a",
+      "listingValidatedAt": "2026-09-10T21:04:52.016Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -129996,8 +129996,8 @@
         "pluginIds": [
           "r3mcos3.zsh-aliases"
         ],
-        "commit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
-        "checkedAt": "2026-09-05T22:14:43.717Z",
+        "commit": "6dcdca1ecaa415e65e525ee3a428475bee33e83a",
+        "checkedAt": "2026-09-10T21:04:52.016Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -130013,7 +130013,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
+          "validatedAt": "2026-09-05T22:14:43.784Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T21:04:52.016Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "r3mcos3/omarchy-zsh-alias-manager",
+            "pluginIds": [
+              "r3mcos3.zsh-aliases"
+            ],
+            "commit": "b6579b8bb7306ae882fc23f02de3e3e18477115b",
+            "checkedAt": "2026-09-05T22:14:43.717Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/owainharris/omarchy-span-wallpaper",
