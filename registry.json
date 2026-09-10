@@ -90797,8 +90797,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T20:25:59.476Z",
-      "listingValidatedCommit": "196f0a776c6b99f18dba604bf21a80913cca8eb3",
-      "listingValidatedAt": "2026-08-30T17:41:37.849Z",
+      "listingValidatedCommit": "a6100a92b50106bb3b0b96e982b46c8407d4daa0",
+      "listingValidatedAt": "2026-09-10T23:10:05.201Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -90807,8 +90807,8 @@
         "pluginIds": [
           "io.github.xgborgeso.gta6-countdown"
         ],
-        "commit": "196f0a776c6b99f18dba604bf21a80913cca8eb3",
-        "checkedAt": "2026-08-30T17:41:37.848Z",
+        "commit": "a6100a92b50106bb3b0b96e982b46c8407d4daa0",
+        "checkedAt": "2026-09-10T23:10:05.201Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -90840,6 +90840,26 @@
             ],
             "commit": "269ab6dc709d55bc80eab9781448515db6aedb27",
             "checkedAt": "2026-08-28T20:25:59.433Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "196f0a776c6b99f18dba604bf21a80913cca8eb3",
+          "validatedAt": "2026-08-30T17:41:37.849Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:10:05.201Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "xgborgeso/omarchy-gta6-countdown",
+            "pluginIds": [
+              "io.github.xgborgeso.gta6-countdown"
+            ],
+            "commit": "196f0a776c6b99f18dba604bf21a80913cca8eb3",
+            "checkedAt": "2026-08-30T17:41:37.848Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
