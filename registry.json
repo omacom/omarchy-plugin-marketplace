@@ -153474,6 +153474,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Skeptomenos/macnook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T22:54:40.963Z",
+      "listingValidatedCommit": "7d5038078c85029dcab4b96f5f3dc754f23d5105",
+      "listingValidatedAt": "2026-09-10T22:54:40.963Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "skeptomenos/macnook",
+        "pluginIds": [
+          "david.macnook"
+        ],
+        "commit": "7d5038078c85029dcab4b96f5f3dc754f23d5105",
+        "checkedAt": "2026-09-10T22:54:40.894Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "david.macnook": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
