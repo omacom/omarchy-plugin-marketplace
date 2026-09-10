@@ -148083,6 +148083,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Prathamesh913/paper-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T04:53:40.109Z",
+      "listingValidatedCommit": "dd4d84569d6358527997a0fa995ca40d0ce68bbc",
+      "listingValidatedAt": "2026-09-10T04:53:40.109Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "prathamesh913/paper-mode",
+        "pluginIds": [
+          "io.github.prathamesh913.paper-mode"
+        ],
+        "commit": "dd4d84569d6358527997a0fa995ca40d0ce68bbc",
+        "checkedAt": "2026-09-10T04:53:40.040Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "prathamesh913/paper-mode",
+        "pluginIds": [
+          "io.github.prathamesh913.paper-mode"
+        ],
+        "commit": "dd4d84569d6358527997a0fa995ca40d0ce68bbc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T04:53:40.040Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T17:59:19.193Z",
+        "requestEventId": 30876902081,
+        "requestedAt": "2026-09-10T04:52:33Z",
+        "reviewedAt": "2026-09-10T04:53:40.040Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.prathamesh913.paper-mode": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
