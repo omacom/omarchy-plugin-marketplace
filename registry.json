@@ -1798,8 +1798,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-11",
       "listedAt": "2026-08-11T14:30:44.017Z",
-      "listingValidatedCommit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
-      "listingValidatedAt": "2026-08-21T08:06:01.318Z",
+      "listingValidatedCommit": "56f1dcdd201e39cbe116d3cbe2cb22b40f394b9b",
+      "listingValidatedAt": "2026-09-10T23:29:47.607Z",
       "listingValidatedBranch": "main",
       "plugins": {
         "hass": {
@@ -1816,35 +1816,14 @@
         "pluginIds": [
           "hass"
         ],
-        "commit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
-        "checkedAt": "2026-08-21T08:06:01.317Z",
+        "commit": "56f1dcdd201e39cbe116d3cbe2cb22b40f394b9b",
+        "checkedAt": "2026-09-10T23:29:47.607Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "konradk/hass",
-        "pluginIds": [
-          "hass"
-        ],
-        "commit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-21T08:06:01.317Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-21T06:37:07.076Z",
-        "requestEventId": 29791398595,
-        "requestedAt": "2026-08-21T08:04:30Z",
-        "reviewedAt": "2026-08-21T08:06:01.318Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -1889,8 +1868,72 @@
             "reviewedAt": "2026-08-18T14:42:02.942Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
+          "validatedAt": "2026-08-21T08:06:01.318Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:29:47.607Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "konradk/hass",
+            "pluginIds": [
+              "hass"
+            ],
+            "commit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
+            "checkedAt": "2026-08-21T08:06:01.317Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "konradk/hass",
+            "pluginIds": [
+              "hass"
+            ],
+            "commit": "3901ccf77dbb0bc87c9542a66f98071e82413977",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-21T08:06:01.317Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-21T06:37:07.076Z",
+            "requestEventId": 29791398595,
+            "requestedAt": "2026-08-21T08:04:30Z",
+            "reviewedAt": "2026-08-21T08:06:01.318Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "konradk/hass",
+        "pluginIds": [
+          "hass"
+        ],
+        "commit": "56f1dcdd201e39cbe116d3cbe2cb22b40f394b9b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T23:29:47.607Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T18:54:20.617Z",
+        "requestEventId": 30937129425,
+        "requestedAt": "2026-09-10T23:16:40Z",
+        "reviewedAt": "2026-09-10T23:29:47.607Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/brianblakely/omarchy-plugins",
