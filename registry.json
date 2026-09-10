@@ -134039,8 +134039,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:55:42.300Z",
-      "listingValidatedCommit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
-      "listingValidatedAt": "2026-09-06T02:55:42.300Z",
+      "listingValidatedCommit": "e910dedbd4ff8bcd1a306b3bdb44e5e483082abb",
+      "listingValidatedAt": "2026-09-10T21:49:41.130Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -134049,8 +134049,8 @@
         "pluginIds": [
           "io.github.shirak-semonian.deepspend"
         ],
-        "commit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
-        "checkedAt": "2026-09-06T02:55:42.250Z",
+        "commit": "e910dedbd4ff8bcd1a306b3bdb44e5e483082abb",
+        "checkedAt": "2026-09-10T21:49:41.130Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -134065,7 +134065,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
+          "validatedAt": "2026-09-06T02:55:42.300Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:49:41.130Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "shirak-semonian/deepspend-omarchy-plugin",
+            "pluginIds": [
+              "io.github.shirak-semonian.deepspend"
+            ],
+            "commit": "b2537327d348c4e06f789c363edc7c0c2d4c09c1",
+            "checkedAt": "2026-09-06T02:55:42.250Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chrisroundhill/omathlete",
