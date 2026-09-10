@@ -36227,8 +36227,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T07:52:27.366Z",
-      "listingValidatedCommit": "94045039ffc15bcbf62cb0b1bb746ccd7b679357",
-      "listingValidatedAt": "2026-08-29T15:59:09.659Z",
+      "listingValidatedCommit": "5dbd5abadaba32d0333fed76798dfc7450448922",
+      "listingValidatedAt": "2026-09-10T20:22:05.250Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -36237,8 +36237,8 @@
         "pluginIds": [
           "jankeesvw.notification-center"
         ],
-        "commit": "94045039ffc15bcbf62cb0b1bb746ccd7b679357",
-        "checkedAt": "2026-08-29T15:59:09.659Z",
+        "commit": "5dbd5abadaba32d0333fed76798dfc7450448922",
+        "checkedAt": "2026-09-10T20:22:05.250Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -36309,6 +36309,26 @@
             ],
             "commit": "202f55a5adda44e7761d45c7414afac70e284d74",
             "checkedAt": "2026-08-28T22:44:49.620Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "94045039ffc15bcbf62cb0b1bb746ccd7b679357",
+          "validatedAt": "2026-08-29T15:59:09.659Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:22:05.250Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jankeesvw/omarchy-notification-center",
+            "pluginIds": [
+              "jankeesvw.notification-center"
+            ],
+            "commit": "94045039ffc15bcbf62cb0b1bb746ccd7b679357",
+            "checkedAt": "2026-08-29T15:59:09.659Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
