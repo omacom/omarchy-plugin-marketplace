@@ -7174,13 +7174,18 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T13:14:11.405Z",
-      "listingValidatedCommit": "d92284395d7c04d3395f279df998dc19e84d9660",
-      "listingValidatedAt": "2026-08-15T13:14:11.405Z",
+      "listingValidatedCommit": "926bf523c4c103b8d7c5e5b42fb426ad260cff22",
+      "listingValidatedAt": "2026-09-10T21:46:59.943Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
+        "schemaVersion": 1,
         "version": "3",
-        "commit": "d92284395d7c04d3395f279df998dc19e84d9660",
-        "checkedAt": "2026-08-15T13:13:34.034Z",
+        "repository": "thetrueferret/omarchy-decent-workspaces",
+        "pluginIds": [
+          "io.github.thetrueferret.decent-workspaces"
+        ],
+        "commit": "926bf523c4c103b8d7c5e5b42fb426ad260cff22",
+        "checkedAt": "2026-09-10T21:46:59.943Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -7194,7 +7199,24 @@
             "bar"
           ]
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d92284395d7c04d3395f279df998dc19e84d9660",
+          "validatedAt": "2026-08-15T13:14:11.405Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:46:59.943Z",
+          "automatedSecurityBaseline": {
+            "version": "3",
+            "commit": "d92284395d7c04d3395f279df998dc19e84d9660",
+            "checkedAt": "2026-08-15T13:13:34.034Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/HANCORE-linux/omarchy-bongocat",
