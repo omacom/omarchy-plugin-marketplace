@@ -126685,8 +126685,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T20:49:06.236Z",
-      "listingValidatedCommit": "68078147c1d5e957af9a68df3ec54bf39e54542e",
-      "listingValidatedAt": "2026-09-04T20:49:06.236Z",
+      "listingValidatedCommit": "852d5140c9dcb3f1f596a168993ab91d42eecc0c",
+      "listingValidatedAt": "2026-09-10T20:51:22.888Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -126695,8 +126695,8 @@
         "pluginIds": [
           "kigojomo.file-shelf"
         ],
-        "commit": "68078147c1d5e957af9a68df3ec54bf39e54542e",
-        "checkedAt": "2026-09-04T20:49:06.174Z",
+        "commit": "852d5140c9dcb3f1f596a168993ab91d42eecc0c",
+        "checkedAt": "2026-09-10T20:51:22.888Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -126712,7 +126712,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "68078147c1d5e957af9a68df3ec54bf39e54542e",
+          "validatedAt": "2026-09-04T20:49:06.236Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:51:22.888Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kigojomo/file-shelf",
+            "pluginIds": [
+              "kigojomo.file-shelf"
+            ],
+            "commit": "68078147c1d5e957af9a68df3ec54bf39e54542e",
+            "checkedAt": "2026-09-04T20:49:06.174Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/grigoryshulga/omarchy-dashboard",
