@@ -276,6 +276,16 @@ export function pluginVersionLabel(plugin) {
   return `manifest ${/^v\d/i.test(version) ? version : `v${version}`}`;
 }
 
+export function publisherLogin(plugin) {
+  try {
+    const url = new URL(plugin.repo);
+    if (url.hostname.toLowerCase() !== "github.com") return "";
+    return url.pathname.split("/").filter(Boolean)[0] || "";
+  } catch {
+    return "";
+  }
+}
+
 function fullCommit(value) {
   return /^[a-f0-9]{40}$/i.test(value || "") ? value.toLowerCase() : "";
 }

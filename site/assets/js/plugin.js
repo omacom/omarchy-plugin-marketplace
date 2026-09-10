@@ -15,6 +15,7 @@ import {
   pluginHeartButton,
   pluginVerificationDetailState,
   pluginVersionLabel,
+  publisherLogin,
   setupControlTooltips,
   setupSectionNavigation,
   setupThemeToggle,
@@ -45,6 +46,12 @@ function safeGitHubWebUrl(value) {
   } catch {
     return "";
   }
+}
+
+function authorLink(plugin) {
+  const login = publisherLogin(plugin);
+  if (!login || plugin.builtIn) return escapeHtml(plugin.author);
+  return `<a href="index.html?author=${encodeURIComponent(login)}" aria-label="Show all plugins by @${escapeHtml(login)}">${escapeHtml(plugin.author)}</a>`;
 }
 
 function marketplaceInstallAvailable(plugin) {
@@ -300,7 +307,7 @@ export function detailTemplate(plugin, engagement, {
     <article class="plugin-detail-article" style="--card-accent:${accentColor(plugin.accent)}">
       <header class="page-header" id="overview"><div class="page-eyebrow">${escapeHtml(plugin.category)}</div>
         <div class="detail-title"><span class="detail-icon">${escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
-        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${escapeHtml(plugin.author)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
+        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${authorLink(plugin)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
         ${engagementEnabled ? `<div class="detail-engagement-cluster">
           ${engagementSummary(plugin, engagement, { detail: true, pending: pendingEngagement })}
           ${pluginHeartButton(plugin, engagement, { detail: true, hearted, pending: pendingEngagement })}
@@ -424,7 +431,7 @@ async function init() {
       ? versionLabel.replace(/^manifest\s+/, "")
       : "—";
     document.querySelector("#aside-license").textContent = plugin.license || "Unknown";
-    document.querySelector("#aside-owner").textContent = plugin.author;
+    document.querySelector("#aside-owner").innerHTML = authorLink(plugin);
     if (plugin.builtIn || plugin.placeholder || !marketplaceInstallAvailable(plugin)) {
       const navigationLabel = plugin.builtIn ? plugin.officialCommandLabel : "Availability";
       document.querySelector("#aside-install-link").textContent = navigationLabel;
