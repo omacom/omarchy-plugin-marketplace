@@ -93239,8 +93239,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T18:51:32.165Z",
-      "listingValidatedCommit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
-      "listingValidatedAt": "2026-08-29T18:51:32.165Z",
+      "listingValidatedCommit": "559dd6a6ff867b64ffcf9823243a62c3a7dbe514",
+      "listingValidatedAt": "2026-09-10T21:41:40.248Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -93249,8 +93249,8 @@
         "pluginIds": [
           "jankeesvw.unifi-protect"
         ],
-        "commit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
-        "checkedAt": "2026-08-29T18:51:32.126Z",
+        "commit": "559dd6a6ff867b64ffcf9823243a62c3a7dbe514",
+        "checkedAt": "2026-09-10T21:41:40.248Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -93258,28 +93258,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jankeesvw/omarchy-unifi-protect",
-        "pluginIds": [
-          "jankeesvw.unifi-protect"
-        ],
-        "commit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T18:51:32.126Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T14:52:42.624Z",
-        "requestEventId": 30217861938,
-        "requestedAt": "2026-08-29T18:49:40Z",
-        "reviewedAt": "2026-08-29T18:51:32.127Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jankeesvw.unifi-protect": {
@@ -93291,7 +93269,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jankeesvw/omarchy-unifi-protect",
+        "pluginIds": [
+          "jankeesvw.unifi-protect"
+        ],
+        "commit": "559dd6a6ff867b64ffcf9823243a62c3a7dbe514",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:41:40.248Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T17:37:42.808Z",
+        "requestEventId": 30930105120,
+        "requestedAt": "2026-09-10T20:36:11Z",
+        "reviewedAt": "2026-09-10T21:41:40.248Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
+          "validatedAt": "2026-08-29T18:51:32.165Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:41:40.248Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jankeesvw/omarchy-unifi-protect",
+            "pluginIds": [
+              "jankeesvw.unifi-protect"
+            ],
+            "commit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
+            "checkedAt": "2026-08-29T18:51:32.126Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jankeesvw/omarchy-unifi-protect",
+            "pluginIds": [
+              "jankeesvw.unifi-protect"
+            ],
+            "commit": "8b3ffff60e37513d7ad44fd30ae34af9b02e4583",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T18:51:32.126Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T14:52:42.624Z",
+            "requestEventId": 30217861938,
+            "requestedAt": "2026-08-29T18:49:40Z",
+            "reviewedAt": "2026-08-29T18:51:32.127Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/adamcbrewer/voxtype-aura",
