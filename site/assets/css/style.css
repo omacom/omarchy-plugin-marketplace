@@ -1177,6 +1177,11 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   display: grid; align-items: center; justify-items: center; gap: 5px;
   color: var(--faint); font-size: 9px; text-align: center;
 }
+.footer-wordmark-link { display: block; border: 0; background: transparent; line-height: 0; }
+.footer-wordmark-link img {
+  display: block; width: 82px; height: 24px; image-rendering: pixelated;
+}
+.footer-wordmark-link:hover img { filter: brightness(1.15); }
 .footer-project-name {
   color: var(--text); font-weight: 600; letter-spacing: .09em; white-space: nowrap;
 }
