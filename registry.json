@@ -108809,8 +108809,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T00:18:24.390Z",
-      "listingValidatedCommit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
-      "listingValidatedAt": "2026-09-02T02:23:47.847Z",
+      "listingValidatedCommit": "b5860bf1f986929e44b7492095de1edc1b1642ec",
+      "listingValidatedAt": "2026-09-10T18:11:48.839Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -108819,8 +108819,8 @@
         "pluginIds": [
           "selmant.local-workspaces"
         ],
-        "commit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
-        "checkedAt": "2026-09-02T02:23:47.847Z",
+        "commit": "b5860bf1f986929e44b7492095de1edc1b1642ec",
+        "checkedAt": "2026-09-10T18:11:48.839Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -108842,27 +108842,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "selmant/omarchy-local-workspaces",
-        "pluginIds": [
-          "selmant.local-workspaces"
-        ],
-        "commit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T02:23:47.847Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-01T20:59:53.583Z",
-        "requestEventId": 30383411849,
-        "requestedAt": "2026-09-02T00:46:06Z",
-        "reviewedAt": "2026-09-02T02:23:47.847Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -108907,8 +108886,72 @@
             "reviewedAt": "2026-09-01T00:18:24.324Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
+          "validatedAt": "2026-09-02T02:23:47.847Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T18:11:48.839Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "selmant/omarchy-local-workspaces",
+            "pluginIds": [
+              "selmant.local-workspaces"
+            ],
+            "commit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
+            "checkedAt": "2026-09-02T02:23:47.847Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "selmant/omarchy-local-workspaces",
+            "pluginIds": [
+              "selmant.local-workspaces"
+            ],
+            "commit": "acfc7b3e32f85053c4e28666651465c05a1fde15",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T02:23:47.847Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-01T20:59:53.583Z",
+            "requestEventId": 30383411849,
+            "requestedAt": "2026-09-02T00:46:06Z",
+            "reviewedAt": "2026-09-02T02:23:47.847Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "selmant/omarchy-local-workspaces",
+        "pluginIds": [
+          "selmant.local-workspaces"
+        ],
+        "commit": "b5860bf1f986929e44b7492095de1edc1b1642ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:11:48.839Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T19:27:20.454Z",
+        "requestEventId": 30920849735,
+        "requestedAt": "2026-09-10T17:43:30Z",
+        "reviewedAt": "2026-09-10T18:11:48.839Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/JoaoVicenteBaptista/omarchy-samsung-keyboard-backlight",
