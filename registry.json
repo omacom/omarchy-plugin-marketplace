@@ -152639,6 +152639,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Anshshivhare23/omarchy-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T21:10:53.778Z",
+      "listingValidatedCommit": "3370411dc028d64500b72cf11f7c2e3916766a4e",
+      "listingValidatedAt": "2026-09-10T21:10:53.778Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anshshivhare23/omarchy-lock",
+        "pluginIds": [
+          "luffy.lock"
+        ],
+        "commit": "3370411dc028d64500b72cf11f7c2e3916766a4e",
+        "checkedAt": "2026-09-10T21:10:53.696Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "luffy.lock": {
+          "category": "Desktop",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
