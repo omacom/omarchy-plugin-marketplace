@@ -40553,8 +40553,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T19:07:14.026Z",
-      "listingValidatedCommit": "563aa9f8394a3e76df5e28b1c495377ace4afe9c",
-      "listingValidatedAt": "2026-09-03T21:49:26.241Z",
+      "listingValidatedCommit": "51d5ef477d7620e8a0de223fc51465ac27fb63c9",
+      "listingValidatedAt": "2026-09-10T17:34:50.875Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -40563,8 +40563,8 @@
         "pluginIds": [
           "io.github.villainru.thunderbird-mail-checker"
         ],
-        "commit": "563aa9f8394a3e76df5e28b1c495377ace4afe9c",
-        "checkedAt": "2026-09-03T21:49:26.241Z",
+        "commit": "51d5ef477d7620e8a0de223fc51465ac27fb63c9",
+        "checkedAt": "2026-09-10T17:34:50.875Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -40676,6 +40676,26 @@
             ],
             "commit": "2bf9c145f561b0521be5025215588e51e665fc22",
             "checkedAt": "2026-08-28T22:52:45.878Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "563aa9f8394a3e76df5e28b1c495377ace4afe9c",
+          "validatedAt": "2026-09-03T21:49:26.241Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T17:34:50.875Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "villainru/omarchy-thunderbird-mail-checker",
+            "pluginIds": [
+              "io.github.villainru.thunderbird-mail-checker"
+            ],
+            "commit": "563aa9f8394a3e76df5e28b1c495377ace4afe9c",
+            "checkedAt": "2026-09-03T21:49:26.241Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
