@@ -153947,6 +153947,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tallahootie/dromify-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T23:37:34.251Z",
+      "listingValidatedCommit": "f753c995b520de338c0eddbd78569110b838f6df",
+      "listingValidatedAt": "2026-09-10T23:37:34.251Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tallahootie/dromify-omarchy",
+        "pluginIds": [
+          "tallahootie.dromify"
+        ],
+        "commit": "f753c995b520de338c0eddbd78569110b838f6df",
+        "checkedAt": "2026-09-10T23:37:34.173Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tallahootie/dromify-omarchy",
+        "pluginIds": [
+          "tallahootie.dromify"
+        ],
+        "commit": "f753c995b520de338c0eddbd78569110b838f6df",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T23:37:34.173Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T23:08:29.690Z",
+        "requestEventId": 30937264391,
+        "requestedAt": "2026-09-10T23:20:27Z",
+        "reviewedAt": "2026-09-10T23:37:34.173Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tallahootie.dromify": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
