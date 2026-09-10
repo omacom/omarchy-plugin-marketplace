@@ -148478,6 +148478,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mastermendes74/omarchy-appearance",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T12:08:05.351Z",
+      "listingValidatedCommit": "9ea210a483798e31d540ddd1576de3dd4417ce3a",
+      "listingValidatedAt": "2026-09-10T12:08:05.351Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mastermendes74/omarchy-appearance",
+        "pluginIds": [
+          "mendestein.appearance"
+        ],
+        "commit": "9ea210a483798e31d540ddd1576de3dd4417ce3a",
+        "checkedAt": "2026-09-10T12:08:05.269Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mendestein.appearance": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
