@@ -113835,8 +113835,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T06:27:42.061Z",
-      "listingValidatedCommit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
-      "listingValidatedAt": "2026-09-04T07:23:03.201Z",
+      "listingValidatedCommit": "c92992a3fa713726b4f42bffd98b640876c60332",
+      "listingValidatedAt": "2026-09-10T20:02:28.830Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -113845,8 +113845,8 @@
         "pluginIds": [
           "com.goalwatch"
         ],
-        "commit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
-        "checkedAt": "2026-09-04T07:23:03.201Z",
+        "commit": "c92992a3fa713726b4f42bffd98b640876c60332",
+        "checkedAt": "2026-09-10T20:02:28.830Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -113870,29 +113870,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "invrnt/goalwatch",
-        "pluginIds": [
-          "com.goalwatch"
-        ],
-        "commit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T07:23:03.201Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-03T22:46:48.324Z",
-        "requestEventId": 30538307629,
-        "requestedAt": "2026-09-04T07:16:38Z",
-        "reviewedAt": "2026-09-04T07:23:03.201Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -113941,8 +113918,78 @@
             "reviewedAt": "2026-09-02T06:27:41.986Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
+          "validatedAt": "2026-09-04T07:23:03.201Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:02:28.830Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "invrnt/goalwatch",
+            "pluginIds": [
+              "com.goalwatch"
+            ],
+            "commit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
+            "checkedAt": "2026-09-04T07:23:03.201Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "invrnt/goalwatch",
+            "pluginIds": [
+              "com.goalwatch"
+            ],
+            "commit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T07:23:03.201Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-03T22:46:48.324Z",
+            "requestEventId": 30538307629,
+            "requestedAt": "2026-09-04T07:16:38Z",
+            "reviewedAt": "2026-09-04T07:23:03.201Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "invrnt/goalwatch",
+        "pluginIds": [
+          "com.goalwatch"
+        ],
+        "commit": "c92992a3fa713726b4f42bffd98b640876c60332",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:02:28.830Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T23:28:39.060Z",
+        "requestEventId": 30928264610,
+        "requestedAt": "2026-09-10T20:01:07Z",
+        "reviewedAt": "2026-09-10T20:02:28.830Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/awkent01/omarchy-touchpad-widget",
