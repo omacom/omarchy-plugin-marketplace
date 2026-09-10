@@ -93773,8 +93773,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T06:34:45.447Z",
-      "listingValidatedCommit": "8e9cbd6391ee99ef16fec1b7ef27344f81c24bed",
-      "listingValidatedAt": "2026-08-31T18:05:50.654Z",
+      "listingValidatedCommit": "911093e0d241d9afe74937bb66c9ba55b4c3ec42",
+      "listingValidatedAt": "2026-09-10T18:02:45.046Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -93783,8 +93783,8 @@
         "pluginIds": [
           "io.github.bubblepaxi.workspace-preview"
         ],
-        "commit": "8e9cbd6391ee99ef16fec1b7ef27344f81c24bed",
-        "checkedAt": "2026-08-31T18:05:50.653Z",
+        "commit": "911093e0d241d9afe74937bb66c9ba55b4c3ec42",
+        "checkedAt": "2026-09-10T18:02:45.046Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -93816,6 +93816,26 @@
             ],
             "commit": "9bbdeb020362533f0197c7c1a26ee4c9ce4a4cb7",
             "checkedAt": "2026-08-30T06:34:45.395Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "8e9cbd6391ee99ef16fec1b7ef27344f81c24bed",
+          "validatedAt": "2026-08-31T18:05:50.654Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:02:45.046Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "leofle/omarchy-workspace-preview",
+            "pluginIds": [
+              "io.github.bubblepaxi.workspace-preview"
+            ],
+            "commit": "8e9cbd6391ee99ef16fec1b7ef27344f81c24bed",
+            "checkedAt": "2026-08-31T18:05:50.653Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
