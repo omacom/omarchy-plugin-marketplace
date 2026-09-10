@@ -148331,6 +148331,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mewset/omajuice",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T11:46:35.900Z",
+      "listingValidatedCommit": "49d587c0d4fcc4b150d484612be0ee9565f16560",
+      "listingValidatedAt": "2026-09-10T11:46:35.900Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mewset/omajuice",
+        "pluginIds": [
+          "io.github.mewset.omajuice"
+        ],
+        "commit": "49d587c0d4fcc4b150d484612be0ee9565f16560",
+        "checkedAt": "2026-09-10T11:46:35.824Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mewset.omajuice": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
