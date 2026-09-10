@@ -136417,8 +136417,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T20:53:11.938Z",
-      "listingValidatedCommit": "d65e0f5a5196bcecf95a300a96ea6d9d5b2151e3",
-      "listingValidatedAt": "2026-09-06T20:53:11.938Z",
+      "listingValidatedCommit": "a538a00c92cff057e772d565dad97c95d4d3ec17",
+      "listingValidatedAt": "2026-09-10T23:43:00.831Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -136427,8 +136427,8 @@
         "pluginIds": [
           "io.github.elgevan.kids-menu"
         ],
-        "commit": "d65e0f5a5196bcecf95a300a96ea6d9d5b2151e3",
-        "checkedAt": "2026-09-06T20:53:11.871Z",
+        "commit": "a538a00c92cff057e772d565dad97c95d4d3ec17",
+        "checkedAt": "2026-09-10T23:43:00.830Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -136444,7 +136444,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d65e0f5a5196bcecf95a300a96ea6d9d5b2151e3",
+          "validatedAt": "2026-09-06T20:53:11.938Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:43:00.831Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "elgevan/omarchy-kids-menu",
+            "pluginIds": [
+              "io.github.elgevan.kids-menu"
+            ],
+            "commit": "d65e0f5a5196bcecf95a300a96ea6d9d5b2151e3",
+            "checkedAt": "2026-09-06T20:53:11.871Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/seth-wood/keyarchy",
