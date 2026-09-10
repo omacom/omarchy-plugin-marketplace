@@ -150960,6 +150960,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mrdulasolutions/solar-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:04:46.790Z",
+      "listingValidatedCommit": "d6fbd83a14f89dd60d7355257202a3a3af6e6817",
+      "listingValidatedAt": "2026-09-10T19:04:46.790Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrdulasolutions/solar-clock",
+        "pluginIds": [
+          "io.github.mrdulasolutions.solar-clock"
+        ],
+        "commit": "d6fbd83a14f89dd60d7355257202a3a3af6e6817",
+        "checkedAt": "2026-09-10T19:04:46.709Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mrdulasolutions.solar-clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
