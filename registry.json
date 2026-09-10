@@ -122487,8 +122487,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T17:13:10.787Z",
-      "listingValidatedCommit": "8afb8415ef6554abed2376e5ac69ace306f19085",
-      "listingValidatedAt": "2026-09-04T17:13:10.787Z",
+      "listingValidatedCommit": "c9eade8c0649a5d4875ea227adbad5fdd7af538d",
+      "listingValidatedAt": "2026-09-10T20:33:03.482Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -122497,8 +122497,8 @@
         "pluginIds": [
           "antesmd.amneziawg"
         ],
-        "commit": "8afb8415ef6554abed2376e5ac69ace306f19085",
-        "checkedAt": "2026-09-04T17:13:10.727Z",
+        "commit": "c9eade8c0649a5d4875ea227adbad5fdd7af538d",
+        "checkedAt": "2026-09-10T20:33:03.482Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -122507,29 +122507,6 @@
           "package-manager",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "antesmd/omarchy-amneziawg",
-        "pluginIds": [
-          "antesmd.amneziawg"
-        ],
-        "commit": "8afb8415ef6554abed2376e5ac69ace306f19085",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T17:13:10.727Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T10:04:32.438Z",
-        "requestEventId": 30566720500,
-        "requestedAt": "2026-09-04T16:12:07Z",
-        "reviewedAt": "2026-09-04T17:13:10.727Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "antesmd.amneziawg": {
@@ -122544,7 +122521,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "antesmd/omarchy-amneziawg",
+        "pluginIds": [
+          "antesmd.amneziawg"
+        ],
+        "commit": "c9eade8c0649a5d4875ea227adbad5fdd7af538d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:33:03.482Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T04:47:48.982Z",
+        "requestEventId": 30929101649,
+        "requestedAt": "2026-09-10T20:17:06Z",
+        "reviewedAt": "2026-09-10T20:33:03.482Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8afb8415ef6554abed2376e5ac69ace306f19085",
+          "validatedAt": "2026-09-04T17:13:10.787Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:33:03.482Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "antesmd/omarchy-amneziawg",
+            "pluginIds": [
+              "antesmd.amneziawg"
+            ],
+            "commit": "8afb8415ef6554abed2376e5ac69ace306f19085",
+            "checkedAt": "2026-09-04T17:13:10.727Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "antesmd/omarchy-amneziawg",
+            "pluginIds": [
+              "antesmd.amneziawg"
+            ],
+            "commit": "8afb8415ef6554abed2376e5ac69ace306f19085",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T17:13:10.727Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T10:04:32.438Z",
+            "requestEventId": 30566720500,
+            "requestedAt": "2026-09-04T16:12:07Z",
+            "reviewedAt": "2026-09-04T17:13:10.727Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jmaeder/omarchy-sweeztv",
