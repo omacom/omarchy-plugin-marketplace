@@ -148512,6 +148512,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/therealasclepius/omarchy-touchpad-comfortable",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T12:14:32.785Z",
+      "listingValidatedCommit": "d9e15f8fa795b628eeb39b904628420f77b471f8",
+      "listingValidatedAt": "2026-09-10T12:14:32.785Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "therealasclepius/omarchy-touchpad-comfortable",
+        "pluginIds": [
+          "io.github.therealasclepius.touchpad-comfortable"
+        ],
+        "commit": "d9e15f8fa795b628eeb39b904628420f77b471f8",
+        "checkedAt": "2026-09-10T12:14:32.715Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "therealasclepius/omarchy-touchpad-comfortable",
+        "pluginIds": [
+          "io.github.therealasclepius.touchpad-comfortable"
+        ],
+        "commit": "d9e15f8fa795b628eeb39b904628420f77b471f8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T12:14:32.715Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T17:05:47.656Z",
+        "requestEventId": 30900611648,
+        "requestedAt": "2026-09-10T12:13:22Z",
+        "reviewedAt": "2026-09-10T12:14:32.715Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.therealasclepius.touchpad-comfortable": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
