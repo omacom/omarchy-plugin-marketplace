@@ -84996,8 +84996,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T05:43:57.701Z",
-      "listingValidatedCommit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
-      "listingValidatedAt": "2026-08-30T22:20:11.343Z",
+      "listingValidatedCommit": "e359b59d9b1543a6a5e72cc4f5adca64ed574067",
+      "listingValidatedAt": "2026-09-10T17:54:25.933Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -85006,16 +85006,12 @@
         "pluginIds": [
           "io.github.pkayokay.omapaste"
         ],
-        "commit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
-        "checkedAt": "2026-08-30T22:20:11.343Z",
-        "outcome": "review-required",
+        "commit": "e359b59d9b1543a6a5e72cc4f5adca64ed574067",
+        "checkedAt": "2026-09-10T17:54:25.933Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "io.github.pkayokay.omapaste": {
@@ -85121,31 +85117,55 @@
             "reviewedAt": "2026-08-29T17:09:56.634Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
+          "validatedAt": "2026-08-30T22:20:11.343Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T17:54:25.933Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "pkayokay/omapaste",
+            "pluginIds": [
+              "io.github.pkayokay.omapaste"
+            ],
+            "commit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
+            "checkedAt": "2026-08-30T22:20:11.343Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "pkayokay/omapaste",
+            "pluginIds": [
+              "io.github.pkayokay.omapaste"
+            ],
+            "commit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T22:20:11.343Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T22:13:33.075Z",
+            "requestEventId": 30248194138,
+            "requestedAt": "2026-08-30T22:18:44Z",
+            "reviewedAt": "2026-08-30T22:20:11.343Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ],
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "pkayokay/omapaste",
-        "pluginIds": [
-          "io.github.pkayokay.omapaste"
-        ],
-        "commit": "f59f7572de3c4926780de055b00a1c9ff5664f0d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T22:20:11.343Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T22:13:33.075Z",
-        "requestEventId": 30248194138,
-        "requestedAt": "2026-08-30T22:18:44Z",
-        "reviewedAt": "2026-08-30T22:20:11.343Z",
-        "reviewer": "HANCORE-linux"
-      }
+      ]
     },
     {
       "repo": "https://github.com/TyRichards/omarchy-tray",
