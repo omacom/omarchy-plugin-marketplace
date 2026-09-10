@@ -91211,8 +91211,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T16:18:47.563Z",
-      "listingValidatedCommit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
-      "listingValidatedAt": "2026-08-29T16:18:47.563Z",
+      "listingValidatedCommit": "c1ec5e48ac8a9451e34385fb9b02e4c50aeb06ba",
+      "listingValidatedAt": "2026-09-10T19:50:37.083Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -91221,39 +91221,15 @@
         "pluginIds": [
           "com.sovchat.omarchy"
         ],
-        "commit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
-        "checkedAt": "2026-08-29T16:18:47.509Z",
+        "commit": "c1ec5e48ac8a9451e34385fb9b02e4c50aeb06ba",
+        "checkedAt": "2026-09-10T19:50:37.082Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager",
-          "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sovcat0608/sovchat-omarchy-plugin",
-        "pluginIds": [
-          "com.sovchat.omarchy"
-        ],
-        "commit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T16:18:47.509Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T16:02:39.975Z",
-        "requestEventId": 30214826534,
-        "requestedAt": "2026-08-29T16:18:17Z",
-        "reviewedAt": "2026-08-29T16:18:47.510Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "com.sovchat.omarchy": {
@@ -91265,7 +91241,78 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sovcat0608/sovchat-omarchy-plugin",
+        "pluginIds": [
+          "com.sovchat.omarchy"
+        ],
+        "commit": "c1ec5e48ac8a9451e34385fb9b02e4c50aeb06ba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:50:37.082Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T09:32:33.273Z",
+        "requestEventId": 30927457384,
+        "requestedAt": "2026-09-10T19:45:18Z",
+        "reviewedAt": "2026-09-10T19:50:37.083Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
+          "validatedAt": "2026-08-29T16:18:47.563Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T19:50:37.083Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sovcat0608/sovchat-omarchy-plugin",
+            "pluginIds": [
+              "com.sovchat.omarchy"
+            ],
+            "commit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
+            "checkedAt": "2026-08-29T16:18:47.509Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sovcat0608/sovchat-omarchy-plugin",
+            "pluginIds": [
+              "com.sovchat.omarchy"
+            ],
+            "commit": "340a9bc19117f716740b0bbcaaf7377c5585491f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T16:18:47.509Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T16:02:39.975Z",
+            "requestEventId": 30214826534,
+            "requestedAt": "2026-08-29T16:18:17Z",
+            "reviewedAt": "2026-08-29T16:18:47.510Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/moerdowo/omarchy-mayar",
