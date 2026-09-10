@@ -151308,6 +151308,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/diyahir/omacapture",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:30:03.140Z",
+      "listingValidatedCommit": "6c8a79b2420516aba28ec33f666598ae5f2e5972",
+      "listingValidatedAt": "2026-09-10T19:30:03.140Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "diyahir/omacapture",
+        "pluginIds": [
+          "io.github.diyaclanker.omacapture"
+        ],
+        "commit": "6c8a79b2420516aba28ec33f666598ae5f2e5972",
+        "checkedAt": "2026-09-10T19:30:03.058Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "diyahir/omacapture",
+        "pluginIds": [
+          "io.github.diyaclanker.omacapture"
+        ],
+        "commit": "6c8a79b2420516aba28ec33f666598ae5f2e5972",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:30:03.058Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T08:31:05.373Z",
+        "requestEventId": 30924391131,
+        "requestedAt": "2026-09-10T18:46:58Z",
+        "reviewedAt": "2026-09-10T19:30:03.058Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.diyaclanker.omacapture": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
