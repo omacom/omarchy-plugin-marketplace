@@ -11983,18 +11983,18 @@
       "type": "plugin-source",
       "addedAt": "2026-08-17",
       "listedAt": "2026-08-17T02:43:41.459Z",
-      "listingValidatedCommit": "191f96cb0ec1cabbe9a7762cd14431534b8aa921",
-      "listingValidatedAt": "2026-08-17T02:43:41.459Z",
+      "listingValidatedCommit": "8c96aa593f460c5b26df9e16640c2e4196975275",
+      "listingValidatedAt": "2026-09-10T19:48:06.145Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
         "version": "3",
-        "repository": "ilyazar/omarchy-cliamp-control",
+        "repository": "omarchy-qol/omarchy-cliamp-control",
         "pluginIds": [
           "io.github.ilyazar.cliamp"
         ],
-        "commit": "191f96cb0ec1cabbe9a7762cd14431534b8aa921",
-        "checkedAt": "2026-08-17T01:24:38.994Z",
+        "commit": "8c96aa593f460c5b26df9e16640c2e4196975275",
+        "checkedAt": "2026-09-10T19:48:06.145Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -12010,7 +12010,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "191f96cb0ec1cabbe9a7762cd14431534b8aa921",
+          "validatedAt": "2026-08-17T02:43:41.459Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T19:48:06.145Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ilyazar/omarchy-cliamp-control",
+            "pluginIds": [
+              "io.github.ilyazar.cliamp"
+            ],
+            "commit": "191f96cb0ec1cabbe9a7762cd14431534b8aa921",
+            "checkedAt": "2026-08-17T01:24:38.994Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/alvarosaavedra/omarchy-dst-clocks",
