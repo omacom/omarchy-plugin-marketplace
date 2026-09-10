@@ -153654,6 +153654,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chupe/omarchy-lid-suspend",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T23:18:09.938Z",
+      "listingValidatedCommit": "109261d2f1f6228057d18c805aa56f24b9258aef",
+      "listingValidatedAt": "2026-09-10T23:18:09.938Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chupe/omarchy-lid-suspend",
+        "pluginIds": [
+          "chupe.lid-suspend"
+        ],
+        "commit": "109261d2f1f6228057d18c805aa56f24b9258aef",
+        "checkedAt": "2026-09-10T23:18:09.858Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "chupe/omarchy-lid-suspend",
+        "pluginIds": [
+          "chupe.lid-suspend"
+        ],
+        "commit": "109261d2f1f6228057d18c805aa56f24b9258aef",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T23:18:09.858Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T22:59:51.963Z",
+        "requestEventId": 30936803071,
+        "requestedAt": "2026-09-10T23:07:43Z",
+        "reviewedAt": "2026-09-10T23:18:09.858Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "chupe.lid-suspend": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
