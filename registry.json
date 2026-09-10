@@ -118999,8 +118999,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T13:53:26.335Z",
-      "listingValidatedCommit": "16c671ec17d8c9eeb7e2e261d48f9b90c19560bc",
-      "listingValidatedAt": "2026-09-04T13:53:26.335Z",
+      "listingValidatedCommit": "418c58dcb801b4161e1c9b691b5eeed15f0c7ee8",
+      "listingValidatedAt": "2026-09-10T18:31:25.638Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -119009,8 +119009,8 @@
         "pluginIds": [
           "synapsync.news-feed"
         ],
-        "commit": "16c671ec17d8c9eeb7e2e261d48f9b90c19560bc",
-        "checkedAt": "2026-09-04T13:53:26.283Z",
+        "commit": "418c58dcb801b4161e1c9b691b5eeed15f0c7ee8",
+        "checkedAt": "2026-09-10T18:31:25.638Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -119025,7 +119025,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "16c671ec17d8c9eeb7e2e261d48f9b90c19560bc",
+          "validatedAt": "2026-09-04T13:53:26.335Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:31:25.638Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joisephdev/omarchy-news-feed",
+            "pluginIds": [
+              "synapsync.news-feed"
+            ],
+            "commit": "16c671ec17d8c9eeb7e2e261d48f9b90c19560bc",
+            "checkedAt": "2026-09-04T13:53:26.283Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/17xande/omarchy-simple-sip",
