@@ -127921,8 +127921,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T22:39:10.470Z",
-      "listingValidatedCommit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
-      "listingValidatedAt": "2026-09-04T22:39:10.470Z",
+      "listingValidatedCommit": "f40817fec8607ed51a9270644f8971bc818b72f6",
+      "listingValidatedAt": "2026-09-10T20:35:51.100Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -127931,35 +127931,14 @@
         "pluginIds": [
           "digitalbase.hyper"
         ],
-        "commit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
-        "checkedAt": "2026-09-04T22:39:10.424Z",
+        "commit": "f40817fec8607ed51a9270644f8971bc818b72f6",
+        "checkedAt": "2026-09-10T20:35:51.100Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "digitalbase/omarchy-hyper",
-        "pluginIds": [
-          "digitalbase.hyper"
-        ],
-        "commit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T22:39:10.424Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T21:30:18.027Z",
-        "requestEventId": 30584246775,
-        "requestedAt": "2026-09-04T21:57:56Z",
-        "reviewedAt": "2026-09-04T22:39:10.424Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "digitalbase.hyper": {
@@ -127971,7 +127950,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "digitalbase/omarchy-hyper",
+        "pluginIds": [
+          "digitalbase.hyper"
+        ],
+        "commit": "f40817fec8607ed51a9270644f8971bc818b72f6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:35:51.100Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T11:17:38.385Z",
+        "requestEventId": 30929105246,
+        "requestedAt": "2026-09-10T20:17:10Z",
+        "reviewedAt": "2026-09-10T20:35:51.100Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
+          "validatedAt": "2026-09-04T22:39:10.470Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:35:51.100Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "digitalbase/omarchy-hyper",
+            "pluginIds": [
+              "digitalbase.hyper"
+            ],
+            "commit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
+            "checkedAt": "2026-09-04T22:39:10.424Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "digitalbase/omarchy-hyper",
+            "pluginIds": [
+              "digitalbase.hyper"
+            ],
+            "commit": "8e62bfdfb225327b6c4f686165f5769273ff281b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T22:39:10.424Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T21:30:18.027Z",
+            "requestEventId": 30584246775,
+            "requestedAt": "2026-09-04T21:57:56Z",
+            "reviewedAt": "2026-09-04T22:39:10.424Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/hiasinho/poolsuitefm",
