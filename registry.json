@@ -149739,6 +149739,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DishniCNS/Omarchy-plugin-doctor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T17:01:08.920Z",
+      "listingValidatedCommit": "985e59791a3c181db533f01e6824276eb7a04eed",
+      "listingValidatedAt": "2026-09-10T17:01:08.920Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dishnicns/omarchy-plugin-doctor",
+        "pluginIds": [
+          "io.github.dishnicons.plugin-doctor"
+        ],
+        "commit": "985e59791a3c181db533f01e6824276eb7a04eed",
+        "checkedAt": "2026-09-10T17:01:08.852Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dishnicns/omarchy-plugin-doctor",
+        "pluginIds": [
+          "io.github.dishnicons.plugin-doctor"
+        ],
+        "commit": "985e59791a3c181db533f01e6824276eb7a04eed",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T17:01:08.852Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T13:50:49.890Z",
+        "requestEventId": 30918450598,
+        "requestedAt": "2026-09-10T17:00:10Z",
+        "reviewedAt": "2026-09-10T17:01:08.852Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dishnicons.plugin-doctor": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
