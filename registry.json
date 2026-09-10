@@ -95923,8 +95923,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T07:31:48.484Z",
-      "listingValidatedCommit": "6bb3dd207d98d110f283ce64facafa6ef59cb2d8",
-      "listingValidatedAt": "2026-08-30T07:31:48.484Z",
+      "listingValidatedCommit": "6591315061e02155419389345e7b772b9cda4f02",
+      "listingValidatedAt": "2026-09-10T20:24:39.080Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -95933,8 +95933,8 @@
         "pluginIds": [
           "jankeesvw.text-transform"
         ],
-        "commit": "6bb3dd207d98d110f283ce64facafa6ef59cb2d8",
-        "checkedAt": "2026-08-30T07:31:48.431Z",
+        "commit": "6591315061e02155419389345e7b772b9cda4f02",
+        "checkedAt": "2026-09-10T20:24:39.080Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -95949,7 +95949,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6bb3dd207d98d110f283ce64facafa6ef59cb2d8",
+          "validatedAt": "2026-08-30T07:31:48.484Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T20:24:39.080Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jankeesvw/omarchy-text-transform",
+            "pluginIds": [
+              "jankeesvw.text-transform"
+            ],
+            "commit": "6bb3dd207d98d110f283ce64facafa6ef59cb2d8",
+            "checkedAt": "2026-08-30T07:31:48.431Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rookepoole/omarchy-oligarchy-theme",
