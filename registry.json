@@ -30574,8 +30574,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T19:02:28.110Z",
-      "listingValidatedCommit": "a6784e00ef26e3c663a28fc9a8b1d8fa797c65ea",
-      "listingValidatedAt": "2026-08-28T22:43:17.024Z",
+      "listingValidatedCommit": "ac802825aaa3f46dac033fd29233835234fad3ec",
+      "listingValidatedAt": "2026-09-10T18:17:27.513Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -30584,8 +30584,8 @@
         "pluginIds": [
           "no.koka.cpu-catjam"
         ],
-        "commit": "a6784e00ef26e3c663a28fc9a8b1d8fa797c65ea",
-        "checkedAt": "2026-08-28T22:43:17.024Z",
+        "commit": "ac802825aaa3f46dac033fd29233835234fad3ec",
+        "checkedAt": "2026-09-10T18:17:27.513Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -30617,6 +30617,26 @@
             ],
             "commit": "3905366ec0642cdde85c6a4c879c1c7a91665d30",
             "checkedAt": "2026-08-20T16:27:07.464Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a6784e00ef26e3c663a28fc9a8b1d8fa797c65ea",
+          "validatedAt": "2026-08-28T22:43:17.024Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:17:27.513Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sjoenh/omarchy-cpu-catjam",
+            "pluginIds": [
+              "no.koka.cpu-catjam"
+            ],
+            "commit": "a6784e00ef26e3c663a28fc9a8b1d8fa797c65ea",
+            "checkedAt": "2026-08-28T22:43:17.024Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
