@@ -148941,6 +148941,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ming-Bao/omarchy-shortcut-visualizer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T14:31:26.568Z",
+      "listingValidatedCommit": "04d0957bc3ff588e14257be0a184f732b5665b61",
+      "listingValidatedAt": "2026-09-10T14:31:26.568Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ming-bao/omarchy-shortcut-visualizer",
+        "pluginIds": [
+          "ming.keybindings"
+        ],
+        "commit": "04d0957bc3ff588e14257be0a184f732b5665b61",
+        "checkedAt": "2026-09-10T14:31:26.487Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ming-bao/omarchy-shortcut-visualizer",
+        "pluginIds": [
+          "ming.keybindings"
+        ],
+        "commit": "04d0957bc3ff588e14257be0a184f732b5665b61",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T14:31:26.487Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T01:42:55.930Z",
+        "requestEventId": 30909199727,
+        "requestedAt": "2026-09-10T14:30:13Z",
+        "reviewedAt": "2026-09-10T14:31:26.487Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ming.keybindings": {
+          "category": "Widgets",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
