@@ -148759,6 +148759,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ruegen/omarchy-rdp-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T14:00:45.078Z",
+      "listingValidatedCommit": "6336d71bda013cbcb62c8040bb2b8776e90cccff",
+      "listingValidatedAt": "2026-09-10T14:00:45.078Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ruegen/omarchy-rdp-monitor",
+        "pluginIds": [
+          "io.github.ruegen.rdp-monitor"
+        ],
+        "commit": "6336d71bda013cbcb62c8040bb2b8776e90cccff",
+        "checkedAt": "2026-09-10T14:00:45.008Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ruegen/omarchy-rdp-monitor",
+        "pluginIds": [
+          "io.github.ruegen.rdp-monitor"
+        ],
+        "commit": "6336d71bda013cbcb62c8040bb2b8776e90cccff",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T14:00:45.008Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T23:43:05.582Z",
+        "requestEventId": 30907162227,
+        "requestedAt": "2026-09-10T13:59:34Z",
+        "reviewedAt": "2026-09-10T14:00:45.008Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ruegen.rdp-monitor": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
