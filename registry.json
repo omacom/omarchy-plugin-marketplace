@@ -111813,8 +111813,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T04:14:23.586Z",
-      "listingValidatedCommit": "70a61c8987f1eea80bae948b17e4eceeff68a32d",
-      "listingValidatedAt": "2026-09-01T04:14:23.586Z",
+      "listingValidatedCommit": "eb95cde5ab7b2af872a50269fa1d6ae9d91af628",
+      "listingValidatedAt": "2026-09-10T23:24:43.412Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -111823,8 +111823,8 @@
         "pluginIds": [
           "io.github.hopelezz.omajelly"
         ],
-        "commit": "70a61c8987f1eea80bae948b17e4eceeff68a32d",
-        "checkedAt": "2026-09-01T04:14:23.528Z",
+        "commit": "eb95cde5ab7b2af872a50269fa1d6ae9d91af628",
+        "checkedAt": "2026-09-10T23:24:43.412Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -111844,7 +111844,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "70a61c8987f1eea80bae948b17e4eceeff68a32d",
+          "validatedAt": "2026-09-01T04:14:23.586Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:24:43.412Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hopelezz/omajelly",
+            "pluginIds": [
+              "io.github.hopelezz.omajelly"
+            ],
+            "commit": "70a61c8987f1eea80bae948b17e4eceeff68a32d",
+            "checkedAt": "2026-09-01T04:14:23.528Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Depodra/omarchy-immich-background",
