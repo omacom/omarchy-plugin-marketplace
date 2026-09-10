@@ -57239,8 +57239,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T21:29:57.679Z",
-      "listingValidatedCommit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
-      "listingValidatedAt": "2026-08-29T16:02:13.532Z",
+      "listingValidatedCommit": "81fee2ffaa4db06fe5d0ec1a2c5445d516401115",
+      "listingValidatedAt": "2026-09-10T21:30:44.194Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -57249,8 +57249,8 @@
         "pluginIds": [
           "jankeesvw.gmail-inbox"
         ],
-        "commit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
-        "checkedAt": "2026-08-29T16:02:13.531Z",
+        "commit": "81fee2ffaa4db06fe5d0ec1a2c5445d516401115",
+        "checkedAt": "2026-09-10T21:30:44.194Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -57267,27 +57267,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jankeesvw/omarchy-gmail-inbox",
-        "pluginIds": [
-          "jankeesvw.gmail-inbox"
-        ],
-        "commit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T16:02:13.531Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T14:53:53.981Z",
-        "requestEventId": 30213905700,
-        "requestedAt": "2026-08-29T15:35:02Z",
-        "reviewedAt": "2026-08-29T16:02:13.532Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -57332,8 +57311,72 @@
             "reviewedAt": "2026-08-23T21:29:57.651Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
+          "validatedAt": "2026-08-29T16:02:13.532Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:30:44.194Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jankeesvw/omarchy-gmail-inbox",
+            "pluginIds": [
+              "jankeesvw.gmail-inbox"
+            ],
+            "commit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
+            "checkedAt": "2026-08-29T16:02:13.531Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jankeesvw/omarchy-gmail-inbox",
+            "pluginIds": [
+              "jankeesvw.gmail-inbox"
+            ],
+            "commit": "c6d6828aaebc29ad9f29d6476287338c21c518ed",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T16:02:13.531Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T14:53:53.981Z",
+            "requestEventId": 30213905700,
+            "requestedAt": "2026-08-29T15:35:02Z",
+            "reviewedAt": "2026-08-29T16:02:13.532Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jankeesvw/omarchy-gmail-inbox",
+        "pluginIds": [
+          "jankeesvw.gmail-inbox"
+        ],
+        "commit": "81fee2ffaa4db06fe5d0ec1a2c5445d516401115",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:30:44.194Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T08:59:45.059Z",
+        "requestEventId": 30930101752,
+        "requestedAt": "2026-09-10T20:36:08Z",
+        "reviewedAt": "2026-09-10T21:30:44.194Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/Bottelet/omarchy-slack",
