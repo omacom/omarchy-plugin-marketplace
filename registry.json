@@ -149797,6 +149797,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MariusGhizdavet/omarchy-things",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T17:11:05.021Z",
+      "listingValidatedCommit": "d90351af0e2a043c42ab0ee777e6c02ca0e3cc62",
+      "listingValidatedAt": "2026-09-10T17:11:05.021Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mariusghizdavet/omarchy-things",
+        "pluginIds": [
+          "mghizdavet.things"
+        ],
+        "commit": "d90351af0e2a043c42ab0ee777e6c02ca0e3cc62",
+        "checkedAt": "2026-09-10T17:11:04.968Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mariusghizdavet/omarchy-things",
+        "pluginIds": [
+          "mghizdavet.things"
+        ],
+        "commit": "d90351af0e2a043c42ab0ee777e6c02ca0e3cc62",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T17:11:04.968Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T16:28:58.829Z",
+        "requestEventId": 30918993601,
+        "requestedAt": "2026-09-10T17:09:59Z",
+        "reviewedAt": "2026-09-10T17:11:04.968Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mghizdavet.things": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
