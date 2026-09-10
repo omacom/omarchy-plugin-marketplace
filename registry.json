@@ -152096,6 +152096,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/einarnot/omarchy-bibleverse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T20:27:24.899Z",
+      "listingValidatedCommit": "039ce799861293028dc64b12046cad8516450ea4",
+      "listingValidatedAt": "2026-09-10T20:27:24.899Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "einarnot/omarchy-bibleverse",
+        "pluginIds": [
+          "einarnot.bibleverse"
+        ],
+        "commit": "039ce799861293028dc64b12046cad8516450ea4",
+        "checkedAt": "2026-09-10T20:27:24.821Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "einarnot.bibleverse": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
