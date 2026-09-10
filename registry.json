@@ -121862,8 +121862,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T17:02:22.966Z",
-      "listingValidatedCommit": "58c059d816670c661ff30186e37b6d4525af5c91",
-      "listingValidatedAt": "2026-09-04T17:02:22.966Z",
+      "listingValidatedCommit": "f692e3bfa5d42d7fce88311e07cced6d9da21871",
+      "listingValidatedAt": "2026-09-10T19:59:59.853Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -121872,37 +121872,14 @@
         "pluginIds": [
           "io.github.hangovers.omakill"
         ],
-        "commit": "58c059d816670c661ff30186e37b6d4525af5c91",
-        "checkedAt": "2026-09-04T17:02:22.903Z",
+        "commit": "f692e3bfa5d42d7fce88311e07cced6d9da21871",
+        "checkedAt": "2026-09-10T19:59:59.853Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "hangovers/omakill",
-        "pluginIds": [
-          "io.github.hangovers.omakill"
-        ],
-        "commit": "58c059d816670c661ff30186e37b6d4525af5c91",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T17:02:22.903Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T08:18:19.008Z",
-        "requestEventId": 30566581540,
-        "requestedAt": "2026-09-04T16:09:58Z",
-        "reviewedAt": "2026-09-04T17:02:22.904Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.hangovers.omakill": {
@@ -121918,7 +121895,75 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hangovers/omakill",
+        "pluginIds": [
+          "io.github.hangovers.omakill"
+        ],
+        "commit": "f692e3bfa5d42d7fce88311e07cced6d9da21871",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:59:59.853Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T01:48:07.726Z",
+        "requestEventId": 30928080878,
+        "requestedAt": "2026-09-10T19:57:32Z",
+        "reviewedAt": "2026-09-10T19:59:59.853Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "58c059d816670c661ff30186e37b6d4525af5c91",
+          "validatedAt": "2026-09-04T17:02:22.966Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T19:59:59.853Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hangovers/omakill",
+            "pluginIds": [
+              "io.github.hangovers.omakill"
+            ],
+            "commit": "58c059d816670c661ff30186e37b6d4525af5c91",
+            "checkedAt": "2026-09-04T17:02:22.903Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "hangovers/omakill",
+            "pluginIds": [
+              "io.github.hangovers.omakill"
+            ],
+            "commit": "58c059d816670c661ff30186e37b6d4525af5c91",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T17:02:22.903Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T08:18:19.008Z",
+            "requestEventId": 30566581540,
+            "requestedAt": "2026-09-04T16:09:58Z",
+            "reviewedAt": "2026-09-04T17:02:22.904Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/idarius/omarchy-homeassistant",
