@@ -135948,8 +135948,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T18:37:27.259Z",
-      "listingValidatedCommit": "871b94ce77cf0d36b8524305955256edc63026ca",
-      "listingValidatedAt": "2026-09-06T18:37:27.259Z",
+      "listingValidatedCommit": "6fe7477534ddc816b9b4aacd08ddde4f5fcf2693",
+      "listingValidatedAt": "2026-09-10T23:55:58.718Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -135958,35 +135958,14 @@
         "pluginIds": [
           "io.github.andreireanu.parquet"
         ],
-        "commit": "871b94ce77cf0d36b8524305955256edc63026ca",
-        "checkedAt": "2026-09-06T18:37:27.193Z",
+        "commit": "6fe7477534ddc816b9b4aacd08ddde4f5fcf2693",
+        "checkedAt": "2026-09-10T23:55:58.718Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "andreireanu/omarchy-parquet",
-        "pluginIds": [
-          "io.github.andreireanu.parquet"
-        ],
-        "commit": "871b94ce77cf0d36b8524305955256edc63026ca",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-06T18:37:27.193Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-06T05:24:52.715Z",
-        "requestEventId": 30649667035,
-        "requestedAt": "2026-09-06T18:36:31Z",
-        "reviewedAt": "2026-09-06T18:37:27.194Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.andreireanu.parquet": {
@@ -135998,7 +135977,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andreireanu/omarchy-parquet",
+        "pluginIds": [
+          "io.github.andreireanu.parquet"
+        ],
+        "commit": "6fe7477534ddc816b9b4aacd08ddde4f5fcf2693",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T23:55:58.718Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T13:08:38.111Z",
+        "requestEventId": 30937657409,
+        "requestedAt": "2026-09-10T23:31:38Z",
+        "reviewedAt": "2026-09-10T23:55:58.718Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "871b94ce77cf0d36b8524305955256edc63026ca",
+          "validatedAt": "2026-09-06T18:37:27.259Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:55:58.718Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andreireanu/omarchy-parquet",
+            "pluginIds": [
+              "io.github.andreireanu.parquet"
+            ],
+            "commit": "871b94ce77cf0d36b8524305955256edc63026ca",
+            "checkedAt": "2026-09-06T18:37:27.193Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "andreireanu/omarchy-parquet",
+            "pluginIds": [
+              "io.github.andreireanu.parquet"
+            ],
+            "commit": "871b94ce77cf0d36b8524305955256edc63026ca",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-06T18:37:27.193Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-06T05:24:52.715Z",
+            "requestEventId": 30649667035,
+            "requestedAt": "2026-09-06T18:36:31Z",
+            "reviewedAt": "2026-09-06T18:37:27.194Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kkoontz/omarchy-news-rss",
