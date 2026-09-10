@@ -148422,6 +148422,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/grnqrtr/omarchy-keyboard-nightlight",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T12:01:48.478Z",
+      "listingValidatedCommit": "abe337e21e66eabf05cf42eddafef44009b829ed",
+      "listingValidatedAt": "2026-09-10T12:01:48.478Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grnqrtr/omarchy-keyboard-nightlight",
+        "pluginIds": [
+          "grnqrtr.keyboard-nightlight"
+        ],
+        "commit": "abe337e21e66eabf05cf42eddafef44009b829ed",
+        "checkedAt": "2026-09-10T12:01:48.409Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "grnqrtr/omarchy-keyboard-nightlight",
+        "pluginIds": [
+          "grnqrtr.keyboard-nightlight"
+        ],
+        "commit": "abe337e21e66eabf05cf42eddafef44009b829ed",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T12:01:48.409Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T14:07:40.891Z",
+        "requestEventId": 30899902029,
+        "requestedAt": "2026-09-10T12:00:42Z",
+        "reviewedAt": "2026-09-10T12:01:48.409Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "grnqrtr.keyboard-nightlight": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
