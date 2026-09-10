@@ -128037,8 +128037,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T22:14:03.520Z",
-      "listingValidatedCommit": "955f2e2e5fe6b13abe364603490267ff98a2cba2",
-      "listingValidatedAt": "2026-09-04T22:14:03.520Z",
+      "listingValidatedCommit": "52ae5fb8ac354fdbf8de423d015a8af73dbc7b52",
+      "listingValidatedAt": "2026-09-10T21:33:21.385Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -128047,8 +128047,8 @@
         "pluginIds": [
           "gladimdim.ai-limits"
         ],
-        "commit": "955f2e2e5fe6b13abe364603490267ff98a2cba2",
-        "checkedAt": "2026-09-04T22:14:03.462Z",
+        "commit": "52ae5fb8ac354fdbf8de423d015a8af73dbc7b52",
+        "checkedAt": "2026-09-10T21:33:21.385Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -128064,7 +128064,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "955f2e2e5fe6b13abe364603490267ff98a2cba2",
+          "validatedAt": "2026-09-04T22:14:03.520Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T21:33:21.385Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gladimdim/omarchy-ai-usage-bar",
+            "pluginIds": [
+              "gladimdim.ai-limits"
+            ],
+            "commit": "955f2e2e5fe6b13abe364603490267ff98a2cba2",
+            "checkedAt": "2026-09-04T22:14:03.462Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Kylar514/omadisplay.center",
