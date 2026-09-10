@@ -152497,6 +152497,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/keegan-sucks/omarchy-wallpaper-roulette",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T20:56:33.700Z",
+      "listingValidatedCommit": "5bdfb5b5be100611f30d4c7a0eeba953c64f0b91",
+      "listingValidatedAt": "2026-09-10T20:56:33.700Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "keegan-sucks/omarchy-wallpaper-roulette",
+        "pluginIds": [
+          "io.github.keegan-sucks.wallpaper-roulette"
+        ],
+        "commit": "5bdfb5b5be100611f30d4c7a0eeba953c64f0b91",
+        "checkedAt": "2026-09-10T20:56:33.625Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.keegan-sucks.wallpaper-roulette": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
