@@ -151274,6 +151274,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Signal-Six/Dungeons-Of-Omakon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:26:53.041Z",
+      "listingValidatedCommit": "7561e5000a2d86044f642e38670cb17f5baf4f66",
+      "listingValidatedAt": "2026-09-10T19:26:53.041Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "signal-six/dungeons-of-omakon",
+        "pluginIds": [
+          "b.omakon"
+        ],
+        "commit": "7561e5000a2d86044f642e38670cb17f5baf4f66",
+        "checkedAt": "2026-09-10T19:26:52.972Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "b.omakon": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
