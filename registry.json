@@ -148636,6 +148636,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kurai021/celegans_omarchy_pet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T13:39:24.733Z",
+      "listingValidatedCommit": "955d241c13a01db8365f3b6e7b24f425f68490d0",
+      "listingValidatedAt": "2026-09-10T13:39:24.733Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kurai021/celegans_omarchy_pet",
+        "pluginIds": [
+          "io.github.kurai021.celegans-pet"
+        ],
+        "commit": "955d241c13a01db8365f3b6e7b24f425f68490d0",
+        "checkedAt": "2026-09-10T13:39:24.668Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kurai021.celegans-pet": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "kids",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
