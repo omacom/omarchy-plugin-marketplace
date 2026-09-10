@@ -151208,6 +151208,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/derekwisong/omarchy-airport",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:21:34.349Z",
+      "listingValidatedCommit": "fbecbce14fa8c76bb1e8d920604906dfe7ff081f",
+      "listingValidatedAt": "2026-09-10T19:21:34.349Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "derekwisong/omarchy-airport",
+        "pluginIds": [
+          "derekwisong.airport"
+        ],
+        "commit": "fbecbce14fa8c76bb1e8d920604906dfe7ff081f",
+        "checkedAt": "2026-09-10T19:21:34.282Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "derekwisong.airport": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
