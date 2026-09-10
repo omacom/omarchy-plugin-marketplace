@@ -91542,8 +91542,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T15:02:12.934Z",
-      "listingValidatedCommit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
-      "listingValidatedAt": "2026-08-29T15:02:12.934Z",
+      "listingValidatedCommit": "94bc1cee153e7adadc3ee0c154e8872e280df09f",
+      "listingValidatedAt": "2026-09-10T21:55:55.382Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -91552,8 +91552,8 @@
         "pluginIds": [
           "jankeesvw.time-machine"
         ],
-        "commit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
-        "checkedAt": "2026-08-29T15:02:12.883Z",
+        "commit": "94bc1cee153e7adadc3ee0c154e8872e280df09f",
+        "checkedAt": "2026-09-10T21:55:55.381Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -91562,29 +91562,6 @@
           "package-manager",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jankeesvw/omarchy-time-machine",
-        "pluginIds": [
-          "jankeesvw.time-machine"
-        ],
-        "commit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T15:02:12.883Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T14:59:04.813Z",
-        "requestEventId": 30213189827,
-        "requestedAt": "2026-08-29T15:01:29Z",
-        "reviewedAt": "2026-08-29T15:02:12.883Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jankeesvw.time-machine": {
@@ -91596,7 +91573,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jankeesvw/omarchy-time-machine",
+        "pluginIds": [
+          "jankeesvw.time-machine"
+        ],
+        "commit": "94bc1cee153e7adadc3ee0c154e8872e280df09f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:55:55.381Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T13:18:31.044Z",
+        "requestEventId": 30930397235,
+        "requestedAt": "2026-09-10T20:42:05Z",
+        "reviewedAt": "2026-09-10T21:55:55.382Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
+          "validatedAt": "2026-08-29T15:02:12.934Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:55:55.382Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jankeesvw/omarchy-time-machine",
+            "pluginIds": [
+              "jankeesvw.time-machine"
+            ],
+            "commit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
+            "checkedAt": "2026-08-29T15:02:12.883Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jankeesvw/omarchy-time-machine",
+            "pluginIds": [
+              "jankeesvw.time-machine"
+            ],
+            "commit": "e086cef8d45ffec06c2e6b1b93208e67075075d7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T15:02:12.883Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T14:59:04.813Z",
+            "requestEventId": 30213189827,
+            "requestedAt": "2026-08-29T15:01:29Z",
+            "reviewedAt": "2026-08-29T15:02:12.883Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/bnrobinson93/omarchy-orientation",
