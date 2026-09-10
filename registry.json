@@ -70969,8 +70969,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T19:52:18.184Z",
-      "listingValidatedCommit": "a24e97da605dbfef9ccfef0fda4f50366eea1115",
-      "listingValidatedAt": "2026-09-01T16:58:09.136Z",
+      "listingValidatedCommit": "6d9165dec17645abebfb3a4008d195a80060f67b",
+      "listingValidatedAt": "2026-09-10T20:48:47.215Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -70979,8 +70979,8 @@
         "pluginIds": [
           "io.github.grichard99.omaproton-vpn"
         ],
-        "commit": "a24e97da605dbfef9ccfef0fda4f50366eea1115",
-        "checkedAt": "2026-09-01T16:58:09.136Z",
+        "commit": "6d9165dec17645abebfb3a4008d195a80060f67b",
+        "checkedAt": "2026-09-10T20:48:47.215Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -71077,6 +71077,26 @@
             ],
             "commit": "afe39fc3d4d71320faec91600473b42fdbcf4629",
             "checkedAt": "2026-08-28T22:38:50.305Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a24e97da605dbfef9ccfef0fda4f50366eea1115",
+          "validatedAt": "2026-09-01T16:58:09.136Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:48:47.215Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "grichard99/omaproton-vpn",
+            "pluginIds": [
+              "io.github.grichard99.omaproton-vpn"
+            ],
+            "commit": "a24e97da605dbfef9ccfef0fda4f50366eea1115",
+            "checkedAt": "2026-09-01T16:58:09.136Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
