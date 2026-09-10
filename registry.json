@@ -22519,8 +22519,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T00:54:45.166Z",
-      "listingValidatedCommit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
-      "listingValidatedAt": "2026-08-30T08:20:53.035Z",
+      "listingValidatedCommit": "cf610169b33314f2530b8ecf46e567f408c64715",
+      "listingValidatedAt": "2026-09-10T17:37:44.160Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -22529,8 +22529,8 @@
         "pluginIds": [
           "io.github.diegopluna.argus"
         ],
-        "commit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
-        "checkedAt": "2026-08-30T08:20:53.035Z",
+        "commit": "cf610169b33314f2530b8ecf46e567f408c64715",
+        "checkedAt": "2026-09-10T17:37:44.160Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -22686,6 +22686,53 @@
             "reviewedAt": "2026-08-29T22:23:49.999Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
+          "validatedAt": "2026-08-30T08:20:53.035Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T17:37:44.160Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "diegopluna/omarchy-argus",
+            "pluginIds": [
+              "io.github.diegopluna.argus"
+            ],
+            "commit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
+            "checkedAt": "2026-08-30T08:20:53.035Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "diegopluna/omarchy-argus",
+            "pluginIds": [
+              "io.github.diegopluna.argus"
+            ],
+            "commit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T08:20:53.035Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T03:29:09.427Z",
+            "requestEventId": 30231213508,
+            "requestedAt": "2026-08-30T08:14:36Z",
+            "reviewedAt": "2026-08-30T08:20:53.035Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -22694,10 +22741,10 @@
         "pluginIds": [
           "io.github.diegopluna.argus"
         ],
-        "commit": "653ef9a8e73200f1a1b3eb2ad94f15176d36fe31",
+        "commit": "cf610169b33314f2530b8ecf46e567f408c64715",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T08:20:53.035Z",
+        "baselineCheckedAt": "2026-09-10T17:37:44.160Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -22705,10 +22752,10 @@
           "package-manager",
           "remote-build"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-30T03:29:09.427Z",
-        "requestEventId": 30231213508,
-        "requestedAt": "2026-08-30T08:14:36Z",
-        "reviewedAt": "2026-08-30T08:20:53.035Z",
+        "reviewedBaselineCheckedAt": "2026-09-04T15:13:25.466Z",
+        "requestEventId": 30920316027,
+        "requestedAt": "2026-09-10T17:33:49Z",
+        "reviewedAt": "2026-09-10T17:37:44.160Z",
         "reviewer": "HANCORE-linux"
       }
     },
