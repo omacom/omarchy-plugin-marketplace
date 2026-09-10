@@ -131519,8 +131519,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T23:36:25.395Z",
-      "listingValidatedCommit": "41e754e25b1fe0248bf0f50189fac91a5ef40f2c",
-      "listingValidatedAt": "2026-09-05T23:36:25.395Z",
+      "listingValidatedCommit": "d7dee206d64779cd224f44093fc6c65f1c85e3ec",
+      "listingValidatedAt": "2026-09-10T23:27:16.598Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -131529,8 +131529,8 @@
         "pluginIds": [
           "janrenz.omarchy.teams"
         ],
-        "commit": "41e754e25b1fe0248bf0f50189fac91a5ef40f2c",
-        "checkedAt": "2026-09-05T23:36:25.325Z",
+        "commit": "d7dee206d64779cd224f44093fc6c65f1c85e3ec",
+        "checkedAt": "2026-09-10T23:27:16.598Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -131549,7 +131549,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "41e754e25b1fe0248bf0f50189fac91a5ef40f2c",
+          "validatedAt": "2026-09-05T23:36:25.395Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:27:16.598Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "janrenz/omarchy-teams",
+            "pluginIds": [
+              "janrenz.omarchy.teams"
+            ],
+            "commit": "41e754e25b1fe0248bf0f50189fac91a5ef40f2c",
+            "checkedAt": "2026-09-05T23:36:25.325Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ronald2wing/Omarchy-Quran",
