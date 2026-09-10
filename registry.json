@@ -18159,8 +18159,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T08:56:20.647Z",
-      "listingValidatedCommit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
-      "listingValidatedAt": "2026-08-22T07:50:32.306Z",
+      "listingValidatedCommit": "4283c22b3e8e7a4e3e24453952758b62667c231a",
+      "listingValidatedAt": "2026-09-10T20:05:18.528Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -18169,8 +18169,8 @@
         "pluginIds": [
           "blizl.voxtype-osd"
         ],
-        "commit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
-        "checkedAt": "2026-08-22T07:50:32.306Z",
+        "commit": "4283c22b3e8e7a4e3e24453952758b62667c231a",
+        "checkedAt": "2026-09-10T20:05:18.528Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -18192,29 +18192,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "blizl/omarchy-voxtype-osd",
-        "pluginIds": [
-          "blizl.voxtype-osd"
-        ],
-        "commit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-22T07:50:32.306Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-22T01:12:00.138Z",
-        "requestEventId": 29841998537,
-        "requestedAt": "2026-08-22T07:44:59Z",
-        "reviewedAt": "2026-08-22T07:50:32.306Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -18263,8 +18240,78 @@
             "reviewedAt": "2026-08-21T23:23:30.738Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
+          "validatedAt": "2026-08-22T07:50:32.306Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:05:18.528Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "blizl/omarchy-voxtype-osd",
+            "pluginIds": [
+              "blizl.voxtype-osd"
+            ],
+            "commit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
+            "checkedAt": "2026-08-22T07:50:32.306Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "blizl/omarchy-voxtype-osd",
+            "pluginIds": [
+              "blizl.voxtype-osd"
+            ],
+            "commit": "e7a0eb40800e0395d8f56d0aa4d8e3372a8b88e3",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-22T07:50:32.306Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-22T01:12:00.138Z",
+            "requestEventId": 29841998537,
+            "requestedAt": "2026-08-22T07:44:59Z",
+            "reviewedAt": "2026-08-22T07:50:32.306Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "blizl/omarchy-voxtype-osd",
+        "pluginIds": [
+          "blizl.voxtype-osd"
+        ],
+        "commit": "4283c22b3e8e7a4e3e24453952758b62667c231a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:05:18.528Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T01:33:34.647Z",
+        "requestEventId": 30928270750,
+        "requestedAt": "2026-09-10T20:01:14Z",
+        "reviewedAt": "2026-09-10T20:05:18.528Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/nightdevil00/better.displays",
