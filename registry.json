@@ -116086,8 +116086,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T10:39:38.549Z",
-      "listingValidatedCommit": "95e692e4b24141dd4da1b8e0f866c3a7d2ef927d",
-      "listingValidatedAt": "2026-09-02T10:39:38.549Z",
+      "listingValidatedCommit": "c52523ae62e3c1edc490fc1584aa48a4b2dd1628",
+      "listingValidatedAt": "2026-09-10T23:50:51.399Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -116096,8 +116096,8 @@
         "pluginIds": [
           "io.github.whelanh.repo-watcher"
         ],
-        "commit": "95e692e4b24141dd4da1b8e0f866c3a7d2ef927d",
-        "checkedAt": "2026-09-02T10:39:38.491Z",
+        "commit": "c52523ae62e3c1edc490fc1584aa48a4b2dd1628",
+        "checkedAt": "2026-09-10T23:50:51.399Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -116112,7 +116112,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "95e692e4b24141dd4da1b8e0f866c3a7d2ef927d",
+          "validatedAt": "2026-09-02T10:39:38.549Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T23:50:51.399Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "whelanh/omarchy-repo-watcher",
+            "pluginIds": [
+              "io.github.whelanh.repo-watcher"
+            ],
+            "commit": "95e692e4b24141dd4da1b8e0f866c3a7d2ef927d",
+            "checkedAt": "2026-09-02T10:39:38.491Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/iryzhkov/omarchy-nebula",
