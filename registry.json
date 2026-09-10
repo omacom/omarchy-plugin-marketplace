@@ -38347,8 +38347,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T09:25:01.264Z",
-      "listingValidatedCommit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
-      "listingValidatedAt": "2026-08-26T22:25:34.980Z",
+      "listingValidatedCommit": "85c0d75121928f3ac8a2d815a508ba6538450c9c",
+      "listingValidatedAt": "2026-09-10T18:56:16.952Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -38357,8 +38357,8 @@
         "pluginIds": [
           "bibek.ytdl"
         ],
-        "commit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
-        "checkedAt": "2026-08-26T22:25:34.980Z",
+        "commit": "85c0d75121928f3ac8a2d815a508ba6538450c9c",
+        "checkedAt": "2026-09-10T18:56:16.952Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -38467,6 +38467,49 @@
             "reviewedAt": "2026-08-21T20:44:01.752Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
+          "validatedAt": "2026-08-26T22:25:34.980Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:56:16.952Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bibekbhusal0/omarchy-ytdl",
+            "pluginIds": [
+              "bibek.ytdl"
+            ],
+            "commit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
+            "checkedAt": "2026-08-26T22:25:34.980Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bibekbhusal0/omarchy-ytdl",
+            "pluginIds": [
+              "bibek.ytdl"
+            ],
+            "commit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-26T22:25:34.980Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-25T07:53:01.317Z",
+            "requestEventId": 30068210410,
+            "requestedAt": "2026-08-26T20:59:08Z",
+            "reviewedAt": "2026-08-26T22:25:34.980Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -38475,19 +38518,19 @@
         "pluginIds": [
           "bibek.ytdl"
         ],
-        "commit": "5cdd00efb5f1bf2e7f66f29de528c17cbeb28cb1",
+        "commit": "85c0d75121928f3ac8a2d815a508ba6538450c9c",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-26T22:25:34.980Z",
+        "baselineCheckedAt": "2026-09-10T18:56:16.952Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-25T07:53:01.317Z",
-        "requestEventId": 30068210410,
-        "requestedAt": "2026-08-26T20:59:08Z",
-        "reviewedAt": "2026-08-26T22:25:34.980Z",
+        "reviewedBaselineCheckedAt": "2026-09-09T20:13:55.878Z",
+        "requestEventId": 30921511101,
+        "requestedAt": "2026-09-10T17:55:47Z",
+        "reviewedAt": "2026-09-10T18:56:16.952Z",
         "reviewer": "HANCORE-linux"
       }
     },
