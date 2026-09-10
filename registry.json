@@ -149366,6 +149366,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joramser/camera-test",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T15:57:36.655Z",
+      "listingValidatedCommit": "ec822f5e19be5d2d4a838e956274cc2abe8845fb",
+      "listingValidatedAt": "2026-09-10T15:57:36.655Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joramser/camera-test",
+        "pluginIds": [
+          "joramser.camera-test"
+        ],
+        "commit": "ec822f5e19be5d2d4a838e956274cc2abe8845fb",
+        "checkedAt": "2026-09-10T15:57:36.568Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "joramser.camera-test": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
