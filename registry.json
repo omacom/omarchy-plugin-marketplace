@@ -148670,6 +148670,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Orrok/omarchy-workspace-icons",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T13:47:11.012Z",
+      "listingValidatedCommit": "6479f62d1f12437ebd0f3d63bf342c5b568657fc",
+      "listingValidatedAt": "2026-09-10T13:47:11.012Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "orrok/omarchy-workspace-icons",
+        "pluginIds": [
+          "workspace-icons"
+        ],
+        "commit": "6479f62d1f12437ebd0f3d63bf342c5b568657fc",
+        "checkedAt": "2026-09-10T13:47:10.901Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "orrok/omarchy-workspace-icons",
+        "pluginIds": [
+          "workspace-icons"
+        ],
+        "commit": "6479f62d1f12437ebd0f3d63bf342c5b568657fc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T13:47:10.901Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T23:11:50.636Z",
+        "requestEventId": 30906287000,
+        "requestedAt": "2026-09-10T13:46:07Z",
+        "reviewedAt": "2026-09-10T13:47:10.901Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "workspace-icons": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
