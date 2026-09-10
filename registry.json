@@ -1007,8 +1007,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-04",
       "listedAt": "2026-08-04T04:39:25.984Z",
-      "listingValidatedCommit": "5fec18ebf070ea6b611608e1aac7cf467262011c",
-      "listingValidatedAt": "2026-08-22T07:29:36.510Z",
+      "listingValidatedCommit": "b5f71465a4d49d6a81113e5a5eff55789d4af631",
+      "listingValidatedAt": "2026-09-10T23:58:28.009Z",
       "listingValidatedBranch": "master",
       "plugins": {
         "perfektnacht.controller-launcher": {
@@ -1027,8 +1027,8 @@
         "pluginIds": [
           "perfektnacht.controller-launcher"
         ],
-        "commit": "5fec18ebf070ea6b611608e1aac7cf467262011c",
-        "checkedAt": "2026-08-22T07:29:36.510Z",
+        "commit": "b5f71465a4d49d6a81113e5a5eff55789d4af631",
+        "checkedAt": "2026-09-10T23:58:28.009Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -1040,6 +1040,26 @@
           "validatedAt": "2026-08-04T04:39:25.984Z",
           "branch": "master",
           "supersededAt": "2026-08-22T07:29:36.510Z"
+        },
+        {
+          "commit": "5fec18ebf070ea6b611608e1aac7cf467262011c",
+          "validatedAt": "2026-08-22T07:29:36.510Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T23:58:28.009Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "perfektnacht/controller-launcher",
+            "pluginIds": [
+              "perfektnacht.controller-launcher"
+            ],
+            "commit": "5fec18ebf070ea6b611608e1aac7cf467262011c",
+            "checkedAt": "2026-08-22T07:29:36.510Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
       ]
     },
