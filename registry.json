@@ -148603,6 +148603,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/laneyweb/RandomSaver",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T12:38:40.035Z",
+      "listingValidatedCommit": "68dab6caab40c76c3cdef41026fffa19ac796170",
+      "listingValidatedAt": "2026-09-10T12:38:40.035Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "laneyweb/randomsaver",
+        "pluginIds": [
+          "darren.randomsaver"
+        ],
+        "commit": "68dab6caab40c76c3cdef41026fffa19ac796170",
+        "checkedAt": "2026-09-10T12:38:39.959Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "darren.randomsaver": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
