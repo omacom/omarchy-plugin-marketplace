@@ -118531,8 +118531,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T01:12:19.598Z",
-      "listingValidatedCommit": "6312bd5950307164b646f8d3cf9f70898deae126",
-      "listingValidatedAt": "2026-09-04T01:12:19.598Z",
+      "listingValidatedCommit": "f6220c29bde639e69d1f792c75711d4e33aabaf6",
+      "listingValidatedAt": "2026-09-10T20:43:23.052Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118541,8 +118541,8 @@
         "pluginIds": [
           "io.github.ejuro.blow-off-some-steam"
         ],
-        "commit": "6312bd5950307164b646f8d3cf9f70898deae126",
-        "checkedAt": "2026-09-04T01:12:19.544Z",
+        "commit": "f6220c29bde639e69d1f792c75711d4e33aabaf6",
+        "checkedAt": "2026-09-10T20:43:23.052Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118557,7 +118557,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6312bd5950307164b646f8d3cf9f70898deae126",
+          "validatedAt": "2026-09-04T01:12:19.598Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:43:23.052Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ejuro/blow-off-some-steam",
+            "pluginIds": [
+              "io.github.ejuro.blow-off-some-steam"
+            ],
+            "commit": "6312bd5950307164b646f8d3cf9f70898deae126",
+            "checkedAt": "2026-09-04T01:12:19.544Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Snackwrap/omarchy-neonvolley",
