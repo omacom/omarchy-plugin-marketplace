@@ -133462,8 +133462,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:23:58.244Z",
-      "listingValidatedCommit": "0c66382d8fd9cc47e2162941308bfda454dc4d7f",
-      "listingValidatedAt": "2026-09-06T02:23:58.244Z",
+      "listingValidatedCommit": "2df173c8f0609a1ab749860179512608acabdadd",
+      "listingValidatedAt": "2026-09-10T21:53:14.473Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133472,8 +133472,8 @@
         "pluginIds": [
           "io.github.shirak-semonian.myip"
         ],
-        "commit": "0c66382d8fd9cc47e2162941308bfda454dc4d7f",
-        "checkedAt": "2026-09-06T02:23:58.181Z",
+        "commit": "2df173c8f0609a1ab749860179512608acabdadd",
+        "checkedAt": "2026-09-10T21:53:14.473Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -133489,7 +133489,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0c66382d8fd9cc47e2162941308bfda454dc4d7f",
+          "validatedAt": "2026-09-06T02:23:58.244Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:53:14.473Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "shirak-semonian/myip-omarchy-plugin",
+            "pluginIds": [
+              "io.github.shirak-semonian.myip"
+            ],
+            "commit": "0c66382d8fd9cc47e2162941308bfda454dc4d7f",
+            "checkedAt": "2026-09-06T02:23:58.181Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/anashabbash/omarchy-fortinet-vpn",
