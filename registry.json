@@ -81553,8 +81553,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-27",
       "listedAt": "2026-08-27T18:47:54.491Z",
-      "listingValidatedCommit": "2cf11ff6e198db85cf927f6f6fc0e0199a74906d",
-      "listingValidatedAt": "2026-08-30T22:11:52.322Z",
+      "listingValidatedCommit": "830599cd4b7f15b456a1fd8336fa317f185f31ca",
+      "listingValidatedAt": "2026-09-10T21:24:28.013Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -81563,12 +81563,14 @@
         "pluginIds": [
           "glasschan.oma-swiss"
         ],
-        "commit": "2cf11ff6e198db85cf927f6f6fc0e0199a74906d",
-        "checkedAt": "2026-08-30T22:11:52.321Z",
-        "outcome": "passed",
+        "commit": "830599cd4b7f15b456a1fd8336fa317f185f31ca",
+        "checkedAt": "2026-09-10T21:24:28.013Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "service-management"
+        ]
       },
       "plugins": {
         "glasschan.oma-swiss": {
@@ -81601,8 +81603,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "2cf11ff6e198db85cf927f6f6fc0e0199a74906d",
+          "validatedAt": "2026-08-30T22:11:52.322Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:24:28.013Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "glasschan/oma-swiss",
+            "pluginIds": [
+              "glasschan.oma-swiss"
+            ],
+            "commit": "2cf11ff6e198db85cf927f6f6fc0e0199a74906d",
+            "checkedAt": "2026-08-30T22:11:52.321Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "glasschan/oma-swiss",
+        "pluginIds": [
+          "glasschan.oma-swiss"
+        ],
+        "commit": "830599cd4b7f15b456a1fd8336fa317f185f31ca",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:24:28.013Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T07:47:57.692Z",
+        "requestEventId": 30929857102,
+        "requestedAt": "2026-09-10T20:31:37Z",
+        "reviewedAt": "2026-09-10T21:24:28.013Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/davydotcom/omarchy-control4-plugin",
