@@ -148727,6 +148727,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fixlixpender/omarchy-bar-color",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T13:52:13.439Z",
+      "listingValidatedCommit": "620170956d610e09511c05b3c700bd80550bf2b9",
+      "listingValidatedAt": "2026-09-10T13:52:13.439Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fixlixpender/omarchy-bar-color",
+        "pluginIds": [
+          "fixlixpender.bar-color"
+        ],
+        "commit": "620170956d610e09511c05b3c700bd80550bf2b9",
+        "checkedAt": "2026-09-10T13:52:13.365Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fixlixpender.bar-color": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
