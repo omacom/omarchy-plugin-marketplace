@@ -76463,8 +76463,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T20:24:50.186Z",
-      "listingValidatedCommit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
-      "listingValidatedAt": "2026-08-30T23:33:59.967Z",
+      "listingValidatedCommit": "347860819fe6bcecc54968d5d3ceed88cc57737d",
+      "listingValidatedAt": "2026-09-10T20:38:23.546Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -76473,8 +76473,8 @@
         "pluginIds": [
           "eduard.workspaces"
         ],
-        "commit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
-        "checkedAt": "2026-08-30T23:33:59.967Z",
+        "commit": "347860819fe6bcecc54968d5d3ceed88cc57737d",
+        "checkedAt": "2026-09-10T20:38:23.546Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -76493,28 +76493,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "eddygarcas/omarchy-workspaces-preview",
-        "pluginIds": [
-          "eduard.workspaces"
-        ],
-        "commit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T23:33:59.967Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T22:21:46.984Z",
-        "requestEventId": 30249495388,
-        "requestedAt": "2026-08-30T23:25:53Z",
-        "reviewedAt": "2026-08-30T23:33:59.967Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -76559,8 +76537,75 @@
             "reviewedAt": "2026-08-26T20:24:50.143Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
+          "validatedAt": "2026-08-30T23:33:59.967Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:38:23.546Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "eddygarcas/omarchy-workspaces-preview",
+            "pluginIds": [
+              "eduard.workspaces"
+            ],
+            "commit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
+            "checkedAt": "2026-08-30T23:33:59.967Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "eddygarcas/omarchy-workspaces-preview",
+            "pluginIds": [
+              "eduard.workspaces"
+            ],
+            "commit": "1aee1ffd2d182b46c8b5e98ebb8dac6508ac02bb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T23:33:59.967Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T22:21:46.984Z",
+            "requestEventId": 30249495388,
+            "requestedAt": "2026-08-30T23:25:53Z",
+            "reviewedAt": "2026-08-30T23:33:59.967Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "eddygarcas/omarchy-workspaces-preview",
+        "pluginIds": [
+          "eduard.workspaces"
+        ],
+        "commit": "347860819fe6bcecc54968d5d3ceed88cc57737d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:38:23.546Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T10:49:11.519Z",
+        "requestEventId": 30929108433,
+        "requestedAt": "2026-09-10T20:17:13Z",
+        "reviewedAt": "2026-09-10T20:38:23.546Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/KabirBhattarai/omarchy-system-pulse",
