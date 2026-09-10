@@ -149275,6 +149275,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mutahir/omaTempo",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T15:41:00.667Z",
+      "listingValidatedCommit": "812e0d7bd16cf32413c0288ddc0b294c7b63fa43",
+      "listingValidatedAt": "2026-09-10T15:41:00.667Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mutahir/omatempo",
+        "pluginIds": [
+          "io.github.mutahir.install-time"
+        ],
+        "commit": "812e0d7bd16cf32413c0288ddc0b294c7b63fa43",
+        "checkedAt": "2026-09-10T15:41:00.584Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mutahir.install-time": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
