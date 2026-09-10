@@ -149706,6 +149706,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brvier/PlanovaQuickShell",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T16:55:18.153Z",
+      "listingValidatedCommit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
+      "listingValidatedAt": "2026-09-10T16:55:18.153Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brvier/planovaquickshell",
+        "pluginIds": [
+          "fr.rvier.planova"
+        ],
+        "commit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
+        "checkedAt": "2026-09-10T16:55:18.079Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fr.rvier.planova": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
