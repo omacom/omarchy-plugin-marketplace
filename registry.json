@@ -14025,8 +14025,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-17",
       "listedAt": "2026-08-17T10:28:26.777Z",
-      "listingValidatedCommit": "0b0c71cd48b84c0cbd9db89e385705a7d514d876",
-      "listingValidatedAt": "2026-08-17T10:28:26.777Z",
+      "listingValidatedCommit": "0abacb9c3240b5510af06e58f7fc70d0e6273bed",
+      "listingValidatedAt": "2026-09-10T18:08:51.269Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -14035,12 +14035,15 @@
         "pluginIds": [
           "bibek.focusd"
         ],
-        "commit": "0b0c71cd48b84c0cbd9db89e385705a7d514d876",
-        "checkedAt": "2026-08-17T10:23:23.056Z",
-        "outcome": "passed",
+        "commit": "0abacb9c3240b5510af06e58f7fc70d0e6273bed",
+        "checkedAt": "2026-09-10T18:08:51.269Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
       },
       "plugins": {
         "bibek.focusd": {
@@ -14051,7 +14054,51 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bibekbhusal0/omarchy-focusd",
+        "pluginIds": [
+          "bibek.focusd"
+        ],
+        "commit": "0abacb9c3240b5510af06e58f7fc70d0e6273bed",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:08:51.269Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T20:12:06.872Z",
+        "requestEventId": 30920846054,
+        "requestedAt": "2026-09-10T17:43:26Z",
+        "reviewedAt": "2026-09-10T18:08:51.269Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0b0c71cd48b84c0cbd9db89e385705a7d514d876",
+          "validatedAt": "2026-08-17T10:28:26.777Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:08:51.269Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bibekbhusal0/omarchy-focusd",
+            "pluginIds": [
+              "bibek.focusd"
+            ],
+            "commit": "0b0c71cd48b84c0cbd9db89e385705a7d514d876",
+            "checkedAt": "2026-08-17T10:23:23.056Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tallsam/omarchy-navbar-cat",
