@@ -149496,6 +149496,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/basir4060/omarchy-stash",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T16:18:12.730Z",
+      "listingValidatedCommit": "60ae148a5d851e76b169c23f17e3d4c927ff119e",
+      "listingValidatedAt": "2026-09-10T16:18:12.730Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "basir4060/omarchy-stash",
+        "pluginIds": [
+          "io.github.basir4060.stash"
+        ],
+        "commit": "60ae148a5d851e76b169c23f17e3d4c927ff119e",
+        "checkedAt": "2026-09-10T16:18:12.652Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "basir4060/omarchy-stash",
+        "pluginIds": [
+          "io.github.basir4060.stash"
+        ],
+        "commit": "60ae148a5d851e76b169c23f17e3d4c927ff119e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T16:18:12.652Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T12:36:02.679Z",
+        "requestEventId": 30916046783,
+        "requestedAt": "2026-09-10T16:17:07Z",
+        "reviewedAt": "2026-09-10T16:18:12.652Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.basir4060.stash": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
