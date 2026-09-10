@@ -149152,6 +149152,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Saikomantisu/omarchy-playerwidget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T15:18:15.753Z",
+      "listingValidatedCommit": "828e6395010860519a570de8808c5a5eb844dd9c",
+      "listingValidatedAt": "2026-09-10T15:18:15.753Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "saikomantisu/omarchy-playerwidget",
+        "pluginIds": [
+          "io.github.saikomantisu.playerwidget"
+        ],
+        "commit": "828e6395010860519a570de8808c5a5eb844dd9c",
+        "checkedAt": "2026-09-10T15:18:15.674Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.saikomantisu.playerwidget": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
