@@ -92858,8 +92858,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T18:54:38.941Z",
-      "listingValidatedCommit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
-      "listingValidatedAt": "2026-08-29T18:54:38.941Z",
+      "listingValidatedCommit": "2cc969e0c1b3524c2fbfdda9dc55b26292529c54",
+      "listingValidatedAt": "2026-09-10T20:14:18.803Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -92868,35 +92868,14 @@
         "pluginIds": [
           "io.github.r404r.pane-ratio"
         ],
-        "commit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
-        "checkedAt": "2026-08-29T18:54:38.893Z",
+        "commit": "2cc969e0c1b3524c2fbfdda9dc55b26292529c54",
+        "checkedAt": "2026-09-10T20:14:18.803Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "r404r/omarchy-pane-ratio",
-        "pluginIds": [
-          "io.github.r404r.pane-ratio"
-        ],
-        "commit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T18:54:38.893Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T07:06:45.556Z",
-        "requestEventId": 30217864242,
-        "requestedAt": "2026-08-29T18:49:47Z",
-        "reviewedAt": "2026-08-29T18:54:38.893Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.r404r.pane-ratio": {
@@ -92908,7 +92887,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "r404r/omarchy-pane-ratio",
+        "pluginIds": [
+          "io.github.r404r.pane-ratio"
+        ],
+        "commit": "2cc969e0c1b3524c2fbfdda9dc55b26292529c54",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T20:14:18.803Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-05T06:33:37.365Z",
+        "requestEventId": 30928583565,
+        "requestedAt": "2026-09-10T20:07:17Z",
+        "reviewedAt": "2026-09-10T20:14:18.803Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
+          "validatedAt": "2026-08-29T18:54:38.941Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T20:14:18.803Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "r404r/omarchy-pane-ratio",
+            "pluginIds": [
+              "io.github.r404r.pane-ratio"
+            ],
+            "commit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
+            "checkedAt": "2026-08-29T18:54:38.893Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "r404r/omarchy-pane-ratio",
+            "pluginIds": [
+              "io.github.r404r.pane-ratio"
+            ],
+            "commit": "602ee27f11187358ad5aaba02dd7f2b2ceefa079",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T18:54:38.893Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T07:06:45.556Z",
+            "requestEventId": 30217864242,
+            "requestedAt": "2026-08-29T18:49:47Z",
+            "reviewedAt": "2026-08-29T18:54:38.893Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/olivoil/omarchy-hurricane-tracker",
