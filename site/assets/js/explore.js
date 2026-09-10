@@ -1,6 +1,7 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260831-01";
-import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260831-01";
+import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260906-01";
+import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260906-01";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
+import { pluginKindKey } from "./search.js?v=20260906-01";
 
 const number = new Intl.NumberFormat("en-US");
 const shortDate = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "UTC" });
@@ -324,8 +325,20 @@ function pluginInitials(node) {
     .toUpperCase() || "?";
 }
 
+function catalogHref(filters) {
+  return `index.html?${new URLSearchParams(filters)}#catalog`;
+}
+
+function setSelectedPluginUrl(node) {
+  const url = new URL(window.location.href);
+  if (node) url.searchParams.set("plugin", node.id);
+  else url.searchParams.delete("plugin");
+  window.history.replaceState(null, "", url);
+}
+
 function selectNode(node, center = false) {
   selected = node;
+  setSelectedPluginUrl(node);
   if (!node) {
     canvas.setAttribute("aria-label", "Interactive semantic graph of community plugins");
     detail.hidden = true;
@@ -344,12 +357,26 @@ function selectNode(node, center = false) {
   detail.style.setProperty("--detail-accent", detailAccent);
   detail.style.borderLeftColor = detailAccent;
   detail.querySelector("h2").textContent = node.name;
-  detail.querySelector(".detail-publisher").textContent = `${publisher ? `by @${publisher}` : `by ${node.author || "Unknown"}`} · ${node.kind || node.category}`;
+  const publisherLine = detail.querySelector(".detail-publisher");
+  const kind = node.kind || node.category;
+  const kindLink = element("a", "", kind);
+  kindLink.href = catalogHref(node.kind ? { kind: pluginKindKey(node.kind) } : { category: node.category });
+  kindLink.setAttribute("aria-label", `Show all ${kind} plugins`);
+  if (publisher) {
+    const authorLink = element("a", "", `@${publisher}`);
+    authorLink.href = catalogHref({ author: publisher });
+    authorLink.setAttribute("aria-label", `Show all plugins by @${publisher}`);
+    publisherLine.replaceChildren("by ", authorLink, " · ", kindLink);
+  } else {
+    publisherLine.replaceChildren(`by ${node.author || "Unknown"} · `, kindLink);
+  }
   detail.querySelector(".detail-identity").textContent = `${node.author || "Unknown"} · ${node.id}`;
   detail.querySelector(".detail-description").textContent = node.description || "No description available.";
   const community = detail.querySelector(".detail-community");
   community.style.setProperty("--community", cluster.color);
   community.querySelector('[data-detail="community"]').textContent = cluster.label;
+  community.setAttribute("aria-label", `Show only the ${cluster.label} community`);
+  community.setAttribute("aria-pressed", String(activeCluster === cluster.id));
   const stars = detail.querySelector(".detail-stars");
   stars.querySelector('[data-detail="stars"]').textContent = number.format(node.stars || 0);
   stars.setAttribute("aria-label", `${number.format(node.stars || 0)} repository stars`);
@@ -380,7 +407,11 @@ function selectNode(node, center = false) {
     previewImage.removeAttribute("src");
   }
   const tags = detail.querySelector(".detail-tags");
-  const visibleTags = node.tags.slice(0, 3).map((tag) => element("span", "", tag));
+  const visibleTags = node.tags.slice(0, 3).map((tag) => {
+    const link = element("a", "", tag);
+    link.href = catalogHref({ tag });
+    return link;
+  });
   if (node.tags.length > visibleTags.length) {
     const more = element("span", "is-more", `+${node.tags.length - visibleTags.length}`);
     more.setAttribute("aria-label", `${node.tags.length - visibleTags.length} additional tags`);
@@ -413,6 +444,7 @@ function setActiveCluster(clusterId) {
   allCommunities.classList.toggle("active", !activeCluster);
   allCommunities.setAttribute("aria-pressed", String(!activeCluster));
   if (selected && !visible(selected)) selectNode(null);
+  if (selected) detail.querySelector(".detail-community").setAttribute("aria-pressed", String(activeCluster === selected.cluster));
   document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
   fitGraph();
   drawGraph();
@@ -428,6 +460,7 @@ function renderAnalysis() {
     });
     allCommunities.classList.add("active");
     allCommunities.setAttribute("aria-pressed", "true");
+    if (selected) detail.querySelector(".detail-community").setAttribute("aria-pressed", "false");
     document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
     fitGraph();
     drawGraph();
@@ -601,6 +634,12 @@ canvas.addEventListener("keydown", (event) => {
   selectNode(visibleNodes[next], true);
 });
 document.querySelector("#detail-close").addEventListener("click", () => selectNode(null));
+detail.querySelector(".detail-community").addEventListener("click", () => {
+  if (!selected) return;
+  const activating = activeCluster !== selected.cluster;
+  setActiveCluster(selected.cluster);
+  if (activating) document.querySelector(`.community-row[data-cluster="${selected.cluster}"]`)?.scrollIntoView({ block: "nearest" });
+});
 
 function dateIndex(date) {
   return explorer.growth.findIndex((point) => point.date === date);
@@ -1103,7 +1142,11 @@ try {
   setupDataFreshness();
   setupGraph();
   setupGrowth();
+  const requestedPlugin = new URLSearchParams(window.location.search).get("plugin");
+  const requestedNode = requestedPlugin ? explorer.nodes.find((node) => node.id === requestedPlugin) : null;
   setView(new URLSearchParams(window.location.search).get("view") === "growth" ? "growth" : "graph", { updateUrl: false });
+  if (requestedNode) selectNode(requestedNode, true);
+  else if (requestedPlugin) setSelectedPluginUrl(null);
 } catch (error) {
   console.error(error);
   loading.hidden = true;

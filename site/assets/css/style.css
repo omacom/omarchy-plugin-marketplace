@@ -169,6 +169,8 @@ svg {
 }
 .crumbs { overflow: hidden; color: var(--muted); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .crumbs b { color: var(--text); font-weight: 500; }
+.crumbs a:hover, .crumbs a:focus-visible { color: var(--text); }
+.crumbs a:focus-visible { outline-offset: -1px; }
 .top-actions { display: flex; height: 100%; align-items: center; }
 .square-action {
   display: inline-flex; height: 32px; padding: 0 13px; border: 1px solid var(--line);
@@ -187,6 +189,7 @@ svg {
   margin-bottom: 12px; color: var(--accent); font-family: var(--mono); font-size: 11px;
   font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
 }
+.page-eyebrow a:hover, .page-eyebrow a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 .page-header { position: relative; padding-bottom: 25px; }
 .page-header::before {
   position: absolute; right: 0; bottom: 0; left: 0; height: 1px;
@@ -215,6 +218,7 @@ svg {
   position: absolute; right: calc(100% + 15px); margin-right: 0;
 }
 .plugin-detail-article .page-meta > .is-line-start::before { display: none; }
+.plugin-detail-article .page-meta a:hover, .plugin-detail-article .page-meta a:focus-visible { color: var(--accent); }
 .page-meta .manifest-version { min-width: 0; max-width: 100%; flex: none; }
 .page-meta .manifest-version > span {
   display: block; max-width: 100%; overflow: hidden; overflow-wrap: normal;
@@ -322,6 +326,9 @@ svg {
   background: var(--code-bg); flex: 0 0 auto; align-items: center; color: var(--text);
   font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .02em; white-space: nowrap;
 }
+button.tag { position: relative; z-index: 3; cursor: pointer; line-height: normal; }
+a.tag:hover, a.tag:focus-visible, button.tag:hover, button.tag:focus-visible { border-color: var(--accent); color: var(--accent); }
+button.tag:focus-visible { outline-offset: -2px; }
 .status-badge, .builtin-badge {
   padding: 3px 7px;
   color: #111;

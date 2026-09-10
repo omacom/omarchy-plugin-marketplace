@@ -593,6 +593,20 @@ test("selected plugins use a compact marketplace card hierarchy", () => {
   assert.match(script, /Select related plugin \$\{candidate\.name\}, \$\{similarity\}% similarity/);
 });
 
+test("selected plugin details link to catalog filters and persist in the URL", () => {
+  assert.match(page, /<button class="detail-community" type="button" aria-pressed="false"><i aria-hidden="true"><\/i><span data-detail="community"><\/span><\/button>/);
+  assert.match(page, /<main id="explorer" class="explore-main" tabindex="-1">/);
+  assert.match(script, /authorLink\.href = catalogHref\(\{ author: publisher \}\);/);
+  assert.match(script, /kindLink\.href = catalogHref\(node\.kind \? \{ kind: pluginKindKey\(node\.kind\) \} : \{ category: node\.category \}\);/);
+  assert.match(script, /node\.tags\.slice\(0, 3\)\.map\(\(tag\) => \{[\s\S]*?link\.href = catalogHref\(\{ tag \}\);/);
+  assert.match(script, /function setSelectedPluginUrl\(node\)[\s\S]*?url\.searchParams\.set\("plugin", node\.id\)[\s\S]*?window\.history\.replaceState/);
+  assert.match(script, /if \(requestedNode\) selectNode\(requestedNode, true\);/);
+  assert.match(script, /detail\.querySelector\("\.detail-community"\)\.addEventListener\("click"/);
+  assert.match(styles, /\.detail-tags span, \.detail-tags a \{/);
+  assert.match(styles, /\.detail-community \{[^}]*cursor: pointer;/);
+  assert.match(styles, /\.detail-publisher a:hover, \.detail-publisher a:focus-visible \{ color: var\(--accent\); \}/);
+});
+
 test("graph search uses catalog matching semantics", () => {
   const publisherNode = {
     id: "confined.ember",

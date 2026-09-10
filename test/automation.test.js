@@ -1220,24 +1220,40 @@ test("entry modules and their shared dependency use one cache key", async () => 
     files.publishJs.match(/shared\.js\?v=([^"']+)/)?.[1],
     files.developJs.match(/shared\.js\?v=([^"']+)/)?.[1],
     files.exploreJs.match(/shared\.js\?v=([^"']+)/)?.[1],
+    files.exploreJs.match(/from "\.\/search\.js\?v=([^"']+)"/)?.[1],
     files.exploreSearchJs.match(/search\.js\?v=([^"']+)/)?.[1],
+    files.exploreSearchJs.match(/shared\.js\?v=([^"']+)/)?.[1],
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260831-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
+  assert.equal(keys[0], "20260906-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260906-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260906-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260820-21");
+  assert.equal(styleKeys[0], "20260906-01");
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
   assert.equal(new Set(faviconKeys).size, 1);
   assert.match(files.index, /<title>Browse Plugins \| Omarchy Plugins<\/title>/);
+  assert.match(files.plugin, /<div class="crumbs"><span><a href="index\.html">Omarchy<\/a> \/ <a href="index\.html#catalog">Plugins<\/a> \/ <\/span><b id="crumb-name">Loading…<\/b><\/div>/);
+  assert.match(files.develop, /<div class="crumbs"><span><a href="index\.html">Omarchy<\/a> \/ <a href="index\.html#catalog">Marketplace<\/a> \/ <\/span><b>Develop<\/b><\/div>/);
+  assert.match(files.publish, /<div class="crumbs"><span><a href="index\.html">Omarchy<\/a> \/ <a href="index\.html#catalog">Marketplace<\/a> \/ <\/span><b>Publish<\/b><\/div>/);
+  for (const page of [files.plugin, files.develop, files.publish]) {
+    assert.doesNotMatch(page, /<a class="square-action desktop-only" href="index\.html">Browse<\/a>/);
+    assert.match(page, /<nav class="mobile-bottom" aria-label="Mobile navigation"><a href="index\.html#catalog">Browse<\/a>/);
+  }
+  assert.match(files.plugin, /<a class="sidebar-link active" href="index\.html#catalog">Browse plugins<\/a>/);
+  assert.match(files.plugin, /<a class="sidebar-link" href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace" target="_blank" rel="noreferrer">GitHub repository <span aria-hidden="true">↗<\/span><\/a>/);
+  for (const page of [files.develop, files.publish]) {
+    assert.match(page, /<a href="https:\/\/github\.com\/HANCORE-linux" target="_blank" rel="noreferrer">HANCORE <span aria-hidden="true">↗<\/span><\/a>/);
+  }
+  assert.match(files.publish, /<p class="official-reference">Validation follows the public <a href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace\/blob\/main\/SECURITY\.md" target="_blank" rel="noreferrer">security policy <span aria-hidden="true">↗<\/span><\/a>\. Listing is not a security review\.<\/p>/);
+  assert.match(files.explore, /<main id="explorer" class="explore-main" tabindex="-1">/);
   assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/github\.com\/omacom\/omarchy\/tree\/quattro"[^>]*>Omarchy Quattro<\/a>/);
   assert.equal((files.index.match(/href="develop\.html"/g) || []).length, 2);
   assert.equal((files.index.match(/href="explore\.html"/g) || []).length, 2);
@@ -1597,6 +1613,17 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);
+  assert.match(files.app, /<button type="button" data-kind="\$\{escapeHtml\(plugin\.kind\)\}" aria-label="Show all \$\{escapeHtml\(plugin\.kind\)\} plugins">/);
+  assert.match(files.app, /<button class="tag" type="button" data-card-filter="\$\{escapeHtml\(filter\)\}"/);
+  assert.match(files.app, /function cardTaxonomyFilter\(plugin, label\)/);
+  assert.match(files.app, /function applyCardSearchTerm\(term, message, \{ source = state\.source \} = \{\}\)/);
+  assert.match(files.app, /function applyCardCategory\(filter, source\)/);
+  assert.match(files.app, /aria-label="Show all \$\{escapeHtml\(catalogFilterLabel\(filter\)\)\} plugins"/);
+  assert.match(files.exploreSearchJs, /import \{ repositoryPublisher \} from "\.\/shared\.js\?v=/);
+  assert.match(files.app, /return repositoryPublisher\(plugin\.repo\);/);
+  assert.match(files.sharedJs, /export function repositoryPublisher\(repo\)/);
+  assert.match(files.pluginJs, /export function catalogHref\(plugin, filters = \{\}\)/);
+  assert.match(files.pluginJs, /document\.querySelector\("#aside-owner"\)\.innerHTML = publisher/);
   assert.match(files.app, /appendSearchState\(params, \{ terms: state\.terms, draft: state\.query \}\)/);
   assert.match(files.app, /if \(state\.sort !== sourceDefaultSort\(\)\) params\.set\("sort", state\.sort\)/);
   assert.match(files.app, /readSearchState\(params\)/);
@@ -1825,6 +1852,11 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.plugin-author button \{[\s\S]*z-index: 3/);
   assert.match(styles, /\.plugin-author button \{[\s\S]*min-height: 24px/);
   assert.match(styles, /\.plugin-author button:hover, \.plugin-author button:focus-visible \{ color: var\(--accent\); \}/);
+  assert.match(styles, /\.crumbs a:hover, \.crumbs a:focus-visible \{ color: var\(--text\); \}/);
+  assert.match(styles, /\.page-eyebrow a:hover, \.page-eyebrow a:focus-visible \{ text-decoration: underline; text-underline-offset: 3px; \}/);
+  assert.match(styles, /\.plugin-detail-article \.page-meta a:hover, \.plugin-detail-article \.page-meta a:focus-visible \{ color: var\(--accent\); \}/);
+  assert.match(styles, /button\.tag \{ position: relative; z-index: 3; cursor: pointer; line-height: normal; \}/);
+  assert.match(styles, /a\.tag:hover, a\.tag:focus-visible, button\.tag:hover, button\.tag:focus-visible \{ border-color: var\(--accent\); color: var\(--accent\); \}/);
   assert.match(files.index, /class="footer-status"/);
   assert.match(files.index, /HANCORE[\s\S]*OMARCHY PLUGIN MARKETPLACE[\s\S]*GITHUB/);
   assert.doesNotMatch(files.index, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);

@@ -2,17 +2,10 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   parseSearchDraft,
-} from "./search.js?v=20260831-01";
+} from "./search.js?v=20260906-01";
+import { repositoryPublisher } from "./shared.js?v=20260906-01";
 
-export function repositoryPublisher(repo) {
-  try {
-    const url = new URL(repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
-  } catch {
-    return "";
-  }
-}
+export { repositoryPublisher };
 
 function explorerSearchContext(node) {
   const publisher = repositoryPublisher(node.repo);

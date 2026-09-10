@@ -63,10 +63,37 @@ test("installable unverified plugin details render exact snapshot and mutable-in
 
 test("detail tags use the curated Games, Security, and AI labels", () => {
   const html = render({ tags: ["games", "security", "ai", "quickshell"] });
-  assert.match(html, /<span class="tag">Games<\/span>/);
-  assert.match(html, /<span class="tag">Security<\/span>/);
-  assert.match(html, /<span class="tag">AI<\/span>/);
-  assert.match(html, /<span class="tag">quickshell<\/span>/);
+  assert.match(html, /<a class="tag" href="index\.html\?tag=games#catalog">Games<\/a>/);
+  assert.match(html, /<a class="tag" href="index\.html\?tag=security#catalog">Security<\/a>/);
+  assert.match(html, /<a class="tag" href="index\.html\?tag=ai#catalog">AI<\/a>/);
+  assert.match(html, /<a class="tag" href="index\.html\?tag=quickshell#catalog">quickshell<\/a>/);
+});
+
+test("detail metadata links back to the matching catalog filters", () => {
+  const html = render({ category: "Bar widgets", repo: "https://github.com/Example-Org/community-plugin" });
+  assert.match(html, /<div class="page-eyebrow"><a href="index\.html\?category=Bar\+widgets#catalog">Bar widgets<\/a><\/div>/);
+  assert.match(html, /<span>by <a href="index\.html\?author=Example-Org#catalog">Example Maintainer<\/a><\/span>/);
+});
+
+test("detail author stays plain text without a GitHub publisher", () => {
+  const html = render({ repo: "https://codeberg.org/example/community-plugin" });
+  assert.match(html, /<span>by Example Maintainer<\/span>/);
+  assert.doesNotMatch(html, /\?author=/);
+});
+
+test("built-in detail links keep the built-in catalog source", () => {
+  const html = render({
+    builtIn: true,
+    author: "Omarchy",
+    category: "System",
+    tags: ["bar"],
+    repo: "https://github.com/omacom/omarchy",
+    officialCommandLabel: "Command",
+    installCommand: "omarchy plugin enable example",
+  });
+  assert.match(html, /<div class="page-eyebrow"><a href="index\.html\?source=builtin&amp;category=System#catalog">System<\/a><\/div>/);
+  assert.match(html, /<a class="tag" href="index\.html\?source=builtin&amp;tag=bar#catalog">bar<\/a>/);
+  assert.match(html, /<span>by Omarchy<\/span>/);
 });
 
 test("plugin preview uses an escaped native button", () => {

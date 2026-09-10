@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#000000">
     <title>Explore Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260820-21">
-    <link rel="stylesheet" href="assets/css/explore.css?v=20260828-27">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260906-01">
+    <link rel="stylesheet" href="assets/css/explore.css?v=20260906-01">
     <script>document.documentElement.dataset.theme = localStorage.getItem("omarchy-theme") || "dark";</script>
   </head>
   <body class="marketplace-page explore-page">
@@ -37,7 +37,7 @@
       </div>
     </header>
 
-    <main id="explorer" class="explore-main">
+    <main id="explorer" class="explore-main" tabindex="-1">
       <header class="explore-heading">
         <div>
           <span class="page-eyebrow">Community registry</span>
@@ -92,7 +92,7 @@
               </div>
             </div>
             <div class="detail-card-context">
-              <span class="detail-community"><i aria-hidden="true"></i><span data-detail="community"></span></span>
+              <button class="detail-community" type="button" aria-pressed="false"><i aria-hidden="true"></i><span data-detail="community"></span></button>
               <span class="detail-stars" aria-label="Repository stars"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg><strong data-detail="stars"></strong></span>
             </div>
             <p class="detail-description"></p>
@@ -239,6 +239,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
 
-    <script type="module" src="assets/js/explore.js?v=20260905-01"></script>
+    <script type="module" src="assets/js/explore.js?v=20260906-01"></script>
   </body>
 </html>

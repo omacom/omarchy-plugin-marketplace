@@ -24,6 +24,16 @@ const taxonomyTagNames = Object.freeze({
   workspaces: "Workspace",
 });
 
+export function repositoryPublisher(repo) {
+  try {
+    const url = new URL(repo);
+    if (url.hostname.toLowerCase() !== "github.com") return "";
+    return url.pathname.split("/").filter(Boolean)[0] || "";
+  } catch {
+    return "";
+  }
+}
+
 export function displayTaxonomyTag(value) {
   const tag = String(value || "").trim();
   return taxonomyTagNames[tag] || tag;
