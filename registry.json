@@ -151493,6 +151493,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidkodar/omarchy-scarlett",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:42:04.604Z",
+      "listingValidatedCommit": "7d97dca192d7a13d76b67dc4f1306e34c6e171d1",
+      "listingValidatedAt": "2026-09-10T19:42:04.604Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidkodar/omarchy-scarlett",
+        "pluginIds": [
+          "davidkodar.scarlett"
+        ],
+        "commit": "7d97dca192d7a13d76b67dc4f1306e34c6e171d1",
+        "checkedAt": "2026-09-10T19:42:04.529Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davidkodar/omarchy-scarlett",
+        "pluginIds": [
+          "davidkodar.scarlett"
+        ],
+        "commit": "7d97dca192d7a13d76b67dc4f1306e34c6e171d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:42:04.529Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T21:58:32.783Z",
+        "requestEventId": 30927233492,
+        "requestedAt": "2026-09-10T19:40:59Z",
+        "reviewedAt": "2026-09-10T19:42:04.529Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "davidkodar.scarlett": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
