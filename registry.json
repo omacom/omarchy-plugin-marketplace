@@ -148173,6 +148173,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Person1873/just-hyprtonation",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T05:02:53.623Z",
+      "listingValidatedCommit": "a8533c2bf7ca16e1450686090c5dc4935aabc47d",
+      "listingValidatedAt": "2026-09-10T05:02:53.623Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "person1873/just-hyprtonation",
+        "pluginIds": [
+          "person1873.just-hyprtonation"
+        ],
+        "commit": "a8533c2bf7ca16e1450686090c5dc4935aabc47d",
+        "checkedAt": "2026-09-10T05:02:53.540Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "person1873/just-hyprtonation",
+        "pluginIds": [
+          "person1873.just-hyprtonation"
+        ],
+        "commit": "a8533c2bf7ca16e1450686090c5dc4935aabc47d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T05:02:53.540Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T06:43:13.545Z",
+        "requestEventId": 30877245547,
+        "requestedAt": "2026-09-10T05:01:42Z",
+        "reviewedAt": "2026-09-10T05:02:53.540Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "person1873.just-hyprtonation": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "media",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
