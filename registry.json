@@ -102626,8 +102626,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T06:41:04.294Z",
-      "listingValidatedCommit": "ffd0ad2cbf65b7806de559f26e06c25c7634331e",
-      "listingValidatedAt": "2026-08-31T06:41:04.294Z",
+      "listingValidatedCommit": "cf72d1b419e466f7306f66c13b4d9f7c367f8c38",
+      "listingValidatedAt": "2026-09-10T18:05:36.041Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -102636,8 +102636,8 @@
         "pluginIds": [
           "roubilibo.omarchy-snip-record"
         ],
-        "commit": "ffd0ad2cbf65b7806de559f26e06c25c7634331e",
-        "checkedAt": "2026-08-31T06:41:04.248Z",
+        "commit": "cf72d1b419e466f7306f66c13b4d9f7c367f8c38",
+        "checkedAt": "2026-09-10T18:05:36.041Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -102652,7 +102652,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ffd0ad2cbf65b7806de559f26e06c25c7634331e",
+          "validatedAt": "2026-08-31T06:41:04.294Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T18:05:36.041Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "roubilibo/omarchy-snip-record",
+            "pluginIds": [
+              "roubilibo.omarchy-snip-record"
+            ],
+            "commit": "ffd0ad2cbf65b7806de559f26e06c25c7634331e",
+            "checkedAt": "2026-08-31T06:41:04.248Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ElRuckh/workspaces-per-monitor",
