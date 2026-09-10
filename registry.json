@@ -20689,8 +20689,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T20:33:37.135Z",
-      "listingValidatedCommit": "e2a0b179d69a82dc6fc7e708cf483ea54ca9e0a7",
-      "listingValidatedAt": "2026-08-18T20:33:37.135Z",
+      "listingValidatedCommit": "cacafbba95bc2934dd94748d5a19605797be1672",
+      "listingValidatedAt": "2026-09-10T18:23:24.925Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -20699,8 +20699,8 @@
         "pluginIds": [
           "io.github.orienw.restic"
         ],
-        "commit": "e2a0b179d69a82dc6fc7e708cf483ea54ca9e0a7",
-        "checkedAt": "2026-08-18T18:47:47.852Z",
+        "commit": "cacafbba95bc2934dd94748d5a19605797be1672",
+        "checkedAt": "2026-09-10T18:23:24.925Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -20722,7 +20722,52 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "orienw/omarchy-restic",
+        "pluginIds": [
+          "io.github.orienw.restic"
+        ],
+        "commit": "cacafbba95bc2934dd94748d5a19605797be1672",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:23:24.925Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T05:41:02.380Z",
+        "requestEventId": 30920861667,
+        "requestedAt": "2026-09-10T17:43:43Z",
+        "reviewedAt": "2026-09-10T18:23:24.925Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e2a0b179d69a82dc6fc7e708cf483ea54ca9e0a7",
+          "validatedAt": "2026-08-18T20:33:37.135Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:23:24.925Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "orienw/omarchy-restic",
+            "pluginIds": [
+              "io.github.orienw.restic"
+            ],
+            "commit": "e2a0b179d69a82dc6fc7e708cf483ea54ca9e0a7",
+            "checkedAt": "2026-08-18T18:47:47.852Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/unleashed-nick/omarchy-thunderbolt",
