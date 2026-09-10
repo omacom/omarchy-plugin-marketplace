@@ -76844,8 +76844,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T20:48:36.723Z",
-      "listingValidatedCommit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
-      "listingValidatedAt": "2026-08-26T20:48:36.723Z",
+      "listingValidatedCommit": "2a49595d6eed8b36590312ccce321c398d8e882f",
+      "listingValidatedAt": "2026-09-10T19:45:22.248Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -76854,8 +76854,8 @@
         "pluginIds": [
           "io.github.nico-kovacs.netbird"
         ],
-        "commit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
-        "checkedAt": "2026-08-26T20:48:36.680Z",
+        "commit": "2a49595d6eed8b36590312ccce321c398d8e882f",
+        "checkedAt": "2026-09-10T19:45:22.248Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -76864,29 +76864,6 @@
           "privilege",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "nico-kovacs/omarchy-plugin-netbird",
-        "pluginIds": [
-          "io.github.nico-kovacs.netbird"
-        ],
-        "commit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-26T20:48:36.680Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-26T20:33:58.874Z",
-        "requestEventId": 30067190382,
-        "requestedAt": "2026-08-26T20:36:26Z",
-        "reviewedAt": "2026-08-26T20:48:36.681Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.nico-kovacs.netbird": {
@@ -76898,7 +76875,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nico-kovacs/omarchy-plugin-netbird",
+        "pluginIds": [
+          "io.github.nico-kovacs.netbird"
+        ],
+        "commit": "2a49595d6eed8b36590312ccce321c398d8e882f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:45:22.248Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T12:06:59.497Z",
+        "requestEventId": 30927308757,
+        "requestedAt": "2026-09-10T19:42:27Z",
+        "reviewedAt": "2026-09-10T19:45:22.248Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
+          "validatedAt": "2026-08-26T20:48:36.723Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T19:45:22.248Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nico-kovacs/omarchy-plugin-netbird",
+            "pluginIds": [
+              "io.github.nico-kovacs.netbird"
+            ],
+            "commit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
+            "checkedAt": "2026-08-26T20:48:36.680Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "nico-kovacs/omarchy-plugin-netbird",
+            "pluginIds": [
+              "io.github.nico-kovacs.netbird"
+            ],
+            "commit": "dd8b2f3739dc0b666d4976f83197d9ed702f8644",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-26T20:48:36.680Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-26T20:33:58.874Z",
+            "requestEventId": 30067190382,
+            "requestedAt": "2026-08-26T20:36:26Z",
+            "reviewedAt": "2026-08-26T20:48:36.681Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Robin0315/omanetease",
