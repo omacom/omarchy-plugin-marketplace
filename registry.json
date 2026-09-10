@@ -148365,6 +148365,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dgoran/omastart",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T11:55:13.568Z",
+      "listingValidatedCommit": "030557f86576d0684a8149f5a07b0ba3c78f8e7c",
+      "listingValidatedAt": "2026-09-10T11:55:13.568Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dgoran/omastart",
+        "pluginIds": [
+          "io.github.dgoran.omastart"
+        ],
+        "commit": "030557f86576d0684a8149f5a07b0ba3c78f8e7c",
+        "checkedAt": "2026-09-10T11:55:13.511Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dgoran/omastart",
+        "pluginIds": [
+          "io.github.dgoran.omastart"
+        ],
+        "commit": "030557f86576d0684a8149f5a07b0ba3c78f8e7c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T11:55:13.511Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T13:07:03.617Z",
+        "requestEventId": 30899554036,
+        "requestedAt": "2026-09-10T11:54:17Z",
+        "reviewedAt": "2026-09-10T11:55:13.511Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dgoran.omastart": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
