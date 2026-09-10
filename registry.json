@@ -131003,8 +131003,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:22:56.881Z",
-      "listingValidatedCommit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
-      "listingValidatedAt": "2026-09-06T00:22:56.881Z",
+      "listingValidatedCommit": "962facea3de52bb8db0c483412533177429e3a40",
+      "listingValidatedAt": "2026-09-10T20:59:18.183Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -131013,8 +131013,8 @@
         "pluginIds": [
           "io.github.mahziyarng98.jalali-calendar"
         ],
-        "commit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
-        "checkedAt": "2026-09-06T00:22:56.823Z",
+        "commit": "962facea3de52bb8db0c483412533177429e3a40",
+        "checkedAt": "2026-09-10T20:59:18.183Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -131029,7 +131029,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
+          "validatedAt": "2026-09-06T00:22:56.881Z",
+          "branch": "master",
+          "supersededAt": "2026-09-10T20:59:18.183Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mahziyarng98/jalali-calendar",
+            "pluginIds": [
+              "io.github.mahziyarng98.jalali-calendar"
+            ],
+            "commit": "a76a4c8b865dad261393137dc3977dd6e3a83a97",
+            "checkedAt": "2026-09-06T00:22:56.823Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rickbacci/quattrograph",
