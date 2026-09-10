@@ -111183,8 +111183,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T14:00:22.561Z",
-      "listingValidatedCommit": "3585ecd72738bcc522d55fc734958f59c89ef29d",
-      "listingValidatedAt": "2026-09-04T07:30:03.647Z",
+      "listingValidatedCommit": "aaa14a91890557b2fb7a742bb4593feae59cd564",
+      "listingValidatedAt": "2026-09-10T18:58:57.054Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -111193,12 +111193,14 @@
         "pluginIds": [
           "io.github.mtolhuys.news-radar"
         ],
-        "commit": "3585ecd72738bcc522d55fc734958f59c89ef29d",
-        "checkedAt": "2026-09-04T07:30:03.647Z",
-        "outcome": "passed",
+        "commit": "aaa14a91890557b2fb7a742bb4593feae59cd564",
+        "checkedAt": "2026-09-10T18:58:57.054Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "installer"
+        ]
       },
       "plugins": {
         "io.github.mtolhuys.news-radar": {
@@ -111251,8 +111253,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "3585ecd72738bcc522d55fc734958f59c89ef29d",
+          "validatedAt": "2026-09-04T07:30:03.647Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:58:57.054Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mtolhuys/omarchy-news-radar",
+            "pluginIds": [
+              "io.github.mtolhuys.news-radar"
+            ],
+            "commit": "3585ecd72738bcc522d55fc734958f59c89ef29d",
+            "checkedAt": "2026-09-04T07:30:03.647Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mtolhuys/omarchy-news-radar",
+        "pluginIds": [
+          "io.github.mtolhuys.news-radar"
+        ],
+        "commit": "aaa14a91890557b2fb7a742bb4593feae59cd564",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:58:57.054Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T16:04:07.767Z",
+        "requestEventId": 30921619497,
+        "requestedAt": "2026-09-10T17:57:48Z",
+        "reviewedAt": "2026-09-10T18:58:57.054Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/ianswope/omarchy-homebridge",
