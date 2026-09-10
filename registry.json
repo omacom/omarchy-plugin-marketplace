@@ -53005,8 +53005,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T11:12:18.153Z",
-      "listingValidatedCommit": "386829e767c7b79102f167757f29a8cc0df8bc3d",
-      "listingValidatedAt": "2026-08-23T11:12:18.153Z",
+      "listingValidatedCommit": "f12b221696edbaf9ccf715e830e71d8860e477bb",
+      "listingValidatedAt": "2026-09-10T21:44:16.330Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -53015,8 +53015,8 @@
         "pluginIds": [
           "oma.chess"
         ],
-        "commit": "386829e767c7b79102f167757f29a8cc0df8bc3d",
-        "checkedAt": "2026-08-23T11:12:18.122Z",
+        "commit": "f12b221696edbaf9ccf715e830e71d8860e477bb",
+        "checkedAt": "2026-09-10T21:44:16.330Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -53031,7 +53031,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "386829e767c7b79102f167757f29a8cc0df8bc3d",
+          "validatedAt": "2026-08-23T11:12:18.153Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:44:16.330Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "desaivishal-16/oma-chess",
+            "pluginIds": [
+              "oma.chess"
+            ],
+            "commit": "386829e767c7b79102f167757f29a8cc0df8bc3d",
+            "checkedAt": "2026-08-23T11:12:18.122Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rishadtharayil/omarchy-plugin-ryzenadj",
