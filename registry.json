@@ -122847,8 +122847,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T18:32:26.784Z",
-      "listingValidatedCommit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
-      "listingValidatedAt": "2026-09-04T18:32:26.784Z",
+      "listingValidatedCommit": "e46e6b3f30be72e21cd3216166224e754f482730",
+      "listingValidatedAt": "2026-09-10T18:45:17.084Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -122857,8 +122857,8 @@
         "pluginIds": [
           "io.github.villenull.mimarchy"
         ],
-        "commit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
-        "checkedAt": "2026-09-04T18:32:26.724Z",
+        "commit": "e46e6b3f30be72e21cd3216166224e754f482730",
+        "checkedAt": "2026-09-10T18:45:17.084Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -122869,31 +122869,6 @@
           "installer",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "villenull/mimarchy",
-        "pluginIds": [
-          "io.github.villenull.mimarchy"
-        ],
-        "commit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T18:32:26.724Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "service-management",
-          "privilege",
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T17:36:03.602Z",
-        "requestEventId": 30573504800,
-        "requestedAt": "2026-09-04T18:19:46Z",
-        "reviewedAt": "2026-09-04T18:32:26.724Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.villenull.mimarchy": {
@@ -122909,7 +122884,85 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "villenull/mimarchy",
+        "pluginIds": [
+          "io.github.villenull.mimarchy"
+        ],
+        "commit": "e46e6b3f30be72e21cd3216166224e754f482730",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:45:17.084Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-04T20:46:44.688Z",
+        "requestEventId": 30921424699,
+        "requestedAt": "2026-09-10T17:54:08Z",
+        "reviewedAt": "2026-09-10T18:45:17.084Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
+          "validatedAt": "2026-09-04T18:32:26.784Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:45:17.084Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "villenull/mimarchy",
+            "pluginIds": [
+              "io.github.villenull.mimarchy"
+            ],
+            "commit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
+            "checkedAt": "2026-09-04T18:32:26.724Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "privilege",
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "villenull/mimarchy",
+            "pluginIds": [
+              "io.github.villenull.mimarchy"
+            ],
+            "commit": "0528582a929f8fa2b92dd655c5f205c9a9aa4ead",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T18:32:26.724Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "privilege",
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T17:36:03.602Z",
+            "requestEventId": 30573504800,
+            "requestedAt": "2026-09-04T18:19:46Z",
+            "reviewedAt": "2026-09-04T18:32:26.724Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/themediastandard/omarchy-drive-speedtest",
