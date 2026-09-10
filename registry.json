@@ -148997,6 +148997,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/agusherrera99/omarchy-bookflow",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T14:40:51.990Z",
+      "listingValidatedCommit": "2b659622f4dc607bfa83dc3b4cb1a95b0ace40ff",
+      "listingValidatedAt": "2026-09-10T14:40:51.990Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "agusherrera99/omarchy-bookflow",
+        "pluginIds": [
+          "io.github.agusherrera99.bookflow"
+        ],
+        "commit": "2b659622f4dc607bfa83dc3b4cb1a95b0ace40ff",
+        "checkedAt": "2026-09-10T14:40:51.945Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "agusherrera99/omarchy-bookflow",
+        "pluginIds": [
+          "io.github.agusherrera99.bookflow"
+        ],
+        "commit": "2b659622f4dc607bfa83dc3b4cb1a95b0ace40ff",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T14:40:51.945Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T02:33:24.442Z",
+        "requestEventId": 30909841409,
+        "requestedAt": "2026-09-10T14:39:56Z",
+        "reviewedAt": "2026-09-10T14:40:51.945Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.agusherrera99.bookflow": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
