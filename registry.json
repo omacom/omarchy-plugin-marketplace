@@ -133471,8 +133471,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:30:57.576Z",
-      "listingValidatedCommit": "372b2449807c3c19aad0413cccf358b273e46e48",
-      "listingValidatedAt": "2026-09-06T02:30:57.576Z",
+      "listingValidatedCommit": "eec46596668a952944e23a3f04bb5ffd29a0b453",
+      "listingValidatedAt": "2026-09-10T21:38:53.359Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133481,35 +133481,14 @@
         "pluginIds": [
           "com.github.marvreichmann.omavibrance"
         ],
-        "commit": "372b2449807c3c19aad0413cccf358b273e46e48",
-        "checkedAt": "2026-09-06T02:30:57.534Z",
+        "commit": "eec46596668a952944e23a3f04bb5ffd29a0b453",
+        "checkedAt": "2026-09-10T21:38:53.359Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "marvreichmann/omavibrance",
-        "pluginIds": [
-          "com.github.marvreichmann.omavibrance"
-        ],
-        "commit": "372b2449807c3c19aad0413cccf358b273e46e48",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-06T02:30:57.534Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-05T22:56:34.490Z",
-        "requestEventId": 30627323312,
-        "requestedAt": "2026-09-06T02:10:22Z",
-        "reviewedAt": "2026-09-06T02:30:57.534Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "com.github.marvreichmann.omavibrance": {
@@ -133520,7 +133499,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "marvreichmann/omavibrance",
+        "pluginIds": [
+          "com.github.marvreichmann.omavibrance"
+        ],
+        "commit": "eec46596668a952944e23a3f04bb5ffd29a0b453",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:38:53.359Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T10:28:55.488Z",
+        "requestEventId": 30930114410,
+        "requestedAt": "2026-09-10T20:36:21Z",
+        "reviewedAt": "2026-09-10T21:38:53.359Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "372b2449807c3c19aad0413cccf358b273e46e48",
+          "validatedAt": "2026-09-06T02:30:57.576Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:38:53.359Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "marvreichmann/omavibrance",
+            "pluginIds": [
+              "com.github.marvreichmann.omavibrance"
+            ],
+            "commit": "372b2449807c3c19aad0413cccf358b273e46e48",
+            "checkedAt": "2026-09-06T02:30:57.534Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "marvreichmann/omavibrance",
+            "pluginIds": [
+              "com.github.marvreichmann.omavibrance"
+            ],
+            "commit": "372b2449807c3c19aad0413cccf358b273e46e48",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-06T02:30:57.534Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-05T22:56:34.490Z",
+            "requestEventId": 30627323312,
+            "requestedAt": "2026-09-06T02:10:22Z",
+            "reviewedAt": "2026-09-06T02:30:57.534Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/maiosx/wallpicker",
