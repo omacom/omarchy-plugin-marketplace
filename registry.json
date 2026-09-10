@@ -148569,6 +148569,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dreed47/omarchy-todoist-shopping",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T12:31:17.147Z",
+      "listingValidatedCommit": "b3868af422482ccc11c6c0f9c3bd637eaae255c2",
+      "listingValidatedAt": "2026-09-10T12:31:17.147Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dreed47/omarchy-todoist-shopping",
+        "pluginIds": [
+          "io.github.dreed47.todoist-shopping"
+        ],
+        "commit": "b3868af422482ccc11c6c0f9c3bd637eaae255c2",
+        "checkedAt": "2026-09-10T12:31:17.068Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dreed47.todoist-shopping": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
