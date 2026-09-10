@@ -117547,8 +117547,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T17:51:09.520Z",
-      "listingValidatedCommit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
-      "listingValidatedAt": "2026-09-02T17:51:09.520Z",
+      "listingValidatedCommit": "06d17476b21e76f68aabed92721df6e66fc9da4b",
+      "listingValidatedAt": "2026-09-10T21:27:53.273Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -117557,35 +117557,15 @@
         "pluginIds": [
           "anothadev.omachord"
         ],
-        "commit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
-        "checkedAt": "2026-09-02T17:51:09.453Z",
+        "commit": "06d17476b21e76f68aabed92721df6e66fc9da4b",
+        "checkedAt": "2026-09-10T21:27:53.273Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
+          "remote-build",
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "anothadev/omachord",
-        "pluginIds": [
-          "anothadev.omachord"
-        ],
-        "commit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T17:51:09.453Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T13:57:33.018Z",
-        "requestEventId": 30434708725,
-        "requestedAt": "2026-09-02T17:50:19Z",
-        "reviewedAt": "2026-09-02T17:51:09.453Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "anothadev.omachord": {
@@ -117597,7 +117577,74 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "anothadev/omachord",
+        "pluginIds": [
+          "anothadev.omachord"
+        ],
+        "commit": "06d17476b21e76f68aabed92721df6e66fc9da4b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T21:27:53.273Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-06T08:29:18.937Z",
+        "requestEventId": 30930098241,
+        "requestedAt": "2026-09-10T20:36:04Z",
+        "reviewedAt": "2026-09-10T21:27:53.273Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
+          "validatedAt": "2026-09-02T17:51:09.520Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:27:53.273Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "anothadev/omachord",
+            "pluginIds": [
+              "anothadev.omachord"
+            ],
+            "commit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
+            "checkedAt": "2026-09-02T17:51:09.453Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "anothadev/omachord",
+            "pluginIds": [
+              "anothadev.omachord"
+            ],
+            "commit": "873fcf0fba8af0ceeeef297a07ed095b39c47d59",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T17:51:09.453Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T13:57:33.018Z",
+            "requestEventId": 30434708725,
+            "requestedAt": "2026-09-02T17:50:19Z",
+            "reviewedAt": "2026-09-02T17:51:09.453Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/robertlindomar/omarchy-ptbr-audio",
