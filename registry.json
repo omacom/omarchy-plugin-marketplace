@@ -153286,6 +153286,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marvreichmann/omapluginstats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T22:04:17.816Z",
+      "listingValidatedCommit": "da6a7599362984c1f4840b7bc4000897bfbd2241",
+      "listingValidatedAt": "2026-09-10T22:04:17.816Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marvreichmann/omapluginstats",
+        "pluginIds": [
+          "com.github.marvreichmann.omapluginstats"
+        ],
+        "commit": "da6a7599362984c1f4840b7bc4000897bfbd2241",
+        "checkedAt": "2026-09-10T22:04:17.737Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.github.marvreichmann.omapluginstats": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
