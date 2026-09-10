@@ -119654,8 +119654,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T15:07:36.654Z",
-      "listingValidatedCommit": "09771c468c1440989053b3838b8aa86267d102cb",
-      "listingValidatedAt": "2026-09-04T15:07:36.654Z",
+      "listingValidatedCommit": "2e2210e33fe5a5e58dbdca51dfb341babab87dc7",
+      "listingValidatedAt": "2026-09-10T18:42:45.823Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -119664,8 +119664,8 @@
         "pluginIds": [
           "palccod.omate"
         ],
-        "commit": "09771c468c1440989053b3838b8aa86267d102cb",
-        "checkedAt": "2026-09-04T15:07:36.594Z",
+        "commit": "2e2210e33fe5a5e58dbdca51dfb341babab87dc7",
+        "checkedAt": "2026-09-10T18:42:45.823Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -119674,29 +119674,6 @@
           "service-management",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "palccod/omate",
-        "pluginIds": [
-          "palccod.omate"
-        ],
-        "commit": "09771c468c1440989053b3838b8aa86267d102cb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T15:07:36.594Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T15:51:14.841Z",
-        "requestEventId": 30559915554,
-        "requestedAt": "2026-09-04T14:20:22Z",
-        "reviewedAt": "2026-09-04T15:07:36.595Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "palccod.omate": {
@@ -119708,7 +119685,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "palccod/omate",
+        "pluginIds": [
+          "palccod.omate"
+        ],
+        "commit": "2e2210e33fe5a5e58dbdca51dfb341babab87dc7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T18:42:45.823Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T20:13:47.454Z",
+        "requestEventId": 30921421193,
+        "requestedAt": "2026-09-10T17:54:04Z",
+        "reviewedAt": "2026-09-10T18:42:45.823Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "09771c468c1440989053b3838b8aa86267d102cb",
+          "validatedAt": "2026-09-04T15:07:36.654Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T18:42:45.823Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "palccod/omate",
+            "pluginIds": [
+              "palccod.omate"
+            ],
+            "commit": "09771c468c1440989053b3838b8aa86267d102cb",
+            "checkedAt": "2026-09-04T15:07:36.594Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "palccod/omate",
+            "pluginIds": [
+              "palccod.omate"
+            ],
+            "commit": "09771c468c1440989053b3838b8aa86267d102cb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T15:07:36.594Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T15:51:14.841Z",
+            "requestEventId": 30559915554,
+            "requestedAt": "2026-09-04T14:20:22Z",
+            "reviewedAt": "2026-09-04T15:07:36.595Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/glorics/omarchy-grok-bot",
