@@ -151428,6 +151428,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/M8SON/omarchy-razer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-10",
+      "listedAt": "2026-09-10T19:35:45.128Z",
+      "listingValidatedCommit": "18a292e00a3b97ed40237c05a88ea45abaafd2b9",
+      "listingValidatedAt": "2026-09-10T19:35:45.128Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "m8son/omarchy-razer",
+        "pluginIds": [
+          "io.github.m8son.razer"
+        ],
+        "commit": "18a292e00a3b97ed40237c05a88ea45abaafd2b9",
+        "checkedAt": "2026-09-10T19:35:45.053Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "m8son/omarchy-razer",
+        "pluginIds": [
+          "io.github.m8son.razer"
+        ],
+        "commit": "18a292e00a3b97ed40237c05a88ea45abaafd2b9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-10T19:35:45.053Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T21:14:08.743Z",
+        "requestEventId": 30924597391,
+        "requestedAt": "2026-09-10T18:50:45Z",
+        "reviewedAt": "2026-09-10T19:35:45.053Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.m8son.razer": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
