@@ -1329,8 +1329,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-10",
       "listedAt": "2026-08-10T07:11:53.698Z",
-      "listingValidatedCommit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
-      "listingValidatedAt": "2026-09-02T01:46:57.853Z",
+      "listingValidatedCommit": "e4c0b951c08374d497379ed304721da5cb77ca3e",
+      "listingValidatedAt": "2026-09-10T21:19:06.787Z",
       "listingValidatedBranch": "main",
       "plugins": {
         "mirador": {
@@ -1348,14 +1348,12 @@
         "pluginIds": [
           "mirador"
         ],
-        "commit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
-        "checkedAt": "2026-09-02T01:46:57.852Z",
-        "outcome": "review-required",
+        "commit": "e4c0b951c08374d497379ed304721da5cb77ca3e",
+        "checkedAt": "2026-09-10T21:19:06.787Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
+        "capabilities": []
       },
       "listingValidationHistory": [
         {
@@ -1406,29 +1404,51 @@
             "reviewedAt": "2026-08-23T09:50:43.564Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
+          "validatedAt": "2026-09-02T01:46:57.853Z",
+          "branch": "main",
+          "supersededAt": "2026-09-10T21:19:06.787Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sanjyay/mirador",
+            "pluginIds": [
+              "mirador"
+            ],
+            "commit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
+            "checkedAt": "2026-09-02T01:46:57.852Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sanjyay/mirador",
+            "pluginIds": [
+              "mirador"
+            ],
+            "commit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T01:46:57.852Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-01T10:05:38.988Z",
+            "requestEventId": 30383161813,
+            "requestedAt": "2026-09-02T00:38:55Z",
+            "reviewedAt": "2026-09-02T01:46:57.853Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ],
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sanjyay/mirador",
-        "pluginIds": [
-          "mirador"
-        ],
-        "commit": "b15bc101dbda473757c90c5ab0594dbc809f17ce",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T01:46:57.852Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-01T10:05:38.988Z",
-        "requestEventId": 30383161813,
-        "requestedAt": "2026-09-02T00:38:55Z",
-        "reviewedAt": "2026-09-02T01:46:57.853Z",
-        "reviewer": "HANCORE-linux"
-      }
+      ]
     },
     {
       "repo": "https://github.com/jfg96/omarchy-nearby",
