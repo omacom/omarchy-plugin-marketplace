@@ -106448,8 +106448,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T10:47:21.648Z",
-      "listingValidatedCommit": "d7720ee2dbf60cba31b4333f9ee58e4dd7ec3361",
-      "listingValidatedAt": "2026-08-31T10:47:21.648Z",
+      "listingValidatedCommit": "905b630d4cd28b34304089d1f4fe0aa17adb9cfa",
+      "listingValidatedAt": "2026-09-11T05:44:10.377Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -106458,8 +106458,8 @@
         "pluginIds": [
           "wdg.omarecall"
         ],
-        "commit": "d7720ee2dbf60cba31b4333f9ee58e4dd7ec3361",
-        "checkedAt": "2026-08-31T10:47:21.594Z",
+        "commit": "905b630d4cd28b34304089d1f4fe0aa17adb9cfa",
+        "checkedAt": "2026-09-11T05:44:10.377Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -106473,7 +106473,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d7720ee2dbf60cba31b4333f9ee58e4dd7ec3361",
+          "validatedAt": "2026-08-31T10:47:21.648Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T05:44:10.377Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wisangdg/omarecall",
+            "pluginIds": [
+              "wdg.omarecall"
+            ],
+            "commit": "d7720ee2dbf60cba31b4333f9ee58e4dd7ec3361",
+            "checkedAt": "2026-08-31T10:47:21.594Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/sahilhuseynzade/deeplok",
