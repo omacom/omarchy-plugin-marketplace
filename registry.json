@@ -144843,8 +144843,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:56:59.548Z",
-      "listingValidatedCommit": "c8c75559b6da72208c90c3a680e6e6af2429a6a4",
-      "listingValidatedAt": "2026-09-08T12:56:59.548Z",
+      "listingValidatedCommit": "39c9b2b8fbcf6de6b19a8aff21affe472062cf74",
+      "listingValidatedAt": "2026-09-11T09:15:42.180Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -144853,8 +144853,8 @@
         "pluginIds": [
           "bergdahlchi.omari"
         ],
-        "commit": "c8c75559b6da72208c90c3a680e6e6af2429a6a4",
-        "checkedAt": "2026-09-08T12:56:59.483Z",
+        "commit": "39c9b2b8fbcf6de6b19a8aff21affe472062cf74",
+        "checkedAt": "2026-09-11T09:15:42.180Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -144869,7 +144869,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c8c75559b6da72208c90c3a680e6e6af2429a6a4",
+          "validatedAt": "2026-09-08T12:56:59.548Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:15:42.180Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "chicreativetech/omari",
+            "pluginIds": [
+              "bergdahlchi.omari"
+            ],
+            "commit": "c8c75559b6da72208c90c3a680e6e6af2429a6a4",
+            "checkedAt": "2026-09-08T12:56:59.483Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/brianirish/omarchy-screensaver-panel",
