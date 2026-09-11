@@ -117849,8 +117849,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T09:02:48.570Z",
-      "listingValidatedCommit": "8b062d7d0ea2232e507bc12794e2455b215ff66d",
-      "listingValidatedAt": "2026-09-03T23:25:31.862Z",
+      "listingValidatedCommit": "a9fa9a249d85c3f0ad5261aef2e78747484a8984",
+      "listingValidatedAt": "2026-09-11T16:25:37.839Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -117859,8 +117859,8 @@
         "pluginIds": [
           "syaifulmain.emptygap"
         ],
-        "commit": "8b062d7d0ea2232e507bc12794e2455b215ff66d",
-        "checkedAt": "2026-09-03T23:25:31.862Z",
+        "commit": "a9fa9a249d85c3f0ad5261aef2e78747484a8984",
+        "checkedAt": "2026-09-11T16:25:37.839Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -117890,6 +117890,26 @@
             ],
             "commit": "21462b4bf8f0ecfbd4117cfb001674ddb1f953ea",
             "checkedAt": "2026-09-02T09:02:48.512Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "8b062d7d0ea2232e507bc12794e2455b215ff66d",
+          "validatedAt": "2026-09-03T23:25:31.862Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T16:25:37.839Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "syaifulmain/omarchy-empty-gap",
+            "pluginIds": [
+              "syaifulmain.emptygap"
+            ],
+            "commit": "8b062d7d0ea2232e507bc12794e2455b215ff66d",
+            "checkedAt": "2026-09-03T23:25:31.862Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
