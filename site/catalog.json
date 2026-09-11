@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T13:18:31.241Z",
+  "generatedAt": "2026-09-11T13:21:30.000Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -161363,6 +161363,56 @@
       "upstreamValidatedAt": "2026-09-11T13:02:57.392Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "d9dad15e5248fa58b2ae4abb040099890ee747ca99d62233c2dee4aea39e4d5f",
+      "status": "Available"
+    },
+    {
+      "id": "io.github.flx-0x00.ip-copy",
+      "name": "IP Copy",
+      "description": "Shows the IP addresses of all physical and tunnel network interfaces in the bar. Click one to copy it to the clipboard.",
+      "author": "FLX",
+      "version": "1.0.0",
+      "repo": "https://github.com/FLX-0x00/omarchy-ip-copy",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+      "verificationCheckedAt": "2026-09-11T13:21:29.461Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T13:21:29.541Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/FLX-0x00/omarchy-ip-copy.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "System",
+      "tags": [
+        "bar",
+        "system",
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-11T11:37:41Z",
+      "repositoryRelease": {
+        "tag": "v1.0.0",
+        "url": "https://github.com/FLX-0x00/omarchy-ip-copy/tree/v1.0.0"
+      },
+      "accent": "cyan",
+      "initials": "IC",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+      "listingValidatedAt": "2026-09-11T13:21:29.541Z",
+      "listingValidatedBranch": "master",
+      "upstreamObservedCommit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+      "upstreamObservedBranch": "master",
+      "upstreamCheckedAt": "2026-09-11T13:21:30.000Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+      "upstreamValidatedAt": "2026-09-11T13:21:30.000Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "95799b717de9e7f808df15cf1f7ba68ae59c6904841f197d8ece3604d64b7e34",
       "status": "Available"
     },
     {

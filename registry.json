@@ -158309,6 +158309,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/FLX-0x00/omarchy-ip-copy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T13:21:29.541Z",
+      "listingValidatedCommit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+      "listingValidatedAt": "2026-09-11T13:21:29.541Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flx-0x00/omarchy-ip-copy",
+        "pluginIds": [
+          "io.github.flx-0x00.ip-copy"
+        ],
+        "commit": "41ef384da40dd8f92b1d66dfb8007a6797f471a5",
+        "checkedAt": "2026-09-11T13:21:29.461Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.flx-0x00.ip-copy": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
