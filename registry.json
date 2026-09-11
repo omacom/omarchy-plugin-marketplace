@@ -161276,6 +161276,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/huligabuliga/Omagoocal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T19:28:19.218Z",
+      "listingValidatedCommit": "235e4c6a97e6d7eb12231e625e84a5a2eb446e7b",
+      "listingValidatedAt": "2026-09-11T19:28:19.218Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "huligabuliga/omagoocal",
+        "pluginIds": [
+          "io.github.huligabuliga.omagoocal"
+        ],
+        "commit": "235e4c6a97e6d7eb12231e625e84a5a2eb446e7b",
+        "checkedAt": "2026-09-11T19:28:19.144Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.huligabuliga.omagoocal": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
