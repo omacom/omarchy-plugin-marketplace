@@ -149271,8 +149271,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T17:05:34.356Z",
-      "listingValidatedCommit": "586adc08573333fa64ff97758c897ccaec4a453b",
-      "listingValidatedAt": "2026-09-08T17:05:34.356Z",
+      "listingValidatedCommit": "03ba11b1ab4103f5868dbb048d10f8cde1d73d9c",
+      "listingValidatedAt": "2026-09-11T20:15:18.247Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -149281,35 +149281,14 @@
         "pluginIds": [
           "jam.grace-window"
         ],
-        "commit": "586adc08573333fa64ff97758c897ccaec4a453b",
-        "checkedAt": "2026-09-08T17:05:34.298Z",
+        "commit": "03ba11b1ab4103f5868dbb048d10f8cde1d73d9c",
+        "checkedAt": "2026-09-11T20:15:18.247Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jan-berberich/omarchy-grace-window",
-        "pluginIds": [
-          "jam.grace-window"
-        ],
-        "commit": "586adc08573333fa64ff97758c897ccaec4a453b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T17:05:34.298Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T15:47:31.295Z",
-        "requestEventId": 30772050422,
-        "requestedAt": "2026-09-08T17:04:38Z",
-        "reviewedAt": "2026-09-08T17:05:34.298Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jam.grace-window": {
@@ -149320,7 +149299,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jan-berberich/omarchy-grace-window",
+        "pluginIds": [
+          "jam.grace-window"
+        ],
+        "commit": "03ba11b1ab4103f5868dbb048d10f8cde1d73d9c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T20:15:18.247Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T10:19:24.339Z",
+        "requestEventId": 30996429187,
+        "requestedAt": "2026-09-11T19:59:56Z",
+        "reviewedAt": "2026-09-11T20:15:18.247Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "586adc08573333fa64ff97758c897ccaec4a453b",
+          "validatedAt": "2026-09-08T17:05:34.356Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T20:15:18.247Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jan-berberich/omarchy-grace-window",
+            "pluginIds": [
+              "jam.grace-window"
+            ],
+            "commit": "586adc08573333fa64ff97758c897ccaec4a453b",
+            "checkedAt": "2026-09-08T17:05:34.298Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jan-berberich/omarchy-grace-window",
+            "pluginIds": [
+              "jam.grace-window"
+            ],
+            "commit": "586adc08573333fa64ff97758c897ccaec4a453b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T17:05:34.298Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T15:47:31.295Z",
+            "requestEventId": 30772050422,
+            "requestedAt": "2026-09-08T17:04:38Z",
+            "reviewedAt": "2026-09-08T17:05:34.298Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Fluffet/omarchy-advanced-displays",
