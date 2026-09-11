@@ -154164,8 +154164,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T02:35:58.395Z",
-      "listingValidatedCommit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
-      "listingValidatedAt": "2026-09-09T02:35:58.395Z",
+      "listingValidatedCommit": "5d70b39c0ca4d6029a0b96eeb20e76e3d04c66a8",
+      "listingValidatedAt": "2026-09-11T15:41:08.769Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -154174,35 +154174,14 @@
         "pluginIds": [
           "djc.life-alert"
         ],
-        "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
-        "checkedAt": "2026-09-09T02:35:58.327Z",
+        "commit": "5d70b39c0ca4d6029a0b96eeb20e76e3d04c66a8",
+        "checkedAt": "2026-09-11T15:41:08.769Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "coxdylan7/life-alert",
-        "pluginIds": [
-          "djc.life-alert"
-        ],
-        "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-09T02:35:58.327Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-09T01:37:59.303Z",
-        "requestEventId": 30798084175,
-        "requestedAt": "2026-09-09T02:34:56Z",
-        "reviewedAt": "2026-09-09T02:35:58.327Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "djc.life-alert": {
@@ -154213,7 +154192,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "coxdylan7/life-alert",
+        "pluginIds": [
+          "djc.life-alert"
+        ],
+        "commit": "5d70b39c0ca4d6029a0b96eeb20e76e3d04c66a8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T15:41:08.769Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T01:50:36.025Z",
+        "requestEventId": 30976114323,
+        "requestedAt": "2026-09-11T13:54:08Z",
+        "reviewedAt": "2026-09-11T15:41:08.769Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+          "validatedAt": "2026-09-09T02:35:58.395Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:41:08.769Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "coxdylan7/life-alert",
+            "pluginIds": [
+              "djc.life-alert"
+            ],
+            "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+            "checkedAt": "2026-09-09T02:35:58.327Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "coxdylan7/life-alert",
+            "pluginIds": [
+              "djc.life-alert"
+            ],
+            "commit": "fc5de04e7d3c22f98e1ea68242a39e3f1dc9cc07",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-09T02:35:58.327Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-09T01:37:59.303Z",
+            "requestEventId": 30798084175,
+            "requestedAt": "2026-09-09T02:34:56Z",
+            "reviewedAt": "2026-09-09T02:35:58.327Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mythopoios/omarchy-stream-view",
