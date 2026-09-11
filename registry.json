@@ -118022,8 +118022,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T17:25:58.326Z",
-      "listingValidatedCommit": "7e8634af4facd111e05df6df0624bc9de8b2ae26",
-      "listingValidatedAt": "2026-09-02T17:25:58.326Z",
+      "listingValidatedCommit": "3bee8cbd1a780576e6c46342698569506ab70b4e",
+      "listingValidatedAt": "2026-09-11T00:14:05.279Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118032,8 +118032,8 @@
         "pluginIds": [
           "dc.q"
         ],
-        "commit": "7e8634af4facd111e05df6df0624bc9de8b2ae26",
-        "checkedAt": "2026-09-02T17:25:58.269Z",
+        "commit": "3bee8cbd1a780576e6c46342698569506ab70b4e",
+        "checkedAt": "2026-09-11T00:14:05.279Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118048,7 +118048,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7e8634af4facd111e05df6df0624bc9de8b2ae26",
+          "validatedAt": "2026-09-02T17:25:58.326Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T00:14:05.279Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dobrician/omarchy-queue",
+            "pluginIds": [
+              "dc.q"
+            ],
+            "commit": "7e8634af4facd111e05df6df0624bc9de8b2ae26",
+            "checkedAt": "2026-09-02T17:25:58.269Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/gustavohariel/omarchy-sing-box",
