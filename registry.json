@@ -154359,8 +154359,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T16:20:08.513Z",
-      "listingValidatedCommit": "94c3203d56c1e2fc2634cc946cc4fd010a08ebd1",
-      "listingValidatedAt": "2026-09-09T16:20:08.513Z",
+      "listingValidatedCommit": "1fbdb7c7b36b5ca567acd837ebee4fa0c467e0d4",
+      "listingValidatedAt": "2026-09-11T14:58:13.496Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -154369,8 +154369,8 @@
         "pluginIds": [
           "voiddropper.gifs"
         ],
-        "commit": "94c3203d56c1e2fc2634cc946cc4fd010a08ebd1",
-        "checkedAt": "2026-09-09T16:20:08.457Z",
+        "commit": "1fbdb7c7b36b5ca567acd837ebee4fa0c467e0d4",
+        "checkedAt": "2026-09-11T14:58:13.495Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -154386,7 +154386,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "94c3203d56c1e2fc2634cc946cc4fd010a08ebd1",
+          "validatedAt": "2026-09-09T16:20:08.513Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:58:13.496Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "voiddropper/omarchy-gifs",
+            "pluginIds": [
+              "voiddropper.gifs"
+            ],
+            "commit": "94c3203d56c1e2fc2634cc946cc4fd010a08ebd1",
+            "checkedAt": "2026-09-09T16:20:08.457Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/POSO-PocketSolutions/omarchy-backup-history",
