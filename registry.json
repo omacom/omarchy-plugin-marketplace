@@ -112644,8 +112644,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T02:12:35.878Z",
-      "listingValidatedCommit": "8f3c91f5f8337f69c8fffb7658e33938b06cf08c",
-      "listingValidatedAt": "2026-09-08T09:02:00.877Z",
+      "listingValidatedCommit": "874cac9e8db9b9babe36b3f58ff75bcb39c6e433",
+      "listingValidatedAt": "2026-09-11T13:37:38.491Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -112654,8 +112654,8 @@
         "pluginIds": [
           "io.github.selfcrypto.power-saving"
         ],
-        "commit": "8f3c91f5f8337f69c8fffb7658e33938b06cf08c",
-        "checkedAt": "2026-09-08T09:02:00.877Z",
+        "commit": "874cac9e8db9b9babe36b3f58ff75bcb39c6e433",
+        "checkedAt": "2026-09-11T13:37:38.491Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -112718,6 +112718,26 @@
             "requestedAt": "2026-09-01T02:11:49Z",
             "reviewedAt": "2026-09-01T02:12:35.828Z",
             "reviewer": "HANCORE-linux"
+          }
+        },
+        {
+          "commit": "8f3c91f5f8337f69c8fffb7658e33938b06cf08c",
+          "validatedAt": "2026-09-08T09:02:00.877Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:37:38.491Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "selfcrypto/omarchy-power-saving",
+            "pluginIds": [
+              "io.github.selfcrypto.power-saving"
+            ],
+            "commit": "8f3c91f5f8337f69c8fffb7658e33938b06cf08c",
+            "checkedAt": "2026-09-08T09:02:00.877Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
           }
         }
       ]
