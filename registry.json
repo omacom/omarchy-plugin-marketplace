@@ -161726,6 +161726,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jamesd7788/omatype",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T20:52:09.287Z",
+      "listingValidatedCommit": "1ac5666604162dfcfca1c40622e3236280c9abeb",
+      "listingValidatedAt": "2026-09-11T20:52:09.287Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jamesd7788/omatype",
+        "pluginIds": [
+          "io.github.jamesd7788.omatype"
+        ],
+        "commit": "1ac5666604162dfcfca1c40622e3236280c9abeb",
+        "checkedAt": "2026-09-11T20:52:09.207Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jamesd7788.omatype": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
