@@ -104190,8 +104190,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T00:17:13.374Z",
-      "listingValidatedCommit": "276478517c270daf5fab9858fcc6a096861392a2",
-      "listingValidatedAt": "2026-08-31T00:17:13.374Z",
+      "listingValidatedCommit": "9d0ac546a834e6e29a2f1d14a4afca62655acf89",
+      "listingValidatedAt": "2026-09-11T13:40:32.697Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -104200,8 +104200,8 @@
         "pluginIds": [
           "io.github.idr4n.prayer-times"
         ],
-        "commit": "276478517c270daf5fab9858fcc6a096861392a2",
-        "checkedAt": "2026-08-31T00:17:13.314Z",
+        "commit": "9d0ac546a834e6e29a2f1d14a4afca62655acf89",
+        "checkedAt": "2026-09-11T13:40:32.697Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -104216,7 +104216,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "276478517c270daf5fab9858fcc6a096861392a2",
+          "validatedAt": "2026-08-31T00:17:13.374Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:40:32.697Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "idr4n/omarchy-prayer-times",
+            "pluginIds": [
+              "io.github.idr4n.prayer-times"
+            ],
+            "commit": "276478517c270daf5fab9858fcc6a096861392a2",
+            "checkedAt": "2026-08-31T00:17:13.314Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/0x4A756E65/omarchy-substack",
