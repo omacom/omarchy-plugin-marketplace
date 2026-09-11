@@ -146908,8 +146908,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T17:23:46.793Z",
-      "listingValidatedCommit": "8484a4881bdb8e43aedb75e80945ba758334ee31",
-      "listingValidatedAt": "2026-09-08T17:23:46.793Z",
+      "listingValidatedCommit": "ec6235cbda97592671a7d0d1f99de501a78622be",
+      "listingValidatedAt": "2026-09-11T07:49:05.560Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -146918,8 +146918,8 @@
         "pluginIds": [
           "io.github.terrifiedbug.omathock"
         ],
-        "commit": "8484a4881bdb8e43aedb75e80945ba758334ee31",
-        "checkedAt": "2026-09-08T17:23:46.718Z",
+        "commit": "ec6235cbda97592671a7d0d1f99de501a78622be",
+        "checkedAt": "2026-09-11T07:49:05.560Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -146935,7 +146935,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8484a4881bdb8e43aedb75e80945ba758334ee31",
+          "validatedAt": "2026-09-08T17:23:46.793Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T07:49:05.560Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "terrifiedbug/omathock",
+            "pluginIds": [
+              "io.github.terrifiedbug.omathock"
+            ],
+            "commit": "8484a4881bdb8e43aedb75e80945ba758334ee31",
+            "checkedAt": "2026-09-08T17:23:46.718Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ONE-ALL-Church/rock-arch-omarchy",
