@@ -155506,8 +155506,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-10",
       "listedAt": "2026-09-10T15:28:13.559Z",
-      "listingValidatedCommit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
-      "listingValidatedAt": "2026-09-10T15:28:13.559Z",
+      "listingValidatedCommit": "452ea3b6a4d28328d0271fd6cb6ed023748d985e",
+      "listingValidatedAt": "2026-09-11T14:35:30.987Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -155516,35 +155516,14 @@
         "pluginIds": [
           "arzdoon"
         ],
-        "commit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
-        "checkedAt": "2026-09-10T15:28:13.483Z",
+        "commit": "452ea3b6a4d28328d0271fd6cb6ed023748d985e",
+        "checkedAt": "2026-09-11T14:35:30.987Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mamal72/omarchy-arzdoon",
-        "pluginIds": [
-          "arzdoon"
-        ],
-        "commit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-10T15:28:13.483Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-10T07:59:19.778Z",
-        "requestEventId": 30912959608,
-        "requestedAt": "2026-09-10T15:27:02Z",
-        "reviewedAt": "2026-09-10T15:28:13.483Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "arzdoon": {
@@ -155555,7 +155534,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mamal72/omarchy-arzdoon",
+        "pluginIds": [
+          "arzdoon"
+        ],
+        "commit": "452ea3b6a4d28328d0271fd6cb6ed023748d985e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T14:35:30.987Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T15:59:29.877Z",
+        "requestEventId": 30975129537,
+        "requestedAt": "2026-09-11T13:37:07Z",
+        "reviewedAt": "2026-09-11T14:35:30.987Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
+          "validatedAt": "2026-09-10T15:28:13.559Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:35:30.987Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mamal72/omarchy-arzdoon",
+            "pluginIds": [
+              "arzdoon"
+            ],
+            "commit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
+            "checkedAt": "2026-09-10T15:28:13.483Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mamal72/omarchy-arzdoon",
+            "pluginIds": [
+              "arzdoon"
+            ],
+            "commit": "4ca4e81f0cf45372a4a1876699b0f6bca3a9900d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-10T15:28:13.483Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-10T07:59:19.778Z",
+            "requestEventId": 30912959608,
+            "requestedAt": "2026-09-10T15:27:02Z",
+            "reviewedAt": "2026-09-10T15:28:13.483Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chyld/omarchy-next-theme",
