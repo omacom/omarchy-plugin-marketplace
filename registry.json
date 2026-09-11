@@ -138244,8 +138244,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T10:54:00.853Z",
-      "listingValidatedCommit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
-      "listingValidatedAt": "2026-09-07T10:54:00.853Z",
+      "listingValidatedCommit": "388150499703c4a75f7af3bf0cfbbccd7581ead9",
+      "listingValidatedAt": "2026-09-11T05:46:32.792Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -138254,35 +138254,14 @@
         "pluginIds": [
           "pingscope.latency"
         ],
-        "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
-        "checkedAt": "2026-09-07T10:54:00.783Z",
+        "commit": "388150499703c4a75f7af3bf0cfbbccd7581ead9",
+        "checkedAt": "2026-09-11T05:46:32.792Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sierrab1989/omarchy-pingscope",
-        "pluginIds": [
-          "pingscope.latency"
-        ],
-        "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-07T10:54:00.783Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-06T03:12:23.001Z",
-        "requestEventId": 30685162646,
-        "requestedAt": "2026-09-07T10:49:54Z",
-        "reviewedAt": "2026-09-07T10:54:00.783Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "pingscope.latency": {
@@ -138294,7 +138273,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sierrab1989/omarchy-pingscope",
+        "pluginIds": [
+          "pingscope.latency"
+        ],
+        "commit": "388150499703c4a75f7af3bf0cfbbccd7581ead9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T05:46:32.792Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T22:55:06.124Z",
+        "requestEventId": 30951326256,
+        "requestedAt": "2026-09-11T05:38:02Z",
+        "reviewedAt": "2026-09-11T05:46:32.792Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+          "validatedAt": "2026-09-07T10:54:00.853Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T05:46:32.792Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sierrab1989/omarchy-pingscope",
+            "pluginIds": [
+              "pingscope.latency"
+            ],
+            "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+            "checkedAt": "2026-09-07T10:54:00.783Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sierrab1989/omarchy-pingscope",
+            "pluginIds": [
+              "pingscope.latency"
+            ],
+            "commit": "87fe7f0a1f74ed77e96d5476b1a09fee708dc652",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-07T10:54:00.783Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-06T03:12:23.001Z",
+            "requestEventId": 30685162646,
+            "requestedAt": "2026-09-07T10:49:54Z",
+            "reviewedAt": "2026-09-07T10:54:00.783Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/hehh2001/omarchy-lunar-clock",
