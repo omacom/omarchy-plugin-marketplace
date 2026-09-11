@@ -25826,8 +25826,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T21:51:47.170Z",
-      "listingValidatedCommit": "f81b94285a4c5d23582b4bc6a13e73eec8a64b19",
-      "listingValidatedAt": "2026-08-27T16:44:19.902Z",
+      "listingValidatedCommit": "74830976a97530fc1922fd00c9c8331e6bb0e4d0",
+      "listingValidatedAt": "2026-09-11T13:24:11.452Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -25836,8 +25836,8 @@
         "pluginIds": [
           "leyanora.plugincontainers"
         ],
-        "commit": "f81b94285a4c5d23582b4bc6a13e73eec8a64b19",
-        "checkedAt": "2026-08-27T16:44:19.902Z",
+        "commit": "74830976a97530fc1922fd00c9c8331e6bb0e4d0",
+        "checkedAt": "2026-09-11T13:24:11.452Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -25888,6 +25888,26 @@
             ],
             "commit": "867a99b1c453c865547415fe169b6e621ad878d0",
             "checkedAt": "2026-08-25T16:41:24.033Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "f81b94285a4c5d23582b4bc6a13e73eec8a64b19",
+          "validatedAt": "2026-08-27T16:44:19.902Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:24:11.452Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "leyanora/omarchy-plugin-containers",
+            "pluginIds": [
+              "leyanora.plugincontainers"
+            ],
+            "commit": "f81b94285a4c5d23582b4bc6a13e73eec8a64b19",
+            "checkedAt": "2026-08-27T16:44:19.902Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
