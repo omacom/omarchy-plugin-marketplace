@@ -30396,8 +30396,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T18:16:56.103Z",
-      "listingValidatedCommit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
-      "listingValidatedAt": "2026-08-30T18:05:29.586Z",
+      "listingValidatedCommit": "e05357a7101a77ab612475dadbe71f5feb421034",
+      "listingValidatedAt": "2026-09-11T13:10:52.832Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -30406,8 +30406,8 @@
         "pluginIds": [
           "io.github.weedwhitesandwine.zenbu"
         ],
-        "commit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
-        "checkedAt": "2026-08-30T18:05:29.586Z",
+        "commit": "e05357a7101a77ab612475dadbe71f5feb421034",
+        "checkedAt": "2026-09-11T13:10:52.832Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -30491,6 +30491,49 @@
             "reviewedAt": "2026-08-29T14:46:35.178Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
+          "validatedAt": "2026-08-30T18:05:29.586Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:10:52.832Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "weedwhitesandwine/zenbu",
+            "pluginIds": [
+              "io.github.weedwhitesandwine.zenbu"
+            ],
+            "commit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
+            "checkedAt": "2026-08-30T18:05:29.586Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "weedwhitesandwine/zenbu",
+            "pluginIds": [
+              "io.github.weedwhitesandwine.zenbu"
+            ],
+            "commit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T18:05:29.586Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T16:37:21.585Z",
+            "requestEventId": 30242522220,
+            "requestedAt": "2026-08-30T17:44:42Z",
+            "reviewedAt": "2026-08-30T18:05:29.586Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -30499,19 +30542,19 @@
         "pluginIds": [
           "io.github.weedwhitesandwine.zenbu"
         ],
-        "commit": "84146efbc49b9b975d65f4c0046d1dd10f69611c",
+        "commit": "e05357a7101a77ab612475dadbe71f5feb421034",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T18:05:29.586Z",
+        "baselineCheckedAt": "2026-09-11T13:10:52.832Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-30T16:37:21.585Z",
-        "requestEventId": 30242522220,
-        "requestedAt": "2026-08-30T17:44:42Z",
-        "reviewedAt": "2026-08-30T18:05:29.586Z",
+        "reviewedBaselineCheckedAt": "2026-09-09T16:25:52.290Z",
+        "requestEventId": 30973288272,
+        "requestedAt": "2026-09-11T13:04:27Z",
+        "reviewedAt": "2026-09-11T13:10:52.832Z",
         "reviewer": "HANCORE-linux"
       }
     },
