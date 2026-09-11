@@ -155162,6 +155162,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bobster05/omarchy-nitrosense",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T05:07:35.957Z",
+      "listingValidatedCommit": "02a55175530cd262c137361d51ac338160751bf0",
+      "listingValidatedAt": "2026-09-11T05:07:35.957Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bobster05/omarchy-nitrosense",
+        "pluginIds": [
+          "io.github.bobster05.nitrosense"
+        ],
+        "commit": "02a55175530cd262c137361d51ac338160751bf0",
+        "checkedAt": "2026-09-11T05:07:35.898Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bobster05/omarchy-nitrosense",
+        "pluginIds": [
+          "io.github.bobster05.nitrosense"
+        ],
+        "commit": "02a55175530cd262c137361d51ac338160751bf0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T05:07:35.898Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T05:04:37.846Z",
+        "requestEventId": 30950227180,
+        "requestedAt": "2026-09-11T05:06:29Z",
+        "reviewedAt": "2026-09-11T05:07:35.898Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bobster05.nitrosense": {
+          "category": "Hardware",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
