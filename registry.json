@@ -139811,8 +139811,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T21:56:22.795Z",
-      "listingValidatedCommit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
-      "listingValidatedAt": "2026-09-07T21:56:22.795Z",
+      "listingValidatedCommit": "068fb0e64db19dc9d6b5172f734045c0972b36ec",
+      "listingValidatedAt": "2026-09-11T09:04:04.328Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -139821,8 +139821,8 @@
         "pluginIds": [
           "data-goblin.fileblade-skills"
         ],
-        "commit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
-        "checkedAt": "2026-09-07T21:56:22.743Z",
+        "commit": "068fb0e64db19dc9d6b5172f734045c0972b36ec",
+        "checkedAt": "2026-09-11T09:04:04.328Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -139838,7 +139838,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
+          "validatedAt": "2026-09-07T21:56:22.795Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:04:04.328Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "data-goblin/fileblade-skills",
+            "pluginIds": [
+              "data-goblin.fileblade-skills"
+            ],
+            "commit": "0915f6513296bb5a5ced7e972c72bc561a83818c",
+            "checkedAt": "2026-09-07T21:56:22.743Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ricardosuman/omarchy-pretty-screenshot",
