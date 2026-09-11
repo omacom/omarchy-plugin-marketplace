@@ -161759,6 +161759,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ReidenXerx/omarchy-keyboard-cleaner",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T20:56:05.275Z",
+      "listingValidatedCommit": "c6011cfbfecac5034df393806810d23d73fe0e36",
+      "listingValidatedAt": "2026-09-11T20:56:05.275Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "reidenxerx/omarchy-keyboard-cleaner",
+        "pluginIds": [
+          "reidenxerx.keyboard-cleaner"
+        ],
+        "commit": "c6011cfbfecac5034df393806810d23d73fe0e36",
+        "checkedAt": "2026-09-11T20:56:05.209Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-keyboard-cleaner",
+        "pluginIds": [
+          "reidenxerx.keyboard-cleaner"
+        ],
+        "commit": "c6011cfbfecac5034df393806810d23d73fe0e36",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T20:56:05.209Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T20:32:58.855Z",
+        "requestEventId": 30998959534,
+        "requestedAt": "2026-09-11T20:55:01Z",
+        "reviewedAt": "2026-09-11T20:56:05.209Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "reidenxerx.keyboard-cleaner": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
