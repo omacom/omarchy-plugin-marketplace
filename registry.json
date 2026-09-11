@@ -141063,8 +141063,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T08:14:07.575Z",
-      "listingValidatedCommit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
-      "listingValidatedAt": "2026-09-08T08:14:07.575Z",
+      "listingValidatedCommit": "e2ede4186907f51d354a190a81a12dc1d4781279",
+      "listingValidatedAt": "2026-09-11T06:53:37.646Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -141073,8 +141073,8 @@
         "pluginIds": [
           "glorics.grok-bots"
         ],
-        "commit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
-        "checkedAt": "2026-09-08T08:14:07.501Z",
+        "commit": "e2ede4186907f51d354a190a81a12dc1d4781279",
+        "checkedAt": "2026-09-11T06:53:37.646Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -141094,7 +141094,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
+          "validatedAt": "2026-09-08T08:14:07.575Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T06:53:37.646Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "glorics/omarchy-grok-bots",
+            "pluginIds": [
+              "glorics.grok-bots"
+            ],
+            "commit": "35a111710cbc6249b8dc68e8bdee0d1711c01f73",
+            "checkedAt": "2026-09-08T08:14:07.501Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/harryxu/omarchy-dropspace",
