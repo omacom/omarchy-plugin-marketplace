@@ -154975,6 +154975,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/amikeal/omarchy-battery-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T01:39:35.883Z",
+      "listingValidatedCommit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+      "listingValidatedAt": "2026-09-11T01:39:35.883Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "amikeal/omarchy-battery-plus",
+        "pluginIds": [
+          "io.github.amikeal.battery-plus"
+        ],
+        "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+        "checkedAt": "2026-09-11T01:39:35.804Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "amikeal/omarchy-battery-plus",
+        "pluginIds": [
+          "io.github.amikeal.battery-plus"
+        ],
+        "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T01:39:35.804Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T01:36:31.581Z",
+        "requestEventId": 30942750899,
+        "requestedAt": "2026-09-11T01:38:15Z",
+        "reviewedAt": "2026-09-11T01:39:35.804Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.amikeal.battery-plus": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
