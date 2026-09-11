@@ -155103,6 +155103,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ukkit/omarchy-universal-font-sizer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T03:19:53.605Z",
+      "listingValidatedCommit": "98a9197028e5ac1af721d23896c3fcd5fef75004",
+      "listingValidatedAt": "2026-09-11T03:19:53.605Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ukkit/omarchy-universal-font-sizer",
+        "pluginIds": [
+          "io.github.ukkit.universal-font-sizer"
+        ],
+        "commit": "98a9197028e5ac1af721d23896c3fcd5fef75004",
+        "checkedAt": "2026-09-11T03:19:53.531Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ukkit/omarchy-universal-font-sizer",
+        "pluginIds": [
+          "io.github.ukkit.universal-font-sizer"
+        ],
+        "commit": "98a9197028e5ac1af721d23896c3fcd5fef75004",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T03:19:53.531Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T03:17:22.025Z",
+        "requestEventId": 30946602703,
+        "requestedAt": "2026-09-11T03:18:48Z",
+        "reviewedAt": "2026-09-11T03:19:53.531Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ukkit.universal-font-sizer": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
