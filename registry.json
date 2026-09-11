@@ -154743,6 +154743,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/codemonkey76/omarchy-wireguard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T00:41:40.123Z",
+      "listingValidatedCommit": "3ff5b7c580919ca1e791a91907500afa274f9983",
+      "listingValidatedAt": "2026-09-11T00:41:40.123Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "codemonkey76/omarchy-wireguard",
+        "pluginIds": [
+          "io.github.codemonkey76.wireguard"
+        ],
+        "commit": "3ff5b7c580919ca1e791a91907500afa274f9983",
+        "checkedAt": "2026-09-11T00:41:40.048Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "codemonkey76/omarchy-wireguard",
+        "pluginIds": [
+          "io.github.codemonkey76.wireguard"
+        ],
+        "commit": "3ff5b7c580919ca1e791a91907500afa274f9983",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T00:41:40.048Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T00:22:07.937Z",
+        "requestEventId": 30939744856,
+        "requestedAt": "2026-09-11T00:24:23Z",
+        "reviewedAt": "2026-09-11T00:41:40.048Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.codemonkey76.wireguard": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
