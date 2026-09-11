@@ -161670,6 +161670,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/leonrlr4/days",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T20:44:21.794Z",
+      "listingValidatedCommit": "449f1e783822948a8267db1663c5518c1f75d87f",
+      "listingValidatedAt": "2026-09-11T20:44:21.794Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "leonrlr4/days",
+        "pluginIds": [
+          "leonrlr4.days"
+        ],
+        "commit": "449f1e783822948a8267db1663c5518c1f75d87f",
+        "checkedAt": "2026-09-11T20:44:21.721Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "leonrlr4/days",
+        "pluginIds": [
+          "leonrlr4.days"
+        ],
+        "commit": "449f1e783822948a8267db1663c5518c1f75d87f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T20:44:21.721Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T19:25:56.353Z",
+        "requestEventId": 30998381396,
+        "requestedAt": "2026-09-11T20:42:14Z",
+        "reviewedAt": "2026-09-11T20:44:21.721Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "leonrlr4.days": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
