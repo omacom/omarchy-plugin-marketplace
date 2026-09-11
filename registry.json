@@ -161936,6 +161936,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Macs9319/omarchy-swissclock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T22:28:43.256Z",
+      "listingValidatedCommit": "ccd5081eb94faff8461e71ad8efe1b936eca1ce9",
+      "listingValidatedAt": "2026-09-11T22:28:43.256Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "macs9319/omarchy-swissclock",
+        "pluginIds": [
+          "ronnie.swissclock"
+        ],
+        "commit": "ccd5081eb94faff8461e71ad8efe1b936eca1ce9",
+        "checkedAt": "2026-09-11T22:28:43.174Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ronnie.swissclock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
