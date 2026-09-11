@@ -148180,8 +148180,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T15:08:44.645Z",
-      "listingValidatedCommit": "83c11afd774393a258d95e2002e80ffe0fe6a075",
-      "listingValidatedAt": "2026-09-08T15:08:44.645Z",
+      "listingValidatedCommit": "febbbe38db84af7b5d504d056c39835d3f06da71",
+      "listingValidatedAt": "2026-09-11T20:21:11.297Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -148190,8 +148190,8 @@
         "pluginIds": [
           "io.github.terrifiedbug.omaice"
         ],
-        "commit": "83c11afd774393a258d95e2002e80ffe0fe6a075",
-        "checkedAt": "2026-09-08T15:08:44.566Z",
+        "commit": "febbbe38db84af7b5d504d056c39835d3f06da71",
+        "checkedAt": "2026-09-11T20:21:11.297Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -148206,7 +148206,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "83c11afd774393a258d95e2002e80ffe0fe6a075",
+          "validatedAt": "2026-09-08T15:08:44.645Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T20:21:11.297Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "terrifiedbug/omaice",
+            "pluginIds": [
+              "io.github.terrifiedbug.omaice"
+            ],
+            "commit": "83c11afd774393a258d95e2002e80ffe0fe6a075",
+            "checkedAt": "2026-09-08T15:08:44.566Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/sorena100/remminarchy",
