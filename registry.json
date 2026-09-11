@@ -142795,8 +142795,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T11:32:52.599Z",
-      "listingValidatedCommit": "ad16677135eb8b78d0b1796856ef4190fd1c4fdd",
-      "listingValidatedAt": "2026-09-08T11:32:52.599Z",
+      "listingValidatedCommit": "6539bee8a3045a139799522230973a67ea49d595",
+      "listingValidatedAt": "2026-09-11T07:14:39.012Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -142805,8 +142805,8 @@
         "pluginIds": [
           "tirade.nyc-subway"
         ],
-        "commit": "ad16677135eb8b78d0b1796856ef4190fd1c4fdd",
-        "checkedAt": "2026-09-08T11:32:52.528Z",
+        "commit": "6539bee8a3045a139799522230973a67ea49d595",
+        "checkedAt": "2026-09-11T07:14:39.012Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -142820,7 +142820,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ad16677135eb8b78d0b1796856ef4190fd1c4fdd",
+          "validatedAt": "2026-09-08T11:32:52.599Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T07:14:39.012Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "solicited-tirade/omtarchy",
+            "pluginIds": [
+              "tirade.nyc-subway"
+            ],
+            "commit": "ad16677135eb8b78d0b1796856ef4190fd1c4fdd",
+            "checkedAt": "2026-09-08T11:32:52.528Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/reverb256/omarchy-miners",
