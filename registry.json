@@ -133398,8 +133398,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T01:14:12.136Z",
-      "listingValidatedCommit": "02c3ba2e0167f7a6aa83e7888ee7a9d5fe67e1ef",
-      "listingValidatedAt": "2026-09-06T01:14:12.136Z",
+      "listingValidatedCommit": "1d9651d7a7ff607e4a8caeb259ad30415597a944",
+      "listingValidatedAt": "2026-09-11T06:40:03.258Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133408,8 +133408,8 @@
         "pluginIds": [
           "archer-nemo.screen-sharing"
         ],
-        "commit": "02c3ba2e0167f7a6aa83e7888ee7a9d5fe67e1ef",
-        "checkedAt": "2026-09-06T01:14:12.065Z",
+        "commit": "1d9651d7a7ff607e4a8caeb259ad30415597a944",
+        "checkedAt": "2026-09-11T06:40:03.258Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -133424,7 +133424,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "02c3ba2e0167f7a6aa83e7888ee7a9d5fe67e1ef",
+          "validatedAt": "2026-09-06T01:14:12.136Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T06:40:03.258Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nirmal314/omarchy-screen-sharing-indicator",
+            "pluginIds": [
+              "archer-nemo.screen-sharing"
+            ],
+            "commit": "02c3ba2e0167f7a6aa83e7888ee7a9d5fe67e1ef",
+            "checkedAt": "2026-09-06T01:14:12.065Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/PtrckM/quattro-stats",
