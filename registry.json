@@ -71579,8 +71579,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T18:10:39.800Z",
-      "listingValidatedCommit": "4d4cab6b4b2cc55351a22848bc40e542b99aedb1",
-      "listingValidatedAt": "2026-08-25T18:10:39.800Z",
+      "listingValidatedCommit": "d1941a057956042cd6964d664ad6ddbdf351d4d0",
+      "listingValidatedAt": "2026-09-11T15:12:58.428Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -71589,8 +71589,8 @@
         "pluginIds": [
           "io.github.golgor.cloud-sql-tracker"
         ],
-        "commit": "4d4cab6b4b2cc55351a22848bc40e542b99aedb1",
-        "checkedAt": "2026-08-25T18:10:39.766Z",
+        "commit": "d1941a057956042cd6964d664ad6ddbdf351d4d0",
+        "checkedAt": "2026-09-11T15:12:58.428Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -71606,7 +71606,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4d4cab6b4b2cc55351a22848bc40e542b99aedb1",
+          "validatedAt": "2026-08-25T18:10:39.800Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:12:58.428Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "golgor/cloud-sql-tracker-oma-plugin",
+            "pluginIds": [
+              "io.github.golgor.cloud-sql-tracker"
+            ],
+            "commit": "4d4cab6b4b2cc55351a22848bc40e542b99aedb1",
+            "checkedAt": "2026-08-25T18:10:39.766Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/alexdont/battery-limiter",
