@@ -161186,6 +161186,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ReidenXerx/omarchy-emoji-picker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T19:05:59.345Z",
+      "listingValidatedCommit": "fe34d2c55c1a2e422ecd1bb0da6645d04a26031f",
+      "listingValidatedAt": "2026-09-11T19:05:59.345Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "reidenxerx/omarchy-emoji-picker",
+        "pluginIds": [
+          "reidenxerx.emoji-picker"
+        ],
+        "commit": "fe34d2c55c1a2e422ecd1bb0da6645d04a26031f",
+        "checkedAt": "2026-09-11T19:05:59.269Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-emoji-picker",
+        "pluginIds": [
+          "reidenxerx.emoji-picker"
+        ],
+        "commit": "fe34d2c55c1a2e422ecd1bb0da6645d04a26031f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T19:05:59.269Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T18:06:37.857Z",
+        "requestEventId": 30992768188,
+        "requestedAt": "2026-09-11T18:44:19Z",
+        "reviewedAt": "2026-09-11T19:05:59.269Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "reidenxerx.emoji-picker": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
