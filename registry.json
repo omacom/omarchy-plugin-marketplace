@@ -157692,6 +157692,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DarioBF/per-display-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T09:53:50.426Z",
+      "listingValidatedCommit": "2fefdbb5d71bf22708a098eb65c91f2181206a65",
+      "listingValidatedAt": "2026-09-11T09:53:50.426Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dariobf/per-display-workspaces",
+        "pluginIds": [
+          "io.github.dariobf.per-display-workspaces"
+        ],
+        "commit": "2fefdbb5d71bf22708a098eb65c91f2181206a65",
+        "checkedAt": "2026-09-11T09:53:50.352Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dariobf.per-display-workspaces": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
