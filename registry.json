@@ -161342,6 +161342,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/szalikdev/omarchy-plugin-updates",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T19:37:05.615Z",
+      "listingValidatedCommit": "89e1210c525349104cfe6c640ed40b72a46c538f",
+      "listingValidatedAt": "2026-09-11T19:37:05.615Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "szalikdev/omarchy-plugin-updates",
+        "pluginIds": [
+          "szalikdev.plugin-updates"
+        ],
+        "commit": "89e1210c525349104cfe6c640ed40b72a46c538f",
+        "checkedAt": "2026-09-11T19:37:05.540Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "szalikdev.plugin-updates": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
