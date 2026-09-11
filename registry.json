@@ -161879,6 +161879,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/steveclarke/omarchy-kopia",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T21:53:34.229Z",
+      "listingValidatedCommit": "90ff621e5dccc9a82b2bb4792ea600fa73e18902",
+      "listingValidatedAt": "2026-09-11T21:53:34.229Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "steveclarke/omarchy-kopia",
+        "pluginIds": [
+          "io.github.steveclarke.kopia"
+        ],
+        "commit": "90ff621e5dccc9a82b2bb4792ea600fa73e18902",
+        "checkedAt": "2026-09-11T21:53:34.142Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "steveclarke/omarchy-kopia",
+        "pluginIds": [
+          "io.github.steveclarke.kopia"
+        ],
+        "commit": "90ff621e5dccc9a82b2bb4792ea600fa73e18902",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T21:53:34.142Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T21:41:36.391Z",
+        "requestEventId": 31001228281,
+        "requestedAt": "2026-09-11T21:52:07Z",
+        "reviewedAt": "2026-09-11T21:53:34.143Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.steveclarke.kopia": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
