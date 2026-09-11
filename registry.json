@@ -152193,8 +152193,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T23:31:25.744Z",
-      "listingValidatedCommit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
-      "listingValidatedAt": "2026-09-08T23:31:25.744Z",
+      "listingValidatedCommit": "fb41d5d4fe49d2e5d1189276bda70343592be58e",
+      "listingValidatedAt": "2026-09-11T15:26:37.058Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -152203,35 +152203,14 @@
         "pluginIds": [
           "jmartin.hypertile"
         ],
-        "commit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
-        "checkedAt": "2026-09-08T23:31:25.661Z",
+        "commit": "fb41d5d4fe49d2e5d1189276bda70343592be58e",
+        "checkedAt": "2026-09-11T15:26:37.058Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jdvmi00/hypertile",
-        "pluginIds": [
-          "jmartin.hypertile"
-        ],
-        "commit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T23:31:25.661Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-07T14:36:23.279Z",
-        "requestEventId": 30791100775,
-        "requestedAt": "2026-09-08T23:29:09Z",
-        "reviewedAt": "2026-09-08T23:31:25.661Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jmartin.hypertile": {
@@ -152243,7 +152222,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jdvmi00/hypertile",
+        "pluginIds": [
+          "jmartin.hypertile"
+        ],
+        "commit": "fb41d5d4fe49d2e5d1189276bda70343592be58e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T15:26:37.058Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T23:19:34.839Z",
+        "requestEventId": 30975789944,
+        "requestedAt": "2026-09-11T13:48:38Z",
+        "reviewedAt": "2026-09-11T15:26:37.058Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
+          "validatedAt": "2026-09-08T23:31:25.744Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:26:37.058Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jdvmi00/hypertile",
+            "pluginIds": [
+              "jmartin.hypertile"
+            ],
+            "commit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
+            "checkedAt": "2026-09-08T23:31:25.661Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jdvmi00/hypertile",
+            "pluginIds": [
+              "jmartin.hypertile"
+            ],
+            "commit": "7e1171579fccbf3ae5493742d843028f4e60b1da",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T23:31:25.661Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-07T14:36:23.279Z",
+            "requestEventId": 30791100775,
+            "requestedAt": "2026-09-08T23:29:09Z",
+            "reviewedAt": "2026-09-08T23:31:25.661Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Sh3nron/omarchy-aura-voxtype-hud",
