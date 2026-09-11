@@ -117589,8 +117589,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T16:50:45.128Z",
-      "listingValidatedCommit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
-      "listingValidatedAt": "2026-09-02T16:50:45.128Z",
+      "listingValidatedCommit": "98a1a4365383de8164aeb698f4320760b44b155f",
+      "listingValidatedAt": "2026-09-11T00:17:05.892Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -117599,8 +117599,8 @@
         "pluginIds": [
           "illegalstudio.omarchy-firewall"
         ],
-        "commit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
-        "checkedAt": "2026-09-02T16:50:45.072Z",
+        "commit": "98a1a4365383de8164aeb698f4320760b44b155f",
+        "checkedAt": "2026-09-11T00:17:05.892Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -117608,28 +117608,6 @@
           "privilege",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "illegalstudio/omarchy-firewall",
-        "pluginIds": [
-          "illegalstudio.omarchy-firewall"
-        ],
-        "commit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T16:50:45.072Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T13:24:22.180Z",
-        "requestEventId": 30430854781,
-        "requestedAt": "2026-09-02T16:46:15Z",
-        "reviewedAt": "2026-09-02T16:50:45.072Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "illegalstudio.omarchy-firewall": {
@@ -117641,7 +117619,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "illegalstudio/omarchy-firewall",
+        "pluginIds": [
+          "illegalstudio.omarchy-firewall"
+        ],
+        "commit": "98a1a4365383de8164aeb698f4320760b44b155f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T00:17:05.892Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T17:15:46.378Z",
+        "requestEventId": 30937903577,
+        "requestedAt": "2026-09-10T23:38:18Z",
+        "reviewedAt": "2026-09-11T00:17:05.892Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
+          "validatedAt": "2026-09-02T16:50:45.128Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T00:17:05.892Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "illegalstudio/omarchy-firewall",
+            "pluginIds": [
+              "illegalstudio.omarchy-firewall"
+            ],
+            "commit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
+            "checkedAt": "2026-09-02T16:50:45.072Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "illegalstudio/omarchy-firewall",
+            "pluginIds": [
+              "illegalstudio.omarchy-firewall"
+            ],
+            "commit": "42a4009132a34249c8aa6511b6cdca250b8ab3e7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T16:50:45.072Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T13:24:22.180Z",
+            "requestEventId": 30430854781,
+            "requestedAt": "2026-09-02T16:46:15Z",
+            "reviewedAt": "2026-09-02T16:50:45.072Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rma131/omarchy-borealis-atlas",
