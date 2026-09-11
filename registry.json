@@ -145459,8 +145459,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T14:52:01.214Z",
-      "listingValidatedCommit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
-      "listingValidatedAt": "2026-09-08T14:52:01.214Z",
+      "listingValidatedCommit": "03dd5a8695e737b37fc707c9669548920c360025",
+      "listingValidatedAt": "2026-09-11T07:57:28.047Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -145469,8 +145469,8 @@
         "pluginIds": [
           "dooooooks.omaclippr"
         ],
-        "commit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
-        "checkedAt": "2026-09-08T14:52:01.140Z",
+        "commit": "03dd5a8695e737b37fc707c9669548920c360025",
+        "checkedAt": "2026-09-11T07:57:28.047Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -145486,7 +145486,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
+          "validatedAt": "2026-09-08T14:52:01.214Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:57:28.047Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dooooooks/omaclippr",
+            "pluginIds": [
+              "dooooooks.omaclippr"
+            ],
+            "commit": "8aa716ebf2071e8110dd4c859deba1943a1262f9",
+            "checkedAt": "2026-09-08T14:52:01.140Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tdownie0/omarchy-display-color-controls",
