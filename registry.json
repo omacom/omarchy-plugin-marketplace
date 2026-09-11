@@ -156220,6 +156220,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/UnderStackDev/omarchy_kdeconnect_quick_reply",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T07:30:45.329Z",
+      "listingValidatedCommit": "39d395ed068e4123ced25db9d71a8c81dd080d83",
+      "listingValidatedAt": "2026-09-11T07:30:45.329Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "understackdev/omarchy_kdeconnect_quick_reply",
+        "pluginIds": [
+          "io.github.understackdev.quick-reply"
+        ],
+        "commit": "39d395ed068e4123ced25db9d71a8c81dd080d83",
+        "checkedAt": "2026-09-11T07:30:45.248Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "understackdev/omarchy_kdeconnect_quick_reply",
+        "pluginIds": [
+          "io.github.understackdev.quick-reply"
+        ],
+        "commit": "39d395ed068e4123ced25db9d71a8c81dd080d83",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:30:45.248Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T07:00:09.052Z",
+        "requestEventId": 30954749671,
+        "requestedAt": "2026-09-11T07:01:40Z",
+        "reviewedAt": "2026-09-11T07:30:45.248Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.understackdev.quick-reply": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
