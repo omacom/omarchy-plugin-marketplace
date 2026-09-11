@@ -107044,8 +107044,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T12:28:44.364Z",
-      "listingValidatedCommit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
-      "listingValidatedAt": "2026-09-03T23:14:52.149Z",
+      "listingValidatedCommit": "3a5a14ba6dd9649a71329a7759f48ed0bbfc0642",
+      "listingValidatedAt": "2026-09-11T06:42:36.271Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -107054,8 +107054,8 @@
         "pluginIds": [
           "wmfeht.border-fx"
         ],
-        "commit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
-        "checkedAt": "2026-09-03T23:14:52.149Z",
+        "commit": "3a5a14ba6dd9649a71329a7759f48ed0bbfc0642",
+        "checkedAt": "2026-09-11T06:42:36.271Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -107073,28 +107073,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "wmfeht/omarchy-border-fx",
-        "pluginIds": [
-          "wmfeht.border-fx"
-        ],
-        "commit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-03T23:14:52.149Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-03T15:18:06.050Z",
-        "requestEventId": 30518178577,
-        "requestedAt": "2026-09-03T21:44:44Z",
-        "reviewedAt": "2026-09-03T23:14:52.149Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -107143,8 +107121,75 @@
             "reviewedAt": "2026-08-31T12:28:44.307Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
+          "validatedAt": "2026-09-03T23:14:52.149Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T06:42:36.271Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wmfeht/omarchy-border-fx",
+            "pluginIds": [
+              "wmfeht.border-fx"
+            ],
+            "commit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
+            "checkedAt": "2026-09-03T23:14:52.149Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "wmfeht/omarchy-border-fx",
+            "pluginIds": [
+              "wmfeht.border-fx"
+            ],
+            "commit": "c4ebda64e84bcd7154a709d9977174e7217200c5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-03T23:14:52.149Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-03T15:18:06.050Z",
+            "requestEventId": 30518178577,
+            "requestedAt": "2026-09-03T21:44:44Z",
+            "reviewedAt": "2026-09-03T23:14:52.149Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wmfeht/omarchy-border-fx",
+        "pluginIds": [
+          "wmfeht.border-fx"
+        ],
+        "commit": "3a5a14ba6dd9649a71329a7759f48ed0bbfc0642",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T06:42:36.271Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T04:20:26.717Z",
+        "requestEventId": 30953470345,
+        "requestedAt": "2026-09-11T06:33:11Z",
+        "reviewedAt": "2026-09-11T06:42:36.271Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/vip32/omarchy-repo-hub",
