@@ -141202,8 +141202,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T07:37:29.018Z",
-      "listingValidatedCommit": "8cfe62f5a7fa31231f8e364b402f7fe3acffb13c",
-      "listingValidatedAt": "2026-09-08T07:37:29.018Z",
+      "listingValidatedCommit": "473ae6f73debc13fb0d505b6437278ecb6ec08c7",
+      "listingValidatedAt": "2026-09-11T07:54:38.252Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -141212,8 +141212,8 @@
         "pluginIds": [
           "digitalbase.openrouter-plus-improved"
         ],
-        "commit": "8cfe62f5a7fa31231f8e364b402f7fe3acffb13c",
-        "checkedAt": "2026-09-08T07:37:28.943Z",
+        "commit": "473ae6f73debc13fb0d505b6437278ecb6ec08c7",
+        "checkedAt": "2026-09-11T07:54:38.252Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -141229,7 +141229,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8cfe62f5a7fa31231f8e364b402f7fe3acffb13c",
+          "validatedAt": "2026-09-08T07:37:29.018Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:54:38.252Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "digitalbase/omarchy-openrouter-plus-improved",
+            "pluginIds": [
+              "digitalbase.openrouter-plus-improved"
+            ],
+            "commit": "8cfe62f5a7fa31231f8e364b402f7fe3acffb13c",
+            "checkedAt": "2026-09-08T07:37:28.943Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ThatPikaga/AuraBind",
