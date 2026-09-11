@@ -69363,8 +69363,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T06:26:34.056Z",
-      "listingValidatedCommit": "8fecf9700e22709d55a84018102ae7bb94c5fe1e",
-      "listingValidatedAt": "2026-08-25T06:26:34.056Z",
+      "listingValidatedCommit": "00e3680e7bce6570fa1d3c39d5775225707728be",
+      "listingValidatedAt": "2026-09-11T08:42:44.622Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -69373,8 +69373,8 @@
         "pluginIds": [
           "rperaza.obsidian-notes"
         ],
-        "commit": "8fecf9700e22709d55a84018102ae7bb94c5fe1e",
-        "checkedAt": "2026-08-25T06:26:34.022Z",
+        "commit": "00e3680e7bce6570fa1d3c39d5775225707728be",
+        "checkedAt": "2026-09-11T08:42:44.622Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -69388,7 +69388,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8fecf9700e22709d55a84018102ae7bb94c5fe1e",
+          "validatedAt": "2026-08-25T06:26:34.056Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:42:44.622Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joisephdev/omarchy-obsidian",
+            "pluginIds": [
+              "rperaza.obsidian-notes"
+            ],
+            "commit": "8fecf9700e22709d55a84018102ae7bb94c5fe1e",
+            "checkedAt": "2026-08-25T06:26:34.022Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SeanGSR/omarchy-cleaner-plugin",
