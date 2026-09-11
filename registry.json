@@ -158682,8 +158682,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T01:39:35.883Z",
-      "listingValidatedCommit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
-      "listingValidatedAt": "2026-09-11T01:39:35.883Z",
+      "listingValidatedCommit": "109cd1e455332c01881f0c21f9ccd607fc3c34d4",
+      "listingValidatedAt": "2026-09-11T15:43:52.434Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -158692,8 +158692,8 @@
         "pluginIds": [
           "io.github.amikeal.battery-plus"
         ],
-        "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
-        "checkedAt": "2026-09-11T01:39:35.804Z",
+        "commit": "109cd1e455332c01881f0c21f9ccd607fc3c34d4",
+        "checkedAt": "2026-09-11T15:43:52.434Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -158703,30 +158703,6 @@
           "service-management",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "amikeal/omarchy-battery-plus",
-        "pluginIds": [
-          "io.github.amikeal.battery-plus"
-        ],
-        "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T01:39:35.804Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "sudoers-modification",
-          "privilege",
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-11T01:36:31.581Z",
-        "requestEventId": 30942750899,
-        "requestedAt": "2026-09-11T01:38:15Z",
-        "reviewedAt": "2026-09-11T01:39:35.804Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.amikeal.battery-plus": {
@@ -158738,7 +158714,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "amikeal/omarchy-battery-plus",
+        "pluginIds": [
+          "io.github.amikeal.battery-plus"
+        ],
+        "commit": "109cd1e455332c01881f0c21f9ccd607fc3c34d4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T15:43:52.434Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T13:19:20.595Z",
+        "requestEventId": 30976111293,
+        "requestedAt": "2026-09-11T13:54:05Z",
+        "reviewedAt": "2026-09-11T15:43:52.434Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+          "validatedAt": "2026-09-11T01:39:35.883Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:43:52.434Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "amikeal/omarchy-battery-plus",
+            "pluginIds": [
+              "io.github.amikeal.battery-plus"
+            ],
+            "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+            "checkedAt": "2026-09-11T01:39:35.804Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "sudoers-modification",
+              "privilege",
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "amikeal/omarchy-battery-plus",
+            "pluginIds": [
+              "io.github.amikeal.battery-plus"
+            ],
+            "commit": "8d320debe56e8d81dc6393ec3b0e227f5c2f065e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T01:39:35.804Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "sudoers-modification",
+              "privilege",
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-11T01:36:31.581Z",
+            "requestEventId": 30942750899,
+            "requestedAt": "2026-09-11T01:38:15Z",
+            "reviewedAt": "2026-09-11T01:39:35.804Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Primly/omarchy-wallpaper",
