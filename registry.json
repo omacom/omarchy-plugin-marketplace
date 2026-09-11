@@ -95448,8 +95448,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T06:30:05.290Z",
-      "listingValidatedCommit": "f50c21c6e5cadfab8d3730df52bcce7962a39d96",
-      "listingValidatedAt": "2026-08-30T06:30:05.290Z",
+      "listingValidatedCommit": "67936ea05de661d872d03e023b7e189d3fc829ea",
+      "listingValidatedAt": "2026-09-11T07:08:39.137Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -95458,8 +95458,8 @@
         "pluginIds": [
           "io.github.tomfaulkner.ostrich-riders"
         ],
-        "commit": "f50c21c6e5cadfab8d3730df52bcce7962a39d96",
-        "checkedAt": "2026-08-30T06:30:05.243Z",
+        "commit": "67936ea05de661d872d03e023b7e189d3fc829ea",
+        "checkedAt": "2026-09-11T07:08:39.137Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -95475,7 +95475,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f50c21c6e5cadfab8d3730df52bcce7962a39d96",
+          "validatedAt": "2026-08-30T06:30:05.290Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T07:08:39.137Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tomfaulkner/ostrich-riders",
+            "pluginIds": [
+              "io.github.tomfaulkner.ostrich-riders"
+            ],
+            "commit": "f50c21c6e5cadfab8d3730df52bcce7962a39d96",
+            "checkedAt": "2026-08-30T06:30:05.243Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/styles01/omarchy-ollama-cloud",
