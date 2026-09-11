@@ -6211,13 +6211,18 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T10:51:29.049Z",
-      "listingValidatedCommit": "15b988ec581c2210f7d558fd6784b8ebc9d4fd61",
-      "listingValidatedAt": "2026-08-15T10:51:29.049Z",
+      "listingValidatedCommit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
+      "listingValidatedAt": "2026-09-11T16:22:58.811Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
+        "schemaVersion": 1,
         "version": "3",
-        "commit": "15b988ec581c2210f7d558fd6784b8ebc9d4fd61",
-        "checkedAt": "2026-08-15T10:50:25.166Z",
+        "repository": "lerd-env/lerd-omarchy-glance",
+        "pluginIds": [
+          "sh.lerd.glance"
+        ],
+        "commit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
+        "checkedAt": "2026-09-11T16:22:58.811Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -6232,7 +6237,24 @@
             "system"
           ]
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "15b988ec581c2210f7d558fd6784b8ebc9d4fd61",
+          "validatedAt": "2026-08-15T10:51:29.049Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T16:22:58.811Z",
+          "automatedSecurityBaseline": {
+            "version": "3",
+            "commit": "15b988ec581c2210f7d558fd6784b8ebc9d4fd61",
+            "checkedAt": "2026-08-15T10:50:25.166Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/krongggggg/omarchy-caffeine",
