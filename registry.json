@@ -31104,8 +31104,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T18:57:50.385Z",
-      "listingValidatedCommit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
-      "listingValidatedAt": "2026-08-20T18:57:50.385Z",
+      "listingValidatedCommit": "1940e87c618f03e49eec457aeb5056b1aa5aa18b",
+      "listingValidatedAt": "2026-09-11T18:47:01.682Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -31114,14 +31114,12 @@
         "pluginIds": [
           "ianswope.apple-music"
         ],
-        "commit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
-        "checkedAt": "2026-08-21T23:19:04.159Z",
-        "outcome": "review-required",
+        "commit": "1940e87c618f03e49eec457aeb5056b1aa5aa18b",
+        "checkedAt": "2026-09-11T18:47:01.682Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "privilege"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "ianswope.apple-music": {
@@ -31138,27 +31136,51 @@
           }
         }
       },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ianswope/omarchy-apple-music",
-        "pluginIds": [
-          "ianswope.apple-music"
-        ],
-        "commit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-21T23:19:04.159Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-21T18:33:30.299Z",
-        "requestEventId": 29832360794,
-        "requestedAt": "2026-08-21T23:13:21Z",
-        "reviewedAt": "2026-08-21T23:19:04.160Z",
-        "reviewer": "HANCORE-linux"
-      }
+      "listingValidationHistory": [
+        {
+          "commit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
+          "validatedAt": "2026-08-20T18:57:50.385Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:47:01.682Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ianswope/omarchy-apple-music",
+            "pluginIds": [
+              "ianswope.apple-music"
+            ],
+            "commit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
+            "checkedAt": "2026-08-21T23:19:04.159Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ianswope/omarchy-apple-music",
+            "pluginIds": [
+              "ianswope.apple-music"
+            ],
+            "commit": "3001a0d7573e795e68a4802e87c715521a64c1ee",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-21T23:19:04.159Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-21T18:33:30.299Z",
+            "requestEventId": 29832360794,
+            "requestedAt": "2026-08-21T23:13:21Z",
+            "reviewedAt": "2026-08-21T23:19:04.160Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/LeonardoM011/omarchy-wayvnc",
