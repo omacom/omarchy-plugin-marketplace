@@ -71091,8 +71091,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T17:49:01.354Z",
-      "listingValidatedCommit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
-      "listingValidatedAt": "2026-08-29T15:38:00.165Z",
+      "listingValidatedCommit": "7de294b1f060cdaf22c97161fe4ed719dab0d463",
+      "listingValidatedAt": "2026-09-11T20:04:00.512Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -71101,8 +71101,8 @@
         "pluginIds": [
           "davedes.netspeed"
         ],
-        "commit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
-        "checkedAt": "2026-08-29T15:38:00.165Z",
+        "commit": "7de294b1f060cdaf22c97161fe4ed719dab0d463",
+        "checkedAt": "2026-09-11T20:04:00.512Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -71118,27 +71118,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "davedes83/omarchy-netspeed-plugin",
-        "pluginIds": [
-          "davedes.netspeed"
-        ],
-        "commit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T15:38:00.165Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T05:06:02.850Z",
-        "requestEventId": 30213794036,
-        "requestedAt": "2026-08-29T15:29:50Z",
-        "reviewedAt": "2026-08-29T15:38:00.165Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -71183,8 +71162,72 @@
             "reviewedAt": "2026-08-25T17:49:01.318Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
+          "validatedAt": "2026-08-29T15:38:00.165Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T20:04:00.512Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "davedes83/omarchy-netspeed-plugin",
+            "pluginIds": [
+              "davedes.netspeed"
+            ],
+            "commit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
+            "checkedAt": "2026-08-29T15:38:00.165Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "davedes83/omarchy-netspeed-plugin",
+            "pluginIds": [
+              "davedes.netspeed"
+            ],
+            "commit": "5818071f2b2dc9883cd874095aefb3cb8bb5c87f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T15:38:00.165Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T05:06:02.850Z",
+            "requestEventId": 30213794036,
+            "requestedAt": "2026-08-29T15:29:50Z",
+            "reviewedAt": "2026-08-29T15:38:00.165Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davedes83/omarchy-netspeed-plugin",
+        "pluginIds": [
+          "davedes.netspeed"
+        ],
+        "commit": "7de294b1f060cdaf22c97161fe4ed719dab0d463",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T20:04:00.512Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T15:19:38.879Z",
+        "requestEventId": 30996417348,
+        "requestedAt": "2026-09-11T19:59:43Z",
+        "reviewedAt": "2026-09-11T20:04:00.512Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/tedwester/omalegion",
