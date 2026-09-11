@@ -126908,8 +126908,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T19:38:39.442Z",
-      "listingValidatedCommit": "7973cda2661c8699fb884496b8461ffea0bf77e5",
-      "listingValidatedAt": "2026-09-04T19:38:39.442Z",
+      "listingValidatedCommit": "ae9489f3fddd78c5dae008e96c15cce0c4a8a113",
+      "listingValidatedAt": "2026-09-11T07:17:09.733Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -126918,8 +126918,8 @@
         "pluginIds": [
           "io.github.knivfjell.super-button"
         ],
-        "commit": "7973cda2661c8699fb884496b8461ffea0bf77e5",
-        "checkedAt": "2026-09-04T19:38:39.382Z",
+        "commit": "ae9489f3fddd78c5dae008e96c15cce0c4a8a113",
+        "checkedAt": "2026-09-11T07:17:09.733Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -126935,7 +126935,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7973cda2661c8699fb884496b8461ffea0bf77e5",
+          "validatedAt": "2026-09-04T19:38:39.442Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:17:09.733Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "knivfjell/omarchy-super-button",
+            "pluginIds": [
+              "io.github.knivfjell.super-button"
+            ],
+            "commit": "7973cda2661c8699fb884496b8461ffea0bf77e5",
+            "checkedAt": "2026-09-04T19:38:39.382Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/williavs/omalights",
