@@ -74225,8 +74225,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T20:53:45.177Z",
-      "listingValidatedCommit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
-      "listingValidatedAt": "2026-08-31T06:28:01.851Z",
+      "listingValidatedCommit": "a76a8629ed1821e590ec07f0f100ad15decb5890",
+      "listingValidatedAt": "2026-09-11T13:58:08.203Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -74235,8 +74235,8 @@
         "pluginIds": [
           "avila.ultra-docker"
         ],
-        "commit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
-        "checkedAt": "2026-08-31T06:28:01.851Z",
+        "commit": "a76a8629ed1821e590ec07f0f100ad15decb5890",
+        "checkedAt": "2026-09-11T13:58:08.203Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -74257,28 +74257,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "chameleonbr/omarchy_ultra_docker",
-        "pluginIds": [
-          "avila.ultra-docker"
-        ],
-        "commit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-31T06:28:01.851Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-31T00:51:43.469Z",
-        "requestEventId": 30261039052,
-        "requestedAt": "2026-08-31T06:22:54Z",
-        "reviewedAt": "2026-08-31T06:28:01.851Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -74325,8 +74303,75 @@
             "reviewedAt": "2026-08-25T20:53:45.138Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
+          "validatedAt": "2026-08-31T06:28:01.851Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:58:08.203Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "chameleonbr/omarchy_ultra_docker",
+            "pluginIds": [
+              "avila.ultra-docker"
+            ],
+            "commit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
+            "checkedAt": "2026-08-31T06:28:01.851Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "chameleonbr/omarchy_ultra_docker",
+            "pluginIds": [
+              "avila.ultra-docker"
+            ],
+            "commit": "7343dbb578fecf6f1b6e5767bec9acd1a19ba406",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-31T06:28:01.851Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T00:51:43.469Z",
+            "requestEventId": 30261039052,
+            "requestedAt": "2026-08-31T06:22:54Z",
+            "reviewedAt": "2026-08-31T06:28:01.851Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "chameleonbr/omarchy_ultra_docker",
+        "pluginIds": [
+          "avila.ultra-docker"
+        ],
+        "commit": "a76a8629ed1821e590ec07f0f100ad15decb5890",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T13:58:08.203Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T03:45:40.835Z",
+        "requestEventId": 30974434908,
+        "requestedAt": "2026-09-11T13:24:40Z",
+        "reviewedAt": "2026-09-11T13:58:08.203Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/abran-labs/omarchy-notification-center",
