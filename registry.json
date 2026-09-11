@@ -118450,8 +118450,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T17:40:15.051Z",
-      "listingValidatedCommit": "fb9ad5633659f94d12fecfb3a8d2162eaeb1a7e6",
-      "listingValidatedAt": "2026-09-02T17:40:15.051Z",
+      "listingValidatedCommit": "ce76200b2da982f18f1cbc881ef1aa476c0b7481",
+      "listingValidatedAt": "2026-09-11T05:41:53.042Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118460,8 +118460,8 @@
         "pluginIds": [
           "kairos.theme-forge"
         ],
-        "commit": "fb9ad5633659f94d12fecfb3a8d2162eaeb1a7e6",
-        "checkedAt": "2026-09-02T17:40:14.986Z",
+        "commit": "ce76200b2da982f18f1cbc881ef1aa476c0b7481",
+        "checkedAt": "2026-09-11T05:41:53.042Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118475,7 +118475,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "fb9ad5633659f94d12fecfb3a8d2162eaeb1a7e6",
+          "validatedAt": "2026-09-02T17:40:15.051Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T05:41:53.042Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kairos-tech-oh/omarchy-theme-forge",
+            "pluginIds": [
+              "kairos.theme-forge"
+            ],
+            "commit": "fb9ad5633659f94d12fecfb3a8d2162eaeb1a7e6",
+            "checkedAt": "2026-09-02T17:40:14.986Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/anothaDev/omachord",
