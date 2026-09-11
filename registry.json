@@ -151556,8 +151556,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T22:05:40.930Z",
-      "listingValidatedCommit": "f12892c7624aca9e258e9710f49c12271aa1310d",
-      "listingValidatedAt": "2026-09-08T22:05:40.930Z",
+      "listingValidatedCommit": "973901571f37759c014da56c006d96e2aee3be0f",
+      "listingValidatedAt": "2026-09-11T18:44:37.253Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -151566,35 +151566,14 @@
         "pluginIds": [
           "madmatt.keyboard-settings"
         ],
-        "commit": "f12892c7624aca9e258e9710f49c12271aa1310d",
-        "checkedAt": "2026-09-08T22:05:40.866Z",
+        "commit": "973901571f37759c014da56c006d96e2aee3be0f",
+        "checkedAt": "2026-09-11T18:44:37.253Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "madmatt341/omarchy-keyboard-settings",
-        "pluginIds": [
-          "madmatt.keyboard-settings"
-        ],
-        "commit": "f12892c7624aca9e258e9710f49c12271aa1310d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T22:05:40.866Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T15:08:20.771Z",
-        "requestEventId": 30787679701,
-        "requestedAt": "2026-09-08T22:04:41Z",
-        "reviewedAt": "2026-09-08T22:05:40.866Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "madmatt.keyboard-settings": {
@@ -151606,7 +151585,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "madmatt341/omarchy-keyboard-settings",
+        "pluginIds": [
+          "madmatt.keyboard-settings"
+        ],
+        "commit": "973901571f37759c014da56c006d96e2aee3be0f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T18:44:37.253Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T17:43:16.813Z",
+        "requestEventId": 30991475752,
+        "requestedAt": "2026-09-11T18:18:08Z",
+        "reviewedAt": "2026-09-11T18:44:37.253Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f12892c7624aca9e258e9710f49c12271aa1310d",
+          "validatedAt": "2026-09-08T22:05:40.930Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:44:37.253Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "madmatt341/omarchy-keyboard-settings",
+            "pluginIds": [
+              "madmatt.keyboard-settings"
+            ],
+            "commit": "f12892c7624aca9e258e9710f49c12271aa1310d",
+            "checkedAt": "2026-09-08T22:05:40.866Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "madmatt341/omarchy-keyboard-settings",
+            "pluginIds": [
+              "madmatt.keyboard-settings"
+            ],
+            "commit": "f12892c7624aca9e258e9710f49c12271aa1310d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T22:05:40.866Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T15:08:20.771Z",
+            "requestEventId": 30787679701,
+            "requestedAt": "2026-09-08T22:04:41Z",
+            "reviewedAt": "2026-09-08T22:05:40.866Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/sjfortin/omarchy-nts-radio",
