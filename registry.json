@@ -133367,8 +133367,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:32:28.234Z",
-      "listingValidatedCommit": "d76794e7fea4538e4df2ed240ceb438e3ae34112",
-      "listingValidatedAt": "2026-09-06T00:32:28.234Z",
+      "listingValidatedCommit": "c60cebc38c6506599b0e3a95c25092b4ee412f85",
+      "listingValidatedAt": "2026-09-11T08:55:43.740Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133377,8 +133377,8 @@
         "pluginIds": [
           "bert.wisps"
         ],
-        "commit": "d76794e7fea4538e4df2ed240ceb438e3ae34112",
-        "checkedAt": "2026-09-06T00:32:28.168Z",
+        "commit": "c60cebc38c6506599b0e3a95c25092b4ee412f85",
+        "checkedAt": "2026-09-11T08:55:43.740Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -133394,7 +133394,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d76794e7fea4538e4df2ed240ceb438e3ae34112",
+          "validatedAt": "2026-09-06T00:32:28.234Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:55:43.740Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bert0424/omarchy-wisps",
+            "pluginIds": [
+              "bert.wisps"
+            ],
+            "commit": "d76794e7fea4538e4df2ed240ceb438e3ae34112",
+            "checkedAt": "2026-09-06T00:32:28.168Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kusumaindraputra/omarchy-achievement",
