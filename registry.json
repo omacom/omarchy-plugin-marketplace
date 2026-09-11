@@ -134514,8 +134514,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:14:07.505Z",
-      "listingValidatedCommit": "ddb1440407bc6a578eaacea707a457511e6822a7",
-      "listingValidatedAt": "2026-09-06T02:14:07.505Z",
+      "listingValidatedCommit": "95833669dbe39d0c9e4b030c15f80ca581853eb9",
+      "listingValidatedAt": "2026-09-11T06:50:52.556Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -134524,8 +134524,8 @@
         "pluginIds": [
           "kiryuuki.oma-netscan"
         ],
-        "commit": "ddb1440407bc6a578eaacea707a457511e6822a7",
-        "checkedAt": "2026-09-06T02:14:07.442Z",
+        "commit": "95833669dbe39d0c9e4b030c15f80ca581853eb9",
+        "checkedAt": "2026-09-11T06:50:52.556Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -134541,7 +134541,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ddb1440407bc6a578eaacea707a457511e6822a7",
+          "validatedAt": "2026-09-06T02:14:07.505Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T06:50:52.556Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kiryuuki/oma-netscan",
+            "pluginIds": [
+              "kiryuuki.oma-netscan"
+            ],
+            "commit": "ddb1440407bc6a578eaacea707a457511e6822a7",
+            "checkedAt": "2026-09-06T02:14:07.442Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/wvdominick/omarchy-starlink",
