@@ -156593,6 +156593,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/edofic/go-idasen",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T08:05:08.004Z",
+      "listingValidatedCommit": "d67ca4de3fb27c87e4025168ff149975489bb6f1",
+      "listingValidatedAt": "2026-09-11T08:05:08.004Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "edofic/go-idasen",
+        "pluginIds": [
+          "edofic.idasen-desk"
+        ],
+        "commit": "d67ca4de3fb27c87e4025168ff149975489bb6f1",
+        "checkedAt": "2026-09-11T08:05:07.924Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "edofic/go-idasen",
+        "pluginIds": [
+          "edofic.idasen-desk"
+        ],
+        "commit": "d67ca4de3fb27c87e4025168ff149975489bb6f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T08:05:07.924Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T06:25:25.829Z",
+        "requestEventId": 30956761554,
+        "requestedAt": "2026-09-11T07:44:42Z",
+        "reviewedAt": "2026-09-11T08:05:07.924Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "edofic.idasen-desk": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
