@@ -1232,13 +1232,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260820-21");
+  assert.equal(styleKeys[0], "20260906-02");
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
   assert.equal(new Set(faviconKeys).size, 1);
   assert.match(files.index, /<title>Browse Plugins \| Omarchy Plugins<\/title>/);
-  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/github\.com\/omacom\/omarchy\/tree\/quattro"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.plugin, files.publish, files.develop, files.explore]) {
+    assert.doesNotMatch(page, /omarchy-brand-(?:action|logo)/);
+  }
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
   assert.equal((files.index.match(/href="develop\.html"/g) || []).length, 2);
   assert.equal((files.index.match(/href="explore\.html"/g) || []).length, 2);
   assert.match(files.index, /class="market-hero-actions"[\s\S]*Browse plugins[\s\S]*href="develop\.html">Develop a plugin[\s\S]*Publish a plugin/);
@@ -1825,8 +1828,21 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.plugin-author button \{[\s\S]*z-index: 3/);
   assert.match(styles, /\.plugin-author button \{[\s\S]*min-height: 24px/);
   assert.match(styles, /\.plugin-author button:hover, \.plugin-author button:focus-visible \{ color: var\(--accent\); \}/);
-  assert.match(files.index, /class="footer-status"/);
-  assert.match(files.index, /HANCORE[\s\S]*OMARCHY PLUGIN MARKETPLACE[\s\S]*GITHUB/);
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.explore]) {
+    assert.match(page, /class="footer-status"/);
+    assert.match(page, /HANCORE[\s\S]*<a class="footer-wordmark-link" href="https:\/\/omarchy\.org\/"[^>]*aria-label="Visit Omarchy">[\s\S]*<img src="assets\/img\/omarchy-wordmark\.png" alt="" width="656" height="192">\s*<\/a>[\s\S]*GITHUB/);
+    assert.doesNotMatch(page, /omarchy-footer(?:-still)?\.svg/);
+    assert.equal((page.match(/<span>PLUGIN MARKETPLACE<\/span>/g) || []).length, 1);
+  }
+  assert.doesNotMatch(styles, /omarchy-brand-(?:action|logo)/);
+  assert.match(styles, /\.footer-wordmark-link \{ display: block; border: 0; background: transparent; line-height: 0; \}/);
+  assert.match(styles, /\.footer-wordmark-link img \{[\s\S]*width: 82px; height: 24px;[\s\S]*image-rendering: pixelated;/);
+  assert.match(styles, /\.footer-wordmark-link:hover img \{ filter: brightness\(1\.15\); \}/);
+  assert.doesNotMatch(styles, /\.footer-wordmark-link[^}]*padding|\.footer-wordmark-link:hover[^}]*background/);
+  assert.doesNotMatch(`${files.app}${files.exploreJs}${styles}`, /FooterWordmarkDecrypt|footer-wordmark-decrypt|is-decrypting/);
+  assert.match(styles, /\.footer-status::before \{[\s\S]*background: linear-gradient/);
+  assert.match(styles, /\.footer-status::after \{[\s\S]*background: var\(--accent\); content: "";/);
   assert.doesNotMatch(files.index, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
   assert.doesNotMatch(files.explore, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
   assert.doesNotMatch(files.index, /footer-tech-canvas|footer-project-canvas/);
