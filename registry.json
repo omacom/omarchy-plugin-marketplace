@@ -160958,6 +160958,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ReidenXerx/omarchy-idle-dim",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T18:54:10.881Z",
+      "listingValidatedCommit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+      "listingValidatedAt": "2026-09-11T18:54:10.881Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "reidenxerx/omarchy-idle-dim",
+        "pluginIds": [
+          "reidenxerx.idle-dim"
+        ],
+        "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+        "checkedAt": "2026-09-11T18:54:10.805Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-idle-dim",
+        "pluginIds": [
+          "reidenxerx.idle-dim"
+        ],
+        "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T18:54:10.805Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T18:06:24.946Z",
+        "requestEventId": 30992764495,
+        "requestedAt": "2026-09-11T18:44:14Z",
+        "reviewedAt": "2026-09-11T18:54:10.805Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "reidenxerx.idle-dim": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
