@@ -157631,6 +157631,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ekollof/omaconnect",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T09:40:45.374Z",
+      "listingValidatedCommit": "a04f8bad0a2aebf392a7ec5e7dd20d69f897add3",
+      "listingValidatedAt": "2026-09-11T09:40:45.374Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ekollof/omaconnect",
+        "pluginIds": [
+          "ekollof.omaconnect"
+        ],
+        "commit": "a04f8bad0a2aebf392a7ec5e7dd20d69f897add3",
+        "checkedAt": "2026-09-11T09:40:45.297Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ekollof/omaconnect",
+        "pluginIds": [
+          "ekollof.omaconnect"
+        ],
+        "commit": "a04f8bad0a2aebf392a7ec5e7dd20d69f897add3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T09:40:45.297Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T07:23:57.939Z",
+        "requestEventId": 30960211276,
+        "requestedAt": "2026-09-11T08:52:19Z",
+        "reviewedAt": "2026-09-11T09:40:45.297Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ekollof.omaconnect": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
