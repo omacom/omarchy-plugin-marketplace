@@ -162146,6 +162146,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidmessenger123/omarchy-rain",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T23:52:25.873Z",
+      "listingValidatedCommit": "050193a9fdc86340d406a9b9f5e1da59675b4d1a",
+      "listingValidatedAt": "2026-09-11T23:52:25.873Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidmessenger123/omarchy-rain",
+        "pluginIds": [
+          "davidjm.rain"
+        ],
+        "commit": "050193a9fdc86340d406a9b9f5e1da59675b4d1a",
+        "checkedAt": "2026-09-11T23:52:25.801Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "davidjm.rain": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
