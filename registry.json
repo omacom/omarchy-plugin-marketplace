@@ -108904,8 +108904,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T19:47:19.366Z",
-      "listingValidatedCommit": "d1a2238f36f4b6e3a24056a462695005d911cb40",
-      "listingValidatedAt": "2026-08-31T19:47:19.366Z",
+      "listingValidatedCommit": "f5dd6bd53cc1e650d274441583735bb82b5c2410",
+      "listingValidatedAt": "2026-09-11T00:11:27.504Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -108914,12 +108914,14 @@
         "pluginIds": [
           "io.github.majkelll.omarchy-docker"
         ],
-        "commit": "d1a2238f36f4b6e3a24056a462695005d911cb40",
-        "checkedAt": "2026-08-31T19:47:19.304Z",
-        "outcome": "passed",
+        "commit": "f5dd6bd53cc1e650d274441583735bb82b5c2410",
+        "checkedAt": "2026-09-11T00:11:27.504Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "privilege"
+        ]
       },
       "plugins": {
         "io.github.majkelll.omarchy-docker": {
@@ -108931,7 +108933,50 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "majkelll/omarchy-docker",
+        "pluginIds": [
+          "io.github.majkelll.omarchy-docker"
+        ],
+        "commit": "f5dd6bd53cc1e650d274441583735bb82b5c2410",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T00:11:27.504Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-07T15:11:21.763Z",
+        "requestEventId": 30937895043,
+        "requestedAt": "2026-09-10T23:38:04Z",
+        "reviewedAt": "2026-09-11T00:11:27.504Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d1a2238f36f4b6e3a24056a462695005d911cb40",
+          "validatedAt": "2026-08-31T19:47:19.366Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T00:11:27.504Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "majkelll/omarchy-docker",
+            "pluginIds": [
+              "io.github.majkelll.omarchy-docker"
+            ],
+            "commit": "d1a2238f36f4b6e3a24056a462695005d911cb40",
+            "checkedAt": "2026-08-31T19:47:19.304Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/wkuehler/omarchy-amateur-radio-exam-quiz",
