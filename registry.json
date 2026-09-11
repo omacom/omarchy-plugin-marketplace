@@ -157926,6 +157926,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jhonoryza/omarchy-netspeed",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T11:16:27.236Z",
+      "listingValidatedCommit": "d5ffff98acf438aef26b41dafbb26ea9ccd38bd8",
+      "listingValidatedAt": "2026-09-11T11:16:27.236Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jhonoryza/omarchy-netspeed",
+        "pluginIds": [
+          "vm.netspeed"
+        ],
+        "commit": "d5ffff98acf438aef26b41dafbb26ea9ccd38bd8",
+        "checkedAt": "2026-09-11T11:16:27.164Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "vm.netspeed": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
