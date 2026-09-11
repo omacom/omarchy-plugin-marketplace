@@ -55698,8 +55698,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T16:09:01.985Z",
-      "listingValidatedCommit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
-      "listingValidatedAt": "2026-08-27T17:26:28.327Z",
+      "listingValidatedCommit": "0fe80be8514f40e7ed7d24bf14c7ceb0cffe1be1",
+      "listingValidatedAt": "2026-09-11T00:29:44.087Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -55708,8 +55708,8 @@
         "pluginIds": [
           "io.github.vuhungthang.monitor-studio"
         ],
-        "commit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
-        "checkedAt": "2026-08-27T17:26:28.327Z",
+        "commit": "0fe80be8514f40e7ed7d24bf14c7ceb0cffe1be1",
+        "checkedAt": "2026-09-11T00:29:44.087Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -55857,6 +55857,49 @@
             "reviewedAt": "2026-08-24T16:15:52.601Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
+          "validatedAt": "2026-08-27T17:26:28.327Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T00:29:44.087Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vuhungthang/omarchy-monitor-studio",
+            "pluginIds": [
+              "io.github.vuhungthang.monitor-studio"
+            ],
+            "commit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
+            "checkedAt": "2026-08-27T17:26:28.327Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "vuhungthang/omarchy-monitor-studio",
+            "pluginIds": [
+              "io.github.vuhungthang.monitor-studio"
+            ],
+            "commit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-27T17:26:28.327Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-26T21:27:46.087Z",
+            "requestEventId": 30117623965,
+            "requestedAt": "2026-08-27T16:40:15Z",
+            "reviewedAt": "2026-08-27T17:26:28.327Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -55865,19 +55908,19 @@
         "pluginIds": [
           "io.github.vuhungthang.monitor-studio"
         ],
-        "commit": "b7bfedc4b7572e50a379597a1c3623f074a90039",
+        "commit": "0fe80be8514f40e7ed7d24bf14c7ceb0cffe1be1",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-27T17:26:28.327Z",
+        "baselineCheckedAt": "2026-09-11T00:29:44.087Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-26T21:27:46.087Z",
-        "requestEventId": 30117623965,
-        "requestedAt": "2026-08-27T16:40:15Z",
-        "reviewedAt": "2026-08-27T17:26:28.327Z",
+        "reviewedBaselineCheckedAt": "2026-09-07T19:52:07.470Z",
+        "requestEventId": 30937913091,
+        "requestedAt": "2026-09-10T23:38:34Z",
+        "reviewedAt": "2026-09-11T00:29:44.087Z",
         "reviewer": "HANCORE-linux"
       }
     },
