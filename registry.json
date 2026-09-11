@@ -23132,8 +23132,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T00:55:45.508Z",
-      "listingValidatedCommit": "1e18029adbae5504e58b07cf66fe9e8280df5bc3",
-      "listingValidatedAt": "2026-09-02T01:58:10.307Z",
+      "listingValidatedCommit": "d3e803e58c3780ae6ebc6e34e3ab4973c9a5eed7",
+      "listingValidatedAt": "2026-09-11T15:03:24.512Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -23142,8 +23142,8 @@
         "pluginIds": [
           "io.github.guiestrela.glassbar"
         ],
-        "commit": "1e18029adbae5504e58b07cf66fe9e8280df5bc3",
-        "checkedAt": "2026-09-02T01:58:10.306Z",
+        "commit": "d3e803e58c3780ae6ebc6e34e3ab4973c9a5eed7",
+        "checkedAt": "2026-09-11T15:03:24.512Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -23193,6 +23193,26 @@
             ],
             "commit": "c7573b78d37b9c2721fd191f0dc9409ab167bb5b",
             "checkedAt": "2026-08-21T19:20:42.800Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "1e18029adbae5504e58b07cf66fe9e8280df5bc3",
+          "validatedAt": "2026-09-02T01:58:10.307Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:03:24.512Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "guiestrela/glassbar",
+            "pluginIds": [
+              "io.github.guiestrela.glassbar"
+            ],
+            "commit": "1e18029adbae5504e58b07cf66fe9e8280df5bc3",
+            "checkedAt": "2026-09-02T01:58:10.306Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
