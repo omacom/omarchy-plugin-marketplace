@@ -72281,8 +72281,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T20:08:01.643Z",
-      "listingValidatedCommit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
-      "listingValidatedAt": "2026-09-01T17:43:11.280Z",
+      "listingValidatedCommit": "f83622bd7e9175a106021c383e275f906ae5fb83",
+      "listingValidatedAt": "2026-09-11T00:26:54.398Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -72291,8 +72291,8 @@
         "pluginIds": [
           "mryll.codexbar"
         ],
-        "commit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
-        "checkedAt": "2026-09-01T17:43:11.279Z",
+        "commit": "f83622bd7e9175a106021c383e275f906ae5fb83",
+        "checkedAt": "2026-09-11T00:26:54.398Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -72505,6 +72505,53 @@
             "reviewedAt": "2026-08-27T21:35:35.328Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
+          "validatedAt": "2026-09-01T17:43:11.280Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T00:26:54.398Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mryll/codexbar",
+            "pluginIds": [
+              "mryll.codexbar"
+            ],
+            "commit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
+            "checkedAt": "2026-09-01T17:43:11.279Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mryll/codexbar",
+            "pluginIds": [
+              "mryll.codexbar"
+            ],
+            "commit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-01T17:43:11.279Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-01T14:07:23.874Z",
+            "requestEventId": 30363072563,
+            "requestedAt": "2026-09-01T17:32:53Z",
+            "reviewedAt": "2026-09-01T17:43:11.280Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -72513,10 +72560,10 @@
         "pluginIds": [
           "mryll.codexbar"
         ],
-        "commit": "95e6ed6cdbc5ad2f0ae0b9e9e3821e340c9217c8",
+        "commit": "f83622bd7e9175a106021c383e275f906ae5fb83",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-01T17:43:11.279Z",
+        "baselineCheckedAt": "2026-09-11T00:26:54.398Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -72524,10 +72571,10 @@
           "remote-build",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-01T14:07:23.874Z",
-        "requestEventId": 30363072563,
-        "requestedAt": "2026-09-01T17:32:53Z",
-        "reviewedAt": "2026-09-01T17:43:11.280Z",
+        "reviewedBaselineCheckedAt": "2026-09-07T19:18:13.341Z",
+        "requestEventId": 30937911265,
+        "requestedAt": "2026-09-10T23:38:31Z",
+        "reviewedAt": "2026-09-11T00:26:54.398Z",
         "reviewer": "HANCORE-linux"
       }
     },
