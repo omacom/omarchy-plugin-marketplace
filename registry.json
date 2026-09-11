@@ -146437,8 +146437,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T15:28:48.717Z",
-      "listingValidatedCommit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
-      "listingValidatedAt": "2026-09-08T15:28:48.717Z",
+      "listingValidatedCommit": "9b045ef319bb748040275f8d81b6943194454692",
+      "listingValidatedAt": "2026-09-11T09:18:33.295Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -146447,35 +146447,14 @@
         "pluginIds": [
           "person1873.hypr-dwm-land"
         ],
-        "commit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
-        "checkedAt": "2026-09-08T15:28:48.642Z",
+        "commit": "9b045ef319bb748040275f8d81b6943194454692",
+        "checkedAt": "2026-09-11T09:18:33.295Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "person1873/hypr-dwm-land",
-        "pluginIds": [
-          "person1873.hypr-dwm-land"
-        ],
-        "commit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T15:28:48.642Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-07T18:23:53.866Z",
-        "requestEventId": 30766323573,
-        "requestedAt": "2026-09-08T15:27:38Z",
-        "reviewedAt": "2026-09-08T15:28:48.642Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "person1873.hypr-dwm-land": {
@@ -146487,7 +146466,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "person1873/hypr-dwm-land",
+        "pluginIds": [
+          "person1873.hypr-dwm-land"
+        ],
+        "commit": "9b045ef319bb748040275f8d81b6943194454692",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T09:18:33.295Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T06:42:58.674Z",
+        "requestEventId": 30958578804,
+        "requestedAt": "2026-09-11T08:21:16Z",
+        "reviewedAt": "2026-09-11T09:18:33.295Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
+          "validatedAt": "2026-09-08T15:28:48.717Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:18:33.295Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "person1873/hypr-dwm-land",
+            "pluginIds": [
+              "person1873.hypr-dwm-land"
+            ],
+            "commit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
+            "checkedAt": "2026-09-08T15:28:48.642Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "person1873/hypr-dwm-land",
+            "pluginIds": [
+              "person1873.hypr-dwm-land"
+            ],
+            "commit": "e7559f53c9c719f6efa7bcdaa1687d28e0f28129",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T15:28:48.642Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-07T18:23:53.866Z",
+            "requestEventId": 30766323573,
+            "requestedAt": "2026-09-08T15:27:38Z",
+            "reviewedAt": "2026-09-08T15:28:48.642Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chr0nzz/omarchy-pigeon",
