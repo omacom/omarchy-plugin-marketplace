@@ -152564,8 +152564,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T01:32:00.329Z",
-      "listingValidatedCommit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
-      "listingValidatedAt": "2026-09-09T01:32:00.329Z",
+      "listingValidatedCommit": "b32706db631034066a6dccdb7b2572c21dc6e6a5",
+      "listingValidatedAt": "2026-09-11T13:52:25.641Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -152574,8 +152574,8 @@
         "pluginIds": [
           "omapen"
         ],
-        "commit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
-        "checkedAt": "2026-09-09T01:32:00.250Z",
+        "commit": "b32706db631034066a6dccdb7b2572c21dc6e6a5",
+        "checkedAt": "2026-09-11T13:52:25.641Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -152591,7 +152591,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
+          "validatedAt": "2026-09-09T01:32:00.329Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:52:25.641Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vladimirstempel/omapen",
+            "pluginIds": [
+              "omapen"
+            ],
+            "commit": "0d57ecdb756d586db4dfdacb00952e2a334c5b0b",
+            "checkedAt": "2026-09-09T01:32:00.250Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/exquisiteskink/Sportmarchy",
