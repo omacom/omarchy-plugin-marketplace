@@ -124471,8 +124471,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T17:30:47.647Z",
-      "listingValidatedCommit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
-      "listingValidatedAt": "2026-09-04T17:30:47.647Z",
+      "listingValidatedCommit": "47593b107d1a883d132033a76e1607b83c3bbf6f",
+      "listingValidatedAt": "2026-09-11T05:49:14.068Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -124481,35 +124481,14 @@
         "pluginIds": [
           "io.github.andresariveros.omabose"
         ],
-        "commit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
-        "checkedAt": "2026-09-04T17:30:47.588Z",
+        "commit": "47593b107d1a883d132033a76e1607b83c3bbf6f",
+        "checkedAt": "2026-09-11T05:49:14.068Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "andresantonioriveros/omarchy-bose",
-        "pluginIds": [
-          "io.github.andresariveros.omabose"
-        ],
-        "commit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T17:30:47.588Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T22:55:27.788Z",
-        "requestEventId": 30566922874,
-        "requestedAt": "2026-09-04T16:15:09Z",
-        "reviewedAt": "2026-09-04T17:30:47.588Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.andresariveros.omabose": {
@@ -124521,7 +124500,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andresantonioriveros/omarchy-bose",
+        "pluginIds": [
+          "io.github.andresariveros.omabose"
+        ],
+        "commit": "47593b107d1a883d132033a76e1607b83c3bbf6f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T05:49:14.068Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T00:24:38.004Z",
+        "requestEventId": 30951328094,
+        "requestedAt": "2026-09-11T05:38:05Z",
+        "reviewedAt": "2026-09-11T05:49:14.068Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
+          "validatedAt": "2026-09-04T17:30:47.647Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T05:49:14.068Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andresantonioriveros/omarchy-bose",
+            "pluginIds": [
+              "io.github.andresariveros.omabose"
+            ],
+            "commit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
+            "checkedAt": "2026-09-04T17:30:47.588Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "andresantonioriveros/omarchy-bose",
+            "pluginIds": [
+              "io.github.andresariveros.omabose"
+            ],
+            "commit": "fc050e0cff78c901a5f36985e2181168eb3875fe",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T17:30:47.588Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T22:55:27.788Z",
+            "requestEventId": 30566922874,
+            "requestedAt": "2026-09-04T16:15:09Z",
+            "reviewedAt": "2026-09-04T17:30:47.588Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Comm4nd0/omarchy-info",
