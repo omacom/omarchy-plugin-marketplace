@@ -141664,8 +141664,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T10:28:27.228Z",
-      "listingValidatedCommit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
-      "listingValidatedAt": "2026-09-08T10:28:27.228Z",
+      "listingValidatedCommit": "bb91c8f8158e4355dc54c763ceba408a5b57a24a",
+      "listingValidatedAt": "2026-09-11T07:19:46.588Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -141674,8 +141674,8 @@
         "pluginIds": [
           "io.github.antoniowav.appsweep"
         ],
-        "commit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
-        "checkedAt": "2026-09-08T10:28:27.157Z",
+        "commit": "bb91c8f8158e4355dc54c763ceba408a5b57a24a",
+        "checkedAt": "2026-09-11T07:19:46.588Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -141683,28 +141683,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "antoniowav/omarchy-appsweep",
-        "pluginIds": [
-          "io.github.antoniowav.appsweep"
-        ],
-        "commit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T10:28:27.157Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T10:06:16.341Z",
-        "requestEventId": 30747365799,
-        "requestedAt": "2026-09-08T10:25:17Z",
-        "reviewedAt": "2026-09-08T10:28:27.157Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.antoniowav.appsweep": {
@@ -141715,7 +141693,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "antoniowav/omarchy-appsweep",
+        "pluginIds": [
+          "io.github.antoniowav.appsweep"
+        ],
+        "commit": "bb91c8f8158e4355dc54c763ceba408a5b57a24a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:19:46.588Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T15:38:03.695Z",
+        "requestEventId": 30954143474,
+        "requestedAt": "2026-09-11T06:47:55Z",
+        "reviewedAt": "2026-09-11T07:19:46.588Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
+          "validatedAt": "2026-09-08T10:28:27.228Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:19:46.588Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "antoniowav/omarchy-appsweep",
+            "pluginIds": [
+              "io.github.antoniowav.appsweep"
+            ],
+            "commit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
+            "checkedAt": "2026-09-08T10:28:27.157Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "antoniowav/omarchy-appsweep",
+            "pluginIds": [
+              "io.github.antoniowav.appsweep"
+            ],
+            "commit": "7837e4e8dfc821db9e644b5d6cbf037d50593791",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T10:28:27.157Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T10:06:16.341Z",
+            "requestEventId": 30747365799,
+            "requestedAt": "2026-09-08T10:25:17Z",
+            "reviewedAt": "2026-09-08T10:28:27.157Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/qwlp/omarchy-workspace-apps",
