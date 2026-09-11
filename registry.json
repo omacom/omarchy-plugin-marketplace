@@ -134833,8 +134833,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:37:06.174Z",
-      "listingValidatedCommit": "1c71a4e387438d519b9ef8008f454df0b0d38e68",
-      "listingValidatedAt": "2026-09-06T00:37:06.174Z",
+      "listingValidatedCommit": "6ee579b3939a055164a2a3399e681cc5e2e7e003",
+      "listingValidatedAt": "2026-09-11T20:06:57.852Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -134843,8 +134843,8 @@
         "pluginIds": [
           "io.github.thetxeagle.oligarchy-lock"
         ],
-        "commit": "1c71a4e387438d519b9ef8008f454df0b0d38e68",
-        "checkedAt": "2026-09-06T00:37:06.102Z",
+        "commit": "6ee579b3939a055164a2a3399e681cc5e2e7e003",
+        "checkedAt": "2026-09-11T20:06:57.852Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -134859,7 +134859,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1c71a4e387438d519b9ef8008f454df0b0d38e68",
+          "validatedAt": "2026-09-06T00:37:06.174Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T20:06:57.852Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "thetxeagle/omarchy-oligarchy-quickshell-lockscreen",
+            "pluginIds": [
+              "io.github.thetxeagle.oligarchy-lock"
+            ],
+            "commit": "1c71a4e387438d519b9ef8008f454df0b0d38e68",
+            "checkedAt": "2026-09-06T00:37:06.102Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/2Dennis/zoom-in-out",
