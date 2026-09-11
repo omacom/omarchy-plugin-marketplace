@@ -143411,8 +143411,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T11:04:38.937Z",
-      "listingValidatedCommit": "4a165bd14f808e85ec9d982d717b726565c306ea",
-      "listingValidatedAt": "2026-09-08T11:04:38.937Z",
+      "listingValidatedCommit": "0435ea43b7fdd5ccdb036f8aaf77ed0fc4623ecd",
+      "listingValidatedAt": "2026-09-11T14:21:55.474Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -143421,8 +143421,8 @@
         "pluginIds": [
           "eduard.cooler-control"
         ],
-        "commit": "4a165bd14f808e85ec9d982d717b726565c306ea",
-        "checkedAt": "2026-09-08T11:04:38.869Z",
+        "commit": "0435ea43b7fdd5ccdb036f8aaf77ed0fc4623ecd",
+        "checkedAt": "2026-09-11T14:21:55.474Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -143430,28 +143430,6 @@
           "privilege",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "eddygarcas/omarchy-cooler-control",
-        "pluginIds": [
-          "eduard.cooler-control"
-        ],
-        "commit": "4a165bd14f808e85ec9d982d717b726565c306ea",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T11:04:38.869Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T07:58:22.822Z",
-        "requestEventId": 30748998342,
-        "requestedAt": "2026-09-08T10:53:38Z",
-        "reviewedAt": "2026-09-08T11:04:38.869Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "eduard.cooler-control": {
@@ -143463,7 +143441,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "eddygarcas/omarchy-cooler-control",
+        "pluginIds": [
+          "eduard.cooler-control"
+        ],
+        "commit": "0435ea43b7fdd5ccdb036f8aaf77ed0fc4623ecd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T14:21:55.474Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T12:55:39.912Z",
+        "requestEventId": 30974812327,
+        "requestedAt": "2026-09-11T13:31:26Z",
+        "reviewedAt": "2026-09-11T14:21:55.474Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4a165bd14f808e85ec9d982d717b726565c306ea",
+          "validatedAt": "2026-09-08T11:04:38.937Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:21:55.474Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "eddygarcas/omarchy-cooler-control",
+            "pluginIds": [
+              "eduard.cooler-control"
+            ],
+            "commit": "4a165bd14f808e85ec9d982d717b726565c306ea",
+            "checkedAt": "2026-09-08T11:04:38.869Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "eddygarcas/omarchy-cooler-control",
+            "pluginIds": [
+              "eduard.cooler-control"
+            ],
+            "commit": "4a165bd14f808e85ec9d982d717b726565c306ea",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T11:04:38.869Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T07:58:22.822Z",
+            "requestEventId": 30748998342,
+            "requestedAt": "2026-09-08T10:53:38Z",
+            "reviewedAt": "2026-09-08T11:04:38.869Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/austindixson/omarchy-touchbar",
