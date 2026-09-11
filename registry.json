@@ -139198,8 +139198,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T22:26:08.424Z",
-      "listingValidatedCommit": "2ca58e4d79e6faad703a6ac45a36e2adfeb275b5",
-      "listingValidatedAt": "2026-09-07T22:26:08.424Z",
+      "listingValidatedCommit": "38d7f4cae75ea705d8217c457e1941a206f49fcd",
+      "listingValidatedAt": "2026-09-11T05:51:55.350Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -139208,8 +139208,8 @@
         "pluginIds": [
           "sidath.estimation-gym"
         ],
-        "commit": "2ca58e4d79e6faad703a6ac45a36e2adfeb275b5",
-        "checkedAt": "2026-09-07T22:26:08.347Z",
+        "commit": "38d7f4cae75ea705d8217c457e1941a206f49fcd",
+        "checkedAt": "2026-09-11T05:51:55.350Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -139225,7 +139225,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "2ca58e4d79e6faad703a6ac45a36e2adfeb275b5",
+          "validatedAt": "2026-09-07T22:26:08.424Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T05:51:55.350Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sidathpeiris/estimation-gym-omarchy",
+            "pluginIds": [
+              "sidath.estimation-gym"
+            ],
+            "commit": "2ca58e4d79e6faad703a6ac45a36e2adfeb275b5",
+            "checkedAt": "2026-09-07T22:26:08.347Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jimg4/oncekey",
