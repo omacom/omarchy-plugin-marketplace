@@ -58992,8 +58992,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T00:50:01.848Z",
-      "listingValidatedCommit": "be73c2af3464fb50a711adf7b2b2c5f812716427",
-      "listingValidatedAt": "2026-09-02T01:35:59.145Z",
+      "listingValidatedCommit": "f60cdb33b288aa194735290e71e1e9d06d0f0140",
+      "listingValidatedAt": "2026-09-11T07:25:20.018Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -59002,8 +59002,8 @@
         "pluginIds": [
           "ryanyogan.omatop"
         ],
-        "commit": "be73c2af3464fb50a711adf7b2b2c5f812716427",
-        "checkedAt": "2026-09-02T01:35:59.145Z",
+        "commit": "f60cdb33b288aa194735290e71e1e9d06d0f0140",
+        "checkedAt": "2026-09-11T07:25:20.018Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -59055,6 +59055,26 @@
             ],
             "commit": "5c2c06898b56282464af7dfbc38f551e8d9007de",
             "checkedAt": "2026-08-25T16:24:18.019Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "be73c2af3464fb50a711adf7b2b2c5f812716427",
+          "validatedAt": "2026-09-02T01:35:59.145Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T07:25:20.018Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ryanyogan/omarchy-omatop",
+            "pluginIds": [
+              "ryanyogan.omatop"
+            ],
+            "commit": "be73c2af3464fb50a711adf7b2b2c5f812716427",
+            "checkedAt": "2026-09-02T01:35:59.145Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
