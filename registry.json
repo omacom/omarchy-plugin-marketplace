@@ -124031,8 +124031,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T16:51:49.088Z",
-      "listingValidatedCommit": "812704be9e80c0654bf720100042f5b4fdc6c297",
-      "listingValidatedAt": "2026-09-04T16:51:49.088Z",
+      "listingValidatedCommit": "e3a063191f3478bfde6b8aa503bc91ef877238d2",
+      "listingValidatedAt": "2026-09-11T08:53:06.013Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -124041,8 +124041,8 @@
         "pluginIds": [
           "bvisagie.omapihole"
         ],
-        "commit": "812704be9e80c0654bf720100042f5b4fdc6c297",
-        "checkedAt": "2026-09-04T16:51:49.022Z",
+        "commit": "e3a063191f3478bfde6b8aa503bc91ef877238d2",
+        "checkedAt": "2026-09-11T08:53:06.013Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -124058,7 +124058,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "812704be9e80c0654bf720100042f5b4fdc6c297",
+          "validatedAt": "2026-09-04T16:51:49.088Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:53:06.013Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bvisagie/omarchy-omapihole",
+            "pluginIds": [
+              "bvisagie.omapihole"
+            ],
+            "commit": "812704be9e80c0654bf720100042f5b4fdc6c297",
+            "checkedAt": "2026-09-04T16:51:49.022Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/MoizIbnYousaf/omaX",
