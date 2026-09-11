@@ -82998,8 +82998,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-27",
       "listedAt": "2026-08-27T20:19:01.876Z",
-      "listingValidatedCommit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
-      "listingValidatedAt": "2026-08-27T20:19:01.876Z",
+      "listingValidatedCommit": "c2365bde483c4d2cbbf8ad369e740b97ec97a2de",
+      "listingValidatedAt": "2026-09-11T14:33:04.091Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -83008,41 +83008,16 @@
         "pluginIds": [
           "miguel.cyberghost"
         ],
-        "commit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
-        "checkedAt": "2026-08-27T20:19:01.842Z",
+        "commit": "c2365bde483c4d2cbbf8ad369e740b97ec97a2de",
+        "checkedAt": "2026-09-11T14:33:04.091Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
+          "installer",
           "privilege",
-          "package-manager",
-          "remote-build",
-          "installer"
+          "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "27mfp/miguel.cyberghost",
-        "pluginIds": [
-          "miguel.cyberghost"
-        ],
-        "commit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-27T20:19:01.842Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-27T18:40:24.598Z",
-        "requestEventId": 30128105511,
-        "requestedAt": "2026-08-27T20:11:37Z",
-        "reviewedAt": "2026-08-27T20:19:01.842Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "miguel.cyberghost": {
@@ -83057,7 +83032,81 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "27mfp/miguel.cyberghost",
+        "pluginIds": [
+          "miguel.cyberghost"
+        ],
+        "commit": "c2365bde483c4d2cbbf8ad369e740b97ec97a2de",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T14:33:04.091Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T15:26:42.369Z",
+        "requestEventId": 30974821227,
+        "requestedAt": "2026-09-11T13:31:35Z",
+        "reviewedAt": "2026-09-11T14:33:04.091Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
+          "validatedAt": "2026-08-27T20:19:01.876Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T14:33:04.091Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "27mfp/miguel.cyberghost",
+            "pluginIds": [
+              "miguel.cyberghost"
+            ],
+            "commit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
+            "checkedAt": "2026-08-27T20:19:01.842Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "27mfp/miguel.cyberghost",
+            "pluginIds": [
+              "miguel.cyberghost"
+            ],
+            "commit": "c5b6f9f55db96614f9aedac570472291e5dab96f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-27T20:19:01.842Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-27T18:40:24.598Z",
+            "requestEventId": 30128105511,
+            "requestedAt": "2026-08-27T20:11:37Z",
+            "reviewedAt": "2026-08-27T20:19:01.842Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/daniel-felipe/omarchy-plugin-omashelf",
