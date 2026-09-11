@@ -157958,6 +157958,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cytracon/omarchy-window-controls",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T11:20:17.825Z",
+      "listingValidatedCommit": "19319b30105ec977ee393ff8c0cb4121f5f10732",
+      "listingValidatedAt": "2026-09-11T11:20:17.825Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cytracon/omarchy-window-controls",
+        "pluginIds": [
+          "io.github.cytracon.window-controls"
+        ],
+        "commit": "19319b30105ec977ee393ff8c0cb4121f5f10732",
+        "checkedAt": "2026-09-11T11:20:17.745Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.cytracon.window-controls": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
