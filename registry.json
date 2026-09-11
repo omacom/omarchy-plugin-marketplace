@@ -158998,8 +158998,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T02:52:44.444Z",
-      "listingValidatedCommit": "b7a9361caf9b077893aff2c60c53976878b94bb0",
-      "listingValidatedAt": "2026-09-11T02:52:44.444Z",
+      "listingValidatedCommit": "55ca07b935c2ee8aa7b8347b9098447cca8ca227",
+      "listingValidatedAt": "2026-09-11T15:57:35.877Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -159008,8 +159008,8 @@
         "pluginIds": [
           "bit-dev.system-pills"
         ],
-        "commit": "b7a9361caf9b077893aff2c60c53976878b94bb0",
-        "checkedAt": "2026-09-11T02:52:44.371Z",
+        "commit": "55ca07b935c2ee8aa7b8347b9098447cca8ca227",
+        "checkedAt": "2026-09-11T15:57:35.877Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -159023,7 +159023,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b7a9361caf9b077893aff2c60c53976878b94bb0",
+          "validatedAt": "2026-09-11T02:52:44.444Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:57:35.877Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crayonan/omarchy-system-pills",
+            "pluginIds": [
+              "bit-dev.system-pills"
+            ],
+            "commit": "b7a9361caf9b077893aff2c60c53976878b94bb0",
+            "checkedAt": "2026-09-11T02:52:44.371Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ukkit/omarchy-universal-font-sizer",
