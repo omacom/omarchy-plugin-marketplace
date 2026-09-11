@@ -157858,6 +157858,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/crueber/omarchy-hambands",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T11:02:07.390Z",
+      "listingValidatedCommit": "e45c1860b7ba1f0bae44b7ede70bfc4c8d493be9",
+      "listingValidatedAt": "2026-09-11T11:02:07.390Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crueber/omarchy-hambands",
+        "pluginIds": [
+          "crueber.hambands"
+        ],
+        "commit": "e45c1860b7ba1f0bae44b7ede70bfc4c8d493be9",
+        "checkedAt": "2026-09-11T11:02:07.321Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "crueber.hambands": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
