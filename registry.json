@@ -155252,6 +155252,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NiloyTheSpd/spidey-swing",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T05:35:42.126Z",
+      "listingValidatedCommit": "f9772dbd956652d666211285c0f103a6056a2d38",
+      "listingValidatedAt": "2026-09-11T05:35:42.126Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "niloythespd/spidey-swing",
+        "pluginIds": [
+          "thespd.spidey"
+        ],
+        "commit": "f9772dbd956652d666211285c0f103a6056a2d38",
+        "checkedAt": "2026-09-11T05:35:42.036Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "niloythespd/spidey-swing",
+        "pluginIds": [
+          "thespd.spidey"
+        ],
+        "commit": "f9772dbd956652d666211285c0f103a6056a2d38",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T05:35:42.036Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T05:31:26.300Z",
+        "requestEventId": 30951207527,
+        "requestedAt": "2026-09-11T05:34:37Z",
+        "reviewedAt": "2026-09-11T05:35:42.037Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "thespd.spidey": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
