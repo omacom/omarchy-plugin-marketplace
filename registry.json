@@ -106143,8 +106143,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T08:06:58.648Z",
-      "listingValidatedCommit": "c5c06ea9cb58706f6c74fcfe6b0d73e9a02d1cf1",
-      "listingValidatedAt": "2026-08-31T08:06:58.648Z",
+      "listingValidatedCommit": "0caf5263531d434bb8315ff3887dcd5474c87374",
+      "listingValidatedAt": "2026-09-11T14:30:27.579Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -106153,8 +106153,8 @@
         "pluginIds": [
           "promaa.clock"
         ],
-        "commit": "c5c06ea9cb58706f6c74fcfe6b0d73e9a02d1cf1",
-        "checkedAt": "2026-08-31T08:06:58.599Z",
+        "commit": "0caf5263531d434bb8315ff3887dcd5474c87374",
+        "checkedAt": "2026-09-11T14:30:27.579Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -106168,7 +106168,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c5c06ea9cb58706f6c74fcfe6b0d73e9a02d1cf1",
+          "validatedAt": "2026-08-31T08:06:58.648Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:30:27.579Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "promaaa/sync-calendar-omarchy",
+            "pluginIds": [
+              "promaa.clock"
+            ],
+            "commit": "c5c06ea9cb58706f6c74fcfe6b0d73e9a02d1cf1",
+            "checkedAt": "2026-08-31T08:06:58.599Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Bottelet/omarchy-invaders",
