@@ -162087,6 +162087,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SiWestworth/omarchy-cyber-sentry",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T23:36:15.222Z",
+      "listingValidatedCommit": "2f9dc7ec1d831a2841b46e6247185427437b09c0",
+      "listingValidatedAt": "2026-09-11T23:36:15.222Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "siwestworth/omarchy-cyber-sentry",
+        "pluginIds": [
+          "cyber.sentry"
+        ],
+        "commit": "2f9dc7ec1d831a2841b46e6247185427437b09c0",
+        "checkedAt": "2026-09-11T23:36:15.148Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "siwestworth/omarchy-cyber-sentry",
+        "pluginIds": [
+          "cyber.sentry"
+        ],
+        "commit": "2f9dc7ec1d831a2841b46e6247185427437b09c0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T23:36:15.148Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T23:33:04.320Z",
+        "requestEventId": 31004590827,
+        "requestedAt": "2026-09-11T23:35:02Z",
+        "reviewedAt": "2026-09-11T23:36:15.148Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "cyber.sentry": {
+          "category": "Widgets",
+          "tags": [
+            "security",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
