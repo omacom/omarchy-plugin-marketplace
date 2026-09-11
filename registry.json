@@ -143095,8 +143095,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T10:44:05.982Z",
-      "listingValidatedCommit": "7768b0ff7030008485f744b283273948889956b4",
-      "listingValidatedAt": "2026-09-08T10:44:05.982Z",
+      "listingValidatedCommit": "f305238be246701cd05830182d6fd299a501fb68",
+      "listingValidatedAt": "2026-09-11T14:27:45.505Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -143105,8 +143105,8 @@
         "pluginIds": [
           "com.github.marvreichmann.omathought"
         ],
-        "commit": "7768b0ff7030008485f744b283273948889956b4",
-        "checkedAt": "2026-09-08T10:44:05.908Z",
+        "commit": "f305238be246701cd05830182d6fd299a501fb68",
+        "checkedAt": "2026-09-11T14:27:45.505Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -143121,7 +143121,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7768b0ff7030008485f744b283273948889956b4",
+          "validatedAt": "2026-09-08T10:44:05.982Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:27:45.505Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "marvreichmann/omathought",
+            "pluginIds": [
+              "com.github.marvreichmann.omathought"
+            ],
+            "commit": "7768b0ff7030008485f744b283273948889956b4",
+            "checkedAt": "2026-09-08T10:44:05.908Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/janaki-sasidhar/omarchy-codex-lb",
