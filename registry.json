@@ -152240,8 +152240,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T23:08:01.076Z",
-      "listingValidatedCommit": "e5171f50ea875b125a9174c648a4d372cb524c0f",
-      "listingValidatedAt": "2026-09-11T14:15:14.255Z",
+      "listingValidatedCommit": "3d08c391b27b0caffe9cbf84886de28342f85415",
+      "listingValidatedAt": "2026-09-11T18:20:00.257Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -152250,8 +152250,8 @@
         "pluginIds": [
           "io.github.maajix.spotlight"
         ],
-        "commit": "e5171f50ea875b125a9174c648a4d372cb524c0f",
-        "checkedAt": "2026-09-11T14:15:14.255Z",
+        "commit": "3d08c391b27b0caffe9cbf84886de28342f85415",
+        "checkedAt": "2026-09-11T18:20:00.256Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -152283,6 +152283,26 @@
             ],
             "commit": "9c0242076e6252f0fbaba190bdd3238649445713",
             "checkedAt": "2026-09-08T23:08:01.004Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "e5171f50ea875b125a9174c648a4d372cb524c0f",
+          "validatedAt": "2026-09-11T14:15:14.255Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:20:00.257Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "maajix/omarchy-spotlight",
+            "pluginIds": [
+              "io.github.maajix.spotlight"
+            ],
+            "commit": "e5171f50ea875b125a9174c648a4d372cb524c0f",
+            "checkedAt": "2026-09-11T14:15:14.255Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
