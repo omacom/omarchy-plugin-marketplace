@@ -153243,8 +153243,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T00:48:39.984Z",
-      "listingValidatedCommit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
-      "listingValidatedAt": "2026-09-09T00:48:39.984Z",
+      "listingValidatedCommit": "8b1ee2fc69969825884aafae47ad3a2809909811",
+      "listingValidatedAt": "2026-09-11T18:08:08.321Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -153253,8 +153253,8 @@
         "pluginIds": [
           "oliwier.agent-skills-manager"
         ],
-        "commit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
-        "checkedAt": "2026-09-09T00:48:39.907Z",
+        "commit": "8b1ee2fc69969825884aafae47ad3a2809909811",
+        "checkedAt": "2026-09-11T18:08:08.321Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -153270,7 +153270,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
+          "validatedAt": "2026-09-09T00:48:39.984Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:08:08.321Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "oliwier-xiao/agent-skills-manager",
+            "pluginIds": [
+              "oliwier.agent-skills-manager"
+            ],
+            "commit": "7cc32784bc9283472e725d7bbc435f24afe74dac",
+            "checkedAt": "2026-09-09T00:48:39.907Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jcputney/omarchy-media-float-plex",
