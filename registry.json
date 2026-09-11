@@ -121973,8 +121973,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T15:24:26.051Z",
-      "listingValidatedCommit": "362acbe6c81b041830ddd67e5e6de0f8610661a2",
-      "listingValidatedAt": "2026-09-04T15:24:26.051Z",
+      "listingValidatedCommit": "def86fd0e0cdc5a64494449235978d21b5d11daa",
+      "listingValidatedAt": "2026-09-11T00:21:49.162Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -121983,8 +121983,8 @@
         "pluginIds": [
           "com.leafbox.f1"
         ],
-        "commit": "362acbe6c81b041830ddd67e5e6de0f8610661a2",
-        "checkedAt": "2026-09-04T15:24:25.992Z",
+        "commit": "def86fd0e0cdc5a64494449235978d21b5d11daa",
+        "checkedAt": "2026-09-11T00:21:49.162Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -121999,7 +121999,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "362acbe6c81b041830ddd67e5e6de0f8610661a2",
+          "validatedAt": "2026-09-04T15:24:26.051Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T00:21:49.162Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "snackwrap/omarchy-f1",
+            "pluginIds": [
+              "com.leafbox.f1"
+            ],
+            "commit": "362acbe6c81b041830ddd67e5e6de0f8610661a2",
+            "checkedAt": "2026-09-04T15:24:25.992Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ryanyogan/omarchy-blockblast",
