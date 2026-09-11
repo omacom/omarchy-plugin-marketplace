@@ -140770,8 +140770,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T11:02:15.620Z",
-      "listingValidatedCommit": "6cca69e816555ff2046619f89d3787e315f2b150",
-      "listingValidatedAt": "2026-09-07T11:02:15.620Z",
+      "listingValidatedCommit": "ffddea98be828ca3c3c2fa87a87782ec248deb56",
+      "listingValidatedAt": "2026-09-11T20:12:35.792Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -140780,8 +140780,8 @@
         "pluginIds": [
           "ozdil.omarank"
         ],
-        "commit": "6cca69e816555ff2046619f89d3787e315f2b150",
-        "checkedAt": "2026-09-07T11:02:15.557Z",
+        "commit": "ffddea98be828ca3c3c2fa87a87782ec248deb56",
+        "checkedAt": "2026-09-11T20:12:35.792Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -140797,7 +140797,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6cca69e816555ff2046619f89d3787e315f2b150",
+          "validatedAt": "2026-09-07T11:02:15.620Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T20:12:35.792Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ozdil/omarchy-omarank",
+            "pluginIds": [
+              "ozdil.omarank"
+            ],
+            "commit": "6cca69e816555ff2046619f89d3787e315f2b150",
+            "checkedAt": "2026-09-07T11:02:15.557Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/evindor/keystroke-timer",
