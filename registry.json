@@ -115183,8 +115183,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T02:42:29.870Z",
-      "listingValidatedCommit": "d1a09a71fd55cac3c1b30930c022a0d00f69e013",
-      "listingValidatedAt": "2026-09-02T02:42:29.870Z",
+      "listingValidatedCommit": "5ab55d14a460d30d4981f63152300954aedd2195",
+      "listingValidatedAt": "2026-09-11T13:32:24.174Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -115193,8 +115193,8 @@
         "pluginIds": [
           "io.github.tbraxa.orderbell"
         ],
-        "commit": "d1a09a71fd55cac3c1b30930c022a0d00f69e013",
-        "checkedAt": "2026-09-02T02:42:29.810Z",
+        "commit": "5ab55d14a460d30d4981f63152300954aedd2195",
+        "checkedAt": "2026-09-11T13:32:24.174Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -115213,7 +115213,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d1a09a71fd55cac3c1b30930c022a0d00f69e013",
+          "validatedAt": "2026-09-02T02:42:29.870Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:32:24.174Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tbraxa/omarchy-orderbell",
+            "pluginIds": [
+              "io.github.tbraxa.orderbell"
+            ],
+            "commit": "d1a09a71fd55cac3c1b30930c022a0d00f69e013",
+            "checkedAt": "2026-09-02T02:42:29.810Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/raavail-lasso/Omarchy-Islands-Bar",
