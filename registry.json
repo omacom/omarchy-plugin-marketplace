@@ -89940,8 +89940,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T16:24:19.509Z",
-      "listingValidatedCommit": "f0a9e692ebb4e598b29c8e5a7522871db05f0b27",
-      "listingValidatedAt": "2026-08-28T16:24:19.509Z",
+      "listingValidatedCommit": "330a7209aa4dee8d6f699081c0a15a0a141379cd",
+      "listingValidatedAt": "2026-09-11T00:03:48.355Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -89950,8 +89950,8 @@
         "pluginIds": [
           "io.github.mrlarsendk.cursor-usage"
         ],
-        "commit": "f0a9e692ebb4e598b29c8e5a7522871db05f0b27",
-        "checkedAt": "2026-08-28T16:24:19.468Z",
+        "commit": "330a7209aa4dee8d6f699081c0a15a0a141379cd",
+        "checkedAt": "2026-09-11T00:03:48.355Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -89967,7 +89967,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f0a9e692ebb4e598b29c8e5a7522871db05f0b27",
+          "validatedAt": "2026-08-28T16:24:19.509Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T00:03:48.355Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mrlarsendk/omarchy-cursor-usage",
+            "pluginIds": [
+              "io.github.mrlarsendk.cursor-usage"
+            ],
+            "commit": "f0a9e692ebb4e598b29c8e5a7522871db05f0b27",
+            "checkedAt": "2026-08-28T16:24:19.468Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ericvrp/omarchy-one-app-per-workspace",
