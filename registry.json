@@ -144545,8 +144545,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:35:22.732Z",
-      "listingValidatedCommit": "451f71f4a344b9d6a8eb542a590f2502c0a91f4c",
-      "listingValidatedAt": "2026-09-08T12:35:22.732Z",
+      "listingValidatedCommit": "1bf98e78348c3cc9cb77cf3cb5e2c8eca4e5a112",
+      "listingValidatedAt": "2026-09-11T09:23:58.575Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -144555,8 +144555,8 @@
         "pluginIds": [
           "io.github.corck.filesearch"
         ],
-        "commit": "451f71f4a344b9d6a8eb542a590f2502c0a91f4c",
-        "checkedAt": "2026-09-08T12:35:22.666Z",
+        "commit": "1bf98e78348c3cc9cb77cf3cb5e2c8eca4e5a112",
+        "checkedAt": "2026-09-11T09:23:58.574Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -144571,7 +144571,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "451f71f4a344b9d6a8eb542a590f2502c0a91f4c",
+          "validatedAt": "2026-09-08T12:35:22.732Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:23:58.575Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "corck/omarchy-filesearch",
+            "pluginIds": [
+              "io.github.corck.filesearch"
+            ],
+            "commit": "451f71f4a344b9d6a8eb542a590f2502c0a91f4c",
+            "checkedAt": "2026-09-08T12:35:22.666Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tngyema/usb-doctor",
