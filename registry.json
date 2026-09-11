@@ -76743,8 +76743,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T19:54:05.117Z",
-      "listingValidatedCommit": "8f9658846c7250435769a4f49bd45832b32ebe98",
-      "listingValidatedAt": "2026-09-04T14:51:17.351Z",
+      "listingValidatedCommit": "17b8768187b2438e15627970c6f9fadd4a7c5eb7",
+      "listingValidatedAt": "2026-09-11T09:26:58.259Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -76753,8 +76753,8 @@
         "pluginIds": [
           "hardie.omarchy-cast"
         ],
-        "commit": "8f9658846c7250435769a4f49bd45832b32ebe98",
-        "checkedAt": "2026-09-04T14:51:17.351Z",
+        "commit": "17b8768187b2438e15627970c6f9fadd4a7c5eb7",
+        "checkedAt": "2026-09-11T09:26:58.259Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -76921,6 +76921,55 @@
             "reviewedAt": "2026-08-31T13:36:44.874Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "8f9658846c7250435769a4f49bd45832b32ebe98",
+          "validatedAt": "2026-09-04T14:51:17.351Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:26:58.259Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hardiepiennar/omacast",
+            "pluginIds": [
+              "hardie.omarchy-cast"
+            ],
+            "commit": "8f9658846c7250435769a4f49bd45832b32ebe98",
+            "checkedAt": "2026-09-04T14:51:17.351Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "hardiepiennar/omacast",
+            "pluginIds": [
+              "hardie.omarchy-cast"
+            ],
+            "commit": "8f9658846c7250435769a4f49bd45832b32ebe98",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T14:51:17.351Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T11:02:27.897Z",
+            "requestEventId": 30559757325,
+            "requestedAt": "2026-09-04T14:17:41Z",
+            "reviewedAt": "2026-09-04T14:51:17.351Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -76929,10 +76978,10 @@
         "pluginIds": [
           "hardie.omarchy-cast"
         ],
-        "commit": "8f9658846c7250435769a4f49bd45832b32ebe98",
+        "commit": "17b8768187b2438e15627970c6f9fadd4a7c5eb7",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T14:51:17.351Z",
+        "baselineCheckedAt": "2026-09-11T09:26:58.259Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -76941,10 +76990,10 @@
           "service-management",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-04T11:02:27.897Z",
-        "requestEventId": 30559757325,
-        "requestedAt": "2026-09-04T14:17:41Z",
-        "reviewedAt": "2026-09-04T14:51:17.351Z",
+        "reviewedBaselineCheckedAt": "2026-09-10T08:00:08.557Z",
+        "requestEventId": 30958974478,
+        "requestedAt": "2026-09-11T08:29:14Z",
+        "reviewedAt": "2026-09-11T09:26:58.259Z",
         "reviewer": "HANCORE-linux"
       }
     },
