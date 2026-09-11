@@ -161309,6 +161309,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/riccardolanza05/omarchy-ray-screensaver",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T19:32:18.433Z",
+      "listingValidatedCommit": "e698b019e342ecc972311e09b1a75caecb42b01a",
+      "listingValidatedAt": "2026-09-11T19:32:18.433Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "riccardolanza05/omarchy-ray-screensaver",
+        "pluginIds": [
+          "io.github.riccardolanza05.omarchy-ray-screensaver"
+        ],
+        "commit": "e698b019e342ecc972311e09b1a75caecb42b01a",
+        "checkedAt": "2026-09-11T19:32:18.347Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.riccardolanza05.omarchy-ray-screensaver": {
+          "category": "Appearance",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
