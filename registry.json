@@ -154918,6 +154918,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RickCaleg/omarchy-keyboard-lang",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T01:32:48.325Z",
+      "listingValidatedCommit": "e8212760f2f65491f884c80a3069e4b93a88be79",
+      "listingValidatedAt": "2026-09-11T01:32:48.325Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rickcaleg/omarchy-keyboard-lang",
+        "pluginIds": [
+          "io.github.rickcaleg.keyboard-lang"
+        ],
+        "commit": "e8212760f2f65491f884c80a3069e4b93a88be79",
+        "checkedAt": "2026-09-11T01:32:48.247Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rickcaleg/omarchy-keyboard-lang",
+        "pluginIds": [
+          "io.github.rickcaleg.keyboard-lang"
+        ],
+        "commit": "e8212760f2f65491f884c80a3069e4b93a88be79",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T01:32:48.247Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T01:29:57.040Z",
+        "requestEventId": 30942486513,
+        "requestedAt": "2026-09-11T01:31:38Z",
+        "reviewedAt": "2026-09-11T01:32:48.247Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rickcaleg.keyboard-lang": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
