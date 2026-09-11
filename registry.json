@@ -122670,8 +122670,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T15:14:30.223Z",
-      "listingValidatedCommit": "ad59ab19283238c5727cc032e7166312e474eca2",
-      "listingValidatedAt": "2026-09-04T15:14:30.223Z",
+      "listingValidatedCommit": "3931d985dbe207e3fbc321c0f8adea4ee288ae43",
+      "listingValidatedAt": "2026-09-11T13:08:27.605Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -122680,35 +122680,14 @@
         "pluginIds": [
           "io.github.itsvoid-tv.rhythm-forge"
         ],
-        "commit": "ad59ab19283238c5727cc032e7166312e474eca2",
-        "checkedAt": "2026-09-04T15:14:30.161Z",
+        "commit": "3931d985dbe207e3fbc321c0f8adea4ee288ae43",
+        "checkedAt": "2026-09-11T13:08:27.605Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "itsvoid-tv/rhythm-forge",
-        "pluginIds": [
-          "io.github.itsvoid-tv.rhythm-forge"
-        ],
-        "commit": "ad59ab19283238c5727cc032e7166312e474eca2",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T15:14:30.161Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-03T13:21:44.233Z",
-        "requestEventId": 30560065313,
-        "requestedAt": "2026-09-04T14:22:58Z",
-        "reviewedAt": "2026-09-04T15:14:30.161Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.itsvoid-tv.rhythm-forge": {
@@ -122724,7 +122703,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "itsvoid-tv/rhythm-forge",
+        "pluginIds": [
+          "io.github.itsvoid-tv.rhythm-forge"
+        ],
+        "commit": "3931d985dbe207e3fbc321c0f8adea4ee288ae43",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T13:08:27.605Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T13:44:23.551Z",
+        "requestEventId": 30973284974,
+        "requestedAt": "2026-09-11T13:04:24Z",
+        "reviewedAt": "2026-09-11T13:08:27.605Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ad59ab19283238c5727cc032e7166312e474eca2",
+          "validatedAt": "2026-09-04T15:14:30.223Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:08:27.605Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "itsvoid-tv/rhythm-forge",
+            "pluginIds": [
+              "io.github.itsvoid-tv.rhythm-forge"
+            ],
+            "commit": "ad59ab19283238c5727cc032e7166312e474eca2",
+            "checkedAt": "2026-09-04T15:14:30.161Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "itsvoid-tv/rhythm-forge",
+            "pluginIds": [
+              "io.github.itsvoid-tv.rhythm-forge"
+            ],
+            "commit": "ad59ab19283238c5727cc032e7166312e474eca2",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T15:14:30.161Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-03T13:21:44.233Z",
+            "requestEventId": 30560065313,
+            "requestedAt": "2026-09-04T14:22:58Z",
+            "reviewedAt": "2026-09-04T15:14:30.161Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/boomdev/voxtype-meeting-transcriber",
