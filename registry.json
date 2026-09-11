@@ -152710,8 +152710,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T00:18:48.027Z",
-      "listingValidatedCommit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
-      "listingValidatedAt": "2026-09-09T00:18:48.027Z",
+      "listingValidatedCommit": "def18e7bc27cb6926241357d25886654ee7a49e2",
+      "listingValidatedAt": "2026-09-11T15:24:05.706Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -152720,8 +152720,8 @@
         "pluginIds": [
           "io.github.l1qu1d.themertoggle"
         ],
-        "commit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
-        "checkedAt": "2026-09-09T00:18:47.952Z",
+        "commit": "def18e7bc27cb6926241357d25886654ee7a49e2",
+        "checkedAt": "2026-09-11T15:24:05.706Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -152737,7 +152737,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
+          "validatedAt": "2026-09-09T00:18:48.027Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:24:05.706Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "l1qu1d/themertoggle",
+            "pluginIds": [
+              "io.github.l1qu1d.themertoggle"
+            ],
+            "commit": "ab88837b80a4c5ba7651ddda4c5cbdfe1e1594b5",
+            "checkedAt": "2026-09-09T00:18:47.952Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ErikBurdett/omarchy-diskspace",
