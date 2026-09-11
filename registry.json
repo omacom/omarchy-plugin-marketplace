@@ -52879,8 +52879,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T11:00:25.071Z",
-      "listingValidatedCommit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
-      "listingValidatedAt": "2026-08-23T11:00:25.071Z",
+      "listingValidatedCommit": "5971e075c0cc979b53e63b8d56b6255abd6b5228",
+      "listingValidatedAt": "2026-09-11T08:21:37.167Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -52889,8 +52889,8 @@
         "pluginIds": [
           "priard.before-sunset"
         ],
-        "commit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
-        "checkedAt": "2026-08-23T11:00:25.042Z",
+        "commit": "5971e075c0cc979b53e63b8d56b6255abd6b5228",
+        "checkedAt": "2026-09-11T08:21:37.167Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -52898,28 +52898,6 @@
           "sudoers-modification",
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "priard/omarchy-before-sunset",
-        "pluginIds": [
-          "priard.before-sunset"
-        ],
-        "commit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-23T11:00:25.042Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "sudoers-modification",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-23T10:52:42.182Z",
-        "requestEventId": 29869654014,
-        "requestedAt": "2026-08-23T10:55:44Z",
-        "reviewedAt": "2026-08-23T11:00:25.042Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "priard.before-sunset": {
@@ -52931,7 +52909,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "priard/omarchy-before-sunset",
+        "pluginIds": [
+          "priard.before-sunset"
+        ],
+        "commit": "5971e075c0cc979b53e63b8d56b6255abd6b5228",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T08:21:37.167Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T22:53:08.019Z",
+        "requestEventId": 30957525972,
+        "requestedAt": "2026-09-11T08:00:31Z",
+        "reviewedAt": "2026-09-11T08:21:37.167Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
+          "validatedAt": "2026-08-23T11:00:25.071Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:21:37.167Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "priard/omarchy-before-sunset",
+            "pluginIds": [
+              "priard.before-sunset"
+            ],
+            "commit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
+            "checkedAt": "2026-08-23T11:00:25.042Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "sudoers-modification",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "priard/omarchy-before-sunset",
+            "pluginIds": [
+              "priard.before-sunset"
+            ],
+            "commit": "d957aa1a8ed5a49c12eca529a6738523d94f1f9f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-23T11:00:25.042Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "sudoers-modification",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-23T10:52:42.182Z",
+            "requestEventId": 29869654014,
+            "requestedAt": "2026-08-23T10:55:44Z",
+            "reviewedAt": "2026-08-23T11:00:25.042Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ilkaydnc/omargb",
