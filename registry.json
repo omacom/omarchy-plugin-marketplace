@@ -149275,8 +149275,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T20:57:07.921Z",
-      "listingValidatedCommit": "f62527bc60302b522a5fb8d7529a1ae743370bcd",
-      "listingValidatedAt": "2026-09-08T20:57:07.921Z",
+      "listingValidatedCommit": "1ea2b0c9f76d0c5161035b9102e3bad1ad4386ca",
+      "listingValidatedAt": "2026-09-11T09:09:38.234Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -149285,8 +149285,8 @@
         "pluginIds": [
           "data-goblin.fileblade-hooks"
         ],
-        "commit": "f62527bc60302b522a5fb8d7529a1ae743370bcd",
-        "checkedAt": "2026-09-08T20:57:07.847Z",
+        "commit": "1ea2b0c9f76d0c5161035b9102e3bad1ad4386ca",
+        "checkedAt": "2026-09-11T09:09:38.233Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -149302,7 +149302,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f62527bc60302b522a5fb8d7529a1ae743370bcd",
+          "validatedAt": "2026-09-08T20:57:07.921Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:09:38.234Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "data-goblin/fileblade-hooks",
+            "pluginIds": [
+              "data-goblin.fileblade-hooks"
+            ],
+            "commit": "f62527bc60302b522a5fb8d7529a1ae743370bcd",
+            "checkedAt": "2026-09-08T20:57:07.847Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/data-goblin/fileblade-mcp",
