@@ -150996,8 +150996,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T20:28:15.350Z",
-      "listingValidatedCommit": "3c40c3401d1df2f72ea4b68c640fd116ffd24435",
-      "listingValidatedAt": "2026-09-11T15:00:50.128Z",
+      "listingValidatedCommit": "9e890006f94bae4fc0a37d49e521705ad10623cd",
+      "listingValidatedAt": "2026-09-11T18:30:44.717Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -151006,8 +151006,8 @@
         "pluginIds": [
           "owlook.status"
         ],
-        "commit": "3c40c3401d1df2f72ea4b68c640fd116ffd24435",
-        "checkedAt": "2026-09-11T15:00:50.128Z",
+        "commit": "9e890006f94bae4fc0a37d49e521705ad10623cd",
+        "checkedAt": "2026-09-11T18:30:44.716Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -151038,6 +151038,26 @@
             ],
             "commit": "3c1045b0b9616648266fe9f486690614f2d2ff0a",
             "checkedAt": "2026-09-08T20:28:15.276Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "3c40c3401d1df2f72ea4b68c640fd116ffd24435",
+          "validatedAt": "2026-09-11T15:00:50.128Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T18:30:44.717Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rpaweb/owlook",
+            "pluginIds": [
+              "owlook.status"
+            ],
+            "commit": "3c40c3401d1df2f72ea4b68c640fd116ffd24435",
+            "checkedAt": "2026-09-11T15:00:50.128Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
