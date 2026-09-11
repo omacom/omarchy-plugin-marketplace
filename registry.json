@@ -118301,8 +118301,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T15:44:19.307Z",
-      "listingValidatedCommit": "5faad5dbdf0a67886a6e7fa06c48a04612bfb4be",
-      "listingValidatedAt": "2026-09-02T15:44:19.307Z",
+      "listingValidatedCommit": "ab788c7d68d043de0dde3696d4c845d476aefef8",
+      "listingValidatedAt": "2026-09-11T16:28:32.571Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118311,8 +118311,8 @@
         "pluginIds": [
           "io.github.labrat-0.omasift"
         ],
-        "commit": "5faad5dbdf0a67886a6e7fa06c48a04612bfb4be",
-        "checkedAt": "2026-09-02T15:44:19.249Z",
+        "commit": "ab788c7d68d043de0dde3696d4c845d476aefef8",
+        "checkedAt": "2026-09-11T16:28:32.571Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118328,7 +118328,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5faad5dbdf0a67886a6e7fa06c48a04612bfb4be",
+          "validatedAt": "2026-09-02T15:44:19.307Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T16:28:32.571Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "labrat-0/omarchy-omasift",
+            "pluginIds": [
+              "io.github.labrat-0.omasift"
+            ],
+            "commit": "5faad5dbdf0a67886a6e7fa06c48a04612bfb4be",
+            "checkedAt": "2026-09-02T15:44:19.249Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/timothygwright/omarchy-board",
