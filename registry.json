@@ -25592,8 +25592,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T18:44:32.418Z",
-      "listingValidatedCommit": "3f6078af903baebc7aee5dfe481e505a186f9faf",
-      "listingValidatedAt": "2026-08-19T18:44:32.418Z",
+      "listingValidatedCommit": "bee5e2d19f08b66e6c32cb03b04635baa7ff5167",
+      "listingValidatedAt": "2026-09-11T15:10:12.972Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -25602,8 +25602,8 @@
         "pluginIds": [
           "io.github.odessa2.bing-wallpaper"
         ],
-        "commit": "3f6078af903baebc7aee5dfe481e505a186f9faf",
-        "checkedAt": "2026-08-19T18:23:25.875Z",
+        "commit": "bee5e2d19f08b66e6c32cb03b04635baa7ff5167",
+        "checkedAt": "2026-09-11T15:10:12.972Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -25618,7 +25618,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3f6078af903baebc7aee5dfe481e505a186f9faf",
+          "validatedAt": "2026-08-19T18:44:32.418Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:10:12.972Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "odessa2/bing-wallpaper-for-omarchy",
+            "pluginIds": [
+              "io.github.odessa2.bing-wallpaper"
+            ],
+            "commit": "3f6078af903baebc7aee5dfe481e505a186f9faf",
+            "checkedAt": "2026-08-19T18:23:25.875Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SpoilHeap/Omarchy.OpenRouter",
