@@ -134967,8 +134967,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:50:55.788Z",
-      "listingValidatedCommit": "31eb0fae61eafad4bf767da32b562dea39db538c",
-      "listingValidatedAt": "2026-09-06T02:50:55.788Z",
+      "listingValidatedCommit": "02dca20509d2d40e46ca8d60ef5c7d5156353cda",
+      "listingValidatedAt": "2026-09-11T05:54:34.449Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -134977,8 +134977,8 @@
         "pluginIds": [
           "ai-usage"
         ],
-        "commit": "31eb0fae61eafad4bf767da32b562dea39db538c",
-        "checkedAt": "2026-09-06T02:50:55.718Z",
+        "commit": "02dca20509d2d40e46ca8d60ef5c7d5156353cda",
+        "checkedAt": "2026-09-11T05:54:34.449Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -134994,7 +134994,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "31eb0fae61eafad4bf767da32b562dea39db538c",
+          "validatedAt": "2026-09-06T02:50:55.788Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T05:54:34.449Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cees-kettenis/omarchy-ai-usage",
+            "pluginIds": [
+              "ai-usage"
+            ],
+            "commit": "31eb0fae61eafad4bf767da32b562dea39db538c",
+            "checkedAt": "2026-09-06T02:50:55.718Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/imcmurray/omarchy-capture-overlay",
