@@ -95645,8 +95645,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T06:54:30.924Z",
-      "listingValidatedCommit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
-      "listingValidatedAt": "2026-08-30T06:54:30.924Z",
+      "listingValidatedCommit": "8ff77301c009790882ba658b4261400fd463e104",
+      "listingValidatedAt": "2026-09-11T06:37:23.767Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -95655,8 +95655,8 @@
         "pluginIds": [
           "io.github.joshferrara.quick-emoji"
         ],
-        "commit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
-        "checkedAt": "2026-08-30T06:54:30.872Z",
+        "commit": "8ff77301c009790882ba658b4261400fd463e104",
+        "checkedAt": "2026-09-11T06:37:23.767Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -95665,29 +95665,6 @@
           "package-manager",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "joshferrara/quick-emoji",
-        "pluginIds": [
-          "io.github.joshferrara.quick-emoji"
-        ],
-        "commit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T06:54:30.872Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-29T02:28:42.199Z",
-        "requestEventId": 30229722834,
-        "requestedAt": "2026-08-30T06:44:14Z",
-        "reviewedAt": "2026-08-30T06:54:30.872Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.joshferrara.quick-emoji": {
@@ -95698,7 +95675,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joshferrara/quick-emoji",
+        "pluginIds": [
+          "io.github.joshferrara.quick-emoji"
+        ],
+        "commit": "8ff77301c009790882ba658b4261400fd463e104",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T06:37:23.767Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T03:21:23.988Z",
+        "requestEventId": 30953465925,
+        "requestedAt": "2026-09-11T06:33:05Z",
+        "reviewedAt": "2026-09-11T06:37:23.767Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
+          "validatedAt": "2026-08-30T06:54:30.924Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T06:37:23.767Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joshferrara/quick-emoji",
+            "pluginIds": [
+              "io.github.joshferrara.quick-emoji"
+            ],
+            "commit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
+            "checkedAt": "2026-08-30T06:54:30.872Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "joshferrara/quick-emoji",
+            "pluginIds": [
+              "io.github.joshferrara.quick-emoji"
+            ],
+            "commit": "44725d7adbf4befeac661f59d7b7950dc3243c01",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T06:54:30.872Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T02:28:42.199Z",
+            "requestEventId": 30229722834,
+            "requestedAt": "2026-08-30T06:44:14Z",
+            "reviewedAt": "2026-08-30T06:54:30.872Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/bnrobinson93/omarchy-idle-ladder",
