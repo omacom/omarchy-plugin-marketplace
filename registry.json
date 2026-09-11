@@ -152287,8 +152287,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T01:36:03.826Z",
-      "listingValidatedCommit": "cbddc42a36af6790fc5faf0028eb366ccc86af41",
-      "listingValidatedAt": "2026-09-09T01:36:03.826Z",
+      "listingValidatedCommit": "3b284ca00f7bfa480af47f49a16da3e434fb26cc",
+      "listingValidatedAt": "2026-09-11T13:16:06.727Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -152297,8 +152297,8 @@
         "pluginIds": [
           "io.github.exquisiteskink.sportmarchy"
         ],
-        "commit": "cbddc42a36af6790fc5faf0028eb366ccc86af41",
-        "checkedAt": "2026-09-09T01:36:03.750Z",
+        "commit": "3b284ca00f7bfa480af47f49a16da3e434fb26cc",
+        "checkedAt": "2026-09-11T13:16:06.727Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -152314,7 +152314,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cbddc42a36af6790fc5faf0028eb366ccc86af41",
+          "validatedAt": "2026-09-09T01:36:03.826Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:16:06.727Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "exquisiteskink/sportmarchy",
+            "pluginIds": [
+              "io.github.exquisiteskink.sportmarchy"
+            ],
+            "commit": "cbddc42a36af6790fc5faf0028eb366ccc86af41",
+            "checkedAt": "2026-09-09T01:36:03.750Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dreed47/omarchy-print-center",
