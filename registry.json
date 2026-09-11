@@ -17384,8 +17384,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T05:25:20.386Z",
-      "listingValidatedCommit": "f863e43033b180a04140768ef5481b0ce4ae77fe",
-      "listingValidatedAt": "2026-08-18T05:25:20.386Z",
+      "listingValidatedCommit": "40de6e016f9872afb895aa090ad34a495af17b2a",
+      "listingValidatedAt": "2026-09-11T13:29:55.153Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -17394,8 +17394,8 @@
         "pluginIds": [
           "io.github.prathamesh913.gamedock"
         ],
-        "commit": "f863e43033b180a04140768ef5481b0ce4ae77fe",
-        "checkedAt": "2026-08-17T09:52:30.829Z",
+        "commit": "40de6e016f9872afb895aa090ad34a495af17b2a",
+        "checkedAt": "2026-09-11T13:29:55.153Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -17411,7 +17411,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f863e43033b180a04140768ef5481b0ce4ae77fe",
+          "validatedAt": "2026-08-18T05:25:20.386Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:29:55.153Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "prathamesh913/gamedock",
+            "pluginIds": [
+              "io.github.prathamesh913.gamedock"
+            ],
+            "commit": "f863e43033b180a04140768ef5481b0ce4ae77fe",
+            "checkedAt": "2026-08-17T09:52:30.829Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/hegjon/omarchy-prusa-connect",
