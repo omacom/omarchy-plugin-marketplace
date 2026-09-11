@@ -107627,8 +107627,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T12:33:55.859Z",
-      "listingValidatedCommit": "940b9be259e679f7d591586b7647faf1da3d1093",
-      "listingValidatedAt": "2026-08-31T12:33:55.859Z",
+      "listingValidatedCommit": "6ac2b755ec2ce2d4e148758dcbfb30e91aeed6f5",
+      "listingValidatedAt": "2026-09-11T09:29:49.118Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -107637,8 +107637,8 @@
         "pluginIds": [
           "rasmus.fmi-weather"
         ],
-        "commit": "940b9be259e679f7d591586b7647faf1da3d1093",
-        "checkedAt": "2026-08-31T12:33:55.800Z",
+        "commit": "6ac2b755ec2ce2d4e148758dcbfb30e91aeed6f5",
+        "checkedAt": "2026-09-11T09:29:49.118Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -107653,7 +107653,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "940b9be259e679f7d591586b7647faf1da3d1093",
+          "validatedAt": "2026-08-31T12:33:55.859Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:29:49.118Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rejhaa/omarchy-plugin-fmi-weather",
+            "pluginIds": [
+              "rasmus.fmi-weather"
+            ],
+            "commit": "940b9be259e679f7d591586b7647faf1da3d1093",
+            "checkedAt": "2026-08-31T12:33:55.800Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/flathack/omarchy-tunarchy",
