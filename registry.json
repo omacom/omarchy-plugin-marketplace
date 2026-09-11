@@ -156869,8 +156869,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-10",
       "listedAt": "2026-09-10T16:55:18.153Z",
-      "listingValidatedCommit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
-      "listingValidatedAt": "2026-09-10T16:55:18.153Z",
+      "listingValidatedCommit": "a1947d9da67d8d7a27cb6389e69755163c337663",
+      "listingValidatedAt": "2026-09-11T16:11:43.130Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -156879,8 +156879,8 @@
         "pluginIds": [
           "fr.rvier.planova"
         ],
-        "commit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
-        "checkedAt": "2026-09-10T16:55:18.079Z",
+        "commit": "a1947d9da67d8d7a27cb6389e69755163c337663",
+        "checkedAt": "2026-09-11T16:11:43.130Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -156895,7 +156895,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
+          "validatedAt": "2026-09-10T16:55:18.153Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T16:11:43.130Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "brvier/planovaquickshell",
+            "pluginIds": [
+              "fr.rvier.planova"
+            ],
+            "commit": "abf866b3e32405ad1d22c5dd769455f647a50fb4",
+            "checkedAt": "2026-09-10T16:55:18.079Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/DishniCNS/Omarchy-plugin-doctor",
