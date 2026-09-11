@@ -130933,8 +130933,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T16:55:02.157Z",
-      "listingValidatedCommit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
-      "listingValidatedAt": "2026-09-05T16:55:02.157Z",
+      "listingValidatedCommit": "438d4c57c73517e0ba03d53bebb8a8ee9675fc75",
+      "listingValidatedAt": "2026-09-11T07:00:16.590Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -130943,35 +130943,14 @@
         "pluginIds": [
           "io.github.randallyash.z13-power"
         ],
-        "commit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
-        "checkedAt": "2026-09-05T16:55:02.097Z",
+        "commit": "438d4c57c73517e0ba03d53bebb8a8ee9675fc75",
+        "checkedAt": "2026-09-11T07:00:16.590Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "randallyash/omarchy-z13-power",
-        "pluginIds": [
-          "io.github.randallyash.z13-power"
-        ],
-        "commit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-05T16:55:02.097Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T19:51:26.927Z",
-        "requestEventId": 30613285000,
-        "requestedAt": "2026-09-05T16:37:50Z",
-        "reviewedAt": "2026-09-05T16:55:02.097Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.randallyash.z13-power": {
@@ -130987,7 +130966,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "randallyash/omarchy-z13-power",
+        "pluginIds": [
+          "io.github.randallyash.z13-power"
+        ],
+        "commit": "438d4c57c73517e0ba03d53bebb8a8ee9675fc75",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:00:16.590Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T13:14:32.219Z",
+        "requestEventId": 30953947930,
+        "requestedAt": "2026-09-11T06:43:54Z",
+        "reviewedAt": "2026-09-11T07:00:16.590Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
+          "validatedAt": "2026-09-05T16:55:02.157Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:00:16.590Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "randallyash/omarchy-z13-power",
+            "pluginIds": [
+              "io.github.randallyash.z13-power"
+            ],
+            "commit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
+            "checkedAt": "2026-09-05T16:55:02.097Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "randallyash/omarchy-z13-power",
+            "pluginIds": [
+              "io.github.randallyash.z13-power"
+            ],
+            "commit": "6b17e3b9e05f90a097a1c4c1c32ee8cb537656ef",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-05T16:55:02.097Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T19:51:26.927Z",
+            "requestEventId": 30613285000,
+            "requestedAt": "2026-09-05T16:37:50Z",
+            "reviewedAt": "2026-09-05T16:55:02.097Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Kiryuuki/oma-pulse",
