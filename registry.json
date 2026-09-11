@@ -157758,6 +157758,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/L0nE-F0x/lonefox.workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T10:28:09.893Z",
+      "listingValidatedCommit": "445220a7d220d5835050b422eac2d35cd1e0902a",
+      "listingValidatedAt": "2026-09-11T10:28:09.893Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "l0ne-f0x/lonefox.workspaces",
+        "pluginIds": [
+          "lonefox.workspaces"
+        ],
+        "commit": "445220a7d220d5835050b422eac2d35cd1e0902a",
+        "checkedAt": "2026-09-11T10:28:09.818Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lonefox.workspaces": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
