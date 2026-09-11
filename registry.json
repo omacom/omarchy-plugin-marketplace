@@ -160139,6 +160139,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jwm3000/omarchy-bergfex-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T16:14:21.487Z",
+      "listingValidatedCommit": "2daefde2e5801edba93a65ddba43c888738e0a82",
+      "listingValidatedAt": "2026-09-11T16:14:21.487Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jwm3000/omarchy-bergfex-weather",
+        "pluginIds": [
+          "io.github.jwm3000.bergfex-weather"
+        ],
+        "commit": "2daefde2e5801edba93a65ddba43c888738e0a82",
+        "checkedAt": "2026-09-11T16:14:21.409Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jwm3000.bergfex-weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
