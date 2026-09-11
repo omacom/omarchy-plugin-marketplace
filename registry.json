@@ -133982,8 +133982,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T22:52:08.427Z",
-      "listingValidatedCommit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
-      "listingValidatedAt": "2026-09-05T22:52:08.427Z",
+      "listingValidatedCommit": "81ffea5f45abcde221a04cd3d0dae1a45d89398e",
+      "listingValidatedAt": "2026-09-11T20:00:54.144Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133992,8 +133992,8 @@
         "pluginIds": [
           "nzkritik.matrix-rain"
         ],
-        "commit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
-        "checkedAt": "2026-09-05T22:52:08.373Z",
+        "commit": "81ffea5f45abcde221a04cd3d0dae1a45d89398e",
+        "checkedAt": "2026-09-11T20:00:54.144Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -134008,7 +134008,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
+          "validatedAt": "2026-09-05T22:52:08.427Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T20:00:54.144Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nzkritik/omarchy-matrix-rain",
+            "pluginIds": [
+              "nzkritik.matrix-rain"
+            ],
+            "commit": "8a9a67dcd69ac2049b6613d5d60d7395d10ef3e4",
+            "checkedAt": "2026-09-05T22:52:08.373Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/linuxg33k76/omanetmonitor",
