@@ -157991,6 +157991,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bhittu21/omarchy-focus-timer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T11:24:25.885Z",
+      "listingValidatedCommit": "39a2fadbdd6f65a19a58c4849209d31958afa985",
+      "listingValidatedAt": "2026-09-11T11:24:25.885Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bhittu21/omarchy-focus-timer",
+        "pluginIds": [
+          "io.github.bhittu21.omarchy-focus-timer"
+        ],
+        "commit": "39a2fadbdd6f65a19a58c4849209d31958afa985",
+        "checkedAt": "2026-09-11T11:24:25.443Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bhittu21/omarchy-focus-timer",
+        "pluginIds": [
+          "io.github.bhittu21.omarchy-focus-timer"
+        ],
+        "commit": "39a2fadbdd6f65a19a58c4849209d31958afa985",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T11:24:25.443Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T11:07:15.322Z",
+        "requestEventId": 30968077549,
+        "requestedAt": "2026-09-11T11:23:17Z",
+        "reviewedAt": "2026-09-11T11:24:25.443Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bhittu21.omarchy-focus-timer": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
