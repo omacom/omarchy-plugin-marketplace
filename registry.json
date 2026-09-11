@@ -85782,8 +85782,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T00:52:51.356Z",
-      "listingValidatedCommit": "608618aebb8e13838c3c3e38700071468e19f840",
-      "listingValidatedAt": "2026-08-28T00:52:51.356Z",
+      "listingValidatedCommit": "0dca42ba669ac67117670fb0913ea9e283effdf0",
+      "listingValidatedAt": "2026-09-11T18:33:40.059Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -85792,35 +85792,14 @@
         "pluginIds": [
           "context-switcher"
         ],
-        "commit": "608618aebb8e13838c3c3e38700071468e19f840",
-        "checkedAt": "2026-08-28T00:52:51.314Z",
+        "commit": "0dca42ba669ac67117670fb0913ea9e283effdf0",
+        "checkedAt": "2026-09-11T18:33:40.059Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "darcy/omarchy-context-switcher",
-        "pluginIds": [
-          "context-switcher"
-        ],
-        "commit": "608618aebb8e13838c3c3e38700071468e19f840",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-28T00:52:51.314Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-28T00:46:48.480Z",
-        "requestEventId": 30138408613,
-        "requestedAt": "2026-08-28T00:52:27Z",
-        "reviewedAt": "2026-08-28T00:52:51.315Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "context-switcher": {
@@ -85832,7 +85811,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "darcy/omarchy-context-switcher",
+        "pluginIds": [
+          "context-switcher"
+        ],
+        "commit": "0dca42ba669ac67117670fb0913ea9e283effdf0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T18:33:40.059Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T16:57:58.401Z",
+        "requestEventId": 30991466057,
+        "requestedAt": "2026-09-11T18:17:57Z",
+        "reviewedAt": "2026-09-11T18:33:40.059Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "608618aebb8e13838c3c3e38700071468e19f840",
+          "validatedAt": "2026-08-28T00:52:51.356Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:33:40.059Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "darcy/omarchy-context-switcher",
+            "pluginIds": [
+              "context-switcher"
+            ],
+            "commit": "608618aebb8e13838c3c3e38700071468e19f840",
+            "checkedAt": "2026-08-28T00:52:51.314Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "darcy/omarchy-context-switcher",
+            "pluginIds": [
+              "context-switcher"
+            ],
+            "commit": "608618aebb8e13838c3c3e38700071468e19f840",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-28T00:52:51.314Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-28T00:46:48.480Z",
+            "requestEventId": 30138408613,
+            "requestedAt": "2026-08-28T00:52:27Z",
+            "reviewedAt": "2026-08-28T00:52:51.315Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/artur-hash/omarchy-smartac",
