@@ -116123,8 +116123,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T07:34:11.442Z",
-      "listingValidatedCommit": "e07c4a889e16fa7c167cb05099c656e0816d4fc9",
-      "listingValidatedAt": "2026-09-03T22:06:32.429Z",
+      "listingValidatedCommit": "4e5270f1093788935541a870a5789d6adcc0afa8",
+      "listingValidatedAt": "2026-09-11T08:13:25.244Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -116133,8 +116133,8 @@
         "pluginIds": [
           "chyld.mise-radar"
         ],
-        "commit": "e07c4a889e16fa7c167cb05099c656e0816d4fc9",
-        "checkedAt": "2026-09-03T22:06:32.429Z",
+        "commit": "4e5270f1093788935541a870a5789d6adcc0afa8",
+        "checkedAt": "2026-09-11T08:13:25.244Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -116166,6 +116166,26 @@
             ],
             "commit": "a455e1bbd204e55c47ec910b1ad4043d6081921c",
             "checkedAt": "2026-09-02T07:34:11.380Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "e07c4a889e16fa7c167cb05099c656e0816d4fc9",
+          "validatedAt": "2026-09-03T22:06:32.429Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:13:25.244Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "chyld/omarchy-mise-radar",
+            "pluginIds": [
+              "chyld.mise-radar"
+            ],
+            "commit": "e07c4a889e16fa7c167cb05099c656e0816d4fc9",
+            "checkedAt": "2026-09-03T22:06:32.429Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
