@@ -153299,8 +153299,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T02:04:23.857Z",
-      "listingValidatedCommit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
-      "listingValidatedAt": "2026-09-09T02:04:23.857Z",
+      "listingValidatedCommit": "d4078738072e9ed0fa467306526c418bc6c3de8f",
+      "listingValidatedAt": "2026-09-11T14:24:54.653Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -153309,35 +153309,14 @@
         "pluginIds": [
           "io.github.enobale.kneadra"
         ],
-        "commit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
-        "checkedAt": "2026-09-09T02:04:23.778Z",
+        "commit": "d4078738072e9ed0fa467306526c418bc6c3de8f",
+        "checkedAt": "2026-09-11T14:24:54.653Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "enobale/omarchy-kneadra",
-        "pluginIds": [
-          "io.github.enobale.kneadra"
-        ],
-        "commit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-09T02:04:23.778Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-09T00:54:42.322Z",
-        "requestEventId": 30796917751,
-        "requestedAt": "2026-09-09T02:03:13Z",
-        "reviewedAt": "2026-09-09T02:04:23.778Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.enobale.kneadra": {
@@ -153347,7 +153326,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "enobale/omarchy-kneadra",
+        "pluginIds": [
+          "io.github.enobale.kneadra"
+        ],
+        "commit": "d4078738072e9ed0fa467306526c418bc6c3de8f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T14:24:54.653Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T12:46:29.971Z",
+        "requestEventId": 30974809184,
+        "requestedAt": "2026-09-11T13:31:22Z",
+        "reviewedAt": "2026-09-11T14:24:54.653Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
+          "validatedAt": "2026-09-09T02:04:23.857Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:24:54.653Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "enobale/omarchy-kneadra",
+            "pluginIds": [
+              "io.github.enobale.kneadra"
+            ],
+            "commit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
+            "checkedAt": "2026-09-09T02:04:23.778Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "enobale/omarchy-kneadra",
+            "pluginIds": [
+              "io.github.enobale.kneadra"
+            ],
+            "commit": "63d33f3aee5e79aed8c253ea5d38a00a5bd55d56",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-09T02:04:23.778Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-09T00:54:42.322Z",
+            "requestEventId": 30796917751,
+            "requestedAt": "2026-09-09T02:03:13Z",
+            "reviewedAt": "2026-09-09T02:04:23.778Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/layolayo/omarchy-iching-oracle",
