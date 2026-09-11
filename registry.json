@@ -157792,6 +157792,72 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Doghouse-Mike/kheetsheet-hypr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T10:57:18.570Z",
+      "listingValidatedCommit": "eb08cf5b5bcb209ae87f963b292b68c679445b63",
+      "listingValidatedAt": "2026-09-11T10:57:18.570Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "doghouse-mike/kheetsheet-hypr",
+        "pluginIds": [
+          "doghouse-mike.kheetsheet"
+        ],
+        "commit": "eb08cf5b5bcb209ae87f963b292b68c679445b63",
+        "checkedAt": "2026-09-11T10:57:18.496Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "doghouse-mike/kheetsheet-hypr",
+        "pluginIds": [
+          "doghouse-mike.kheetsheet"
+        ],
+        "commit": "eb08cf5b5bcb209ae87f963b292b68c679445b63",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T10:57:18.496Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T16:26:20.816Z",
+        "requestEventId": 30966753329,
+        "requestedAt": "2026-09-11T10:56:08Z",
+        "reviewedAt": "2026-09-11T10:57:18.496Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "doghouse-mike.kheetsheet": {
+          "category": "Desktop",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
