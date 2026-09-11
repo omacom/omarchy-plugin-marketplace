@@ -127894,8 +127894,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T20:23:28.095Z",
-      "listingValidatedCommit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
-      "listingValidatedAt": "2026-09-04T20:23:28.095Z",
+      "listingValidatedCommit": "dd5f348f28a80a43e0bfe94ff6703357f7bc4fc4",
+      "listingValidatedAt": "2026-09-11T07:44:09.951Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -127904,35 +127904,14 @@
         "pluginIds": [
           "joelgaff.plain-english"
         ],
-        "commit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
-        "checkedAt": "2026-09-04T20:23:28.035Z",
+        "commit": "dd5f348f28a80a43e0bfe94ff6703357f7bc4fc4",
+        "checkedAt": "2026-09-11T07:44:09.951Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "joelgaff/omarchy-plain-english",
-        "pluginIds": [
-          "joelgaff.plain-english"
-        ],
-        "commit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T20:23:28.035Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T23:36:54.615Z",
-        "requestEventId": 30575101633,
-        "requestedAt": "2026-09-04T18:49:06Z",
-        "reviewedAt": "2026-09-04T20:23:28.035Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "joelgaff.plain-english": {
@@ -127944,7 +127923,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joelgaff/omarchy-plain-english",
+        "pluginIds": [
+          "joelgaff.plain-english"
+        ],
+        "commit": "dd5f348f28a80a43e0bfe94ff6703357f7bc4fc4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:44:09.951Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T18:35:33.855Z",
+        "requestEventId": 30956625466,
+        "requestedAt": "2026-09-11T07:41:48Z",
+        "reviewedAt": "2026-09-11T07:44:09.951Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
+          "validatedAt": "2026-09-04T20:23:28.095Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:44:09.951Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joelgaff/omarchy-plain-english",
+            "pluginIds": [
+              "joelgaff.plain-english"
+            ],
+            "commit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
+            "checkedAt": "2026-09-04T20:23:28.035Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "joelgaff/omarchy-plain-english",
+            "pluginIds": [
+              "joelgaff.plain-english"
+            ],
+            "commit": "d0b9270ddd5ff22ca722f1eccf3359fd16258b43",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T20:23:28.035Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T23:36:54.615Z",
+            "requestEventId": 30575101633,
+            "requestedAt": "2026-09-04T18:49:06Z",
+            "reviewedAt": "2026-09-04T20:23:28.035Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/heyimhere/omarchy-hardware-panel",
