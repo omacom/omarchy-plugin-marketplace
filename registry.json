@@ -151118,8 +151118,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T23:10:39.247Z",
-      "listingValidatedCommit": "adb51d30730589fce8fed7c285feb42988805149",
-      "listingValidatedAt": "2026-09-08T23:10:39.247Z",
+      "listingValidatedCommit": "6ff12f8336bc2adfb6e9a02998478520195219e7",
+      "listingValidatedAt": "2026-09-11T13:43:23.504Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -151128,8 +151128,8 @@
         "pluginIds": [
           "io.github.cfaulkingham.quickbridge"
         ],
-        "commit": "adb51d30730589fce8fed7c285feb42988805149",
-        "checkedAt": "2026-09-08T23:10:39.180Z",
+        "commit": "6ff12f8336bc2adfb6e9a02998478520195219e7",
+        "checkedAt": "2026-09-11T13:43:23.504Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -151143,7 +151143,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "adb51d30730589fce8fed7c285feb42988805149",
+          "validatedAt": "2026-09-08T23:10:39.247Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:43:23.504Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cfaulkingham/quickbridge",
+            "pluginIds": [
+              "io.github.cfaulkingham.quickbridge"
+            ],
+            "commit": "adb51d30730589fce8fed7c285feb42988805149",
+            "checkedAt": "2026-09-08T23:10:39.180Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jaabell/sshuttledeck",
