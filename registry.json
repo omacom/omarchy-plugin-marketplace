@@ -161816,6 +161816,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jose22072000/linux-hardware-center",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T21:47:41.691Z",
+      "listingValidatedCommit": "4cb5e537808603f7c92a6e37de99a7c4bc2fdef5",
+      "listingValidatedAt": "2026-09-11T21:47:41.691Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jose22072000/linux-hardware-center",
+        "pluginIds": [
+          "centro.panel"
+        ],
+        "commit": "4cb5e537808603f7c92a6e37de99a7c4bc2fdef5",
+        "checkedAt": "2026-09-11T21:47:41.630Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jose22072000/linux-hardware-center",
+        "pluginIds": [
+          "centro.panel"
+        ],
+        "commit": "4cb5e537808603f7c92a6e37de99a7c4bc2fdef5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T21:47:41.630Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T21:43:01.933Z",
+        "requestEventId": 31001015147,
+        "requestedAt": "2026-09-11T21:46:34Z",
+        "reviewedAt": "2026-09-11T21:47:41.631Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "centro.panel": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
