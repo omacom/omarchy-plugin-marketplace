@@ -151013,8 +151013,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T22:14:27.617Z",
-      "listingValidatedCommit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
-      "listingValidatedAt": "2026-09-08T22:14:27.617Z",
+      "listingValidatedCommit": "c92501a39120b7227d306ca984a8e0472d596fa6",
+      "listingValidatedAt": "2026-09-11T15:05:52.932Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -151023,35 +151023,14 @@
         "pluginIds": [
           "io.github.mbot11.hermes-deck"
         ],
-        "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
-        "checkedAt": "2026-09-08T22:14:27.555Z",
+        "commit": "c92501a39120b7227d306ca984a8e0472d596fa6",
+        "checkedAt": "2026-09-11T15:05:52.932Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mbot11/omarchy-hermes-deck",
-        "pluginIds": [
-          "io.github.mbot11.hermes-deck"
-        ],
-        "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T22:14:27.555Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T19:40:51.177Z",
-        "requestEventId": 30788045458,
-        "requestedAt": "2026-09-08T22:13:29Z",
-        "reviewedAt": "2026-09-08T22:14:27.555Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.mbot11.hermes-deck": {
@@ -151063,7 +151042,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mbot11/omarchy-hermes-deck",
+        "pluginIds": [
+          "io.github.mbot11.hermes-deck"
+        ],
+        "commit": "c92501a39120b7227d306ca984a8e0472d596fa6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T15:05:52.932Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T19:29:45.389Z",
+        "requestEventId": 30975521106,
+        "requestedAt": "2026-09-11T13:44:05Z",
+        "reviewedAt": "2026-09-11T15:05:52.932Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+          "validatedAt": "2026-09-08T22:14:27.617Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T15:05:52.932Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mbot11/omarchy-hermes-deck",
+            "pluginIds": [
+              "io.github.mbot11.hermes-deck"
+            ],
+            "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+            "checkedAt": "2026-09-08T22:14:27.555Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mbot11/omarchy-hermes-deck",
+            "pluginIds": [
+              "io.github.mbot11.hermes-deck"
+            ],
+            "commit": "eb704b954496d8519ffa9e52762dbe6f93f27369",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T22:14:27.555Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T19:40:51.177Z",
+            "requestEventId": 30788045458,
+            "requestedAt": "2026-09-08T22:13:29Z",
+            "reviewedAt": "2026-09-08T22:14:27.555Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/piotrfernandez-impact10/hyprpages",
