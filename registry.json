@@ -155038,6 +155038,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Primly/omarchy-wallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T01:48:11.766Z",
+      "listingValidatedCommit": "2253e90e144bf10dacf4b6d9d53052b34da10056",
+      "listingValidatedAt": "2026-09-11T01:48:11.766Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "primly/omarchy-wallpaper",
+        "pluginIds": [
+          "wallpaper-align"
+        ],
+        "commit": "2253e90e144bf10dacf4b6d9d53052b34da10056",
+        "checkedAt": "2026-09-11T01:48:11.682Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "wallpaper-align": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
