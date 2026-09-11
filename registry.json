@@ -162028,6 +162028,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MariposaJon/omarchy_modemmanager_plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T23:19:44.225Z",
+      "listingValidatedCommit": "cdfc2c07688a456615f969b381cd1f939a709f87",
+      "listingValidatedAt": "2026-09-11T23:19:44.225Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mariposajon/omarchy_modemmanager_plugin",
+        "pluginIds": [
+          "jon.modem"
+        ],
+        "commit": "cdfc2c07688a456615f969b381cd1f939a709f87",
+        "checkedAt": "2026-09-11T23:19:44.139Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mariposajon/omarchy_modemmanager_plugin",
+        "pluginIds": [
+          "jon.modem"
+        ],
+        "commit": "cdfc2c07688a456615f969b381cd1f939a709f87",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T23:19:44.139Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T13:45:27.384Z",
+        "requestEventId": 31004145142,
+        "requestedAt": "2026-09-11T23:18:28Z",
+        "reviewedAt": "2026-09-11T23:19:44.139Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jon.modem": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
