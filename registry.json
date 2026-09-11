@@ -100844,8 +100844,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T14:09:09.973Z",
-      "listingValidatedCommit": "6f1a48d5fc8beee1b1ca6aeab691ac86b2e381d1",
-      "listingValidatedAt": "2026-08-30T14:09:09.973Z",
+      "listingValidatedCommit": "97d3bc608c035e75c6935377c74b290a6e5e7bb8",
+      "listingValidatedAt": "2026-09-11T08:58:39.061Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -100854,8 +100854,8 @@
         "pluginIds": [
           "pestov.apple-music"
         ],
-        "commit": "6f1a48d5fc8beee1b1ca6aeab691ac86b2e381d1",
-        "checkedAt": "2026-08-30T14:09:09.919Z",
+        "commit": "97d3bc608c035e75c6935377c74b290a6e5e7bb8",
+        "checkedAt": "2026-09-11T08:58:39.061Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -100869,7 +100869,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6f1a48d5fc8beee1b1ca6aeab691ac86b2e381d1",
+          "validatedAt": "2026-08-30T14:09:09.973Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:58:39.061Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nickpestov/omarchy-am",
+            "pluginIds": [
+              "pestov.apple-music"
+            ],
+            "commit": "6f1a48d5fc8beee1b1ca6aeab691ac86b2e381d1",
+            "checkedAt": "2026-08-30T14:09:09.919Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/PrimoGameStudio/primo.dock",
