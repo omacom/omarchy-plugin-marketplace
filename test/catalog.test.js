@@ -332,6 +332,39 @@ test("manual installation overrides are explicit and restricted to root plugins"
   );
 });
 
+test("root plugins that clone a first-party service ask for a shell restart", () => {
+  const source = { repo: "https://github.com/example/idle-swap" };
+  const plain = communityInstall(source, "manifest.json", {});
+  assert.equal(
+    plain.installCommand,
+    "omarchy plugin add https://github.com/example/idle-swap.git --enable",
+  );
+  assert.equal("clonedFrom" in plain, false);
+
+  const swapped = communityInstall(source, "manifest.json", {}, "omarchy.idle");
+  assert.equal(
+    swapped.installCommand,
+    "omarchy plugin add https://github.com/example/idle-swap.git --enable && omarchy restart shell",
+  );
+  assert.match(swapped.installNote, /replaces the built-in omarchy\.idle service/);
+  assert.match(swapped.installNote, /shell needs a restart/);
+  assert.equal(swapped.clonedFrom, "omarchy.idle");
+});
+
+test("a manual installation override is unaffected by clonedFrom", () => {
+  const source = { repo: "https://github.com/example/native-plugin" };
+  const note = "This plugin requires a matching native helper.";
+  assert.deepEqual(
+    communityInstall(source, "manifest.json", { installation: { mode: "manual", note } }, "omarchy.idle"),
+    {
+      repositoryLayout: "root-plugin",
+      installAvailable: false,
+      installCommand: "",
+      installNote: note,
+    },
+  );
+});
+
 test("built-in plugins are separated from installable community plugins", () => {
   const builtIns = catalog.plugins.filter((plugin) => plugin.builtIn);
   assert.ok(builtIns.length > 20);
