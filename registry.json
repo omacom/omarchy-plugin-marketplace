@@ -161242,6 +161242,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/keegan-sucks/rss-feeder",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T19:19:04.111Z",
+      "listingValidatedCommit": "8acf37d426e7ddb875413252482cd1a5fd8fd9b8",
+      "listingValidatedAt": "2026-09-11T19:19:04.111Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "keegan-sucks/rss-feeder",
+        "pluginIds": [
+          "io.github.keegan-sucks.rss-feeder"
+        ],
+        "commit": "8acf37d426e7ddb875413252482cd1a5fd8fd9b8",
+        "checkedAt": "2026-09-11T19:19:04.065Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.keegan-sucks.rss-feeder": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
