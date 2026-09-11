@@ -155219,6 +155219,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/3EYE3Y3/omarchy-capture-board",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T05:26:03.650Z",
+      "listingValidatedCommit": "91a842b4141bec30cf564a0dbc333356a042c213",
+      "listingValidatedAt": "2026-09-11T05:26:03.650Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "3eye3y3/omarchy-capture-board",
+        "pluginIds": [
+          "io.github.3eye3y3.capture-board"
+        ],
+        "commit": "91a842b4141bec30cf564a0dbc333356a042c213",
+        "checkedAt": "2026-09-11T05:26:03.583Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.3eye3y3.capture-board": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
