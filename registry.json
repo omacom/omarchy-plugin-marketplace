@@ -139094,8 +139094,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T21:41:33.612Z",
-      "listingValidatedCommit": "11f6c32980985357625250fc52b1861407c02c67",
-      "listingValidatedAt": "2026-09-07T21:41:33.612Z",
+      "listingValidatedCommit": "b37e7e06a8c2e02c5d8d6340e37dc6165802c661",
+      "listingValidatedAt": "2026-09-11T06:56:19.899Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -139104,8 +139104,8 @@
         "pluginIds": [
           "andersdosen.imdbsearch"
         ],
-        "commit": "11f6c32980985357625250fc52b1861407c02c67",
-        "checkedAt": "2026-09-07T21:41:33.537Z",
+        "commit": "b37e7e06a8c2e02c5d8d6340e37dc6165802c661",
+        "checkedAt": "2026-09-11T06:56:19.899Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -139120,7 +139120,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "11f6c32980985357625250fc52b1861407c02c67",
+          "validatedAt": "2026-09-07T21:41:33.612Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T06:56:19.899Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andersdosen/omarchy-imdbsearch",
+            "pluginIds": [
+              "andersdosen.imdbsearch"
+            ],
+            "commit": "11f6c32980985357625250fc52b1861407c02c67",
+            "checkedAt": "2026-09-07T21:41:33.537Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/wookelvin/omarchy-workspace-swipe",
