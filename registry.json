@@ -160447,6 +160447,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brhellman/omarchy-browser-select",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T17:41:53.786Z",
+      "listingValidatedCommit": "339f73ab3674c96966c0afaaeddb8ad487aa4766",
+      "listingValidatedAt": "2026-09-11T17:41:53.786Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brhellman/omarchy-browser-select",
+        "pluginIds": [
+          "io.github.brhellman.browser-select"
+        ],
+        "commit": "339f73ab3674c96966c0afaaeddb8ad487aa4766",
+        "checkedAt": "2026-09-11T17:41:53.717Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brhellman/omarchy-browser-select",
+        "pluginIds": [
+          "io.github.brhellman.browser-select"
+        ],
+        "commit": "339f73ab3674c96966c0afaaeddb8ad487aa4766",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T17:41:53.717Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T17:38:40.729Z",
+        "requestEventId": 30989457985,
+        "requestedAt": "2026-09-11T17:40:44Z",
+        "reviewedAt": "2026-09-11T17:41:53.717Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.brhellman.browser-select": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
