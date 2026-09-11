@@ -9226,8 +9226,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T22:29:22.089Z",
-      "listingValidatedCommit": "a20b825ff491a8e06698347ffbf0286dc88bb533",
-      "listingValidatedAt": "2026-08-21T19:44:22.483Z",
+      "listingValidatedCommit": "55c5d9225e6a178f20e2b5465875026a57589937",
+      "listingValidatedAt": "2026-09-11T14:17:53.235Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -9236,8 +9236,8 @@
         "pluginIds": [
           "devgtv.docker"
         ],
-        "commit": "a20b825ff491a8e06698347ffbf0286dc88bb533",
-        "checkedAt": "2026-08-21T19:44:22.483Z",
+        "commit": "55c5d9225e6a178f20e2b5465875026a57589937",
+        "checkedAt": "2026-09-11T14:17:53.235Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -9263,6 +9263,26 @@
             "version": "3",
             "commit": "a1f2da86ada9b2db62a7b24021696ba916f47d04",
             "checkedAt": "2026-08-15T21:02:33.993Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a20b825ff491a8e06698347ffbf0286dc88bb533",
+          "validatedAt": "2026-08-21T19:44:22.483Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:17:53.235Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "devgtv/omarchy-docker",
+            "pluginIds": [
+              "devgtv.docker"
+            ],
+            "commit": "a20b825ff491a8e06698347ffbf0286dc88bb533",
+            "checkedAt": "2026-08-21T19:44:22.483Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
