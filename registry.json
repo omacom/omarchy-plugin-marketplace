@@ -147471,8 +147471,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T17:56:51.361Z",
-      "listingValidatedCommit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
-      "listingValidatedAt": "2026-09-08T17:56:51.361Z",
+      "listingValidatedCommit": "2161745ab24a694d4a5c1bdfefde1f50ff291e59",
+      "listingValidatedAt": "2026-09-11T08:07:51.186Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -147481,8 +147481,8 @@
         "pluginIds": [
           "tim.omostrich"
         ],
-        "commit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
-        "checkedAt": "2026-09-08T17:56:51.288Z",
+        "commit": "2161745ab24a694d4a5c1bdfefde1f50ff291e59",
+        "checkedAt": "2026-09-11T08:07:51.186Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -147491,29 +147491,6 @@
           "service-management",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ninepointlabs/omostrich",
-        "pluginIds": [
-          "tim.omostrich"
-        ],
-        "commit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T17:56:51.288Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-06T18:58:47.937Z",
-        "requestEventId": 30774814078,
-        "requestedAt": "2026-09-08T17:55:15Z",
-        "reviewedAt": "2026-09-08T17:56:51.288Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "tim.omostrich": {
@@ -147525,7 +147502,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ninepointlabs/omostrich",
+        "pluginIds": [
+          "tim.omostrich"
+        ],
+        "commit": "2161745ab24a694d4a5c1bdfefde1f50ff291e59",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T08:07:51.186Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T20:37:27.160Z",
+        "requestEventId": 30957229278,
+        "requestedAt": "2026-09-11T07:54:20Z",
+        "reviewedAt": "2026-09-11T08:07:51.186Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
+          "validatedAt": "2026-09-08T17:56:51.361Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T08:07:51.186Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ninepointlabs/omostrich",
+            "pluginIds": [
+              "tim.omostrich"
+            ],
+            "commit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
+            "checkedAt": "2026-09-08T17:56:51.288Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ninepointlabs/omostrich",
+            "pluginIds": [
+              "tim.omostrich"
+            ],
+            "commit": "1278ff3e5611b3714e268cc7d5a4d3717cc82eb9",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T17:56:51.288Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-06T18:58:47.937Z",
+            "requestEventId": 30774814078,
+            "requestedAt": "2026-09-08T17:55:15Z",
+            "reviewedAt": "2026-09-08T17:56:51.288Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/TheFlngDutchman/omarchy-dashboard-dl",
