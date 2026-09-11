@@ -158049,6 +158049,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/crazybadger/omarchy-workspace-ribbon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T13:02:56.934Z",
+      "listingValidatedCommit": "153ce7f203798fed469c867f46a0dc8656bb7520",
+      "listingValidatedAt": "2026-09-11T13:02:56.934Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crazybadger/omarchy-workspace-ribbon",
+        "pluginIds": [
+          "crazybadger.workspace-ribbon"
+        ],
+        "commit": "153ce7f203798fed469c867f46a0dc8656bb7520",
+        "checkedAt": "2026-09-11T13:02:56.874Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "crazybadger.workspace-ribbon": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
