@@ -161969,6 +161969,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/komagata/screen-lens",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T22:52:35.575Z",
+      "listingValidatedCommit": "f4dc8348886ac7bc22cb90241c98a30d80f191a6",
+      "listingValidatedAt": "2026-09-11T22:52:35.575Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "komagata/screen-lens",
+        "pluginIds": [
+          "komagata.screen-lens"
+        ],
+        "commit": "f4dc8348886ac7bc22cb90241c98a30d80f191a6",
+        "checkedAt": "2026-09-11T22:52:35.503Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "komagata/screen-lens",
+        "pluginIds": [
+          "komagata.screen-lens"
+        ],
+        "commit": "f4dc8348886ac7bc22cb90241c98a30d80f191a6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T22:52:35.503Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T20:56:16.314Z",
+        "requestEventId": 31003273796,
+        "requestedAt": "2026-09-11T22:51:21Z",
+        "reviewedAt": "2026-09-11T22:52:35.503Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "komagata.screen-lens": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
