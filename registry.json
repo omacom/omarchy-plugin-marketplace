@@ -160303,6 +160303,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jvlianodorneles/omabeat",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T16:42:19.717Z",
+      "listingValidatedCommit": "35e7418f28b7b0925482bf710d4e393423b91f8d",
+      "listingValidatedAt": "2026-09-11T16:42:19.717Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jvlianodorneles/omabeat",
+        "pluginIds": [
+          "dorneles.omabeat"
+        ],
+        "commit": "35e7418f28b7b0925482bf710d4e393423b91f8d",
+        "checkedAt": "2026-09-11T16:42:19.636Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jvlianodorneles/omabeat",
+        "pluginIds": [
+          "dorneles.omabeat"
+        ],
+        "commit": "35e7418f28b7b0925482bf710d4e393423b91f8d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T16:42:19.636Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T13:34:44.874Z",
+        "requestEventId": 30986034317,
+        "requestedAt": "2026-09-11T16:41:09Z",
+        "reviewedAt": "2026-09-11T16:42:19.637Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dorneles.omabeat": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
