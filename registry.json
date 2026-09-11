@@ -160562,6 +160562,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ReidenXerx/omarchy-tile-blueprints",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T18:14:23.208Z",
+      "listingValidatedCommit": "a23f39256e237eb7e1f6f51f61a251724e212f14",
+      "listingValidatedAt": "2026-09-11T18:14:23.208Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "reidenxerx/omarchy-tile-blueprints",
+        "pluginIds": [
+          "reidenxerx.tile-blueprints"
+        ],
+        "commit": "a23f39256e237eb7e1f6f51f61a251724e212f14",
+        "checkedAt": "2026-09-11T18:14:23.130Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-tile-blueprints",
+        "pluginIds": [
+          "reidenxerx.tile-blueprints"
+        ],
+        "commit": "a23f39256e237eb7e1f6f51f61a251724e212f14",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T18:14:23.130Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T18:05:58.672Z",
+        "requestEventId": 30991228902,
+        "requestedAt": "2026-09-11T18:13:14Z",
+        "reviewedAt": "2026-09-11T18:14:23.130Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "reidenxerx.tile-blueprints": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
