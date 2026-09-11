@@ -160415,6 +160415,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Abhishek-Adhikari-1/asus-kbd-backlight",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T17:09:28.764Z",
+      "listingValidatedCommit": "59872807b37f00f2c88c27d711447ba86235bf38",
+      "listingValidatedAt": "2026-09-11T17:09:28.764Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "abhishek-adhikari-1/asus-kbd-backlight",
+        "pluginIds": [
+          "asus-kbd-backlight"
+        ],
+        "commit": "59872807b37f00f2c88c27d711447ba86235bf38",
+        "checkedAt": "2026-09-11T17:09:28.687Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "asus-kbd-backlight": {
+          "category": "Hardware",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
