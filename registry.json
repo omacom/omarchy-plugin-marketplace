@@ -117782,8 +117782,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T11:29:09.628Z",
-      "listingValidatedCommit": "39a449937007a6233e7ae0860ba8d81021c18334",
-      "listingValidatedAt": "2026-09-02T11:29:09.628Z",
+      "listingValidatedCommit": "f176347895b5c6ecf999c895a2cb127e1e9e97ba",
+      "listingValidatedAt": "2026-09-11T14:50:00.014Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -117792,8 +117792,8 @@
         "pluginIds": [
           "gladimdim.config-sync"
         ],
-        "commit": "39a449937007a6233e7ae0860ba8d81021c18334",
-        "checkedAt": "2026-09-02T11:29:09.575Z",
+        "commit": "f176347895b5c6ecf999c895a2cb127e1e9e97ba",
+        "checkedAt": "2026-09-11T14:50:00.014Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -117807,7 +117807,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "39a449937007a6233e7ae0860ba8d81021c18334",
+          "validatedAt": "2026-09-02T11:29:09.628Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:50:00.014Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gladimdim/omarchy-config-sync-plugin",
+            "pluginIds": [
+              "gladimdim.config-sync"
+            ],
+            "commit": "39a449937007a6233e7ae0860ba8d81021c18334",
+            "checkedAt": "2026-09-02T11:29:09.575Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ierror/menuvitals",
