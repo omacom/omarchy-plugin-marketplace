@@ -148157,8 +148157,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T17:43:35.320Z",
-      "listingValidatedCommit": "977bb02b10c66cbee6161832b46dc2a1f8d08090",
-      "listingValidatedAt": "2026-09-08T17:43:35.320Z",
+      "listingValidatedCommit": "0ad791cfe257e9076e6a01d2a81ba2a722d3478e",
+      "listingValidatedAt": "2026-09-11T13:18:30.888Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -148167,8 +148167,8 @@
         "pluginIds": [
           "io.github.jondkinney.hyprpin"
         ],
-        "commit": "977bb02b10c66cbee6161832b46dc2a1f8d08090",
-        "checkedAt": "2026-09-08T17:43:35.264Z",
+        "commit": "0ad791cfe257e9076e6a01d2a81ba2a722d3478e",
+        "checkedAt": "2026-09-11T13:18:30.888Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -148184,7 +148184,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "977bb02b10c66cbee6161832b46dc2a1f8d08090",
+          "validatedAt": "2026-09-08T17:43:35.320Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T13:18:30.888Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jondkinney/hyprpin",
+            "pluginIds": [
+              "io.github.jondkinney.hyprpin"
+            ],
+            "commit": "977bb02b10c66cbee6161832b46dc2a1f8d08090",
+            "checkedAt": "2026-09-08T17:43:35.264Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cyelis1224/omarchy-hotkey-hud",
