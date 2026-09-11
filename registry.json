@@ -138470,8 +138470,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T18:50:58.771Z",
-      "listingValidatedCommit": "1a56e8f37d93d2a0314446db44523bc05d6dab6e",
-      "listingValidatedAt": "2026-09-06T18:50:58.771Z",
+      "listingValidatedCommit": "b7658ba9f0b76643dcbf3274f8ee72fc49c4abdf",
+      "listingValidatedAt": "2026-09-11T15:46:37.747Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -138480,8 +138480,8 @@
         "pluginIds": [
           "omarchy-unicode-picker"
         ],
-        "commit": "1a56e8f37d93d2a0314446db44523bc05d6dab6e",
-        "checkedAt": "2026-09-06T18:50:58.707Z",
+        "commit": "b7658ba9f0b76643dcbf3274f8ee72fc49c4abdf",
+        "checkedAt": "2026-09-11T15:46:37.747Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -138495,7 +138495,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1a56e8f37d93d2a0314446db44523bc05d6dab6e",
+          "validatedAt": "2026-09-06T18:50:58.771Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T15:46:37.747Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "efrmg/omarchy-unicode-picker",
+            "pluginIds": [
+              "omarchy-unicode-picker"
+            ],
+            "commit": "1a56e8f37d93d2a0314446db44523bc05d6dab6e",
+            "checkedAt": "2026-09-06T18:50:58.707Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kusumaindraputra/omarchy-daily-deen",
