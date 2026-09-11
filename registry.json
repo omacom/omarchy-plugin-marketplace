@@ -126062,8 +126062,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T18:49:43.390Z",
-      "listingValidatedCommit": "69ee64996acad52b6843568cc0e291d2eab3feee",
-      "listingValidatedAt": "2026-09-04T18:49:43.390Z",
+      "listingValidatedCommit": "4efa7830d88a1c32998700817dffe355e8c0382c",
+      "listingValidatedAt": "2026-09-11T08:50:40.438Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -126072,8 +126072,8 @@
         "pluginIds": [
           "io.github.iryzhkov.omaperch"
         ],
-        "commit": "69ee64996acad52b6843568cc0e291d2eab3feee",
-        "checkedAt": "2026-09-04T18:49:43.328Z",
+        "commit": "4efa7830d88a1c32998700817dffe355e8c0382c",
+        "checkedAt": "2026-09-11T08:50:40.438Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -126088,7 +126088,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "69ee64996acad52b6843568cc0e291d2eab3feee",
+          "validatedAt": "2026-09-04T18:49:43.390Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:50:40.438Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "iryzhkov/omarchy-omaperch",
+            "pluginIds": [
+              "io.github.iryzhkov.omaperch"
+            ],
+            "commit": "69ee64996acad52b6843568cc0e291d2eab3feee",
+            "checkedAt": "2026-09-04T18:49:43.328Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/quicknode/quicknode-omarchy-plugin",
