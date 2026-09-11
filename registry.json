@@ -158654,6 +158654,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brvier/QuickBorgmatic",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T13:55:18.355Z",
+      "listingValidatedCommit": "9c151eff4b701a6831a002478a3c00a3bf16ceba",
+      "listingValidatedAt": "2026-09-11T13:55:18.355Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brvier/quickborgmatic",
+        "pluginIds": [
+          "fr.rvier.quickborgmatic"
+        ],
+        "commit": "9c151eff4b701a6831a002478a3c00a3bf16ceba",
+        "checkedAt": "2026-09-11T13:55:18.273Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brvier/quickborgmatic",
+        "pluginIds": [
+          "fr.rvier.quickborgmatic"
+        ],
+        "commit": "9c151eff4b701a6831a002478a3c00a3bf16ceba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T13:55:18.273Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T13:09:42.347Z",
+        "requestEventId": 30974432724,
+        "requestedAt": "2026-09-11T13:24:38Z",
+        "reviewedAt": "2026-09-11T13:55:18.273Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "fr.rvier.quickborgmatic": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
