@@ -133360,8 +133360,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T01:44:28.045Z",
-      "listingValidatedCommit": "10673ed98a01141128d6c79669d7268adc93a6c7",
-      "listingValidatedAt": "2026-09-06T01:44:28.045Z",
+      "listingValidatedCommit": "8a6c42268d0c030e1a6a5e4ee46d0fd30e7128e3",
+      "listingValidatedAt": "2026-09-11T00:06:20.105Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133370,8 +133370,8 @@
         "pluginIds": [
           "ewweberlin.quickswitch"
         ],
-        "commit": "10673ed98a01141128d6c79669d7268adc93a6c7",
-        "checkedAt": "2026-09-06T01:44:27.970Z",
+        "commit": "8a6c42268d0c030e1a6a5e4ee46d0fd30e7128e3",
+        "checkedAt": "2026-09-11T00:06:20.105Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -133385,7 +133385,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "10673ed98a01141128d6c79669d7268adc93a6c7",
+          "validatedAt": "2026-09-06T01:44:28.045Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T00:06:20.105Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ewweberlin/quickswitch",
+            "pluginIds": [
+              "ewweberlin.quickswitch"
+            ],
+            "commit": "10673ed98a01141128d6c79669d7268adc93a6c7",
+            "checkedAt": "2026-09-06T01:44:27.970Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/avibarit/snappy-omarchy",
