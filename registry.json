@@ -63398,8 +63398,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T20:53:10.311Z",
-      "listingValidatedCommit": "ab4a78d50fed64c5843ae2776227578c2aef882f",
-      "listingValidatedAt": "2026-08-24T20:53:10.311Z",
+      "listingValidatedCommit": "9dfeeefcfdc8a5411eeefdab2471c572d3b5be30",
+      "listingValidatedAt": "2026-09-11T07:51:53.590Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -63408,8 +63408,8 @@
         "pluginIds": [
           "case.monitor-switcher"
         ],
-        "commit": "ab4a78d50fed64c5843ae2776227578c2aef882f",
-        "checkedAt": "2026-08-24T20:53:10.277Z",
+        "commit": "9dfeeefcfdc8a5411eeefdab2471c572d3b5be30",
+        "checkedAt": "2026-09-11T07:51:53.590Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -63425,7 +63425,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ab4a78d50fed64c5843ae2776227578c2aef882f",
+          "validatedAt": "2026-08-24T20:53:10.311Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T07:51:53.590Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "amoltyagi/omarchy-monitor-switcher",
+            "pluginIds": [
+              "case.monitor-switcher"
+            ],
+            "commit": "ab4a78d50fed64c5843ae2776227578c2aef882f",
+            "checkedAt": "2026-08-24T20:53:10.277Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/roymelgarv/omarchy-downloads",
