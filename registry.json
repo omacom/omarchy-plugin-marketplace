@@ -91894,8 +91894,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T21:51:13.130Z",
-      "listingValidatedCommit": "711e4ad12c0ad822757598005c3ee2e50a312954",
-      "listingValidatedAt": "2026-09-03T22:03:21.168Z",
+      "listingValidatedCommit": "e9f1af87a86d2cb1e143cb4e4aa2b17ae3d76c4d",
+      "listingValidatedAt": "2026-09-11T09:21:19.871Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -91904,8 +91904,8 @@
         "pluginIds": [
           "io.github.villainru.panel-resources"
         ],
-        "commit": "711e4ad12c0ad822757598005c3ee2e50a312954",
-        "checkedAt": "2026-09-03T22:03:21.168Z",
+        "commit": "e9f1af87a86d2cb1e143cb4e4aa2b17ae3d76c4d",
+        "checkedAt": "2026-09-11T09:21:19.871Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -91977,6 +91977,26 @@
             ],
             "commit": "6092a284f60415f319bccd6ab6986e2011b16eb7",
             "checkedAt": "2026-09-01T16:44:05.337Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "711e4ad12c0ad822757598005c3ee2e50a312954",
+          "validatedAt": "2026-09-03T22:03:21.168Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:21:19.871Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "villainru/omarchy-panel-resources",
+            "pluginIds": [
+              "io.github.villainru.panel-resources"
+            ],
+            "commit": "711e4ad12c0ad822757598005c3ee2e50a312954",
+            "checkedAt": "2026-09-03T22:03:21.168Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
