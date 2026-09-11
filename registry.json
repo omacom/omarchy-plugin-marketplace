@@ -154259,8 +154259,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-10",
       "listedAt": "2026-09-10T05:07:28.534Z",
-      "listingValidatedCommit": "59fc5094041319c3305c228f0d1b2a746e470cfc",
-      "listingValidatedAt": "2026-09-10T05:07:28.534Z",
+      "listingValidatedCommit": "96b7b6161acaadc1e24dc6a3f0e657ba17806420",
+      "listingValidatedAt": "2026-09-11T14:07:10.754Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -154269,8 +154269,8 @@
         "pluginIds": [
           "chyld.easy-capture"
         ],
-        "commit": "59fc5094041319c3305c228f0d1b2a746e470cfc",
-        "checkedAt": "2026-09-10T05:07:28.466Z",
+        "commit": "96b7b6161acaadc1e24dc6a3f0e657ba17806420",
+        "checkedAt": "2026-09-11T14:07:10.754Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -154286,7 +154286,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "59fc5094041319c3305c228f0d1b2a746e470cfc",
+          "validatedAt": "2026-09-10T05:07:28.534Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:07:10.754Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "chyld/omarchy-easy-capture",
+            "pluginIds": [
+              "chyld.easy-capture"
+            ],
+            "commit": "59fc5094041319c3305c228f0d1b2a746e470cfc",
+            "checkedAt": "2026-09-10T05:07:28.466Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ShahinMohamed/omarchy-spendwise",
