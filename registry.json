@@ -61026,8 +61026,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T13:24:13.936Z",
-      "listingValidatedCommit": "a8d75f8529abb33078b5db0b1d3700ac2378aac8",
-      "listingValidatedAt": "2026-08-25T15:51:41.244Z",
+      "listingValidatedCommit": "9fda86d468452c6abecde897637191b6a017e12f",
+      "listingValidatedAt": "2026-09-11T08:30:15.734Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -61036,8 +61036,8 @@
         "pluginIds": [
           "salmun-nister.luna"
         ],
-        "commit": "a8d75f8529abb33078b5db0b1d3700ac2378aac8",
-        "checkedAt": "2026-08-25T15:51:41.244Z",
+        "commit": "9fda86d468452c6abecde897637191b6a017e12f",
+        "checkedAt": "2026-09-11T08:30:15.734Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -61087,6 +61087,26 @@
             ],
             "commit": "ff3f028574fd9fb43414b0403a0e294393f9f039",
             "checkedAt": "2026-08-25T00:11:13.440Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a8d75f8529abb33078b5db0b1d3700ac2378aac8",
+          "validatedAt": "2026-08-25T15:51:41.244Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T08:30:15.734Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "salmun-nister/omarchy-luna",
+            "pluginIds": [
+              "salmun-nister.luna"
+            ],
+            "commit": "a8d75f8529abb33078b5db0b1d3700ac2378aac8",
+            "checkedAt": "2026-08-25T15:51:41.244Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
