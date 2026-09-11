@@ -551,7 +551,11 @@ test("explore UI follows marketplace geometry, readable type, and complete theme
 test("all semantic communities remain available in a compact labeled rail", () => {
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
-  assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*button\.setAttribute\("aria-label", `\$\{cluster\.label\}[\s\S]*community-name/);
+  assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
+  assert.match(script, /import \{ matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260911-01"/);
+  assert.match(script, /id: "taxonomy:vpn"[\s\S]*label: "VPN"[\s\S]*activeCluster === vpnCommunityFilter\.id[\s\S]*matchesVpnTaxonomy\(node\)/);
+  assert.match(script, /const vpnCount = explorer\.nodes\.filter\(matchesVpnTaxonomy\)\.length[\s\S]*findIndex\(\(cluster\) => cluster\.id === "security"\)[\s\S]*securityIndex \+ 1/);
+  assert.match(script, /button\.dataset\.filterKind = cluster\.taxonomy \? "taxonomy" : "community"[\s\S]*\$\{cluster\.label\} filter: \$\{number\.format\(cluster\.count\)\} matching plugins/);
   assert.match(styles, /\.graph-analysis\s*\{[\s\S]*bottom:\s*0[\s\S]*width:\s*102px/);
   assert.match(page, /id="community-scroll-fade"[^>]+aria-hidden="true"/);
   assert.doesNotMatch(page, /community-scroll-hint|>↓</);
@@ -573,6 +577,7 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(script, /document\.querySelector\("#graph-method"\)\.setAttribute\("aria-label", explorer\.method/);
   assert.match(script, /createExplorerSearchMatcher\(query\)/);
   assert.match(script, /graphReset\.addEventListener[\s\S]*allCommunities\.setAttribute\("aria-pressed", "true"\)[\s\S]*button\.setAttribute\("aria-pressed", "false"\)/);
+  assert.match(script, /button\.addEventListener\("click", \(\) => \{\s*if \(!matchesActiveCommunity\(candidate\)\) setActiveCluster\(null\);\s*selectNode\(candidate, true\);/);
   assert.match(styles, /\.detail-actions \.button\s*\{\s*justify-content:\s*center;\s*\}/);
   assert.doesNotMatch(styles, /\.explore-tabs button, \.explore-toolbar button\s*\{\s*transition:\s*none/);
 });

@@ -1,4 +1,8 @@
-const vpnPluginIds = new Set(["jwhall.omanodes"]);
+const vpnPluginIds = new Set([
+  "antesmd.amneziawg",
+  "io.github.feilian",
+  "jwhall.omanodes",
+]);
 
 const vpnIdentityTerms = new Set([
   "airvpn",
@@ -24,9 +28,27 @@ const vpnIdentityTerms = new Set([
 
 const securityScopedVpnIdentityTerms = new Set(["warp"]);
 const vpnDescriptionTerms = new Set(["vpn", "wireguard"]);
+const vpnActionTerms = new Set([
+  "connect",
+  "connection",
+  "connections",
+  "control",
+  "controls",
+  "disconnect",
+  "launcher",
+  "manager",
+  "status",
+  "switch",
+  "switching",
+  "toggle",
+  "toggles",
+  "tunnel",
+  "tunnels",
+]);
 
 function taxonomyTerms(value) {
-  return String(value || "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  if (typeof value !== "string") return [];
+  return value.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }
 
 export function matchesKidsTaxonomy(plugin) {
@@ -36,7 +58,7 @@ export function matchesKidsTaxonomy(plugin) {
 
 export function matchesVpnTaxonomy(plugin) {
   if (plugin?.category === "VPN") return true;
-  const pluginId = String(plugin?.id || "").toLowerCase();
+  const pluginId = typeof plugin?.id === "string" ? plugin.id.toLowerCase() : "";
   if (vpnPluginIds.has(pluginId)) return true;
   const localPluginId = pluginId.split(".").at(-1);
   const identityTerms = [localPluginId, plugin?.name]
@@ -45,9 +67,12 @@ export function matchesVpnTaxonomy(plugin) {
   if (identityTerms.some((term) => vpnIdentityTerms.has(term))) return true;
 
   const tags = Array.isArray(plugin?.tags) ? plugin.tags : [];
+  if (tags.includes("vpn")) return true;
   if (!tags.includes("security")) return false;
   if (identityTerms.some((term) => securityScopedVpnIdentityTerms.has(term))) return true;
-  return taxonomyTerms(plugin?.description).some((term) => vpnDescriptionTerms.has(term));
+  const descriptionTerms = taxonomyTerms(plugin?.description);
+  return descriptionTerms.some((term) => vpnDescriptionTerms.has(term))
+    && descriptionTerms.some((term) => vpnActionTerms.has(term));
 }
 
 export function catalogCategoryTotals(plugins) {

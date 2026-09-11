@@ -1183,11 +1183,17 @@ test("VPN catalog filtering requires exact category, VPN identity, or security-s
     { id: "example.client", name: "Client", category: "VPN", tags: [] },
     { id: "example.airvpn", name: "AirVPN", tags: [] },
     { id: "example.wireguard", name: "Tunnel", tags: [] },
+    { id: "antesmd.amneziawg", name: "Omazia", tags: ["system", "bar"], description: "Manage AmneziaWG tunnels." },
+    { id: "io.github.feilian", name: "飞连", tags: ["bar", "quickshell"], description: "Feilian VPN connection toggle." },
     { id: "jwhall.omanodes", name: "Omanodes", tags: ["system"], description: "Manage ZeroTier networks." },
     { id: "example.client", name: "Mullvad", tags: [] },
     { id: "example.client", name: "Tailscale", tags: [] },
     { id: "example.client", name: "ZeroTier", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["vpn"] },
     { id: "local.warp", name: "Cloudflare WARP", tags: ["security"] },
+    { id: "io.github.justspica.omaguard", name: "Omaguard", tags: ["bar", "quickshell", "security"], description: "Mullvad VPN state, connection, and server switching." },
+    { id: "ecylmz.omarchy-tunnel", name: "Omarchy Tunnel", tags: ["bar", "quickshell", "security"], description: "A WireGuard VPN manager with connect controls and tunnel status." },
+    { id: "jaabell.sshuttledeck", name: "SSHuttleDeck", tags: ["bar", "security", "quickshell"], description: "An SSH VPN tunnel launcher." },
     { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "VPN connection control." },
     { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "WireGuard connection control." },
   ]) {
@@ -1204,12 +1210,20 @@ test("VPN catalog filtering requires exact category, VPN identity, or security-s
     { id: "vpnvendor.notes", name: "Notes", tags: [] },
     { id: "example.notvpn", name: "Client", tags: [] },
     { id: "example.client", name: "NotVPN", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["VPN"] },
     { id: "example.client", name: "Client", tags: ["security"], description: "A notavpn helper." },
+    { id: "io.github.shirak-semonian.myip", name: "MyIP", tags: ["bar", "security", "system"], description: "Public IP history with a VPN-leak alert." },
+    { id: { toString: null }, name: ["VPN"], tags: [], description: { value: "VPN connection" } },
+    { id: 7, name: 8, tags: [], description: 9 },
     { id: "example.tunnel", name: "Tunnel", tags: "security", description: "VPN connection control." },
     { id: "example.tunnel", name: "Tunnel", tags: ["Security"], description: "WireGuard connection control." },
   ]) {
     assert.equal(matchesVpnTaxonomy(plugin), false);
   }
+
+  assert.doesNotThrow(() => catalogCategoryTotals([
+    { id: { toString: null }, name: ["VPN"], category: "Other", tags: [] },
+  ]));
 
   const totals = catalogCategoryTotals([
     { id: "example.vpn", category: "System", tags: [] },
@@ -1604,14 +1618,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /completion\.type === "fulltext" \? "text" : completion\.type/);
   assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
-  assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
+  assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security", "vpn"\]/);
   assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
   assert.match(files.app, /if \(filter === "VPN"\) return matchesVpnTaxonomy\(plugin\)/);
-  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)/);
+  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => value !== "VPN"\)/);
+  assert.match(files.app, /value: tag === "vpn" \? "VPN" : `tag:\$\{tag\}`[\s\S]*tag === "vpn" \? matchesVpnTaxonomy\(plugin\)/);
   assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /tags\.includes\("vpn"\)/);
   assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
-  assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"(?:kids|vpn)"/);
-  assert.match(files.app, /value: `tag:\$\{tag\}`/);
+  assert.match(files.sharedJs, /vpn: "VPN"/);
+  assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"kids"/);
   assert.match(files.app, /return labels\.length \? labels : \[category \|\| "System"\]/);
   assert.match(files.sharedJs, /function matchesVerificationStatus\(plugin, status\) \{[\s\S]*!plugin\?\.builtIn[\s\S]*plugin\?\.repositoryLayout !== "suite"[\s\S]*plugin\?\.verificationStatus === status/);
   assert.match(files.searchJs, /function fuzzyScore\(query, candidate\)/);
@@ -2342,10 +2358,10 @@ test("submission tags use the curated vocabulary across web and CLI formats", ()
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({
-      tags: "Games, Media",
+      tags: "Games, Media, VPN",
       includeSuggestedTag: false,
     })).tags,
-    ["games", "media"],
+    ["games", "media", "vpn"],
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({

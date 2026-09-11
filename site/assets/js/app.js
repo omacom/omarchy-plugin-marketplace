@@ -113,7 +113,7 @@ function cardTaxonomyLabels(plugin) {
 
 const engagementSorts = new Set(["views", "copies", "hearts"]);
 const verificationFilters = new Set(["verified", "unverified"]);
-const taxonomyFilterTags = ["ai", "games", "security"];
+const taxonomyFilterTags = ["ai", "games", "security", "vpn"];
 const sortOptions = {
   community: [
     ["added", "Recently added"],
@@ -1101,13 +1101,16 @@ function renderCategories() {
   const plugins = sourcePlugins();
   const categoryTotals = catalogCategoryTotals(plugins);
   const categoryFilters = [...categoryTotals.entries()]
+    .filter(([value]) => value !== "VPN")
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([value, total]) => ({ value, label: value, total }));
   const tagFilters = taxonomyFilterTags
     .map((tag) => ({
-      value: `tag:${tag}`,
+      value: tag === "vpn" ? "VPN" : `tag:${tag}`,
       label: displayTaxonomyTag(tag),
-      total: plugins.filter((plugin) => (plugin.tags || []).includes(tag)).length,
+      total: plugins.filter((plugin) => (
+        tag === "vpn" ? matchesVpnTaxonomy(plugin) : (plugin.tags || []).includes(tag)
+      )).length,
     }))
     .filter(({ total }) => total > 0);
   const filters = [

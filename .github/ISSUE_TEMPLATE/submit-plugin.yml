@@ -54,6 +54,7 @@ body:
         - Quickshell
         - Security
         - System
+        - VPN
         - Workspaces
     validations:
       required: true

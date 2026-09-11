@@ -47,6 +47,7 @@ Choose one to three tags:
 - `quickshell`
 - `security`
 - `system`
+- `vpn`
 - `workspaces`
 
 Copy category and tag values without the bullet marker or backticks. Categories are case-sensitive and must match the spelling above exactly. Tags may be comma-separated or entered one per line.

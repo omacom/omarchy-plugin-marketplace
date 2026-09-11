@@ -21,6 +21,7 @@ const taxonomyTagNames = Object.freeze({
   "power-management": "Power",
   security: "Security",
   system: "System",
+  vpn: "VPN",
   workspaces: "Workspace",
 });
 
