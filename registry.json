@@ -142814,8 +142814,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T11:19:18.515Z",
-      "listingValidatedCommit": "35fd32630527b1ab8c54dd663dc746689b13991b",
-      "listingValidatedAt": "2026-09-08T11:19:18.515Z",
+      "listingValidatedCommit": "da50316002b2c44c0f66c257d0b27bd6655ed89f",
+      "listingValidatedAt": "2026-09-11T08:16:04.807Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -142824,35 +142824,14 @@
         "pluginIds": [
           "io.github.andreiacodes.calendar"
         ],
-        "commit": "35fd32630527b1ab8c54dd663dc746689b13991b",
-        "checkedAt": "2026-09-08T11:19:18.444Z",
+        "commit": "da50316002b2c44c0f66c257d0b27bd6655ed89f",
+        "checkedAt": "2026-09-11T08:16:04.807Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "andreiacodes/omarchy-calendar-and-agenda",
-        "pluginIds": [
-          "io.github.andreiacodes.calendar"
-        ],
-        "commit": "35fd32630527b1ab8c54dd663dc746689b13991b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T11:19:18.444Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T02:45:25.512Z",
-        "requestEventId": 30749813979,
-        "requestedAt": "2026-09-08T11:07:34Z",
-        "reviewedAt": "2026-09-08T11:19:18.444Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.andreiacodes.calendar": {
@@ -142863,7 +142842,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andreiacodes/omarchy-calendar-and-agenda",
+        "pluginIds": [
+          "io.github.andreiacodes.calendar"
+        ],
+        "commit": "da50316002b2c44c0f66c257d0b27bd6655ed89f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T08:16:04.807Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T22:29:36.590Z",
+        "requestEventId": 30957237455,
+        "requestedAt": "2026-09-11T07:54:30Z",
+        "reviewedAt": "2026-09-11T08:16:04.807Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "35fd32630527b1ab8c54dd663dc746689b13991b",
+          "validatedAt": "2026-09-08T11:19:18.515Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T08:16:04.807Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andreiacodes/omarchy-calendar-and-agenda",
+            "pluginIds": [
+              "io.github.andreiacodes.calendar"
+            ],
+            "commit": "35fd32630527b1ab8c54dd663dc746689b13991b",
+            "checkedAt": "2026-09-08T11:19:18.444Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "andreiacodes/omarchy-calendar-and-agenda",
+            "pluginIds": [
+              "io.github.andreiacodes.calendar"
+            ],
+            "commit": "35fd32630527b1ab8c54dd663dc746689b13991b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T11:19:18.444Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T02:45:25.512Z",
+            "requestEventId": 30749813979,
+            "requestedAt": "2026-09-08T11:07:34Z",
+            "reviewedAt": "2026-09-08T11:19:18.444Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Codesmith28/omalt-tab",
