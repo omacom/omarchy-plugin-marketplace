@@ -93120,8 +93120,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T16:14:42.456Z",
-      "listingValidatedCommit": "f01fe358d3b16b9c3c170a7314271d00bf936fc7",
-      "listingValidatedAt": "2026-08-30T18:00:45.067Z",
+      "listingValidatedCommit": "ec3f769ce16b446ca38191d1d480a7a7ac2a1533",
+      "listingValidatedAt": "2026-09-11T16:00:39.979Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -93130,8 +93130,8 @@
         "pluginIds": [
           "jrmmhm.pocket"
         ],
-        "commit": "f01fe358d3b16b9c3c170a7314271d00bf936fc7",
-        "checkedAt": "2026-08-30T18:00:45.067Z",
+        "commit": "ec3f769ce16b446ca38191d1d480a7a7ac2a1533",
+        "checkedAt": "2026-09-11T16:00:39.979Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -93162,6 +93162,26 @@
             ],
             "commit": "3ad986069aaf24d41123a5205206cfcc61b3925c",
             "checkedAt": "2026-08-29T16:14:42.408Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "f01fe358d3b16b9c3c170a7314271d00bf936fc7",
+          "validatedAt": "2026-08-30T18:00:45.067Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T16:00:39.979Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jrmmhm/omarchy-pocket",
+            "pluginIds": [
+              "jrmmhm.pocket"
+            ],
+            "commit": "f01fe358d3b16b9c3c170a7314271d00bf936fc7",
+            "checkedAt": "2026-08-30T18:00:45.067Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
