@@ -157726,6 +157726,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdadirri/omarchy-sydney-train-planer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T09:56:35.009Z",
+      "listingValidatedCommit": "65a4ae60895b4883932699f1dbe57c8984ca9e6b",
+      "listingValidatedAt": "2026-09-11T09:56:35.009Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdadirri/omarchy-sydney-train-planer",
+        "pluginIds": [
+          "io.github.ozdadirri.sydney-train-planer"
+        ],
+        "commit": "65a4ae60895b4883932699f1dbe57c8984ca9e6b",
+        "checkedAt": "2026-09-11T09:56:34.941Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ozdadirri.sydney-train-planer": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
