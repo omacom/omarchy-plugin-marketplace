@@ -124545,8 +124545,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T16:49:32.036Z",
-      "listingValidatedCommit": "3ff433f648c9220caff9c99804344974fc32689e",
-      "listingValidatedAt": "2026-09-04T16:49:32.036Z",
+      "listingValidatedCommit": "02a5f52d5d341e00428dd9344ae0bb1557844a04",
+      "listingValidatedAt": "2026-09-11T14:10:06.401Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -124555,8 +124555,8 @@
         "pluginIds": [
           "nugget210.oma-sleeper"
         ],
-        "commit": "3ff433f648c9220caff9c99804344974fc32689e",
-        "checkedAt": "2026-09-04T16:49:31.976Z",
+        "commit": "02a5f52d5d341e00428dd9344ae0bb1557844a04",
+        "checkedAt": "2026-09-11T14:10:06.401Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -124576,7 +124576,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3ff433f648c9220caff9c99804344974fc32689e",
+          "validatedAt": "2026-09-04T16:49:32.036Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:10:06.401Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nugget210/oma-sleeper",
+            "pluginIds": [
+              "nugget210.oma-sleeper"
+            ],
+            "commit": "3ff433f648c9220caff9c99804344974fc32689e",
+            "checkedAt": "2026-09-04T16:49:31.976Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/BVisagie/omarchy-omapihole",
