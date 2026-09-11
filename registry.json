@@ -154684,6 +154684,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mrdulasolutions/Omarchy-PAIR",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T00:38:20.049Z",
+      "listingValidatedCommit": "849465beebbc2152f3d7cdad84091d2a2bb07c10",
+      "listingValidatedAt": "2026-09-11T00:38:20.049Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrdulasolutions/omarchy-pair",
+        "pluginIds": [
+          "io.github.mrdulasolutions.pair"
+        ],
+        "commit": "849465beebbc2152f3d7cdad84091d2a2bb07c10",
+        "checkedAt": "2026-09-11T00:38:19.978Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mrdulasolutions/omarchy-pair",
+        "pluginIds": [
+          "io.github.mrdulasolutions.pair"
+        ],
+        "commit": "849465beebbc2152f3d7cdad84091d2a2bb07c10",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T00:38:19.978Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T00:02:40.732Z",
+        "requestEventId": 30938956770,
+        "requestedAt": "2026-09-11T00:05:10Z",
+        "reviewedAt": "2026-09-11T00:38:19.978Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mrdulasolutions.pair": {
+          "category": "System",
+          "tags": [
+            "ai",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
