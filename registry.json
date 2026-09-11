@@ -9873,8 +9873,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-16",
       "listedAt": "2026-08-16T06:29:54.137Z",
-      "listingValidatedCommit": "33970f190f619bf064a885a0d0b5ac277a00018c",
-      "listingValidatedAt": "2026-08-22T14:46:58.819Z",
+      "listingValidatedCommit": "51a27c15636e7199a20bb83da026f7ff9384457c",
+      "listingValidatedAt": "2026-09-11T15:38:04.083Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -9883,8 +9883,8 @@
         "pluginIds": [
           "andrewbacon.canon"
         ],
-        "commit": "33970f190f619bf064a885a0d0b5ac277a00018c",
-        "checkedAt": "2026-08-22T14:46:58.819Z",
+        "commit": "51a27c15636e7199a20bb83da026f7ff9384457c",
+        "checkedAt": "2026-09-11T15:38:04.083Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -9908,6 +9908,26 @@
             "version": "3",
             "commit": "a7b427cf497f4353ce68c2e53716033f4220fbd7",
             "checkedAt": "2026-08-16T03:10:44.663Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "33970f190f619bf064a885a0d0b5ac277a00018c",
+          "validatedAt": "2026-08-22T14:46:58.819Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T15:38:04.083Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ramenpacket84/canon",
+            "pluginIds": [
+              "andrewbacon.canon"
+            ],
+            "commit": "33970f190f619bf064a885a0d0b5ac277a00018c",
+            "checkedAt": "2026-08-22T14:46:58.819Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
