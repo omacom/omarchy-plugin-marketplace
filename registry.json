@@ -145854,8 +145854,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:59:56.603Z",
-      "listingValidatedCommit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
-      "listingValidatedAt": "2026-09-08T12:59:56.603Z",
+      "listingValidatedCommit": "395b7944ca72fee9b37b765cd1d60addbf59c74c",
+      "listingValidatedAt": "2026-09-11T14:47:03.066Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -145864,35 +145864,14 @@
         "pluginIds": [
           "brianirish.screensaver"
         ],
-        "commit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
-        "checkedAt": "2026-09-08T12:59:56.528Z",
+        "commit": "395b7944ca72fee9b37b765cd1d60addbf59c74c",
+        "checkedAt": "2026-09-11T14:47:03.066Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "brianirish/omarchy-screensaver-panel",
-        "pluginIds": [
-          "brianirish.screensaver"
-        ],
-        "commit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T12:59:56.528Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T00:33:49.673Z",
-        "requestEventId": 30755447176,
-        "requestedAt": "2026-09-08T12:46:30Z",
-        "reviewedAt": "2026-09-08T12:59:56.528Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "brianirish.screensaver": {
@@ -145904,7 +145883,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brianirish/omarchy-screensaver-panel",
+        "pluginIds": [
+          "brianirish.screensaver"
+        ],
+        "commit": "395b7944ca72fee9b37b765cd1d60addbf59c74c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T14:47:03.066Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T17:57:39.188Z",
+        "requestEventId": 30975498614,
+        "requestedAt": "2026-09-11T13:43:41Z",
+        "reviewedAt": "2026-09-11T14:47:03.066Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
+          "validatedAt": "2026-09-08T12:59:56.603Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T14:47:03.066Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "brianirish/omarchy-screensaver-panel",
+            "pluginIds": [
+              "brianirish.screensaver"
+            ],
+            "commit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
+            "checkedAt": "2026-09-08T12:59:56.528Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "brianirish/omarchy-screensaver-panel",
+            "pluginIds": [
+              "brianirish.screensaver"
+            ],
+            "commit": "9f02a6b8b9e4e863734b501cf57bbdcf3130d844",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T12:59:56.528Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T00:33:49.673Z",
+            "requestEventId": 30755447176,
+            "requestedAt": "2026-09-08T12:46:30Z",
+            "reviewedAt": "2026-09-08T12:59:56.528Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/joaodrp/omarchy-green-room",
