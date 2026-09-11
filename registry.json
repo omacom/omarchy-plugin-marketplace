@@ -145151,8 +145151,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:40:11.102Z",
-      "listingValidatedCommit": "3940df1465bd5fa85541880058ac93745f69cfca",
-      "listingValidatedAt": "2026-09-08T12:40:11.102Z",
+      "listingValidatedCommit": "5407839893e836d10cdeda4e62301dde4b41e55f",
+      "listingValidatedAt": "2026-09-11T13:49:29.701Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -145161,8 +145161,8 @@
         "pluginIds": [
           "org.omacalendar.widget"
         ],
-        "commit": "3940df1465bd5fa85541880058ac93745f69cfca",
-        "checkedAt": "2026-09-08T12:40:11.037Z",
+        "commit": "5407839893e836d10cdeda4e62301dde4b41e55f",
+        "checkedAt": "2026-09-11T13:49:29.701Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -145171,29 +145171,6 @@
           "package-manager",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "brdweb/omacalendar-widget",
-        "pluginIds": [
-          "org.omacalendar.widget"
-        ],
-        "commit": "3940df1465bd5fa85541880058ac93745f69cfca",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T12:40:11.037Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-07T13:14:01.767Z",
-        "requestEventId": 30754263326,
-        "requestedAt": "2026-09-08T12:26:35Z",
-        "reviewedAt": "2026-09-08T12:40:11.037Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "org.omacalendar.widget": {
@@ -145204,7 +145181,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brdweb/omacalendar-widget",
+        "pluginIds": [
+          "org.omacalendar.widget"
+        ],
+        "commit": "5407839893e836d10cdeda4e62301dde4b41e55f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T13:49:29.701Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-10T01:30:30.369Z",
+        "requestEventId": 30974001495,
+        "requestedAt": "2026-09-11T13:17:06Z",
+        "reviewedAt": "2026-09-11T13:49:29.701Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3940df1465bd5fa85541880058ac93745f69cfca",
+          "validatedAt": "2026-09-08T12:40:11.102Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T13:49:29.701Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "brdweb/omacalendar-widget",
+            "pluginIds": [
+              "org.omacalendar.widget"
+            ],
+            "commit": "3940df1465bd5fa85541880058ac93745f69cfca",
+            "checkedAt": "2026-09-08T12:40:11.037Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "brdweb/omacalendar-widget",
+            "pluginIds": [
+              "org.omacalendar.widget"
+            ],
+            "commit": "3940df1465bd5fa85541880058ac93745f69cfca",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T12:40:11.037Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-07T13:14:01.767Z",
+            "requestEventId": 30754263326,
+            "requestedAt": "2026-09-08T12:26:35Z",
+            "reviewedAt": "2026-09-08T12:40:11.037Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cfaulkingham/quickmap",
