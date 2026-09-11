@@ -149309,8 +149309,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T21:00:40.635Z",
-      "listingValidatedCommit": "dc4fd8f53fad106d77dd90f8b20f609fce4576db",
-      "listingValidatedAt": "2026-09-08T21:00:40.635Z",
+      "listingValidatedCommit": "9df27e62601dbe7a0a38c9177a6a296423426161",
+      "listingValidatedAt": "2026-09-11T09:06:50.551Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -149319,8 +149319,8 @@
         "pluginIds": [
           "data-goblin.fileblade-mcp"
         ],
-        "commit": "dc4fd8f53fad106d77dd90f8b20f609fce4576db",
-        "checkedAt": "2026-09-08T21:00:40.555Z",
+        "commit": "9df27e62601dbe7a0a38c9177a6a296423426161",
+        "checkedAt": "2026-09-11T09:06:50.551Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -149336,7 +149336,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "dc4fd8f53fad106d77dd90f8b20f609fce4576db",
+          "validatedAt": "2026-09-08T21:00:40.635Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T09:06:50.551Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "data-goblin/fileblade-mcp",
+            "pluginIds": [
+              "data-goblin.fileblade-mcp"
+            ],
+            "commit": "dc4fd8f53fad106d77dd90f8b20f609fce4576db",
+            "checkedAt": "2026-09-08T21:00:40.555Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/HANCORE-linux/OmaQ",
