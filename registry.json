@@ -25993,8 +25993,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T21:56:20.335Z",
-      "listingValidatedCommit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
-      "listingValidatedAt": "2026-08-19T21:56:20.335Z",
+      "listingValidatedCommit": "0968d77124ed72b207035e5f4f7b70509822a3d6",
+      "listingValidatedAt": "2026-09-11T06:34:14.229Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -26003,8 +26003,8 @@
         "pluginIds": [
           "io.github.zachwilke.mx"
         ],
-        "commit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
-        "checkedAt": "2026-08-29T18:48:03.415Z",
+        "commit": "0968d77124ed72b207035e5f4f7b70509822a3d6",
+        "checkedAt": "2026-09-11T06:34:14.229Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -26028,22 +26028,69 @@
         "pluginIds": [
           "io.github.zachwilke.mx"
         ],
-        "commit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
+        "commit": "0968d77124ed72b207035e5f4f7b70509822a3d6",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-29T18:48:03.415Z",
+        "baselineCheckedAt": "2026-09-11T06:34:14.229Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-29T18:45:36.586Z",
-        "requestEventId": 30217811804,
-        "requestedAt": "2026-08-29T18:46:58Z",
-        "reviewedAt": "2026-08-29T18:48:03.415Z",
+        "reviewedBaselineCheckedAt": "2026-09-08T02:26:34.599Z",
+        "requestEventId": 30953463517,
+        "requestedAt": "2026-09-11T06:33:01Z",
+        "reviewedAt": "2026-09-11T06:34:14.229Z",
         "reviewer": "HANCORE-linux"
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
+          "validatedAt": "2026-08-19T21:56:20.335Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T06:34:14.229Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zachwilke/omarchy-mxcontrol",
+            "pluginIds": [
+              "io.github.zachwilke.mx"
+            ],
+            "commit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
+            "checkedAt": "2026-08-29T18:48:03.415Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "zachwilke/omarchy-mxcontrol",
+            "pluginIds": [
+              "io.github.zachwilke.mx"
+            ],
+            "commit": "1995034413db153c6c25df37fd77db89e2aaa3e9",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-29T18:48:03.415Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-29T18:45:36.586Z",
+            "requestEventId": 30217811804,
+            "requestedAt": "2026-08-29T18:46:58Z",
+            "reviewedAt": "2026-08-29T18:48:03.415Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Erruviel/omarchy-docker",
