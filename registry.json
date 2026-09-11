@@ -23450,8 +23450,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T15:42:28.647Z",
-      "listingValidatedCommit": "3df60f12cafba5f7f36b694fd398dba894fcecdb",
-      "listingValidatedAt": "2026-08-22T14:49:14.338Z",
+      "listingValidatedCommit": "9dc633baaf0ce9d63c12c67fc7fae91b87dc0f9b",
+      "listingValidatedAt": "2026-09-11T08:36:06.121Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -23460,8 +23460,8 @@
         "pluginIds": [
           "salmun-nister.next-race"
         ],
-        "commit": "3df60f12cafba5f7f36b694fd398dba894fcecdb",
-        "checkedAt": "2026-08-22T14:49:14.338Z",
+        "commit": "9dc633baaf0ce9d63c12c67fc7fae91b87dc0f9b",
+        "checkedAt": "2026-09-11T08:36:06.121Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -23492,6 +23492,26 @@
             ],
             "commit": "5ff5df0bf492ad9bd624fa26bdf99924eaf0e317",
             "checkedAt": "2026-08-19T04:20:44.451Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "3df60f12cafba5f7f36b694fd398dba894fcecdb",
+          "validatedAt": "2026-08-22T14:49:14.338Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T08:36:06.121Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "salmun-nister/omarchy-next-race",
+            "pluginIds": [
+              "salmun-nister.next-race"
+            ],
+            "commit": "3df60f12cafba5f7f36b694fd398dba894fcecdb",
+            "checkedAt": "2026-08-22T14:49:14.338Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
