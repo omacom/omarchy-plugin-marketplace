@@ -78998,8 +78998,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T22:31:52.324Z",
-      "listingValidatedCommit": "53da842d6d1a7ae177b56b94da2a7bd6c991a72f",
-      "listingValidatedAt": "2026-09-02T00:23:43.643Z",
+      "listingValidatedCommit": "9f6b8a27ea41a096cfdc238588430b55a4749278",
+      "listingValidatedAt": "2026-09-11T16:20:20.215Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -79008,8 +79008,8 @@
         "pluginIds": [
           "io.github.andreivinca.note-note"
         ],
-        "commit": "53da842d6d1a7ae177b56b94da2a7bd6c991a72f",
-        "checkedAt": "2026-09-02T00:23:43.642Z",
+        "commit": "9f6b8a27ea41a096cfdc238588430b55a4749278",
+        "checkedAt": "2026-09-11T16:20:20.215Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -79060,6 +79060,26 @@
             ],
             "commit": "1d2297dd95f2a48bd71934ba8fac0684170d4811",
             "checkedAt": "2026-08-30T09:25:52.767Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "53da842d6d1a7ae177b56b94da2a7bd6c991a72f",
+          "validatedAt": "2026-09-02T00:23:43.643Z",
+          "branch": "master",
+          "supersededAt": "2026-09-11T16:20:20.215Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andreivinca/omarchy-note-note",
+            "pluginIds": [
+              "io.github.andreivinca.note-note"
+            ],
+            "commit": "53da842d6d1a7ae177b56b94da2a7bd6c991a72f",
+            "checkedAt": "2026-09-02T00:23:43.642Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
