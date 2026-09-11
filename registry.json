@@ -114349,8 +114349,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T14:04:23.306Z",
-      "listingValidatedCommit": "7d4bc1eadb912a56bccd188a144d9e875353d447",
-      "listingValidatedAt": "2026-09-01T14:04:23.306Z",
+      "listingValidatedCommit": "71b18dd621360b1b7ccc0399a3433683d0d00931",
+      "listingValidatedAt": "2026-09-11T18:38:59.188Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -114359,8 +114359,8 @@
         "pluginIds": [
           "ianswope.homebridge"
         ],
-        "commit": "7d4bc1eadb912a56bccd188a144d9e875353d447",
-        "checkedAt": "2026-09-01T14:04:23.243Z",
+        "commit": "71b18dd621360b1b7ccc0399a3433683d0d00931",
+        "checkedAt": "2026-09-11T18:38:59.187Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -114380,7 +114380,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7d4bc1eadb912a56bccd188a144d9e875353d447",
+          "validatedAt": "2026-09-01T14:04:23.306Z",
+          "branch": "main",
+          "supersededAt": "2026-09-11T18:38:59.188Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ianswope/omarchy-homebridge",
+            "pluginIds": [
+              "ianswope.homebridge"
+            ],
+            "commit": "7d4bc1eadb912a56bccd188a144d9e875353d447",
+            "checkedAt": "2026-09-01T14:04:23.243Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/gregoftheweb/omarchy-loderunner",
