@@ -156276,6 +156276,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/onelegdave/system-quikview",
+      "type": "plugin-source",
+      "addedAt": "2026-09-11",
+      "listedAt": "2026-09-11T07:35:50.242Z",
+      "listingValidatedCommit": "248ed116bafb6e7452d0f5ce830e4a9446dbd349",
+      "listingValidatedAt": "2026-09-11T07:35:50.242Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "onelegdave/system-quikview",
+        "pluginIds": [
+          "onelegdave.system-quikview"
+        ],
+        "commit": "248ed116bafb6e7452d0f5ce830e4a9446dbd349",
+        "checkedAt": "2026-09-11T07:35:50.171Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "onelegdave/system-quikview",
+        "pluginIds": [
+          "onelegdave.system-quikview"
+        ],
+        "commit": "248ed116bafb6e7452d0f5ce830e4a9446dbd349",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:35:50.171Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T07:10:38.285Z",
+        "requestEventId": 30956279658,
+        "requestedAt": "2026-09-11T07:34:36Z",
+        "reviewedAt": "2026-09-11T07:35:50.171Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "onelegdave.system-quikview": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
