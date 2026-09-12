@@ -85651,8 +85651,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T00:45:13.211Z",
-      "listingValidatedCommit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
-      "listingValidatedAt": "2026-09-11T08:27:27.314Z",
+      "listingValidatedCommit": "f117e6c9d3b1efd8f1ee3da3481bbdb6c501f576",
+      "listingValidatedAt": "2026-09-12T21:15:59.591Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -85661,8 +85661,8 @@
         "pluginIds": [
           "halmylyseas.ristretto"
         ],
-        "commit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
-        "checkedAt": "2026-09-11T08:27:27.314Z",
+        "commit": "f117e6c9d3b1efd8f1ee3da3481bbdb6c501f576",
+        "checkedAt": "2026-09-12T21:15:59.591Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -85810,6 +85810,49 @@
             "reviewedAt": "2026-08-30T10:56:27.392Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
+          "validatedAt": "2026-09-11T08:27:27.314Z",
+          "branch": "master",
+          "supersededAt": "2026-09-12T21:15:59.591Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "halmylyseas/omarchy-ristretto",
+            "pluginIds": [
+              "halmylyseas.ristretto"
+            ],
+            "commit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
+            "checkedAt": "2026-09-11T08:27:27.314Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "halmylyseas/omarchy-ristretto",
+            "pluginIds": [
+              "halmylyseas.ristretto"
+            ],
+            "commit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T08:27:27.314Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T23:42:17.368Z",
+            "requestEventId": 30957532130,
+            "requestedAt": "2026-09-11T08:00:37Z",
+            "reviewedAt": "2026-09-11T08:27:27.314Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -85818,19 +85861,19 @@
         "pluginIds": [
           "halmylyseas.ristretto"
         ],
-        "commit": "0b4c5757b305c1c3501901eeb505fafc8c5dffcb",
+        "commit": "f117e6c9d3b1efd8f1ee3da3481bbdb6c501f576",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T08:27:27.314Z",
+        "baselineCheckedAt": "2026-09-12T21:15:59.591Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-08T23:42:17.368Z",
-        "requestEventId": 30957532130,
-        "requestedAt": "2026-09-11T08:00:37Z",
-        "reviewedAt": "2026-09-11T08:27:27.314Z",
+        "reviewedBaselineCheckedAt": "2026-09-11T22:41:36.871Z",
+        "requestEventId": 31032960617,
+        "requestedAt": "2026-09-12T20:52:59Z",
+        "reviewedAt": "2026-09-12T21:15:59.591Z",
         "reviewer": "HANCORE-linux"
       }
     },
