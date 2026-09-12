@@ -163611,6 +163611,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sahilhuseynzade/ipsumbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T15:34:32.991Z",
+      "listingValidatedCommit": "8ca1dcd4d6ea7752d5d862bca735f8ba5e77acb2",
+      "listingValidatedAt": "2026-09-12T15:34:32.991Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sahilhuseynzade/ipsumbar",
+        "pluginIds": [
+          "shl.ipsumbar"
+        ],
+        "commit": "8ca1dcd4d6ea7752d5d862bca735f8ba5e77acb2",
+        "checkedAt": "2026-09-12T15:34:32.918Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shl.ipsumbar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
