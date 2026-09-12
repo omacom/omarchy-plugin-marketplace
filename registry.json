@@ -163260,6 +163260,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/OuttaSpaceTime/ompom-engine",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T11:00:09.293Z",
+      "listingValidatedCommit": "d7d70fcef5943df55fe6220bb53b93d58ee420e8",
+      "listingValidatedAt": "2026-09-12T11:00:09.293Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "outtaspacetime/ompom-engine",
+        "pluginIds": [
+          "ompom.engine"
+        ],
+        "commit": "d7d70fcef5943df55fe6220bb53b93d58ee420e8",
+        "checkedAt": "2026-09-12T11:00:09.218Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ompom.engine": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
