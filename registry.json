@@ -162559,6 +162559,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lateralcoders/omarchy-workspace-thumbs",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T00:35:14.999Z",
+      "listingValidatedCommit": "2c916ff0c9891e07f073539b637e827107d7a7d5",
+      "listingValidatedAt": "2026-09-12T00:35:14.999Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lateralcoders/omarchy-workspace-thumbs",
+        "pluginIds": [
+          "io.github.lateralcoders.workspace-thumbs"
+        ],
+        "commit": "2c916ff0c9891e07f073539b637e827107d7a7d5",
+        "checkedAt": "2026-09-12T00:35:14.928Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lateralcoders.workspace-thumbs": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
