@@ -163292,6 +163292,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/OuttaSpaceTime/ompom-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T11:05:20.130Z",
+      "listingValidatedCommit": "5733a9b19f511a36e9d1327ddb386f6932ac0d55",
+      "listingValidatedAt": "2026-09-12T11:05:20.130Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "outtaspacetime/ompom-bar",
+        "pluginIds": [
+          "ompom.bar"
+        ],
+        "commit": "5733a9b19f511a36e9d1327ddb386f6932ac0d55",
+        "checkedAt": "2026-09-12T11:05:20.057Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ompom.bar": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
