@@ -163771,6 +163771,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Linar46/aether-opacity",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T17:17:41.754Z",
+      "listingValidatedCommit": "5300ac50f265bbdbc840b588cd32b8c68793463a",
+      "listingValidatedAt": "2026-09-12T17:17:41.754Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "linar46/aether-opacity",
+        "pluginIds": [
+          "io.github.linar46.aether-opacity"
+        ],
+        "commit": "5300ac50f265bbdbc840b588cd32b8c68793463a",
+        "checkedAt": "2026-09-12T17:17:41.676Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "linar46/aether-opacity",
+        "pluginIds": [
+          "io.github.linar46.aether-opacity"
+        ],
+        "commit": "5300ac50f265bbdbc840b588cd32b8c68793463a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T17:17:41.676Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T17:14:11.934Z",
+        "requestEventId": 31027813444,
+        "requestedAt": "2026-09-12T17:16:20Z",
+        "reviewedAt": "2026-09-12T17:17:41.676Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.linar46.aether-opacity": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
