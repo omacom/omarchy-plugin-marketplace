@@ -162715,6 +162715,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulogeyer/omarchy-piano-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T05:57:53.063Z",
+      "listingValidatedCommit": "07c3c60cad37bc08211e561ad3e254100833b81c",
+      "listingValidatedAt": "2026-09-12T05:57:53.063Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulogeyer/omarchy-piano-mode",
+        "pluginIds": [
+          "casio.wu-bt10-piano"
+        ],
+        "commit": "07c3c60cad37bc08211e561ad3e254100833b81c",
+        "checkedAt": "2026-09-12T05:57:52.982Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "casio.wu-bt10-piano": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
