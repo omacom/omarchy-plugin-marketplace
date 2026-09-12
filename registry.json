@@ -162968,6 +162968,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/itsgg/omarchy-readline-keys",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T09:20:03.065Z",
+      "listingValidatedCommit": "e99496d9bff54faee5e18bd0a54bf61d18601c5b",
+      "listingValidatedAt": "2026-09-12T09:20:03.065Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "itsgg/omarchy-readline-keys",
+        "pluginIds": [
+          "io.github.itsgg.readline-keys"
+        ],
+        "commit": "e99496d9bff54faee5e18bd0a54bf61d18601c5b",
+        "checkedAt": "2026-09-12T09:20:03.004Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.itsgg.readline-keys": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
