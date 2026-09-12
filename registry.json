@@ -154165,8 +154165,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T01:23:08.579Z",
-      "listingValidatedCommit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
-      "listingValidatedAt": "2026-09-09T01:23:08.579Z",
+      "listingValidatedCommit": "933a245fd50f7bd9def87b46808a452d3f5008ce",
+      "listingValidatedAt": "2026-09-12T00:06:40.809Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -154175,43 +154175,17 @@
         "pluginIds": [
           "evindor.keystroke"
         ],
-        "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
-        "checkedAt": "2026-09-09T01:23:08.495Z",
+        "commit": "933a245fd50f7bd9def87b46808a452d3f5008ce",
+        "checkedAt": "2026-09-12T00:06:40.809Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "installer",
-          "remote-build",
-          "service-management",
+          "bundled-executable-binary",
+          "privilege",
           "package-manager",
-          "privilege"
+          "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "evindor/keystroke",
-        "pluginIds": [
-          "evindor.keystroke"
-        ],
-        "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-09T01:23:08.495Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "remote-build",
-          "service-management",
-          "package-manager",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T13:06:55.152Z",
-        "requestEventId": 30795202044,
-        "requestedAt": "2026-09-09T01:22:02Z",
-        "reviewedAt": "2026-09-09T01:23:08.495Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "evindor.keystroke": {
@@ -154223,7 +154197,84 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "evindor/keystroke",
+        "pluginIds": [
+          "evindor.keystroke"
+        ],
+        "commit": "933a245fd50f7bd9def87b46808a452d3f5008ce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T00:06:40.809Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T20:12:21.346Z",
+        "requestEventId": 31005329276,
+        "requestedAt": "2026-09-12T00:04:06Z",
+        "reviewedAt": "2026-09-12T00:06:40.809Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+          "validatedAt": "2026-09-09T01:23:08.579Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T00:06:40.809Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "evindor/keystroke",
+            "pluginIds": [
+              "evindor.keystroke"
+            ],
+            "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+            "checkedAt": "2026-09-09T01:23:08.495Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "remote-build",
+              "service-management",
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "evindor/keystroke",
+            "pluginIds": [
+              "evindor.keystroke"
+            ],
+            "commit": "4e7409b9b6a4cf025d971c84a9b4523ae935e924",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-09T01:23:08.495Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "remote-build",
+              "service-management",
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T13:06:55.152Z",
+            "requestEventId": 30795202044,
+            "requestedAt": "2026-09-09T01:22:02Z",
+            "reviewedAt": "2026-09-09T01:23:08.495Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/luinbytes/omarchy-dynamic-island",
