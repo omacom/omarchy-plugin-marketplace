@@ -163508,6 +163508,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kingokeke/dynamic-workspace-dots",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T14:55:02.040Z",
+      "listingValidatedCommit": "1cbbb67092252496fde427b5c8dab6ce808f3029",
+      "listingValidatedAt": "2026-09-12T14:55:02.040Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kingokeke/dynamic-workspace-dots",
+        "pluginIds": [
+          "io.github.kingokeke.workspace-dots"
+        ],
+        "commit": "1cbbb67092252496fde427b5c8dab6ce808f3029",
+        "checkedAt": "2026-09-12T14:55:01.978Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kingokeke.workspace-dots": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
