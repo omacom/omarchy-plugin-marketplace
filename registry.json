@@ -162840,6 +162840,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kaibur02/omarchy-world-radio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T08:38:22.554Z",
+      "listingValidatedCommit": "e6565e3bd1829d7688b39be2ef4b4ee2ab2addf3",
+      "listingValidatedAt": "2026-09-12T08:38:22.554Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kaibur02/omarchy-world-radio",
+        "pluginIds": [
+          "io.github.kaibur02.omarchy-world-radio"
+        ],
+        "commit": "e6565e3bd1829d7688b39be2ef4b4ee2ab2addf3",
+        "checkedAt": "2026-09-12T08:38:22.468Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kaibur02.omarchy-world-radio": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
