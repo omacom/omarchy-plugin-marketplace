@@ -161619,8 +161619,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T18:54:10.881Z",
-      "listingValidatedCommit": "86f19f4797ba232a90042dd36d34384defbf9b02",
-      "listingValidatedAt": "2026-09-11T18:54:10.881Z",
+      "listingValidatedCommit": "f715bc26283522995a10b894f63394e29cfa6f92",
+      "listingValidatedAt": "2026-09-12T20:54:08.148Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -161629,35 +161629,14 @@
         "pluginIds": [
           "reidenxerx.idle-dim"
         ],
-        "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
-        "checkedAt": "2026-09-11T18:54:10.805Z",
+        "commit": "f715bc26283522995a10b894f63394e29cfa6f92",
+        "checkedAt": "2026-09-12T20:54:08.148Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "reidenxerx/omarchy-idle-dim",
-        "pluginIds": [
-          "reidenxerx.idle-dim"
-        ],
-        "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T18:54:10.805Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-11T18:06:24.946Z",
-        "requestEventId": 30992764495,
-        "requestedAt": "2026-09-11T18:44:14Z",
-        "reviewedAt": "2026-09-11T18:54:10.805Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "reidenxerx.idle-dim": {
@@ -161669,7 +161648,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-idle-dim",
+        "pluginIds": [
+          "reidenxerx.idle-dim"
+        ],
+        "commit": "f715bc26283522995a10b894f63394e29cfa6f92",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T20:54:08.148Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T19:46:21.102Z",
+        "requestEventId": 31032956313,
+        "requestedAt": "2026-09-12T20:52:47Z",
+        "reviewedAt": "2026-09-12T20:54:08.148Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+          "validatedAt": "2026-09-11T18:54:10.881Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T20:54:08.148Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reidenxerx/omarchy-idle-dim",
+            "pluginIds": [
+              "reidenxerx.idle-dim"
+            ],
+            "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+            "checkedAt": "2026-09-11T18:54:10.805Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "reidenxerx/omarchy-idle-dim",
+            "pluginIds": [
+              "reidenxerx.idle-dim"
+            ],
+            "commit": "86f19f4797ba232a90042dd36d34384defbf9b02",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T18:54:10.805Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-11T18:06:24.946Z",
+            "requestEventId": 30992764495,
+            "requestedAt": "2026-09-11T18:44:14Z",
+            "reviewedAt": "2026-09-11T18:54:10.805Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ReidenXerx/omarchy-keyboard-layout-per-app",
