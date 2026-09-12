@@ -164175,6 +164175,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NIPSEN/omarchy-dell-power",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T18:29:36.651Z",
+      "listingValidatedCommit": "dc8411137c342099ee30f7ccc31e2809668ad28d",
+      "listingValidatedAt": "2026-09-12T18:29:36.651Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nipsen/omarchy-dell-power",
+        "pluginIds": [
+          "io.github.nipsen.dell-power"
+        ],
+        "commit": "dc8411137c342099ee30f7ccc31e2809668ad28d",
+        "checkedAt": "2026-09-12T18:29:36.579Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nipsen/omarchy-dell-power",
+        "pluginIds": [
+          "io.github.nipsen.dell-power"
+        ],
+        "commit": "dc8411137c342099ee30f7ccc31e2809668ad28d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T18:29:36.579Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T18:24:00.669Z",
+        "requestEventId": 31029516676,
+        "requestedAt": "2026-09-12T18:28:28Z",
+        "reviewedAt": "2026-09-12T18:29:36.579Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nipsen.dell-power": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
