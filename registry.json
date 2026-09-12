@@ -164456,6 +164456,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/woganmay/nature-mood",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T19:26:29.115Z",
+      "listingValidatedCommit": "5de2206d2e9a964b6dac534057bfcd6147a264ab",
+      "listingValidatedAt": "2026-09-12T19:26:29.115Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "woganmay/nature-mood",
+        "pluginIds": [
+          "woganmay.nature-mood"
+        ],
+        "commit": "5de2206d2e9a964b6dac534057bfcd6147a264ab",
+        "checkedAt": "2026-09-12T19:26:29.047Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "woganmay.nature-mood": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
