@@ -164558,6 +164558,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dorianorellanobbap/omarchy-jarvis",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T20:29:13.884Z",
+      "listingValidatedCommit": "17c39b666ce88853602bc5099d82867eb0d6956c",
+      "listingValidatedAt": "2026-09-12T20:29:13.884Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dorianorellanobbap/omarchy-jarvis",
+        "pluginIds": [
+          "dorian.voice"
+        ],
+        "commit": "17c39b666ce88853602bc5099d82867eb0d6956c",
+        "checkedAt": "2026-09-12T20:29:13.802Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dorianorellanobbap/omarchy-jarvis",
+        "pluginIds": [
+          "dorian.voice"
+        ],
+        "commit": "17c39b666ce88853602bc5099d82867eb0d6956c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T20:29:13.802Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T05:33:54.536Z",
+        "requestEventId": 31032230547,
+        "requestedAt": "2026-09-12T20:22:19Z",
+        "reviewedAt": "2026-09-12T20:29:13.802Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dorian.voice": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
