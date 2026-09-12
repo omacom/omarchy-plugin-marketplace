@@ -161835,8 +161835,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T19:02:38.464Z",
-      "listingValidatedCommit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
-      "listingValidatedAt": "2026-09-11T19:02:38.464Z",
+      "listingValidatedCommit": "3506120b6033c9d1457fb40c1c03fd052ab505dd",
+      "listingValidatedAt": "2026-09-12T20:56:56.974Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -161845,35 +161845,14 @@
         "pluginIds": [
           "reidenxerx.cockpit"
         ],
-        "commit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
-        "checkedAt": "2026-09-11T19:02:38.375Z",
+        "commit": "3506120b6033c9d1457fb40c1c03fd052ab505dd",
+        "checkedAt": "2026-09-12T20:56:56.974Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "reidenxerx/omarchy-cockpit",
-        "pluginIds": [
-          "reidenxerx.cockpit"
-        ],
-        "commit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T19:02:38.375Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-11T18:06:41.516Z",
-        "requestEventId": 30992767096,
-        "requestedAt": "2026-09-11T18:44:17Z",
-        "reviewedAt": "2026-09-11T19:02:38.375Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "reidenxerx.cockpit": {
@@ -161885,7 +161864,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reidenxerx/omarchy-cockpit",
+        "pluginIds": [
+          "reidenxerx.cockpit"
+        ],
+        "commit": "3506120b6033c9d1457fb40c1c03fd052ab505dd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T20:56:56.974Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T19:49:36.701Z",
+        "requestEventId": 31032957279,
+        "requestedAt": "2026-09-12T20:52:50Z",
+        "reviewedAt": "2026-09-12T20:56:56.974Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
+          "validatedAt": "2026-09-11T19:02:38.464Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T20:56:56.974Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reidenxerx/omarchy-cockpit",
+            "pluginIds": [
+              "reidenxerx.cockpit"
+            ],
+            "commit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
+            "checkedAt": "2026-09-11T19:02:38.375Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "reidenxerx/omarchy-cockpit",
+            "pluginIds": [
+              "reidenxerx.cockpit"
+            ],
+            "commit": "61a6604d582c9ca44947f43420e12ecac6e67f1e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T19:02:38.375Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-11T18:06:41.516Z",
+            "requestEventId": 30992767096,
+            "requestedAt": "2026-09-11T18:44:17Z",
+            "reviewedAt": "2026-09-11T19:02:38.375Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ReidenXerx/omarchy-emoji-picker",
