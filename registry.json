@@ -164490,6 +164490,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LennartAI/omarchy-snake",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T19:50:52.229Z",
+      "listingValidatedCommit": "650dae750d464e7630e623b5b8858d6d866a5b33",
+      "listingValidatedAt": "2026-09-12T19:50:52.229Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lennartai/omarchy-snake",
+        "pluginIds": [
+          "io.github.lennartai.snake"
+        ],
+        "commit": "650dae750d464e7630e623b5b8858d6d866a5b33",
+        "checkedAt": "2026-09-12T19:50:52.157Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lennartai.snake": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
