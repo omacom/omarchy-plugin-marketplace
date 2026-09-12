@@ -164363,6 +164363,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/justinlharter/omarchy-toggl-track",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T19:09:27.340Z",
+      "listingValidatedCommit": "c3a2bdd3531a47c49398bbb22066a1703f31ac88",
+      "listingValidatedAt": "2026-09-12T19:09:27.340Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "justinlharter/omarchy-toggl-track",
+        "pluginIds": [
+          "jlharter.toggl-track"
+        ],
+        "commit": "c3a2bdd3531a47c49398bbb22066a1703f31ac88",
+        "checkedAt": "2026-09-12T19:09:27.278Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "justinlharter/omarchy-toggl-track",
+        "pluginIds": [
+          "jlharter.toggl-track"
+        ],
+        "commit": "c3a2bdd3531a47c49398bbb22066a1703f31ac88",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T19:09:27.278Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T19:05:58.302Z",
+        "requestEventId": 31030515261,
+        "requestedAt": "2026-09-12T19:08:30Z",
+        "reviewedAt": "2026-09-12T19:09:27.278Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jlharter.toggl-track": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
