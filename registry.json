@@ -163159,6 +163159,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/labrat-0/omarchy-omacircuit",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T10:17:42.063Z",
+      "listingValidatedCommit": "d5fb53cbb01416be28ade669439a939b0c0a9f63",
+      "listingValidatedAt": "2026-09-12T10:17:42.063Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "labrat-0/omarchy-omacircuit",
+        "pluginIds": [
+          "io.github.labrat-0.omacircuit"
+        ],
+        "commit": "d5fb53cbb01416be28ade669439a939b0c0a9f63",
+        "checkedAt": "2026-09-12T10:17:42.010Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.labrat-0.omacircuit": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
