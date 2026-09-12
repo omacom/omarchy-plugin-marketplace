@@ -162907,6 +162907,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/codemonkey76/omarchy-micfx",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T09:09:34.336Z",
+      "listingValidatedCommit": "04df0d8bfc15bf2fa7723e7fd0428b7c35ca5457",
+      "listingValidatedAt": "2026-09-12T09:09:34.336Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "codemonkey76/omarchy-micfx",
+        "pluginIds": [
+          "io.github.codemonkey76.micfx"
+        ],
+        "commit": "04df0d8bfc15bf2fa7723e7fd0428b7c35ca5457",
+        "checkedAt": "2026-09-12T09:09:34.260Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "codemonkey76/omarchy-micfx",
+        "pluginIds": [
+          "io.github.codemonkey76.micfx"
+        ],
+        "commit": "04df0d8bfc15bf2fa7723e7fd0428b7c35ca5457",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T09:09:34.260Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T09:06:38.486Z",
+        "requestEventId": 31016520264,
+        "requestedAt": "2026-09-12T09:08:27Z",
+        "reviewedAt": "2026-09-12T09:09:34.261Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.codemonkey76.micfx": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
