@@ -159543,8 +159543,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T00:35:06.264Z",
-      "listingValidatedCommit": "f58558464930f9defa848eb5ba9b092138349adc",
-      "listingValidatedAt": "2026-09-11T00:35:06.264Z",
+      "listingValidatedCommit": "1ad1810b78007ce58e42e21f6200acb9a94aecba",
+      "listingValidatedAt": "2026-09-12T00:25:48.233Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -159553,8 +159553,8 @@
         "pluginIds": [
           "davidjm.scripture"
         ],
-        "commit": "f58558464930f9defa848eb5ba9b092138349adc",
-        "checkedAt": "2026-09-11T00:35:06.194Z",
+        "commit": "1ad1810b78007ce58e42e21f6200acb9a94aecba",
+        "checkedAt": "2026-09-12T00:25:48.233Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -159568,7 +159568,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f58558464930f9defa848eb5ba9b092138349adc",
+          "validatedAt": "2026-09-11T00:35:06.264Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T00:25:48.233Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "davidmessenger123/omarchy-scripture",
+            "pluginIds": [
+              "davidjm.scripture"
+            ],
+            "commit": "f58558464930f9defa848eb5ba9b092138349adc",
+            "checkedAt": "2026-09-11T00:35:06.194Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mrdulasolutions/Omarchy-PAIR",
