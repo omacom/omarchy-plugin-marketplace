@@ -163991,6 +163991,74 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/delarosa1312/omarchy-sony-xm5",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T18:02:22.653Z",
+      "listingValidatedCommit": "ff4513c1c76550ba872a288544e372c796adb20e",
+      "listingValidatedAt": "2026-09-12T18:02:22.653Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "delarosa1312/omarchy-sony-xm5",
+        "pluginIds": [
+          "io.github.delarosa1312.sony-xm5"
+        ],
+        "commit": "ff4513c1c76550ba872a288544e372c796adb20e",
+        "checkedAt": "2026-09-12T18:02:22.577Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "delarosa1312/omarchy-sony-xm5",
+        "pluginIds": [
+          "io.github.delarosa1312.sony-xm5"
+        ],
+        "commit": "ff4513c1c76550ba872a288544e372c796adb20e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T18:02:22.577Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T17:47:50.989Z",
+        "requestEventId": 31028888038,
+        "requestedAt": "2026-09-12T18:01:05Z",
+        "reviewedAt": "2026-09-12T18:02:22.577Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.delarosa1312.sony-xm5": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
