@@ -163226,6 +163226,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AndyWeiBoan/omarchy-mission-control",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T10:43:42.032Z",
+      "listingValidatedCommit": "e669ed274a2968af397cf8e38d2bca486a345d1f",
+      "listingValidatedAt": "2026-09-12T10:43:42.032Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andyweiboan/omarchy-mission-control",
+        "pluginIds": [
+          "io.github.andyweiboan.missioncontrol"
+        ],
+        "commit": "e669ed274a2968af397cf8e38d2bca486a345d1f",
+        "checkedAt": "2026-09-12T10:43:41.951Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.andyweiboan.missioncontrol": {
+          "category": "Desktop",
+          "tags": [
+            "quickshell",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
