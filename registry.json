@@ -164423,6 +164423,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SjoenH/omarchy-uptime-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T19:21:14.092Z",
+      "listingValidatedCommit": "be743b5dbec8985e8c94ba5b41e3822de7507286",
+      "listingValidatedAt": "2026-09-12T19:21:14.092Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sjoenh/omarchy-uptime-monitor",
+        "pluginIds": [
+          "no.koka.uptime-monitor"
+        ],
+        "commit": "be743b5dbec8985e8c94ba5b41e3822de7507286",
+        "checkedAt": "2026-09-12T19:21:14.006Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "no.koka.uptime-monitor": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
