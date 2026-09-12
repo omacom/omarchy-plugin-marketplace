@@ -1586,6 +1586,20 @@
             "bar"
           ]
         }
+      },
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erikwb/omarchy-blueferry",
+        "pluginIds": [
+          "io.weirdware.blueferry"
+        ],
+        "commit": "3a6578cca65b49a66667ca1d2066e6655a865616",
+        "checkedAt": "2026-09-12T15:20:57.485Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
       }
     },
     {
