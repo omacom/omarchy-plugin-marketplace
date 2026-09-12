@@ -163127,6 +163127,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/BibekBhusal0/omarchy-better-media",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T10:05:01.995Z",
+      "listingValidatedCommit": "c49ada7892e9ea290c58f676e0f86db8e1f06e02",
+      "listingValidatedAt": "2026-09-12T10:05:01.995Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bibekbhusal0/omarchy-better-media",
+        "pluginIds": [
+          "bibek.media"
+        ],
+        "commit": "c49ada7892e9ea290c58f676e0f86db8e1f06e02",
+        "checkedAt": "2026-09-12T10:05:01.918Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bibek.media": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
