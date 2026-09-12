@@ -164272,6 +164272,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NimbleAINinja/omarchy-aegis",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T18:46:48.825Z",
+      "listingValidatedCommit": "fe07aa0bdcc3d2e169faec996d8b63bd7f604b68",
+      "listingValidatedAt": "2026-09-12T18:46:48.825Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nimbleaininja/omarchy-aegis",
+        "pluginIds": [
+          "io.github.nimbleaininja.aegis"
+        ],
+        "commit": "fe07aa0bdcc3d2e169faec996d8b63bd7f604b68",
+        "checkedAt": "2026-09-12T18:46:48.748Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nimbleaininja/omarchy-aegis",
+        "pluginIds": [
+          "io.github.nimbleaininja.aegis"
+        ],
+        "commit": "fe07aa0bdcc3d2e169faec996d8b63bd7f604b68",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T18:46:48.748Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T16:58:14.403Z",
+        "requestEventId": 31029922679,
+        "requestedAt": "2026-09-12T18:44:51Z",
+        "reviewedAt": "2026-09-12T18:46:48.748Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nimbleaininja.aegis": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
