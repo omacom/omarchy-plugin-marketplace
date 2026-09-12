@@ -164524,6 +164524,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/badgetobytes/omalander",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T20:09:39.464Z",
+      "listingValidatedCommit": "de8f35129603a68e1f4e54d89aaa98c03314f73b",
+      "listingValidatedAt": "2026-09-12T20:09:39.464Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "badgetobytes/omalander",
+        "pluginIds": [
+          "fstander.omalander"
+        ],
+        "commit": "de8f35129603a68e1f4e54d89aaa98c03314f73b",
+        "checkedAt": "2026-09-12T20:09:39.383Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fstander.omalander": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
