@@ -163414,6 +163414,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulogeyer/omarchy-vivobook-s14-copilot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T11:45:43.074Z",
+      "listingValidatedCommit": "8cc7df637c3490053032c1ba736dfbb5500d99f8",
+      "listingValidatedAt": "2026-09-12T11:45:43.074Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulogeyer/omarchy-vivobook-s14-copilot",
+        "pluginIds": [
+          "vivobook.s14-copilot"
+        ],
+        "commit": "8cc7df637c3490053032c1ba736dfbb5500d99f8",
+        "checkedAt": "2026-09-12T11:45:42.990Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paulogeyer/omarchy-vivobook-s14-copilot",
+        "pluginIds": [
+          "vivobook.s14-copilot"
+        ],
+        "commit": "8cc7df637c3490053032c1ba736dfbb5500d99f8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T11:45:42.990Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T11:41:16.926Z",
+        "requestEventId": 31019639755,
+        "requestedAt": "2026-09-12T11:44:41Z",
+        "reviewedAt": "2026-09-12T11:45:42.990Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vivobook.s14-copilot": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
