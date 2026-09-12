@@ -162749,6 +162749,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/scrambletools/omarchy-auto-timezone",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T06:05:08.173Z",
+      "listingValidatedCommit": "4b3b58d577f4d953638c64aa284ff0a3511c87fb",
+      "listingValidatedAt": "2026-09-12T06:05:08.173Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "scrambletools/omarchy-auto-timezone",
+        "pluginIds": [
+          "io.github.scrambletools.auto-timezone"
+        ],
+        "commit": "4b3b58d577f4d953638c64aa284ff0a3511c87fb",
+        "checkedAt": "2026-09-12T06:05:08.094Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "scrambletools/omarchy-auto-timezone",
+        "pluginIds": [
+          "io.github.scrambletools.auto-timezone"
+        ],
+        "commit": "4b3b58d577f4d953638c64aa284ff0a3511c87fb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T06:05:08.094Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T04:41:25.331Z",
+        "requestEventId": 31012915816,
+        "requestedAt": "2026-09-12T06:03:50Z",
+        "reviewedAt": "2026-09-12T06:05:08.094Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.scrambletools.auto-timezone": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
