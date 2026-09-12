@@ -163192,6 +163192,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GrootAiInfinity/omarchy-hwmon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T10:31:11.562Z",
+      "listingValidatedCommit": "0f8350d21ca2b8772f67c1dbddb9ca72803028e9",
+      "listingValidatedAt": "2026-09-12T10:31:11.562Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grootaiinfinity/omarchy-hwmon",
+        "pluginIds": [
+          "io.github.grootaiinfinity.hwmon"
+        ],
+        "commit": "0f8350d21ca2b8772f67c1dbddb9ca72803028e9",
+        "checkedAt": "2026-09-12T10:31:11.475Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.grootaiinfinity.hwmon": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
