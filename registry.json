@@ -132591,8 +132591,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T16:46:24.328Z",
-      "listingValidatedCommit": "94182d85306d04c9279ae39a76f709e23445b9a1",
-      "listingValidatedAt": "2026-09-05T16:46:24.328Z",
+      "listingValidatedCommit": "6d0f7c25a3a46df4045a3b62d240f90df9d04714",
+      "listingValidatedAt": "2026-09-12T00:15:24.520Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -132601,35 +132601,15 @@
         "pluginIds": [
           "sunshine144.solar-nightlight"
         ],
-        "commit": "94182d85306d04c9279ae39a76f709e23445b9a1",
-        "checkedAt": "2026-09-05T16:46:24.278Z",
+        "commit": "6d0f7c25a3a46df4045a3b62d240f90df9d04714",
+        "checkedAt": "2026-09-12T00:15:24.520Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
+          "remote-build",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sunshine144/solar-nightlight",
-        "pluginIds": [
-          "sunshine144.solar-nightlight"
-        ],
-        "commit": "94182d85306d04c9279ae39a76f709e23445b9a1",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-05T16:46:24.278Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T21:52:10.941Z",
-        "requestEventId": 30613266252,
-        "requestedAt": "2026-09-05T16:37:14Z",
-        "reviewedAt": "2026-09-05T16:46:24.278Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "sunshine144.solar-nightlight": {
@@ -132641,7 +132621,74 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sunshine144/solar-nightlight",
+        "pluginIds": [
+          "sunshine144.solar-nightlight"
+        ],
+        "commit": "6d0f7c25a3a46df4045a3b62d240f90df9d04714",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T00:15:24.520Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-09T15:14:55.648Z",
+        "requestEventId": 31005330727,
+        "requestedAt": "2026-09-12T00:04:10Z",
+        "reviewedAt": "2026-09-12T00:15:24.520Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "94182d85306d04c9279ae39a76f709e23445b9a1",
+          "validatedAt": "2026-09-05T16:46:24.328Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T00:15:24.520Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sunshine144/solar-nightlight",
+            "pluginIds": [
+              "sunshine144.solar-nightlight"
+            ],
+            "commit": "94182d85306d04c9279ae39a76f709e23445b9a1",
+            "checkedAt": "2026-09-05T16:46:24.278Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sunshine144/solar-nightlight",
+            "pluginIds": [
+              "sunshine144.solar-nightlight"
+            ],
+            "commit": "94182d85306d04c9279ae39a76f709e23445b9a1",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-05T16:46:24.278Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T21:52:10.941Z",
+            "requestEventId": 30613266252,
+            "requestedAt": "2026-09-05T16:37:14Z",
+            "reviewedAt": "2026-09-05T16:46:24.278Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/TheRock892/text-transform",
