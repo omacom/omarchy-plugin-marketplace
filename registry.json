@@ -163036,6 +163036,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joonsp/loopdaddyradio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T09:36:54.129Z",
+      "listingValidatedCommit": "f9151dee90d0ec48d082adebf1f66cec8f0b7f03",
+      "listingValidatedAt": "2026-09-12T09:36:54.129Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joonsp/loopdaddyradio",
+        "pluginIds": [
+          "joonas.loopdaddyradio"
+        ],
+        "commit": "f9151dee90d0ec48d082adebf1f66cec8f0b7f03",
+        "checkedAt": "2026-09-12T09:36:54.049Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "joonas.loopdaddyradio": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
