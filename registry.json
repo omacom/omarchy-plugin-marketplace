@@ -162874,6 +162874,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/3EYE3Y3/omarchy-departures",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T08:53:03.737Z",
+      "listingValidatedCommit": "f9422278f1f498502743baa90d44598522931e61",
+      "listingValidatedAt": "2026-09-12T08:53:03.737Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "3eye3y3/omarchy-departures",
+        "pluginIds": [
+          "io.github.3eye3y3.departures"
+        ],
+        "commit": "f9422278f1f498502743baa90d44598522931e61",
+        "checkedAt": "2026-09-12T08:53:03.665Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.3eye3y3.departures": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
