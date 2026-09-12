@@ -42020,8 +42020,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T20:45:05.515Z",
-      "listingValidatedCommit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
-      "listingValidatedAt": "2026-08-21T20:45:05.515Z",
+      "listingValidatedCommit": "e2a10e194ac0378212c58b1c39423cc3c5dcf72d",
+      "listingValidatedAt": "2026-09-12T00:09:30.958Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -42030,35 +42030,14 @@
         "pluginIds": [
           "melonamin.canary"
         ],
-        "commit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
-        "checkedAt": "2026-08-21T20:45:05.496Z",
+        "commit": "e2a10e194ac0378212c58b1c39423cc3c5dcf72d",
+        "checkedAt": "2026-09-12T00:09:30.958Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "melonamin/omarchy-canary",
-        "pluginIds": [
-          "melonamin.canary"
-        ],
-        "commit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-21T20:45:05.496Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-21T20:22:45.388Z",
-        "requestEventId": 29826549147,
-        "requestedAt": "2026-08-21T20:26:17Z",
-        "reviewedAt": "2026-08-21T20:45:05.496Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "melonamin.canary": {
@@ -42070,7 +42049,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "melonamin/omarchy-canary",
+        "pluginIds": [
+          "melonamin.canary"
+        ],
+        "commit": "e2a10e194ac0378212c58b1c39423cc3c5dcf72d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T00:09:30.958Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T21:19:39.053Z",
+        "requestEventId": 31005332147,
+        "requestedAt": "2026-09-12T00:04:13Z",
+        "reviewedAt": "2026-09-12T00:09:30.958Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
+          "validatedAt": "2026-08-21T20:45:05.515Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T00:09:30.958Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "melonamin/omarchy-canary",
+            "pluginIds": [
+              "melonamin.canary"
+            ],
+            "commit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
+            "checkedAt": "2026-08-21T20:45:05.496Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "melonamin/omarchy-canary",
+            "pluginIds": [
+              "melonamin.canary"
+            ],
+            "commit": "6b8a7ac9ae8dda7b734659febf24e1208153e375",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-21T20:45:05.496Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-21T20:22:45.388Z",
+            "requestEventId": 29826549147,
+            "requestedAt": "2026-08-21T20:26:17Z",
+            "reviewedAt": "2026-08-21T20:45:05.496Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Rizmi/omarchy-terminal-plugin",
