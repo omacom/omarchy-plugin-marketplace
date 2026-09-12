@@ -115449,8 +115449,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T21:46:01.604Z",
-      "listingValidatedCommit": "693e07b4b94b602d9b7c844b77963295c59ea137",
-      "listingValidatedAt": "2026-09-01T21:46:01.604Z",
+      "listingValidatedCommit": "49a274a6ad87b4851b545a9e8ac2bbdcef8a9eb1",
+      "listingValidatedAt": "2026-09-12T21:10:08.607Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -115459,35 +115459,14 @@
         "pluginIds": [
           "io.github.wbuf81.idle-screencounter"
         ],
-        "commit": "693e07b4b94b602d9b7c844b77963295c59ea137",
-        "checkedAt": "2026-09-01T21:46:01.546Z",
+        "commit": "49a274a6ad87b4851b545a9e8ac2bbdcef8a9eb1",
+        "checkedAt": "2026-09-12T21:10:08.607Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "wbuf81/omarchy-idle-screencounter",
-        "pluginIds": [
-          "io.github.wbuf81.idle-screencounter"
-        ],
-        "commit": "693e07b4b94b602d9b7c844b77963295c59ea137",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-01T21:46:01.546Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-01T21:09:48.884Z",
-        "requestEventId": 30376236113,
-        "requestedAt": "2026-09-01T21:45:06Z",
-        "reviewedAt": "2026-09-01T21:46:01.547Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.wbuf81.idle-screencounter": {
@@ -115499,7 +115478,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wbuf81/omarchy-idle-screencounter",
+        "pluginIds": [
+          "io.github.wbuf81.idle-screencounter"
+        ],
+        "commit": "49a274a6ad87b4851b545a9e8ac2bbdcef8a9eb1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-12T21:10:08.607Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-11T21:26:42.670Z",
+        "requestEventId": 31032958467,
+        "requestedAt": "2026-09-12T20:52:53Z",
+        "reviewedAt": "2026-09-12T21:10:08.607Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "693e07b4b94b602d9b7c844b77963295c59ea137",
+          "validatedAt": "2026-09-01T21:46:01.604Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T21:10:08.607Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wbuf81/omarchy-idle-screencounter",
+            "pluginIds": [
+              "io.github.wbuf81.idle-screencounter"
+            ],
+            "commit": "693e07b4b94b602d9b7c844b77963295c59ea137",
+            "checkedAt": "2026-09-01T21:46:01.546Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "wbuf81/omarchy-idle-screencounter",
+            "pluginIds": [
+              "io.github.wbuf81.idle-screencounter"
+            ],
+            "commit": "693e07b4b94b602d9b7c844b77963295c59ea137",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-01T21:46:01.546Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-01T21:09:48.884Z",
+            "requestEventId": 30376236113,
+            "requestedAt": "2026-09-01T21:45:06Z",
+            "reviewedAt": "2026-09-01T21:46:01.547Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Samon97/omarchy-bongocat",
