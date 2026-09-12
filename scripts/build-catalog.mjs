@@ -1323,7 +1323,7 @@ function repositoryGitUrl(repo) {
   return repo.endsWith(".git") ? repo : `${repo}.git`;
 }
 
-export function communityInstall(source, manifestPath, overrides = {}) {
+export function communityInstall(source, manifestPath, overrides = {}, clonedFrom = "") {
   const installation = overrides.installation;
   if (installation !== undefined) {
     if (
@@ -1346,11 +1346,17 @@ export function communityInstall(source, manifestPath, overrides = {}) {
     };
   }
   if (manifestPath === "manifest.json") {
+    const swapsFirstPartyService = typeof clonedFrom === "string" && clonedFrom.trim() !== "";
     return {
       repositoryLayout: "root-plugin",
       installAvailable: true,
-      installCommand: `omarchy plugin add ${repositoryGitUrl(source.repo)} --enable`,
-      installNote: "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      installCommand: swapsFirstPartyService
+        ? `omarchy plugin add ${repositoryGitUrl(source.repo)} --enable && omarchy restart shell`
+        : `omarchy plugin add ${repositoryGitUrl(source.repo)} --enable`,
+      installNote: swapsFirstPartyService
+        ? `Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin. This replaces the built-in ${clonedFrom} service, so the shell needs a restart before the swap fully takes effect.`
+        : "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      ...(swapsFirstPartyService ? { clonedFrom } : {}),
     };
   }
   return {
@@ -1466,6 +1472,9 @@ export async function discoveredPlugins(source, context, preview) {
       overrides.addedAt || source.addedAt,
       `${context.repository.slug}/${manifest.id}`,
     );
+    const clonedFrom = manifest.omarchy && typeof manifest.omarchy === "object" && !Array.isArray(manifest.omarchy)
+      ? String(manifest.omarchy.clonedFrom || "")
+      : "";
     plugins.push({
       id: manifest.id,
       name: manifest.name,
@@ -1482,7 +1491,7 @@ export async function discoveredPlugins(source, context, preview) {
         addedAt,
         `${context.repository.slug}/${manifest.id}`,
       ),
-      ...communityInstall(source, manifestPath, overrides),
+      ...communityInstall(source, manifestPath, overrides, clonedFrom),
       category: categoryFor(kinds),
       tags: kinds.slice(0, 3).map((kind) => kind.toLowerCase()),
       license: manifest.license || "See repository",
@@ -1522,6 +1531,7 @@ export function failedSourcePlugins(source, previousPlugins, context, checkedAt,
           source,
           plugin.manifestPath || "manifest.json",
           source.plugins?.[plugin.id] || {},
+          plugin.clonedFrom || "",
         )
       : null;
     const next = {
