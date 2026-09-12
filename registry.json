@@ -122720,8 +122720,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T06:15:53.900Z",
-      "listingValidatedCommit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
-      "listingValidatedAt": "2026-09-04T06:15:53.900Z",
+      "listingValidatedCommit": "d6e4a4900ae6f9fe396ec46d9d6c4bef58fa2166",
+      "listingValidatedAt": "2026-09-12T21:21:28.368Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -122730,37 +122730,12 @@
         "pluginIds": [
           "hyprtile.equalize"
         ],
-        "commit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
-        "checkedAt": "2026-09-04T06:15:53.834Z",
-        "outcome": "review-required",
+        "commit": "d6e4a4900ae6f9fe396ec46d9d6c4bef58fa2166",
+        "checkedAt": "2026-09-12T21:21:28.368Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "davidhbigelow/hyprtile.equalizer",
-        "pluginIds": [
-          "hyprtile.equalize"
-        ],
-        "commit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T06:15:53.834Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T05:00:36.726Z",
-        "requestEventId": 30535509244,
-        "requestedAt": "2026-09-04T06:14:23Z",
-        "reviewedAt": "2026-09-04T06:15:53.834Z",
-        "reviewer": "HANCORE-linux"
+        "capabilities": []
       },
       "plugins": {
         "hyprtile.equalize": {
@@ -122774,7 +122749,54 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
+          "validatedAt": "2026-09-04T06:15:53.900Z",
+          "branch": "main",
+          "supersededAt": "2026-09-12T21:21:28.368Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "davidhbigelow/hyprtile.equalizer",
+            "pluginIds": [
+              "hyprtile.equalize"
+            ],
+            "commit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
+            "checkedAt": "2026-09-04T06:15:53.834Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "davidhbigelow/hyprtile.equalizer",
+            "pluginIds": [
+              "hyprtile.equalize"
+            ],
+            "commit": "de1535fe28205f4ae4e9a717a6e2c3f49127f98b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T06:15:53.834Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T05:00:36.726Z",
+            "requestEventId": 30535509244,
+            "requestedAt": "2026-09-04T06:14:23Z",
+            "reviewedAt": "2026-09-04T06:15:53.834Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Bert0424/omarchy-pane",
