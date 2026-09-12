@@ -113167,8 +113167,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T01:26:18.827Z",
-      "listingValidatedCommit": "62c9dcd5a592346f3f8ab2d752b4fa214fd6dc93",
-      "listingValidatedAt": "2026-09-12T00:12:21.791Z",
+      "listingValidatedCommit": "eeb448bef73807658825e54491c6806f5e3295fe",
+      "listingValidatedAt": "2026-09-12T21:28:33.974Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -113177,8 +113177,8 @@
         "pluginIds": [
           "io.github.joeyvigil.taskbar"
         ],
-        "commit": "62c9dcd5a592346f3f8ab2d752b4fa214fd6dc93",
-        "checkedAt": "2026-09-12T00:12:21.790Z",
+        "commit": "eeb448bef73807658825e54491c6806f5e3295fe",
+        "checkedAt": "2026-09-12T21:28:33.974Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -113230,6 +113230,26 @@
             ],
             "commit": "9cf04e24742619d44ba67cd637edb17f5e138661",
             "checkedAt": "2026-09-01T16:52:19.139Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "62c9dcd5a592346f3f8ab2d752b4fa214fd6dc93",
+          "validatedAt": "2026-09-12T00:12:21.791Z",
+          "branch": "master",
+          "supersededAt": "2026-09-12T21:28:33.974Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joeyvigil/omarchy-taskbar",
+            "pluginIds": [
+              "io.github.joeyvigil.taskbar"
+            ],
+            "commit": "62c9dcd5a592346f3f8ab2d752b4fa214fd6dc93",
+            "checkedAt": "2026-09-12T00:12:21.790Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
