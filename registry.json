@@ -162178,6 +162178,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/14brussell/Steam-Game-Icons",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T00:03:40.238Z",
+      "listingValidatedCommit": "e8520ecfb9c0ed58b06accc24307325632e7a8bb",
+      "listingValidatedAt": "2026-09-12T00:03:40.238Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "14brussell/steam-game-icons",
+        "pluginIds": [
+          "io.github.14brussell.steam-icons"
+        ],
+        "commit": "e8520ecfb9c0ed58b06accc24307325632e7a8bb",
+        "checkedAt": "2026-09-12T00:03:40.158Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.14brussell.steam-icons": {
+          "category": "Appearance",
+          "tags": [
+            "games",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
