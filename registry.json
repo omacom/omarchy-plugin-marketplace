@@ -162593,6 +162593,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AkshitThapar21/Omarchy-Dynamic-Island",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T01:38:33.006Z",
+      "listingValidatedCommit": "594af6de7fe7132e85f0bf80556a573be62802d7",
+      "listingValidatedAt": "2026-09-12T01:38:33.006Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "akshitthapar21/omarchy-dynamic-island",
+        "pluginIds": [
+          "akshit.island"
+        ],
+        "commit": "594af6de7fe7132e85f0bf80556a573be62802d7",
+        "checkedAt": "2026-09-12T01:38:32.920Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "akshit.island": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
