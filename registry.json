@@ -163923,6 +163923,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vstoms/jabra-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-12",
+      "listedAt": "2026-09-12T17:46:27.950Z",
+      "listingValidatedCommit": "4cfabf5072fd3e9d8bf79f0c994ac7ee8e72c99b",
+      "listingValidatedAt": "2026-09-12T17:46:27.950Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vstoms/jabra-omarchy",
+        "pluginIds": [
+          "io.github.vstoms.jabra-omarchy"
+        ],
+        "commit": "4cfabf5072fd3e9d8bf79f0c994ac7ee8e72c99b",
+        "checkedAt": "2026-09-12T17:46:27.886Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.vstoms.jabra-omarchy": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
