@@ -56,7 +56,8 @@ It must never mean that a plugin is certified, guaranteed safe, endorsed, or cov
 
 - Public stars, hearts, views, and copy counts are displayed without accounts or credentials.
 - Event bodies contain only the catalog plugin ID and a fixed action type.
-- The existing Cloudflare service applies origin restrictions, input validation, transactional counters, caching, and best-effort rate limits.
+- The existing Cloudflare service applies origin restrictions, input validation, transactional counters, caching, 60-second burst limits, and ephemeral sliding-window per-address quotas (IPv4 or IPv6 /64) without storing request-derived keys in D1.
+- Those counters remain gameable with enough addresses; they are not unique people, votes, or trust signals.
 - Verification does not read or modify engagement state.
 
 ### Automated Security Baseline V3
