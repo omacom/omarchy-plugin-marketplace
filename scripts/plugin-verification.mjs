@@ -235,12 +235,17 @@ function catalogWithStandardInstallation(catalog, source, pluginId) {
   let changed = false;
   const plugins = catalog.plugins.map((plugin) => {
     if (plugin !== catalogPlugin) return plugin;
+    const clonedFrom = plugin.clonedFrom || "";
     const next = {
       ...plugin,
       repositoryLayout: "root-plugin",
       installAvailable: true,
-      installCommand: `omarchy plugin add ${repositoryUrl} --enable`,
-      installNote: standardInstallationNote,
+      installCommand: clonedFrom
+        ? `omarchy plugin add ${repositoryUrl} --enable && omarchy restart shell`
+        : `omarchy plugin add ${repositoryUrl} --enable`,
+      installNote: clonedFrom
+        ? `${standardInstallationNote} This replaces the built-in ${clonedFrom} service, so the shell needs a restart before the swap fully takes effect.`
+        : standardInstallationNote,
       status: "Available",
     };
     changed ||= JSON.stringify(next) !== JSON.stringify(plugin);
