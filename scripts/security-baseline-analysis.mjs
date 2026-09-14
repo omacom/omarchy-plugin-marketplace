@@ -1422,7 +1422,7 @@ export function detectElevatedCapabilities(files, submissionRepository = "") {
       if (
         /\bomarchy\s+pkg\s+(?:add|drop|remove|update)\b/i.test(text)
         || /\b(?:pacman|paru|yay|apt|apt-get|dnf|zypper|apk)\s+(?:-[A-Za-z]*[SRU]|install|remove|upgrade|add|del)\b/i.test(text)
-        || /(?:^|[\s/'"])(?:pip|pip3|pipx)["']?\s+install\b/i.test(text)
+        || /(?:^|[\s/'"])(?:pip|pip3|pipx)["']?\s+install\s+[-\w.\/]/i.test(text)
         || /\bpython[23]?(?:\.[0-9]+)?\s+-m\s+pip\s+install\b/i.test(text)
         || /\b(?:npm|pnpm|yarn|bun)\s+(?:install|add)\b/i.test(text)
         || /\bcargo\s+install\b/i.test(text)
