@@ -1,5 +1,5 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260831-01";
-import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260831-01";
+import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260906-01";
+import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260906-01";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
 
 const number = new Intl.NumberFormat("en-US");
