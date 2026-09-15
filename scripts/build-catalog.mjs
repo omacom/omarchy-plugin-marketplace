@@ -20,12 +20,18 @@ import {
 } from "./catalog-verification.mjs";
 import { parseGitHubRepository } from "./github-repository.mjs";
 import {
+  manifestFieldLimits,
+  maximumManifestVersionLength,
+  validatePluginManifest,
+} from "./plugin-manifest.mjs";
+import {
   assertObservedRepositoryIdentity,
   sourceRepositoryPluginIds,
   validateRegistryRepositoryMigrations,
 } from "./repository-identity.mjs";
 
 export { parseGitHubRepository } from "./github-repository.mjs";
+export { manifestFieldLimits, maximumManifestVersionLength } from "./plugin-manifest.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const registryPath = resolve(root, "registry.json");
@@ -46,22 +52,12 @@ const catalogRefreshGraphqlAttempts = 3;
 export const catalogRefreshRestBudgetReserve = 500;
 export const catalogSourceValidationVersion = 1;
 const accents = ["lime", "amber", "coral", "cyan", "violet", "rose"];
-const supportedKinds = new Set(["bar", "bar-widget", "menu", "overlay", "panel", "service"]);
 const supportedPreviewFormats = new Set(["png", "jpeg", "webp", "avif", "heif"]);
 const builtInTaxonomyTags = Object.freeze({
   "omarchy.agents": ["ai"],
   "omarchy.polkit": ["security"],
 });
 const defaultPreviewPattern = /^preview\.(?:png|jpe?g|webp|avif)$/i;
-export const manifestFieldLimits = Object.freeze({
-  id: 128,
-  name: 120,
-  version: 64,
-  author: 120,
-  description: 500,
-  license: 120,
-});
-export const maximumManifestVersionLength = manifestFieldLimits.version;
 const errorCodes = new Set([
   "repository-unreachable",
   "manifest-invalid",
@@ -721,109 +717,11 @@ function isBlob(entry) {
   return entry?.type === "blob" && entry.mode !== "120000";
 }
 
-function entryPointKey(kind) {
-  return kind === "bar-widget" ? "barWidget" : kind;
-}
-
 export function validateManifest(manifest, manifestPath, { community = false } = {}) {
-  if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) {
-    checkError("manifest-invalid", `${manifestPath}: manifest must be a JSON object`);
-  }
-  if (manifest.schemaVersion !== 1) {
-    checkError("manifest-invalid", `${manifestPath}: manifest field "schemaVersion" must be exactly 1`);
-  }
-  const required = ["id", "name", "version", "author", "description"];
-  for (const field of required) {
-    if (typeof manifest[field] !== "string" || !manifest[field].trim()) {
-      checkError("manifest-invalid", `${manifestPath}: manifest field "${field}" is required`);
-    }
-    const normalized = manifest[field].trim();
-    if (field === "id" && manifest[field] !== normalized) {
-      checkError("manifest-invalid", `${manifestPath}: manifest field "id" must not contain leading or trailing whitespace`);
-    }
-    if (/[\u0000-\u001f\u007f-\u009f]/u.test(normalized)) {
-      checkError("manifest-invalid", `${manifestPath}: manifest field "${field}" contains control characters`);
-    }
-    if (community && normalized.length > manifestFieldLimits[field]) {
-      checkError(
-        "manifest-invalid",
-        `${manifestPath}: manifest field "${field}" must not exceed ${manifestFieldLimits[field]} characters`,
-      );
-    }
-    manifest[field] = normalized;
-  }
-  if (manifest.license !== undefined) {
-    if (typeof manifest.license !== "string" || !manifest.license.trim()) {
-      checkError("manifest-invalid", `${manifestPath}: manifest field "license" must be a non-empty string`);
-    }
-    const normalizedLicense = manifest.license.trim();
-    if (/[\u0000-\u001f\u007f-\u009f]/u.test(normalizedLicense)) {
-      checkError("manifest-invalid", `${manifestPath}: manifest field "license" contains control characters`);
-    }
-    if (community && normalizedLicense.length > manifestFieldLimits.license) {
-      checkError(
-        "manifest-invalid",
-        `${manifestPath}: manifest field "license" must not exceed ${manifestFieldLimits.license} characters`,
-      );
-    }
-    manifest.license = normalizedLicense;
-  }
-  if (
-    !/^[a-z0-9][a-z0-9._-]*$/i.test(manifest.id)
-    || manifest.id.includes("..")
-  ) {
-    checkError("manifest-invalid", `${manifestPath}: manifest id contains unsupported characters`);
-  }
-  if (community && manifest.id !== manifest.id.toLowerCase()) {
-    checkError("manifest-invalid", `${manifestPath}: community manifest ids must use lowercase characters`);
-  }
-  if (community && manifest.id.toLowerCase().startsWith("omarchy.")) {
-    checkError("reserved-plugin-id", `${manifestPath}: the omarchy.* namespace is reserved`);
-  }
-  if (
-    !Array.isArray(manifest.kinds)
-    || manifest.kinds.length === 0
-    || manifest.kinds.some((kind) => typeof kind !== "string" || !supportedKinds.has(kind))
-  ) {
-    checkError("manifest-invalid", `${manifestPath}: manifest "kinds" contains unsupported values`);
-  }
-  if (!manifest.entryPoints || typeof manifest.entryPoints !== "object" || Array.isArray(manifest.entryPoints)) {
-    checkError("manifest-invalid", `${manifestPath}: manifest "entryPoints" must be an object`);
-  }
-  if (
-    manifest.barWidget
-    && typeof manifest.barWidget === "object"
-    && !Array.isArray(manifest.barWidget)
-    && Object.hasOwn(manifest.barWidget, "defaultSection")
-    && (
-      typeof manifest.barWidget.defaultSection !== "string"
-      || !["left", "center", "right"].includes(manifest.barWidget.defaultSection)
-    )
-  ) {
-    checkError(
-      "manifest-invalid",
-      `${manifestPath}: "barWidget.defaultSection" must be left, center, or right`,
-    );
-  }
-  for (const kind of manifest.kinds) {
-    if (!Object.hasOwn(manifest.entryPoints, entryPointKey(kind))) {
-      checkError("entry-point-missing", `${manifestPath}: entry point for "${kind}" is missing`);
-    }
-  }
-  const entryPoints = Object.values(manifest.entryPoints);
-  if (
-    entryPoints.length === 0
-    || entryPoints.some((entryPoint) => (
-      typeof entryPoint !== "string"
-      || !entryPoint.trim()
-      || entryPoint.startsWith("/")
-      || entryPoint.includes("..")
-      || /[\\:\r\n\0]/.test(entryPoint)
-    ))
-  ) {
-    checkError("manifest-invalid", `${manifestPath}: entry points must be safe relative paths`);
-  }
-  return manifest;
+  return validatePluginManifest(manifest, manifestPath, {
+    community,
+    fail: checkError,
+  });
 }
 
 function validateManifestFiles(manifest, manifestPath, context, { community = false } = {}) {

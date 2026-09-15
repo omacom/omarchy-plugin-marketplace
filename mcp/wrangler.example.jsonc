@@ -1,0 +1,32 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.123.0/config-schema.json",
+  "name": "omarchy-plugin-marketplace-mcp",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-08-30",
+  "workers_dev": true,
+  "vars": {
+    "CATALOG_URL": "https://omarchyplugins.com/catalog.json",
+    "REGISTRY_URL": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-plugin-marketplace/main/registry.json",
+    "MCP_ALLOWED_ORIGINS": "https://omarchyplugins.com,https://www.omarchyplugins.com"
+  },
+  "ratelimits": [
+    {
+      "name": "MCP_RATE_LIMITER",
+      "namespace_id": "2001",
+      "simple": { "limit": 60, "period": 60 }
+    },
+    {
+      "name": "MCP_GITHUB_RATE_LIMITER",
+      "namespace_id": "2002",
+      "simple": { "limit": 10, "period": 60 }
+    }
+  ]
+
+  // Store an optional public-repository GitHub token as a Worker secret:
+  // npx wrangler secret put GITHUB_TOKEN
+  //
+  // Add this only after a workers.dev deployment has been verified:
+  // "routes": [
+  //   { "pattern": "mcp.omarchyplugins.com", "custom_domain": true }
+  // ]
+}
