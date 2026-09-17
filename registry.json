@@ -110902,8 +110902,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T14:18:04.417Z",
-      "listingValidatedCommit": "4ce6d0f77aab1dd4b1feac227013e14f8e92051a",
-      "listingValidatedAt": "2026-09-02T01:34:10.440Z",
+      "listingValidatedCommit": "58cd4f96e2ae48cfba742e4b692af1712b2f778a",
+      "listingValidatedAt": "2026-09-17T23:33:37.004Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -110912,8 +110912,8 @@
         "pluginIds": [
           "coding-sparrow.systempulse"
         ],
-        "commit": "4ce6d0f77aab1dd4b1feac227013e14f8e92051a",
-        "checkedAt": "2026-09-02T01:34:10.440Z",
+        "commit": "58cd4f96e2ae48cfba742e4b692af1712b2f778a",
+        "checkedAt": "2026-09-17T23:33:37.004Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -110945,6 +110945,26 @@
             ],
             "commit": "97dfcfc26cf4e3bc85bbaffa3bd15bd5b0014bfc",
             "checkedAt": "2026-08-31T14:18:04.372Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "4ce6d0f77aab1dd4b1feac227013e14f8e92051a",
+          "validatedAt": "2026-09-02T01:34:10.440Z",
+          "branch": "main",
+          "supersededAt": "2026-09-17T23:33:37.004Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "coding-sparrow/omarchy-systempulse",
+            "pluginIds": [
+              "coding-sparrow.systempulse"
+            ],
+            "commit": "4ce6d0f77aab1dd4b1feac227013e14f8e92051a",
+            "checkedAt": "2026-09-02T01:34:10.440Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
