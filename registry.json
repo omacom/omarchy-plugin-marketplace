@@ -184872,6 +184872,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/thebenwalther/omarchy-apple-music",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:21:09.699Z",
+      "listingValidatedCommit": "bcafe7dda457fdcf4c6a2da74e70c630c463cb2f",
+      "listingValidatedAt": "2026-09-17T14:21:09.699Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thebenwalther/omarchy-apple-music",
+        "pluginIds": [
+          "thebenwalther.apple-music"
+        ],
+        "commit": "bcafe7dda457fdcf4c6a2da74e70c630c463cb2f",
+        "checkedAt": "2026-09-17T14:21:09.605Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thebenwalther/omarchy-apple-music",
+        "pluginIds": [
+          "thebenwalther.apple-music"
+        ],
+        "commit": "bcafe7dda457fdcf4c6a2da74e70c630c463cb2f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T14:21:09.605Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-13T19:20:02.378Z",
+        "requestEventId": 31326318059,
+        "requestedAt": "2026-09-17T14:18:57Z",
+        "reviewedAt": "2026-09-17T14:21:09.605Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "thebenwalther.apple-music": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
