@@ -184935,6 +184935,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/shivam-g10/omarchy-google-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:26:13.464Z",
+      "listingValidatedCommit": "8d6aab25292f5852f56c5347564680eb1341b568",
+      "listingValidatedAt": "2026-09-17T14:26:13.464Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shivam-g10/omarchy-google-calendar",
+        "pluginIds": [
+          "shivam.clock"
+        ],
+        "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
+        "checkedAt": "2026-09-17T14:26:13.357Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shivam-g10/omarchy-google-calendar",
+        "pluginIds": [
+          "shivam.clock"
+        ],
+        "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T14:26:13.357Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T13:59:47.686Z",
+        "requestEventId": 31326723091,
+        "requestedAt": "2026-09-17T14:24:35Z",
+        "reviewedAt": "2026-09-17T14:26:13.357Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shivam.clock": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
