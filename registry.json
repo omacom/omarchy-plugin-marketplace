@@ -160766,8 +160766,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-10",
       "listedAt": "2026-09-10T19:10:04.825Z",
-      "listingValidatedCommit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
-      "listingValidatedAt": "2026-09-10T19:10:04.825Z",
+      "listingValidatedCommit": "fc2ee90ce414eafcbff2f388f0782988dbd860f6",
+      "listingValidatedAt": "2026-09-17T23:20:57.881Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -160776,8 +160776,8 @@
         "pluginIds": [
           "wdg.dock"
         ],
-        "commit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
-        "checkedAt": "2026-09-10T19:10:04.743Z",
+        "commit": "fc2ee90ce414eafcbff2f388f0782988dbd860f6",
+        "checkedAt": "2026-09-17T23:20:57.881Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -160793,7 +160793,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
+          "validatedAt": "2026-09-10T19:10:04.825Z",
+          "branch": "main",
+          "supersededAt": "2026-09-17T23:20:57.881Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wisangdg/omarchy-magnify-dock",
+            "pluginIds": [
+              "wdg.dock"
+            ],
+            "commit": "b2a3d9ffb5df25d4a751b5acb07e40208cc31f84",
+            "checkedAt": "2026-09-10T19:10:04.743Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Ayumad/omarchy-clear-bar",
