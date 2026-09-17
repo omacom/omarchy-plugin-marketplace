@@ -185968,6 +185968,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fdrewett/omaflowy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:45:53.684Z",
+      "listingValidatedCommit": "81d96e709afde3662fc7092183d099014c278878",
+      "listingValidatedAt": "2026-09-17T23:45:53.684Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fdrewett/omaflowy",
+        "pluginIds": [
+          "io.github.fdrewett.omaflowy"
+        ],
+        "commit": "81d96e709afde3662fc7092183d099014c278878",
+        "checkedAt": "2026-09-17T23:45:53.602Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.fdrewett.omaflowy": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
