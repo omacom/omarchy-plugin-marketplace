@@ -184679,6 +184679,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hyphae-Research-Foundation/hyphae-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:04:08.338Z",
+      "listingValidatedCommit": "e066f5fd769ffe688a650db1ad6b84c342b64aa6",
+      "listingValidatedAt": "2026-09-17T14:04:08.338Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hyphae-research-foundation/hyphae-omarchy",
+        "pluginIds": [
+          "org.hyphaeresearch.memory"
+        ],
+        "commit": "e066f5fd769ffe688a650db1ad6b84c342b64aa6",
+        "checkedAt": "2026-09-17T14:04:08.248Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "org.hyphaeresearch.memory": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
