@@ -186068,6 +186068,77 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/g3ortega/omarchy-portal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:52:19.624Z",
+      "listingValidatedCommit": "91f0009f15e3952b7791ce20c792bb058d8dce8b",
+      "listingValidatedAt": "2026-09-17T23:52:19.624Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "g3ortega/omarchy-portal",
+        "pluginIds": [
+          "g3ortega.portal"
+        ],
+        "commit": "91f0009f15e3952b7791ce20c792bb058d8dce8b",
+        "checkedAt": "2026-09-17T23:52:19.533Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "g3ortega/omarchy-portal",
+        "pluginIds": [
+          "g3ortega.portal"
+        ],
+        "commit": "91f0009f15e3952b7791ce20c792bb058d8dce8b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T23:52:19.533Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T17:51:09.612Z",
+        "requestEventId": 31355449799,
+        "requestedAt": "2026-09-17T23:18:04Z",
+        "reviewedAt": "2026-09-17T23:52:19.533Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "g3ortega.portal": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
