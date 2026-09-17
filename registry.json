@@ -185160,6 +185160,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/stevenwtlafrance-ship-it/Tesla-Control",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T15:03:41.790Z",
+      "listingValidatedCommit": "0e8d6f48d470d676c79ecaf80346786fa47aa7fe",
+      "listingValidatedAt": "2026-09-17T15:03:41.790Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stevenwtlafrance-ship-it/tesla-control",
+        "pluginIds": [
+          "tesla.control"
+        ],
+        "commit": "0e8d6f48d470d676c79ecaf80346786fa47aa7fe",
+        "checkedAt": "2026-09-17T15:03:41.690Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stevenwtlafrance-ship-it/tesla-control",
+        "pluginIds": [
+          "tesla.control"
+        ],
+        "commit": "0e8d6f48d470d676c79ecaf80346786fa47aa7fe",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T15:03:41.690Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T21:07:13.510Z",
+        "requestEventId": 31329408141,
+        "requestedAt": "2026-09-17T15:01:57Z",
+        "reviewedAt": "2026-09-17T15:03:41.690Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tesla.control": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
