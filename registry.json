@@ -184402,6 +184402,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/flathack/OmaBridge",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T13:45:18.136Z",
+      "listingValidatedCommit": "8043a7c92fbe0a9e4d8b3c08906adaa32c1fed98",
+      "listingValidatedAt": "2026-09-17T13:45:18.136Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flathack/omabridge",
+        "pluginIds": [
+          "io.github.flathack.omabridge"
+        ],
+        "commit": "8043a7c92fbe0a9e4d8b3c08906adaa32c1fed98",
+        "checkedAt": "2026-09-17T13:45:18.047Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "flathack/omabridge",
+        "pluginIds": [
+          "io.github.flathack.omabridge"
+        ],
+        "commit": "8043a7c92fbe0a9e4d8b3c08906adaa32c1fed98",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T13:45:18.047Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T10:11:20.802Z",
+        "requestEventId": 31321703252,
+        "requestedAt": "2026-09-17T13:12:12Z",
+        "reviewedAt": "2026-09-17T13:45:18.047Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.flathack.omabridge": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
