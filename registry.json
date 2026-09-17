@@ -120441,8 +120441,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T16:19:00.988Z",
-      "listingValidatedCommit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
-      "listingValidatedAt": "2026-09-02T16:19:00.988Z",
+      "listingValidatedCommit": "e4074f54550dfe9285c854ac6a740aed6168bcd8",
+      "listingValidatedAt": "2026-09-17T13:38:32.458Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -120451,37 +120451,15 @@
         "pluginIds": [
           "io.github.abhishek-1804.drift-detector"
         ],
-        "commit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
-        "checkedAt": "2026-09-02T16:19:00.934Z",
+        "commit": "e4074f54550dfe9285c854ac6a740aed6168bcd8",
+        "checkedAt": "2026-09-17T13:38:32.458Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "privilege",
-          "package-manager"
+          "package-manager",
+          "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "abhishek-1804/omarchy-drift-detector",
-        "pluginIds": [
-          "io.github.abhishek-1804.drift-detector"
-        ],
-        "commit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T16:19:00.934Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-02T14:46:21.489Z",
-        "requestEventId": 30429244351,
-        "requestedAt": "2026-09-02T16:18:12Z",
-        "reviewedAt": "2026-09-02T16:19:00.934Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.abhishek-1804.drift-detector": {
@@ -120497,7 +120475,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "abhishek-1804/omarchy-drift-detector",
+        "pluginIds": [
+          "io.github.abhishek-1804.drift-detector"
+        ],
+        "commit": "e4074f54550dfe9285c854ac6a740aed6168bcd8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T13:38:32.458Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-14T22:04:23.582Z",
+        "requestEventId": 31321376339,
+        "requestedAt": "2026-09-17T13:07:06Z",
+        "reviewedAt": "2026-09-17T13:38:32.458Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
+          "validatedAt": "2026-09-02T16:19:00.988Z",
+          "branch": "main",
+          "supersededAt": "2026-09-17T13:38:32.458Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "abhishek-1804/omarchy-drift-detector",
+            "pluginIds": [
+              "io.github.abhishek-1804.drift-detector"
+            ],
+            "commit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
+            "checkedAt": "2026-09-02T16:19:00.934Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "abhishek-1804/omarchy-drift-detector",
+            "pluginIds": [
+              "io.github.abhishek-1804.drift-detector"
+            ],
+            "commit": "c164cd4d274e5bfafd2e4a34103259aa0ec7b959",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T16:19:00.934Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T14:46:21.489Z",
+            "requestEventId": 30429244351,
+            "requestedAt": "2026-09-02T16:18:12Z",
+            "reviewedAt": "2026-09-02T16:19:00.934Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/calebhat/omarchy-workscape",
