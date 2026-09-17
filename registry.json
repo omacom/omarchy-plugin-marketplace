@@ -185032,6 +185032,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/p3lusa/video-background",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:33:40.313Z",
+      "listingValidatedCommit": "b54b0a283e4ab94c7dc16ae5dff0c8b11eabae41",
+      "listingValidatedAt": "2026-09-17T14:33:40.313Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "p3lusa/video-background",
+        "pluginIds": [
+          "io.github.p3lu.video-background"
+        ],
+        "commit": "b54b0a283e4ab94c7dc16ae5dff0c8b11eabae41",
+        "checkedAt": "2026-09-17T14:33:40.241Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "p3lusa/video-background",
+        "pluginIds": [
+          "io.github.p3lu.video-background"
+        ],
+        "commit": "b54b0a283e4ab94c7dc16ae5dff0c8b11eabae41",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T14:33:40.241Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T15:11:19.239Z",
+        "requestEventId": 31327219010,
+        "requestedAt": "2026-09-17T14:31:50Z",
+        "reviewedAt": "2026-09-17T14:33:40.241Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.p3lu.video-background": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
