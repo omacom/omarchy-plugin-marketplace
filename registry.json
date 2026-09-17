@@ -185221,6 +185221,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/chr0nzz/omarchy-omafile",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T15:17:22.595Z",
+      "listingValidatedCommit": "0ba9905501235d67c6758e0b8fdd1b4d4da7af9c",
+      "listingValidatedAt": "2026-09-17T15:17:22.595Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chr0nzz/omarchy-omafile",
+        "pluginIds": [
+          "xyzlab.omafile"
+        ],
+        "commit": "0ba9905501235d67c6758e0b8fdd1b4d4da7af9c",
+        "checkedAt": "2026-09-17T15:17:22.507Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "xyzlab.omafile": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
