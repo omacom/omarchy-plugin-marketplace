@@ -184839,6 +184839,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danjonesio/coolwatch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:17:47.351Z",
+      "listingValidatedCommit": "c21c45542b6aae67162c506f583f3d0715db5286",
+      "listingValidatedAt": "2026-09-17T14:17:47.351Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danjonesio/coolwatch",
+        "pluginIds": [
+          "io.github.danjonesio.coolwatch"
+        ],
+        "commit": "c21c45542b6aae67162c506f583f3d0715db5286",
+        "checkedAt": "2026-09-17T14:17:47.253Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.danjonesio.coolwatch": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
