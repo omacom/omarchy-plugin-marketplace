@@ -186005,6 +186005,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/p3lusa/wg-omarchy-nmcli",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:48:58.706Z",
+      "listingValidatedCommit": "4d72595c54b3192393ffe03d8bd236a472c48816",
+      "listingValidatedAt": "2026-09-17T23:48:58.706Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "p3lusa/wg-omarchy-nmcli",
+        "pluginIds": [
+          "io.github.p3lu.wg-omarchy-nmcli"
+        ],
+        "commit": "4d72595c54b3192393ffe03d8bd236a472c48816",
+        "checkedAt": "2026-09-17T23:48:58.612Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "p3lusa/wg-omarchy-nmcli",
+        "pluginIds": [
+          "io.github.p3lu.wg-omarchy-nmcli"
+        ],
+        "commit": "4d72595c54b3192393ffe03d8bd236a472c48816",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T23:48:58.612Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T17:42:57.003Z",
+        "requestEventId": 31355401858,
+        "requestedAt": "2026-09-17T23:16:32Z",
+        "reviewedAt": "2026-09-17T23:48:58.613Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.p3lu.wg-omarchy-nmcli": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
