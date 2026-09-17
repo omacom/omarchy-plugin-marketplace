@@ -184998,6 +184998,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/blazejkapala/omarchy-banatik",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:29:49.558Z",
+      "listingValidatedCommit": "df428d233a707ec3e5cdb2c261ecc182f9ebe969",
+      "listingValidatedAt": "2026-09-17T14:29:49.558Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "blazejkapala/omarchy-banatik",
+        "pluginIds": [
+          "banan.banatik"
+        ],
+        "commit": "df428d233a707ec3e5cdb2c261ecc182f9ebe969",
+        "checkedAt": "2026-09-17T14:29:49.474Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "banan.banatik": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
