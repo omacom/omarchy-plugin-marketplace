@@ -184778,6 +184778,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nomdelasociete/omarchy-mac-pro-2013",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:12:19.082Z",
+      "listingValidatedCommit": "63b2dba818d598e1afc649b21b3892c0e28a0093",
+      "listingValidatedAt": "2026-09-17T14:12:19.082Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nomdelasociete/omarchy-mac-pro-2013",
+        "pluginIds": [
+          "nomdelasociete.macpro"
+        ],
+        "commit": "63b2dba818d598e1afc649b21b3892c0e28a0093",
+        "checkedAt": "2026-09-17T14:12:19.001Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nomdelasociete/omarchy-mac-pro-2013",
+        "pluginIds": [
+          "nomdelasociete.macpro"
+        ],
+        "commit": "63b2dba818d598e1afc649b21b3892c0e28a0093",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T14:12:19.001Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T07:31:53.008Z",
+        "requestEventId": 31325751962,
+        "requestedAt": "2026-09-17T14:10:54Z",
+        "reviewedAt": "2026-09-17T14:12:19.001Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nomdelasociete.macpro": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
