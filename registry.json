@@ -184713,6 +184713,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NIPSEN/omarchy-bose-700",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T14:07:59.556Z",
+      "listingValidatedCommit": "fff3aa035d178c12e4624eddfab9dce76a91d813",
+      "listingValidatedAt": "2026-09-17T14:07:59.556Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nipsen/omarchy-bose-700",
+        "pluginIds": [
+          "io.github.nipsen.omarchybose700"
+        ],
+        "commit": "fff3aa035d178c12e4624eddfab9dce76a91d813",
+        "checkedAt": "2026-09-17T14:07:59.468Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nipsen/omarchy-bose-700",
+        "pluginIds": [
+          "io.github.nipsen.omarchybose700"
+        ],
+        "commit": "fff3aa035d178c12e4624eddfab9dce76a91d813",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T14:07:59.468Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T21:29:17.850Z",
+        "requestEventId": 31325400173,
+        "requestedAt": "2026-09-17T14:06:01Z",
+        "reviewedAt": "2026-09-17T14:07:59.468Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nipsen.omarchybose700": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
