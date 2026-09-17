@@ -184619,6 +184619,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pdfrg/amla",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T13:58:59.017Z",
+      "listingValidatedCommit": "5b49d0369b2138b6646addc54100692cd242ab49",
+      "listingValidatedAt": "2026-09-17T13:58:59.017Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pdfrg/amla",
+        "pluginIds": [
+          "io.github.pdfrg.amla"
+        ],
+        "commit": "5b49d0369b2138b6646addc54100692cd242ab49",
+        "checkedAt": "2026-09-17T13:58:58.918Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pdfrg/amla",
+        "pluginIds": [
+          "io.github.pdfrg.amla"
+        ],
+        "commit": "5b49d0369b2138b6646addc54100692cd242ab49",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T13:58:58.918Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T18:56:51.597Z",
+        "requestEventId": 31324147983,
+        "requestedAt": "2026-09-17T13:48:43Z",
+        "reviewedAt": "2026-09-17T13:58:58.918Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.pdfrg.amla": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
