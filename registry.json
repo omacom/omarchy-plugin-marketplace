@@ -170303,8 +170303,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T18:02:06.324Z",
-      "listingValidatedCommit": "8f833c2988bf94a9bff094a6d38a661bd9560902",
-      "listingValidatedAt": "2026-09-13T18:02:06.324Z",
+      "listingValidatedCommit": "aadd1670d12fb54b6d35565913352ea159b130d8",
+      "listingValidatedAt": "2026-09-17T23:10:55.074Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -170313,8 +170313,8 @@
         "pluginIds": [
           "air.workspaces"
         ],
-        "commit": "8f833c2988bf94a9bff094a6d38a661bd9560902",
-        "checkedAt": "2026-09-13T18:02:06.261Z",
+        "commit": "aadd1670d12fb54b6d35565913352ea159b130d8",
+        "checkedAt": "2026-09-17T23:10:55.074Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -170330,7 +170330,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8f833c2988bf94a9bff094a6d38a661bd9560902",
+          "validatedAt": "2026-09-13T18:02:06.324Z",
+          "branch": "main",
+          "supersededAt": "2026-09-17T23:10:55.074Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "airenare/omarchy-workspaces-by-monitor",
+            "pluginIds": [
+              "air.workspaces"
+            ],
+            "commit": "8f833c2988bf94a9bff094a6d38a661bd9560902",
+            "checkedAt": "2026-09-13T18:02:06.261Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Warexpor/omarchy-43pr-monitor-plugin",
