@@ -22332,8 +22332,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T21:04:14.116Z",
-      "listingValidatedCommit": "16a97a68c70a5a3156e48d6b8c92f3279821443a",
-      "listingValidatedAt": "2026-08-18T21:04:14.116Z",
+      "listingValidatedCommit": "109078afb2cf23ce9943d9f863338e876eae3be8",
+      "listingValidatedAt": "2026-09-17T13:41:47.486Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -22342,8 +22342,8 @@
         "pluginIds": [
           "io.github.ypmrg.omarchy-easy-kanban"
         ],
-        "commit": "16a97a68c70a5a3156e48d6b8c92f3279821443a",
-        "checkedAt": "2026-08-18T09:07:03.093Z",
+        "commit": "109078afb2cf23ce9943d9f863338e876eae3be8",
+        "checkedAt": "2026-09-17T13:41:47.485Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -22358,7 +22358,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "16a97a68c70a5a3156e48d6b8c92f3279821443a",
+          "validatedAt": "2026-08-18T21:04:14.116Z",
+          "branch": "master",
+          "supersededAt": "2026-09-17T13:41:47.486Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ypmrg/omarchy-easy-kanban",
+            "pluginIds": [
+              "io.github.ypmrg.omarchy-easy-kanban"
+            ],
+            "commit": "16a97a68c70a5a3156e48d6b8c92f3279821443a",
+            "checkedAt": "2026-08-18T09:07:03.093Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/5d0tal1gat0r/omarchy-stocks",
