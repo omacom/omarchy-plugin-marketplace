@@ -185864,6 +185864,72 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AyanMulla09/OmaNord",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:39:18.361Z",
+      "listingValidatedCommit": "96c207cec34e9b180e99ac3651bb0045e2d0cdd7",
+      "listingValidatedAt": "2026-09-17T23:39:18.361Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ayanmulla09/omanord",
+        "pluginIds": [
+          "ayan.nordvpn"
+        ],
+        "commit": "96c207cec34e9b180e99ac3651bb0045e2d0cdd7",
+        "checkedAt": "2026-09-17T23:39:18.272Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ayanmulla09/omanord",
+        "pluginIds": [
+          "ayan.nordvpn"
+        ],
+        "commit": "96c207cec34e9b180e99ac3651bb0045e2d0cdd7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T23:39:18.272Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T17:27:37.677Z",
+        "requestEventId": 31355132540,
+        "requestedAt": "2026-09-17T23:08:48Z",
+        "reviewedAt": "2026-09-17T23:39:18.272Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ayan.nordvpn": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
