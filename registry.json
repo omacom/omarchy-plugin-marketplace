@@ -185535,6 +185535,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rogertobler/omarchy-tun0-vpn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:04:19.877Z",
+      "listingValidatedCommit": "ee1387e84ff17ff2f414642ab0d70e07436e41ce",
+      "listingValidatedAt": "2026-09-17T23:04:19.877Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rogertobler/omarchy-tun0-vpn",
+        "pluginIds": [
+          "rogertobler.tun0-vpn"
+        ],
+        "commit": "ee1387e84ff17ff2f414642ab0d70e07436e41ce",
+        "checkedAt": "2026-09-17T23:04:19.810Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rogertobler/omarchy-tun0-vpn",
+        "pluginIds": [
+          "rogertobler.tun0-vpn"
+        ],
+        "commit": "ee1387e84ff17ff2f414642ab0d70e07436e41ce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T23:04:19.810Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T18:08:43.221Z",
+        "requestEventId": 31354868786,
+        "requestedAt": "2026-09-17T23:02:43Z",
+        "reviewedAt": "2026-09-17T23:04:19.810Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rogertobler.tun0-vpn": {
+          "category": "System",
+          "tags": [
+            "security",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
