@@ -186139,6 +186139,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/frantgn90/omarchy-garmin-connect",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T23:55:20.791Z",
+      "listingValidatedCommit": "1777d578790d9555b052979bf06b3afb5488535e",
+      "listingValidatedAt": "2026-09-17T23:55:20.791Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frantgn90/omarchy-garmin-connect",
+        "pluginIds": [
+          "garmin.connect"
+        ],
+        "commit": "1777d578790d9555b052979bf06b3afb5488535e",
+        "checkedAt": "2026-09-17T23:55:20.733Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "frantgn90/omarchy-garmin-connect",
+        "pluginIds": [
+          "garmin.connect"
+        ],
+        "commit": "1777d578790d9555b052979bf06b3afb5488535e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T23:55:20.733Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T20:52:07.956Z",
+        "requestEventId": 31355539358,
+        "requestedAt": "2026-09-17T23:20:48Z",
+        "reviewedAt": "2026-09-17T23:55:20.733Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "garmin.connect": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
