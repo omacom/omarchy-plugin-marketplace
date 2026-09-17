@@ -4492,8 +4492,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-14",
       "listedAt": "2026-08-14T10:42:56.258Z",
-      "listingValidatedCommit": "4846d594349744e5f66b61416c4efa9327a7f027",
-      "listingValidatedAt": "2026-09-02T00:08:06.069Z",
+      "listingValidatedCommit": "54597db21f6c2ad4804bfda1e3d7516c0eeaed6c",
+      "listingValidatedAt": "2026-09-17T13:24:47.656Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -4502,8 +4502,8 @@
         "pluginIds": [
           "io.github.ypmrg.bambu-companion"
         ],
-        "commit": "4846d594349744e5f66b61416c4efa9327a7f027",
-        "checkedAt": "2026-09-02T00:08:06.069Z",
+        "commit": "54597db21f6c2ad4804bfda1e3d7516c0eeaed6c",
+        "checkedAt": "2026-09-17T13:24:47.656Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -4623,6 +4623,49 @@
             "reviewedAt": "2026-08-28T10:07:02.325Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "4846d594349744e5f66b61416c4efa9327a7f027",
+          "validatedAt": "2026-09-02T00:08:06.069Z",
+          "branch": "master",
+          "supersededAt": "2026-09-17T13:24:47.656Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ypmrg/omarchy-bambu-companion",
+            "pluginIds": [
+              "io.github.ypmrg.bambu-companion"
+            ],
+            "commit": "4846d594349744e5f66b61416c4efa9327a7f027",
+            "checkedAt": "2026-09-02T00:08:06.069Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ypmrg/omarchy-bambu-companion",
+            "pluginIds": [
+              "io.github.ypmrg.bambu-companion"
+            ],
+            "commit": "4846d594349744e5f66b61416c4efa9327a7f027",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T00:08:06.069Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T15:43:44.837Z",
+            "requestEventId": 30381995652,
+            "requestedAt": "2026-09-02T00:04:47Z",
+            "reviewedAt": "2026-09-02T00:08:06.069Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -4631,19 +4674,19 @@
         "pluginIds": [
           "io.github.ypmrg.bambu-companion"
         ],
-        "commit": "4846d594349744e5f66b61416c4efa9327a7f027",
+        "commit": "54597db21f6c2ad4804bfda1e3d7516c0eeaed6c",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T00:08:06.069Z",
+        "baselineCheckedAt": "2026-09-17T13:24:47.656Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-31T15:43:44.837Z",
-        "requestEventId": 30381995652,
-        "requestedAt": "2026-09-02T00:04:47Z",
-        "reviewedAt": "2026-09-02T00:08:06.069Z",
+        "reviewedBaselineCheckedAt": "2026-09-14T21:04:35.194Z",
+        "requestEventId": 31321366388,
+        "requestedAt": "2026-09-17T13:06:58Z",
+        "reviewedAt": "2026-09-17T13:24:47.656Z",
         "reviewer": "HANCORE-linux"
       }
     },
