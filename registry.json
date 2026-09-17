@@ -185405,6 +185405,74 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/FelixDaCraft/omarchy-sony",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T15:29:29.827Z",
+      "listingValidatedCommit": "2190d496d75455f4c591608a87267d3b80df0dd0",
+      "listingValidatedAt": "2026-09-17T15:29:29.827Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "felixdacraft/omarchy-sony",
+        "pluginIds": [
+          "io.github.felixdacraft.omasony"
+        ],
+        "commit": "2190d496d75455f4c591608a87267d3b80df0dd0",
+        "checkedAt": "2026-09-17T15:29:29.771Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "felixdacraft/omarchy-sony",
+        "pluginIds": [
+          "io.github.felixdacraft.omasony"
+        ],
+        "commit": "2190d496d75455f4c591608a87267d3b80df0dd0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-17T15:29:29.771Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T00:46:39.363Z",
+        "requestEventId": 31331031770,
+        "requestedAt": "2026-09-17T15:26:22Z",
+        "reviewedAt": "2026-09-17T15:29:29.771Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.felixdacraft.omasony": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
