@@ -185372,6 +185372,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/joelgaff/omarchy-hatchbox",
+      "type": "plugin-source",
+      "addedAt": "2026-09-17",
+      "listedAt": "2026-09-17T15:26:34.961Z",
+      "listingValidatedCommit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
+      "listingValidatedAt": "2026-09-17T15:26:34.961Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joelgaff/omarchy-hatchbox",
+        "pluginIds": [
+          "joelgaff.hatchbox"
+        ],
+        "commit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
+        "checkedAt": "2026-09-17T15:26:34.871Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "joelgaff.hatchbox": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
