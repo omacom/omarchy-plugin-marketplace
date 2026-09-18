@@ -113160,8 +113160,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T00:07:53.120Z",
-      "listingValidatedCommit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
-      "listingValidatedAt": "2026-09-01T00:07:53.120Z",
+      "listingValidatedCommit": "622f9a6788b64e38e1e412dc401d45548d5b0673",
+      "listingValidatedAt": "2026-09-18T21:16:50.721Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -113170,8 +113170,8 @@
         "pluginIds": [
           "spicybackend.bongo-cat"
         ],
-        "commit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
-        "checkedAt": "2026-09-01T00:07:53.070Z",
+        "commit": "622f9a6788b64e38e1e412dc401d45548d5b0673",
+        "checkedAt": "2026-09-18T21:16:50.721Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -113179,28 +113179,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "spicybackend/omarchy-bongo-cat",
-        "pluginIds": [
-          "spicybackend.bongo-cat"
-        ],
-        "commit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-01T00:07:53.070Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-31T09:55:58.573Z",
-        "requestEventId": 30313003774,
-        "requestedAt": "2026-09-01T00:07:14Z",
-        "reviewedAt": "2026-09-01T00:07:53.070Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "spicybackend.bongo-cat": {
@@ -113215,7 +113193,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "spicybackend/omarchy-bongo-cat",
+        "pluginIds": [
+          "spicybackend.bongo-cat"
+        ],
+        "commit": "622f9a6788b64e38e1e412dc401d45548d5b0673",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:16:50.721Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-15T10:25:53.594Z",
+        "requestEventId": 31417207693,
+        "requestedAt": "2026-09-18T20:40:24Z",
+        "reviewedAt": "2026-09-18T21:16:50.721Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
+          "validatedAt": "2026-09-01T00:07:53.120Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:16:50.721Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "spicybackend/omarchy-bongo-cat",
+            "pluginIds": [
+              "spicybackend.bongo-cat"
+            ],
+            "commit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
+            "checkedAt": "2026-09-01T00:07:53.070Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "spicybackend/omarchy-bongo-cat",
+            "pluginIds": [
+              "spicybackend.bongo-cat"
+            ],
+            "commit": "ae8fe50d30303dff318892bdd95968e3b615bd70",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-01T00:07:53.070Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T09:55:58.573Z",
+            "requestEventId": 30313003774,
+            "requestedAt": "2026-09-01T00:07:14Z",
+            "reviewedAt": "2026-09-01T00:07:53.070Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Comm4nd0/youtube-floater",
