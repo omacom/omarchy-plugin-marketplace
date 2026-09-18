@@ -186340,6 +186340,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ure/omarchy-btop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:10:11.015Z",
+      "listingValidatedCommit": "2e66475977f23104573fb0b7a2c96f2d41e99de4",
+      "listingValidatedAt": "2026-09-18T00:10:11.015Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ure/omarchy-btop",
+        "pluginIds": [
+          "ure.btop"
+        ],
+        "commit": "2e66475977f23104573fb0b7a2c96f2d41e99de4",
+        "checkedAt": "2026-09-18T00:10:10.924Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ure/omarchy-btop",
+        "pluginIds": [
+          "ure.btop"
+        ],
+        "commit": "2e66475977f23104573fb0b7a2c96f2d41e99de4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:10:10.924Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T08:24:00.331Z",
+        "requestEventId": 31356575773,
+        "requestedAt": "2026-09-17T23:52:31Z",
+        "reviewedAt": "2026-09-18T00:10:10.924Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ure.btop": {
+          "category": "Widgets",
+          "tags": [
+            "system",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
