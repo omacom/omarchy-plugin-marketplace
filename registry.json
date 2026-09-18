@@ -188010,6 +188010,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/FerC10110/omarchy-runbook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T02:08:46.681Z",
+      "listingValidatedCommit": "461a3fdf215e911a3fb7f86605bf651d82fd13c8",
+      "listingValidatedAt": "2026-09-18T02:08:46.681Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ferc10110/omarchy-runbook",
+        "pluginIds": [
+          "io.github.ferc10110.runbook"
+        ],
+        "commit": "461a3fdf215e911a3fb7f86605bf651d82fd13c8",
+        "checkedAt": "2026-09-18T02:08:46.604Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ferc10110/omarchy-runbook",
+        "pluginIds": [
+          "io.github.ferc10110.runbook"
+        ],
+        "commit": "461a3fdf215e911a3fb7f86605bf651d82fd13c8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T02:08:46.604Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T21:51:05.673Z",
+        "requestEventId": 31361443018,
+        "requestedAt": "2026-09-18T01:54:23Z",
+        "reviewedAt": "2026-09-18T02:08:46.604Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ferc10110.runbook": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
