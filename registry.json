@@ -187111,6 +187111,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fbal98/omarchy-fortivpn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:56:43.351Z",
+      "listingValidatedCommit": "faa7d332b3ed573ed25c0c955d01c81edf26bfdb",
+      "listingValidatedAt": "2026-09-18T00:56:43.351Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fbal98/omarchy-fortivpn",
+        "pluginIds": [
+          "io.github.fbal98.fortivpn"
+        ],
+        "commit": "faa7d332b3ed573ed25c0c955d01c81edf26bfdb",
+        "checkedAt": "2026-09-18T00:56:43.274Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fbal98/omarchy-fortivpn",
+        "pluginIds": [
+          "io.github.fbal98.fortivpn"
+        ],
+        "commit": "faa7d332b3ed573ed25c0c955d01c81edf26bfdb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:56:43.274Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T07:46:08.328Z",
+        "requestEventId": 31358977241,
+        "requestedAt": "2026-09-18T00:55:32Z",
+        "reviewedAt": "2026-09-18T00:56:43.274Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fbal98.fortivpn": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
