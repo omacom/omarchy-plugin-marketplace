@@ -188699,6 +188699,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Underday/Omarchy-snooker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:05:06.187Z",
+      "listingValidatedCommit": "19fc87076442941c72c089206cd280505c2ae932",
+      "listingValidatedAt": "2026-09-18T18:05:06.187Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "underday/omarchy-snooker",
+        "pluginIds": [
+          "underday.snooker-calendar"
+        ],
+        "commit": "19fc87076442941c72c089206cd280505c2ae932",
+        "checkedAt": "2026-09-18T18:05:06.128Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "underday.snooker-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
