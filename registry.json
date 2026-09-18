@@ -190566,6 +190566,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kristoferlund/omarchy-bose-headphones",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:54:55.148Z",
+      "listingValidatedCommit": "c534c7eb1c19f9fbb777681c3edf672ba539fc7b",
+      "listingValidatedAt": "2026-09-18T20:54:55.148Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kristoferlund/omarchy-bose-headphones",
+        "pluginIds": [
+          "io.github.kristoferlund.bose"
+        ],
+        "commit": "c534c7eb1c19f9fbb777681c3edf672ba539fc7b",
+        "checkedAt": "2026-09-18T20:54:55.059Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kristoferlund/omarchy-bose-headphones",
+        "pluginIds": [
+          "io.github.kristoferlund.bose"
+        ],
+        "commit": "c534c7eb1c19f9fbb777681c3edf672ba539fc7b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:54:55.059Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T08:28:08.142Z",
+        "requestEventId": 31416440254,
+        "requestedAt": "2026-09-18T20:25:32Z",
+        "reviewedAt": "2026-09-18T20:54:55.060Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kristoferlund.bose": {
+          "category": "Hardware",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
