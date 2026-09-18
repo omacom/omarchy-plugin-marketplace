@@ -136489,8 +136489,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T00:20:31.206Z",
-      "listingValidatedCommit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
-      "listingValidatedAt": "2026-09-06T00:20:31.206Z",
+      "listingValidatedCommit": "b01d013ce441f9d8ea76e1423c5a334a5a3ca36f",
+      "listingValidatedAt": "2026-09-18T15:06:43.910Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -136499,8 +136499,8 @@
         "pluginIds": [
           "wian47.siphon"
         ],
-        "commit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
-        "checkedAt": "2026-09-06T00:20:31.133Z",
+        "commit": "b01d013ce441f9d8ea76e1423c5a334a5a3ca36f",
+        "checkedAt": "2026-09-18T15:06:43.910Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -136516,7 +136516,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
+          "validatedAt": "2026-09-06T00:20:31.206Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T15:06:43.910Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wian47/omarchy-siphon",
+            "pluginIds": [
+              "wian47.siphon"
+            ],
+            "commit": "3c6ba355421d65fdb0108bf85663cc2357e90a52",
+            "checkedAt": "2026-09-06T00:20:31.133Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mahziyarng98/jalali-calendar",
