@@ -190452,6 +190452,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TarasKim/omarchy-notion-tasks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:45:07.851Z",
+      "listingValidatedCommit": "e664efe4798eeaaea7fe958ba86fbced8a1c677e",
+      "listingValidatedAt": "2026-09-18T20:45:07.851Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "taraskim/omarchy-notion-tasks",
+        "pluginIds": [
+          "io.github.taraskim.notion-tasks"
+        ],
+        "commit": "e664efe4798eeaaea7fe958ba86fbced8a1c677e",
+        "checkedAt": "2026-09-18T20:45:07.760Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "taraskim/omarchy-notion-tasks",
+        "pluginIds": [
+          "io.github.taraskim.notion-tasks"
+        ],
+        "commit": "e664efe4798eeaaea7fe958ba86fbced8a1c677e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:45:07.760Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T01:50:48.426Z",
+        "requestEventId": 31416311159,
+        "requestedAt": "2026-09-18T20:23:06Z",
+        "reviewedAt": "2026-09-18T20:45:07.760Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.taraskim.notion-tasks": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
