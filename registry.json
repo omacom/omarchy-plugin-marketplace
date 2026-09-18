@@ -188516,6 +188516,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/carcuevas/omarchy-public-ip",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T17:42:46.749Z",
+      "listingValidatedCommit": "c165be01fd04eae0c87f4094c690f710fe9a1688",
+      "listingValidatedAt": "2026-09-18T17:42:46.749Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "carcuevas/omarchy-public-ip",
+        "pluginIds": [
+          "io.github.carcuevas.public-ip"
+        ],
+        "commit": "c165be01fd04eae0c87f4094c690f710fe9a1688",
+        "checkedAt": "2026-09-18T17:42:46.666Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.carcuevas.public-ip": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
