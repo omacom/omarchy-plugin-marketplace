@@ -190690,6 +190690,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/funcoder/omarchy-spotify",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T21:05:10.726Z",
+      "listingValidatedCommit": "ee1285c3fce2ccfb10829707dad1bc44c6b1e388",
+      "listingValidatedAt": "2026-09-18T21:05:10.726Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "funcoder/omarchy-spotify",
+        "pluginIds": [
+          "funcoder.spotify"
+        ],
+        "commit": "ee1285c3fce2ccfb10829707dad1bc44c6b1e388",
+        "checkedAt": "2026-09-18T21:05:10.639Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "funcoder/omarchy-spotify",
+        "pluginIds": [
+          "funcoder.spotify"
+        ],
+        "commit": "ee1285c3fce2ccfb10829707dad1bc44c6b1e388",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:05:10.639Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T09:41:05.810Z",
+        "requestEventId": 31416652391,
+        "requestedAt": "2026-09-18T20:29:36Z",
+        "reviewedAt": "2026-09-18T21:05:10.639Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "funcoder.spotify": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
