@@ -190300,6 +190300,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GSkrt/omarchy-melcloud",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:34:55.199Z",
+      "listingValidatedCommit": "d9e25fdf65882d9a815736a0f14b716c6e8e0949",
+      "listingValidatedAt": "2026-09-18T20:34:55.199Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gskrt/omarchy-melcloud",
+        "pluginIds": [
+          "io.github.gskrt.melcloud"
+        ],
+        "commit": "d9e25fdf65882d9a815736a0f14b716c6e8e0949",
+        "checkedAt": "2026-09-18T20:34:55.104Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gskrt/omarchy-melcloud",
+        "pluginIds": [
+          "io.github.gskrt.melcloud"
+        ],
+        "commit": "d9e25fdf65882d9a815736a0f14b716c6e8e0949",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:34:55.104Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T07:20:20.997Z",
+        "requestEventId": 31416166417,
+        "requestedAt": "2026-09-18T20:20:18Z",
+        "reviewedAt": "2026-09-18T20:34:55.104Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.gskrt.melcloud": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
