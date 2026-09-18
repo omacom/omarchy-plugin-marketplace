@@ -190363,6 +190363,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/emkcloud/omarchy-wallpapers-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:37:45.968Z",
+      "listingValidatedCommit": "13499bcb30df7c72466322e0a42231a4bdcb840f",
+      "listingValidatedAt": "2026-09-18T20:37:45.968Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "emkcloud/omarchy-wallpapers-plugin",
+        "pluginIds": [
+          "emkcloud.wallpaper-manager"
+        ],
+        "commit": "13499bcb30df7c72466322e0a42231a4bdcb840f",
+        "checkedAt": "2026-09-18T20:37:45.915Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "emkcloud.wallpaper-manager": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
