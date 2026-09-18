@@ -187499,6 +187499,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/lnewhart/themed_tray_omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:36:27.795Z",
+      "listingValidatedCommit": "24159db846ef07a54a98efd34c9b6698c8ae4192",
+      "listingValidatedAt": "2026-09-18T01:36:27.795Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lnewhart/themed_tray_omarchy",
+        "pluginIds": [
+          "themed-tray"
+        ],
+        "commit": "24159db846ef07a54a98efd34c9b6698c8ae4192",
+        "checkedAt": "2026-09-18T01:36:27.718Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "themed-tray": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
