@@ -189840,6 +189840,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brenoperucchi/omabackup",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:00:25.624Z",
+      "listingValidatedCommit": "e47ef6a63f53178072eb9b3e59e400edd46f637b",
+      "listingValidatedAt": "2026-09-18T20:00:25.624Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brenoperucchi/omabackup",
+        "pluginIds": [
+          "brenoperucchi.omabackup"
+        ],
+        "commit": "e47ef6a63f53178072eb9b3e59e400edd46f637b",
+        "checkedAt": "2026-09-18T20:00:25.524Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brenoperucchi/omabackup",
+        "pluginIds": [
+          "brenoperucchi.omabackup"
+        ],
+        "commit": "e47ef6a63f53178072eb9b3e59e400edd46f637b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:00:25.524Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:33:56.326Z",
+        "requestEventId": 31414297355,
+        "requestedAt": "2026-09-18T19:45:45Z",
+        "reviewedAt": "2026-09-18T20:00:25.524Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brenoperucchi.omabackup": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
