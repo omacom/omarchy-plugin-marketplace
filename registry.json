@@ -109579,8 +109579,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T12:26:23.642Z",
-      "listingValidatedCommit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
-      "listingValidatedAt": "2026-08-31T12:26:23.642Z",
+      "listingValidatedCommit": "a41b45a75261a89f5a9b7b0b9c75cb099cbcd1b5",
+      "listingValidatedAt": "2026-09-18T21:23:02.018Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -109589,8 +109589,8 @@
         "pluginIds": [
           "io.github.mtolhuys.onscreen-keyboard"
         ],
-        "commit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
-        "checkedAt": "2026-08-31T12:26:23.588Z",
+        "commit": "a41b45a75261a89f5a9b7b0b9c75cb099cbcd1b5",
+        "checkedAt": "2026-09-18T21:23:02.018Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -109598,28 +109598,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mtolhuys/omarchy-onscreen-keyboard",
-        "pluginIds": [
-          "io.github.mtolhuys.onscreen-keyboard"
-        ],
-        "commit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-31T12:26:23.588Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T22:07:23.845Z",
-        "requestEventId": 30278000841,
-        "requestedAt": "2026-08-31T12:25:43Z",
-        "reviewedAt": "2026-08-31T12:26:23.588Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.mtolhuys.onscreen-keyboard": {
@@ -109631,7 +109609,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mtolhuys/omarchy-onscreen-keyboard",
+        "pluginIds": [
+          "io.github.mtolhuys.onscreen-keyboard"
+        ],
+        "commit": "a41b45a75261a89f5a9b7b0b9c75cb099cbcd1b5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:23:02.018Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-15T11:41:31.249Z",
+        "requestEventId": 31417214875,
+        "requestedAt": "2026-09-18T20:40:33Z",
+        "reviewedAt": "2026-09-18T21:23:02.018Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
+          "validatedAt": "2026-08-31T12:26:23.642Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:23:02.018Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mtolhuys/omarchy-onscreen-keyboard",
+            "pluginIds": [
+              "io.github.mtolhuys.onscreen-keyboard"
+            ],
+            "commit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
+            "checkedAt": "2026-08-31T12:26:23.588Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mtolhuys/omarchy-onscreen-keyboard",
+            "pluginIds": [
+              "io.github.mtolhuys.onscreen-keyboard"
+            ],
+            "commit": "0c2a66649ab2c77e52a26b2985c63440e5304dcb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-31T12:26:23.588Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T22:07:23.845Z",
+            "requestEventId": 30278000841,
+            "requestedAt": "2026-08-31T12:25:43Z",
+            "reviewedAt": "2026-08-31T12:26:23.588Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/wmfeht/omarchy-border-fx",
