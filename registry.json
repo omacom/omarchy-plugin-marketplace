@@ -186239,6 +186239,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/3mrgnc3/omarchy-alienfx-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:02:29.472Z",
+      "listingValidatedCommit": "221f8a0c395833ec64d81a630b9b7a2c4eb5647b",
+      "listingValidatedAt": "2026-09-18T00:02:29.472Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "3mrgnc3/omarchy-alienfx-plugin",
+        "pluginIds": [
+          "3mrgnc3.alienfx"
+        ],
+        "commit": "221f8a0c395833ec64d81a630b9b7a2c4eb5647b",
+        "checkedAt": "2026-09-18T00:02:29.389Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "3mrgnc3/omarchy-alienfx-plugin",
+        "pluginIds": [
+          "3mrgnc3.alienfx"
+        ],
+        "commit": "221f8a0c395833ec64d81a630b9b7a2c4eb5647b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:02:29.389Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T19:08:54.826Z",
+        "requestEventId": 31355838408,
+        "requestedAt": "2026-09-17T23:29:57Z",
+        "reviewedAt": "2026-09-18T00:02:29.389Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "3mrgnc3.alienfx": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
