@@ -187882,6 +187882,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ejuro/omarchy-theme-favorites",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:58:43.677Z",
+      "listingValidatedCommit": "c285d433d6354dca06d39a65dcf0ecc50fe23574",
+      "listingValidatedAt": "2026-09-18T01:58:43.677Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ejuro/omarchy-theme-favorites",
+        "pluginIds": [
+          "io.github.ejuro.theme-favorites"
+        ],
+        "commit": "c285d433d6354dca06d39a65dcf0ecc50fe23574",
+        "checkedAt": "2026-09-18T01:58:43.584Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ejuro.theme-favorites": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
