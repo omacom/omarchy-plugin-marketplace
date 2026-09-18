@@ -186898,6 +186898,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Deunnis/omarchy-lacquer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:41:10.790Z",
+      "listingValidatedCommit": "79237c53e5d554f4640b29d7376e574875b18055",
+      "listingValidatedAt": "2026-09-18T00:41:10.790Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "deunnis/omarchy-lacquer",
+        "pluginIds": [
+          "io.github.deunnis.lacquer"
+        ],
+        "commit": "79237c53e5d554f4640b29d7376e574875b18055",
+        "checkedAt": "2026-09-18T00:41:10.699Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.deunnis.lacquer": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
