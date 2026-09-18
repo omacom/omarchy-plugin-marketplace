@@ -190623,6 +190623,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mwiederrecht/muezzin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:58:25.339Z",
+      "listingValidatedCommit": "c5748a2346ae3336653b2fb97af500ed4fa0532e",
+      "listingValidatedAt": "2026-09-18T20:58:25.339Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mwiederrecht/muezzin",
+        "pluginIds": [
+          "io.github.mwiederrecht.muezzin"
+        ],
+        "commit": "c5748a2346ae3336653b2fb97af500ed4fa0532e",
+        "checkedAt": "2026-09-18T20:58:25.235Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mwiederrecht.muezzin": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
