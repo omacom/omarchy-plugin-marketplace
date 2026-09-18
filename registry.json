@@ -189777,6 +189777,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hominluo/omarchy-launcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:57:06.611Z",
+      "listingValidatedCommit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+      "listingValidatedAt": "2026-09-18T19:57:06.611Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hominluo/omarchy-launcher",
+        "pluginIds": [
+          "io.github.hominluo.launcher"
+        ],
+        "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+        "checkedAt": "2026-09-18T19:57:06.545Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hominluo/omarchy-launcher",
+        "pluginIds": [
+          "io.github.hominluo.launcher"
+        ],
+        "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T19:57:06.545Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T08:54:33.273Z",
+        "requestEventId": 31414169510,
+        "requestedAt": "2026-09-18T19:43:22Z",
+        "reviewedAt": "2026-09-18T19:57:06.545Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hominluo.launcher": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
