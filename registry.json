@@ -172467,8 +172467,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T22:34:50.689Z",
-      "listingValidatedCommit": "85570d4fb4f9b3b8be8e78dd85dfa7385fcbce05",
-      "listingValidatedAt": "2026-09-14T22:34:50.689Z",
+      "listingValidatedCommit": "25781c543325bb9cd1cce9314f35ac210ca1515d",
+      "listingValidatedAt": "2026-09-18T15:12:40.017Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -172477,8 +172477,8 @@
         "pluginIds": [
           "minholi.windy"
         ],
-        "commit": "85570d4fb4f9b3b8be8e78dd85dfa7385fcbce05",
-        "checkedAt": "2026-09-14T22:34:50.598Z",
+        "commit": "25781c543325bb9cd1cce9314f35ac210ca1515d",
+        "checkedAt": "2026-09-18T15:12:40.017Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -172493,7 +172493,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "85570d4fb4f9b3b8be8e78dd85dfa7385fcbce05",
+          "validatedAt": "2026-09-14T22:34:50.689Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T15:12:40.017Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "minholi/omarchy-windy",
+            "pluginIds": [
+              "minholi.windy"
+            ],
+            "commit": "85570d4fb4f9b3b8be8e78dd85dfa7385fcbce05",
+            "checkedAt": "2026-09-14T22:34:50.598Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SwadowMaster/omarchy-spotify",
