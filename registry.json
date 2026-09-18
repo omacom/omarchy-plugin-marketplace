@@ -187243,6 +187243,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Duro02/omarchy-phoneshot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:14:15.128Z",
+      "listingValidatedCommit": "9ee1b4ad109ff61d6db364b6bfef5d44ad3f1a43",
+      "listingValidatedAt": "2026-09-18T01:14:15.128Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "duro02/omarchy-phoneshot",
+        "pluginIds": [
+          "duro.phoneshot"
+        ],
+        "commit": "9ee1b4ad109ff61d6db364b6bfef5d44ad3f1a43",
+        "checkedAt": "2026-09-18T01:14:15.041Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "duro02/omarchy-phoneshot",
+        "pluginIds": [
+          "duro.phoneshot"
+        ],
+        "commit": "9ee1b4ad109ff61d6db364b6bfef5d44ad3f1a43",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T01:14:15.041Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T10:58:33.744Z",
+        "requestEventId": 31359641307,
+        "requestedAt": "2026-09-18T01:12:44Z",
+        "reviewedAt": "2026-09-18T01:14:15.041Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "duro.phoneshot": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
