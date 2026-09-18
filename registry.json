@@ -186401,6 +186401,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kalinewb/omarchy-face",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:13:55.866Z",
+      "listingValidatedCommit": "58a4ebb5dde35cb0d12d29259fa49d4901b9e626",
+      "listingValidatedAt": "2026-09-18T00:13:55.866Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kalinewb/omarchy-face",
+        "pluginIds": [
+          "graveklar.face"
+        ],
+        "commit": "58a4ebb5dde35cb0d12d29259fa49d4901b9e626",
+        "checkedAt": "2026-09-18T00:13:55.769Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kalinewb/omarchy-face",
+        "pluginIds": [
+          "graveklar.face"
+        ],
+        "commit": "58a4ebb5dde35cb0d12d29259fa49d4901b9e626",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:13:55.769Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T15:45:48.832Z",
+        "requestEventId": 31356701196,
+        "requestedAt": "2026-09-17T23:56:15Z",
+        "reviewedAt": "2026-09-18T00:13:55.769Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "graveklar.face": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
