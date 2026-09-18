@@ -188665,6 +188665,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ywenhao/omarchy-mouse-touchpad-toggle",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:02:07.673Z",
+      "listingValidatedCommit": "d7253907f9b722be5deaa5800cf73bebfcab03dc",
+      "listingValidatedAt": "2026-09-18T18:02:07.673Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ywenhao/omarchy-mouse-touchpad-toggle",
+        "pluginIds": [
+          "dev.ywenhao.mouse-touchpad-toggle"
+        ],
+        "commit": "d7253907f9b722be5deaa5800cf73bebfcab03dc",
+        "checkedAt": "2026-09-18T18:02:07.579Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dev.ywenhao.mouse-touchpad-toggle": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
