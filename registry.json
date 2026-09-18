@@ -189568,6 +189568,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ehlxr/omarchy-cliampui",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:43:21.781Z",
+      "listingValidatedCommit": "95b34a7b22331335676f94e714074e082ac62093",
+      "listingValidatedAt": "2026-09-18T19:43:21.781Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ehlxr/omarchy-cliampui",
+        "pluginIds": [
+          "io.github.ehlxr.cliampui"
+        ],
+        "commit": "95b34a7b22331335676f94e714074e082ac62093",
+        "checkedAt": "2026-09-18T19:43:21.688Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ehlxr/omarchy-cliampui",
+        "pluginIds": [
+          "io.github.ehlxr.cliampui"
+        ],
+        "commit": "95b34a7b22331335676f94e714074e082ac62093",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T19:43:21.688Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T01:08:30.182Z",
+        "requestEventId": 31413461655,
+        "requestedAt": "2026-09-18T19:30:34Z",
+        "reviewedAt": "2026-09-18T19:43:21.689Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ehlxr.cliampui": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
