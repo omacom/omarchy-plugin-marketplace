@@ -187976,6 +187976,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/abdessamadjaouad/blue-light-blocker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T02:05:26.305Z",
+      "listingValidatedCommit": "caf20dbcac2ce4c1ce725efa96fbc6e2c8aec90e",
+      "listingValidatedAt": "2026-09-18T02:05:26.305Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "abdessamadjaouad/blue-light-blocker",
+        "pluginIds": [
+          "jao.nightlight"
+        ],
+        "commit": "caf20dbcac2ce4c1ce725efa96fbc6e2c8aec90e",
+        "checkedAt": "2026-09-18T02:05:26.210Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jao.nightlight": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
