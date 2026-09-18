@@ -190028,6 +190028,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Acero-AD/omarchy-writing-pet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:14:47.173Z",
+      "listingValidatedCommit": "93e3c6550ca8b2a88b4904fda4e35c96c16436c0",
+      "listingValidatedAt": "2026-09-18T20:14:47.173Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "acero-ad/omarchy-writing-pet",
+        "pluginIds": [
+          "io.github.acero-ad.writing-critter"
+        ],
+        "commit": "93e3c6550ca8b2a88b4904fda4e35c96c16436c0",
+        "checkedAt": "2026-09-18T20:14:47.072Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "acero-ad/omarchy-writing-pet",
+        "pluginIds": [
+          "io.github.acero-ad.writing-critter"
+        ],
+        "commit": "93e3c6550ca8b2a88b4904fda4e35c96c16436c0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:14:47.072Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T06:20:18.655Z",
+        "requestEventId": 31414878275,
+        "requestedAt": "2026-09-18T19:57:08Z",
+        "reviewedAt": "2026-09-18T20:14:47.072Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.acero-ad.writing-critter": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
