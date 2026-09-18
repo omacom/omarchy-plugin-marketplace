@@ -113099,8 +113099,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T00:01:55.418Z",
-      "listingValidatedCommit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
-      "listingValidatedAt": "2026-09-01T00:01:55.418Z",
+      "listingValidatedCommit": "93800d2c8dbb8771d71b24721765f4c8709f6d55",
+      "listingValidatedAt": "2026-09-18T21:19:48.702Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -113109,35 +113109,14 @@
         "pluginIds": [
           "io.github.mtolhuys.sidecar"
         ],
-        "commit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
-        "checkedAt": "2026-09-01T00:01:55.365Z",
+        "commit": "93800d2c8dbb8771d71b24721765f4c8709f6d55",
+        "checkedAt": "2026-09-18T21:19:48.702Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mtolhuys/omarchy-sidecar",
-        "pluginIds": [
-          "io.github.mtolhuys.sidecar"
-        ],
-        "commit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-01T00:01:55.365Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T20:29:31.971Z",
-        "requestEventId": 30312797552,
-        "requestedAt": "2026-09-01T00:01:13Z",
-        "reviewedAt": "2026-09-01T00:01:55.366Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.mtolhuys.sidecar": {
@@ -113153,7 +113132,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mtolhuys/omarchy-sidecar",
+        "pluginIds": [
+          "io.github.mtolhuys.sidecar"
+        ],
+        "commit": "93800d2c8dbb8771d71b24721765f4c8709f6d55",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:19:48.702Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-15T11:41:35.092Z",
+        "requestEventId": 31417210878,
+        "requestedAt": "2026-09-18T20:40:28Z",
+        "reviewedAt": "2026-09-18T21:19:48.702Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
+          "validatedAt": "2026-09-01T00:01:55.418Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:19:48.702Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mtolhuys/omarchy-sidecar",
+            "pluginIds": [
+              "io.github.mtolhuys.sidecar"
+            ],
+            "commit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
+            "checkedAt": "2026-09-01T00:01:55.365Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mtolhuys/omarchy-sidecar",
+            "pluginIds": [
+              "io.github.mtolhuys.sidecar"
+            ],
+            "commit": "9aa3726b6ef14095f74c88f53a352397f08d4d50",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-01T00:01:55.365Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T20:29:31.971Z",
+            "requestEventId": 30312797552,
+            "requestedAt": "2026-09-01T00:01:13Z",
+            "reviewedAt": "2026-09-01T00:01:55.366Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/spicybackend/omarchy-bongo-cat",
