@@ -186468,6 +186468,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/sharifmdathar/dynamic-island-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:16:57.812Z",
+      "listingValidatedCommit": "5630c760177b0007bf301093144dedb6dcb12cf6",
+      "listingValidatedAt": "2026-09-18T00:16:57.812Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sharifmdathar/dynamic-island-omarchy",
+        "pluginIds": [
+          "sharifmdathar.dynamic-island"
+        ],
+        "commit": "5630c760177b0007bf301093144dedb6dcb12cf6",
+        "checkedAt": "2026-09-18T00:16:57.761Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sharifmdathar.dynamic-island": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
