@@ -189937,6 +189937,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NonMirror/nonmirror.codec",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:07:52.407Z",
+      "listingValidatedCommit": "ace8306d43591a84270420da4d171bfb7aee5096",
+      "listingValidatedAt": "2026-09-18T20:07:52.407Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nonmirror/nonmirror.codec",
+        "pluginIds": [
+          "nonmirror.codec"
+        ],
+        "commit": "ace8306d43591a84270420da4d171bfb7aee5096",
+        "checkedAt": "2026-09-18T20:07:52.333Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nonmirror/nonmirror.codec",
+        "pluginIds": [
+          "nonmirror.codec"
+        ],
+        "commit": "ace8306d43591a84270420da4d171bfb7aee5096",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:07:52.333Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T02:03:09.478Z",
+        "requestEventId": 31414502684,
+        "requestedAt": "2026-09-18T19:49:52Z",
+        "reviewedAt": "2026-09-18T20:07:52.333Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nonmirror.codec": {
+          "category": "Developer Tools",
+          "tags": [
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
