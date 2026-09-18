@@ -189284,6 +189284,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hominluo/omarchy-google-drive",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:22:46.867Z",
+      "listingValidatedCommit": "4729ec50e4a85393d122d91d1fe45f107d2cf8e2",
+      "listingValidatedAt": "2026-09-18T19:22:46.867Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hominluo/omarchy-google-drive",
+        "pluginIds": [
+          "io.github.hominluo.google-drive"
+        ],
+        "commit": "4729ec50e4a85393d122d91d1fe45f107d2cf8e2",
+        "checkedAt": "2026-09-18T19:22:46.775Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hominluo/omarchy-google-drive",
+        "pluginIds": [
+          "io.github.hominluo.google-drive"
+        ],
+        "commit": "4729ec50e4a85393d122d91d1fe45f107d2cf8e2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T19:22:46.775Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T08:38:13.741Z",
+        "requestEventId": 31412741347,
+        "requestedAt": "2026-09-18T19:18:28Z",
+        "reviewedAt": "2026-09-18T19:22:46.775Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hominluo.google-drive": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
