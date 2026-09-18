@@ -188455,6 +188455,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevinbsr/omacam-control",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T17:39:34.603Z",
+      "listingValidatedCommit": "bb909b3c8deca0bd78f1f91d6c0fe8024d4aace5",
+      "listingValidatedAt": "2026-09-18T17:39:34.603Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevinbsr/omacam-control",
+        "pluginIds": [
+          "kevin.camera"
+        ],
+        "commit": "bb909b3c8deca0bd78f1f91d6c0fe8024d4aace5",
+        "checkedAt": "2026-09-18T17:39:34.512Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kevinbsr/omacam-control",
+        "pluginIds": [
+          "kevin.camera"
+        ],
+        "commit": "bb909b3c8deca0bd78f1f91d6c0fe8024d4aace5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T17:39:34.512Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:31:04.944Z",
+        "requestEventId": 31406902582,
+        "requestedAt": "2026-09-18T17:38:05Z",
+        "reviewedAt": "2026-09-18T17:39:34.512Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kevin.camera": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
