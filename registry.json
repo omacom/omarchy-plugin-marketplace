@@ -189903,6 +189903,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/FAZuH/omarchy-screenlogs",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:04:21.585Z",
+      "listingValidatedCommit": "0d41b65f8ddea046d7b250e593ffc13b36a09487",
+      "listingValidatedAt": "2026-09-18T20:04:21.585Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fazuh/omarchy-screenlogs",
+        "pluginIds": [
+          "fazuh.screenlogs"
+        ],
+        "commit": "0d41b65f8ddea046d7b250e593ffc13b36a09487",
+        "checkedAt": "2026-09-18T20:04:21.499Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fazuh.screenlogs": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
