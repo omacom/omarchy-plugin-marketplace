@@ -190243,6 +190243,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/avillagran/omarchy-supernotch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:29:30.524Z",
+      "listingValidatedCommit": "8d52102058fa9e02a2e84f6ef357d5382f1d3a05",
+      "listingValidatedAt": "2026-09-18T20:29:30.524Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "avillagran/omarchy-supernotch",
+        "pluginIds": [
+          "io.github.avillagran.omarchy-supernotch"
+        ],
+        "commit": "8d52102058fa9e02a2e84f6ef357d5382f1d3a05",
+        "checkedAt": "2026-09-18T20:29:30.433Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "avillagran/omarchy-supernotch",
+        "pluginIds": [
+          "io.github.avillagran.omarchy-supernotch"
+        ],
+        "commit": "8d52102058fa9e02a2e84f6ef357d5382f1d3a05",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:29:30.433Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T19:47:57.521Z",
+        "requestEventId": 31415965174,
+        "requestedAt": "2026-09-18T20:16:27Z",
+        "reviewedAt": "2026-09-18T20:29:30.433Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.avillagran.omarchy-supernotch": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
