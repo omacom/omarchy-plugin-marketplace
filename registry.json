@@ -189718,6 +189718,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hominluo/Omarchy-Podcast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:54:00.460Z",
+      "listingValidatedCommit": "a787f070adfbf8768b20026c8978e4782f78f8c2",
+      "listingValidatedAt": "2026-09-18T19:54:00.460Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hominluo/omarchy-podcast",
+        "pluginIds": [
+          "io.github.hominluo.podcast"
+        ],
+        "commit": "a787f070adfbf8768b20026c8978e4782f78f8c2",
+        "checkedAt": "2026-09-18T19:54:00.364Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hominluo/omarchy-podcast",
+        "pluginIds": [
+          "io.github.hominluo.podcast"
+        ],
+        "commit": "a787f070adfbf8768b20026c8978e4782f78f8c2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T19:54:00.364Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T08:38:17.727Z",
+        "requestEventId": 31413989164,
+        "requestedAt": "2026-09-18T19:39:55Z",
+        "reviewedAt": "2026-09-18T19:54:00.364Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hominluo.podcast": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
