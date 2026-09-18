@@ -187915,6 +187915,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SmoothPixels/glyph-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T02:01:55.668Z",
+      "listingValidatedCommit": "6f8711749f6e6366128cb93d3572b348633efb94",
+      "listingValidatedAt": "2026-09-18T02:01:55.668Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smoothpixels/glyph-menu",
+        "pluginIds": [
+          "io.github.smoothpixels.glyph-menu"
+        ],
+        "commit": "6f8711749f6e6366128cb93d3572b348633efb94",
+        "checkedAt": "2026-09-18T02:01:55.587Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "smoothpixels/glyph-menu",
+        "pluginIds": [
+          "io.github.smoothpixels.glyph-menu"
+        ],
+        "commit": "6f8711749f6e6366128cb93d3572b348633efb94",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T02:01:55.587Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T22:11:09.836Z",
+        "requestEventId": 31361199521,
+        "requestedAt": "2026-09-18T01:48:58Z",
+        "reviewedAt": "2026-09-18T02:01:55.587Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.smoothpixels.glyph-menu": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
