@@ -189625,6 +189625,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wszaq/omarchy-cursor-agent",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:46:56.585Z",
+      "listingValidatedCommit": "0f132f6eeb372c58a9306a3abbbc84165dcf9d82",
+      "listingValidatedAt": "2026-09-18T19:46:56.585Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wszaq/omarchy-cursor-agent",
+        "pluginIds": [
+          "wszaq.cursor-agent"
+        ],
+        "commit": "0f132f6eeb372c58a9306a3abbbc84165dcf9d82",
+        "checkedAt": "2026-09-18T19:46:56.513Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "wszaq.cursor-agent": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
