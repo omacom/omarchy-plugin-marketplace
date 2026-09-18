@@ -186679,6 +186679,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ninepointlabs/omarchy-wow-reset",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:29:29.871Z",
+      "listingValidatedCommit": "2abf6cb6ca4806d92ad8d194f81b0574de5eb328",
+      "listingValidatedAt": "2026-09-18T00:29:29.871Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ninepointlabs/omarchy-wow-reset",
+        "pluginIds": [
+          "ninepointlabs.wow-reset"
+        ],
+        "commit": "2abf6cb6ca4806d92ad8d194f81b0574de5eb328",
+        "checkedAt": "2026-09-18T00:29:29.789Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ninepointlabs/omarchy-wow-reset",
+        "pluginIds": [
+          "ninepointlabs.wow-reset"
+        ],
+        "commit": "2abf6cb6ca4806d92ad8d194f81b0574de5eb328",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:29:29.789Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T18:58:33.723Z",
+        "requestEventId": 31357139826,
+        "requestedAt": "2026-09-18T00:08:24Z",
+        "reviewedAt": "2026-09-18T00:29:29.789Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ninepointlabs.wow-reset": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
