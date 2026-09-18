@@ -188305,6 +188305,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/JohnJKerr/omarchy-astronoma",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T17:14:00.510Z",
+      "listingValidatedCommit": "eeb2ebacd05c7c3f3ff25eef3980e26e59236100",
+      "listingValidatedAt": "2026-09-18T17:14:00.510Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "johnjkerr/omarchy-astronoma",
+        "pluginIds": [
+          "io.github.johnjkerr.astronoma"
+        ],
+        "commit": "eeb2ebacd05c7c3f3ff25eef3980e26e59236100",
+        "checkedAt": "2026-09-18T17:14:00.409Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "johnjkerr/omarchy-astronoma",
+        "pluginIds": [
+          "io.github.johnjkerr.astronoma"
+        ],
+        "commit": "eeb2ebacd05c7c3f3ff25eef3980e26e59236100",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T17:14:00.409Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:04:21.396Z",
+        "requestEventId": 31405423555,
+        "requestedAt": "2026-09-18T17:12:16Z",
+        "reviewedAt": "2026-09-18T17:14:00.410Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.johnjkerr.astronoma": {
+          "category": "System",
+          "tags": [
+            "system",
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
