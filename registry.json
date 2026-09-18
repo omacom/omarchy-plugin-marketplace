@@ -123710,8 +123710,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T02:02:36.901Z",
-      "listingValidatedCommit": "dd039af709e6f87a3d4b05ebe85860106d8e6ff8",
-      "listingValidatedAt": "2026-09-04T02:02:36.901Z",
+      "listingValidatedCommit": "3fb8b7a8696c963b27a63c2e126ef0d866d9fc5f",
+      "listingValidatedAt": "2026-09-18T21:33:38.848Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -123720,8 +123720,8 @@
         "pluginIds": [
           "io.github.elgevan.binaural-focus"
         ],
-        "commit": "dd039af709e6f87a3d4b05ebe85860106d8e6ff8",
-        "checkedAt": "2026-09-04T02:02:36.833Z",
+        "commit": "3fb8b7a8696c963b27a63c2e126ef0d866d9fc5f",
+        "checkedAt": "2026-09-18T21:33:38.848Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -123737,7 +123737,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "dd039af709e6f87a3d4b05ebe85860106d8e6ff8",
+          "validatedAt": "2026-09-04T02:02:36.901Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:33:38.848Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "elgevan/omarchy-binaural-focus",
+            "pluginIds": [
+              "io.github.elgevan.binaural-focus"
+            ],
+            "commit": "dd039af709e6f87a3d4b05ebe85860106d8e6ff8",
+            "checkedAt": "2026-09-04T02:02:36.833Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/EdgeIQ-Labs/omarchy-pacman-workspaces",
