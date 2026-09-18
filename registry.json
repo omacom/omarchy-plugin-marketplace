@@ -187362,6 +187362,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ciryon/omarchy-pullbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:27:49.638Z",
+      "listingValidatedCommit": "c36da791d5616f0a4da4c86230f3ada1cd2250e5",
+      "listingValidatedAt": "2026-09-18T01:27:49.638Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ciryon/omarchy-pullbar",
+        "pluginIds": [
+          "io.github.ciryon.pullbar"
+        ],
+        "commit": "c36da791d5616f0a4da4c86230f3ada1cd2250e5",
+        "checkedAt": "2026-09-18T01:27:49.563Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ciryon.pullbar": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
