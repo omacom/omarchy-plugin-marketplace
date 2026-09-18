@@ -186770,6 +186770,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pepsoren/omanoise",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:35:04.654Z",
+      "listingValidatedCommit": "99ba6a4f0493d43998bf4d5779609953711aafd8",
+      "listingValidatedAt": "2026-09-18T00:35:04.654Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pepsoren/omanoise",
+        "pluginIds": [
+          "io.github.pepsoren.omanoise"
+        ],
+        "commit": "99ba6a4f0493d43998bf4d5779609953711aafd8",
+        "checkedAt": "2026-09-18T00:35:04.597Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pepsoren/omanoise",
+        "pluginIds": [
+          "io.github.pepsoren.omanoise"
+        ],
+        "commit": "99ba6a4f0493d43998bf4d5779609953711aafd8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:35:04.597Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T07:27:29.479Z",
+        "requestEventId": 31357564970,
+        "requestedAt": "2026-09-18T00:18:57Z",
+        "reviewedAt": "2026-09-18T00:35:04.597Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.pepsoren.omanoise": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
