@@ -188949,6 +188949,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/the4rchangel/omarchy-hackery-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:45:26.824Z",
+      "listingValidatedCommit": "ba9549297e2202af29c2d4fd4636bd49b5af50ae",
+      "listingValidatedAt": "2026-09-18T18:45:26.824Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "the4rchangel/omarchy-hackery-lock",
+        "pluginIds": [
+          "io.github.the4rchangel.hackery-lock"
+        ],
+        "commit": "ba9549297e2202af29c2d4fd4636bd49b5af50ae",
+        "checkedAt": "2026-09-18T18:45:26.741Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "the4rchangel/omarchy-hackery-lock",
+        "pluginIds": [
+          "io.github.the4rchangel.hackery-lock"
+        ],
+        "commit": "ba9549297e2202af29c2d4fd4636bd49b5af50ae",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T18:45:26.741Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:36:48.713Z",
+        "requestEventId": 31410723323,
+        "requestedAt": "2026-09-18T18:43:54Z",
+        "reviewedAt": "2026-09-18T18:45:26.741Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.the4rchangel.hackery-lock": {
+          "category": "Appearance",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
