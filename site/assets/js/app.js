@@ -203,6 +203,12 @@ function scheduleSearchUpdate() {
   searchInputTimer = window.setTimeout(runScheduledSearchUpdate, searchInputDelay);
 }
 
+function closeSearchSuggestionsAndFlush() {
+  const hadPendingSearch = searchInputTimer !== 0;
+  closeSearchSuggestions();
+  if (hadPendingSearch) render();
+}
+
 function sourcePlugins() {
   return state.plugins.filter((plugin) => (plugin.sourceType || "community") === state.source);
 }
@@ -537,6 +543,7 @@ function commitSearchDraft(completion) {
   });
   if (state.terms.length + pending.length > maximumSearchTerms) {
     closeSearchSuggestions();
+    render();
     searchSuggestionStatus.textContent = `A maximum of ${maximumSearchTerms} search terms is allowed`;
     return false;
   }
@@ -1443,11 +1450,7 @@ async function init() {
     if (event.isComposing) return;
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
-      closeSuggestions: () => {
-        const hadPendingSearch = searchInputTimer !== 0;
-        closeSearchSuggestions();
-        if (hadPendingSearch) render();
-      },
+      closeSuggestions: closeSearchSuggestionsAndFlush,
       clearSearch: () => {
         cancelScheduledSearchUpdate();
         search.value = "";
@@ -1459,9 +1462,7 @@ async function init() {
       },
     })) return;
     if (event.key === "Tab") {
-      const hadPendingSearch = searchInputTimer !== 0;
-      closeSearchSuggestions();
-      if (hadPendingSearch) render();
+      closeSearchSuggestionsAndFlush();
       return;
     }
     if (event.key === "Backspace" && !search.value && state.terms.length) {
@@ -1505,15 +1506,13 @@ async function init() {
   search.addEventListener("focus", () => {
     if (searchBlurTimer) window.clearTimeout(searchBlurTimer);
     searchBlurTimer = 0;
+    const hadPendingSearch = searchInputTimer !== 0;
     cancelScheduledSearchUpdate();
     updateSearchSuggestions();
+    if (hadPendingSearch) render();
   });
   search.addEventListener("blur", () => {
-    searchBlurTimer = window.setTimeout(() => {
-      const hadPendingSearch = searchInputTimer !== 0;
-      closeSearchSuggestions();
-      if (hadPendingSearch) render();
-    }, 100);
+    searchBlurTimer = window.setTimeout(closeSearchSuggestionsAndFlush, 100);
   });
   document.addEventListener("selectionchange", () => {
     if (document.activeElement === search) updateFishPreview();
