@@ -190787,6 +190787,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/funcoder/omarchy-app-shortcuts",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T21:13:02.475Z",
+      "listingValidatedCommit": "baaf8619ec8ce6ef0dcb53cea72a7153a29fe0bc",
+      "listingValidatedAt": "2026-09-18T21:13:02.475Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "funcoder/omarchy-app-shortcuts",
+        "pluginIds": [
+          "funcoder.app-shortcuts"
+        ],
+        "commit": "baaf8619ec8ce6ef0dcb53cea72a7153a29fe0bc",
+        "checkedAt": "2026-09-18T21:13:02.379Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "funcoder.app-shortcuts": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
