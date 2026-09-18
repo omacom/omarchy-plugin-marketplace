@@ -188366,6 +188366,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/greenspotmail/omarchy-weblauncher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T17:18:58.509Z",
+      "listingValidatedCommit": "5d333c470afacb2a38e1e43a393a8efd21afc420",
+      "listingValidatedAt": "2026-09-18T17:18:58.509Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "greenspotmail/omarchy-weblauncher",
+        "pluginIds": [
+          "weblauncher"
+        ],
+        "commit": "5d333c470afacb2a38e1e43a393a8efd21afc420",
+        "checkedAt": "2026-09-18T17:18:58.437Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "weblauncher": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
