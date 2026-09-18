@@ -189439,6 +189439,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jocahdj/OmaSpace",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:33:51.973Z",
+      "listingValidatedCommit": "f0ccff364805d7678c2f872c9b06302f159ae0b9",
+      "listingValidatedAt": "2026-09-18T19:33:51.973Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jocahdj/omaspace",
+        "pluginIds": [
+          "jocahdj.omaspace"
+        ],
+        "commit": "f0ccff364805d7678c2f872c9b06302f159ae0b9",
+        "checkedAt": "2026-09-18T19:33:51.876Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jocahdj.omaspace": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
