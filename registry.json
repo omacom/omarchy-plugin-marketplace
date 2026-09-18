@@ -190753,6 +190753,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Sarr77/ScratchPeek",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T21:08:51.227Z",
+      "listingValidatedCommit": "06bf2b930303d9cf65224f61a8099258065f6b76",
+      "listingValidatedAt": "2026-09-18T21:08:51.227Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sarr77/scratchpeek",
+        "pluginIds": [
+          "sarr.scratchpeek"
+        ],
+        "commit": "06bf2b930303d9cf65224f61a8099258065f6b76",
+        "checkedAt": "2026-09-18T21:08:51.129Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sarr.scratchpeek": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
