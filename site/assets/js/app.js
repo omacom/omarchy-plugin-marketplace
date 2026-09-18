@@ -25,14 +25,14 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260918-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260918-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -59,8 +59,8 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260831-01";
-import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260831-01";
+} from "./search.js?v=20260918-01";
+import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260918-01";
 
 const pluginsPerPage = 9;
 const hiddenCardTags = new Set([
@@ -179,6 +179,29 @@ let viewScrollFrame = 0;
 let searchCompletions = [];
 let activeSuggestion = -1;
 let searchBlurTimer = 0;
+let searchInputTimer = 0;
+const searchInputDelay = 300;
+
+function cancelScheduledSearchUpdate() {
+  if (searchInputTimer) window.clearTimeout(searchInputTimer);
+  searchInputTimer = 0;
+}
+
+function runScheduledSearchUpdate() {
+  searchInputTimer = 0;
+  // Do not reopen suggestions after the field lost focus; still render the grid.
+  if (document.activeElement !== search) {
+    render();
+    return;
+  }
+  updateSearchSuggestions();
+  render();
+}
+
+function scheduleSearchUpdate() {
+  cancelScheduledSearchUpdate();
+  searchInputTimer = window.setTimeout(runScheduledSearchUpdate, searchInputDelay);
+}
 
 function sourcePlugins() {
   return state.plugins.filter((plugin) => (plugin.sourceType || "community") === state.source);
@@ -371,6 +394,7 @@ function completionMatches(value) {
 }
 
 function closeSearchSuggestions() {
+  cancelScheduledSearchUpdate();
   if (searchBlurTimer) window.clearTimeout(searchBlurTimer);
   searchBlurTimer = 0;
   searchCompletions = [];
@@ -1412,16 +1436,20 @@ async function init() {
     state.query = search.value;
     state.page = 1;
     updateSearchAffordances();
-    updateSearchSuggestions();
-    render();
+    scheduleSearchUpdate();
   });
 
   search.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
-      closeSuggestions: closeSearchSuggestions,
+      closeSuggestions: () => {
+        const hadPendingSearch = searchInputTimer !== 0;
+        closeSearchSuggestions();
+        if (hadPendingSearch) render();
+      },
       clearSearch: () => {
+        cancelScheduledSearchUpdate();
         search.value = "";
         state.query = "";
         state.page = 1;
@@ -1431,7 +1459,9 @@ async function init() {
       },
     })) return;
     if (event.key === "Tab") {
+      const hadPendingSearch = searchInputTimer !== 0;
       closeSearchSuggestions();
+      if (hadPendingSearch) render();
       return;
     }
     if (event.key === "Backspace" && !search.value && state.terms.length) {
@@ -1475,10 +1505,15 @@ async function init() {
   search.addEventListener("focus", () => {
     if (searchBlurTimer) window.clearTimeout(searchBlurTimer);
     searchBlurTimer = 0;
+    cancelScheduledSearchUpdate();
     updateSearchSuggestions();
   });
   search.addEventListener("blur", () => {
-    searchBlurTimer = window.setTimeout(closeSearchSuggestions, 100);
+    searchBlurTimer = window.setTimeout(() => {
+      const hadPendingSearch = searchInputTimer !== 0;
+      closeSearchSuggestions();
+      if (hadPendingSearch) render();
+    }, 100);
   });
   document.addEventListener("selectionchange", () => {
     if (document.activeElement === search) updateFishPreview();

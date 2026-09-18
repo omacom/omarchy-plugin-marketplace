@@ -1,4 +1,4 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260831-01";
+import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260918-01";
 import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260831-01";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
 
