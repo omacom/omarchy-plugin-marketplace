@@ -188858,6 +188858,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/0x4A756E65/omarchy-substack-feed",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:21:29.275Z",
+      "listingValidatedCommit": "392de02531f548bd30e90d0559924b36c6adbd61",
+      "listingValidatedAt": "2026-09-18T18:21:29.275Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0x4a756e65/omarchy-substack-feed",
+        "pluginIds": [
+          "0x4a756e65.omarchy-substack"
+        ],
+        "commit": "392de02531f548bd30e90d0559924b36c6adbd61",
+        "checkedAt": "2026-09-18T18:21:29.187Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "0x4a756e65.omarchy-substack": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
