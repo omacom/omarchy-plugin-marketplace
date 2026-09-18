@@ -187045,6 +187045,72 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/n0mahd/keyboard-coach",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:53:44.972Z",
+      "listingValidatedCommit": "55f4ab54cab80e814c66272af88dc102cfea482b",
+      "listingValidatedAt": "2026-09-18T00:53:44.972Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "n0mahd/keyboard-coach",
+        "pluginIds": [
+          "io.github.n0mahd.keyboard-coach"
+        ],
+        "commit": "55f4ab54cab80e814c66272af88dc102cfea482b",
+        "checkedAt": "2026-09-18T00:53:44.882Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "n0mahd/keyboard-coach",
+        "pluginIds": [
+          "io.github.n0mahd.keyboard-coach"
+        ],
+        "commit": "55f4ab54cab80e814c66272af88dc102cfea482b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:53:44.882Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T02:43:58.175Z",
+        "requestEventId": 31358775579,
+        "requestedAt": "2026-09-18T00:50:26Z",
+        "reviewedAt": "2026-09-18T00:53:44.882Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.n0mahd.keyboard-coach": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "education"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
