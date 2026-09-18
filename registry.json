@@ -187603,6 +187603,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/virajshoor/touchtype-for-kids",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:41:58.225Z",
+      "listingValidatedCommit": "5d6df9aba27ee54a93d76c706e8ea614b61ae587",
+      "listingValidatedAt": "2026-09-18T01:41:58.225Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "virajshoor/touchtype-for-kids",
+        "pluginIds": [
+          "io.github.virajshoor.story-keys"
+        ],
+        "commit": "5d6df9aba27ee54a93d76c706e8ea614b61ae587",
+        "checkedAt": "2026-09-18T01:41:58.130Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "virajshoor/touchtype-for-kids",
+        "pluginIds": [
+          "io.github.virajshoor.story-keys"
+        ],
+        "commit": "5d6df9aba27ee54a93d76c706e8ea614b61ae587",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T01:41:58.130Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T14:03:42.671Z",
+        "requestEventId": 31360493346,
+        "requestedAt": "2026-09-18T01:33:07Z",
+        "reviewedAt": "2026-09-18T01:41:58.130Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.virajshoor.story-keys": {
+          "category": "Kids",
+          "tags": [
+            "kids",
+            "education"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
