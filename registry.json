@@ -189216,6 +189216,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/parker-brown-family/fix-everything-observatory",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:13:15.654Z",
+      "listingValidatedCommit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
+      "listingValidatedAt": "2026-09-18T19:13:15.654Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "parker-brown-family/fix-everything-observatory",
+        "pluginIds": [
+          "brownfamilysports.observatory"
+        ],
+        "commit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
+        "checkedAt": "2026-09-18T19:13:15.573Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "brownfamilysports.observatory": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
