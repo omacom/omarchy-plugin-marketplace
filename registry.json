@@ -99570,8 +99570,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T08:01:58.412Z",
-      "listingValidatedCommit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
-      "listingValidatedAt": "2026-08-30T08:01:58.412Z",
+      "listingValidatedCommit": "c46abe5a7e24441006392eea7e503aace74b99e1",
+      "listingValidatedAt": "2026-09-18T21:26:16.957Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -99580,39 +99580,15 @@
         "pluginIds": [
           "veepee.twingate"
         ],
-        "commit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
-        "checkedAt": "2026-08-30T08:01:58.358Z",
+        "commit": "c46abe5a7e24441006392eea7e503aace74b99e1",
+        "checkedAt": "2026-09-18T21:26:16.957Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege",
-          "package-manager",
-          "service-management"
+          "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "vpontual/omarchy-twingate",
-        "pluginIds": [
-          "veepee.twingate"
-        ],
-        "commit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T08:01:58.358Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-26T14:31:47.568Z",
-        "requestEventId": 30230984253,
-        "requestedAt": "2026-08-30T08:01:27Z",
-        "reviewedAt": "2026-08-30T08:01:58.358Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "veepee.twingate": {
@@ -99624,7 +99600,78 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vpontual/omarchy-twingate",
+        "pluginIds": [
+          "veepee.twingate"
+        ],
+        "commit": "c46abe5a7e24441006392eea7e503aace74b99e1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:26:16.957Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-15T12:52:00.462Z",
+        "requestEventId": 31417217991,
+        "requestedAt": "2026-09-18T20:40:36Z",
+        "reviewedAt": "2026-09-18T21:26:16.957Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
+          "validatedAt": "2026-08-30T08:01:58.412Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:26:16.957Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vpontual/omarchy-twingate",
+            "pluginIds": [
+              "veepee.twingate"
+            ],
+            "commit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
+            "checkedAt": "2026-08-30T08:01:58.358Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "vpontual/omarchy-twingate",
+            "pluginIds": [
+              "veepee.twingate"
+            ],
+            "commit": "0eb5768cdcfe62d9fb3569934c5856ea9df6e742",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T08:01:58.358Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-26T14:31:47.568Z",
+            "requestEventId": 30230984253,
+            "requestedAt": "2026-08-30T08:01:27Z",
+            "reviewedAt": "2026-08-30T08:01:58.358Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/godhiraj-code/omarchy-omaudit-status",
