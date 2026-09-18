@@ -188069,6 +188069,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jeffmtb/omarchy-moon-phase",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T14:48:55.292Z",
+      "listingValidatedCommit": "8653e58c08f4f645c2302c6f2918b5a92466be2f",
+      "listingValidatedAt": "2026-09-18T14:48:55.292Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jeffmtb/omarchy-moon-phase",
+        "pluginIds": [
+          "jeffmtb.moon-phase"
+        ],
+        "commit": "8653e58c08f4f645c2302c6f2918b5a92466be2f",
+        "checkedAt": "2026-09-18T14:48:55.207Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jeffmtb.moon-phase": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
