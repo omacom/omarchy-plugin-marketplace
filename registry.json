@@ -186500,6 +186500,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cylon58/omarchy-codex-crash-model-picker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T00:19:55.689Z",
+      "listingValidatedCommit": "573b86d11cc77e68a33ba1b4cb130ee8be95eabd",
+      "listingValidatedAt": "2026-09-18T00:19:55.689Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cylon58/omarchy-codex-crash-model-picker",
+        "pluginIds": [
+          "io.github.cylon58.codex-crash-model-picker"
+        ],
+        "commit": "573b86d11cc77e68a33ba1b4cb130ee8be95eabd",
+        "checkedAt": "2026-09-18T00:19:55.599Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cylon58/omarchy-codex-crash-model-picker",
+        "pluginIds": [
+          "io.github.cylon58.codex-crash-model-picker"
+        ],
+        "commit": "573b86d11cc77e68a33ba1b4cb130ee8be95eabd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T00:19:55.599Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T20:50:54.315Z",
+        "requestEventId": 31356886763,
+        "requestedAt": "2026-09-18T00:01:52Z",
+        "reviewedAt": "2026-09-18T00:19:55.599Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cylon58.codex-crash-model-picker": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
