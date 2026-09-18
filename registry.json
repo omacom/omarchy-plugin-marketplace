@@ -187399,6 +187399,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rahmatov-abdullaxon/omarchy-telegram-theme",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:30:47.067Z",
+      "listingValidatedCommit": "3adaa4fb2bc265fa6b24c0aa9accb5303bea892d",
+      "listingValidatedAt": "2026-09-18T01:30:47.067Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rahmatov-abdullaxon/omarchy-telegram-theme",
+        "pluginIds": [
+          "io.github.rahmatov-abdullaxon.telegram-theme"
+        ],
+        "commit": "3adaa4fb2bc265fa6b24c0aa9accb5303bea892d",
+        "checkedAt": "2026-09-18T01:30:46.985Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rahmatov-abdullaxon/omarchy-telegram-theme",
+        "pluginIds": [
+          "io.github.rahmatov-abdullaxon.telegram-theme"
+        ],
+        "commit": "3adaa4fb2bc265fa6b24c0aa9accb5303bea892d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T01:30:46.985Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T12:41:24.219Z",
+        "requestEventId": 31360232996,
+        "requestedAt": "2026-09-18T01:27:09Z",
+        "reviewedAt": "2026-09-18T01:30:46.985Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rahmatov-abdullaxon.telegram-theme": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
