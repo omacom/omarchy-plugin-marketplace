@@ -189067,6 +189067,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/skajvitler/omarchy-steam-trends",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:51:54.959Z",
+      "listingValidatedCommit": "dfcf708ffd155b1fa26c1b1e5ac6c0118341075e",
+      "listingValidatedAt": "2026-09-18T18:51:54.959Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "skajvitler/omarchy-steam-trends",
+        "pluginIds": [
+          "skajvitler.steam-trends"
+        ],
+        "commit": "dfcf708ffd155b1fa26c1b1e5ac6c0118341075e",
+        "checkedAt": "2026-09-18T18:51:54.881Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "skajvitler.steam-trends": {
+          "category": "Widgets",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
