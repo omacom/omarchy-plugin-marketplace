@@ -190122,6 +190122,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vincentritter/omarchy-tinytray",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:22:22.083Z",
+      "listingValidatedCommit": "6103b7d37fcb1d9a044aec39c0a8be5b81746738",
+      "listingValidatedAt": "2026-09-18T20:22:22.083Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vincentritter/omarchy-tinytray",
+        "pluginIds": [
+          "vincentritter.tinytray"
+        ],
+        "commit": "6103b7d37fcb1d9a044aec39c0a8be5b81746738",
+        "checkedAt": "2026-09-18T20:22:21.998Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vincentritter/omarchy-tinytray",
+        "pluginIds": [
+          "vincentritter.tinytray"
+        ],
+        "commit": "6103b7d37fcb1d9a044aec39c0a8be5b81746738",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:22:21.998Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T07:51:51.273Z",
+        "requestEventId": 31415622497,
+        "requestedAt": "2026-09-18T20:09:55Z",
+        "reviewedAt": "2026-09-18T20:22:21.999Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vincentritter.tinytray": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
