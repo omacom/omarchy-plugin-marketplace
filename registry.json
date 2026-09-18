@@ -190507,6 +190507,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/M0ebiu5/omarchy-google-notes",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:50:54.232Z",
+      "listingValidatedCommit": "7e65c453729c654be5c1e7850579179efb6b64ac",
+      "listingValidatedAt": "2026-09-18T20:50:54.232Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "m0ebiu5/omarchy-google-notes",
+        "pluginIds": [
+          "waltermonschein.google-notes"
+        ],
+        "commit": "7e65c453729c654be5c1e7850579179efb6b64ac",
+        "checkedAt": "2026-09-18T20:50:54.137Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "m0ebiu5/omarchy-google-notes",
+        "pluginIds": [
+          "waltermonschein.google-notes"
+        ],
+        "commit": "7e65c453729c654be5c1e7850579179efb6b64ac",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:50:54.137Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T09:30:55.531Z",
+        "requestEventId": 31416397927,
+        "requestedAt": "2026-09-18T20:24:43Z",
+        "reviewedAt": "2026-09-18T20:50:54.137Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "waltermonschein.google-notes": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
