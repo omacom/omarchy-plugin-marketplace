@@ -189471,6 +189471,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidmessenger123/omarchy-github-build-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:37:26.664Z",
+      "listingValidatedCommit": "0c21fca96d5b977c8f371082b30c9d229c95c6fa",
+      "listingValidatedAt": "2026-09-18T19:37:26.664Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidmessenger123/omarchy-github-build-monitor",
+        "pluginIds": [
+          "davidjm.github-build-monitor"
+        ],
+        "commit": "0c21fca96d5b977c8f371082b30c9d229c95c6fa",
+        "checkedAt": "2026-09-18T19:37:26.578Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "davidjm.github-build-monitor": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
