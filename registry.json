@@ -190397,6 +190397,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/komagata/OmaText",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T20:41:37.951Z",
+      "listingValidatedCommit": "11aee6b606fa469cec8db9c4e5c7353d8cc7dda8",
+      "listingValidatedAt": "2026-09-18T20:41:37.951Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "komagata/omatext",
+        "pluginIds": [
+          "io.github.komagata.omatext"
+        ],
+        "commit": "11aee6b606fa469cec8db9c4e5c7353d8cc7dda8",
+        "checkedAt": "2026-09-18T20:41:37.856Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "komagata/omatext",
+        "pluginIds": [
+          "io.github.komagata.omatext"
+        ],
+        "commit": "11aee6b606fa469cec8db9c4e5c7353d8cc7dda8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T20:41:37.856Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T06:29:19.576Z",
+        "requestEventId": 31416272054,
+        "requestedAt": "2026-09-18T20:22:20Z",
+        "reviewedAt": "2026-09-18T20:41:37.856Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.komagata.omatext": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
