@@ -187532,6 +187532,77 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/neno260/omarchy-power-watts",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:39:03.015Z",
+      "listingValidatedCommit": "51e0ef3373b983bdcd0b9c71bd8ae1d9606f844c",
+      "listingValidatedAt": "2026-09-18T01:39:03.015Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "neno260/omarchy-power-watts",
+        "pluginIds": [
+          "neno.power-watts"
+        ],
+        "commit": "51e0ef3373b983bdcd0b9c71bd8ae1d9606f844c",
+        "checkedAt": "2026-09-18T01:39:02.962Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "neno260/omarchy-power-watts",
+        "pluginIds": [
+          "neno.power-watts"
+        ],
+        "commit": "51e0ef3373b983bdcd0b9c71bd8ae1d9606f844c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T01:39:02.962Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T15:27:04.482Z",
+        "requestEventId": 31360408915,
+        "requestedAt": "2026-09-18T01:31:13Z",
+        "reviewedAt": "2026-09-18T01:39:02.962Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "neno.power-watts": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
