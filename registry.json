@@ -188208,6 +188208,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/noahbare/omarchy-navidrome-play",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T16:04:41.714Z",
+      "listingValidatedCommit": "327a6dd4b3521233185049faa7a92c4e043060b5",
+      "listingValidatedAt": "2026-09-18T16:04:41.714Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "noahbare/omarchy-navidrome-play",
+        "pluginIds": [
+          "nbare.navidrome-play"
+        ],
+        "commit": "327a6dd4b3521233185049faa7a92c4e043060b5",
+        "checkedAt": "2026-09-18T16:04:41.626Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nbare.navidrome-play": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
