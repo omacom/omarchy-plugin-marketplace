@@ -140860,8 +140860,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T17:51:41.020Z",
-      "listingValidatedCommit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
-      "listingValidatedAt": "2026-09-14T11:12:02.055Z",
+      "listingValidatedCommit": "4a1af8a178a73c433935cfe82fa73b082e4cd9ba",
+      "listingValidatedAt": "2026-09-18T21:29:50.758Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -140870,8 +140870,8 @@
         "pluginIds": [
           "crmne.omastats"
         ],
-        "commit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
-        "checkedAt": "2026-09-14T11:12:02.055Z",
+        "commit": "4a1af8a178a73c433935cfe82fa73b082e4cd9ba",
+        "checkedAt": "2026-09-18T21:29:50.758Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -140889,27 +140889,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "crmne/omastats",
-        "pluginIds": [
-          "crmne.omastats"
-        ],
-        "commit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-14T11:12:02.055Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-14T06:34:52.423Z",
-        "requestEventId": 31094588300,
-        "requestedAt": "2026-09-14T10:53:07Z",
-        "reviewedAt": "2026-09-14T11:12:02.055Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -140954,8 +140933,72 @@
             "reviewedAt": "2026-09-06T17:51:40.960Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
+          "validatedAt": "2026-09-14T11:12:02.055Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T21:29:50.758Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crmne/omastats",
+            "pluginIds": [
+              "crmne.omastats"
+            ],
+            "commit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
+            "checkedAt": "2026-09-14T11:12:02.055Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "crmne/omastats",
+            "pluginIds": [
+              "crmne.omastats"
+            ],
+            "commit": "5c6f91a9c0a74b14cc9a629429ef38eaa5b069c0",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-14T11:12:02.055Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-14T06:34:52.423Z",
+            "requestEventId": 31094588300,
+            "requestedAt": "2026-09-14T10:53:07Z",
+            "reviewedAt": "2026-09-14T11:12:02.055Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crmne/omastats",
+        "pluginIds": [
+          "crmne.omastats"
+        ],
+        "commit": "4a1af8a178a73c433935cfe82fa73b082e4cd9ba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T21:29:50.758Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T23:25:14.585Z",
+        "requestEventId": 31417222265,
+        "requestedAt": "2026-09-18T20:40:41Z",
+        "reviewedAt": "2026-09-18T21:29:50.758Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/Anes-03/keyboard-brightness-plugin",
