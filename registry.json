@@ -77461,8 +77461,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T19:17:44.455Z",
-      "listingValidatedCommit": "8a418347c895e9a85e84929db6f73e75bab5dac0",
-      "listingValidatedAt": "2026-08-26T19:17:44.455Z",
+      "listingValidatedCommit": "3b7f0f1075233b8531492f5186080ccc7395774f",
+      "listingValidatedAt": "2026-09-18T15:18:06.293Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -77471,8 +77471,8 @@
         "pluginIds": [
           "yamz8.omanki"
         ],
-        "commit": "8a418347c895e9a85e84929db6f73e75bab5dac0",
-        "checkedAt": "2026-08-26T19:17:44.420Z",
+        "commit": "3b7f0f1075233b8531492f5186080ccc7395774f",
+        "checkedAt": "2026-09-18T15:18:06.293Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -77487,7 +77487,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8a418347c895e9a85e84929db6f73e75bab5dac0",
+          "validatedAt": "2026-08-26T19:17:44.455Z",
+          "branch": "main",
+          "supersededAt": "2026-09-18T15:18:06.293Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "yamz8/omanki",
+            "pluginIds": [
+              "yamz8.omanki"
+            ],
+            "commit": "8a418347c895e9a85e84929db6f73e75bab5dac0",
+            "checkedAt": "2026-08-26T19:17:44.420Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/PatrickFanella/omarchy-superproductivity",
