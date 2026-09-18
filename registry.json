@@ -188891,6 +188891,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danielxxomg/omarchy-duolingo",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:25:14.420Z",
+      "listingValidatedCommit": "143da7017897823da485017f91af842f20e52d1f",
+      "listingValidatedAt": "2026-09-18T18:25:14.420Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danielxxomg/omarchy-duolingo",
+        "pluginIds": [
+          "user.duolingo"
+        ],
+        "commit": "143da7017897823da485017f91af842f20e52d1f",
+        "checkedAt": "2026-09-18T18:25:14.325Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "danielxxomg/omarchy-duolingo",
+        "pluginIds": [
+          "user.duolingo"
+        ],
+        "commit": "143da7017897823da485017f91af842f20e52d1f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T18:25:14.325Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:10:56.183Z",
+        "requestEventId": 31409497490,
+        "requestedAt": "2026-09-18T18:23:38Z",
+        "reviewedAt": "2026-09-18T18:25:14.325Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "user.duolingo": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
