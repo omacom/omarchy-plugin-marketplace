@@ -188798,6 +188798,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/xavecorp/omarchy-openvpn3",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T18:15:57.991Z",
+      "listingValidatedCommit": "781908eaaf0ff977d21dbf56f26210118a9fb3df",
+      "listingValidatedAt": "2026-09-18T18:15:57.991Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xavecorp/omarchy-openvpn3",
+        "pluginIds": [
+          "xavecorp.openvpn3"
+        ],
+        "commit": "781908eaaf0ff977d21dbf56f26210118a9fb3df",
+        "checkedAt": "2026-09-18T18:15:57.927Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "xavecorp/omarchy-openvpn3",
+        "pluginIds": [
+          "xavecorp.openvpn3"
+        ],
+        "commit": "781908eaaf0ff977d21dbf56f26210118a9fb3df",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T18:15:57.927Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:04:27.427Z",
+        "requestEventId": 31408977436,
+        "requestedAt": "2026-09-18T18:14:43Z",
+        "reviewedAt": "2026-09-18T18:15:57.927Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "xavecorp.openvpn3": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
