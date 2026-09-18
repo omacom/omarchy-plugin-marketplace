@@ -189250,6 +189250,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-agent-shield",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T19:18:55.282Z",
+      "listingValidatedCommit": "e67abfa18bf9364fa4f75e46b0ce48809482d94b",
+      "listingValidatedAt": "2026-09-18T19:18:55.282Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-agent-shield",
+        "pluginIds": [
+          "harshith.agent-shield"
+        ],
+        "commit": "e67abfa18bf9364fa4f75e46b0ce48809482d94b",
+        "checkedAt": "2026-09-18T19:18:55.190Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "harshith.agent-shield": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
