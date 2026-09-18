@@ -187821,6 +187821,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/oliwier-xiao/omarchy-auto-pilot4agents",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T01:55:06.995Z",
+      "listingValidatedCommit": "05827b5039011fba80b6b62f1c8b60237d3b4302",
+      "listingValidatedAt": "2026-09-18T01:55:06.995Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "oliwier-xiao/omarchy-auto-pilot4agents",
+        "pluginIds": [
+          "oliwier.auto-pilot4agents"
+        ],
+        "commit": "05827b5039011fba80b6b62f1c8b60237d3b4302",
+        "checkedAt": "2026-09-18T01:55:06.904Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "oliwier-xiao/omarchy-auto-pilot4agents",
+        "pluginIds": [
+          "oliwier.auto-pilot4agents"
+        ],
+        "commit": "05827b5039011fba80b6b62f1c8b60237d3b4302",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T01:55:06.904Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T18:57:08.551Z",
+        "requestEventId": 31360929622,
+        "requestedAt": "2026-09-18T01:43:10Z",
+        "reviewedAt": "2026-09-18T01:55:06.904Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "oliwier.auto-pilot4agents": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
