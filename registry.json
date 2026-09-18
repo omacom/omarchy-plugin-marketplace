@@ -188548,6 +188548,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Josh-Gotro/omarchy-noaa-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-09-18",
+      "listedAt": "2026-09-18T17:52:12.564Z",
+      "listingValidatedCommit": "454c8f40eb5af74604f3da7dd33f3b9aafd5679e",
+      "listingValidatedAt": "2026-09-18T17:52:12.564Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "josh-gotro/omarchy-noaa-weather",
+        "pluginIds": [
+          "gotro.noaa-weather"
+        ],
+        "commit": "454c8f40eb5af74604f3da7dd33f3b9aafd5679e",
+        "checkedAt": "2026-09-18T17:52:12.476Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "josh-gotro/omarchy-noaa-weather",
+        "pluginIds": [
+          "gotro.noaa-weather"
+        ],
+        "commit": "454c8f40eb5af74604f3da7dd33f3b9aafd5679e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-18T17:52:12.476Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:41:05.923Z",
+        "requestEventId": 31407615364,
+        "requestedAt": "2026-09-18T17:50:39Z",
+        "reviewedAt": "2026-09-18T17:52:12.476Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gotro.noaa-weather": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
