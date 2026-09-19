@@ -338,7 +338,7 @@ test("built-in plugins are separated from installable community plugins", () => 
   for (const plugin of builtIns) {
     assert.equal(plugin.sourceType, "builtin");
     assert.equal(plugin.installCommand, "");
-    assert.match(plugin.officialCommand, /^omarchy (?:bar plugin add|plugin enable) omarchy\./);
+    assert.match(plugin.officialCommand, /^omarchy (?:bar put|plugin enable) omarchy\./);
     assert.ok(["Add to bar", "Enable plugin"].includes(plugin.officialCommandLabel));
     assert.equal(plugin.addedAt, undefined);
     assert.match(plugin.id, /^omarchy\./);

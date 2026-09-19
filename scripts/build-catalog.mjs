@@ -1572,7 +1572,7 @@ function builtInKind(kinds) {
 
 function builtInCommand(id, kinds) {
   if (kinds.includes("bar-widget")) {
-    return { command: `omarchy bar plugin add ${id}`, label: "Add to bar" };
+    return { command: `omarchy bar put ${id}`, label: "Add to bar" };
   }
   return { command: `omarchy plugin enable ${id}`, label: "Enable plugin" };
 }
