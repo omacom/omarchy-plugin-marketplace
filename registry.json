@@ -192698,6 +192698,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TaylorBurke/sudo-watch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T13:01:53.709Z",
+      "listingValidatedCommit": "d81094571abaa5760c8190393c1014ecbf96a986",
+      "listingValidatedAt": "2026-09-19T13:01:53.709Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "taylorburke/sudo-watch",
+        "pluginIds": [
+          "taylorburke.sudo-watch"
+        ],
+        "commit": "d81094571abaa5760c8190393c1014ecbf96a986",
+        "checkedAt": "2026-09-19T13:01:53.612Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "taylorburke/sudo-watch",
+        "pluginIds": [
+          "taylorburke.sudo-watch"
+        ],
+        "commit": "d81094571abaa5760c8190393c1014ecbf96a986",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T13:01:53.612Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:05:22.885Z",
+        "requestEventId": 31444967437,
+        "requestedAt": "2026-09-19T12:55:08Z",
+        "reviewedAt": "2026-09-19T13:01:53.612Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "taylorburke.sudo-watch": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
