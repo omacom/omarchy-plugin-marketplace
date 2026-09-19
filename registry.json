@@ -192641,6 +192641,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lkzwieder/omarchy-servings",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:57:56.485Z",
+      "listingValidatedCommit": "6f2d8e12181e5f3632a8871d36ee58a82e91189b",
+      "listingValidatedAt": "2026-09-19T12:57:56.485Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lkzwieder/omarchy-servings",
+        "pluginIds": [
+          "lkzwieder.servings"
+        ],
+        "commit": "6f2d8e12181e5f3632a8871d36ee58a82e91189b",
+        "checkedAt": "2026-09-19T12:57:56.388Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lkzwieder/omarchy-servings",
+        "pluginIds": [
+          "lkzwieder.servings"
+        ],
+        "commit": "6f2d8e12181e5f3632a8871d36ee58a82e91189b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T12:57:56.388Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:46:10.696Z",
+        "requestEventId": 31444934390,
+        "requestedAt": "2026-09-19T12:53:54Z",
+        "reviewedAt": "2026-09-19T12:57:56.388Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "lkzwieder.servings": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
