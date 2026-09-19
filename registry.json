@@ -192301,6 +192301,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SmoothPixels/glyph-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:08:04.223Z",
+      "listingValidatedCommit": "6874f737100efc0895efebeb9b540d9246ab0c3b",
+      "listingValidatedAt": "2026-09-19T12:08:04.223Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smoothpixels/glyph-workspaces",
+        "pluginIds": [
+          "io.github.smoothpixels.glyph-workspaces"
+        ],
+        "commit": "6874f737100efc0895efebeb9b540d9246ab0c3b",
+        "checkedAt": "2026-09-19T12:08:04.153Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "smoothpixels/glyph-workspaces",
+        "pluginIds": [
+          "io.github.smoothpixels.glyph-workspaces"
+        ],
+        "commit": "6874f737100efc0895efebeb9b540d9246ab0c3b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T12:08:04.153Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T06:45:47.106Z",
+        "requestEventId": 31443677912,
+        "requestedAt": "2026-09-19T12:06:48Z",
+        "reviewedAt": "2026-09-19T12:08:04.153Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.smoothpixels.glyph-workspaces": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
