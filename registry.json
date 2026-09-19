@@ -172446,8 +172446,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T21:55:43.416Z",
-      "listingValidatedCommit": "e1f346e05b12d2ffec3631bb5cb395a12c481ded",
-      "listingValidatedAt": "2026-09-14T21:55:43.416Z",
+      "listingValidatedCommit": "b63b09b6cc0f955cf1585a5d722ddddb6df3c899",
+      "listingValidatedAt": "2026-09-19T22:50:54.494Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -172456,8 +172456,8 @@
         "pluginIds": [
           "dutchbase.webapps"
         ],
-        "commit": "e1f346e05b12d2ffec3631bb5cb395a12c481ded",
-        "checkedAt": "2026-09-14T21:55:43.335Z",
+        "commit": "b63b09b6cc0f955cf1585a5d722ddddb6df3c899",
+        "checkedAt": "2026-09-19T22:50:54.494Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -172471,7 +172471,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e1f346e05b12d2ffec3631bb5cb395a12c481ded",
+          "validatedAt": "2026-09-14T21:55:43.416Z",
+          "branch": "main",
+          "supersededAt": "2026-09-19T22:50:54.494Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dutchbase/omarchy-webapps",
+            "pluginIds": [
+              "dutchbase.webapps"
+            ],
+            "commit": "e1f346e05b12d2ffec3631bb5cb395a12c481ded",
+            "checkedAt": "2026-09-14T21:55:43.335Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/zamak/omagemba",
