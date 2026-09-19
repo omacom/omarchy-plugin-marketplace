@@ -192244,6 +192244,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joeyvigil/pawsense",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:02:31.359Z",
+      "listingValidatedCommit": "028e97afac5ed68e51953a209835220eab23d537",
+      "listingValidatedAt": "2026-09-19T12:02:31.359Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joeyvigil/pawsense",
+        "pluginIds": [
+          "io.github.joeyvigil.pawsense"
+        ],
+        "commit": "028e97afac5ed68e51953a209835220eab23d537",
+        "checkedAt": "2026-09-19T12:02:31.265Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joeyvigil/pawsense",
+        "pluginIds": [
+          "io.github.joeyvigil.pawsense"
+        ],
+        "commit": "028e97afac5ed68e51953a209835220eab23d537",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T12:02:31.265Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T05:38:03.621Z",
+        "requestEventId": 31443454455,
+        "requestedAt": "2026-09-19T11:57:48Z",
+        "reviewedAt": "2026-09-19T12:02:31.265Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.joeyvigil.pawsense": {
+          "category": "System",
+          "tags": [
+            "security",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
