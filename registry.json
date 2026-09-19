@@ -192485,6 +192485,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Cruise42/omarchy-autostart-editor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:37:12.708Z",
+      "listingValidatedCommit": "9df2d6583611f686ed014a72b2177245683b0e85",
+      "listingValidatedAt": "2026-09-19T12:37:12.708Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cruise42/omarchy-autostart-editor",
+        "pluginIds": [
+          "cruise42.autostart-editor"
+        ],
+        "commit": "9df2d6583611f686ed014a72b2177245683b0e85",
+        "checkedAt": "2026-09-19T12:37:12.652Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cruise42.autostart-editor": {
+          "category": "System",
+          "tags": [
+            "system",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
