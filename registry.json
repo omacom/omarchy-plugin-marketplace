@@ -193027,6 +193027,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cgranier/omarchy-crash-desk",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T13:22:43.977Z",
+      "listingValidatedCommit": "416b84a66049be5382f9c492bccb185d88ccf246",
+      "listingValidatedAt": "2026-09-19T13:22:43.977Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cgranier/omarchy-crash-desk",
+        "pluginIds": [
+          "cgranier.crashdesk"
+        ],
+        "commit": "416b84a66049be5382f9c492bccb185d88ccf246",
+        "checkedAt": "2026-09-19T13:22:43.893Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cgranier.crashdesk": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
