@@ -191706,6 +191706,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/syaifulmain/omarchy-omashowkeys",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:19:43.312Z",
+      "listingValidatedCommit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
+      "listingValidatedAt": "2026-09-19T11:19:43.312Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "syaifulmain/omarchy-omashowkeys",
+        "pluginIds": [
+          "syaifulmain.omashowkeys"
+        ],
+        "commit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
+        "checkedAt": "2026-09-19T11:19:43.229Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "syaifulmain.omashowkeys": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
