@@ -191244,6 +191244,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GreyforgeLabs/omarchy-hotbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T10:44:38.968Z",
+      "listingValidatedCommit": "7b126b4c2fc301394447ef8757d9c43706a9cf94",
+      "listingValidatedAt": "2026-09-19T10:44:38.968Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "greyforgelabs/omarchy-hotbar",
+        "pluginIds": [
+          "greyforge.hotbar"
+        ],
+        "commit": "7b126b4c2fc301394447ef8757d9c43706a9cf94",
+        "checkedAt": "2026-09-19T10:44:38.903Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "greyforge.hotbar": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
