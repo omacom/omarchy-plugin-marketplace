@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T23:06:25.295Z",
+  "generatedAt": "2026-09-19T23:09:25.755Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -177637,8 +177637,8 @@
       "verificationSnapshotStatus": "verified",
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
-      "verificationCommit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
-      "verificationCheckedAt": "2026-09-16T06:10:13.748Z",
+      "verificationCommit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
+      "verificationCheckedAt": "2026-09-19T23:09:25.288Z",
       "manifestPath": "manifest.json",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T06:10:13.797Z",
@@ -177653,8 +177653,8 @@
         "quickshell"
       ],
       "license": "MIT",
-      "stars": 0,
-      "repositoryUpdatedAt": "2026-09-14T22:27:17Z",
+      "stars": 2,
+      "repositoryUpdatedAt": "2026-09-16T14:55:24Z",
       "repositoryRelease": {
         "tag": "v1.2.3",
         "url": "https://github.com/zednaked/omarchy-ganja/releases/tag/v1.2.3",
@@ -177671,17 +177671,17 @@
       "previewThumbnailHeight": 405,
       "previewSourceWidth": 1440,
       "previewSourceHeight": 810,
-      "listingValidatedCommit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
-      "listingValidatedAt": "2026-09-16T06:10:13.797Z",
+      "listingValidatedCommit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
+      "listingValidatedAt": "2026-09-19T23:09:25.289Z",
       "listingValidatedBranch": "main",
-      "upstreamObservedCommit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
+      "upstreamObservedCommit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-09-16T06:10:14.085Z",
+      "upstreamCheckedAt": "2026-09-19T23:09:25.755Z",
       "upstreamCheckStatus": "passed",
-      "upstreamValidatedCommit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
-      "upstreamValidatedAt": "2026-09-16T06:10:14.085Z",
+      "upstreamValidatedCommit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
+      "upstreamValidatedAt": "2026-09-19T23:09:25.755Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "0f4e0987c1f6500988bbc955a25728409b0c3fa49b815e8bc47c01d8ce83b435",
+      "upstreamSourceFingerprint": "5a4cb124017462ca357fbe76633fa420086e093c0604f796933623504fe88f54",
       "status": "Available"
     },
     {

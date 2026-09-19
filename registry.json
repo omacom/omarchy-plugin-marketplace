@@ -178433,8 +178433,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T06:10:13.797Z",
-      "listingValidatedCommit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
-      "listingValidatedAt": "2026-09-16T06:10:13.797Z",
+      "listingValidatedCommit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
+      "listingValidatedAt": "2026-09-19T23:09:25.289Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -178443,8 +178443,8 @@
         "pluginIds": [
           "zed.ganja"
         ],
-        "commit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
-        "checkedAt": "2026-09-16T06:10:13.748Z",
+        "commit": "60edb6b277c81f7099fde48add2ba5c10bbecafb",
+        "checkedAt": "2026-09-19T23:09:25.288Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -178460,7 +178460,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
+          "validatedAt": "2026-09-16T06:10:13.797Z",
+          "branch": "main",
+          "supersededAt": "2026-09-19T23:09:25.289Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zednaked/omarchy-ganja",
+            "pluginIds": [
+              "zed.ganja"
+            ],
+            "commit": "854dfe0a5ed30853775a4ebfc14d8e27340df3f4",
+            "checkedAt": "2026-09-16T06:10:13.748Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/vividhsv/omarchy-pia-vpn",
