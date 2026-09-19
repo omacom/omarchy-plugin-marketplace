@@ -192210,6 +192210,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/1990wn/omarchy-graph",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:59:10.184Z",
+      "listingValidatedCommit": "2200cff7b1fc88aef16d4345ee916967bc36808e",
+      "listingValidatedAt": "2026-09-19T11:59:10.184Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "1990wn/omarchy-graph",
+        "pluginIds": [
+          "graph"
+        ],
+        "commit": "2200cff7b1fc88aef16d4345ee916967bc36808e",
+        "checkedAt": "2026-09-19T11:59:10.093Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "graph": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
