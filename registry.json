@@ -193817,6 +193817,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Gabbe2312/omabeam",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:44:38.682Z",
+      "listingValidatedCommit": "5c71607da4c103e53e55a4004038eb5e91efac2b",
+      "listingValidatedAt": "2026-09-19T23:44:38.682Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gabbe2312/omabeam",
+        "pluginIds": [
+          "io.github.gabbe2312.omabeam"
+        ],
+        "commit": "5c71607da4c103e53e55a4004038eb5e91efac2b",
+        "checkedAt": "2026-09-19T23:44:38.612Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gabbe2312/omabeam",
+        "pluginIds": [
+          "io.github.gabbe2312.omabeam"
+        ],
+        "commit": "5c71607da4c103e53e55a4004038eb5e91efac2b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T23:44:38.612Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T12:54:58.244Z",
+        "requestEventId": 31463911830,
+        "requestedAt": "2026-09-19T23:29:00Z",
+        "reviewedAt": "2026-09-19T23:44:38.612Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.gabbe2312.omabeam": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
