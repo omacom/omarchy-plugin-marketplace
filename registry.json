@@ -191552,6 +191552,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozz1ee-dev/omarchy-bardock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:05:41.622Z",
+      "listingValidatedCommit": "3a58ebb124ef694ba881e6c6790cf1aa64e3c032",
+      "listingValidatedAt": "2026-09-19T11:05:41.622Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozz1ee-dev/omarchy-bardock",
+        "pluginIds": [
+          "ozz1ee.bardock"
+        ],
+        "commit": "3a58ebb124ef694ba881e6c6790cf1aa64e3c032",
+        "checkedAt": "2026-09-19T11:05:41.539Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ozz1ee.bardock": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
