@@ -181877,8 +181877,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T17:03:30.307Z",
-      "listingValidatedCommit": "fd3cb3e3beda5b5f3fe980c7f29edb4a4082bbee",
-      "listingValidatedAt": "2026-09-16T17:03:30.307Z",
+      "listingValidatedCommit": "cec2c2d636f1d24fd88d64d949c36fbf3f792e15",
+      "listingValidatedAt": "2026-09-19T23:12:51.475Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -181887,8 +181887,8 @@
         "pluginIds": [
           "io.github.sonderbydk.omacaffeine"
         ],
-        "commit": "fd3cb3e3beda5b5f3fe980c7f29edb4a4082bbee",
-        "checkedAt": "2026-09-16T17:03:30.221Z",
+        "commit": "cec2c2d636f1d24fd88d64d949c36fbf3f792e15",
+        "checkedAt": "2026-09-19T23:12:51.475Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -181904,7 +181904,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "fd3cb3e3beda5b5f3fe980c7f29edb4a4082bbee",
+          "validatedAt": "2026-09-16T17:03:30.307Z",
+          "branch": "main",
+          "supersededAt": "2026-09-19T23:12:51.475Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sonderbydk/omacaffeine",
+            "pluginIds": [
+              "io.github.sonderbydk.omacaffeine"
+            ],
+            "commit": "fd3cb3e3beda5b5f3fe980c7f29edb4a4082bbee",
+            "checkedAt": "2026-09-16T17:03:30.221Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/elberacasa/omalogi",
