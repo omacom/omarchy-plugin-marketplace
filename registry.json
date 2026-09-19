@@ -193167,6 +193167,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tug-benson/omarchy-patchmon-panel",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T20:18:48.797Z",
+      "listingValidatedCommit": "69cc04c1020754d47ecc72c3fda739359999c5b1",
+      "listingValidatedAt": "2026-09-19T20:18:48.797Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tug-benson/omarchy-patchmon-panel",
+        "pluginIds": [
+          "io.github.tug-benson.patchmon"
+        ],
+        "commit": "69cc04c1020754d47ecc72c3fda739359999c5b1",
+        "checkedAt": "2026-09-19T20:18:48.703Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tug-benson/omarchy-patchmon-panel",
+        "pluginIds": [
+          "io.github.tug-benson.patchmon"
+        ],
+        "commit": "69cc04c1020754d47ecc72c3fda739359999c5b1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T20:18:48.703Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T16:50:55.639Z",
+        "requestEventId": 31458562876,
+        "requestedAt": "2026-09-19T20:17:17Z",
+        "reviewedAt": "2026-09-19T20:18:48.703Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tug-benson.patchmon": {
+          "category": "System",
+          "tags": [
+            "system",
+            "security",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
