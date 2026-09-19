@@ -191489,6 +191489,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/onelegdave/omachat",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:01:08.640Z",
+      "listingValidatedCommit": "dd77f2ca16e7c701851450578fd9ec51b7eba1a2",
+      "listingValidatedAt": "2026-09-19T11:01:08.640Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "onelegdave/omachat",
+        "pluginIds": [
+          "onelegdave.omachat"
+        ],
+        "commit": "dd77f2ca16e7c701851450578fd9ec51b7eba1a2",
+        "checkedAt": "2026-09-19T11:01:08.565Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "onelegdave/omachat",
+        "pluginIds": [
+          "onelegdave.omachat"
+        ],
+        "commit": "dd77f2ca16e7c701851450578fd9ec51b7eba1a2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T11:01:08.565Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T23:43:48.768Z",
+        "requestEventId": 31441856299,
+        "requestedAt": "2026-09-19T10:54:30Z",
+        "reviewedAt": "2026-09-19T11:01:08.565Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "onelegdave.omachat": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
