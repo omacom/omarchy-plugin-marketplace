@@ -14,6 +14,12 @@ For marketplace content that may affect copyright, trademark, privacy, or other 
 
 Marketplace checks are limited automated compatibility and security-baseline checks on identified plugin commits, with manual review where required. They are not a security audit, certification, endorsement, or guarantee. Community plugins execute as unsandboxed third-party code.
 
+### Marketplace MCP boundary
+
+The optional Marketplace MCP service is read-only. It may return public catalog data, retrieve generated previews, and inspect bounded files from an exact public GitHub snapshot. It does not execute plugin code, create or modify GitHub Issues, manage labels, change the registry or generated site, publish a baseline outcome, approve a listing, or receive a marketplace write token. MCP duplicate similarity is advisory and must never become a security, enforcement, approval, or automatic-rejection decision.
+
+Local candidate inspection may use an optional public-repository GitHub read token. The token is sent only to `api.github.com`, never to the raw-content host or an MCP result. A hosted MCP deployment must keep the existing engagement Worker separate, validate browser origins when present, enforce bounded request and response bodies, require current protocol routing headers, and fail closed on both general and GitHub-backed rate-limit controls. No hosted endpoint or credential is created merely by merging the source.
+
 ## Automated Security Baseline
 
 These guidelines apply to every plugin author, marketplace contributor, and maintainer who submits a plugin or changes submission, validation, approval, registry, or catalog behavior.
