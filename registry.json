@@ -192391,6 +192391,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imargorsi/omarchy-hotspot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:29:25.982Z",
+      "listingValidatedCommit": "aae3c10dd0a7ffe48d555edeeb3a1258eadf02f2",
+      "listingValidatedAt": "2026-09-19T12:29:25.982Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imargorsi/omarchy-hotspot",
+        "pluginIds": [
+          "io.github.imargorsi.hotspot"
+        ],
+        "commit": "aae3c10dd0a7ffe48d555edeeb3a1258eadf02f2",
+        "checkedAt": "2026-09-19T12:29:25.880Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imargorsi/omarchy-hotspot",
+        "pluginIds": [
+          "io.github.imargorsi.hotspot"
+        ],
+        "commit": "aae3c10dd0a7ffe48d555edeeb3a1258eadf02f2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T12:29:25.880Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T11:35:39.449Z",
+        "requestEventId": 31444235571,
+        "requestedAt": "2026-09-19T12:27:41Z",
+        "reviewedAt": "2026-09-19T12:29:25.880Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.imargorsi.hotspot": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
