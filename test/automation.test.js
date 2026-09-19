@@ -28,8 +28,10 @@ import {
   CatalogCheckError,
   discoveredPlugins,
   isListedPlugin,
+  iconLimit,
   manifestFieldLimits,
   maximumManifestVersionLength,
+  optimizeIconBuffer,
   optimizePreviewBuffer,
   parseGitHubRepository,
   previewCardLimit,
@@ -3790,6 +3792,23 @@ test("preview images are bounded and converted into optimized WebP variants", as
       height: 2,
     }),
     /pixel limit/,
+  );
+});
+
+test("root icons become one square WebP tile", async () => {
+  const input = await sharp({
+    create: { width: 640, height: 400, channels: 4, background: { r: 200, g: 40, b: 60, alpha: 1 } },
+  }).png().toBuffer();
+  const optimized = await optimizeIconBuffer(input, { owner: "example", repository: "plugin", slug: "example/plugin" });
+  assert.equal(optimized.output.fileName, "7-example-plugin-icon.webp");
+  assert.equal(optimized.metadata.iconImage, "assets/img/plugins/7-example-plugin-icon.webp");
+  const icon = await sharp(optimized.output.buffer).metadata();
+  assert.equal(icon.format, "webp");
+  assert.equal(icon.width, iconLimit);
+  assert.equal(icon.height, iconLimit);
+  await assert.rejects(
+    optimizeIconBuffer(Buffer.from("not an image"), { owner: "example", repository: "plugin", slug: "example/plugin" }),
+    CatalogCheckError,
   );
 });
 

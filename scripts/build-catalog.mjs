@@ -53,6 +53,8 @@ const builtInTaxonomyTags = Object.freeze({
   "omarchy.polkit": ["security"],
 });
 const defaultPreviewPattern = /^preview\.(?:png|jpe?g|webp|avif)$/i;
+const defaultIconPattern = /^icon\.(?:png|jpe?g|webp|avif)$/i;
+export const iconLimit = 104;
 export const manifestFieldLimits = Object.freeze({
   id: 128,
   name: 120,
@@ -1124,7 +1126,52 @@ export async function optimizePreviewBuffer(buffer, repository) {
   }
 }
 
+export async function optimizeIconBuffer(buffer, repository) {
+  try {
+    const image = sharp(buffer, { failOn: "error", limitInputPixels: previewPixelLimit });
+    validatePreviewMetadata(await image.metadata(), `${repository.slug} icon`);
+    const icon = await image
+      .rotate()
+      .resize({ width: iconLimit, height: iconLimit, fit: "cover" })
+      .webp({ quality: 82, alphaQuality: 90, effort: 4 })
+      .toBuffer();
+    const fileName = `${previewFileBase(repository)}-icon.webp`;
+    return { output: { fileName, buffer: icon }, metadata: { iconImage: `assets/img/plugins/${fileName}` } };
+  } catch (error) {
+    if (error instanceof CatalogCheckError) throw error;
+    checkError("preview-invalid", `${repository.slug}: icon could not be decoded safely`);
+  }
+}
+
+async function loadSnapshotIcon(context) {
+  const entry = context.tree.find(
+    (item) => !item.path.includes("/") && isBlob(item) && defaultIconPattern.test(item.path),
+  );
+  if (!entry) return null;
+  if (!Number.isFinite(entry.size) || entry.size < 1 || entry.size > previewByteLimit) {
+    checkError("preview-invalid", `${context.repository.slug}: icon is missing, linked, or too large`);
+  }
+  const buffer = await readSnapshotBuffer(
+    context.repository,
+    entry.path,
+    context.commitSha,
+    previewByteLimit,
+    "preview-invalid",
+  );
+  return optimizeIconBuffer(buffer, context.repository);
+}
+
 async function loadSnapshotPreview(source, context) {
+  const preview = await loadSnapshotPreviewImage(source, context);
+  const icon = await loadSnapshotIcon(context);
+  if (!icon) return preview;
+  return {
+    outputs: [...(preview?.outputs || []), icon.output],
+    metadata: { ...(preview?.metadata || {}), ...icon.metadata },
+  };
+}
+
+async function loadSnapshotPreviewImage(source, context) {
   const path = previewPathFor(source, context);
   if (!path) return null;
   const entry = treeEntry(context, path);
@@ -1697,7 +1744,7 @@ export async function inspectSubmission(repoUrl) {
     treeSha: context.treeSha,
     description: context.metadata.description || "",
     license: "repository-file",
-    preview: Boolean(preview),
+    preview: Boolean(preview?.metadata?.previewImage),
     manifests,
   };
 }
@@ -1740,7 +1787,7 @@ async function seedPreviewStage(stageDirectory, sourceDirectory = previewDirecto
 async function prunePreviewStage(stageDirectory, plugins) {
   const referenced = new Set();
   for (const plugin of plugins) {
-    for (const field of ["previewImage", "previewThumbnail"]) {
+    for (const field of ["previewImage", "previewThumbnail", "iconImage"]) {
       const value = plugin[field];
       if (typeof value === "string" && value.startsWith("assets/img/plugins/")) {
         referenced.add(value.slice("assets/img/plugins/".length));
