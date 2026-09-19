@@ -191618,6 +191618,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/funcoder/omarchy-devops-board",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:13:24.201Z",
+      "listingValidatedCommit": "bc953c42424a084ca69ce031728cbee3b6e6b09f",
+      "listingValidatedAt": "2026-09-19T11:13:24.201Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "funcoder/omarchy-devops-board",
+        "pluginIds": [
+          "funcoder.devops-board"
+        ],
+        "commit": "bc953c42424a084ca69ce031728cbee3b6e6b09f",
+        "checkedAt": "2026-09-19T11:13:24.111Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "funcoder.devops-board": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
