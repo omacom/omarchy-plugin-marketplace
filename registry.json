@@ -191986,6 +191986,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mfilm77/omarchy-plexmusic",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:42:37.656Z",
+      "listingValidatedCommit": "d934e7003952e87573d5fd905e48cd2b9d71c1ab",
+      "listingValidatedAt": "2026-09-19T11:42:37.656Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mfilm77/omarchy-plexmusic",
+        "pluginIds": [
+          "io.github.mfilm77.plexmusic"
+        ],
+        "commit": "d934e7003952e87573d5fd905e48cd2b9d71c1ab",
+        "checkedAt": "2026-09-19T11:42:37.562Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mfilm77/omarchy-plexmusic",
+        "pluginIds": [
+          "io.github.mfilm77.plexmusic"
+        ],
+        "commit": "d934e7003952e87573d5fd905e48cd2b9d71c1ab",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T11:42:37.562Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T11:00:30.078Z",
+        "requestEventId": 31442983245,
+        "requestedAt": "2026-09-19T11:39:21Z",
+        "reviewedAt": "2026-09-19T11:42:37.562Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mfilm77.plexmusic": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
