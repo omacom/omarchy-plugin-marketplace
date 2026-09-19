@@ -193749,6 +193749,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kb2uka/omarchy-port-doctor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:38:02.640Z",
+      "listingValidatedCommit": "baa13451bfc27d59e8c831c217852279a20901aa",
+      "listingValidatedAt": "2026-09-19T23:38:02.640Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kb2uka/omarchy-port-doctor",
+        "pluginIds": [
+          "kb2uka.port-doctor"
+        ],
+        "commit": "baa13451bfc27d59e8c831c217852279a20901aa",
+        "checkedAt": "2026-09-19T23:38:02.556Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kb2uka.port-doctor": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
