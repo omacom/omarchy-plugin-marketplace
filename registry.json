@@ -192452,6 +192452,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/primo-marino/omarchy-hearth",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:33:16.009Z",
+      "listingValidatedCommit": "e80af940eed0fe0de0b62c7916b51a4f44071776",
+      "listingValidatedAt": "2026-09-19T12:33:16.009Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "primo-marino/omarchy-hearth",
+        "pluginIds": [
+          "io.github.primo-marino.hearth"
+        ],
+        "commit": "e80af940eed0fe0de0b62c7916b51a4f44071776",
+        "checkedAt": "2026-09-19T12:33:15.918Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.primo-marino.hearth": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
