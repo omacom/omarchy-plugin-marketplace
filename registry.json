@@ -192113,6 +192113,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/galza-guo/omarchy-wwan",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:52:51.148Z",
+      "listingValidatedCommit": "4a52730b9efba40b707b19d8ca461ee0ff9aa292",
+      "listingValidatedAt": "2026-09-19T11:52:51.148Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "galza-guo/omarchy-wwan",
+        "pluginIds": [
+          "galza.wwan"
+        ],
+        "commit": "4a52730b9efba40b707b19d8ca461ee0ff9aa292",
+        "checkedAt": "2026-09-19T11:52:51.046Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "galza-guo/omarchy-wwan",
+        "pluginIds": [
+          "galza.wwan"
+        ],
+        "commit": "4a52730b9efba40b707b19d8ca461ee0ff9aa292",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T11:52:51.046Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T03:25:55.748Z",
+        "requestEventId": 31443284273,
+        "requestedAt": "2026-09-19T11:51:01Z",
+        "reviewedAt": "2026-09-19T11:52:51.046Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "galza.wwan": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
