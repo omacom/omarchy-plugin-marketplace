@@ -191337,6 +191337,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dneighbors/omarchy-plugin-tinkerer-club",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T10:51:01.551Z",
+      "listingValidatedCommit": "056eb180a0a3ae79d417167fed9b241b59fe62b1",
+      "listingValidatedAt": "2026-09-19T10:51:01.551Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dneighbors/omarchy-plugin-tinkerer-club",
+        "pluginIds": [
+          "dneighbors.tinkerer-club"
+        ],
+        "commit": "056eb180a0a3ae79d417167fed9b241b59fe62b1",
+        "checkedAt": "2026-09-19T10:51:01.450Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dneighbors.tinkerer-club": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
