@@ -56,6 +56,7 @@ const tagAliases = new Map([
   ["hardware", "system"],
   ["hardware-control", "system"],
   ["laptop", "system"],
+  ["llmman", "ai"],
   ["music", "media"],
   ["ollama", "ai"],
   ["omarchy", null],
