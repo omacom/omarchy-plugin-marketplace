@@ -193991,6 +193991,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gran-software-solutions/sesame-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:55:47.873Z",
+      "listingValidatedCommit": "0676869bf542c849b7401f619345d0d5d4d46a07",
+      "listingValidatedAt": "2026-09-19T23:55:47.873Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gran-software-solutions/sesame-omarchy-plugin",
+        "pluginIds": [
+          "de.gransoftware.sesame"
+        ],
+        "commit": "0676869bf542c849b7401f619345d0d5d4d46a07",
+        "checkedAt": "2026-09-19T23:55:47.788Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "de.gransoftware.sesame": {
+          "category": "Productivity",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
