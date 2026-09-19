@@ -193224,6 +193224,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DarkSurferZA/omatodolist",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T20:22:11.035Z",
+      "listingValidatedCommit": "ca7755ec7274fc5edfccc0f5e9dbe6d3e1a4e2a3",
+      "listingValidatedAt": "2026-09-19T20:22:11.035Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "darksurferza/omatodolist",
+        "pluginIds": [
+          "io.github.darksurferza.omatodolist"
+        ],
+        "commit": "ca7755ec7274fc5edfccc0f5e9dbe6d3e1a4e2a3",
+        "checkedAt": "2026-09-19T20:22:10.936Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.darksurferza.omatodolist": {
+          "category": "Widgets",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
