@@ -192519,6 +192519,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stickymongoose2/omarchy-background-crop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:42:17.295Z",
+      "listingValidatedCommit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
+      "listingValidatedAt": "2026-09-19T12:42:17.295Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stickymongoose2/omarchy-background-crop",
+        "pluginIds": [
+          "stickymongoose2.background-crop"
+        ],
+        "commit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
+        "checkedAt": "2026-09-19T12:42:17.202Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "stickymongoose2.background-crop": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
