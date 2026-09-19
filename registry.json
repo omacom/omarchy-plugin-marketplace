@@ -193876,6 +193876,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidjpramsay/OmaGAWD",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:48:28.624Z",
+      "listingValidatedCommit": "70c100d0298340bb6baef1d88c4e8afbba486896",
+      "listingValidatedAt": "2026-09-19T23:48:28.624Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidjpramsay/omagawd",
+        "pluginIds": [
+          "david.omaamp"
+        ],
+        "commit": "70c100d0298340bb6baef1d88c4e8afbba486896",
+        "checkedAt": "2026-09-19T23:48:28.532Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davidjpramsay/omagawd",
+        "pluginIds": [
+          "david.omaamp"
+        ],
+        "commit": "70c100d0298340bb6baef1d88c4e8afbba486896",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T23:48:28.532Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T15:36:28.918Z",
+        "requestEventId": 31464004911,
+        "requestedAt": "2026-09-19T23:33:04Z",
+        "reviewedAt": "2026-09-19T23:48:28.532Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "david.omaamp": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
