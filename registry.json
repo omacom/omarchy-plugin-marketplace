@@ -193716,6 +193716,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gran-software-solutions/yank-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:34:30.978Z",
+      "listingValidatedCommit": "79ba08a5b8c7fa537fe2a5a6972a980362480fc5",
+      "listingValidatedAt": "2026-09-19T23:34:30.978Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gran-software-solutions/yank-omarchy-plugin",
+        "pluginIds": [
+          "de.gransoftware.yank"
+        ],
+        "commit": "79ba08a5b8c7fa537fe2a5a6972a980362480fc5",
+        "checkedAt": "2026-09-19T23:34:30.887Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "de.gransoftware.yank": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
