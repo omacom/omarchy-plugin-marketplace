@@ -192176,6 +192176,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/grold/omarchy-temperature-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:55:40.260Z",
+      "listingValidatedCommit": "95cf45ab35ae4fe507e8096f8222e7b360440b05",
+      "listingValidatedAt": "2026-09-19T11:55:40.260Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grold/omarchy-temperature-widget",
+        "pluginIds": [
+          "grold.temperature"
+        ],
+        "commit": "95cf45ab35ae4fe507e8096f8222e7b360440b05",
+        "checkedAt": "2026-09-19T11:55:40.196Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "grold.temperature": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
