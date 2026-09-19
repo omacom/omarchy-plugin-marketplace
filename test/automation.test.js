@@ -1224,7 +1224,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260831-01");
+  assert.equal(keys[0], "20260918-01");
   assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
   assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
