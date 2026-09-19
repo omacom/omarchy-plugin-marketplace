@@ -193660,6 +193660,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brokemac79/omarchy-octopus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:30:06.338Z",
+      "listingValidatedCommit": "baaeac84cae362f2a544bd8f9912d33cc9eaafaa",
+      "listingValidatedAt": "2026-09-19T23:30:06.338Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brokemac79/omarchy-octopus",
+        "pluginIds": [
+          "community.octopus-energy"
+        ],
+        "commit": "baaeac84cae362f2a544bd8f9912d33cc9eaafaa",
+        "checkedAt": "2026-09-19T23:30:06.244Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brokemac79/omarchy-octopus",
+        "pluginIds": [
+          "community.octopus-energy"
+        ],
+        "commit": "baaeac84cae362f2a544bd8f9912d33cc9eaafaa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T23:30:06.244Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T14:55:29.765Z",
+        "requestEventId": 31463296171,
+        "requestedAt": "2026-09-19T23:05:45Z",
+        "reviewedAt": "2026-09-19T23:30:06.244Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "community.octopus-energy": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
