@@ -193106,6 +193106,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ricardofriba/Omarchy-PredatorSense",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T20:14:10.345Z",
+      "listingValidatedCommit": "796fe9abef0dcb744f6a2e96613522cb1be9f599",
+      "listingValidatedAt": "2026-09-19T20:14:10.345Z",
+      "listingValidatedBranch": "ph315-52-facer",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ricardofriba/omarchy-predatorsense",
+        "pluginIds": [
+          "io.github.ricardofriba.predatorsense"
+        ],
+        "commit": "796fe9abef0dcb744f6a2e96613522cb1be9f599",
+        "checkedAt": "2026-09-19T20:14:10.260Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ricardofriba/omarchy-predatorsense",
+        "pluginIds": [
+          "io.github.ricardofriba.predatorsense"
+        ],
+        "commit": "796fe9abef0dcb744f6a2e96613522cb1be9f599",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T20:14:10.260Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T20:30:21.814Z",
+        "requestEventId": 31458417499,
+        "requestedAt": "2026-09-19T20:12:37Z",
+        "reviewedAt": "2026-09-19T20:14:10.260Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ricardofriba.predatorsense": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
