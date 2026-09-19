@@ -192045,6 +192045,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/XNinety9/dockarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:46:00.658Z",
+      "listingValidatedCommit": "e5b11942d96c8e526042baa2fa989034a4b1bf3d",
+      "listingValidatedAt": "2026-09-19T11:46:00.658Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xninety9/dockarchy",
+        "pluginIds": [
+          "x99.dockarchy"
+        ],
+        "commit": "e5b11942d96c8e526042baa2fa989034a4b1bf3d",
+        "checkedAt": "2026-09-19T11:46:00.572Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "x99.dockarchy": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
