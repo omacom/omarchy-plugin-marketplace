@@ -193060,6 +193060,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cgranier/omarchy-theme-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T13:25:37.953Z",
+      "listingValidatedCommit": "d5f6d6cfa292f70f6ca49e82ee5e65477c98df5d",
+      "listingValidatedAt": "2026-09-19T13:25:37.953Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cgranier/omarchy-theme-clock",
+        "pluginIds": [
+          "cgranier.themeclock"
+        ],
+        "commit": "d5f6d6cfa292f70f6ca49e82ee5e65477c98df5d",
+        "checkedAt": "2026-09-19T13:25:37.898Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cgranier.themeclock": {
+          "category": "Appearance",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
