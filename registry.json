@@ -193935,6 +193935,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SmoothPixels/cursor-accent",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:51:46.560Z",
+      "listingValidatedCommit": "04037743631c752a517054e64d483cc196233155",
+      "listingValidatedAt": "2026-09-19T23:51:46.560Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smoothpixels/cursor-accent",
+        "pluginIds": [
+          "io.github.smoothpixels.cursor-accent"
+        ],
+        "commit": "04037743631c752a517054e64d483cc196233155",
+        "checkedAt": "2026-09-19T23:51:46.475Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "smoothpixels/cursor-accent",
+        "pluginIds": [
+          "io.github.smoothpixels.cursor-accent"
+        ],
+        "commit": "04037743631c752a517054e64d483cc196233155",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T23:51:46.475Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T18:42:34.992Z",
+        "requestEventId": 31464202321,
+        "requestedAt": "2026-09-19T23:41:55Z",
+        "reviewedAt": "2026-09-19T23:51:46.475Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.smoothpixels.cursor-accent": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
