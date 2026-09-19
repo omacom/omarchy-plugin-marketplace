@@ -192761,6 +192761,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ArtMin96/omarchy-l2tp-vpn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T13:05:04.620Z",
+      "listingValidatedCommit": "70d00a6274613cf8e96da2ccc5d8d0790600a4f4",
+      "listingValidatedAt": "2026-09-19T13:05:04.620Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "artmin96/omarchy-l2tp-vpn",
+        "pluginIds": [
+          "artmins96.l2tp"
+        ],
+        "commit": "70d00a6274613cf8e96da2ccc5d8d0790600a4f4",
+        "checkedAt": "2026-09-19T13:05:04.540Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "artmin96/omarchy-l2tp-vpn",
+        "pluginIds": [
+          "artmins96.l2tp"
+        ],
+        "commit": "70d00a6274613cf8e96da2ccc5d8d0790600a4f4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T13:05:04.540Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:54:13.760Z",
+        "requestEventId": 31445084629,
+        "requestedAt": "2026-09-19T12:59:34Z",
+        "reviewedAt": "2026-09-19T13:05:04.541Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "artmins96.l2tp": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
