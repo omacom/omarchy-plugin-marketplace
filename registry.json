@@ -819,6 +819,20 @@
             "system"
           ]
         }
+      },
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yuters/omarchy-flight-radar",
+        "pluginIds": [
+          "yuters.flight-radar"
+        ],
+        "commit": "c74b26e2e7f4cf944e58d8f5e523dad9134c87e5",
+        "checkedAt": "2026-09-19T13:47:44.493Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
       }
     },
     {
