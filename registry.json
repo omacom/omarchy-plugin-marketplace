@@ -191585,6 +191585,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/onemohsen/omarchy-gh-trending",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:09:54.898Z",
+      "listingValidatedCommit": "fed3bf6941f143b09db6bdb9a2f02ec977864502",
+      "listingValidatedAt": "2026-09-19T11:09:54.898Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "onemohsen/omarchy-gh-trending",
+        "pluginIds": [
+          "io.github.onemohsen.gh-trending"
+        ],
+        "commit": "fed3bf6941f143b09db6bdb9a2f02ec977864502",
+        "checkedAt": "2026-09-19T11:09:54.804Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.onemohsen.gh-trending": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
