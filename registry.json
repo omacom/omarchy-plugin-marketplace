@@ -191838,6 +191838,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozz1ee-dev/omarchy-rakabot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:32:28.878Z",
+      "listingValidatedCommit": "cd9aff89ade51e52e0a661f96c9bbaf2cdfdd177",
+      "listingValidatedAt": "2026-09-19T11:32:28.878Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozz1ee-dev/omarchy-rakabot",
+        "pluginIds": [
+          "ozz1ee.rakabot"
+        ],
+        "commit": "cd9aff89ade51e52e0a661f96c9bbaf2cdfdd177",
+        "checkedAt": "2026-09-19T11:32:28.804Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ozz1ee-dev/omarchy-rakabot",
+        "pluginIds": [
+          "ozz1ee.rakabot"
+        ],
+        "commit": "cd9aff89ade51e52e0a661f96c9bbaf2cdfdd177",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T11:32:28.804Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T22:00:16.675Z",
+        "requestEventId": 31442621447,
+        "requestedAt": "2026-09-19T11:24:23Z",
+        "reviewedAt": "2026-09-19T11:32:28.804Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ozz1ee.rakabot": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
