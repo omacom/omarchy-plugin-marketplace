@@ -193256,6 +193256,42 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Xfedis/omarchy-torrents",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T20:25:16.548Z",
+      "listingValidatedCommit": "1d9f56b789ee6af7bbd34fdbfeee27ce7fdff986",
+      "listingValidatedAt": "2026-09-19T20:25:16.548Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xfedis/omarchy-torrents",
+        "pluginIds": [
+          "widget.torrents"
+        ],
+        "commit": "1d9f56b789ee6af7bbd34fdbfeee27ce7fdff986",
+        "checkedAt": "2026-09-19T20:25:16.479Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "widget.torrents": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
