@@ -191806,6 +191806,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ACooperDev/Scratchpad",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:29:25.796Z",
+      "listingValidatedCommit": "dce4295f1aac3fe4f6d75fab398e295553fcbfd2",
+      "listingValidatedAt": "2026-09-19T11:29:25.796Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "acooperdev/scratchpad",
+        "pluginIds": [
+          "acooper.scratchpad"
+        ],
+        "commit": "dce4295f1aac3fe4f6d75fab398e295553fcbfd2",
+        "checkedAt": "2026-09-19T11:29:25.701Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "acooper.scratchpad": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
