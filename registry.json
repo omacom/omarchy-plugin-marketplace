@@ -193783,6 +193783,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/swey-l1/omarchy-bar-term",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:41:47.612Z",
+      "listingValidatedCommit": "a1828fd80768509f97f089687cec89fb31795d16",
+      "listingValidatedAt": "2026-09-19T23:41:47.612Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "swey-l1/omarchy-bar-term",
+        "pluginIds": [
+          "io.github.swey-l1.bar-term"
+        ],
+        "commit": "a1828fd80768509f97f089687cec89fb31795d16",
+        "checkedAt": "2026-09-19T23:41:47.550Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.swey-l1.bar-term": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
