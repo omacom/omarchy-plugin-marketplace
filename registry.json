@@ -192585,6 +192585,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alltopafi/omarchy-break-timer-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T12:54:20.652Z",
+      "listingValidatedCommit": "6573b6ffdeb0779972242227afdf727c5f6204b3",
+      "listingValidatedAt": "2026-09-19T12:54:20.652Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alltopafi/omarchy-break-timer-plugin",
+        "pluginIds": [
+          "alltopafi.break-timer"
+        ],
+        "commit": "6573b6ffdeb0779972242227afdf727c5f6204b3",
+        "checkedAt": "2026-09-19T12:54:20.567Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alltopafi/omarchy-break-timer-plugin",
+        "pluginIds": [
+          "alltopafi.break-timer"
+        ],
+        "commit": "6573b6ffdeb0779972242227afdf727c5f6204b3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-19T12:54:20.567Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T17:05:03.554Z",
+        "requestEventId": 31444904000,
+        "requestedAt": "2026-09-19T12:52:47Z",
+        "reviewedAt": "2026-09-19T12:54:20.567Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "alltopafi.break-timer": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
