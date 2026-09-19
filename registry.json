@@ -164756,8 +164756,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T18:10:52.327Z",
-      "listingValidatedCommit": "117361a00949400da56fde049d022dc05b8b6d4b",
-      "listingValidatedAt": "2026-09-16T18:13:06.927Z",
+      "listingValidatedCommit": "dd919eb6257cc7ae1264d77821f7273ad0cf7050",
+      "listingValidatedAt": "2026-09-19T23:16:48.529Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -164766,8 +164766,8 @@
         "pluginIds": [
           "io.github.claudsondouglas.arcdock"
         ],
-        "commit": "117361a00949400da56fde049d022dc05b8b6d4b",
-        "checkedAt": "2026-09-16T18:13:06.927Z",
+        "commit": "dd919eb6257cc7ae1264d77821f7273ad0cf7050",
+        "checkedAt": "2026-09-19T23:16:48.529Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -164819,6 +164819,26 @@
             ],
             "commit": "15b16df783b1fbb97d6a31088e6c09a14da1cf77",
             "checkedAt": "2026-09-13T11:37:41.901Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "117361a00949400da56fde049d022dc05b8b6d4b",
+          "validatedAt": "2026-09-16T18:13:06.927Z",
+          "branch": "main",
+          "supersededAt": "2026-09-19T23:16:48.529Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "claudsondouglas/arc.dock",
+            "pluginIds": [
+              "io.github.claudsondouglas.arcdock"
+            ],
+            "commit": "117361a00949400da56fde049d022dc05b8b6d4b",
+            "checkedAt": "2026-09-16T18:13:06.927Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
