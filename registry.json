@@ -191772,6 +191772,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/talleman21/omarchy-frogger",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T11:26:18.810Z",
+      "listingValidatedCommit": "7e543907eec3b3ca15debcc76f41c5b544a57197",
+      "listingValidatedAt": "2026-09-19T11:26:18.810Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "talleman21/omarchy-frogger",
+        "pluginIds": [
+          "talleman.frogger"
+        ],
+        "commit": "7e543907eec3b3ca15debcc76f41c5b544a57197",
+        "checkedAt": "2026-09-19T11:26:18.731Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "talleman.frogger": {
+          "category": "Other",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
