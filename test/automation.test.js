@@ -2152,7 +2152,11 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(rankedPlugins\(\), state\.engagement\)/);
   assert.doesNotMatch(app, /engagementRanks\(state\.plugins|engagementRanks\(sourcePlugins/);
   assert.match(app, /splitStatsTotal\.textContent = `of \$\{rankedPlugins\(\)\.length\} community plugins`/);
-  assert.match(styles, /\.split-grid::after \{[\s\S]*mask: url\("data:image\/svg\+xml,[^"]*m1200 1200h-480v-80h400v-1040h-479\.996v160h-400v720h720v-720h-80v-80h159\.996v880h-400v160h-640v-1200h1200z[^"]*"\) right 28px bottom 24px \/ 140px no-repeat/);
+  assert.match(styles, /\.split-grid::after \{[\s\S]*mask: url\("\.\.\/img\/omarchy-wordmark\.svg"\) center \/ 80% auto no-repeat/);
+  assert.match(styles, /\.split-grid \{[\s\S]*gap: 1px;[\s\S]*overflow: hidden; background: var\(--panel\);/);
+  assert.doesNotMatch(styles, /\.split-grid \{[^}]*margin-right: -1px/);
+  assert.match(styles, /\.split-tile \{[^}]*box-shadow: 1px 1px 0 0 var\(--line\);/);
+  await readFile(new URL("site/assets/img/omarchy-wordmark.svg", root));
   assert.match(styles, /\.split-tile \{\s*position: relative; z-index: 1;/);
   assert.match(app, /Built-in plugins are not ranked\./);
   assert.match(app, /const ranks = catalogRanks\(\);/);
