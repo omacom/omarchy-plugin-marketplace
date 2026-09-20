@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#000000">
     <title>Explore Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260906-02">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260920-02">
     <link rel="stylesheet" href="assets/css/explore.css?v=20260828-27">
-    <script>document.documentElement.dataset.theme = localStorage.getItem("omarchy-theme") || "dark";</script>
+    <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page explore-page">
     <a class="skip-link" href="#explorer">Skip to plugin explorer</a>
@@ -29,9 +29,9 @@
           <a href="develop.html" aria-label="Develop a plugin">Develop<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="https://github.com/omacom/omarchy-plugin-marketplace" target="_blank" rel="noreferrer" aria-label="Contribute a plugin">Contribute<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="publish.html" aria-label="Publish a plugin">Publish<span class="market-nav-detail">&nbsp;a plugin</span><span aria-hidden="true">&nbsp;→</span></a>
-          <button class="square-action icon-only theme-toggle" type="button" aria-label="Toggle color theme">
-            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg>
+          <button class="square-action theme-toggle" type="button" aria-label="Choose color theme">
+            <svg class="palette-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1 .9-1.8 2-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.7-9-7.7Z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10.5" cy="7" r="1.3"/><circle cx="15" cy="7.5" r="1.3"/></svg>
+            <span class="theme-toggle-label">Theme</span>
           </button>
         </nav>
       </div>
@@ -241,6 +241,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
 
-    <script type="module" src="assets/js/explore.js?v=20260920-01"></script>
+    <script type="module" src="assets/js/explore.js?v=20260920-02"></script>
   </body>
 </html>

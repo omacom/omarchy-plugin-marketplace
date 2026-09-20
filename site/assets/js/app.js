@@ -6,8 +6,10 @@ import {
   comparePluginEngagement,
   copyText,
   displayTaxonomyTag,
+  engagementRanks,
   engagementSummary,
   escapeHtml,
+  formatEngagementCount,
   formatStars,
   hidePendingEngagement,
   isRecentlyAdded,
@@ -18,21 +20,24 @@ import {
   paginationState,
   pluginHeartButton,
   pluginVerificationState,
+  readCatalogView,
   readCatalogViewState,
   setupControlTooltips,
   setupCopyButtons,
   setupThemeToggle,
   showToast,
+  splitViewPageSize,
+  storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260920-01";
+} from "./shared.js?v=20260920-02";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260920-01";
+} from "./engagement.js?v=20260920-02";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -60,15 +65,16 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260920-01";
+} from "./search.js?v=20260920-02";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260920-01";
+} from "./taxonomy.js?v=20260920-02";
 
 const pluginsPerPage = 9;
+const splitViewRows = 3;
 const hiddenCardTags = new Set([
   "bar",
   "bar-widget",
@@ -153,6 +159,8 @@ const state = {
   sort: "added",
   page: 1,
   showAll: false,
+  view: "cards",
+  selected: "",
   engagement: {},
   engagementAuthoritative: {},
   engagementEnabled: false,
@@ -184,6 +192,13 @@ const viewButton = document.querySelector("#catalog-view-button");
 const viewLabel = document.querySelector("#catalog-view-label");
 const viewDock = document.querySelector("#catalog-view-dock");
 const viewDockButton = document.querySelector("#catalog-view-dock-button");
+const viewMode = document.querySelector("#catalog-view-mode");
+const splitRoot = document.querySelector("#catalog-split");
+const splitGrid = document.querySelector("#split-grid");
+const splitPanelCount = document.querySelector("#split-panel-count");
+const splitCard = document.querySelector("#split-card");
+const splitStatsBody = document.querySelector("#split-stats-body");
+const splitStatsTotal = document.querySelector("#split-stats-total");
 const viewDockStatus = document.querySelector("#catalog-view-dock-status");
 const catalogResultStatus = document.querySelector("#catalog-result-status");
 let viewScrollFrame = 0;
@@ -869,7 +884,7 @@ function renderPagination(totalItems, pageState) {
   const controls = catalogViewControls(totalItems, state.showAll, pluginsPerPage);
   document.body.classList.toggle("catalog-show-all", controls.reserveDockSpace);
   pagination.hidden = controls.paginationHidden;
-  viewToggle.hidden = controls.browseAllHidden;
+  viewToggle.hidden = controls.browseAllHidden || splitView();
   viewDock.hidden = controls.dockHidden;
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
   viewLabel.textContent = `Browse all ${totalItems} ${sourceLabel} plugin${totalItems === 1 ? "" : "s"}`;
@@ -890,7 +905,90 @@ function renderPagination(totalItems, pageState) {
     : "No next plugin page");
 }
 
+function splitTile(plugin, rank) {
+  const previewSource = plugin.previewThumbnail || plugin.previewImage;
+  const preview = previewSource
+    ? `<img class="split-tile-thumb" src="${escapeHtml(previewSource)}" alt="" loading="lazy" decoding="async">`
+    : `<span class="split-tile-thumb split-tile-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
+  const rankLabel = rank ? `#${rank.overall}` : "—";
+  const selected = plugin.id === state.selected;
+  return `
+    <button class="split-tile${selected ? " is-selected" : ""}" type="button" role="option" aria-selected="${selected}" data-split-plugin="${escapeHtml(plugin.id)}" aria-label="${escapeHtml(plugin.name)}, rank ${escapeHtml(rankLabel)}">
+      ${preview}
+      <span class="split-tile-name">${escapeHtml(plugin.name)}</span>
+      <span class="split-tile-meta"><span>${escapeHtml(plugin.kind || plugin.category)}</span><b title="Overall rank from hearts, install copies, and views">${escapeHtml(rankLabel)}</b></span>
+    </button>`;
+}
+
+function splitStatRow(metric, label, icon, rank, value) {
+  const total = rank?.total || 0;
+  const position = rank?.[metric] || 0;
+  const percent = total > 1 ? Math.max(2, Math.round((1 - (position - 1) / (total - 1)) * 100)) : 100;
+  const top = total ? Math.max(1, Math.round((position / total) * 100)) : 0;
+  return `
+    <div class="split-stat" data-split-metric="${metric}">
+      <div class="split-stat-key"><span class="split-stat-icon">${icon}</span><b>${escapeHtml(formatEngagementCount(value))}</b><span class="sr-only">${label}</span></div>
+      <div class="split-stat-bar"><i style="width:${percent}%"></i><em style="left:${percent}%">top ${top}%</em></div>
+      <div class="split-stat-rank">${position ? `#${position}` : "—"}<small>of ${total}</small></div>
+    </div>`;
+}
+
+function renderSplitView(pagePlugins) {
+  const ranks = engagementRanks(sourcePlugins(), state.engagement);
+  if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
+  splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
+  splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
+  splitGrid.querySelectorAll("[data-split-plugin]").forEach((tile) => {
+    tile.addEventListener("click", () => {
+      if (state.selected === tile.dataset.splitPlugin) return;
+      state.selected = tile.dataset.splitPlugin;
+      splitGrid.querySelectorAll("[data-split-plugin]").forEach((other) => {
+        const active = other === tile;
+        other.classList.toggle("is-selected", active);
+        other.setAttribute("aria-selected", String(active));
+      });
+      renderSplitSelection();
+    });
+  });
+  renderSplitSelection();
+}
+
+function renderSplitSelection() {
+  const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
+  if (!plugin) {
+    splitCard.innerHTML = "";
+    splitStatsBody.innerHTML = "";
+    return;
+  }
+  splitCard.innerHTML = pluginCard(plugin, { showNew: true });
+  bindCardActions(splitCard);
+  const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
+  const rank = state.engagementLoaded ? engagementRanks(sourcePlugins(), state.engagement).get(plugin.id) : null;
+  splitStatsTotal.textContent = `${sourcePlugins().length} plugins`;
+  splitStatsBody.innerHTML = state.engagementEnabled
+    ? [
+      ["hearts", "hearts", '<span class="social-glyph heart-glyph" aria-hidden="true">\uf004</span>'],
+      ["copies", "install copies", '<span class="copy-icon engagement-copy-icon" aria-hidden="true"></span>'],
+      ["views", "views", '<span class="engagement-glyph" aria-hidden="true">\uf441</span>'],
+    ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, stats[metric])).join("")
+    : '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>';
+}
+
+function setCatalogView(view) {
+  state.view = view === "split" ? "split" : "cards";
+  storeCatalogView(state.view);
+  viewMode.querySelectorAll("[data-view]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.view === state.view));
+  });
+  document.body.classList.toggle("catalog-split-view", splitView());
+}
+
 function placeViewDock() {
+  if (splitView()) {
+    splitRoot.after(pagination);
+  } else {
+    grid.after(pagination);
+  }
   if (!state.showAll) {
     document.querySelector("#site-footer")?.before(viewDock);
     return;
@@ -926,7 +1024,7 @@ function catalogResultMessage(totalItems, pageState) {
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
   if (totalItems === 0) return `No ${sourceLabel} plugins found`;
   if (state.showAll) return `Showing all ${totalItems} ${sourceLabel} plugin${totalItems === 1 ? "" : "s"}`;
-  const shown = Math.min(pluginsPerPage, totalItems - pageState.start);
+  const shown = Math.min(pageSize(), totalItems - pageState.start);
   return `Showing ${shown} of ${totalItems} ${sourceLabel} plugins, page ${pageState.page} of ${pageState.totalPages}`;
 }
 
@@ -971,10 +1069,19 @@ function restoreCatalogControlFocus(token) {
   return Boolean(target);
 }
 
+function splitView() {
+  return state.view === "split";
+}
+
+function pageSize() {
+  return splitView() ? splitViewPageSize(splitGrid.clientWidth, { rows: splitViewRows }) : pluginsPerPage;
+}
+
 function render({ historyMode = "replace", announce = false } = {}) {
   cancelViewScroll();
+  if (splitView()) state.showAll = false;
   const visible = filteredPlugins();
-  const pageState = paginationState(visible.length, state.page, pluginsPerPage);
+  const pageState = paginationState(visible.length, state.page, pageSize());
   state.page = state.showAll ? 1 : pageState.page;
   const pagePlugins = state.showAll
     ? visible
@@ -988,9 +1095,15 @@ function render({ historyMode = "replace", announce = false } = {}) {
   countLabel.textContent = state.category === "all"
     ? (state.source === "builtin" ? "built-in plugins" : "community plugins")
     : `${state.source === "builtin" ? "built-in plugins" : "plugins"} in ${catalogFilterLabel(state.category)}`;
-  grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
-  bindCardActions(grid);
-  grid.hidden = visible.length === 0;
+  if (splitView()) {
+    grid.innerHTML = "";
+    renderSplitView(pagePlugins);
+  } else {
+    grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
+    bindCardActions(grid);
+  }
+  grid.hidden = visible.length === 0 || splitView();
+  splitRoot.hidden = visible.length === 0 || !splitView();
   empty.hidden = visible.length !== 0;
   renderPagination(visible.length, pageState);
   placeViewDock();
@@ -1329,6 +1442,23 @@ async function init() {
     state.plugins = catalog.plugins;
     state.engagementEnabled = Boolean(engagementApiBaseUrl());
     restoreUrl();
+    setCatalogView(readCatalogView());
+    viewMode.querySelectorAll("[data-view]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.dataset.view === state.view) return;
+        setCatalogView(button.dataset.view);
+        state.page = 1;
+        render({ announce: true });
+      });
+    });
+    let splitResizeFrame = 0;
+    window.addEventListener("resize", () => {
+      if (!splitView() || splitResizeFrame) return;
+      splitResizeFrame = window.requestAnimationFrame(() => {
+        splitResizeFrame = 0;
+        render({ historyMode: "none" });
+      });
+    });
     renderSearchTerms();
     renderRecentlyAdded();
     renderSourceFilters();
@@ -1347,6 +1477,7 @@ async function init() {
             hearted: hasPluginHeart(pluginId),
           });
         });
+        if (splitView() && !engagementSorts.has(state.sort)) render({ historyMode: "none" });
         if (engagementSorts.has(state.sort)) {
           const focusToken = pluginCardFocusToken();
           render();

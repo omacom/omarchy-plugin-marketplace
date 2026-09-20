@@ -5,8 +5,8 @@
     <meta name="description" content="Publish an Omarchy plugin to the community marketplace.">
     <meta name="theme-color" content="#000000">
     <title>Publish a Plugin | Omarchy Plugins</title>
-    <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css?v=20260906-02">
-    <script>document.documentElement.dataset.theme = localStorage.getItem("omarchy-theme") || "dark";</script>
+    <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css?v=20260920-02">
+    <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to publishing guide</a>
@@ -21,7 +21,7 @@
         <div class="sidebar-bottom"><a class="sidebar-link" href="index.html">← Back to marketplace</a></div>
       </aside>
       <div class="center-panel">
-        <header class="doc-topbar"><div class="crumbs"><span>Omarchy / Marketplace / </span><b>Publish</b></div><div class="top-actions"><a class="square-action desktop-only" href="index.html">Browse</a><button class="square-action icon-only theme-toggle" type="button" aria-label="Toggle theme"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg></button></div></header>
+        <header class="doc-topbar"><div class="crumbs"><span>Omarchy / Marketplace / </span><b>Publish</b></div><div class="top-actions"><a class="square-action desktop-only" href="index.html">Browse</a><button class="square-action theme-toggle" type="button" aria-label="Choose color theme"><svg class="palette-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1 .9-1.8 2-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.7-9-7.7Z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10.5" cy="7" r="1.3"/><circle cx="15" cy="7.5" r="1.3"/></svg><span class="theme-toggle-label">Theme</span></button></div></header>
         <main id="main-content" class="page-content" tabindex="-1">
           <header class="page-header" id="overview"><div class="page-eyebrow">Publishing</div><h1>Publish your plugin</h1><div class="page-meta"><span><time datetime="2026-08-20">Updated 20 Aug 2026</time></span><span>3 min read</span><span class="status"><i class="status-dot" aria-hidden="true"></i>Stable</span></div></header>
           <p class="intro">List your plugin in three steps. Keep the code in a public GitHub repository and add a valid <code class="inline-code" translate="no">manifest.json</code>.</p>
@@ -56,6 +56,6 @@
     </div>
     <nav class="mobile-bottom" aria-label="Mobile navigation"><a href="index.html">Browse</a><a class="active" href="#overview" data-section-ids="overview requirements">Guide</a><a href="#manifest">Manifest</a><a href="#submit">Submit</a></nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
-    <script type="module" src="assets/js/publish.js?v=20260920-01"></script>
+    <script type="module" src="assets/js/publish.js?v=20260920-02"></script>
   </body>
 </html>

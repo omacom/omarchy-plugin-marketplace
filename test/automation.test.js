@@ -94,8 +94,20 @@ import {
   pluginVerificationState,
   readCatalogViewState,
   showCopiedState,
+  engagementRanks,
+  splitViewPageSize,
+  readCatalogView,
   writeClipboard,
 } from "../site/assets/js/shared.js";
+import {
+  applyTheme,
+  defaultThemeId,
+  isThemeId,
+  pickerLayout,
+  readStoredTheme,
+  siteThemes,
+  themePreviewPath,
+} from "../site/assets/js/themes.js";
 import {
   catalogCategoryTotals,
   matchesKidsTaxonomy,
@@ -1389,15 +1401,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260920-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-01");
+  assert.equal(keys[0], "20260920-02");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-02");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-02");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260906-02");
+  assert.equal(styleKeys[0], "20260920-02");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-02"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
@@ -1834,7 +1847,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(sharedJs, /link\.dataset\.sectionIds[\s\S]*sectionIds\.includes\(id\)/);
   assert.match(sharedJs, /window\.scrollY \+ Math\.min\(markerMax, window\.innerHeight \* markerRatio\)/);
   assert.match(sharedJs, /section\.getBoundingClientRect\(\)\.top \+ window\.scrollY/);
-  assert.match(sharedJs, /\$\{current\} theme active; switch to \$\{next\} theme/);
+  assert.match(sharedJs, /`Choose color theme; current \$\{current\.name\}`/);
+  assert.match(sharedJs, /applyTheme\(readStoredTheme\(\), \{ persist: false \}\)/);
   assert.match(sharedJs, /Copy failed\. Select and copy manually\./);
   assert.match(files.pluginJs, /title: "Catalog unavailable"/);
   assert.match(files.pluginJs, /title: "Plugin not found"/);
@@ -2024,6 +2038,115 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.doesNotMatch(files.app, /setupHancoreAsciiHover|setupFooterAsciiField/);
 });
 
+test("site themes stay consistent between the theme list, stylesheet, previews, and boot script", async () => {
+  const root = new URL("../", import.meta.url);
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const ids = siteThemes.map((theme) => theme.id);
+  assert.deepEqual(ids.slice(0, 2), ["dark", "light"]);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.equal(siteThemes.filter((theme) => theme.light).length, 6);
+  for (const theme of siteThemes) {
+    assert.match(theme.id, /^[a-z0-9-]{1,32}$/);
+    assert.match(theme.bg, /^#[0-9a-f]{6}$/);
+    assert.match(theme.accent, /^#[0-9a-f]{6}$/);
+    if (theme.builtin) {
+      assert.equal(themePreviewPath(theme), "");
+      continue;
+    }
+    const block = styles.match(new RegExp(`:root\\[data-theme="${theme.id}"\\] \\{([\\s\\S]*?)\\n\\}`))?.[1];
+    assert.ok(block, theme.id);
+    assert.match(block, new RegExp(`color-scheme: ${theme.light ? "light" : "dark"};`));
+    assert.match(block, new RegExp(`--bg: ${theme.bg};`));
+    assert.match(block, new RegExp(`--accent: ${theme.accent};`));
+    assert.match(block, /--heading: #[0-9a-f]{6};/);
+    await readFile(new URL(`site/${themePreviewPath(theme)}`, root));
+  }
+  assert.equal(isThemeId("nord"), true);
+  assert.equal(isThemeId("light"), true);
+  assert.equal(isThemeId("Nord"), false);
+  assert.equal(isThemeId(""), false);
+  assert.equal(readStoredTheme({ getItem: () => "gruvbox" }), "gruvbox");
+  assert.equal(readStoredTheme({ getItem: () => "bogus" }), defaultThemeId);
+  assert.equal(readStoredTheme({ getItem: () => { throw new Error("blocked"); } }), defaultThemeId);
+  const root2 = { dataset: {}, ownerDocument: { querySelector: () => null } };
+  const stored = new Map();
+  const storage = { setItem: (key, value) => stored.set(key, value), getItem: (key) => stored.get(key) };
+  assert.equal(applyTheme("kanagawa", { root: root2, storage }).id, "kanagawa");
+  assert.equal(root2.dataset.theme, "kanagawa");
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  assert.equal(applyTheme("unknown", { root: root2, storage, persist: false }).id, defaultThemeId);
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  for (const page of ["index", "explore", "plugin", "develop", "publish"]) {
+    const html = await readFile(new URL(`site/${page}.html`, root), "utf8");
+    assert.match(html, /\/\^\[a-z0-9-\]\{1,32\}\$\/\.test\(t\|\|""\)\?t:"dark"/);
+    assert.match(html, /class="square-action theme-toggle" type="button" aria-label="Choose color theme"[\s\S]*class="theme-toggle-label">Theme</);
+    assert.doesNotMatch(html, /sun-icon|moon-icon/);
+  }
+  assert.match(styles, /\.theme-picker \{[\s\S]*position: fixed;[\s\S]*width: min\(1104px, calc\(100% - 40px\)\)/);
+  assert.doesNotMatch(styles, /\.sun-icon|\.moon-icon|#424247|#09090b|color: #eee;|color: #efeff0;|color: #f0f0f1;/);
+});
+
+test("theme picker layout expands the selected slice and stacks the rest", () => {
+  const layout = pickerLayout(24, 5, 1000);
+  assert.equal(layout.items.length, 24);
+  assert.equal(layout.height, Math.round(220 * 0.62));
+  const selected = layout.items[5];
+  assert.equal(selected.width, 220);
+  assert.equal(selected.top, 0);
+  assert.equal(selected.zIndex, 100);
+  assert.ok(layout.items[4].width < selected.width);
+  assert.ok(layout.items[4].left < selected.left);
+  assert.ok(layout.items[6].left > selected.left);
+  assert.ok(layout.items[6].left < selected.left + selected.width);
+  assert.ok(layout.items.every((item, index) => index === 5 || item.zIndex < 100));
+  assert.equal(layout.items.filter((item) => item.hidden).length, 0);
+  assert.equal(pickerLayout(60, 0, 1000).items.filter((item) => item.hidden).length, 39);
+});
+
+test("engagement ranks combine hearts, copies, and views into one standing", () => {
+  const plugins = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "d" }];
+  const stats = {
+    a: { hearts: 10, copies: 5, views: 100 },
+    b: { hearts: 10, copies: 50, views: 10 },
+    c: { hearts: 1, copies: 1, views: 1000 },
+  };
+  const ranks = engagementRanks(plugins, stats);
+  assert.deepEqual(ranks.get("a"), { total: 4, hearts: 1, copies: 2, views: 2, overall: 1 });
+  assert.deepEqual(ranks.get("b"), { total: 4, hearts: 1, copies: 1, views: 3, overall: 1 });
+  assert.deepEqual(ranks.get("c"), { total: 4, hearts: 3, copies: 3, views: 1, overall: 3 });
+  assert.deepEqual(ranks.get("d"), { total: 4, hearts: 4, copies: 4, views: 4, overall: 4 });
+  assert.equal(engagementRanks([], {}).size, 0);
+  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 1, hearts: 1, copies: 1, views: 1, overall: 1 });
+  assert.equal(splitViewPageSize(734), 15);
+  assert.equal(splitViewPageSize(500), 9);
+  assert.equal(splitViewPageSize(100), 3);
+  assert.equal(splitViewPageSize(0), 15);
+  assert.equal(readCatalogView({ getItem: () => "split" }), "split");
+  assert.equal(readCatalogView({ getItem: () => "other" }), "cards");
+  assert.equal(readCatalogView({ getItem: () => { throw new Error("blocked"); } }), "cards");
+});
+
+test("split view keeps the original card and adds tiles with an overall rank", async () => {
+  const root = new URL("../", import.meta.url);
+  const html = await readFile(new URL("site/index.html", root), "utf8");
+  const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  assert.match(html, /id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"/);
+  assert.match(html, /id="catalog-split" class="catalog-split" hidden>[\s\S]*id="split-grid"[\s\S]*id="split-card" class="plugin-grid market-plugin-grid split-card"[\s\S]*id="split-stats-body"/);
+  assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
+  assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
+  assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
+  assert.match(app, /const ranks = engagementRanks\(sourcePlugins\(\), state\.engagement\)/);
+  assert.match(app, /const rankLabel = rank \? `#\$\{rank\.overall\}` : "—"/);
+  assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"/);
+  assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
+  assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
+  assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);
+  assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);
+  assert.match(styles, /\.split-grid \{[^}]*minmax\(140px, 1fr\)/);
+  assert.match(styles, /@media \(max-width: 1100px\) \{\s*\.catalog-split \{ grid-template-columns: minmax\(0, 1fr\); \}/);
+});
+
 test("theme text and accent surfaces meet WCAG AA contrast", async () => {
   const styles = await readFile(
     new URL("../site/assets/css/style.css", import.meta.url),
@@ -2032,7 +2155,11 @@ test("theme text and accent surfaces meet WCAG AA contrast", async () => {
   const darkBlock = styles.match(/^:root \{([\s\S]*?)\n\}/)?.[1] || "";
   const lightBlock = styles.match(/:root\[data-theme="light"\] \{([\s\S]*?)\n\}/)?.[1] || "";
   const value = (block, name) => block.match(new RegExp(`--${name}:\\s*(#[a-f0-9]+);`, "i"))?.[1];
-  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock]]) {
+  const omarchyBlocks = [...styles.matchAll(/:root\[data-theme="([a-z0-9-]+)"\] \{([\s\S]*?)\n\}/g)]
+    .filter(([, id]) => id !== "light")
+    .map(([, id, block]) => [id, block]);
+  assert.equal(omarchyBlocks.length, siteThemes.length - 2);
+  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock], ...omarchyBlocks]) {
     const themeValue = (name) => value(block, name);
     const background = themeValue("bg");
     const panel = themeValue("panel");

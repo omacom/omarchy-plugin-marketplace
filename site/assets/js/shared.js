@@ -1,3 +1,12 @@
+import {
+  applyTheme,
+  pickerLayout,
+  readStoredTheme,
+  siteThemes,
+  themeById,
+  themePreviewPath,
+} from "./themes.js?v=20260920-02";
+
 const accentColors = {
   lime: "#b7ef51",
   violet: "#a78bfa",
@@ -403,6 +412,57 @@ export function listingCheckState(plugin) {
   };
 }
 
+export const engagementRankMetrics = Object.freeze(["hearts", "copies", "views"]);
+
+export function engagementRanks(plugins, stats = {}) {
+  const ids = plugins.map((plugin) => plugin.id);
+  const count = (id, metric) => Number(stats[id]?.[metric]) || 0;
+  const ranks = new Map(ids.map((id) => [id, { total: ids.length }]));
+  engagementRankMetrics.forEach((metric) => {
+    const ordered = [...ids].sort((a, b) => count(b, metric) - count(a, metric) || a.localeCompare(b));
+    let rank = 0;
+    let previous = null;
+    ordered.forEach((id, index) => {
+      const value = count(id, metric);
+      if (value !== previous) rank = index + 1;
+      previous = value;
+      ranks.get(id)[metric] = rank;
+    });
+  });
+  const score = (id) => engagementRankMetrics.reduce((sum, metric) => sum + ranks.get(id)[metric], 0);
+  const overall = [...ids].sort((a, b) => score(a) - score(b) || a.localeCompare(b));
+  let rank = 0;
+  let previous = null;
+  overall.forEach((id, index) => {
+    const value = score(id);
+    if (value !== previous) rank = index + 1;
+    previous = value;
+    ranks.get(id).overall = rank;
+  });
+  return ranks;
+}
+
+export function splitViewPageSize(gridWidth, { tileWidth = 140, rows = 3, fallbackColumns = 5 } = {}) {
+  const columns = gridWidth > 0 ? Math.max(1, Math.floor(gridWidth / tileWidth)) : fallbackColumns;
+  return columns * rows;
+}
+
+export function readCatalogView(storage = globalThis.localStorage) {
+  try {
+    return storage?.getItem("omarchy-catalog-view") === "split" ? "split" : "cards";
+  } catch {
+    return "cards";
+  }
+}
+
+export function storeCatalogView(view, storage = globalThis.localStorage) {
+  try {
+    storage?.setItem("omarchy-catalog-view", view === "split" ? "split" : "cards");
+  } catch {
+    /* storage unavailable */
+  }
+}
+
 export function paginationState(totalItems, requestedPage = 1, pageSize = 9) {
   const total = Math.max(0, Math.trunc(Number(totalItems)) || 0);
   const size = Math.max(1, Math.trunc(Number(pageSize)) || 1);
@@ -567,23 +627,195 @@ export function escapeHtml(value = "") {
 export function setupThemeToggle() {
   const toggle = document.querySelector(".theme-toggle");
   if (!toggle) return;
+  const header = toggle.closest(".market-header") || document.body;
+  const label = toggle.querySelector(".theme-toggle-label");
+  const compact = () => window.matchMedia("(max-width: 760px)").matches;
 
-  const syncThemeState = () => {
-    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
-    const next = current === "dark" ? "light" : "dark";
-    toggle.setAttribute("aria-label", `${current} theme active; switch to ${next} theme`);
-    toggle.setAttribute("aria-pressed", String(current === "light"));
-    const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.content = current === "light" ? "#f8f8f6" : "#000000";
+  const picker = document.createElement("div");
+  picker.className = "theme-picker";
+  picker.hidden = true;
+  picker.setAttribute("aria-label", "Choose an Omarchy theme");
+  picker.innerHTML = `
+    <div class="theme-picker-strip">${siteThemes.map((theme) => `
+      <button class="theme-picker-item" type="button" tabindex="-1" aria-pressed="false" data-theme-value="${escapeHtml(theme.id)}" aria-label="${escapeHtml(theme.name)}">
+        <span class="theme-picker-pane" style="--pane-bg:${escapeHtml(theme.bg)};--pane-accent:${escapeHtml(theme.accent)}">${
+          themePreviewPath(theme)
+            ? `<img data-src="${escapeHtml(themePreviewPath(theme))}" alt="" width="800" height="450" loading="lazy" decoding="async" draggable="false">`
+            : `<span class="theme-picker-swatch" aria-hidden="true"><b></b><i></i><i></i><i></i></span>`
+        }<span class="theme-picker-name" aria-hidden="true">${escapeHtml(theme.name)}</span><i class="theme-picker-shade" aria-hidden="true"></i></span>
+      </button>`).join("")}
+    </div>
+    <p class="theme-picker-label" role="status" aria-live="polite" aria-atomic="true"><b></b><span class="theme-picker-help">←→ browse · enter apply · esc cancel</span></p>`;
+  header.after(picker);
+  const strip = picker.querySelector(".theme-picker-strip");
+  const options = [...picker.querySelectorAll("[data-theme-value]")];
+  const status = picker.querySelector(".theme-picker-label b");
+  let selected = 0;
+  let committed = readStoredTheme();
+  let wheelAcc = 0;
+  let previewsLoaded = false;
+  let restoreFocusElement = null;
+
+  const reflect = () => {
+    const current = themeById(document.documentElement.dataset.theme);
+    if (label) label.textContent = current.name;
+    toggle.setAttribute("aria-label", `Choose color theme; current ${current.name}`);
+    options.forEach((option) => {
+      option.setAttribute("aria-pressed", String(option.dataset.themeValue === current.id));
+    });
+  };
+  const loadPreviews = () => {
+    if (previewsLoaded) return;
+    previewsLoaded = true;
+    picker.querySelectorAll("img[data-src]").forEach((img) => { img.src = img.dataset.src; });
+  };
+  const layout = () => {
+    picker.style.top = `${Math.round(header.getBoundingClientRect().bottom)}px`;
+    if (compact()) {
+      strip.style.removeProperty("height");
+      options.forEach((option) => {
+        option.hidden = false;
+        ["left", "top", "width", "height", "z-index"].forEach((property) => option.style.removeProperty(property));
+      });
+      return;
+    }
+    const result = pickerLayout(options.length, selected, strip.clientWidth || window.innerWidth);
+    strip.style.height = `${result.height}px`;
+    result.items.forEach((item, index) => {
+      const option = options[index];
+      option.style.left = `${item.left}px`;
+      option.style.top = `${item.top}px`;
+      option.style.width = `${item.width}px`;
+      option.style.height = `${item.height}px`;
+      option.style.zIndex = String(item.zIndex);
+      option.hidden = item.hidden;
+    });
+  };
+  const preview = () => {
+    const option = options[selected];
+    applyTheme(option.dataset.themeValue, { persist: false });
+    status.textContent = `Previewing ${themeById(option.dataset.themeValue).name}`;
+    options.forEach((other, index) => {
+      other.classList.toggle("is-selected", index === selected);
+      other.tabIndex = index === selected ? 0 : -1;
+    });
+  };
+  const focusOption = () => {
+    const option = options[selected];
+    option?.focus({ preventScroll: !compact() });
+    if (compact()) option?.scrollIntoView({ block: "nearest" });
+  };
+  const close = () => {
+    picker.hidden = true;
+    picker.classList.remove("is-ready");
+    toggle.setAttribute("aria-expanded", "false");
+    document.removeEventListener("keydown", onKeydown);
+    document.removeEventListener("click", onDocumentClick);
+  };
+  const restoreFocus = () => {
+    const target = restoreFocusElement?.isConnected ? restoreFocusElement : toggle;
+    target.focus({ preventScroll: true });
+    restoreFocusElement = null;
+  };
+  const apply = ({ restore = false } = {}) => {
+    committed = applyTheme(options[selected].dataset.themeValue).id;
+    reflect();
+    close();
+    if (restore) restoreFocus();
+  };
+  const cancel = ({ restore = false } = {}) => {
+    applyTheme(committed);
+    reflect();
+    close();
+    if (restore) restoreFocus();
+  };
+  const move = (direction) => {
+    selected = (selected + direction + options.length) % options.length;
+    preview();
+    layout();
+    focusOption();
+  };
+  const open = () => {
+    const active = document.activeElement;
+    restoreFocusElement = active instanceof HTMLElement && active !== document.body ? active : toggle;
+    loadPreviews();
+    committed = themeById(document.documentElement.dataset.theme).id;
+    selected = Math.max(0, options.findIndex((option) => option.dataset.themeValue === committed));
+    picker.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+    document.addEventListener("keydown", onKeydown);
+    document.addEventListener("click", onDocumentClick);
+    preview();
+    layout();
+    focusOption();
+    window.requestAnimationFrame(() => picker.classList.add("is-ready"));
+  };
+  const onKeydown = (event) => {
+    if (!["Escape", "Enter", "ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      cancel({ restore: true });
+      return;
+    }
+    if (!picker.contains(event.target)) return;
+    event.preventDefault();
+    if (event.key === "Enter") apply({ restore: true });
+    else move(event.key === "ArrowLeft" ? -1 : 1);
+  };
+  const onDocumentClick = (event) => {
+    if (picker.contains(event.target) || toggle.contains(event.target)) return;
+    cancel();
   };
 
-  syncThemeState();
-  toggle.addEventListener("click", () => {
-    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("omarchy-theme", next);
-    syncThemeState();
+  options.forEach((option, index) => {
+    option.addEventListener("click", () => {
+      if (compact() || index === selected) {
+        selected = index;
+        preview();
+        apply({ restore: true });
+        return;
+      }
+      selected = index;
+      preview();
+      layout();
+    });
   });
+  picker.addEventListener("wheel", (event) => {
+    if (compact()) return;
+    event.preventDefault();
+    wheelAcc += event.deltaY + event.deltaX;
+    if (Math.abs(wheelAcc) >= 60) {
+      move(wheelAcc > 0 ? 1 : -1);
+      wheelAcc = 0;
+    }
+  }, { passive: false });
+  picker.addEventListener("focusout", () => {
+    window.requestAnimationFrame(() => {
+      if (picker.hidden) return;
+      const focused = document.activeElement;
+      if (!picker.contains(focused) && focused !== toggle) cancel();
+    });
+  });
+  window.addEventListener("resize", () => {
+    if (!picker.hidden) layout();
+  });
+  document.addEventListener("keydown", (event) => {
+    const target = event.target;
+    const typing = /^(input|textarea|select)$/i.test(target?.tagName || "") || target?.isContentEditable;
+    if (event.key.toLowerCase() !== "t" || event.metaKey || event.ctrlKey || event.altKey || typing) return;
+    event.preventDefault();
+    if (picker.hidden) open();
+    else cancel({ restore: true });
+  });
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-haspopup", "true");
+  toggle.addEventListener("click", () => {
+    if (picker.hidden) open();
+    else cancel();
+  });
+
+  applyTheme(readStoredTheme(), { persist: false });
+  reflect();
 }
 
 let toastTimer;

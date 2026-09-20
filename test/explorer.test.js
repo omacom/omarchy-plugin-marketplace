@@ -552,7 +552,7 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
   assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
-  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260920-01"/);
+  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260920-02"/);
   assert.match(script, /id: "taxonomy:vpn",\s*label: "VPN",[\s\S]*anchor: "security",\s*matches: matchesVpnTaxonomy,/);
   assert.match(script, /id: "taxonomy:bar",\s*label: "Bar",[\s\S]*anchor: "appearance",\s*matches: matchesBarTaxonomy,/);
   assert.match(script, /const taxonomyFilter = taxonomyCommunityFilters\.find\(\(filter\) => filter\.id === activeCluster\);\s*return taxonomyFilter \? taxonomyFilter\.matches\(node\) : node\.cluster === activeCluster/);
