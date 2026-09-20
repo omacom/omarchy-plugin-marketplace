@@ -194850,6 +194850,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TobeyTG/dashlane-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T09:57:40.389Z",
+      "listingValidatedCommit": "48d6002642b612b29858996964ff518dbf908dde",
+      "listingValidatedAt": "2026-09-20T09:57:40.389Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tobeytg/dashlane-omarchy",
+        "pluginIds": [
+          "tobeytg.dashlane"
+        ],
+        "commit": "48d6002642b612b29858996964ff518dbf908dde",
+        "checkedAt": "2026-09-20T09:57:40.290Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tobeytg/dashlane-omarchy",
+        "pluginIds": [
+          "tobeytg.dashlane"
+        ],
+        "commit": "48d6002642b612b29858996964ff518dbf908dde",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T09:57:40.290Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T00:30:05.306Z",
+        "requestEventId": 31477527106,
+        "requestedAt": "2026-09-20T09:52:44Z",
+        "reviewedAt": "2026-09-20T09:57:40.290Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tobeytg.dashlane": {
+          "category": "Productivity",
+          "tags": [
+            "security",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
