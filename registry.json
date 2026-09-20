@@ -121157,33 +121157,8 @@
             "quickshell",
             "workspaces"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "cmyk/omarchy-workspace-switcher",
-        "pluginIds": [
-          "reomarchy.workspace-switcher"
-        ],
-        "commit": "0e3a32d191aa8fae201aaa1ab49f29028f213a7a",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T07:22:39.933Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T17:29:49.780Z",
-        "requestEventId": 30954148784,
-        "requestedAt": "2026-09-11T06:48:02Z",
-        "reviewedAt": "2026-09-11T07:22:39.933Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -121229,7 +121204,28 @@
             "reviewer": "HANCORE-linux"
           }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cmyk/omarchy-workspace-switcher",
+        "pluginIds": [
+          "reomarchy.workspace-switcher"
+        ],
+        "commit": "0e3a32d191aa8fae201aaa1ab49f29028f213a7a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-11T07:22:39.933Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-08T17:29:49.780Z",
+        "requestEventId": 30954148784,
+        "requestedAt": "2026-09-11T06:48:02Z",
+        "reviewedAt": "2026-09-11T07:22:39.933Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/guilhermetk/omarchy-qrcode",
