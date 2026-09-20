@@ -197029,6 +197029,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vichong/omarchy-eliza",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:36:09.541Z",
+      "listingValidatedCommit": "13998980635d13963e23211d422d2ce22dcf7cb7",
+      "listingValidatedAt": "2026-09-20T20:36:09.541Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vichong/omarchy-eliza",
+        "pluginIds": [
+          "io.github.vichong.eliza"
+        ],
+        "commit": "13998980635d13963e23211d422d2ce22dcf7cb7",
+        "checkedAt": "2026-09-20T20:36:09.454Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.vichong.eliza": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
