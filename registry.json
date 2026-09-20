@@ -194583,6 +194583,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/juangalt/fast-plugin-tui-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:45:10.788Z",
+      "listingValidatedCommit": "63fed367498b30f2ca99ec13e37f428150b362c1",
+      "listingValidatedAt": "2026-09-20T00:45:10.788Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "juangalt/fast-plugin-tui-omarchy",
+        "pluginIds": [
+          "juangalt.fast-plugin-tui-omarchy"
+        ],
+        "commit": "63fed367498b30f2ca99ec13e37f428150b362c1",
+        "checkedAt": "2026-09-20T00:45:10.694Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "juangalt/fast-plugin-tui-omarchy",
+        "pluginIds": [
+          "juangalt.fast-plugin-tui-omarchy"
+        ],
+        "commit": "63fed367498b30f2ca99ec13e37f428150b362c1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T00:45:10.694Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T23:49:04.340Z",
+        "requestEventId": 31465058774,
+        "requestedAt": "2026-09-20T00:19:59Z",
+        "reviewedAt": "2026-09-20T00:45:10.694Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "juangalt.fast-plugin-tui-omarchy": {
+          "category": "System",
+          "tags": [
+            "system",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
