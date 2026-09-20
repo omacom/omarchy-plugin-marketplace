@@ -1401,16 +1401,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260920-03");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-03");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-03");
+  assert.equal(keys[0], "20260920-04");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-04");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-04");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260920-03");
-  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-03"/);
+  assert.equal(styleKeys[0], "20260920-04");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-04"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
@@ -2138,7 +2138,23 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(html, /class="catalog-heading-side">\s*<div id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"[\s\S]*id="plugin-count"/);
   assert.match(html, /<div class="catalog-controls">\s*<div class="market-search">/);
   assert.doesNotMatch(html.slice(html.indexOf('class="catalog-controls"'), html.indexOf('class="source-bar"')), /catalog-view-mode/);
-  assert.match(html, /id="split-filters"[\s\S]*id="split-grid"[\s\S]*class="split-pager">\s*<button id="split-page-previous"[\s\S]*id="split-page-summary"[\s\S]*id="split-page-next"/);
+  assert.match(html, /id="split-filters"[\s\S]*id="split-grid"[\s\S]*class="split-pager">\s*<span class="split-pager-start">\s*<button id="split-page-previous"[\s\S]*id="split-page-summary"><label class="split-page-jump">Page <input id="split-page-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Go to page"><\/label> <span id="split-page-total"><\/span><\/b>[\s\S]*id="split-page-next"/);
+  assert.match(app, /splitPageInput\.value = String\(pageState\.page\);\s*splitPageInput\.max = String\(pageState\.totalPages\);\s*splitPageTotal\.textContent = `of \$\{pageState\.totalPages\} · \$\{pageSize\(\)\} per page`;/);
+  assert.match(app, /const jumpToPage = \(\) => \{[\s\S]*Math\.min\(totalPages, Math\.max\(1, requested\)\)[\s\S]*splitFocusPending = true;\s*render\(\{ historyMode: "push", announce: true \}\);/);
+  assert.match(app, /splitPageInput\.addEventListener\("change", jumpToPage\)/);
+  assert.match(app, /const rankLine = state\.engagementEnabled && !plugin\.builtIn\s*\? `<span class="card-rank" data-card-rank="\$\{escapeHtml\(plugin\.id\)\}"/);
+  assert.match(app, /function cardRankLabel\(plugin\) \{[\s\S]*return rank\?\.overall \? `#\$\{rank\.overall\}` : "";/);
+  assert.match(app, /function refreshCardRanks\(root = document\) \{[\s\S]*element\.hidden = !label;/);
+  assert.match(app, /const social = stars \|\| heart \|\| rankLine \? `<div class="card-social">\$\{stars\}\$\{heart\}\$\{rankLine\}<\/div>` : "";/);
+  assert.match(styles, /\.card-rank \{\s*flex-basis: 100%; color: var\(--faint\);/);
+  assert.doesNotMatch(styles, /\.market-plugin-grid \.card-rank/);
+  assert.match(app, /if \(event\.key === " "\) \{\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option"/);
+  assert.doesNotMatch(app, /has-control-tooltip\$\{selected|split-tile[^\n]*title="|setupControlTooltips\(splitGrid\)/);
+  assert.match(html, /<span class="split-pager-start">\s*<button id="split-page-previous" type="button">← Previous<\/button>\s*<span class="split-hint" aria-hidden="true">Ctrl\+Enter or<br>Ctrl\+click: new tab<\/span>\s*<\/span>/);
+  assert.match(styles, /\.split-hint \{ position: absolute; top: 50%; left: 100%; margin-left: 14px;[^}]*opacity: 0;/);
+  assert.match(styles, /\.split-panel:has\(\.split-tile:hover\) \.split-hint, \.split-panel:has\(\.split-tile:focus-visible\) \.split-hint \{ opacity: 1; \}/);
+  assert.match(styles, /@media \(max-width: 760px\) \{ \.split-hint \{ display: none; \} \}/);
   assert.match(app, /if \(splitView\(\)\) splitFilters\.append\(categoriesRoot\);\s*else categoryBar\.insertBefore\(categoriesRoot, clearFilters\)/);
   assert.match(app, /pagination\.hidden = controls\.paginationHidden \|\| splitView\(\)/);
   assert.match(app, /splitPagePrevious\.addEventListener\("click", \(\) => previousPage\.click\(\)\)/);
@@ -2180,7 +2196,6 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
   assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
   assert.match(app, /other\.tabIndex = active \? 0 : -1;/);
-  assert.match(app, /tile\.addEventListener\("click", \(\) => selectTile\(tile, \{ focus: true \}\)\)/);
   assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
   assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
   assert.match(app, /if \(target > tiles\.length - 1 && !nextPage\.disabled && event\.key !== "End"\) \{\s*splitFocusIndex = event\.key === "ArrowDown" \? index % columns : 0;\s*nextPage\.click\(\)/);
@@ -2188,7 +2203,11 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /const index = splitFocusIndex < 0 \? tiles\.length \+ splitFocusIndex : splitFocusIndex;/);
   assert.match(app, /if \(!splitView\(\) \|\| splitRoot\.hidden \|\| event\.altKey[\s\S]*\["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"\]\.includes\(event\.key\)[\s\S]*CSS\.escape\(state\.selected\)[\s\S]*tile\.focus\(\{ preventScroll: true \}\)/);
   assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
-  assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
+  assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page, Control Enter opens the plugin page in a background tab"/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option" aria-selected="\$\{selected\}" data-split-plugin="\$\{escapeHtml\(plugin\.id\)\}" href="plugin\.html\?id=\$\{encodeURIComponent\(plugin\.id\)\}" target="_blank" rel="noopener"/);
+  assert.match(app, /if \(event\.key === "Enter"\) \{[\s\S]*if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey\) return;\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);\s*return;/);
+  assert.match(app, /if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey \|\| event\.button !== 0\) \{\s*selectTile\(tile\);\s*return;\s*\}\s*event\.preventDefault\(\);\s*selectTile\(tile, \{ focus: true \}\);/);
+  assert.doesNotMatch(app, /window\.open\(|openPluginDetail/);
   assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
   assert.match(html, /<button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank<\/button>/);
   assert.match(app, /splitTopRank\.hidden = !state\.engagementEnabled;\s*splitTopRank\.setAttribute\("aria-pressed", String\(state\.sort === "rank"\)\)/);

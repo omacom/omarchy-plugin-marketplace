@@ -5,7 +5,7 @@ import {
   siteThemes,
   themeById,
   themePreviewPath,
-} from "./themes.js?v=20260920-03";
+} from "./themes.js?v=20260920-04";
 
 const accentColors = {
   lime: "#b7ef51",
