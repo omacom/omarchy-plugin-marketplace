@@ -1852,7 +1852,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 [data-theme="light"] .catalog-view-mode button[aria-pressed="true"] { background: #ddd; color: #111; }
 :root:not([data-theme="dark"]):not([data-theme="light"]) .catalog-view-mode button[aria-pressed="true"] { background: var(--line-strong); color: var(--text); }
 .catalog-split-view .category-bar { display: none; }
-.catalog-split { display: grid; grid-template-columns: minmax(0, 1fr) 352px; gap: 24px; align-items: stretch; margin-top: 24px; }
+.catalog-split { display: grid; grid-template-columns: minmax(0, 1fr) 352px; gap: 0; align-items: stretch; margin-top: 24px; }
 .split-panel { display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--panel); min-width: 0; }
 .split-panel-label {
   display: flex; justify-content: space-between; gap: 12px; padding: 7px 10px; border-bottom: 1px solid var(--line);
@@ -1881,9 +1881,9 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-pager button { border: 0; background: transparent; color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 4px 0; }
 .split-pager button:hover:not(:disabled) { color: var(--accent); }
 .split-pager button:disabled { opacity: .42; cursor: not-allowed; }
-.split-aside { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.split-aside { display: flex; flex-direction: column; gap: 0; min-width: 0; margin-left: -1px; }
 .split-card { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
-.split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); background: var(--panel); }
+.split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); border-top: 0; background: var(--panel); }
 .split-stats-body { padding: 8px 14px 4px; }
 .split-stat { display: grid; grid-template-columns: 110px 1fr 54px; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
 .split-stat:last-child { border-bottom: 0; }
@@ -1904,6 +1904,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-stats-foot { margin-top: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 1100px) {
   .catalog-split { grid-template-columns: minmax(0, 1fr); }
-  .split-aside { order: -1; }
+  .split-aside { order: -1; margin-left: 0; }
+  .split-stats { border-top: 1px solid var(--line); }
   .split-card { grid-template-columns: minmax(0, 1fr); }
 }
