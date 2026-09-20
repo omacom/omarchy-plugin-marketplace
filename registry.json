@@ -195224,6 +195224,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Davedes83/animated-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:21:51.678Z",
+      "listingValidatedCommit": "8963939fa0ae30708beedee9fafd5239c8300f47",
+      "listingValidatedAt": "2026-09-20T10:21:51.678Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davedes83/animated-dock",
+        "pluginIds": [
+          "animated.dock"
+        ],
+        "commit": "8963939fa0ae30708beedee9fafd5239c8300f47",
+        "checkedAt": "2026-09-20T10:21:51.586Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davedes83/animated-dock",
+        "pluginIds": [
+          "animated.dock"
+        ],
+        "commit": "8963939fa0ae30708beedee9fafd5239c8300f47",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:21:51.586Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T00:47:17.339Z",
+        "requestEventId": 31477907400,
+        "requestedAt": "2026-09-20T10:11:55Z",
+        "reviewedAt": "2026-09-20T10:21:51.586Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "animated.dock": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
