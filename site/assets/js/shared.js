@@ -5,7 +5,7 @@ import {
   siteThemes,
   themeById,
   themePreviewPath,
-} from "./themes.js?v=20260920-04";
+} from "./themes.js?v=20260920-05";
 
 const accentColors = {
   lime: "#b7ef51",
@@ -412,14 +412,15 @@ export function listingCheckState(plugin) {
   };
 }
 
-export const engagementRankMetrics = Object.freeze(["hearts", "copies", "views"]);
+export const engagementRankMetrics = Object.freeze(["hearts", "copies", "views", "stars"]);
 
 export function engagementRanks(plugins, stats = {}) {
-  const count = (id, metric) => Number(stats[id]?.[metric]) || 0;
+  const starsById = new Map(plugins.map((plugin) => [plugin.id, Number(plugin.stars) || 0]));
+  const count = (id, metric) => (metric === "stars" ? starsById.get(id) || 0 : Number(stats[id]?.[metric]) || 0);
   const ids = plugins.map((plugin) => plugin.id);
   const ranked = ids.filter((id) => engagementRankMetrics.some((metric) => count(id, metric) > 0));
   const ranks = new Map(ids.map((id) => [id, {
-    total: ranked.length, hearts: null, copies: null, views: null, overall: null,
+    total: ranked.length, hearts: null, copies: null, views: null, stars: null, overall: null,
   }]));
   engagementRankMetrics.forEach((metric) => {
     const ordered = [...ranked].sort((a, b) => count(b, metric) - count(a, metric) || a.localeCompare(b));

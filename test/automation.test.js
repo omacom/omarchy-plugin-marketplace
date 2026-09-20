@@ -1401,16 +1401,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260920-04");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-04");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-04");
+  assert.equal(keys[0], "20260920-05");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-05");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-05");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260920-04");
-  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-04"/);
+  assert.equal(styleKeys[0], "20260920-05");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
@@ -2106,20 +2106,22 @@ test("theme picker layout expands the selected slice and stacks the rest", () =>
 });
 
 test("engagement ranks combine hearts, copies, and views into one standing", () => {
-  const plugins = [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "d" }];
+  const plugins = [{ id: "a", stars: 40 }, { id: "b", stars: 5 }, { id: "c", stars: 40 }, { id: "d" }, { id: "e", stars: 2 }];
   const stats = {
     a: { hearts: 10, copies: 5, views: 100 },
     b: { hearts: 10, copies: 50, views: 10 },
     c: { hearts: 1, copies: 1, views: 1000 },
   };
   const ranks = engagementRanks(plugins, stats);
-  assert.deepEqual(ranks.get("a"), { total: 3, hearts: 1, copies: 2, views: 2, overall: 1 });
-  assert.deepEqual(ranks.get("b"), { total: 3, hearts: 1, copies: 1, views: 3, overall: 1 });
-  assert.deepEqual(ranks.get("c"), { total: 3, hearts: 3, copies: 3, views: 1, overall: 3 });
-  assert.deepEqual(ranks.get("d"), { total: 3, hearts: null, copies: null, views: null, overall: null });
+  assert.deepEqual(ranks.get("a"), { total: 4, hearts: 1, copies: 2, views: 2, stars: 1, overall: 1 });
+  assert.deepEqual(ranks.get("b"), { total: 4, hearts: 1, copies: 1, views: 3, stars: 3, overall: 2 });
+  assert.deepEqual(ranks.get("c"), { total: 4, hearts: 3, copies: 3, views: 1, stars: 1, overall: 2 });
+  assert.deepEqual(ranks.get("d"), { total: 4, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(ranks.get("e"), { total: 4, hearts: 4, copies: 4, views: 4, stars: 4, overall: 4 });
   assert.equal(engagementRanks([], {}).size, 0);
-  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 0, hearts: null, copies: null, views: null, overall: null });
-  assert.deepEqual(engagementRanks([{ id: "x" }, { id: "y" }], { y: { views: 1 } }).get("y"), { total: 1, hearts: 1, copies: 1, views: 1, overall: 1 });
+  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 0, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(engagementRanks([{ id: "x" }, { id: "y" }], { y: { views: 1 } }).get("y"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
+  assert.deepEqual(engagementRanks([{ id: "x", stars: "12" }], {}).get("x"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
   assert.equal(splitViewPageSize(734), 15);
   assert.equal(splitViewPageSize(500), 9);
   assert.equal(splitViewPageSize(100), 3);
@@ -2192,7 +2194,8 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /<div class="split-stat-rank">Unranked<small>\$\{total \? `of \$\{total\}` : "no activity yet"\}<\/small><\/div>/);
   assert.match(app, /hidePendingEngagement\(document\);\s*if \(splitView\(\)\) render\(\{ historyMode: "none" \}\);/);
   assert.match(app, /selectTile\(tiles\[Math\.max\(0, Math\.min\(tiles\.length - 1, index\)\)\], \{ focus: true, force: true \}\)/);
-  assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"/);
+  assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"[\s\S]*\["stars", "repository stars", '<svg class="social-glyph star-glyph"/);
+  assert.match(app, /metric === "stars" \? plugin\.stars \|\| 0 : stats\[metric\]/);
   assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
   assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
   assert.match(app, /other\.tabIndex = active \? 0 : -1;/);

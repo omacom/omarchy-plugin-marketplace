@@ -30,14 +30,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260920-04";
+} from "./shared.js?v=20260920-05";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260920-04";
+} from "./engagement.js?v=20260920-05";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -65,13 +65,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260920-04";
+} from "./search.js?v=20260920-05";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260920-04";
+} from "./taxonomy.js?v=20260920-05";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -836,7 +836,7 @@ function pluginCard(plugin, { showNew = false } = {}) {
     : "";
   const rank = cardRankLabel(plugin);
   const rankLine = state.engagementEnabled && !plugin.builtIn
-    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, and views"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
+    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, views, and repository stars"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
     : "";
   const social = stars || heart || rankLine ? `<div class="card-social">${stars}${heart}${rankLine}</div>` : "";
   const publisher = publisherLogin(plugin);
@@ -1173,7 +1173,8 @@ function renderSplitStats(plugin) {
       ["hearts", "hearts", '<span class="social-glyph heart-glyph" aria-hidden="true">\uf004</span>'],
       ["copies", "install copies", '<span class="copy-icon engagement-copy-icon" aria-hidden="true"></span>'],
       ["views", "views", '<span class="engagement-glyph" aria-hidden="true">\uf441</span>'],
-      ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, stats[metric])).join("");
+      ["stars", "repository stars", '<svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg>'],
+      ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, metric === "stars" ? plugin.stars || 0 : stats[metric])).join("");
 }
 
 function setCatalogView(view) {

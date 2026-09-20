@@ -3,7 +3,7 @@ import {
   parseSearchDraft,
   pluginSearchContext,
   repositoryPublisher,
-} from "./search.js?v=20260920-04";
+} from "./search.js?v=20260920-05";
 
 export { repositoryPublisher };
 
