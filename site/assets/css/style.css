@@ -1883,7 +1883,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-pager button:disabled { opacity: .42; cursor: not-allowed; }
 .split-aside { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .split-card { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
-.split-stats { border: 1px solid var(--line); background: var(--panel); }
+.split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); background: var(--panel); }
 .split-stats-body { padding: 8px 14px 4px; }
 .split-stat { display: grid; grid-template-columns: 110px 1fr 54px; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
 .split-stat:last-child { border-bottom: 0; }
@@ -1901,6 +1901,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-stat-rank { color: var(--text); font-family: var(--mono); font-size: 11px; text-align: right; }
 .split-stat-rank small { display: block; color: var(--faint); font-size: 9px; }
 .split-stats-foot, .split-stats-empty { margin: 0; padding: 8px 14px 12px; color: var(--faint); font-family: var(--mono); font-size: 10px; line-height: 1.5; }
+.split-stats-foot { margin-top: auto; }
 @media (max-width: 1100px) {
   .catalog-split { grid-template-columns: minmax(0, 1fr); }
   .split-aside { order: -1; }
