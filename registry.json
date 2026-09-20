@@ -196846,6 +196846,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mic-kul/omarchy-sweater-kit",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:21:26.393Z",
+      "listingValidatedCommit": "dbb4c1f84118fdbe3817e0711c24d64cb0cfaef6",
+      "listingValidatedAt": "2026-09-20T20:21:26.393Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mic-kul/omarchy-sweater-kit",
+        "pluginIds": [
+          "mickul.sweater-kit"
+        ],
+        "commit": "dbb4c1f84118fdbe3817e0711c24d64cb0cfaef6",
+        "checkedAt": "2026-09-20T20:21:26.298Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mic-kul/omarchy-sweater-kit",
+        "pluginIds": [
+          "mickul.sweater-kit"
+        ],
+        "commit": "dbb4c1f84118fdbe3817e0711c24d64cb0cfaef6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T20:21:26.298Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T09:44:57.591Z",
+        "requestEventId": 31491791704,
+        "requestedAt": "2026-09-20T20:18:54Z",
+        "reviewedAt": "2026-09-20T20:21:26.299Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mickul.sweater-kit": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
