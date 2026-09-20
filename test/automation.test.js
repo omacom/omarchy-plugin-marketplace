@@ -70,6 +70,9 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesShortSearch,
+  matchesSearchSelection,
+  pluginSearchContext,
+  compactSearchKey,
   maximumSearchTermLength,
   parseSearchDraft,
   pluginKindKey,
@@ -96,6 +99,8 @@ import {
 import {
   catalogCategoryTotals,
   matchesKidsTaxonomy,
+  matchesBarTaxonomy,
+  matchesVpnTaxonomy,
 } from "../site/assets/js/taxonomy.js";
 
 function contrastRatio(first, second) {
@@ -422,6 +427,58 @@ test("inline completion accepts genuine plugin, tag, and author prefixes", () =>
   ), "");
 });
 
+test("committed text terms match hyphenated and joined spellings", () => {
+  const codexBar = {
+    primaryText: "CodexBar codexbar ai",
+    searchText: "CodexBar Every AI coding limit in one Omarchy panel ai",
+  };
+  const nightLight = {
+    primaryText: "Night Light nightlight system",
+    searchText: "Night Light Owns the hyprsunset night light temperature system",
+  };
+  assert.equal(matchesDirectSearch("codex-bar", codexBar), true);
+  assert.equal(matchesDirectSearch("codexbar", codexBar), true);
+  assert.equal(matchesDirectSearch("codex bar", codexBar), true);
+  assert.equal(matchesDirectSearch("nightlight", nightLight), true);
+  assert.equal(matchesDirectSearch("night-light", nightLight), true);
+  assert.equal(matchesDirectSearch("night+light", nightLight), false);
+  assert.equal(matchesDirectSearch("codex-cli", codexBar), false);
+  assert.equal(matchesDirectSearch("C. elegans Pet", {
+    primaryText: "C. elegans Pet pet games",
+    searchText: "C. elegans Pet A wandering worm for the bar games",
+  }), true);
+  assert.equal(matchesDirectSearch("git", {
+    primaryText: "Nova Lock lock system",
+    searchText: "Nova Lock Quickshell session lock dkgamer02ai dkgamer02ai.lock system",
+  }), false);
+  assert.equal(compactSearchKey("Codex-Bar  v2"), "codexbarv2");
+});
+
+test("search selection narrows with every committed and drafted term", () => {
+  const securityGame = pluginSearchContext({
+    id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade",
+    description: "A guarded arcade.", category: "Other", kind: "Bar widget", tags: ["security", "games"],
+  });
+  const securityOnly = pluginSearchContext({
+    id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault",
+    description: "Secrets in the bar.", category: "System", kind: "Bar widget", tags: ["security"],
+  });
+  const both = parseSearchDraft("tag:security tag:games");
+  assert.equal(matchesSearchSelection(securityGame, { draftTerms: both }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]], draftTerms: [both[1]] }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]] }), true);
+  assert.equal(matchesSearchSelection(securityOnly, {}), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @example") }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @other") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("git") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("io.github") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("example.vault") }), true);
+  assert.equal(securityOnly.primaryText, "Vault vault security");
+  assert.equal(securityOnly.publisher, "example");
+});
+
 test("typed committed chips use exact field-specific matching", () => {
   const plugin = {
     publisher: "spaceXrace",
@@ -436,7 +493,8 @@ test("typed committed chips use exact field-specific matching", () => {
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "bar"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "widget"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "@spaceXrace"), plugin), true);
-  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), false);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), true);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "xrace"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "Power Profiles"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "dizziee.power-profiles"), plugin), true);
   assert.equal(matchesDirectSearch("dark mode", {
@@ -1177,6 +1235,113 @@ test("Kids catalog filtering uses only the exact controlled taxonomy", () => {
   assert.equal(catalogCategoryTotals([{ category: "Other", tags: [] }]).has("Kids"), false);
 });
 
+test("Bar catalog filtering covers bar replacements and bar modifiers, not bar widgets", () => {
+  for (const plugin of [
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "example.custom", name: "Custom", category: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "  BAR ", tags: [] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["hyprland", "bar"] },
+    { id: "henri.hide-bar-on-fullscreen", name: "Hide Bar on Video Fullscreen", category: "Desktop", kind: "Service", tags: ["bar"] },
+    { id: "fixlixpender.bar-color", name: "Bar Color", category: "Appearance", kind: "Bar widget", tags: ["hyprland"] },
+    { id: "floating-waybar", name: "Floating Waybar", category: "Appearance", kind: "Bar", tags: ["quickshell"] },
+    { id: "kc.omarchy-menubar-manager", name: "Omarchy Menubar Manager", category: "Appearance", kind: "Bar widget", tags: ["bar"] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), true, plugin.name);
+  }
+  for (const plugin of [
+    undefined,
+    null,
+    {},
+    "Bar",
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+    { id: "gennaro.hwmon", name: "HW Monitor", category: "Widgets", kind: "Bar widget", tags: ["bar", "quickshell"], description: "Sparkline panel for the Omarchy bar." },
+    { id: "io.github.austindixson.touchbar", name: "Touch Bar", category: "Hardware", kind: "Service", tags: ["hyprland"] },
+    { id: "gurvindersingh-web.system-stats", name: "System Stats (Waybar Style)", category: "Hardware", kind: "Bar widget", tags: ["bar"] },
+    { id: "sportsbar", name: "Sportsbar", category: "Widgets", kind: "Bar widget", tags: ["bar", "media"] },
+    { id: "io.github.rizmi.services", name: "Services Manager", category: "Widgets", kind: "Service", tags: ["system"] },
+    { id: "example.bar", name: "Bar Tools", category: "Productivity", kind: "Bar widget", tags: ["bar"] },
+    { id: "example.bar", name: "Bar", category: "bars", kind: "bar widget", tags: [] },
+    { id: 7, name: 8, category: 9, kind: 10, tags: 11 },
+    { id: { toString: null }, name: ["Bar"], kind: { value: "Bar" }, tags: [] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), false, JSON.stringify(plugin));
+  }
+
+  const totals = catalogCategoryTotals([
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["bar"] },
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+  ]);
+  assert.equal(totals.get("Bar"), 2);
+  assert.equal(totals.get("Bars"), 1);
+  assert.equal(totals.get("Appearance"), 1);
+  assert.equal(totals.get("Widgets"), 1);
+  assert.equal(catalogCategoryTotals([
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["bar"] },
+  ]).has("Bar"), false);
+});
+
+test("VPN catalog filtering requires exact category, VPN identity, or security-scoped description evidence", () => {
+  for (const plugin of [
+    { id: "example.client", name: "Client", category: "VPN", tags: [] },
+    { id: "example.airvpn", name: "AirVPN", tags: [] },
+    { id: "example.wireguard", name: "Tunnel", tags: [] },
+    { id: "antesmd.amneziawg", name: "Omazia", tags: ["system", "bar"], description: "Manage AmneziaWG tunnels." },
+    { id: "io.github.feilian", name: "飞连", tags: ["bar", "quickshell"], description: "Feilian VPN connection toggle." },
+    { id: "jwhall.omanodes", name: "Omanodes", tags: ["system"], description: "Manage ZeroTier networks." },
+    { id: "example.client", name: "Mullvad", tags: [] },
+    { id: "example.client", name: "Tailscale", tags: [] },
+    { id: "example.client", name: "ZeroTier", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["vpn"] },
+    { id: "local.warp", name: "Cloudflare WARP", tags: ["security"] },
+    { id: "io.github.justspica.omaguard", name: "Omaguard", tags: ["bar", "quickshell", "security"], description: "Mullvad VPN state, connection, and server switching." },
+    { id: "ecylmz.omarchy-tunnel", name: "Omarchy Tunnel", tags: ["bar", "quickshell", "security"], description: "A WireGuard VPN manager with connect controls and tunnel status." },
+    { id: "jaabell.sshuttledeck", name: "SSHuttleDeck", tags: ["bar", "security", "quickshell"], description: "An SSH VPN tunnel launcher." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), true);
+  }
+  for (const plugin of [
+    undefined,
+    {},
+    { id: "example.network", name: "Network Monitor", category: "vpn", tags: [] },
+    { id: "example.client", name: "Client", category: "VPN ", repo: "https://github.com/example/tailscale", tags: [] },
+    { id: "example.companion", name: "Companion", tags: [], description: "Connects over a Tailscale VPN." },
+    { id: "example.warp", name: "Warp terminal", tags: [] },
+    { id: "io.github.wireguard.clock", name: "Clock", tags: [] },
+    { id: "vpnvendor.notes", name: "Notes", tags: [] },
+    { id: "example.notvpn", name: "Client", tags: [] },
+    { id: "example.client", name: "NotVPN", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["VPN"] },
+    { id: "example.client", name: "Client", tags: ["security"], description: "A notavpn helper." },
+    { id: "io.github.shirak-semonian.myip", name: "MyIP", tags: ["bar", "security", "system"], description: "Public IP history with a VPN-leak alert." },
+    { id: { toString: null }, name: ["VPN"], tags: [], description: { value: "VPN connection" } },
+    { id: 7, name: 8, tags: [], description: 9 },
+    { id: "example.tunnel", name: "Tunnel", tags: "security", description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["Security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), false);
+  }
+
+  assert.doesNotThrow(() => catalogCategoryTotals([
+    { id: { toString: null }, name: ["VPN"], category: "Other", tags: [] },
+  ]));
+
+  const totals = catalogCategoryTotals([
+    { id: "example.vpn", category: "System", tags: [] },
+    { id: "example.wireguard", category: "System", tags: ["security"], description: "VPN control." },
+    { id: "example.tunnel", category: "Other", tags: ["security"], description: "WireGuard control." },
+    { id: "example.network", category: "Other", tags: [] },
+  ]);
+  assert.equal([...totals.keys()].filter((category) => category === "VPN").length, 1);
+  assert.equal(totals.get("VPN"), 3);
+  assert.equal(totals.get("System"), 2);
+  assert.equal(totals.get("Other"), 2);
+  assert.equal(catalogCategoryTotals([{ id: "example.network", category: "Other", tags: [] }]).has("VPN"), false);
+});
+
 test("entry modules and their shared dependency use one cache key", async () => {
   const root = new URL("../", import.meta.url);
   const files = {
@@ -1224,9 +1389,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260831-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
+  assert.equal(keys[0], "20260920-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
@@ -1546,9 +1711,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
   assert.match(files.app, /function publisherLogin\(plugin\)/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
-  assert.match(files.app, /function pluginSearchContext\(plugin\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\)/);
-  assert.match(files.app, /matchesDirectSearch\(term\.value, matchContext\)/);
+  assert.match(files.searchJs, /matchesDirectSearch\(term\.value, context\)/);
   assert.match(files.app, /const verificationFilters = new Set\(\["verified", "unverified"\]\)/);
   assert.match(files.app, /function searchScopePlugins\(\) \{[\s\S]*matchesCatalogFilter\(plugin\)[\s\S]*!verificationFilters\.has\(state\.sort\) \|\| matchesVerificationStatus\(plugin, state\.sort\)/);
   assert.match(files.app, /function completionMatches\(value\) \{[\s\S]*const query = foldSearchTerm\([\s\S]*const plugins = searchScopePlugins\(\)/);
@@ -1558,11 +1723,17 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
   assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
+  assert.match(files.app, /const taxonomyCatalogFilters = \[\s*\["VPN", matchesVpnTaxonomy\],\s*\["Bar", matchesBarTaxonomy\],\s*\]/);
   assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
-  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)/);
+  assert.match(files.app, /for \(const \[value, matches\] of taxonomyCatalogFilters\) \{\s*if \(filter === value\) return matches\(plugin\);/);
+  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => !taxonomyCatalogFilterNames\.has\(value\)\)/);
+  assert.match(files.app, /const taxonomyFilters = taxonomyCatalogFilters[\s\S]*total: plugins\.filter\(matches\)\.length[\s\S]*\.\.\.tagFilters,\s*\.\.\.taxonomyFilters,/);
+  assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /export function matchesBarTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /tags\.includes\("vpn"\)/);
   assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
+  assert.match(files.sharedJs, /vpn: "VPN"/);
   assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"kids"/);
-  assert.match(files.app, /value: `tag:\$\{tag\}`/);
   assert.match(files.app, /return labels\.length \? labels : \[category \|\| "System"\]/);
   assert.match(files.sharedJs, /function matchesVerificationStatus\(plugin, status\) \{[\s\S]*!plugin\?\.builtIn[\s\S]*plugin\?\.repositoryLayout !== "suite"[\s\S]*plugin\?\.verificationStatus === status/);
   assert.match(files.searchJs, /function fuzzyScore\(query, candidate\)/);
@@ -1594,9 +1765,13 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /tabindex="-1" aria-selected="false"/);
   assert.match(files.app, /\$\{visible\.length\} of \$\{categoryPlugins\.length\}/);
   assert.match(files.app, /const hasResultFilter = hasSearch \|\| verificationFilters\.has\(state\.sort\);[\s\S]*count\.textContent = hasResultFilter/);
-  assert.match(files.app, /state\.terms\.some\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /typedDraftTerms\.some\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /return matchesTerm \|\| matchesTextDraft \|\| matchesTypedDraft/);
+  assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\) \{\s*return matchesSearchSelection\(pluginSearchContext\(plugin\), \{\s*terms: state\.terms,\s*draftTerms: parseSearchDraft\(state\.query\),/);
+  assert.match(files.app, /function publisherLogin\(plugin\) \{\s*return repositoryPublisher\(plugin\?\.repo\);/);
+  assert.doesNotMatch(files.app, /state\.terms\.some\(|function pluginSearchText\(|function searchablePluginId\(/);
+  assert.match(files.exploreSearchJs, /return \(node\) => matchesSearchSelection\(pluginSearchContext\(node\), \{ draftTerms \}\)/);
+  assert.doesNotMatch(files.exploreSearchJs, /\.some\(|\|\| matchesTypedDraft/);
+  assert.match(files.searchJs, /export function matchesSearchSelection\(context, \{ terms = \[\], draftTerms = \[\] \} = \{\}\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);
@@ -2293,10 +2468,10 @@ test("submission tags use the curated vocabulary across web and CLI formats", ()
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({
-      tags: "Games, Media",
+      tags: "Games, Media, VPN",
       includeSuggestedTag: false,
     })).tags,
-    ["games", "media"],
+    ["games", "media", "vpn"],
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({

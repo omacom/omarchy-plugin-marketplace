@@ -25,14 +25,14 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260920-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260920-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -44,23 +44,29 @@ import {
   handleSearchEscape,
   hasFulltextSearchDraft,
   inlineSearchCompletionSuffix,
-  matchesCommittedSearchTerm,
   matchesDirectSearch,
-  matchesDraftSearchTerm,
+  matchesSearchSelection,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
   parseSearchDraft,
+  pluginSearchContext,
   readSearchState,
   removeSearchTermTypeFromDraft,
+  repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
   searchTermDisplayValue,
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260831-01";
-import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260831-01";
+} from "./search.js?v=20260920-01";
+import {
+  catalogCategoryTotals,
+  matchesBarTaxonomy,
+  matchesKidsTaxonomy,
+  matchesVpnTaxonomy,
+} from "./taxonomy.js?v=20260920-01";
 
 const pluginsPerPage = 9;
 const hiddenCardTags = new Set([
@@ -110,6 +116,11 @@ function cardTaxonomyLabels(plugin) {
 const engagementSorts = new Set(["views", "copies", "hearts"]);
 const verificationFilters = new Set(["verified", "unverified"]);
 const taxonomyFilterTags = ["ai", "games", "security"];
+const taxonomyCatalogFilters = [
+  ["VPN", matchesVpnTaxonomy],
+  ["Bar", matchesBarTaxonomy],
+];
+const taxonomyCatalogFilterNames = new Set(taxonomyCatalogFilters.map(([value]) => value));
 const sortOptions = {
   community: [
     ["added", "Recently added"],
@@ -185,64 +196,14 @@ function sourcePlugins() {
 }
 
 function publisherLogin(plugin) {
-  try {
-    const url = new URL(plugin.repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
-  } catch {
-    return "";
-  }
-}
-
-function pluginSearchText(plugin) {
-  const publisher = publisherLogin(plugin);
-  return foldSearchTerm([
-    plugin.name,
-    plugin.description,
-    plugin.author,
-    publisher,
-    `@${publisher}`,
-    plugin.id,
-    plugin.category,
-    plugin.kind,
-    ...(plugin.tags || [])
-  ].join(" "));
-}
-
-function pluginSearchContext(plugin) {
-  return {
-    publisher: publisherLogin(plugin),
-    primaryText: [plugin.name, plugin.id, ...(plugin.tags || [])].join(" "),
-    searchText: pluginSearchText(plugin),
-  };
+  return repositoryPublisher(plugin?.repo);
 }
 
 function pluginMatchesActiveSearch(plugin) {
-  const { publisher, primaryText, searchText } = pluginSearchContext(plugin);
-  const hasTerms = state.terms.length > 0;
-  const draftTerms = parseSearchDraft(state.query);
-  if (!hasTerms && !draftTerms.length) return true;
-  const matchContext = {
-    publisher,
-    primaryText,
-    searchText,
-    tags: plugin.tags || [],
-    pluginName: plugin.name,
-    pluginId: plugin.id,
-    pluginKind: plugin.kind,
-  };
-  const matchesTerm = state.terms.some((term) => term.type === "text"
-    ? matchesDirectSearch(term.value, matchContext)
-    : matchesCommittedSearchTerm(term, matchContext));
-  const textDraftTerms = draftTerms.filter((term) => term.type === "text");
-  const typedDraftTerms = draftTerms.filter((term) => term.type !== "text");
-  const textDraft = textDraftTerms.map((term) => term.value).join(" ");
-  const matchesTextDraft = Boolean(textDraft)
-    && matchesDirectSearch(textDraft, matchContext);
-  const matchesTypedDraft = typedDraftTerms.some((term) =>
-    matchesDraftSearchTerm(term, matchContext)
-  );
-  return matchesTerm || matchesTextDraft || matchesTypedDraft;
+  return matchesSearchSelection(pluginSearchContext(plugin), {
+    terms: state.terms,
+    draftTerms: parseSearchDraft(state.query),
+  });
 }
 
 function completionMatches(value) {
@@ -457,7 +418,7 @@ function updateSearchAffordances() {
   searchClear.hidden = !active;
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
-    ? "Add search term…"
+    ? "Narrow by another term…"
     : "Search plugins, tag:panel, text:bar, or @author…";
 }
 
@@ -553,7 +514,7 @@ function updateSearchSuggestions() {
   activeSuggestion = -1;
   search.removeAttribute("aria-activedescendant");
   const resultCount = filteredPlugins().length;
-  const summaryAction = state.terms.length ? "Add" : "Search for";
+  const summaryAction = state.terms.length ? "Narrow by" : "Search for";
   searchSuggestions.innerHTML = `
     <div class="search-query-summary" role="presentation" aria-hidden="true">
       <span>${summaryAction} “${escapeHtml(rawQuery)}”</span>
@@ -601,6 +562,9 @@ function allCategoryLabel() {
 function matchesCatalogFilter(plugin, filter = state.category) {
   if (filter === "all") return true;
   if (filter === "Kids") return matchesKidsTaxonomy(plugin);
+  for (const [value, matches] of taxonomyCatalogFilters) {
+    if (filter === value) return matches(plugin);
+  }
   if (filter.startsWith("tag:")) return (plugin.tags || []).includes(filter.slice(4));
   return plugin.category === filter;
 }
@@ -1096,6 +1060,7 @@ function renderCategories() {
   const plugins = sourcePlugins();
   const categoryTotals = catalogCategoryTotals(plugins);
   const categoryFilters = [...categoryTotals.entries()]
+    .filter(([value]) => !taxonomyCatalogFilterNames.has(value))
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([value, total]) => ({ value, label: value, total }));
   const tagFilters = taxonomyFilterTags
@@ -1105,10 +1070,18 @@ function renderCategories() {
       total: plugins.filter((plugin) => (plugin.tags || []).includes(tag)).length,
     }))
     .filter(({ total }) => total > 0);
+  const taxonomyFilters = taxonomyCatalogFilters
+    .map(([value, matches]) => ({
+      value,
+      label: value,
+      total: plugins.filter(matches).length,
+    }))
+    .filter(({ total }) => total > 0);
   const filters = [
     { value: "all", label: allCategoryLabel(), total: plugins.length },
     ...categoryFilters,
     ...tagFilters,
+    ...taxonomyFilters,
   ];
 
   categoriesRoot.innerHTML = filters.map(({ value, label, total }) => `

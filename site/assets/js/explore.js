@@ -1,6 +1,7 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260831-01";
-import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260831-01";
+import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260920-01";
+import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260920-01";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
+import { matchesBarTaxonomy, matchesVpnTaxonomy } from "./taxonomy.js?v=20260920-01";
 
 const number = new Intl.NumberFormat("en-US");
 const shortDate = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "UTC" });
@@ -13,6 +14,22 @@ const localDateTime = new Intl.DateTimeFormat("en-GB", {
 });
 const localTime = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" });
 const svgNamespace = "http://www.w3.org/2000/svg";
+const taxonomyCommunityFilters = Object.freeze([
+  Object.freeze({
+    id: "taxonomy:vpn",
+    label: "VPN",
+    color: "#68d6e8",
+    anchor: "security",
+    matches: matchesVpnTaxonomy,
+  }),
+  Object.freeze({
+    id: "taxonomy:bar",
+    label: "Bar",
+    color: "#e8b568",
+    anchor: "appearance",
+    matches: matchesBarTaxonomy,
+  }),
+]);
 
 const graphTab = document.querySelector("#graph-tab");
 const growthTab = document.querySelector("#growth-tab");
@@ -100,10 +117,15 @@ function setupDataFreshness() {
   document.querySelector("#explorer-refresh-time").textContent = `${localTimeLabel(nextDailyRefresh())} · 04:17 UTC`;
 }
 
+function matchesActiveCommunity(node) {
+  if (!activeCluster) return true;
+  const taxonomyFilter = taxonomyCommunityFilters.find((filter) => filter.id === activeCluster);
+  return taxonomyFilter ? taxonomyFilter.matches(node) : node.cluster === activeCluster;
+}
+
 function visible(node) {
-  const clusterVisible = !activeCluster || node.cluster === activeCluster;
   const densityVisible = !focusMode || focusIndexes.has(node.index) || node === selected || matches.has(node.index);
-  return clusterVisible && densityVisible;
+  return matchesActiveCommunity(node) && densityVisible;
 }
 
 function emphasized(node) {
@@ -397,7 +419,10 @@ function selectNode(node, center = false) {
     const similarity = Math.round(neighbor.similarity * 100);
     button.setAttribute("aria-label", `Select related plugin ${candidate.name}, ${similarity}% similarity`);
     button.append(element("span", "", candidate.name), element("small", "", `${similarity}% →`));
-    button.addEventListener("click", () => selectNode(candidate, true));
+    button.addEventListener("click", () => {
+      if (!matchesActiveCommunity(candidate)) setActiveCluster(null);
+      selectNode(candidate, true);
+    });
     return button;
   }));
   drawGraph();
@@ -435,12 +460,24 @@ function renderAnalysis() {
 
   const leadingClusters = [...explorer.clusters].sort((first, second) => second.count - first.count);
   const largestCluster = leadingClusters[0]?.count || 1;
+  const communityFilters = [...leadingClusters];
+  taxonomyCommunityFilters.forEach(({ id, label, color, anchor, matches }) => {
+    const count = explorer.nodes.filter(matches).length;
+    if (!count) return;
+    const anchorIndex = communityFilters.findIndex((cluster) => cluster.id === anchor);
+    communityFilters.splice(anchorIndex < 0 ? communityFilters.length : anchorIndex + 1, 0, {
+      id, label, color, count, taxonomy: true,
+    });
+  });
   const communities = document.querySelector("#community-list");
-  communities.replaceChildren(...leadingClusters.map((cluster) => {
+  communities.replaceChildren(...communityFilters.map((cluster) => {
     const button = element("button", "community-row");
     button.type = "button";
     button.dataset.cluster = cluster.id;
-    button.setAttribute("aria-label", `${cluster.label}: ${number.format(cluster.count)} plugins, ${Math.round(cluster.count / explorer.nodes.length * 100)} percent`);
+    button.dataset.filterKind = cluster.taxonomy ? "taxonomy" : "community";
+    button.setAttribute("aria-label", cluster.taxonomy
+      ? `${cluster.label} filter: ${number.format(cluster.count)} matching plugins`
+      : `${cluster.label}: ${number.format(cluster.count)} plugins, ${Math.round(cluster.count / explorer.nodes.length * 100)} percent`);
     button.setAttribute("aria-pressed", "false");
     button.style.setProperty("--community", cluster.color);
     const meter = element("span", "community-meter");

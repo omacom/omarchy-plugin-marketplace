@@ -551,7 +551,13 @@ test("explore UI follows marketplace geometry, readable type, and complete theme
 test("all semantic communities remain available in a compact labeled rail", () => {
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
-  assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*button\.setAttribute\("aria-label", `\$\{cluster\.label\}[\s\S]*community-name/);
+  assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
+  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260920-01"/);
+  assert.match(script, /id: "taxonomy:vpn",\s*label: "VPN",[\s\S]*anchor: "security",\s*matches: matchesVpnTaxonomy,/);
+  assert.match(script, /id: "taxonomy:bar",\s*label: "Bar",[\s\S]*anchor: "appearance",\s*matches: matchesBarTaxonomy,/);
+  assert.match(script, /const taxonomyFilter = taxonomyCommunityFilters\.find\(\(filter\) => filter\.id === activeCluster\);\s*return taxonomyFilter \? taxonomyFilter\.matches\(node\) : node\.cluster === activeCluster/);
+  assert.match(script, /taxonomyCommunityFilters\.forEach\(\(\{ id, label, color, anchor, matches \}\) => \{\s*const count = explorer\.nodes\.filter\(matches\)\.length;\s*if \(!count\) return;[\s\S]*cluster\.id === anchor\)[\s\S]*anchorIndex \+ 1/);
+  assert.match(script, /button\.dataset\.filterKind = cluster\.taxonomy \? "taxonomy" : "community"[\s\S]*\$\{cluster\.label\} filter: \$\{number\.format\(cluster\.count\)\} matching plugins/);
   assert.match(styles, /\.graph-analysis\s*\{[\s\S]*bottom:\s*0[\s\S]*width:\s*102px/);
   assert.match(page, /id="community-scroll-fade"[^>]+aria-hidden="true"/);
   assert.doesNotMatch(page, /community-scroll-hint|>↓</);
@@ -573,6 +579,7 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(script, /document\.querySelector\("#graph-method"\)\.setAttribute\("aria-label", explorer\.method/);
   assert.match(script, /createExplorerSearchMatcher\(query\)/);
   assert.match(script, /graphReset\.addEventListener[\s\S]*allCommunities\.setAttribute\("aria-pressed", "true"\)[\s\S]*button\.setAttribute\("aria-pressed", "false"\)/);
+  assert.match(script, /button\.addEventListener\("click", \(\) => \{\s*if \(!matchesActiveCommunity\(candidate\)\) setActiveCluster\(null\);\s*selectNode\(candidate, true\);/);
   assert.match(styles, /\.detail-actions \.button\s*\{\s*justify-content:\s*center;\s*\}/);
   assert.doesNotMatch(styles, /\.explore-tabs button, \.explore-toolbar button\s*\{\s*transition:\s*none/);
 });
@@ -622,6 +629,12 @@ test("graph search uses catalog matching semantics", () => {
   assert.equal(matchesExplorerSearch("Expose\u0301", unicodeNode), true);
   assert.equal(matchesExplorerSearch("&", unicodeNode), true);
   assert.equal(matchesExplorerSearch("/", unicodeNode), false);
+  const securityGameNode = { id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade", description: "A guarded arcade.", tags: ["security", "games"] };
+  const securityNode = { id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault", description: "Secrets.", tags: ["security"] };
+  assert.equal(matchesExplorerSearch("tag:security tag:games", securityGameNode), true);
+  assert.equal(matchesExplorerSearch("tag:security tag:games", securityNode), false);
+  assert.equal(matchesExplorerSearch("git", securityNode), false);
+  assert.equal(matchesExplorerSearch("", securityNode), false);
   assert.equal(matchesExplorerSearch("text:bar", publisherNode), true);
   assert.equal(matchesExplorerSearch("kind:bar-widget", publisherNode), true);
   assert.equal(matchesExplorerSearch("kind:menu-bar-widget", unicodeNode), true);
