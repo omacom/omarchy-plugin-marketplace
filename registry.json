@@ -194151,6 +194151,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Gmacadoches/astro-arc",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:10:08.374Z",
+      "listingValidatedCommit": "ccf1049984c34e6b36077a4846ac4ace14b0400b",
+      "listingValidatedAt": "2026-09-20T00:10:08.374Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gmacadoches/astro-arc",
+        "pluginIds": [
+          "garrett.astro-arc"
+        ],
+        "commit": "ccf1049984c34e6b36077a4846ac4ace14b0400b",
+        "checkedAt": "2026-09-20T00:10:08.282Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "garrett.astro-arc": {
+          "category": "Appearance",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
