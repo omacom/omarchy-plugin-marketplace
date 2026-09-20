@@ -194024,6 +194024,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GodofJoper/omarchy-google-translate",
+      "type": "plugin-source",
+      "addedAt": "2026-09-19",
+      "listedAt": "2026-09-19T23:59:13.842Z",
+      "listingValidatedCommit": "5778577c17921eaf65770c615113970993b93b81",
+      "listingValidatedAt": "2026-09-19T23:59:13.842Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "godofjoper/omarchy-google-translate",
+        "pluginIds": [
+          "godofjoper.translate"
+        ],
+        "commit": "5778577c17921eaf65770c615113970993b93b81",
+        "checkedAt": "2026-09-19T23:59:13.742Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "godofjoper.translate": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
