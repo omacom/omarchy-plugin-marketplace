@@ -608,7 +608,7 @@ function searchScopePlugins() {
 function filteredPlugins() {
   const result = searchScopePlugins().filter((plugin) => pluginMatchesActiveSearch(plugin));
 
-  const ranks = state.sort === "rank" ? engagementRanks(sourcePlugins(), state.engagement) : new Map();
+  const ranks = state.sort === "rank" ? engagementRanks(state.plugins, state.engagement) : new Map();
   const sorters = {
     added: (a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name),
     updated: (a, b) => activityTime(b) - activityTime(a) || a.name.localeCompare(b.name),
@@ -616,7 +616,7 @@ function filteredPlugins() {
     views: (a, b) => comparePluginEngagement(a, b, state.engagement, "views"),
     copies: (a, b) => comparePluginEngagement(a, b, state.engagement, "copies"),
     hearts: (a, b) => comparePluginEngagement(a, b, state.engagement, "hearts"),
-    rank: (a, b) => (ranks.get(a.id)?.overall || 0) - (ranks.get(b.id)?.overall || 0)
+    rank: (a, b) => (ranks.get(a.id)?.overall || Infinity) - (ranks.get(b.id)?.overall || Infinity)
       || String(a.name || "").localeCompare(String(b.name || "")),
     name: (a, b) => a.name.localeCompare(b.name),
     kind: (a, b) => (a.kind || "").localeCompare(b.kind || "") || a.name.localeCompare(b.name)
@@ -925,7 +925,7 @@ function splitTile(plugin, rank) {
   const preview = previewSource
     ? `<img class="split-tile-thumb" src="${escapeHtml(previewSource)}" alt="" loading="lazy" decoding="async">`
     : `<span class="split-tile-thumb split-tile-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
-  const rankLabel = rank ? `#${rank.overall}` : "—";
+  const rankLabel = rank?.overall ? `#${rank.overall}` : "—";
   const selected = plugin.id === state.selected;
   return `
     <button class="split-tile${selected ? " is-selected" : ""}" type="button" role="option" aria-selected="${selected}" data-split-plugin="${escapeHtml(plugin.id)}" aria-label="${escapeHtml(plugin.name)}, rank ${escapeHtml(rankLabel)}">
@@ -938,25 +938,33 @@ function splitTile(plugin, rank) {
 function splitStatRow(metric, label, icon, rank, value) {
   const total = rank?.total || 0;
   const position = rank?.[metric] || 0;
+  if (!position) {
+    return `
+    <div class="split-stat is-unranked" data-split-metric="${metric}">
+      <div class="split-stat-key"><span class="split-stat-icon">${icon}</span><b>${escapeHtml(formatEngagementCount(value))}</b><span class="sr-only">${label}</span></div>
+      <div class="split-stat-bar"></div>
+      <div class="split-stat-rank">Unranked<small>${total ? `of ${total}` : "no activity yet"}</small></div>
+    </div>`;
+  }
   const percent = total > 1 ? Math.max(2, Math.round((1 - (position - 1) / (total - 1)) * 100)) : 100;
-  const top = total ? Math.max(1, Math.round((position / total) * 100)) : 0;
+  const top = Math.max(1, Math.round((position / total) * 100));
   return `
     <div class="split-stat" data-split-metric="${metric}">
       <div class="split-stat-key"><span class="split-stat-icon">${icon}</span><b>${escapeHtml(formatEngagementCount(value))}</b><span class="sr-only">${label}</span></div>
       <div class="split-stat-bar"><i style="width:${percent}%"></i><em style="left:${percent}%">top ${top}%</em></div>
-      <div class="split-stat-rank">${position ? `#${position}` : "—"}<small>of ${total}</small></div>
+      <div class="split-stat-rank">#${position}<small>of ${total}</small></div>
     </div>`;
 }
 
 function renderSplitView(pagePlugins) {
-  const ranks = engagementRanks(sourcePlugins(), state.engagement);
+  const ranks = engagementRanks(state.plugins, state.engagement);
   if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
   splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
   splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
   splitTopRank.hidden = !state.engagementEnabled;
   splitTopRank.setAttribute("aria-pressed", String(state.sort === "rank"));
   const tiles = [...splitGrid.querySelectorAll("[data-split-plugin]")];
-  const selectTile = (tile, { focus = false } = {}) => {
+  const selectTile = (tile, { focus = false, force = false } = {}) => {
     tiles.forEach((other) => {
       const active = other === tile;
       other.classList.toggle("is-selected", active);
@@ -964,7 +972,7 @@ function renderSplitView(pagePlugins) {
       other.tabIndex = active ? 0 : -1;
     });
     if (focus) tile.focus({ preventScroll: true });
-    if (state.selected === tile.dataset.splitPlugin) return;
+    if (!force && state.selected === tile.dataset.splitPlugin) return;
     state.selected = tile.dataset.splitPlugin;
     renderSplitSelection();
   };
@@ -1019,7 +1027,7 @@ function renderSplitView(pagePlugins) {
   if (splitFocusIndex !== null && tiles.length) {
     const index = splitFocusIndex < 0 ? tiles.length + splitFocusIndex : splitFocusIndex;
     splitFocusIndex = null;
-    selectTile(tiles[Math.max(0, Math.min(tiles.length - 1, index))], { focus: true });
+    selectTile(tiles[Math.max(0, Math.min(tiles.length - 1, index))], { focus: true, force: true });
     return;
   }
   if (splitFocusPending) {
@@ -1047,15 +1055,17 @@ function renderSplitSelection() {
   splitCard.innerHTML = pluginCard(plugin, { showNew: true });
   bindCardActions(splitCard);
   const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
-  const rank = state.engagementLoaded ? engagementRanks(sourcePlugins(), state.engagement).get(plugin.id) : null;
-  splitStatsTotal.textContent = `${sourcePlugins().length} plugins`;
-  splitStatsBody.innerHTML = state.engagementEnabled
-    ? [
+  const rank = state.engagementLoaded ? engagementRanks(state.plugins, state.engagement).get(plugin.id) : null;
+  splitStatsTotal.textContent = `${state.plugins.length} plugins`;
+  splitStatsBody.innerHTML = !state.engagementEnabled
+    ? '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>'
+    : !state.engagementLoaded
+      ? '<p class="split-stats-empty" aria-busy="true">Loading engagement statistics…</p>'
+      : [
       ["hearts", "hearts", '<span class="social-glyph heart-glyph" aria-hidden="true">\uf004</span>'],
       ["copies", "install copies", '<span class="copy-icon engagement-copy-icon" aria-hidden="true"></span>'],
       ["views", "views", '<span class="engagement-glyph" aria-hidden="true">\uf441</span>'],
-    ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, stats[metric])).join("")
-    : '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>';
+      ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, stats[metric])).join("");
 }
 
 function setCatalogView(view) {
@@ -1591,6 +1601,7 @@ async function init() {
         const focusToken = pluginCardFocusToken();
         state.engagementEnabled = false;
         hidePendingEngagement(document);
+        if (splitView()) render({ historyMode: "none" });
         const previousSort = state.sort;
         const previousLabel = sortOptions[state.source]
           .find(([value]) => value === previousSort)?.[1] || previousSort;

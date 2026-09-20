@@ -1482,7 +1482,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.doesNotMatch(files.index, /verification-bar|verification-select/);
   assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts", "rank"\]\)/);
   assert.match(files.index, /<option value="hearts">Most hearts<\/option>\s*<option value="rank">Top ranked<\/option>/);
-  assert.match(files.app, /rank: \(a, b\) => \(ranks\.get\(a\.id\)\?\.overall \|\| 0\) - \(ranks\.get\(b\.id\)\?\.overall \|\| 0\)/);
+  assert.match(files.app, /rank: \(a, b\) => \(ranks\.get\(a\.id\)\?\.overall \|\| Infinity\) - \(ranks\.get\(b\.id\)\?\.overall \|\| Infinity\)/);
   assert.match(files.app, /views: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "views"\)/);
   assert.match(files.app, /copies: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "copies"\)/);
   assert.match(files.app, /hearts: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "hearts"\)/);
@@ -2113,12 +2113,13 @@ test("engagement ranks combine hearts, copies, and views into one standing", () 
     c: { hearts: 1, copies: 1, views: 1000 },
   };
   const ranks = engagementRanks(plugins, stats);
-  assert.deepEqual(ranks.get("a"), { total: 4, hearts: 1, copies: 2, views: 2, overall: 1 });
-  assert.deepEqual(ranks.get("b"), { total: 4, hearts: 1, copies: 1, views: 3, overall: 1 });
-  assert.deepEqual(ranks.get("c"), { total: 4, hearts: 3, copies: 3, views: 1, overall: 3 });
-  assert.deepEqual(ranks.get("d"), { total: 4, hearts: 4, copies: 4, views: 4, overall: 4 });
+  assert.deepEqual(ranks.get("a"), { total: 3, hearts: 1, copies: 2, views: 2, overall: 1 });
+  assert.deepEqual(ranks.get("b"), { total: 3, hearts: 1, copies: 1, views: 3, overall: 1 });
+  assert.deepEqual(ranks.get("c"), { total: 3, hearts: 3, copies: 3, views: 1, overall: 3 });
+  assert.deepEqual(ranks.get("d"), { total: 3, hearts: null, copies: null, views: null, overall: null });
   assert.equal(engagementRanks([], {}).size, 0);
-  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 1, hearts: 1, copies: 1, views: 1, overall: 1 });
+  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 0, hearts: null, copies: null, views: null, overall: null });
+  assert.deepEqual(engagementRanks([{ id: "x" }, { id: "y" }], { y: { views: 1 } }).get("y"), { total: 1, hearts: 1, copies: 1, views: 1, overall: 1 });
   assert.equal(splitViewPageSize(734), 15);
   assert.equal(splitViewPageSize(500), 9);
   assert.equal(splitViewPageSize(100), 3);
@@ -2146,8 +2147,13 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
   assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
   assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
-  assert.match(app, /const ranks = engagementRanks\(sourcePlugins\(\), state\.engagement\)/);
-  assert.match(app, /const rankLabel = rank \? `#\$\{rank\.overall\}` : "—"/);
+  assert.match(app, /const ranks = engagementRanks\(state\.plugins, state\.engagement\)/);
+  assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);
+  assert.match(app, /const rankLabel = rank\?\.overall \? `#\$\{rank\.overall\}` : "—"/);
+  assert.match(app, /Loading engagement statistics…/);
+  assert.match(app, /<div class="split-stat-rank">Unranked<small>\$\{total \? `of \$\{total\}` : "no activity yet"\}<\/small><\/div>/);
+  assert.match(app, /hidePendingEngagement\(document\);\s*if \(splitView\(\)\) render\(\{ historyMode: "none" \}\);/);
+  assert.match(app, /selectTile\(tiles\[Math\.max\(0, Math\.min\(tiles\.length - 1, index\)\)\], \{ focus: true, force: true \}\)/);
   assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"/);
   assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
   assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);

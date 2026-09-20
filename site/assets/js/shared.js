@@ -415,11 +415,14 @@ export function listingCheckState(plugin) {
 export const engagementRankMetrics = Object.freeze(["hearts", "copies", "views"]);
 
 export function engagementRanks(plugins, stats = {}) {
-  const ids = plugins.map((plugin) => plugin.id);
   const count = (id, metric) => Number(stats[id]?.[metric]) || 0;
-  const ranks = new Map(ids.map((id) => [id, { total: ids.length }]));
+  const ids = plugins.map((plugin) => plugin.id);
+  const ranked = ids.filter((id) => engagementRankMetrics.some((metric) => count(id, metric) > 0));
+  const ranks = new Map(ids.map((id) => [id, {
+    total: ranked.length, hearts: null, copies: null, views: null, overall: null,
+  }]));
   engagementRankMetrics.forEach((metric) => {
-    const ordered = [...ids].sort((a, b) => count(b, metric) - count(a, metric) || a.localeCompare(b));
+    const ordered = [...ranked].sort((a, b) => count(b, metric) - count(a, metric) || a.localeCompare(b));
     let rank = 0;
     let previous = null;
     ordered.forEach((id, index) => {
@@ -430,7 +433,7 @@ export function engagementRanks(plugins, stats = {}) {
     });
   });
   const score = (id) => engagementRankMetrics.reduce((sum, metric) => sum + ranks.get(id)[metric], 0);
-  const overall = [...ids].sort((a, b) => score(a) - score(b) || a.localeCompare(b));
+  const overall = [...ranked].sort((a, b) => score(a) - score(b) || a.localeCompare(b));
   let rank = 0;
   let previous = null;
   overall.forEach((id, index) => {
