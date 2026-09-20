@@ -194308,6 +194308,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozz1ee-dev/omarchy-hermbot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:24:28.485Z",
+      "listingValidatedCommit": "f5824ee9a1a6ae8178f69afb2b4a122d3cd65994",
+      "listingValidatedAt": "2026-09-20T00:24:28.485Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozz1ee-dev/omarchy-hermbot",
+        "pluginIds": [
+          "ozz1ee.hermbot"
+        ],
+        "commit": "f5824ee9a1a6ae8178f69afb2b4a122d3cd65994",
+        "checkedAt": "2026-09-20T00:24:28.395Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ozz1ee.hermbot": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
