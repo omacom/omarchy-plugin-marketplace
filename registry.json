@@ -195315,6 +195315,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JMThomas00/omarchy-lookout",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:28:20.382Z",
+      "listingValidatedCommit": "820dd1478e21959c60249ef7c6de4be2653649fc",
+      "listingValidatedAt": "2026-09-20T10:28:20.382Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmthomas00/omarchy-lookout",
+        "pluginIds": [
+          "jmthomas00.lookout"
+        ],
+        "commit": "820dd1478e21959c60249ef7c6de4be2653649fc",
+        "checkedAt": "2026-09-20T10:28:20.309Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jmthomas00/omarchy-lookout",
+        "pluginIds": [
+          "jmthomas00.lookout"
+        ],
+        "commit": "820dd1478e21959c60249ef7c6de4be2653649fc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:28:20.309Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T01:55:21.814Z",
+        "requestEventId": 31477965255,
+        "requestedAt": "2026-09-20T10:14:52Z",
+        "reviewedAt": "2026-09-20T10:28:20.309Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jmthomas00.lookout": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
