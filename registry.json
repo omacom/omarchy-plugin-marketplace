@@ -194639,6 +194639,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/schmunk42/omarchy-shortkeyz",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:48:24.070Z",
+      "listingValidatedCommit": "99ddd35c46efa2c5df4e77a698664987c9a0d413",
+      "listingValidatedAt": "2026-09-20T00:48:24.070Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "schmunk42/omarchy-shortkeyz",
+        "pluginIds": [
+          "io.github.schmunk42.shortkeyz"
+        ],
+        "commit": "99ddd35c46efa2c5df4e77a698664987c9a0d413",
+        "checkedAt": "2026-09-20T00:48:23.986Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.schmunk42.shortkeyz": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
