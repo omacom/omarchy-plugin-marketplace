@@ -1852,7 +1852,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 [data-theme="light"] .catalog-view-mode button[aria-pressed="true"] { background: #ddd; color: #111; }
 :root:not([data-theme="dark"]):not([data-theme="light"]) .catalog-view-mode button[aria-pressed="true"] { background: var(--line-strong); color: var(--text); }
 .catalog-split-view .category-bar { display: none; }
-.catalog-split { display: grid; grid-template-columns: minmax(0, 1fr) 352px; gap: 0; align-items: stretch; margin-top: 24px; }
+.catalog-split { display: grid; grid-template-columns: minmax(0, 1fr) 352px; gap: 24px; align-items: stretch; margin-top: 24px; }
 .split-panel { display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--panel); min-width: 0; }
 .split-panel-label {
   display: flex; justify-content: space-between; gap: 12px; padding: 7px 10px; border-bottom: 1px solid var(--line);
@@ -1866,7 +1866,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   background: var(--panel); color: var(--text); text-align: left; font: inherit; cursor: pointer;
 }
 .split-tile:hover { background: var(--panel-2); }
-.split-tile.is-selected { background: var(--panel-2); box-shadow: inset 0 0 0 2px var(--accent); }
+.split-tile.is-selected { background: var(--panel-2); outline: 2px solid var(--accent); outline-offset: -2px; }
 .split-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .split-tile-thumb { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 0; background: var(--code-bg); }
 .split-tile-mark { display: grid; place-items: center; color: var(--faint); font-family: var(--mono); font-size: 14px; font-weight: 700; letter-spacing: .1em; }
@@ -1883,7 +1883,6 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-pager button:disabled { opacity: .42; cursor: not-allowed; }
 .split-aside { display: flex; flex-direction: column; gap: 0; min-width: 0; }
 .split-card { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
-.split-card .plugin-card, .split-stats { border-left: 0; }
 .split-card .plugin-title-line { flex-wrap: nowrap; }
 .split-card .plugin-title-line h3 { min-width: 0; flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .split-card .plugin-author { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -1910,7 +1909,6 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 @media (max-width: 1100px) {
   .catalog-split { grid-template-columns: minmax(0, 1fr); }
   .split-aside { order: -1; }
-  .split-card .plugin-card, .split-stats { border-left: 1px solid var(--line); }
   .split-stats { border-top: 1px solid var(--line); }
   .split-card { grid-template-columns: minmax(0, 1fr); }
 }
