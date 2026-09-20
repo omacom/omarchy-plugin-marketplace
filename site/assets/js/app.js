@@ -25,14 +25,14 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260911-01";
+} from "./shared.js?v=20260920-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260911-01";
+} from "./engagement.js?v=20260920-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -59,13 +59,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260911-01";
+} from "./search.js?v=20260920-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260911-01";
+} from "./taxonomy.js?v=20260920-01";
 
 const pluginsPerPage = 9;
 const hiddenCardTags = new Set([
@@ -212,17 +212,30 @@ function pluginSearchText(plugin) {
     plugin.author,
     publisher,
     `@${publisher}`,
-    plugin.id,
+    searchablePluginId(plugin.id),
     plugin.category,
     plugin.kind,
     ...(plugin.tags || [])
   ].join(" "));
 }
 
+const pluginIdHostSegments = new Set(["io", "com", "org", "net", "dev", "github", "gitlab", "codeberg"]);
+
+function localPluginId(pluginId) {
+  return String(pluginId || "").split(".").at(-1) || "";
+}
+
+function searchablePluginId(pluginId) {
+  return String(pluginId || "")
+    .split(".")
+    .filter((segment) => !pluginIdHostSegments.has(segment.toLowerCase()))
+    .join(".");
+}
+
 function pluginSearchContext(plugin) {
   return {
     publisher: publisherLogin(plugin),
-    primaryText: [plugin.name, plugin.id, ...(plugin.tags || [])].join(" "),
+    primaryText: [plugin.name, localPluginId(plugin.id), ...(plugin.tags || [])].join(" "),
     searchText: pluginSearchText(plugin),
   };
 }
@@ -241,18 +254,17 @@ function pluginMatchesActiveSearch(plugin) {
     pluginId: plugin.id,
     pluginKind: plugin.kind,
   };
-  const matchesTerm = state.terms.some((term) => term.type === "text"
+  const matchesTerms = state.terms.every((term) => term.type === "text"
     ? matchesDirectSearch(term.value, matchContext)
     : matchesCommittedSearchTerm(term, matchContext));
   const textDraftTerms = draftTerms.filter((term) => term.type === "text");
   const typedDraftTerms = draftTerms.filter((term) => term.type !== "text");
   const textDraft = textDraftTerms.map((term) => term.value).join(" ");
-  const matchesTextDraft = Boolean(textDraft)
-    && matchesDirectSearch(textDraft, matchContext);
-  const matchesTypedDraft = typedDraftTerms.some((term) =>
+  const matchesTextDraft = !textDraft || matchesDirectSearch(textDraft, matchContext);
+  const matchesTypedDraft = typedDraftTerms.every((term) =>
     matchesDraftSearchTerm(term, matchContext)
   );
-  return matchesTerm || matchesTextDraft || matchesTypedDraft;
+  return matchesTerms && matchesTextDraft && matchesTypedDraft;
 }
 
 function completionMatches(value) {

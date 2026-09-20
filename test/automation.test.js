@@ -70,6 +70,7 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesShortSearch,
+  compactSearchKey,
   maximumSearchTermLength,
   parseSearchDraft,
   pluginKindKey,
@@ -424,6 +425,33 @@ test("inline completion accepts genuine plugin, tag, and author prefixes", () =>
   ), "");
 });
 
+test("committed text terms match hyphenated and joined spellings", () => {
+  const codexBar = {
+    primaryText: "CodexBar codexbar ai",
+    searchText: "CodexBar Every AI coding limit in one Omarchy panel ai",
+  };
+  const nightLight = {
+    primaryText: "Night Light nightlight system",
+    searchText: "Night Light Owns the hyprsunset night light temperature system",
+  };
+  assert.equal(matchesDirectSearch("codex-bar", codexBar), true);
+  assert.equal(matchesDirectSearch("codexbar", codexBar), true);
+  assert.equal(matchesDirectSearch("codex bar", codexBar), true);
+  assert.equal(matchesDirectSearch("nightlight", nightLight), true);
+  assert.equal(matchesDirectSearch("night-light", nightLight), true);
+  assert.equal(matchesDirectSearch("night+light", nightLight), false);
+  assert.equal(matchesDirectSearch("codex-cli", codexBar), false);
+  assert.equal(matchesDirectSearch("C. elegans Pet", {
+    primaryText: "C. elegans Pet pet games",
+    searchText: "C. elegans Pet A wandering worm for the bar games",
+  }), true);
+  assert.equal(matchesDirectSearch("git", {
+    primaryText: "Nova Lock lock system",
+    searchText: "Nova Lock Quickshell session lock dkgamer02ai dkgamer02ai.lock system",
+  }), false);
+  assert.equal(compactSearchKey("Codex-Bar  v2"), "codexbarv2");
+});
+
 test("typed committed chips use exact field-specific matching", () => {
   const plugin = {
     publisher: "spaceXrace",
@@ -438,7 +466,8 @@ test("typed committed chips use exact field-specific matching", () => {
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "bar"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "widget"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "@spaceXrace"), plugin), true);
-  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), false);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), true);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "xrace"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "Power Profiles"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "dizziee.power-profiles"), plugin), true);
   assert.equal(matchesDirectSearch("dark mode", {
@@ -1333,9 +1362,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260911-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260911-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260911-01");
+  assert.equal(keys[0], "20260920-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
@@ -1709,9 +1738,12 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /tabindex="-1" aria-selected="false"/);
   assert.match(files.app, /\$\{visible\.length\} of \$\{categoryPlugins\.length\}/);
   assert.match(files.app, /const hasResultFilter = hasSearch \|\| verificationFilters\.has\(state\.sort\);[\s\S]*count\.textContent = hasResultFilter/);
-  assert.match(files.app, /state\.terms\.some\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /typedDraftTerms\.some\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /return matchesTerm \|\| matchesTextDraft \|\| matchesTypedDraft/);
+  assert.match(files.app, /state\.terms\.every\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
+  assert.match(files.app, /typedDraftTerms\.every\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
+  assert.match(files.app, /return matchesTerms && matchesTextDraft && matchesTypedDraft/);
+  assert.doesNotMatch(files.app, /state\.terms\.some\(/);
+  assert.match(files.app, /primaryText: \[plugin\.name, localPluginId\(plugin\.id\), \.\.\.\(plugin\.tags \|\| \[\]\)\]/);
+  assert.match(files.app, /searchablePluginId\(plugin\.id\),\s*plugin\.category/);
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);

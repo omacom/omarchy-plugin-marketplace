@@ -2,7 +2,7 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   parseSearchDraft,
-} from "./search.js?v=20260911-01";
+} from "./search.js?v=20260920-01";
 
 export function repositoryPublisher(repo) {
   try {
