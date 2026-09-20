@@ -195505,6 +195505,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bramvera/omarchy-asus-expertbook-haptic-touchpad",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:40:54.788Z",
+      "listingValidatedCommit": "a276dd2a915ab42a7768f12a773b89d4601df11c",
+      "listingValidatedAt": "2026-09-20T10:40:54.788Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bramvera/omarchy-asus-expertbook-haptic-touchpad",
+        "pluginIds": [
+          "io.github.bramvera.haptic-touchpad"
+        ],
+        "commit": "a276dd2a915ab42a7768f12a773b89d4601df11c",
+        "checkedAt": "2026-09-20T10:40:54.694Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bramvera/omarchy-asus-expertbook-haptic-touchpad",
+        "pluginIds": [
+          "io.github.bramvera.haptic-touchpad"
+        ],
+        "commit": "a276dd2a915ab42a7768f12a773b89d4601df11c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:40:54.694Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T00:46:30.913Z",
+        "requestEventId": 31478067990,
+        "requestedAt": "2026-09-20T10:20:10Z",
+        "reviewedAt": "2026-09-20T10:40:54.694Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bramvera.haptic-touchpad": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
