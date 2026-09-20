@@ -196479,6 +196479,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/peterholko/omarchy-math-time",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:56:18.972Z",
+      "listingValidatedCommit": "73c9af9f06b064531b1cca1e51040bc5bd12694e",
+      "listingValidatedAt": "2026-09-20T19:56:18.972Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "peterholko/omarchy-math-time",
+        "pluginIds": [
+          "io.github.peterholko.math"
+        ],
+        "commit": "73c9af9f06b064531b1cca1e51040bc5bd12694e",
+        "checkedAt": "2026-09-20T19:56:18.894Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "peterholko/omarchy-math-time",
+        "pluginIds": [
+          "io.github.peterholko.math"
+        ],
+        "commit": "73c9af9f06b064531b1cca1e51040bc5bd12694e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T19:56:18.894Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T03:16:49.745Z",
+        "requestEventId": 31491210336,
+        "requestedAt": "2026-09-20T19:54:53Z",
+        "reviewedAt": "2026-09-20T19:56:18.894Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.peterholko.math": {
+          "category": "Kids",
+          "tags": [
+            "kids",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
