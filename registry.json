@@ -196106,6 +196106,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mwhuss/omarchy-hermes-api",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:25:04.434Z",
+      "listingValidatedCommit": "6294779623937c2b8982a3bab2fe215617daa923",
+      "listingValidatedAt": "2026-09-20T19:25:04.434Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mwhuss/omarchy-hermes-api",
+        "pluginIds": [
+          "com.mwhuss.omarchy-hermes-api"
+        ],
+        "commit": "6294779623937c2b8982a3bab2fe215617daa923",
+        "checkedAt": "2026-09-20T19:25:04.343Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mwhuss/omarchy-hermes-api",
+        "pluginIds": [
+          "com.mwhuss.omarchy-hermes-api"
+        ],
+        "commit": "6294779623937c2b8982a3bab2fe215617daa923",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T19:25:04.343Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T16:32:54.819Z",
+        "requestEventId": 31490455560,
+        "requestedAt": "2026-09-20T19:23:34Z",
+        "reviewedAt": "2026-09-20T19:25:04.343Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.mwhuss.omarchy-hermes-api": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
