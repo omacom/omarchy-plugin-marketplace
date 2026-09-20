@@ -195281,6 +195281,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JorgeDelgadillo/omarchy-relaxy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:25:14.611Z",
+      "listingValidatedCommit": "c614c8fc1bdfd2e59dbb2a98a552894025ec4226",
+      "listingValidatedAt": "2026-09-20T10:25:14.611Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jorgedelgadillo/omarchy-relaxy",
+        "pluginIds": [
+          "jdelgadillo.relaxy"
+        ],
+        "commit": "c614c8fc1bdfd2e59dbb2a98a552894025ec4226",
+        "checkedAt": "2026-09-20T10:25:14.518Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jdelgadillo.relaxy": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
