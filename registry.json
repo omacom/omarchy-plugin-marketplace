@@ -196607,6 +196607,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/peterholko/omarchy-number-grove",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:02:33.561Z",
+      "listingValidatedCommit": "4267f58761ba6f8563e36b2689d7e41daa7fe40c",
+      "listingValidatedAt": "2026-09-20T20:02:33.561Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "peterholko/omarchy-number-grove",
+        "pluginIds": [
+          "io.github.peterholko.number-grove"
+        ],
+        "commit": "4267f58761ba6f8563e36b2689d7e41daa7fe40c",
+        "checkedAt": "2026-09-20T20:02:33.470Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "peterholko/omarchy-number-grove",
+        "pluginIds": [
+          "io.github.peterholko.number-grove"
+        ],
+        "commit": "4267f58761ba6f8563e36b2689d7e41daa7fe40c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T20:02:33.470Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T03:40:18.611Z",
+        "requestEventId": 31491278065,
+        "requestedAt": "2026-09-20T19:57:39Z",
+        "reviewedAt": "2026-09-20T20:02:33.470Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.peterholko.number-grove": {
+          "category": "Kids",
+          "tags": [
+            "kids",
+            "education",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
