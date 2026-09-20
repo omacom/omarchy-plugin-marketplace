@@ -195131,6 +195131,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/katla50/barebitcoin-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:15:03.950Z",
+      "listingValidatedCommit": "ecadc79777b615fc8af7dc7da7108be72fe485ea",
+      "listingValidatedAt": "2026-09-20T10:15:03.950Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "katla50/barebitcoin-omarchy",
+        "pluginIds": [
+          "io.github.katla50.barebitcoin"
+        ],
+        "commit": "ecadc79777b615fc8af7dc7da7108be72fe485ea",
+        "checkedAt": "2026-09-20T10:15:03.848Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.katla50.barebitcoin": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
