@@ -194251,6 +194251,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/katla50/omarchy-nordpool-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:20:46.487Z",
+      "listingValidatedCommit": "da4635f5a1c4f08d3460dea1551cc90c7a319dc4",
+      "listingValidatedAt": "2026-09-20T00:20:46.487Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "katla50/omarchy-nordpool-widget",
+        "pluginIds": [
+          "io.github.katla50.nordpool-widget"
+        ],
+        "commit": "da4635f5a1c4f08d3460dea1551cc90c7a319dc4",
+        "checkedAt": "2026-09-20T00:20:46.393Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "katla50/omarchy-nordpool-widget",
+        "pluginIds": [
+          "io.github.katla50.nordpool-widget"
+        ],
+        "commit": "da4635f5a1c4f08d3460dea1551cc90c7a319dc4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T00:20:46.393Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T13:26:10.062Z",
+        "requestEventId": 31464653874,
+        "requestedAt": "2026-09-20T00:02:04Z",
+        "reviewedAt": "2026-09-20T00:20:46.393Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.katla50.nordpool-widget": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
