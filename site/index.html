@@ -14,8 +14,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260906-02">
-    <script>document.documentElement.dataset.theme = localStorage.getItem("omarchy-theme") || "dark";</script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20260920-03">
+    <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
     <a class="skip-link" href="#catalog">Skip to plugin catalog</a>
@@ -35,9 +35,9 @@
           <a href="develop.html" aria-label="Develop a plugin">Develop<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="https://github.com/omacom/omarchy-plugin-marketplace" target="_blank" rel="noreferrer" aria-label="Contribute a plugin">Contribute<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="publish.html" aria-label="Publish a plugin">Publish<span class="market-nav-detail">&nbsp;a plugin</span><span aria-hidden="true">&nbsp;→</span></a>
-          <button class="square-action icon-only theme-toggle" type="button" aria-label="Toggle color theme">
-            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg>
+          <button class="square-action theme-toggle" type="button" aria-label="Choose color theme">
+            <svg class="palette-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1 .9-1.8 2-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.7-9-7.7Z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10.5" cy="7" r="1.3"/><circle cx="15" cy="7.5" r="1.3"/></svg>
+            <span class="theme-toggle-label">Theme</span>
           </button>
         </nav>
       </div>
@@ -75,7 +75,13 @@
             <span class="page-eyebrow">Registry</span>
             <h2 id="catalog-title">browse all plugins</h2>
           </div>
-          <p><span id="plugin-count">0</span> <span id="plugin-count-label">community plugins</span></p>
+          <div class="catalog-heading-side">
+            <div id="catalog-view-mode" class="catalog-view-mode" role="group" aria-label="Catalog layout">
+              <button type="button" data-view="cards" aria-pressed="true">Cards</button>
+              <button type="button" data-view="split" aria-pressed="false">Split view</button>
+            </div>
+            <p><span id="plugin-count">0</span> <span id="plugin-count-label">community plugins</span></p>
+          </div>
         </div>
 
         <div class="catalog-controls">
@@ -103,6 +109,7 @@
               <option value="views">Most viewed</option>
               <option value="copies">Most copied</option>
               <option value="hearts">Most hearts</option>
+              <option value="rank">Top ranked</option>
               <option value="name">A–Z</option>
               <option value="verified">Verified</option>
               <option value="unverified">Unverified</option>
@@ -123,6 +130,26 @@
         </div>
 
         <div id="plugin-grid" class="plugin-grid market-plugin-grid"></div>
+        <div id="catalog-split" class="catalog-split" hidden>
+          <section class="split-panel" aria-label="Plugin tiles">
+            <div class="split-panel-label"><span>Plugins</span><button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank</button><span id="split-panel-count"></span></div>
+            <div id="split-filters" class="split-filters"></div>
+            <div id="split-grid" class="split-grid" role="listbox" aria-label="Select a plugin. Arrow keys move the selection, Page Up and Page Down change the page"></div>
+            <div class="split-pager">
+              <button id="split-page-previous" type="button">← Previous</button>
+              <b id="split-page-summary"></b>
+              <button id="split-page-next" type="button">Next →</button>
+            </div>
+          </section>
+          <aside class="split-aside">
+            <div id="split-card" class="plugin-grid market-plugin-grid split-card"></div>
+            <section class="split-stats" aria-labelledby="split-stats-title">
+              <div class="split-panel-label"><span id="split-stats-title">Standing</span><span id="split-stats-total"></span></div>
+              <div id="split-stats-body" class="split-stats-body"></div>
+              <p class="split-stats-foot">Rank among all community plugins</p>
+            </section>
+          </aside>
+        </div>
         <div id="empty-state" class="empty-state" hidden>
           <h3>No plugins found</h3>
           <p>Try another search or clear the active filters.</p>
@@ -187,6 +214,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20260920-01"></script>
+    <script type="module" src="assets/js/app.js?v=20260920-03"></script>
   </body>
 </html>
