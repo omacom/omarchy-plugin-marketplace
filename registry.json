@@ -141927,8 +141927,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T21:07:26.408Z",
-      "listingValidatedCommit": "8c03160e3f254803f806bafc4ad086a1922711ce",
-      "listingValidatedAt": "2026-09-06T21:07:26.408Z",
+      "listingValidatedCommit": "03931ca7a8e863cf61d4ae940ee3f6a0b11e1299",
+      "listingValidatedAt": "2026-09-20T16:09:22.247Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -141937,12 +141937,15 @@
         "pluginIds": [
           "karamble.demarchy"
         ],
-        "commit": "8c03160e3f254803f806bafc4ad086a1922711ce",
-        "checkedAt": "2026-09-06T21:07:26.350Z",
-        "outcome": "passed",
+        "commit": "03931ca7a8e863cf61d4ae940ee3f6a0b11e1299",
+        "checkedAt": "2026-09-20T16:09:22.247Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
       },
       "plugins": {
         "karamble.demarchy": {
@@ -141953,7 +141956,51 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "karamble/demarchy",
+        "pluginIds": [
+          "karamble.demarchy"
+        ],
+        "commit": "03931ca7a8e863cf61d4ae940ee3f6a0b11e1299",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T16:09:22.247Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T15:09:51.342Z",
+        "requestEventId": 31485561053,
+        "requestedAt": "2026-09-20T16:02:32Z",
+        "reviewedAt": "2026-09-20T16:09:22.247Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8c03160e3f254803f806bafc4ad086a1922711ce",
+          "validatedAt": "2026-09-06T21:07:26.408Z",
+          "branch": "master",
+          "supersededAt": "2026-09-20T16:09:22.247Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "karamble/demarchy",
+            "pluginIds": [
+              "karamble.demarchy"
+            ],
+            "commit": "8c03160e3f254803f806bafc4ad086a1922711ce",
+            "checkedAt": "2026-09-06T21:07:26.350Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/xeTaiz/dome.power",
