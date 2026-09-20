@@ -1926,13 +1926,17 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-card .plugin-description { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; line-clamp: 1; overflow: hidden; }
 .split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); background: var(--panel); }
 .split-stats-body { padding: 8px 14px 4px; }
-.split-stat { display: grid; grid-template-columns: 110px 1fr 54px; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.split-stat { display: grid; grid-template-columns: 110px 1fr 54px; gap: 10px; align-items: center; padding: 4px 0; border-bottom: 1px solid var(--line-soft); }
 .split-stat:last-child { border-bottom: 0; }
 .split-stat-key { display: flex; align-items: center; gap: 10px; }
 .split-stat-key b { color: var(--text); font-family: var(--mono); font-size: 15px; font-weight: 600; }
-.split-stat-icon { display: inline-grid; place-items: center; width: 26px; height: 26px; color: var(--accent); }
-.split-stat-icon .engagement-glyph, .split-stat-icon .heart-glyph { width: 26px; height: 26px; font-size: 26px; color: var(--accent); transform: none; }
+.split-stat-icon { display: inline-grid; place-items: center; width: 24px; height: 24px; color: var(--accent); }
+.split-stat-icon .engagement-glyph, .split-stat-icon .heart-glyph { width: 24px; height: 24px; font-size: 20px; line-height: 24px; text-align: center; display: block; color: var(--accent); transform: none; }
 .split-stat-icon .copy-icon { width: 24px; height: 24px; color: var(--accent); }
+.split-stat-icon .star-glyph { width: 22px; height: 22px; color: var(--updated); fill: currentColor; }
+/* The icon font's heart and eye glyphs carry ink to the right of their advance box; measured offsets. */
+.split-stat-icon .heart-glyph { transform: translateX(-3px); }
+.split-stat-icon .engagement-glyph { transform: translateX(-4px); }
 .split-stat-icon .copy-icon::before, .split-stat-icon .copy-icon::after { width: 13px; height: 13px; border-width: 2px; }
 .split-stat-icon .copy-icon::before { top: 2px; left: 2px; }
 .split-stat-icon .copy-icon::after { right: 2px; bottom: 2px; background: var(--panel); }

@@ -1,7 +1,7 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260920-04";
-import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260920-04";
+import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260920-05";
+import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260920-05";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
-import { matchesBarTaxonomy, matchesVpnTaxonomy } from "./taxonomy.js?v=20260920-04";
+import { matchesBarTaxonomy, matchesVpnTaxonomy } from "./taxonomy.js?v=20260920-05";
 
 const number = new Intl.NumberFormat("en-US");
 const shortDate = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "UTC" });
