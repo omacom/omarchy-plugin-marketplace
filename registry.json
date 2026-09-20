@@ -195928,6 +195928,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/icyleaf/omarchy-bitwarden",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:10:24.662Z",
+      "listingValidatedCommit": "c94895ec513c0665e810cd2c849a7f0d182ee81c",
+      "listingValidatedAt": "2026-09-20T19:10:24.662Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "icyleaf/omarchy-bitwarden",
+        "pluginIds": [
+          "icyleaf.bitwarden"
+        ],
+        "commit": "c94895ec513c0665e810cd2c849a7f0d182ee81c",
+        "checkedAt": "2026-09-20T19:10:24.605Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "icyleaf/omarchy-bitwarden",
+        "pluginIds": [
+          "icyleaf.bitwarden"
+        ],
+        "commit": "c94895ec513c0665e810cd2c849a7f0d182ee81c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T19:10:24.605Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T13:04:36.539Z",
+        "requestEventId": 31490120502,
+        "requestedAt": "2026-09-20T19:09:21Z",
+        "reviewedAt": "2026-09-20T19:10:24.606Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "icyleaf.bitwarden": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
