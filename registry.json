@@ -195068,6 +195068,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/charleszheng44/cloudlane",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:11:43.026Z",
+      "listingValidatedCommit": "0b286c6e55e6e6d235416a6cfb33fd36bc69f6c8",
+      "listingValidatedAt": "2026-09-20T10:11:43.026Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "charleszheng44/cloudlane",
+        "pluginIds": [
+          "io.github.charleszheng44.cloudlane"
+        ],
+        "commit": "0b286c6e55e6e6d235416a6cfb33fd36bc69f6c8",
+        "checkedAt": "2026-09-20T10:11:42.940Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "charleszheng44/cloudlane",
+        "pluginIds": [
+          "io.github.charleszheng44.cloudlane"
+        ],
+        "commit": "0b286c6e55e6e6d235416a6cfb33fd36bc69f6c8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:11:42.940Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T05:10:54.590Z",
+        "requestEventId": 31477694923,
+        "requestedAt": "2026-09-20T10:01:06Z",
+        "reviewedAt": "2026-09-20T10:11:42.940Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.charleszheng44.cloudlane": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "launcher",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
