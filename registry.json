@@ -194185,6 +194185,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/crazybadger/omarchy-app-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:14:06.733Z",
+      "listingValidatedCommit": "c971cec89c92449c72939fa4d4374fc0507a44aa",
+      "listingValidatedAt": "2026-09-20T00:14:06.733Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crazybadger/omarchy-app-dock",
+        "pluginIds": [
+          "crazybadger.app-dock"
+        ],
+        "commit": "c971cec89c92449c72939fa4d4374fc0507a44aa",
+        "checkedAt": "2026-09-20T00:14:06.640Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "crazybadger.app-dock": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
