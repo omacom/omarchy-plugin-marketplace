@@ -479,7 +479,7 @@ function updateSearchAffordances() {
   searchClear.hidden = !active;
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
-    ? "Add search term…"
+    ? "Narrow by another term…"
     : "Search plugins, tag:panel, text:bar, or @author…";
 }
 
@@ -575,7 +575,7 @@ function updateSearchSuggestions() {
   activeSuggestion = -1;
   search.removeAttribute("aria-activedescendant");
   const resultCount = filteredPlugins().length;
-  const summaryAction = state.terms.length ? "Add" : "Search for";
+  const summaryAction = state.terms.length ? "Narrow by" : "Search for";
   searchSuggestions.innerHTML = `
     <div class="search-query-summary" role="presentation" aria-hidden="true">
       <span>${summaryAction} “${escapeHtml(rawQuery)}”</span>
