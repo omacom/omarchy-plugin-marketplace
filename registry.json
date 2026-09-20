@@ -194342,6 +194342,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bethropolis/omarchy-kcd-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:27:54.177Z",
+      "listingValidatedCommit": "7ac23e2dcd5261ff33e90c94c358ab52faeeb64a",
+      "listingValidatedAt": "2026-09-20T00:27:54.177Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bethropolis/omarchy-kcd-plugin",
+        "pluginIds": [
+          "io.github.bethropolis.kcd"
+        ],
+        "commit": "7ac23e2dcd5261ff33e90c94c358ab52faeeb64a",
+        "checkedAt": "2026-09-20T00:27:54.079Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bethropolis/omarchy-kcd-plugin",
+        "pluginIds": [
+          "io.github.bethropolis.kcd"
+        ],
+        "commit": "7ac23e2dcd5261ff33e90c94c358ab52faeeb64a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T00:27:54.079Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T15:52:51.853Z",
+        "requestEventId": 31464796480,
+        "requestedAt": "2026-09-20T00:08:14Z",
+        "reviewedAt": "2026-09-20T00:27:54.079Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bethropolis.kcd": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
