@@ -2140,6 +2140,9 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /const rankLabel = rank \? `#\$\{rank\.overall\}` : "—"/);
   assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"/);
   assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
+  assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
+  assert.match(app, /other\.tabIndex = active \? 0 : -1;/);
+  assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
   assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
   assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);
   assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);

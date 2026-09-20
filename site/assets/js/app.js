@@ -938,19 +938,60 @@ function renderSplitView(pagePlugins) {
   if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
   splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
   splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
-  splitGrid.querySelectorAll("[data-split-plugin]").forEach((tile) => {
-    tile.addEventListener("click", () => {
-      if (state.selected === tile.dataset.splitPlugin) return;
-      state.selected = tile.dataset.splitPlugin;
-      splitGrid.querySelectorAll("[data-split-plugin]").forEach((other) => {
-        const active = other === tile;
-        other.classList.toggle("is-selected", active);
-        other.setAttribute("aria-selected", String(active));
-      });
-      renderSplitSelection();
+  const tiles = [...splitGrid.querySelectorAll("[data-split-plugin]")];
+  const selectTile = (tile, { focus = false } = {}) => {
+    tiles.forEach((other) => {
+      const active = other === tile;
+      other.classList.toggle("is-selected", active);
+      other.setAttribute("aria-selected", String(active));
+      other.tabIndex = active ? 0 : -1;
     });
+    if (focus) tile.focus({ preventScroll: true });
+    if (state.selected === tile.dataset.splitPlugin) return;
+    state.selected = tile.dataset.splitPlugin;
+    renderSplitSelection();
+  };
+  tiles.forEach((tile) => {
+    tile.tabIndex = tile.dataset.splitPlugin === state.selected ? 0 : -1;
+    tile.addEventListener("click", () => selectTile(tile));
   });
+  splitGrid.onkeydown = (event) => {
+    const index = tiles.indexOf(document.activeElement);
+    if (index < 0) return;
+    const columns = splitGridColumns();
+    const targets = {
+      ArrowRight: index + 1,
+      ArrowLeft: index - 1,
+      ArrowDown: index + columns,
+      ArrowUp: index - columns,
+      Home: 0,
+      End: tiles.length - 1,
+    };
+    if (event.key === "PageDown" || event.key === "PageUp") {
+      const button = event.key === "PageDown" ? nextPage : previousPage;
+      if (button.disabled) return;
+      event.preventDefault();
+      splitFocusPending = true;
+      button.click();
+      return;
+    }
+    if (!(event.key in targets)) return;
+    event.preventDefault();
+    const next = tiles[Math.max(0, Math.min(tiles.length - 1, targets[event.key]))];
+    if (next) selectTile(next, { focus: true });
+  };
+  if (splitFocusPending) {
+    splitFocusPending = false;
+    tiles.find((tile) => tile.dataset.splitPlugin === state.selected)?.focus({ preventScroll: true });
+  }
   renderSplitSelection();
+}
+
+let splitFocusPending = false;
+
+function splitGridColumns() {
+  const columns = getComputedStyle(splitGrid).gridTemplateColumns.split(" ").filter(Boolean).length;
+  return Math.max(1, columns);
 }
 
 function renderSplitSelection() {
