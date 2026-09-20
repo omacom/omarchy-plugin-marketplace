@@ -724,9 +724,11 @@ function applyAuthoritativeEngagement(pluginId, result, {
   updatePluginHeart(document, pluginId, next, {
     hearted: hasPluginHeart(pluginId),
   });
-  if (state.sort === sortMetric) {
+  if (state.sort === sortMetric || state.sort === "rank") {
     render();
     if (!restorePluginCardFocus(focusToken) && focusToken) focusCatalogResult();
+  } else if (splitView()) {
+    refreshSplitRanks();
   }
 }
 
@@ -1003,6 +1005,7 @@ function renderSplitView(pagePlugins) {
   const ranks = catalogRanks();
   if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
   splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
+  splitGrid.classList.toggle("is-full", pagePlugins.length >= pageSize());
   splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
   splitTopRank.hidden = !state.engagementEnabled;
   splitTopRank.setAttribute("aria-pressed", String(state.sort === "rank"));
@@ -1088,6 +1091,17 @@ function splitGridColumns() {
   return Math.max(1, columns);
 }
 
+function refreshSplitRanks() {
+  const ranks = catalogRanks();
+  splitGrid.querySelectorAll("[data-split-plugin]").forEach((tile) => {
+    const rank = state.engagementLoaded ? ranks.get(tile.dataset.splitPlugin) : null;
+    const label = tile.querySelector(".split-tile-meta b");
+    if (label) label.textContent = rank?.overall ? `#${rank.overall}` : "—";
+  });
+  const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
+  if (plugin) renderSplitStats(plugin);
+}
+
 function renderSplitSelection() {
   const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
   if (!plugin) {
@@ -1097,6 +1111,10 @@ function renderSplitSelection() {
   }
   splitCard.innerHTML = pluginCard(plugin, { showNew: true });
   bindCardActions(splitCard);
+  renderSplitStats(plugin);
+}
+
+function renderSplitStats(plugin) {
   const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
   const rank = state.engagementLoaded ? catalogRanks().get(plugin.id) : null;
   splitStatsTotal.textContent = `of ${rankedPlugins().length} community plugins`;
@@ -1680,7 +1698,7 @@ async function init() {
 
   search.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
-    flushSearchSuggestions();
+    if (["Enter", "ArrowDown", "ArrowUp", "ArrowRight", "Tab", "Escape"].includes(event.key)) flushSearchSuggestions();
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
       closeSuggestions: closeSearchSuggestions,

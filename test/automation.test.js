@@ -1488,7 +1488,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /hearts: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "hearts"\)/);
   assert.match(files.app, /state\.engagementEnabled = false;[\s\S]*renderSortOptions\(\);[\s\S]*state\.sort !== previousSort/);
   assert.match(files.app, /data-card-plugin="\$\{escapeHtml\(plugin\.id\)\}"/);
-  assert.match(files.app, /state\.sort === sortMetric[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)/);
+  assert.match(files.app, /state\.sort === sortMetric \|\| state\.sort === "rank"[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)[\s\S]*\} else if \(splitView\(\)\) \{\s*refreshSplitRanks\(\);/);
   assert.match(files.app, /Engagement loaded\. Sorted plugins by/);
   assert.match(files.app, /is unavailable because engagement stats could not be loaded/);
   assert.match(files.index, /id="search-input"[^>]*role="combobox"[^>]*aria-autocomplete="both"/);
@@ -2162,7 +2162,11 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /const ranks = catalogRanks\(\);/);
   assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
   assert.match(app, /render\(\);\s*scheduleSearchSuggestions\(\);\s*\}\);/);
-  assert.match(app, /if \(event\.isComposing\) return;\s*flushSearchSuggestions\(\);/);
+  assert.match(app, /if \(event\.isComposing\) return;\s*if \(\["Enter", "ArrowDown", "ArrowUp", "ArrowRight", "Tab", "Escape"\]\.includes\(event\.key\)\) flushSearchSuggestions\(\);/);
+  assert.match(app, /splitGrid\.classList\.toggle\("is-full", pagePlugins\.length >= pageSize\(\)\)/);
+  assert.match(styles, /\.split-grid\.is-full::after \{ display: none; \}/);
+  assert.doesNotMatch(styles, /nth-child\(15\)/);
+  assert.match(app, /function refreshSplitRanks\(\) \{[\s\S]*label\.textContent = rank\?\.overall \? `#\$\{rank\.overall\}` : "—";[\s\S]*renderSplitStats\(plugin\)/);
   assert.match(searchJs, /const contextCache = new WeakMap\(\);/);
   assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);
   assert.match(app, /const rankLabel = rank\?\.overall \? `#\$\{rank\.overall\}` : "—"/);

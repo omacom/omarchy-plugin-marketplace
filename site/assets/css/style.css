@@ -1878,7 +1878,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   -webkit-mask: url("../img/omarchy-wordmark.svg") center / 80% auto no-repeat;
   mask: url("../img/omarchy-wordmark.svg") center / 80% auto no-repeat;
 }
-.split-grid:has(.split-tile:nth-child(15))::after { display: none; }
+.split-grid.is-full::after { display: none; }
 .split-tile {
   position: relative; z-index: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; min-height: 118px; padding: 0 0 10px; border: 0; margin: 0; box-shadow: 1px 1px 0 0 var(--line);
   background: var(--panel); color: var(--text); text-align: left; font: inherit; cursor: pointer;
