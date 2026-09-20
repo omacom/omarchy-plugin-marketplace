@@ -1858,6 +1858,14 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   display: flex; justify-content: space-between; gap: 12px; padding: 7px 10px; border-bottom: 1px solid var(--line);
   color: var(--faint); font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
 }
+.split-panel-label .split-top-rank {
+  margin: -3px auto -3px 0; padding: 2px 8px; border: 1px solid var(--line); background: var(--code-bg); color: var(--muted);
+  font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer;
+}
+.split-panel-label .split-top-rank:hover { background: var(--panel-2); color: var(--text); }
+.split-panel-label .split-top-rank[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.split-panel-label .split-top-rank[hidden] { display: none; }
+.split-panel-label > span:first-child { margin-right: 10px; }
 .split-filters { padding: 10px; }
 .split-filters .category-list { gap: 4px; }
 .split-grid { display: grid; flex: 1; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); grid-auto-rows: 1fr; gap: 1px; border-top: 1px solid var(--line); background: var(--line); overflow: hidden; }

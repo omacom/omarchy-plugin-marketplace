@@ -1480,7 +1480,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.index, /<option value="stars">Most starred<\/option>[\s\S]*<option value="views">Most viewed<\/option>[\s\S]*<option value="copies">Most copied<\/option>[\s\S]*<option value="hearts">Most hearts<\/option>/);
   assert.match(files.index, /<span class="sr-only">Sort or filter plugins<\/span>[\s\S]*<select id="sort-select">[\s\S]*<option value="name">A–Z<\/option>[\s\S]*<option value="verified">Verified<\/option>[\s\S]*<option value="unverified">Unverified<\/option>/);
   assert.doesNotMatch(files.index, /verification-bar|verification-select/);
-  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts"\]\)/);
+  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts", "rank"\]\)/);
+  assert.match(files.index, /<option value="hearts">Most hearts<\/option>\s*<option value="rank">Top ranked<\/option>/);
+  assert.match(files.app, /rank: \(a, b\) => \(ranks\.get\(a\.id\)\?\.overall \|\| 0\) - \(ranks\.get\(b\.id\)\?\.overall \|\| 0\)/);
   assert.match(files.app, /views: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "views"\)/);
   assert.match(files.app, /copies: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "copies"\)/);
   assert.match(files.app, /hearts: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "hearts"\)/);
@@ -2160,6 +2162,9 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
   assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
   assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
+  assert.match(html, /<button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank<\/button>/);
+  assert.match(app, /splitTopRank\.hidden = !state\.engagementEnabled;\s*splitTopRank\.setAttribute\("aria-pressed", String\(state\.sort === "rank"\)\)/);
+  assert.match(app, /state\.sort = state\.sort === "rank" \? sourceDefaultSort\(\) : "rank";/);
   assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);
   assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);
   assert.match(styles, /\.split-grid \{[^}]*minmax\(140px, 1fr\)/);

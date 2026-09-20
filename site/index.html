@@ -109,6 +109,7 @@
               <option value="views">Most viewed</option>
               <option value="copies">Most copied</option>
               <option value="hearts">Most hearts</option>
+              <option value="rank">Top ranked</option>
               <option value="name">A–Z</option>
               <option value="verified">Verified</option>
               <option value="unverified">Unverified</option>
@@ -131,7 +132,7 @@
         <div id="plugin-grid" class="plugin-grid market-plugin-grid"></div>
         <div id="catalog-split" class="catalog-split" hidden>
           <section class="split-panel" aria-label="Plugin tiles">
-            <div class="split-panel-label"><span>Plugins</span><span id="split-panel-count"></span></div>
+            <div class="split-panel-label"><span>Plugins</span><button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank</button><span id="split-panel-count"></span></div>
             <div id="split-filters" class="split-filters"></div>
             <div id="split-grid" class="split-grid" role="listbox" aria-label="Select a plugin. Arrow keys move the selection, Page Up and Page Down change the page"></div>
             <div class="split-pager">

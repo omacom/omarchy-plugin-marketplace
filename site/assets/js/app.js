@@ -119,7 +119,7 @@ function cardTaxonomyLabels(plugin) {
   return labels.length ? labels : [category || "System"];
 }
 
-const engagementSorts = new Set(["views", "copies", "hearts"]);
+const engagementSorts = new Set(["views", "copies", "hearts", "rank"]);
 const verificationFilters = new Set(["verified", "unverified"]);
 const taxonomyFilterTags = ["ai", "games", "security"];
 const taxonomyCatalogFilters = [
@@ -135,6 +135,7 @@ const sortOptions = {
     ["views", "Most viewed"],
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
+    ["rank", "Top ranked"],
     ["name", "A–Z"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
@@ -145,6 +146,7 @@ const sortOptions = {
     ["views", "Most viewed"],
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
+    ["rank", "Top ranked"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
   ]
@@ -200,6 +202,7 @@ const splitCard = document.querySelector("#split-card");
 const splitStatsBody = document.querySelector("#split-stats-body");
 const splitStatsTotal = document.querySelector("#split-stats-total");
 const splitFilters = document.querySelector("#split-filters");
+const splitTopRank = document.querySelector("#split-top-rank");
 const splitPagePrevious = document.querySelector("#split-page-previous");
 const splitPageNext = document.querySelector("#split-page-next");
 const splitPageSummary = document.querySelector("#split-page-summary");
@@ -605,6 +608,7 @@ function searchScopePlugins() {
 function filteredPlugins() {
   const result = searchScopePlugins().filter((plugin) => pluginMatchesActiveSearch(plugin));
 
+  const ranks = state.sort === "rank" ? engagementRanks(sourcePlugins(), state.engagement) : new Map();
   const sorters = {
     added: (a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name),
     updated: (a, b) => activityTime(b) - activityTime(a) || a.name.localeCompare(b.name),
@@ -612,6 +616,8 @@ function filteredPlugins() {
     views: (a, b) => comparePluginEngagement(a, b, state.engagement, "views"),
     copies: (a, b) => comparePluginEngagement(a, b, state.engagement, "copies"),
     hearts: (a, b) => comparePluginEngagement(a, b, state.engagement, "hearts"),
+    rank: (a, b) => (ranks.get(a.id)?.overall || 0) - (ranks.get(b.id)?.overall || 0)
+      || String(a.name || "").localeCompare(String(b.name || "")),
     name: (a, b) => a.name.localeCompare(b.name),
     kind: (a, b) => (a.kind || "").localeCompare(b.kind || "") || a.name.localeCompare(b.name)
   };
@@ -947,6 +953,8 @@ function renderSplitView(pagePlugins) {
   if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
   splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
   splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
+  splitTopRank.hidden = !state.engagementEnabled;
+  splitTopRank.setAttribute("aria-pressed", String(state.sort === "rank"));
   const tiles = [...splitGrid.querySelectorAll("[data-split-plugin]")];
   const selectTile = (tile, { focus = false } = {}) => {
     tiles.forEach((other) => {
@@ -1535,6 +1543,12 @@ async function init() {
         splitFocusPending = splitView();
         render({ announce: true });
       });
+    });
+    splitTopRank.addEventListener("click", () => {
+      state.sort = state.sort === "rank" ? sourceDefaultSort() : "rank";
+      state.page = 1;
+      renderSortOptions();
+      render({ announce: true });
     });
     splitPagePrevious.addEventListener("click", () => previousPage.click());
     splitPageNext.addEventListener("click", () => nextPage.click());
