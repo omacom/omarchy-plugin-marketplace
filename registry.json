@@ -196901,6 +196901,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/das6ng/omarchy-network-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:24:55.272Z",
+      "listingValidatedCommit": "984072f6b2f5f6ccbbc87987bd693e2f00f7ab24",
+      "listingValidatedAt": "2026-09-20T20:24:55.272Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "das6ng/omarchy-network-plus",
+        "pluginIds": [
+          "das6ng.network"
+        ],
+        "commit": "984072f6b2f5f6ccbbc87987bd693e2f00f7ab24",
+        "checkedAt": "2026-09-20T20:24:55.177Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "das6ng.network": {
+          "category": "Widgets",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
