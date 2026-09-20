@@ -70,6 +70,8 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesShortSearch,
+  matchesSearchSelection,
+  pluginSearchContext,
   compactSearchKey,
   maximumSearchTermLength,
   parseSearchDraft,
@@ -450,6 +452,31 @@ test("committed text terms match hyphenated and joined spellings", () => {
     searchText: "Nova Lock Quickshell session lock dkgamer02ai dkgamer02ai.lock system",
   }), false);
   assert.equal(compactSearchKey("Codex-Bar  v2"), "codexbarv2");
+});
+
+test("search selection narrows with every committed and drafted term", () => {
+  const securityGame = pluginSearchContext({
+    id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade",
+    description: "A guarded arcade.", category: "Other", kind: "Bar widget", tags: ["security", "games"],
+  });
+  const securityOnly = pluginSearchContext({
+    id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault",
+    description: "Secrets in the bar.", category: "System", kind: "Bar widget", tags: ["security"],
+  });
+  const both = parseSearchDraft("tag:security tag:games");
+  assert.equal(matchesSearchSelection(securityGame, { draftTerms: both }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]], draftTerms: [both[1]] }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]] }), true);
+  assert.equal(matchesSearchSelection(securityOnly, {}), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @example") }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @other") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("git") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("io.github") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("example.vault") }), true);
+  assert.equal(securityOnly.primaryText, "Vault vault security");
+  assert.equal(securityOnly.publisher, "example");
 });
 
 test("typed committed chips use exact field-specific matching", () => {
@@ -1684,9 +1711,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
   assert.match(files.app, /function publisherLogin\(plugin\)/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
-  assert.match(files.app, /function pluginSearchContext\(plugin\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\)/);
-  assert.match(files.app, /matchesDirectSearch\(term\.value, matchContext\)/);
+  assert.match(files.searchJs, /matchesDirectSearch\(term\.value, context\)/);
   assert.match(files.app, /const verificationFilters = new Set\(\["verified", "unverified"\]\)/);
   assert.match(files.app, /function searchScopePlugins\(\) \{[\s\S]*matchesCatalogFilter\(plugin\)[\s\S]*!verificationFilters\.has\(state\.sort\) \|\| matchesVerificationStatus\(plugin, state\.sort\)/);
   assert.match(files.app, /function completionMatches\(value\) \{[\s\S]*const query = foldSearchTerm\([\s\S]*const plugins = searchScopePlugins\(\)/);
@@ -1738,12 +1765,13 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /tabindex="-1" aria-selected="false"/);
   assert.match(files.app, /\$\{visible\.length\} of \$\{categoryPlugins\.length\}/);
   assert.match(files.app, /const hasResultFilter = hasSearch \|\| verificationFilters\.has\(state\.sort\);[\s\S]*count\.textContent = hasResultFilter/);
-  assert.match(files.app, /state\.terms\.every\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /typedDraftTerms\.every\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /return matchesTerms && matchesTextDraft && matchesTypedDraft/);
-  assert.doesNotMatch(files.app, /state\.terms\.some\(/);
-  assert.match(files.app, /primaryText: \[plugin\.name, localPluginId\(plugin\.id\), \.\.\.\(plugin\.tags \|\| \[\]\)\]/);
-  assert.match(files.app, /searchablePluginId\(plugin\.id\),\s*plugin\.category/);
+  assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\) \{\s*return matchesSearchSelection\(pluginSearchContext\(plugin\), \{\s*terms: state\.terms,\s*draftTerms: parseSearchDraft\(state\.query\),/);
+  assert.match(files.app, /function publisherLogin\(plugin\) \{\s*return repositoryPublisher\(plugin\?\.repo\);/);
+  assert.doesNotMatch(files.app, /state\.terms\.some\(|function pluginSearchText\(|function searchablePluginId\(/);
+  assert.match(files.exploreSearchJs, /return \(node\) => matchesSearchSelection\(pluginSearchContext\(node\), \{ draftTerms \}\)/);
+  assert.doesNotMatch(files.exploreSearchJs, /\.some\(|\|\| matchesTypedDraft/);
+  assert.match(files.searchJs, /export function matchesSearchSelection\(context, \{ terms = \[\], draftTerms = \[\] \} = \{\}\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);

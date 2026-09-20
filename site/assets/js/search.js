@@ -255,6 +255,68 @@ export function removeSearchTermTypeFromDraft(value, type) {
     .join(" ");
 }
 
+const pluginIdHostSegments = new Set(["io", "com", "org", "net", "dev", "github", "gitlab", "codeberg"]);
+
+export function repositoryPublisher(repo) {
+  try {
+    const url = new URL(repo);
+    if (url.hostname.toLowerCase() !== "github.com") return "";
+    return url.pathname.split("/").filter(Boolean)[0] || "";
+  } catch {
+    return "";
+  }
+}
+
+export function localPluginId(pluginId) {
+  return String(pluginId || "").split(".").at(-1) || "";
+}
+
+export function searchablePluginId(pluginId) {
+  return String(pluginId || "")
+    .split(".")
+    .filter((segment) => !pluginIdHostSegments.has(segment.toLowerCase()))
+    .join(".");
+}
+
+export function pluginSearchContext(plugin) {
+  const publisher = repositoryPublisher(plugin?.repo);
+  const tags = Array.isArray(plugin?.tags) ? plugin.tags : [];
+  return {
+    publisher,
+    primaryText: [plugin?.name, localPluginId(plugin?.id), ...tags].join(" "),
+    searchText: foldSearchTerm([
+      plugin?.name,
+      plugin?.description,
+      plugin?.author,
+      publisher,
+      `@${publisher}`,
+      searchablePluginId(plugin?.id),
+      plugin?.category,
+      plugin?.kind,
+      ...tags,
+    ].join(" ")),
+    tags,
+    pluginName: plugin?.name,
+    pluginId: plugin?.id,
+    pluginKind: plugin?.kind,
+  };
+}
+
+export function matchesSearchSelection(context, { terms = [], draftTerms = [] } = {}) {
+  const matchesTerms = terms.every((term) => (term.type === "text"
+    ? matchesDirectSearch(term.value, context)
+    : matchesCommittedSearchTerm(term, context)));
+  const textDraft = draftTerms
+    .filter((term) => term.type === "text")
+    .map((term) => term.value)
+    .join(" ");
+  const matchesTextDraft = !textDraft || matchesDirectSearch(textDraft, context);
+  const matchesTypedDraft = draftTerms
+    .filter((term) => term.type !== "text")
+    .every((term) => matchesDraftSearchTerm(term, context));
+  return matchesTerms && matchesTextDraft && matchesTypedDraft;
+}
+
 export function matchesShortSearch(query, primaryText, searchText) {
   const normalized = foldSearchTerm(String(query || "").replace(/^@/, ""));
   if (!normalized) return true;

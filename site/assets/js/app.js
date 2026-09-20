@@ -44,15 +44,16 @@ import {
   handleSearchEscape,
   hasFulltextSearchDraft,
   inlineSearchCompletionSuffix,
-  matchesCommittedSearchTerm,
   matchesDirectSearch,
-  matchesDraftSearchTerm,
+  matchesSearchSelection,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
   parseSearchDraft,
+  pluginSearchContext,
   readSearchState,
   removeSearchTermTypeFromDraft,
+  repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
   searchTermDisplayValue,
@@ -195,76 +196,14 @@ function sourcePlugins() {
 }
 
 function publisherLogin(plugin) {
-  try {
-    const url = new URL(plugin.repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
-  } catch {
-    return "";
-  }
-}
-
-function pluginSearchText(plugin) {
-  const publisher = publisherLogin(plugin);
-  return foldSearchTerm([
-    plugin.name,
-    plugin.description,
-    plugin.author,
-    publisher,
-    `@${publisher}`,
-    searchablePluginId(plugin.id),
-    plugin.category,
-    plugin.kind,
-    ...(plugin.tags || [])
-  ].join(" "));
-}
-
-const pluginIdHostSegments = new Set(["io", "com", "org", "net", "dev", "github", "gitlab", "codeberg"]);
-
-function localPluginId(pluginId) {
-  return String(pluginId || "").split(".").at(-1) || "";
-}
-
-function searchablePluginId(pluginId) {
-  return String(pluginId || "")
-    .split(".")
-    .filter((segment) => !pluginIdHostSegments.has(segment.toLowerCase()))
-    .join(".");
-}
-
-function pluginSearchContext(plugin) {
-  return {
-    publisher: publisherLogin(plugin),
-    primaryText: [plugin.name, localPluginId(plugin.id), ...(plugin.tags || [])].join(" "),
-    searchText: pluginSearchText(plugin),
-  };
+  return repositoryPublisher(plugin?.repo);
 }
 
 function pluginMatchesActiveSearch(plugin) {
-  const { publisher, primaryText, searchText } = pluginSearchContext(plugin);
-  const hasTerms = state.terms.length > 0;
-  const draftTerms = parseSearchDraft(state.query);
-  if (!hasTerms && !draftTerms.length) return true;
-  const matchContext = {
-    publisher,
-    primaryText,
-    searchText,
-    tags: plugin.tags || [],
-    pluginName: plugin.name,
-    pluginId: plugin.id,
-    pluginKind: plugin.kind,
-  };
-  const matchesTerms = state.terms.every((term) => term.type === "text"
-    ? matchesDirectSearch(term.value, matchContext)
-    : matchesCommittedSearchTerm(term, matchContext));
-  const textDraftTerms = draftTerms.filter((term) => term.type === "text");
-  const typedDraftTerms = draftTerms.filter((term) => term.type !== "text");
-  const textDraft = textDraftTerms.map((term) => term.value).join(" ");
-  const matchesTextDraft = !textDraft || matchesDirectSearch(textDraft, matchContext);
-  const matchesTypedDraft = typedDraftTerms.every((term) =>
-    matchesDraftSearchTerm(term, matchContext)
-  );
-  return matchesTerms && matchesTextDraft && matchesTypedDraft;
+  return matchesSearchSelection(pluginSearchContext(plugin), {
+    terms: state.terms,
+    draftTerms: parseSearchDraft(state.query),
+  });
 }
 
 function completionMatches(value) {

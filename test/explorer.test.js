@@ -629,6 +629,12 @@ test("graph search uses catalog matching semantics", () => {
   assert.equal(matchesExplorerSearch("Expose\u0301", unicodeNode), true);
   assert.equal(matchesExplorerSearch("&", unicodeNode), true);
   assert.equal(matchesExplorerSearch("/", unicodeNode), false);
+  const securityGameNode = { id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade", description: "A guarded arcade.", tags: ["security", "games"] };
+  const securityNode = { id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault", description: "Secrets.", tags: ["security"] };
+  assert.equal(matchesExplorerSearch("tag:security tag:games", securityGameNode), true);
+  assert.equal(matchesExplorerSearch("tag:security tag:games", securityNode), false);
+  assert.equal(matchesExplorerSearch("git", securityNode), false);
+  assert.equal(matchesExplorerSearch("", securityNode), false);
   assert.equal(matchesExplorerSearch("text:bar", publisherNode), true);
   assert.equal(matchesExplorerSearch("kind:bar-widget", publisherNode), true);
   assert.equal(matchesExplorerSearch("kind:menu-bar-widget", unicodeNode), true);
