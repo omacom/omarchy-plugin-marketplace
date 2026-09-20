@@ -196017,6 +196017,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Murali-lns/omarchy-agents-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:16:58.134Z",
+      "listingValidatedCommit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
+      "listingValidatedAt": "2026-09-20T19:16:58.134Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "murali-lns/omarchy-agents-usage",
+        "pluginIds": [
+          "io.github.murali-lns.agents-usage"
+        ],
+        "commit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
+        "checkedAt": "2026-09-20T19:16:58.038Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.murali-lns.agents-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
