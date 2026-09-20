@@ -197384,6 +197384,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Telep-IO/omusey",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T21:17:55.654Z",
+      "listingValidatedCommit": "0759ce6ad4c6e53c0c9e746015164f54781264cd",
+      "listingValidatedAt": "2026-09-20T21:17:55.654Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "telep-io/omusey",
+        "pluginIds": [
+          "telep.muse"
+        ],
+        "commit": "0759ce6ad4c6e53c0c9e746015164f54781264cd",
+        "checkedAt": "2026-09-20T21:17:55.556Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "telep.muse": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
