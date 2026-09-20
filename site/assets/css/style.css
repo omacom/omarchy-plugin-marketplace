@@ -1848,7 +1848,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   color: var(--muted); font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .025em; text-transform: uppercase; cursor: pointer;
 }
 .catalog-view-mode button:hover { background: var(--panel-2); color: var(--text); }
-.catalog-view-mode button[aria-pressed="true"] { border-left-color: var(--accent); background: #39393b; color: #f0f0f0; }
+.catalog-view-mode button[aria-pressed="true"] { background: #39393b; color: #f0f0f0; }
 [data-theme="light"] .catalog-view-mode button[aria-pressed="true"] { background: #ddd; color: #111; }
 :root:not([data-theme="dark"]):not([data-theme="light"]) .catalog-view-mode button[aria-pressed="true"] { background: var(--line-strong); color: var(--text); }
 .catalog-split-view .category-bar { display: none; }

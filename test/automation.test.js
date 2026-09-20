@@ -1401,16 +1401,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260920-02");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-02");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-02");
+  assert.equal(keys[0], "20260920-03");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260920-03");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260920-03");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260920-02");
-  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-02"/);
+  assert.equal(styleKeys[0], "20260920-03");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-03"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
@@ -2153,6 +2153,8 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /tile\.addEventListener\("click", \(\) => selectTile\(tile, \{ focus: true \}\)\)/);
   assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
   assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
+  assert.match(app, /if \(!splitView\(\) \|\| splitRoot\.hidden \|\| event\.altKey[\s\S]*\["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"\]\.includes\(event\.key\)[\s\S]*CSS\.escape\(state\.selected\)[\s\S]*tile\.focus\(\{ preventScroll: true \}\)/);
+  assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
   assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
   assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
   assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);

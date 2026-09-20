@@ -30,14 +30,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260920-02";
+} from "./shared.js?v=20260920-03";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260920-02";
+} from "./engagement.js?v=20260920-03";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -65,13 +65,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260920-02";
+} from "./search.js?v=20260920-03";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260920-02";
+} from "./taxonomy.js?v=20260920-03";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -1487,6 +1487,17 @@ async function init() {
   document.addEventListener("click", () => closeVerificationTooltips());
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeVerificationTooltips();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!splitView() || splitRoot.hidden || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(event.key)) return;
+    const active = document.activeElement;
+    if (active && active !== document.body && !active.matches("main, section, [tabindex='-1']")) return;
+    const tile = splitGrid.querySelector(`[data-split-plugin="${CSS.escape(state.selected)}"]`) || splitGrid.querySelector("[data-split-plugin]");
+    if (!tile) return;
+    event.preventDefault();
+    tile.focus({ preventScroll: true });
+    tile.scrollIntoView({ block: "nearest" });
   });
 
   try {
