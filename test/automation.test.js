@@ -2131,7 +2131,15 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   const html = await readFile(new URL("site/index.html", root), "utf8");
   const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
   const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
-  assert.match(html, /id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"/);
+  assert.match(html, /class="catalog-heading-side">\s*<div id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"[\s\S]*id="plugin-count"/);
+  assert.match(html, /<div class="catalog-controls">\s*<div class="market-search">/);
+  assert.doesNotMatch(html.slice(html.indexOf('class="catalog-controls"'), html.indexOf('class="source-bar"')), /catalog-view-mode/);
+  assert.match(html, /id="split-filters"[\s\S]*id="split-grid"[\s\S]*class="split-pager">\s*<button id="split-page-previous"[\s\S]*id="split-page-summary"[\s\S]*id="split-page-next"/);
+  assert.match(app, /if \(splitView\(\)\) splitFilters\.append\(categoriesRoot\);\s*else categoryBar\.insertBefore\(categoriesRoot, clearFilters\)/);
+  assert.match(app, /pagination\.hidden = controls\.paginationHidden \|\| splitView\(\)/);
+  assert.match(app, /splitPagePrevious\.addEventListener\("click", \(\) => previousPage\.click\(\)\)/);
+  assert.match(styles, /\.catalog-controls \{ display: grid; border: 1px solid var\(--line\); grid-template-columns: minmax\(0, 1fr\) 180px; \}/);
+  assert.match(styles, /\.catalog-split-view \.category-bar \{ display: none; \}/);
   assert.match(html, /id="catalog-split" class="catalog-split" hidden>[\s\S]*id="split-grid"[\s\S]*id="split-card" class="plugin-grid market-plugin-grid split-card"[\s\S]*id="split-stats-body"/);
   assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
   assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);

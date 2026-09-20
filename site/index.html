@@ -75,7 +75,13 @@
             <span class="page-eyebrow">Registry</span>
             <h2 id="catalog-title">browse all plugins</h2>
           </div>
-          <p><span id="plugin-count">0</span> <span id="plugin-count-label">community plugins</span></p>
+          <div class="catalog-heading-side">
+            <div id="catalog-view-mode" class="catalog-view-mode" role="group" aria-label="Catalog layout">
+              <button type="button" data-view="cards" aria-pressed="true">Cards</button>
+              <button type="button" data-view="split" aria-pressed="false">Split view</button>
+            </div>
+            <p><span id="plugin-count">0</span> <span id="plugin-count-label">community plugins</span></p>
+          </div>
         </div>
 
         <div class="catalog-controls">
@@ -109,10 +115,6 @@
             </select>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg>
           </label>
-          <div id="catalog-view-mode" class="catalog-view-mode" role="group" aria-label="Catalog layout">
-            <button type="button" data-view="cards" aria-pressed="true">Cards</button>
-            <button type="button" data-view="split" aria-pressed="false">Split</button>
-          </div>
         </div>
 
         <div class="source-bar">
@@ -130,7 +132,13 @@
         <div id="catalog-split" class="catalog-split" hidden>
           <section class="split-panel" aria-label="Plugin tiles">
             <div class="split-panel-label"><span>Plugins</span><span id="split-panel-count"></span></div>
+            <div id="split-filters" class="split-filters"></div>
             <div id="split-grid" class="split-grid" role="listbox" aria-label="Select a plugin. Arrow keys move the selection, Page Up and Page Down change the page"></div>
+            <div class="split-pager">
+              <button id="split-page-previous" type="button">← Previous</button>
+              <b id="split-page-summary"></b>
+              <button id="split-page-next" type="button">Next →</button>
+            </div>
           </section>
           <aside class="split-aside">
             <div id="split-card" class="plugin-grid market-plugin-grid split-card"></div>

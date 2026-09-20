@@ -199,6 +199,12 @@ const splitPanelCount = document.querySelector("#split-panel-count");
 const splitCard = document.querySelector("#split-card");
 const splitStatsBody = document.querySelector("#split-stats-body");
 const splitStatsTotal = document.querySelector("#split-stats-total");
+const splitFilters = document.querySelector("#split-filters");
+const splitPagePrevious = document.querySelector("#split-page-previous");
+const splitPageNext = document.querySelector("#split-page-next");
+const splitPageSummary = document.querySelector("#split-page-summary");
+const categoryBar = document.querySelector(".category-bar");
+const clearFilters = document.querySelector("#clear-filters");
 const viewDockStatus = document.querySelector("#catalog-view-dock-status");
 const catalogResultStatus = document.querySelector("#catalog-result-status");
 let viewScrollFrame = 0;
@@ -883,7 +889,10 @@ function renderRecentlyAdded() {
 function renderPagination(totalItems, pageState) {
   const controls = catalogViewControls(totalItems, state.showAll, pluginsPerPage);
   document.body.classList.toggle("catalog-show-all", controls.reserveDockSpace);
-  pagination.hidden = controls.paginationHidden;
+  pagination.hidden = controls.paginationHidden || splitView();
+  splitPagePrevious.disabled = !pageState.hasPrevious;
+  splitPageNext.disabled = !pageState.hasNext;
+  splitPageSummary.textContent = `Page ${pageState.page} of ${pageState.totalPages} · ${pageSize()} per page`;
   viewToggle.hidden = controls.browseAllHidden || splitView();
   viewDock.hidden = controls.dockHidden;
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
@@ -1022,14 +1031,11 @@ function setCatalogView(view) {
     button.setAttribute("aria-pressed", String(button.dataset.view === state.view));
   });
   document.body.classList.toggle("catalog-split-view", splitView());
+  if (splitView()) splitFilters.append(categoriesRoot);
+  else categoryBar.insertBefore(categoriesRoot, clearFilters);
 }
 
 function placeViewDock() {
-  if (splitView()) {
-    splitRoot.after(pagination);
-  } else {
-    grid.after(pagination);
-  }
   if (!state.showAll) {
     document.querySelector("#site-footer")?.before(viewDock);
     return;
@@ -1492,6 +1498,8 @@ async function init() {
         render({ announce: true });
       });
     });
+    splitPagePrevious.addEventListener("click", () => previousPage.click());
+    splitPageNext.addEventListener("click", () => nextPage.click());
     let splitResizeFrame = 0;
     window.addEventListener("resize", () => {
       if (!splitView() || splitResizeFrame) return;
