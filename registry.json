@@ -195620,6 +195620,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PSthelyBlog/omarchy-hermes-companion",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:47:26.591Z",
+      "listingValidatedCommit": "2b92754b7ea50a2e7ffe9af058d731ab694ef2b9",
+      "listingValidatedAt": "2026-09-20T10:47:26.591Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "psthelyblog/omarchy-hermes-companion",
+        "pluginIds": [
+          "hermes.companion"
+        ],
+        "commit": "2b92754b7ea50a2e7ffe9af058d731ab694ef2b9",
+        "checkedAt": "2026-09-20T10:47:26.493Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "psthelyblog/omarchy-hermes-companion",
+        "pluginIds": [
+          "hermes.companion"
+        ],
+        "commit": "2b92754b7ea50a2e7ffe9af058d731ab694ef2b9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:47:26.493Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T09:54:59.444Z",
+        "requestEventId": 31478243715,
+        "requestedAt": "2026-09-20T10:29:04Z",
+        "reviewedAt": "2026-09-20T10:47:26.493Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "hermes.companion": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
