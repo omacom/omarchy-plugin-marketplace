@@ -194524,6 +194524,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cylon58/omarchy-community-knowledge-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:41:57.713Z",
+      "listingValidatedCommit": "d2f2c324652ca6dd7105850539841f135d0df1e6",
+      "listingValidatedAt": "2026-09-20T00:41:57.713Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cylon58/omarchy-community-knowledge-plugin",
+        "pluginIds": [
+          "io.github.cylon58.omarchy-knowledge"
+        ],
+        "commit": "d2f2c324652ca6dd7105850539841f135d0df1e6",
+        "checkedAt": "2026-09-20T00:41:57.619Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cylon58/omarchy-community-knowledge-plugin",
+        "pluginIds": [
+          "io.github.cylon58.omarchy-knowledge"
+        ],
+        "commit": "d2f2c324652ca6dd7105850539841f135d0df1e6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T00:41:57.619Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T21:33:57.615Z",
+        "requestEventId": 31465037703,
+        "requestedAt": "2026-09-20T00:18:58Z",
+        "reviewedAt": "2026-09-20T00:41:57.619Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cylon58.omarchy-knowledge": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
