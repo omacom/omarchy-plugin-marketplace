@@ -180775,8 +180775,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T15:10:40.718Z",
-      "listingValidatedCommit": "2d2b4811929b6f24722df5291e51df6861516eec",
-      "listingValidatedAt": "2026-09-16T15:10:40.718Z",
+      "listingValidatedCommit": "f00f50f4ffd64809bd12c4052dbc87f39012fb07",
+      "listingValidatedAt": "2026-09-20T16:06:31.227Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -180785,12 +180785,15 @@
         "pluginIds": [
           "karamble.sitesentinel"
         ],
-        "commit": "2d2b4811929b6f24722df5291e51df6861516eec",
-        "checkedAt": "2026-09-16T15:10:40.634Z",
-        "outcome": "passed",
+        "commit": "f00f50f4ffd64809bd12c4052dbc87f39012fb07",
+        "checkedAt": "2026-09-20T16:06:31.227Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
       },
       "plugins": {
         "karamble.sitesentinel": {
@@ -180802,7 +180805,51 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "karamble/omarchy-site-sentinel",
+        "pluginIds": [
+          "karamble.sitesentinel"
+        ],
+        "commit": "f00f50f4ffd64809bd12c4052dbc87f39012fb07",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T16:06:31.227Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T15:09:49.530Z",
+        "requestEventId": 31485554028,
+        "requestedAt": "2026-09-20T16:02:15Z",
+        "reviewedAt": "2026-09-20T16:06:31.227Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "2d2b4811929b6f24722df5291e51df6861516eec",
+          "validatedAt": "2026-09-16T15:10:40.718Z",
+          "branch": "master",
+          "supersededAt": "2026-09-20T16:06:31.227Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "karamble/omarchy-site-sentinel",
+            "pluginIds": [
+              "karamble.sitesentinel"
+            ],
+            "commit": "2d2b4811929b6f24722df5291e51df6861516eec",
+            "checkedAt": "2026-09-16T15:10:40.634Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tonybo/omarchy-music-touchbar",
