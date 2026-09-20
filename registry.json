@@ -196049,6 +196049,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/szaidi-code/quran-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:21:49.719Z",
+      "listingValidatedCommit": "55e61b11af9232813b331578497e3fa78754e463",
+      "listingValidatedAt": "2026-09-20T19:21:49.719Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "szaidi-code/quran-plugin",
+        "pluginIds": [
+          "szaidi.quran"
+        ],
+        "commit": "55e61b11af9232813b331578497e3fa78754e463",
+        "checkedAt": "2026-09-20T19:21:49.628Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "szaidi-code/quran-plugin",
+        "pluginIds": [
+          "szaidi.quran"
+        ],
+        "commit": "55e61b11af9232813b331578497e3fa78754e463",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T19:21:49.628Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T16:06:00.104Z",
+        "requestEventId": 31490377786,
+        "requestedAt": "2026-09-20T19:20:16Z",
+        "reviewedAt": "2026-09-20T19:21:49.628Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "szaidi.quran": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
