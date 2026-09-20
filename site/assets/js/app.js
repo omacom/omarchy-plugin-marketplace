@@ -627,9 +627,13 @@ let engagementVersion = 0;
 let filteredCache = { key: "", value: [] };
 let ranksCache = { key: "", value: new Map() };
 
+function rankedPlugins() {
+  return state.plugins.filter((plugin) => (plugin.sourceType || "community") === "community");
+}
+
 function catalogRanks() {
   const key = `${state.plugins.length}:${engagementVersion}`;
-  if (ranksCache.key !== key) ranksCache = { key, value: engagementRanks(state.plugins, state.engagement) };
+  if (ranksCache.key !== key) ranksCache = { key, value: engagementRanks(rankedPlugins(), state.engagement) };
   return ranksCache.value;
 }
 
@@ -1095,9 +1099,11 @@ function renderSplitSelection() {
   bindCardActions(splitCard);
   const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
   const rank = state.engagementLoaded ? catalogRanks().get(plugin.id) : null;
-  splitStatsTotal.textContent = `${state.plugins.length} plugins`;
+  splitStatsTotal.textContent = `${rankedPlugins().length} community plugins`;
   splitStatsBody.innerHTML = !state.engagementEnabled
     ? '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>'
+    : plugin.sourceType === "builtin"
+      ? '<p class="split-stats-empty">Built-in plugins are not ranked.</p>'
     : !state.engagementLoaded
       ? '<p class="split-stats-empty" aria-busy="true">Loading engagement statistics…</p>'
       : [

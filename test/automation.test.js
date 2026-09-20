@@ -2148,7 +2148,11 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
   assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
   assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
-  assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(state\.plugins, state\.engagement\)/);
+  assert.match(app, /function rankedPlugins\(\) \{\s*return state\.plugins\.filter\(\(plugin\) => \(plugin\.sourceType \|\| "community"\) === "community"\);/);
+  assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(rankedPlugins\(\), state\.engagement\)/);
+  assert.doesNotMatch(app, /engagementRanks\(state\.plugins|engagementRanks\(sourcePlugins/);
+  assert.match(app, /splitStatsTotal\.textContent = `\$\{rankedPlugins\(\)\.length\} community plugins`/);
+  assert.match(app, /Built-in plugins are not ranked\./);
   assert.match(app, /const ranks = catalogRanks\(\);/);
   assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
   assert.match(app, /render\(\);\s*scheduleSearchSuggestions\(\);\s*\}\);/);
