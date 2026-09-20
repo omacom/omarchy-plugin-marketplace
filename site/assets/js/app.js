@@ -993,10 +993,27 @@ function renderSplitView(pagePlugins) {
     }
     if (!(event.key in targets)) return;
     event.preventDefault();
-    const next = tiles[Math.max(0, Math.min(tiles.length - 1, targets[event.key]))];
+    const target = targets[event.key];
+    if (target > tiles.length - 1 && !nextPage.disabled && event.key !== "End") {
+      splitFocusIndex = event.key === "ArrowDown" ? index % columns : 0;
+      nextPage.click();
+      return;
+    }
+    if (target < 0 && !previousPage.disabled && event.key !== "Home") {
+      splitFocusIndex = event.key === "ArrowUp" ? -columns + (index % columns) : -1;
+      previousPage.click();
+      return;
+    }
+    const next = tiles[Math.max(0, Math.min(tiles.length - 1, target))];
     if (next) selectTile(next, { focus: true });
   };
   splitGrid.tabIndex = tiles.length ? -1 : 0;
+  if (splitFocusIndex !== null && tiles.length) {
+    const index = splitFocusIndex < 0 ? tiles.length + splitFocusIndex : splitFocusIndex;
+    splitFocusIndex = null;
+    selectTile(tiles[Math.max(0, Math.min(tiles.length - 1, index))], { focus: true });
+    return;
+  }
   if (splitFocusPending) {
     splitFocusPending = false;
     tiles.find((tile) => tile.dataset.splitPlugin === state.selected)?.focus({ preventScroll: true });
@@ -1005,6 +1022,7 @@ function renderSplitView(pagePlugins) {
 }
 
 let splitFocusPending = false;
+let splitFocusIndex = null;
 
 function splitGridColumns() {
   const columns = getComputedStyle(splitGrid).gridTemplateColumns.split(" ").filter(Boolean).length;

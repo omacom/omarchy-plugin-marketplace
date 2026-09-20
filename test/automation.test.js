@@ -2153,6 +2153,9 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /tile\.addEventListener\("click", \(\) => selectTile\(tile, \{ focus: true \}\)\)/);
   assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
   assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
+  assert.match(app, /if \(target > tiles\.length - 1 && !nextPage\.disabled && event\.key !== "End"\) \{\s*splitFocusIndex = event\.key === "ArrowDown" \? index % columns : 0;\s*nextPage\.click\(\)/);
+  assert.match(app, /if \(target < 0 && !previousPage\.disabled && event\.key !== "Home"\) \{\s*splitFocusIndex = event\.key === "ArrowUp" \? -columns \+ \(index % columns\) : -1;\s*previousPage\.click\(\)/);
+  assert.match(app, /const index = splitFocusIndex < 0 \? tiles\.length \+ splitFocusIndex : splitFocusIndex;/);
   assert.match(app, /if \(!splitView\(\) \|\| splitRoot\.hidden \|\| event\.altKey[\s\S]*\["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"\]\.includes\(event\.key\)[\s\S]*CSS\.escape\(state\.selected\)[\s\S]*tile\.focus\(\{ preventScroll: true \}\)/);
   assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
   assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
