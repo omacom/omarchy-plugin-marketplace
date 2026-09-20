@@ -196721,6 +196721,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/asmyshlyaev177/omarchy-last-session",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:08:58.364Z",
+      "listingValidatedCommit": "2049b3d240d5c27f91c2102f670d567bacd00765",
+      "listingValidatedAt": "2026-09-20T20:08:58.364Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "asmyshlyaev177/omarchy-last-session",
+        "pluginIds": [
+          "io.github.asmyshlyaev177.last-session"
+        ],
+        "commit": "2049b3d240d5c27f91c2102f670d567bacd00765",
+        "checkedAt": "2026-09-20T20:08:58.278Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.asmyshlyaev177.last-session": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
