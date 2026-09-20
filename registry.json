@@ -196412,6 +196412,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/peterholko/omarchy-school-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T19:52:23.663Z",
+      "listingValidatedCommit": "1babbf35e09d9c37fd3ad3c14cf5668fa670710a",
+      "listingValidatedAt": "2026-09-20T19:52:23.663Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "peterholko/omarchy-school-mode",
+        "pluginIds": [
+          "io.github.peterholko.school-mode"
+        ],
+        "commit": "1babbf35e09d9c37fd3ad3c14cf5668fa670710a",
+        "checkedAt": "2026-09-20T19:52:23.575Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "peterholko/omarchy-school-mode",
+        "pluginIds": [
+          "io.github.peterholko.school-mode"
+        ],
+        "commit": "1babbf35e09d9c37fd3ad3c14cf5668fa670710a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T19:52:23.575Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T17:06:40.968Z",
+        "requestEventId": 31491116995,
+        "requestedAt": "2026-09-20T19:50:49Z",
+        "reviewedAt": "2026-09-20T19:52:23.575Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.peterholko.school-mode": {
+          "category": "Kids",
+          "tags": [
+            "kids",
+            "education",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
