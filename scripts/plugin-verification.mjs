@@ -18,12 +18,14 @@ import {
   SecurityBaselineRecordError,
   toStoredSecurityBaselineRecord,
 } from "./security-baseline-record.mjs";
+import { securityBaselineEligibleForReviewedStandardInstallation } from "./security-baseline-policy.mjs";
 import { sourceVerification } from "./verification-status.mjs";
 import {
   createMaintainerVerificationReview,
   createMaintainerVerificationRevocation,
   MaintainerVerificationReviewError,
   matchesMaintainerVerificationExpectation,
+  matchesSecurityBaselineEvidence,
   parseMaintainerVerificationRevocation,
   parseMaintainerVerificationReview,
   parseMaintainerVerificationReviewHistory,
@@ -445,7 +447,14 @@ export async function analyzeListedPluginVerification({
     listedPlugins: subject.listedPlugins,
   });
   const record = verificationBaselineRecord(baseline, source);
-  if (standardInstallationRequested && record.outcome !== "passed") {
+  const reuseInstallationReview = standardInstallationRequested
+    && currentVerification.status === "verified"
+    && currentVerification.method === "maintainer-reviewed"
+    && securityBaselineEligibleForReviewedStandardInstallation(record)
+    && matchesSecurityBaselineEvidence(source.automatedSecurityBaseline, record)
+    && Date.parse(source.maintainerVerificationReview.reviewedAt) < Date.parse(standardInstallationApproval.requestedAt)
+    && Date.parse(record.checkedAt) >= Date.parse(standardInstallationApproval.requestedAt);
+  if (standardInstallationRequested && record.outcome !== "passed" && !reuseInstallationReview) {
     return Object.freeze({
       status: "unverified",
       changed: false,
@@ -458,8 +467,8 @@ export async function analyzeListedPluginVerification({
       scanResult: baseline,
       maintainerReviewRequested: Boolean(maintainerReview),
       standardInstallationRejected: true,
-      code: "verification-standard-installation-requires-passing",
-      reason: "A passing automated baseline is required before removing a manual installation override.",
+      code: "verification-standard-installation-evidence-required",
+      reason: "Standard installation requires a passing baseline or an existing valid installer-only review for the exact commit with matching scan evidence.",
       installationChanged: false,
     });
   }
@@ -507,6 +516,7 @@ export async function analyzeListedPluginVerification({
       reviewedAt: now(),
     });
   }
+  if (reuseInstallationReview) review = storedReview;
   if (reviewInvalid || reviewHistoryInvalid || revocationInvalid || revocationEventMismatch || (record.outcome !== "passed" && !review)) {
     return Object.freeze({
       status: "unverified",
@@ -548,7 +558,8 @@ export async function analyzeListedPluginVerification({
   } = publicationSource;
   const nextSource = {
     ...sourceWithoutReview,
-    automatedSecurityBaseline: record,
+    // Preserve the original attestation and its scan timestamp after a matching rescan.
+    automatedSecurityBaseline: reuseInstallationReview ? source.automatedSecurityBaseline : record,
     ...(nextReviewHistory.length ? { maintainerVerificationReviewHistory: nextReviewHistory } : {}),
     ...(review ? { maintainerVerificationReview: review } : {}),
   };
@@ -661,7 +672,7 @@ export function buildVerificationReport(result) {
     if (result.standardInstallationRejected) {
       lines.push(
         "",
-        "Standard installation changes require a passing automated baseline. A review-required result cannot remove a manual installation override.",
+        "Standard installation requires a passing baseline or an existing valid installer-only review for this exact commit. The fresh scan must match the accepted evidence.",
       );
     } else if (result.reviewInvalid) {
       lines.push(
@@ -747,7 +758,7 @@ export function publicVerificationFailure(error) {
     "verification-standard-installation-ineligible": "Standard installation changes are limited to one listed root plugin with a valid manual installation override.",
     "verification-standard-installation-catalog-mismatch": "The catalog does not describe the same root-plugin installation boundary as the listing.",
     "verification-standard-installation-compatibility-failed": "Standard installation remains unavailable while the current upstream compatibility check is failed.",
-    "verification-standard-installation-requires-passing": "A passing automated baseline is required before removing a manual installation override.",
+    "verification-standard-installation-evidence-required": "Standard installation requires a passing baseline or an existing valid installer-only review for the exact commit with matching scan evidence.",
     "verification-standard-installation-authorization-missing": "Standard installation changes require an authenticated maintainer approval label event.",
     "verification-revocation-action-invalid": "Maintainer verification revocation is limited to listed-snapshot verification issues.",
     "verification-revocation-ineligible": "Only a current exact commit-bound maintainer review can be revoked.",

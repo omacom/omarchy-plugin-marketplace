@@ -222,3 +222,10 @@ export const currentSecurityBaselinePolicy = Object.freeze({
   rules: securityBaselineRuleCatalog,
   capabilities: securityBaselineCapabilityCatalog,
 });
+
+// Standard installation may reuse only an installer-only manual verification.
+export function securityBaselineEligibleForReviewedStandardInstallation(value) {
+  const capabilities = securityBaselineCapabilityIds(value);
+  return securityBaselineEligibleForMaintainerVerification(value)
+    && capabilities.length === 1 && capabilities[0] === "installer";
+}

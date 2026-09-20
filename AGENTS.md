@@ -163,6 +163,8 @@ Optional source previews may use root `preview.png`, `preview.jpg`, `preview.jpe
 
 Never commit credentials, GitHub tokens, temporary issue bodies, downloaded audit data, or local screenshots.
 
+Standard-installation approval may reuse an existing valid, non-revoked installer-only maintainer verification for the exact listed snapshot when a fresh scan matches the accepted evidence under the current policy. Preserve the original attestation and baseline; do not create a new review from the installation label. Findings and additional capabilities remain ineligible for this exception.
+
 ## Verification commands
 
 Run the test suite for every code or content change:
