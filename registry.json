@@ -197316,6 +197316,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zantak/z-desks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T21:10:50.106Z",
+      "listingValidatedCommit": "ca6b328a875a362a1d7baaaac4987ead88636bba",
+      "listingValidatedAt": "2026-09-20T21:10:50.106Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zantak/z-desks",
+        "pluginIds": [
+          "ztk.z-desks"
+        ],
+        "commit": "ca6b328a875a362a1d7baaaac4987ead88636bba",
+        "checkedAt": "2026-09-20T21:10:50.002Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ztk.z-desks": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
