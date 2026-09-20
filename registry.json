@@ -194058,6 +194058,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/iYassr/awqat",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:03:17.620Z",
+      "listingValidatedCommit": "befec0e58b8168d43500dcdcd2012d65724e2ddd",
+      "listingValidatedAt": "2026-09-20T00:03:17.620Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iyassr/awqat",
+        "pluginIds": [
+          "yasserdo.awqat"
+        ],
+        "commit": "befec0e58b8168d43500dcdcd2012d65724e2ddd",
+        "checkedAt": "2026-09-20T00:03:17.530Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yasserdo.awqat": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
