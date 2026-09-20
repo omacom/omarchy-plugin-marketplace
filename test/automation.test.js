@@ -2166,6 +2166,8 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /splitGrid\.classList\.toggle\("is-full", pagePlugins\.length >= pageSize\(\)\)/);
   assert.match(styles, /\.split-grid\.is-full::after \{ display: none; \}/);
   assert.doesNotMatch(styles, /nth-child\(15\)/);
+  assert.match(app, /if \(!card \|\| !\(grid\.contains\(card\) \|\| splitCard\.contains\(card\)\)\) return null;/);
+  assert.match(app, /\[\.\.\.grid\.querySelectorAll\("\[data-card-plugin\]"\), \.\.\.splitCard\.querySelectorAll\("\[data-card-plugin\]"\)\]/);
   assert.match(app, /function refreshSplitRanks\(\) \{[\s\S]*label\.textContent = rank\?\.overall \? `#\$\{rank\.overall\}` : "—";[\s\S]*renderSplitStats\(plugin\)/);
   assert.match(searchJs, /const contextCache = new WeakMap\(\);/);
   assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);

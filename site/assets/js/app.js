@@ -676,7 +676,7 @@ function pluginEngagement(plugin) {
 
 function pluginCardFocusToken(element = document.activeElement) {
   const card = element?.closest?.("[data-card-plugin]");
-  if (!card || !grid.contains(card)) return null;
+  if (!card || !(grid.contains(card) || splitCard.contains(card))) return null;
   let control = "details";
   if (element.matches?.("[data-plugin-heart]")) control = "heart";
   else if (element.matches?.("[data-verification-tooltip]")) control = "verification";
@@ -688,7 +688,7 @@ function pluginCardFocusToken(element = document.activeElement) {
 
 function restorePluginCardFocus(token) {
   if (!token) return false;
-  const card = [...grid.querySelectorAll("[data-card-plugin]")]
+  const card = [...grid.querySelectorAll("[data-card-plugin]"), ...splitCard.querySelectorAll("[data-card-plugin]")]
     .find((candidate) => candidate.dataset.cardPlugin === token.pluginId);
   if (!card) return false;
   const selectors = {
