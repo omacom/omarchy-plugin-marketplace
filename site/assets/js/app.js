@@ -1099,7 +1099,7 @@ function renderSplitSelection() {
   bindCardActions(splitCard);
   const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
   const rank = state.engagementLoaded ? catalogRanks().get(plugin.id) : null;
-  splitStatsTotal.textContent = `${rankedPlugins().length} community plugins`;
+  splitStatsTotal.textContent = `of ${rankedPlugins().length} community plugins`;
   splitStatsBody.innerHTML = !state.engagementEnabled
     ? '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>'
     : plugin.sourceType === "builtin"

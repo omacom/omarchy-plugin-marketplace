@@ -2151,7 +2151,9 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /function rankedPlugins\(\) \{\s*return state\.plugins\.filter\(\(plugin\) => \(plugin\.sourceType \|\| "community"\) === "community"\);/);
   assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(rankedPlugins\(\), state\.engagement\)/);
   assert.doesNotMatch(app, /engagementRanks\(state\.plugins|engagementRanks\(sourcePlugins/);
-  assert.match(app, /splitStatsTotal\.textContent = `\$\{rankedPlugins\(\)\.length\} community plugins`/);
+  assert.match(app, /splitStatsTotal\.textContent = `of \$\{rankedPlugins\(\)\.length\} community plugins`/);
+  assert.match(styles, /\.split-grid::after \{[\s\S]*mask: url\("data:image\/svg\+xml,[^"]*m1200 1200h-480v-80h400v-1040h-479\.996v160h-400v720h720v-720h-80v-80h159\.996v880h-400v160h-640v-1200h1200z[^"]*"\) right 28px bottom 24px \/ 140px no-repeat/);
+  assert.match(styles, /\.split-tile \{\s*position: relative; z-index: 1;/);
   assert.match(app, /Built-in plugins are not ranked\./);
   assert.match(app, /const ranks = catalogRanks\(\);/);
   assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
