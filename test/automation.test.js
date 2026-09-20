@@ -2150,6 +2150,9 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
   assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
   assert.match(app, /other\.tabIndex = active \? 0 : -1;/);
+  assert.match(app, /tile\.addEventListener\("click", \(\) => selectTile\(tile, \{ focus: true \}\)\)/);
+  assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
+  assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
   assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page"/);
   assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
   assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);

@@ -962,11 +962,18 @@ function renderSplitView(pagePlugins) {
   };
   tiles.forEach((tile) => {
     tile.tabIndex = tile.dataset.splitPlugin === state.selected ? 0 : -1;
-    tile.addEventListener("click", () => selectTile(tile));
+    tile.addEventListener("click", () => selectTile(tile, { focus: true }));
   });
   splitGrid.onkeydown = (event) => {
-    const index = tiles.indexOf(document.activeElement);
-    if (index < 0) return;
+    let index = tiles.indexOf(document.activeElement);
+    if (index < 0) {
+      if (document.activeElement !== splitGrid) return;
+      index = Math.max(0, tiles.findIndex((tile) => tile.dataset.splitPlugin === state.selected));
+      if (!(event.key in { ArrowRight: 1, ArrowLeft: 1, ArrowDown: 1, ArrowUp: 1, Home: 1, End: 1, Enter: 1, " ": 1 })) return;
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
     const columns = splitGridColumns();
     const targets = {
       ArrowRight: index + 1,
@@ -989,6 +996,7 @@ function renderSplitView(pagePlugins) {
     const next = tiles[Math.max(0, Math.min(tiles.length - 1, targets[event.key]))];
     if (next) selectTile(next, { focus: true });
   };
+  splitGrid.tabIndex = tiles.length ? -1 : 0;
   if (splitFocusPending) {
     splitFocusPending = false;
     tiles.find((tile) => tile.dataset.splitPlugin === state.selected)?.focus({ preventScroll: true });
@@ -1495,6 +1503,7 @@ async function init() {
         if (button.dataset.view === state.view) return;
         setCatalogView(button.dataset.view);
         state.page = 1;
+        splitFocusPending = splitView();
         render({ announce: true });
       });
     });
