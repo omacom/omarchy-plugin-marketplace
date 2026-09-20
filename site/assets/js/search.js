@@ -51,8 +51,15 @@ export function selectSearchCompletions(matches, limit = 3) {
   ];
 }
 
+let lastTokensValue = null;
+let lastTokens = [];
+
 export function searchTokens(value) {
-  return foldSearchTerm(value).split(/\s+/).filter(Boolean);
+  const text = String(value || "");
+  if (text === lastTokensValue) return lastTokens;
+  lastTokensValue = text;
+  lastTokens = foldSearchTerm(text).split(/\s+/).filter(Boolean);
+  return lastTokens;
 }
 
 export function currentSearchToken(value) {
@@ -72,12 +79,26 @@ const searchStateTermTypes = new Map([
 export const maximumSearchTerms = 24;
 export const maximumSearchTermLength = 160;
 
+const foldCacheLimit = 20000;
+const foldCache = new Map();
+
+function remember(cache, key, compute) {
+  const cached = cache.get(key);
+  if (cached !== undefined) return cached;
+  const value = compute();
+  if (cache.size >= foldCacheLimit) cache.clear();
+  cache.set(key, value);
+  return value;
+}
+
 export function normalizeSearchTerm(value) {
   return String(value || "").normalize("NFC").trim().replace(/\s+/g, " ");
 }
 
 export function foldSearchTerm(value) {
-  return normalizeSearchTerm(value).toLowerCase();
+  const text = String(value || "");
+  if (text.length < 32) return normalizeSearchTerm(text).toLowerCase();
+  return remember(foldCache, text, () => normalizeSearchTerm(text).toLowerCase());
 }
 
 export function searchPhraseKey(value) {
@@ -91,8 +112,12 @@ export function pluginKindKey(value) {
   return searchPhraseKey(value).replace(/ /g, "-");
 }
 
+const compactCache = new Map();
+
 export function compactSearchKey(value) {
-  return foldSearchTerm(value).replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
+  const text = String(value || "");
+  if (text.length < 32) return foldSearchTerm(text).replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
+  return remember(compactCache, text, () => foldSearchTerm(text).replace(/[^\p{L}\p{M}\p{N}]+/gu, ""));
 }
 
 function matchesCompactSearch(token, searchText) {
@@ -278,7 +303,18 @@ export function searchablePluginId(pluginId) {
     .join(".");
 }
 
+const contextCache = new WeakMap();
+
 export function pluginSearchContext(plugin) {
+  if (!plugin || typeof plugin !== "object") return buildPluginSearchContext(plugin);
+  const cached = contextCache.get(plugin);
+  if (cached) return cached;
+  const context = buildPluginSearchContext(plugin);
+  contextCache.set(plugin, context);
+  return context;
+}
+
+function buildPluginSearchContext(plugin) {
   const publisher = repositoryPublisher(plugin?.repo);
   const tags = Array.isArray(plugin?.tags) ? plugin.tags : [];
   return {

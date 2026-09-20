@@ -527,6 +527,24 @@ function clearSearchTerms({ focus = true } = {}) {
   searchSuggestionStatus.textContent = searchResultMessage("Cleared all search terms");
 }
 
+const searchSuggestionDelay = 80;
+let searchSuggestionTimer = 0;
+
+function scheduleSearchSuggestions() {
+  window.clearTimeout(searchSuggestionTimer);
+  searchSuggestionTimer = window.setTimeout(() => {
+    searchSuggestionTimer = 0;
+    updateSearchSuggestions();
+  }, searchSuggestionDelay);
+}
+
+function flushSearchSuggestions() {
+  if (!searchSuggestionTimer) return;
+  window.clearTimeout(searchSuggestionTimer);
+  searchSuggestionTimer = 0;
+  updateSearchSuggestions();
+}
+
 function updateSearchSuggestions() {
   const rawQuery = search.value.trim();
   const token = currentSearchToken(search.value);
@@ -605,10 +623,30 @@ function searchScopePlugins() {
   ));
 }
 
+let engagementVersion = 0;
+let filteredCache = { key: "", value: [] };
+let ranksCache = { key: "", value: new Map() };
+
+function catalogRanks() {
+  const key = `${state.plugins.length}:${engagementVersion}`;
+  if (ranksCache.key !== key) ranksCache = { key, value: engagementRanks(state.plugins, state.engagement) };
+  return ranksCache.value;
+}
+
 function filteredPlugins() {
+  const key = JSON.stringify([
+    state.plugins.length, state.source, state.category, state.sort, state.terms, state.query, engagementVersion,
+  ]);
+  if (filteredCache.key === key) return filteredCache.value;
+  const value = computeFilteredPlugins();
+  filteredCache = { key, value };
+  return value;
+}
+
+function computeFilteredPlugins() {
   const result = searchScopePlugins().filter((plugin) => pluginMatchesActiveSearch(plugin));
 
-  const ranks = state.sort === "rank" ? engagementRanks(state.plugins, state.engagement) : new Map();
+  const ranks = state.sort === "rank" ? catalogRanks() : new Map();
   const sorters = {
     added: (a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name),
     updated: (a, b) => activityTime(b) - activityTime(a) || a.name.localeCompare(b.name),
@@ -677,6 +715,7 @@ function applyAuthoritativeEngagement(pluginId, result, {
   };
   state.engagementAuthoritative[pluginId] = next;
   state.engagement[pluginId] = next;
+  engagementVersion += 1;
   updateEngagementSummary(document, pluginId, next);
   updatePluginHeart(document, pluginId, next, {
     hearted: hasPluginHeart(pluginId),
@@ -957,7 +996,7 @@ function splitStatRow(metric, label, icon, rank, value) {
 }
 
 function renderSplitView(pagePlugins) {
-  const ranks = engagementRanks(state.plugins, state.engagement);
+  const ranks = catalogRanks();
   if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
   splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
   splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
@@ -1055,7 +1094,7 @@ function renderSplitSelection() {
   splitCard.innerHTML = pluginCard(plugin, { showNew: true });
   bindCardActions(splitCard);
   const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
-  const rank = state.engagementLoaded ? engagementRanks(state.plugins, state.engagement).get(plugin.id) : null;
+  const rank = state.engagementLoaded ? catalogRanks().get(plugin.id) : null;
   splitStatsTotal.textContent = `${state.plugins.length} plugins`;
   splitStatsBody.innerHTML = !state.engagementEnabled
     ? '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>'
@@ -1580,6 +1619,7 @@ async function init() {
       loadEngagementStats().then((stats) => {
         state.engagement = { ...stats, ...state.engagementAuthoritative };
         state.engagementLoaded = true;
+        engagementVersion += 1;
         document.querySelectorAll("[data-plugin-engagement]").forEach((summary) => {
           const pluginId = summary.dataset.pluginEngagement;
           const pluginStats = state.engagement[pluginId] || { views: 0, copies: 0, hearts: 0 };
@@ -1628,12 +1668,13 @@ async function init() {
     state.query = search.value;
     state.page = 1;
     updateSearchAffordances();
-    updateSearchSuggestions();
     render();
+    scheduleSearchSuggestions();
   });
 
   search.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
+    flushSearchSuggestions();
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
       closeSuggestions: closeSearchSuggestions,

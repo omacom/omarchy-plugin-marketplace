@@ -2134,6 +2134,7 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   const html = await readFile(new URL("site/index.html", root), "utf8");
   const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
   const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const searchJs = await readFile(new URL("site/assets/js/search.js", root), "utf8");
   assert.match(html, /class="catalog-heading-side">\s*<div id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"[\s\S]*id="plugin-count"/);
   assert.match(html, /<div class="catalog-controls">\s*<div class="market-search">/);
   assert.doesNotMatch(html.slice(html.indexOf('class="catalog-controls"'), html.indexOf('class="source-bar"')), /catalog-view-mode/);
@@ -2147,7 +2148,12 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
   assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
   assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
-  assert.match(app, /const ranks = engagementRanks\(state\.plugins, state\.engagement\)/);
+  assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(state\.plugins, state\.engagement\)/);
+  assert.match(app, /const ranks = catalogRanks\(\);/);
+  assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
+  assert.match(app, /render\(\);\s*scheduleSearchSuggestions\(\);\s*\}\);/);
+  assert.match(app, /if \(event\.isComposing\) return;\s*flushSearchSuggestions\(\);/);
+  assert.match(searchJs, /const contextCache = new WeakMap\(\);/);
   assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);
   assert.match(app, /const rankLabel = rank\?\.overall \? `#\$\{rank\.overall\}` : "—"/);
   assert.match(app, /Loading engagement statistics…/);
