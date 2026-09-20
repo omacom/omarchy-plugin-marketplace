@@ -197063,6 +197063,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/justarieldotcom/omarchy-hotkey-hints",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:39:56.734Z",
+      "listingValidatedCommit": "188d9324c257deb2df01cc130c402f370fd3a6bc",
+      "listingValidatedAt": "2026-09-20T20:39:56.734Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "justarieldotcom/omarchy-hotkey-hints",
+        "pluginIds": [
+          "justarieldotcom.hotkey-hints"
+        ],
+        "commit": "188d9324c257deb2df01cc130c402f370fd3a6bc",
+        "checkedAt": "2026-09-20T20:39:56.658Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "justarieldotcom/omarchy-hotkey-hints",
+        "pluginIds": [
+          "justarieldotcom.hotkey-hints"
+        ],
+        "commit": "188d9324c257deb2df01cc130c402f370fd3a6bc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T20:39:56.658Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T14:10:22.458Z",
+        "requestEventId": 31492145589,
+        "requestedAt": "2026-09-20T20:34:25Z",
+        "reviewedAt": "2026-09-20T20:39:56.658Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "justarieldotcom.hotkey-hints": {
+          "category": "Productivity",
+          "tags": [
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
