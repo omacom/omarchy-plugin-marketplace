@@ -1411,9 +1411,15 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 .plugin-title-line .builtin-badge { margin-left: 4px; }
 .built-in-card .plugin-title-line { padding-right: 62px; }
 .card-social {
-  position: absolute; z-index: 3; top: 13px; right: 12px; display: flex; height: 25px;
-  align-items: center; gap: 4px;
+  position: absolute; z-index: 3; top: 13px; right: 12px; display: flex; min-height: 25px;
+  align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 4px;
 }
+.card-social > .plugin-heart, .card-social > .card-stars { height: 25px; }
+.card-rank {
+  flex-basis: 100%; color: var(--faint); font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .02em; line-height: 1; text-align: right; pointer-events: none;
+}
+.card-rank[hidden] { display: none; }
 .card-stars {
   display: inline-flex; width: 54px; min-width: 54px; height: 25px; padding: 0 4px;
   border: 1px solid var(--line-strong); background: var(--code-bg);
@@ -1883,6 +1889,7 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   position: relative; z-index: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; min-height: 118px; padding: 0 0 10px; border: 0; margin: 0; box-shadow: 1px 1px 0 0 var(--line);
   background: var(--panel); color: var(--text); text-align: left; font: inherit; cursor: pointer;
 }
+.split-tile { text-decoration: none; }
 .split-tile:hover { background: var(--panel-2); }
 .split-tile.is-selected { background: var(--panel-2); outline: 2px solid var(--accent); outline-offset: -2px; }
 .split-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -1895,7 +1902,19 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
   display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 10px; border-top: 1px solid var(--line);
   color: var(--faint); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
 }
-.split-pager b { color: var(--text); font-weight: 500; }
+.split-pager b { color: var(--text); font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+.split-pager-start { position: relative; display: inline-flex; align-items: center; }
+.split-hint { position: absolute; top: 50%; left: 100%; margin-left: 14px; transform: translateY(-50%); color: var(--faint); white-space: nowrap; line-height: 1.3; opacity: 0; transition: opacity .15s ease; pointer-events: none; }
+.split-panel:has(.split-tile:hover) .split-hint, .split-panel:has(.split-tile:focus-visible) .split-hint { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .split-hint { transition: none; } }
+@media (max-width: 760px) { .split-hint { display: none; } }
+.split-page-jump { display: inline-flex; align-items: center; gap: 6px; }
+.split-page-jump input {
+  width: 6ch; padding: 2px 6px; border: 1px solid var(--line); background: var(--code-bg); color: var(--text);
+  font: inherit; letter-spacing: inherit; text-align: center; -moz-appearance: textfield; appearance: textfield;
+}
+.split-page-jump input::-webkit-outer-spin-button, .split-page-jump input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.split-page-jump input:focus-visible { outline: 1px solid var(--accent); outline-offset: -1px; }
 .split-pager button { border: 0; background: transparent; color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 4px 0; }
 .split-pager button:hover:not(:disabled) { color: var(--accent); }
 .split-pager button:disabled { opacity: .42; cursor: not-allowed; }

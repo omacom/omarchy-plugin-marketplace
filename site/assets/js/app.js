@@ -30,14 +30,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260920-03";
+} from "./shared.js?v=20260920-04";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260920-03";
+} from "./engagement.js?v=20260920-04";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -65,13 +65,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260920-03";
+} from "./search.js?v=20260920-04";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260920-03";
+} from "./taxonomy.js?v=20260920-04";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -205,7 +205,8 @@ const splitFilters = document.querySelector("#split-filters");
 const splitTopRank = document.querySelector("#split-top-rank");
 const splitPagePrevious = document.querySelector("#split-page-previous");
 const splitPageNext = document.querySelector("#split-page-next");
-const splitPageSummary = document.querySelector("#split-page-summary");
+const splitPageInput = document.querySelector("#split-page-input");
+const splitPageTotal = document.querySelector("#split-page-total");
 const categoryBar = document.querySelector(".category-bar");
 const clearFilters = document.querySelector("#clear-filters");
 const viewDockStatus = document.querySelector("#catalog-view-dock-status");
@@ -729,6 +730,8 @@ function applyAuthoritativeEngagement(pluginId, result, {
     if (!restorePluginCardFocus(focusToken) && focusToken) focusCatalogResult();
   } else if (splitView()) {
     refreshSplitRanks();
+  } else {
+    refreshCardRanks();
   }
 }
 
@@ -831,7 +834,11 @@ function pluginCard(plugin, { showNew = false } = {}) {
         pending: !state.engagementLoaded,
       })
     : "";
-  const social = stars || heart ? `<div class="card-social">${stars}${heart}</div>` : "";
+  const rank = cardRankLabel(plugin);
+  const rankLine = state.engagementEnabled && !plugin.builtIn
+    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, and views"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
+    : "";
+  const social = stars || heart || rankLine ? `<div class="card-social">${stars}${heart}${rankLine}</div>` : "";
   const publisher = publisherLogin(plugin);
   const authorLine = publisher && !plugin.builtIn
     ? `<span class="plugin-author">by <button type="button" data-author="${escapeHtml(publisher)}" aria-label="Show all plugins by @${escapeHtml(publisher)}">@${escapeHtml(publisher)}</button> · ${escapeHtml(plugin.kind || plugin.category)}</span>`
@@ -943,7 +950,9 @@ function renderPagination(totalItems, pageState) {
   pagination.hidden = controls.paginationHidden || splitView();
   splitPagePrevious.disabled = !pageState.hasPrevious;
   splitPageNext.disabled = !pageState.hasNext;
-  splitPageSummary.textContent = `Page ${pageState.page} of ${pageState.totalPages} · ${pageSize()} per page`;
+  splitPageInput.value = String(pageState.page);
+  splitPageInput.max = String(pageState.totalPages);
+  splitPageTotal.textContent = `of ${pageState.totalPages} · ${pageSize()} per page`;
   viewToggle.hidden = controls.browseAllHidden || splitView();
   viewDock.hidden = controls.dockHidden;
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
@@ -973,11 +982,11 @@ function splitTile(plugin, rank) {
   const rankLabel = rank?.overall ? `#${rank.overall}` : "—";
   const selected = plugin.id === state.selected;
   return `
-    <button class="split-tile${selected ? " is-selected" : ""}" type="button" role="option" aria-selected="${selected}" data-split-plugin="${escapeHtml(plugin.id)}" aria-label="${escapeHtml(plugin.name)}, rank ${escapeHtml(rankLabel)}">
+    <a class="split-tile${selected ? " is-selected" : ""}" role="option" aria-selected="${selected}" data-split-plugin="${escapeHtml(plugin.id)}" href="plugin.html?id=${encodeURIComponent(plugin.id)}" target="_blank" rel="noopener" draggable="false" aria-label="${escapeHtml(plugin.name)}, rank ${escapeHtml(rankLabel)}. Control Enter opens the plugin page in a background tab">
       ${preview}
       <span class="split-tile-name">${escapeHtml(plugin.name)}</span>
-      <span class="split-tile-meta"><span>${escapeHtml(plugin.kind || plugin.category)}</span><b title="Overall rank from hearts, install copies, and views">${escapeHtml(rankLabel)}</b></span>
-    </button>`;
+      <span class="split-tile-meta"><span>${escapeHtml(plugin.kind || plugin.category)}</span><b>${escapeHtml(rankLabel)}</b></span>
+    </a>`;
 }
 
 function splitStatRow(metric, label, icon, rank, value) {
@@ -1024,7 +1033,15 @@ function renderSplitView(pagePlugins) {
   };
   tiles.forEach((tile) => {
     tile.tabIndex = tile.dataset.splitPlugin === state.selected ? 0 : -1;
-    tile.addEventListener("click", () => selectTile(tile, { focus: true }));
+    tile.addEventListener("click", (event) => {
+      // Modifier clicks keep the browser's native background-tab behaviour; plain clicks only select.
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) {
+        selectTile(tile);
+        return;
+      }
+      event.preventDefault();
+      selectTile(tile, { focus: true });
+    });
   });
   splitGrid.onkeydown = (event) => {
     let index = tiles.indexOf(document.activeElement);
@@ -1045,6 +1062,18 @@ function renderSplitView(pagePlugins) {
       Home: 0,
       End: tiles.length - 1,
     };
+    if (event.key === "Enter") {
+      // Control or Command Enter lets the link open natively in a background tab; plain Enter only selects.
+      if (event.ctrlKey || event.metaKey || event.shiftKey) return;
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
+    if (event.key === " ") {
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
     if (event.key === "PageDown" || event.key === "PageUp") {
       const button = event.key === "PageDown" ? nextPage : previousPage;
       if (button.disabled) return;
@@ -1091,6 +1120,21 @@ function splitGridColumns() {
   return Math.max(1, columns);
 }
 
+function cardRankLabel(plugin) {
+  if (!state.engagementEnabled || !state.engagementLoaded) return "";
+  const rank = catalogRanks().get(plugin.id);
+  return rank?.overall ? `#${rank.overall}` : "";
+}
+
+function refreshCardRanks(root = document) {
+  root.querySelectorAll("[data-card-rank]").forEach((element) => {
+    const plugin = state.plugins.find((candidate) => candidate.id === element.dataset.cardRank);
+    const label = plugin ? cardRankLabel(plugin) : "";
+    element.textContent = label;
+    element.hidden = !label;
+  });
+}
+
 function refreshSplitRanks() {
   const ranks = catalogRanks();
   splitGrid.querySelectorAll("[data-split-plugin]").forEach((tile) => {
@@ -1100,6 +1144,7 @@ function refreshSplitRanks() {
   });
   const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
   if (plugin) renderSplitStats(plugin);
+  refreshCardRanks();
 }
 
 function renderSplitSelection() {
@@ -1623,6 +1668,28 @@ async function init() {
       renderSortOptions();
       render({ announce: true });
     });
+    const jumpToPage = () => {
+      const requested = Number.parseInt(splitPageInput.value, 10);
+      const totalPages = Number(splitPageInput.max) || 1;
+      const page = Number.isFinite(requested) ? Math.min(totalPages, Math.max(1, requested)) : state.page;
+      if (page === state.page) {
+        splitPageInput.value = String(state.page);
+        return;
+      }
+      state.page = page;
+      splitFocusPending = true;
+      render({ historyMode: "push", announce: true });
+    };
+    splitPageInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        jumpToPage();
+      } else if (event.key === "Escape") {
+        splitPageInput.value = String(state.page);
+        splitPageInput.blur();
+      }
+    });
+    splitPageInput.addEventListener("change", jumpToPage);
     splitPagePrevious.addEventListener("click", () => previousPage.click());
     splitPageNext.addEventListener("click", () => nextPage.click());
     let splitResizeFrame = 0;
@@ -1652,6 +1719,7 @@ async function init() {
             hearted: hasPluginHeart(pluginId),
           });
         });
+        refreshCardRanks();
         if (splitView() && !engagementSorts.has(state.sort)) render({ historyMode: "none" });
         if (engagementSorts.has(state.sort)) {
           const focusToken = pluginCardFocusToken();

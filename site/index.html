@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260920-03">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260920-04">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -134,10 +134,13 @@
           <section class="split-panel" aria-label="Plugin tiles">
             <div class="split-panel-label"><span>Plugins</span><button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank</button><span id="split-panel-count"></span></div>
             <div id="split-filters" class="split-filters"></div>
-            <div id="split-grid" class="split-grid" role="listbox" aria-label="Select a plugin. Arrow keys move the selection, Page Up and Page Down change the page"></div>
+            <div id="split-grid" class="split-grid" role="listbox" aria-label="Select a plugin. Arrow keys move the selection, Page Up and Page Down change the page, Control Enter opens the plugin page in a background tab"></div>
             <div class="split-pager">
-              <button id="split-page-previous" type="button">← Previous</button>
-              <b id="split-page-summary"></b>
+              <span class="split-pager-start">
+                <button id="split-page-previous" type="button">← Previous</button>
+                <span class="split-hint" aria-hidden="true">Ctrl+Enter or<br>Ctrl+click: new tab</span>
+              </span>
+              <b id="split-page-summary"><label class="split-page-jump">Page <input id="split-page-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Go to page"></label> <span id="split-page-total"></span></b>
               <button id="split-page-next" type="button">Next →</button>
             </div>
           </section>
@@ -214,6 +217,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20260920-03"></script>
+    <script type="module" src="assets/js/app.js?v=20260920-04"></script>
   </body>
 </html>
