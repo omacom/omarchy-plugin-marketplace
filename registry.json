@@ -195562,6 +195562,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MrHogun/omarchy-music-saver",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T10:44:09.588Z",
+      "listingValidatedCommit": "d2e5dc384cd5011cd702b8cad1f703d6beefdf22",
+      "listingValidatedAt": "2026-09-20T10:44:09.588Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrhogun/omarchy-music-saver",
+        "pluginIds": [
+          "mrhogun.music-saver"
+        ],
+        "commit": "d2e5dc384cd5011cd702b8cad1f703d6beefdf22",
+        "checkedAt": "2026-09-20T10:44:09.505Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mrhogun/omarchy-music-saver",
+        "pluginIds": [
+          "mrhogun.music-saver"
+        ],
+        "commit": "d2e5dc384cd5011cd702b8cad1f703d6beefdf22",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T10:44:09.505Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T10:11:43.418Z",
+        "requestEventId": 31478163939,
+        "requestedAt": "2026-09-20T10:24:57Z",
+        "reviewedAt": "2026-09-20T10:44:09.505Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mrhogun.music-saver": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
