@@ -194433,6 +194433,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bishalber/omarchy-minimalist-worldclock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T00:35:09.225Z",
+      "listingValidatedCommit": "fb4158b536089524b0993e1c31202c450c43662d",
+      "listingValidatedAt": "2026-09-20T00:35:09.225Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bishalber/omarchy-minimalist-worldclock",
+        "pluginIds": [
+          "bishu.minimalist-worldclock"
+        ],
+        "commit": "fb4158b536089524b0993e1c31202c450c43662d",
+        "checkedAt": "2026-09-20T00:35:09.133Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bishu.minimalist-worldclock": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
