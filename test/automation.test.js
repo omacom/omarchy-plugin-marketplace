@@ -96,6 +96,7 @@ import {
 import {
   catalogCategoryTotals,
   matchesKidsTaxonomy,
+  matchesBarTaxonomy,
   matchesVpnTaxonomy,
 } from "../site/assets/js/taxonomy.js";
 
@@ -1178,6 +1179,53 @@ test("Kids catalog filtering uses only the exact controlled taxonomy", () => {
   assert.equal(catalogCategoryTotals([{ category: "Other", tags: [] }]).has("Kids"), false);
 });
 
+test("Bar catalog filtering covers bar replacements and bar modifiers, not bar widgets", () => {
+  for (const plugin of [
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "example.custom", name: "Custom", category: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "  BAR ", tags: [] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["hyprland", "bar"] },
+    { id: "henri.hide-bar-on-fullscreen", name: "Hide Bar on Video Fullscreen", category: "Desktop", kind: "Service", tags: ["bar"] },
+    { id: "fixlixpender.bar-color", name: "Bar Color", category: "Appearance", kind: "Bar widget", tags: ["hyprland"] },
+    { id: "floating-waybar", name: "Floating Waybar", category: "Appearance", kind: "Bar", tags: ["quickshell"] },
+    { id: "kc.omarchy-menubar-manager", name: "Omarchy Menubar Manager", category: "Appearance", kind: "Bar widget", tags: ["bar"] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), true, plugin.name);
+  }
+  for (const plugin of [
+    undefined,
+    null,
+    {},
+    "Bar",
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+    { id: "gennaro.hwmon", name: "HW Monitor", category: "Widgets", kind: "Bar widget", tags: ["bar", "quickshell"], description: "Sparkline panel for the Omarchy bar." },
+    { id: "io.github.austindixson.touchbar", name: "Touch Bar", category: "Hardware", kind: "Service", tags: ["hyprland"] },
+    { id: "gurvindersingh-web.system-stats", name: "System Stats (Waybar Style)", category: "Hardware", kind: "Bar widget", tags: ["bar"] },
+    { id: "sportsbar", name: "Sportsbar", category: "Widgets", kind: "Bar widget", tags: ["bar", "media"] },
+    { id: "io.github.rizmi.services", name: "Services Manager", category: "Widgets", kind: "Service", tags: ["system"] },
+    { id: "example.bar", name: "Bar Tools", category: "Productivity", kind: "Bar widget", tags: ["bar"] },
+    { id: "example.bar", name: "Bar", category: "bars", kind: "bar widget", tags: [] },
+    { id: 7, name: 8, category: 9, kind: 10, tags: 11 },
+    { id: { toString: null }, name: ["Bar"], kind: { value: "Bar" }, tags: [] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), false, JSON.stringify(plugin));
+  }
+
+  const totals = catalogCategoryTotals([
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["bar"] },
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+  ]);
+  assert.equal(totals.get("Bar"), 2);
+  assert.equal(totals.get("Bars"), 1);
+  assert.equal(totals.get("Appearance"), 1);
+  assert.equal(totals.get("Widgets"), 1);
+  assert.equal(catalogCategoryTotals([
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["bar"] },
+  ]).has("Bar"), false);
+});
+
 test("VPN catalog filtering requires exact category, VPN identity, or security-scoped description evidence", () => {
   for (const plugin of [
     { id: "example.client", name: "Client", category: "VPN", tags: [] },
@@ -1618,12 +1666,14 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /completion\.type === "fulltext" \? "text" : completion\.type/);
   assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
-  assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security", "vpn"\]/);
+  assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
+  assert.match(files.app, /const taxonomyCatalogFilters = \[\s*\["VPN", matchesVpnTaxonomy\],\s*\["Bar", matchesBarTaxonomy\],\s*\]/);
   assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
-  assert.match(files.app, /if \(filter === "VPN"\) return matchesVpnTaxonomy\(plugin\)/);
-  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => value !== "VPN"\)/);
-  assert.match(files.app, /value: tag === "vpn" \? "VPN" : `tag:\$\{tag\}`[\s\S]*tag === "vpn" \? matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.app, /for \(const \[value, matches\] of taxonomyCatalogFilters\) \{\s*if \(filter === value\) return matches\(plugin\);/);
+  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => !taxonomyCatalogFilterNames\.has\(value\)\)/);
+  assert.match(files.app, /const taxonomyFilters = taxonomyCatalogFilters[\s\S]*total: plugins\.filter\(matches\)\.length[\s\S]*\.\.\.tagFilters,\s*\.\.\.taxonomyFilters,/);
   assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /export function matchesBarTaxonomy\(plugin\)/);
   assert.match(files.taxonomyJs, /tags\.includes\("vpn"\)/);
   assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
   assert.match(files.sharedJs, /vpn: "VPN"/);

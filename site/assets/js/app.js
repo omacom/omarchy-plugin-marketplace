@@ -62,6 +62,7 @@ import {
 } from "./search.js?v=20260911-01";
 import {
   catalogCategoryTotals,
+  matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
 } from "./taxonomy.js?v=20260911-01";
@@ -113,7 +114,12 @@ function cardTaxonomyLabels(plugin) {
 
 const engagementSorts = new Set(["views", "copies", "hearts"]);
 const verificationFilters = new Set(["verified", "unverified"]);
-const taxonomyFilterTags = ["ai", "games", "security", "vpn"];
+const taxonomyFilterTags = ["ai", "games", "security"];
+const taxonomyCatalogFilters = [
+  ["VPN", matchesVpnTaxonomy],
+  ["Bar", matchesBarTaxonomy],
+];
+const taxonomyCatalogFilterNames = new Set(taxonomyCatalogFilters.map(([value]) => value));
 const sortOptions = {
   community: [
     ["added", "Recently added"],
@@ -605,7 +611,9 @@ function allCategoryLabel() {
 function matchesCatalogFilter(plugin, filter = state.category) {
   if (filter === "all") return true;
   if (filter === "Kids") return matchesKidsTaxonomy(plugin);
-  if (filter === "VPN") return matchesVpnTaxonomy(plugin);
+  for (const [value, matches] of taxonomyCatalogFilters) {
+    if (filter === value) return matches(plugin);
+  }
   if (filter.startsWith("tag:")) return (plugin.tags || []).includes(filter.slice(4));
   return plugin.category === filter;
 }
@@ -1101,22 +1109,28 @@ function renderCategories() {
   const plugins = sourcePlugins();
   const categoryTotals = catalogCategoryTotals(plugins);
   const categoryFilters = [...categoryTotals.entries()]
-    .filter(([value]) => value !== "VPN")
+    .filter(([value]) => !taxonomyCatalogFilterNames.has(value))
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([value, total]) => ({ value, label: value, total }));
   const tagFilters = taxonomyFilterTags
     .map((tag) => ({
-      value: tag === "vpn" ? "VPN" : `tag:${tag}`,
+      value: `tag:${tag}`,
       label: displayTaxonomyTag(tag),
-      total: plugins.filter((plugin) => (
-        tag === "vpn" ? matchesVpnTaxonomy(plugin) : (plugin.tags || []).includes(tag)
-      )).length,
+      total: plugins.filter((plugin) => (plugin.tags || []).includes(tag)).length,
+    }))
+    .filter(({ total }) => total > 0);
+  const taxonomyFilters = taxonomyCatalogFilters
+    .map(([value, matches]) => ({
+      value,
+      label: value,
+      total: plugins.filter(matches).length,
     }))
     .filter(({ total }) => total > 0);
   const filters = [
     { value: "all", label: allCategoryLabel(), total: plugins.length },
     ...categoryFilters,
     ...tagFilters,
+    ...taxonomyFilters,
   ];
 
   categoriesRoot.innerHTML = filters.map(({ value, label, total }) => `

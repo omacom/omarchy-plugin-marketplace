@@ -552,9 +552,11 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
   assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
-  assert.match(script, /import \{ matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260911-01"/);
-  assert.match(script, /id: "taxonomy:vpn"[\s\S]*label: "VPN"[\s\S]*activeCluster === vpnCommunityFilter\.id[\s\S]*matchesVpnTaxonomy\(node\)/);
-  assert.match(script, /const vpnCount = explorer\.nodes\.filter\(matchesVpnTaxonomy\)\.length[\s\S]*findIndex\(\(cluster\) => cluster\.id === "security"\)[\s\S]*securityIndex \+ 1/);
+  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260911-01"/);
+  assert.match(script, /id: "taxonomy:vpn",\s*label: "VPN",[\s\S]*anchor: "security",\s*matches: matchesVpnTaxonomy,/);
+  assert.match(script, /id: "taxonomy:bar",\s*label: "Bar",[\s\S]*anchor: "appearance",\s*matches: matchesBarTaxonomy,/);
+  assert.match(script, /const taxonomyFilter = taxonomyCommunityFilters\.find\(\(filter\) => filter\.id === activeCluster\);\s*return taxonomyFilter \? taxonomyFilter\.matches\(node\) : node\.cluster === activeCluster/);
+  assert.match(script, /taxonomyCommunityFilters\.forEach\(\(\{ id, label, color, anchor, matches \}\) => \{\s*const count = explorer\.nodes\.filter\(matches\)\.length;\s*if \(!count\) return;[\s\S]*cluster\.id === anchor\)[\s\S]*anchorIndex \+ 1/);
   assert.match(script, /button\.dataset\.filterKind = cluster\.taxonomy \? "taxonomy" : "community"[\s\S]*\$\{cluster\.label\} filter: \$\{number\.format\(cluster\.count\)\} matching plugins/);
   assert.match(styles, /\.graph-analysis\s*\{[\s\S]*bottom:\s*0[\s\S]*width:\s*102px/);
   assert.match(page, /id="community-scroll-fade"[^>]+aria-hidden="true"/);

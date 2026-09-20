@@ -46,6 +46,13 @@ const vpnActionTerms = new Set([
   "tunnels",
 ]);
 
+const barPluginKinds = new Set(["bar"]);
+const barCategories = new Set(["Bar", "Bars"]);
+const barIdentityTerms = new Set(["bar", "menubar", "statusbar", "topbar", "waybar"]);
+const barHostKinds = new Set(["service"]);
+const barHostCategories = new Set(["Appearance"]);
+const barExcludedCategories = new Set(["Hardware"]);
+
 function taxonomyTerms(value) {
   if (typeof value !== "string") return [];
   return value.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
@@ -75,12 +82,26 @@ export function matchesVpnTaxonomy(plugin) {
     && descriptionTerms.some((term) => vpnActionTerms.has(term));
 }
 
+export function matchesBarTaxonomy(plugin) {
+  if (!plugin || typeof plugin !== "object") return false;
+  if (barCategories.has(plugin.category)) return true;
+  if (barPluginKinds.has(taxonomyTerms(plugin.kind).join("-"))) return true;
+  if (barExcludedCategories.has(plugin.category)) return false;
+  const pluginId = typeof plugin.id === "string" ? plugin.id.toLowerCase() : "";
+  const localPluginId = pluginId.split(".").at(-1);
+  const identityTerms = [localPluginId, plugin.name].filter(Boolean).flatMap(taxonomyTerms);
+  if (!identityTerms.some((term) => barIdentityTerms.has(term))) return false;
+  return barHostKinds.has(taxonomyTerms(plugin.kind).join("-"))
+    || barHostCategories.has(plugin.category);
+}
+
 export function catalogCategoryTotals(plugins) {
   const totals = new Map();
   plugins.forEach((plugin) => totals.set(plugin.category, (totals.get(plugin.category) || 0) + 1));
   for (const [category, matches] of [
     ["Kids", matchesKidsTaxonomy],
     ["VPN", matchesVpnTaxonomy],
+    ["Bar", matchesBarTaxonomy],
   ]) {
     const total = plugins.filter(matches).length;
     if (total) totals.set(category, total);
