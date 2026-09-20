@@ -197255,6 +197255,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/M44F4/omatouch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-20",
+      "listedAt": "2026-09-20T20:57:35.061Z",
+      "listingValidatedCommit": "bc858841da50eed88113b8cb0f02a8cacacd08b3",
+      "listingValidatedAt": "2026-09-20T20:57:35.061Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "m44f4/omatouch",
+        "pluginIds": [
+          "m44f4.omatouch"
+        ],
+        "commit": "bc858841da50eed88113b8cb0f02a8cacacd08b3",
+        "checkedAt": "2026-09-20T20:57:34.967Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "m44f4/omatouch",
+        "pluginIds": [
+          "m44f4.omatouch"
+        ],
+        "commit": "bc858841da50eed88113b8cb0f02a8cacacd08b3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-20T20:57:34.967Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T20:02:54.295Z",
+        "requestEventId": 31492645704,
+        "requestedAt": "2026-09-20T20:55:59Z",
+        "reviewedAt": "2026-09-20T20:57:34.967Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "m44f4.omatouch": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
