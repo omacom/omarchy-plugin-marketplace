@@ -1881,13 +1881,13 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .split-pager button { border: 0; background: transparent; color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 4px 0; }
 .split-pager button:hover:not(:disabled) { color: var(--accent); }
 .split-pager button:disabled { opacity: .42; cursor: not-allowed; }
-.split-aside { display: flex; flex-direction: column; gap: 0; min-width: 0; }
+.split-aside { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
 .split-card { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
 .split-card .plugin-title-line { flex-wrap: nowrap; }
 .split-card .plugin-title-line h3 { min-width: 0; flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .split-card .plugin-author { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .split-card .plugin-description { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; line-clamp: 1; overflow: hidden; }
-.split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); border-top: 0; background: var(--panel); }
+.split-stats { display: flex; flex: 1; flex-direction: column; border: 1px solid var(--line); background: var(--panel); }
 .split-stats-body { padding: 8px 14px 4px; }
 .split-stat { display: grid; grid-template-columns: 110px 1fr 54px; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
 .split-stat:last-child { border-bottom: 0; }
@@ -1909,6 +1909,5 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 @media (max-width: 1100px) {
   .catalog-split { grid-template-columns: minmax(0, 1fr); }
   .split-aside { order: -1; }
-  .split-stats { border-top: 1px solid var(--line); }
   .split-card { grid-template-columns: minmax(0, 1fr); }
 }
