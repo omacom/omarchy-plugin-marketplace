@@ -199973,6 +199973,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/D3m0nZOnFire/clock-fr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:20:45.347Z",
+      "listingValidatedCommit": "80799c793f6d6ab6bab3b474302319c255b761cd",
+      "listingValidatedAt": "2026-09-21T20:20:45.347Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "d3m0nzonfire/clock-fr",
+        "pluginIds": [
+          "d3m0nz.clock-fr"
+        ],
+        "commit": "80799c793f6d6ab6bab3b474302319c255b761cd",
+        "checkedAt": "2026-09-21T20:20:45.243Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "d3m0nz.clock-fr": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
