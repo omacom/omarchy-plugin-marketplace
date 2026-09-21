@@ -200969,6 +200969,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zooltd/omarchy-mouse-jiggler",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:36:25.418Z",
+      "listingValidatedCommit": "6ba553e054409cd351a7f2567d9d227d8ac4b1e1",
+      "listingValidatedAt": "2026-09-21T21:36:25.418Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zooltd/omarchy-mouse-jiggler",
+        "pluginIds": [
+          "youhan.mouse-jiggler"
+        ],
+        "commit": "6ba553e054409cd351a7f2567d9d227d8ac4b1e1",
+        "checkedAt": "2026-09-21T21:36:25.319Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "youhan.mouse-jiggler": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
