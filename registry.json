@@ -200006,6 +200006,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pdfrg/rpbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:23:52.324Z",
+      "listingValidatedCommit": "3010c934e86d829e347eb8164fd37a4b7048ab07",
+      "listingValidatedAt": "2026-09-21T20:23:52.324Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pdfrg/rpbar",
+        "pluginIds": [
+          "io.github.pdfrg.rpbar"
+        ],
+        "commit": "3010c934e86d829e347eb8164fd37a4b7048ab07",
+        "checkedAt": "2026-09-21T20:23:51.995Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pdfrg/rpbar",
+        "pluginIds": [
+          "io.github.pdfrg.rpbar"
+        ],
+        "commit": "3010c934e86d829e347eb8164fd37a4b7048ab07",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T20:23:51.995Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T16:30:29.829Z",
+        "requestEventId": 31555564164,
+        "requestedAt": "2026-09-21T19:59:12Z",
+        "reviewedAt": "2026-09-21T20:23:51.995Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.pdfrg.rpbar": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
