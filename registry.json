@@ -197882,6 +197882,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RektyRowdyy/omarchy-whatsapp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T04:48:12.187Z",
+      "listingValidatedCommit": "3631b73489d9e622a6efc8a28ba520a1afe8c49c",
+      "listingValidatedAt": "2026-09-21T04:48:12.187Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rektyrowdyy/omarchy-whatsapp",
+        "pluginIds": [
+          "io.github.rektyrowdyy.whatsapp"
+        ],
+        "commit": "3631b73489d9e622a6efc8a28ba520a1afe8c49c",
+        "checkedAt": "2026-09-21T04:48:12.089Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rektyrowdyy/omarchy-whatsapp",
+        "pluginIds": [
+          "io.github.rektyrowdyy.whatsapp"
+        ],
+        "commit": "3631b73489d9e622a6efc8a28ba520a1afe8c49c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T04:48:12.089Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T06:37:22.083Z",
+        "requestEventId": 31504503785,
+        "requestedAt": "2026-09-21T04:38:42Z",
+        "reviewedAt": "2026-09-21T04:48:12.089Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rektyrowdyy.whatsapp": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
