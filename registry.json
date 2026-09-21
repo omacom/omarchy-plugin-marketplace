@@ -200484,6 +200484,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dbachelder/omarchy-istats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:57:25.614Z",
+      "listingValidatedCommit": "e1361a10f9e57bbbd723baf489bb52a58aa79b41",
+      "listingValidatedAt": "2026-09-21T20:57:25.614Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dbachelder/omarchy-istats",
+        "pluginIds": [
+          "io.github.dbachelder.istats"
+        ],
+        "commit": "e1361a10f9e57bbbd723baf489bb52a58aa79b41",
+        "checkedAt": "2026-09-21T20:57:25.516Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dbachelder.istats": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
