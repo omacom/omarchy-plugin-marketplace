@@ -197938,6 +197938,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SlowburnAZ/omanomad",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T04:52:19.234Z",
+      "listingValidatedCommit": "4496b5b847202b50fcdfbedc02f64e391cfea964",
+      "listingValidatedAt": "2026-09-21T04:52:19.234Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "slowburnaz/omanomad",
+        "pluginIds": [
+          "slowburnaz.omanomad"
+        ],
+        "commit": "4496b5b847202b50fcdfbedc02f64e391cfea964",
+        "checkedAt": "2026-09-21T04:52:19.147Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "slowburnaz/omanomad",
+        "pluginIds": [
+          "slowburnaz.omanomad"
+        ],
+        "commit": "4496b5b847202b50fcdfbedc02f64e391cfea964",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T04:52:19.147Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T02:43:08.005Z",
+        "requestEventId": 31504545999,
+        "requestedAt": "2026-09-21T04:40:00Z",
+        "reviewedAt": "2026-09-21T04:52:19.147Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "slowburnaz.omanomad": {
+          "category": "System",
+          "tags": [
+            "ai",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
