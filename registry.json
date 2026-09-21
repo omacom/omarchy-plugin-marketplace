@@ -199019,6 +199019,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Marobotic/omarchy-discord-vc",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:12:38.896Z",
+      "listingValidatedCommit": "f986ef68f01e99c0e96834c4a494413f9a71f419",
+      "listingValidatedAt": "2026-09-21T19:12:38.896Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marobotic/omarchy-discord-vc",
+        "pluginIds": [
+          "io.github.marobotic.discord-vc"
+        ],
+        "commit": "f986ef68f01e99c0e96834c4a494413f9a71f419",
+        "checkedAt": "2026-09-21T19:12:38.797Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "marobotic/omarchy-discord-vc",
+        "pluginIds": [
+          "io.github.marobotic.discord-vc"
+        ],
+        "commit": "f986ef68f01e99c0e96834c4a494413f9a71f419",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T19:12:38.797Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T18:22:29.761Z",
+        "requestEventId": 31552826531,
+        "requestedAt": "2026-09-21T19:10:55Z",
+        "reviewedAt": "2026-09-21T19:12:38.797Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.marobotic.discord-vc": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
