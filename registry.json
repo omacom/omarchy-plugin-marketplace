@@ -200727,6 +200727,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nickfoy/omarchy-spotify-controls",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:17:14.541Z",
+      "listingValidatedCommit": "a7921b72f20e0b591d9ba32eef6cd09c116e5a15",
+      "listingValidatedAt": "2026-09-21T21:17:14.541Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nickfoy/omarchy-spotify-controls",
+        "pluginIds": [
+          "nick.spotify"
+        ],
+        "commit": "a7921b72f20e0b591d9ba32eef6cd09c116e5a15",
+        "checkedAt": "2026-09-21T21:17:14.440Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nick.spotify": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
