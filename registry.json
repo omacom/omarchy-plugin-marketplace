@@ -198439,6 +198439,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dawestheperson/omarchy-predator-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T05:30:46.411Z",
+      "listingValidatedCommit": "f8fdeafc6a858816f50d9a2a50af73f0a11f5c9d",
+      "listingValidatedAt": "2026-09-21T05:30:46.411Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dawestheperson/omarchy-predator-widget",
+        "pluginIds": [
+          "dawestheperson.predator"
+        ],
+        "commit": "f8fdeafc6a858816f50d9a2a50af73f0a11f5c9d",
+        "checkedAt": "2026-09-21T05:30:46.313Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dawestheperson/omarchy-predator-widget",
+        "pluginIds": [
+          "dawestheperson.predator"
+        ],
+        "commit": "f8fdeafc6a858816f50d9a2a50af73f0a11f5c9d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T05:30:46.313Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T00:05:17.727Z",
+        "requestEventId": 31505458012,
+        "requestedAt": "2026-09-21T05:09:38Z",
+        "reviewedAt": "2026-09-21T05:30:46.313Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dawestheperson.predator": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
