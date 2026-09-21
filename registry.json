@@ -198107,6 +198107,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Steezy-code/omarchy-mousemap",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T05:05:15.626Z",
+      "listingValidatedCommit": "c53a79b5f8a1940d8099b8982e8856f2b183a4e5",
+      "listingValidatedAt": "2026-09-21T05:05:15.626Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "steezy-code/omarchy-mousemap",
+        "pluginIds": [
+          "io.github.steezy-code.mousemap"
+        ],
+        "commit": "c53a79b5f8a1940d8099b8982e8856f2b183a4e5",
+        "checkedAt": "2026-09-21T05:05:15.572Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "steezy-code/omarchy-mousemap",
+        "pluginIds": [
+          "io.github.steezy-code.mousemap"
+        ],
+        "commit": "c53a79b5f8a1940d8099b8982e8856f2b183a4e5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T05:05:15.572Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T00:45:10.070Z",
+        "requestEventId": 31504868905,
+        "requestedAt": "2026-09-21T04:50:31Z",
+        "reviewedAt": "2026-09-21T05:05:15.572Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.steezy-code.mousemap": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
