@@ -202006,6 +202006,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dchristensen8/omarchy-arcade",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:40:03.831Z",
+      "listingValidatedCommit": "6dde50c7c8b2943b4f5ffb73e1c29f425a65ed14",
+      "listingValidatedAt": "2026-09-21T23:40:03.831Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dchristensen8/omarchy-arcade",
+        "pluginIds": [
+          "dchristensen8.arcade"
+        ],
+        "commit": "6dde50c7c8b2943b4f5ffb73e1c29f425a65ed14",
+        "checkedAt": "2026-09-21T23:40:03.739Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dchristensen8.arcade": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
