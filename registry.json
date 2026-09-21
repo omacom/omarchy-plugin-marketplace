@@ -201105,6 +201105,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/p145085/omarchy-terror-zone",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:52:23.768Z",
+      "listingValidatedCommit": "62c402e0727f8686c0aafcc23eac36dde5c164be",
+      "listingValidatedAt": "2026-09-21T21:52:23.768Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "p145085/omarchy-terror-zone",
+        "pluginIds": [
+          "emila.terror-zone"
+        ],
+        "commit": "62c402e0727f8686c0aafcc23eac36dde5c164be",
+        "checkedAt": "2026-09-21T21:52:23.666Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "p145085/omarchy-terror-zone",
+        "pluginIds": [
+          "emila.terror-zone"
+        ],
+        "commit": "62c402e0727f8686c0aafcc23eac36dde5c164be",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T21:52:23.666Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T05:07:11.599Z",
+        "requestEventId": 31561030574,
+        "requestedAt": "2026-09-21T21:41:25Z",
+        "reviewedAt": "2026-09-21T21:52:23.666Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "emila.terror-zone": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
