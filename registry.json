@@ -201872,6 +201872,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stackrats/omarchy-mast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:25:10.694Z",
+      "listingValidatedCommit": "8b75eace27ccc705e54aa02e10ab6b66b307b7b6",
+      "listingValidatedAt": "2026-09-21T23:25:10.694Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stackrats/omarchy-mast",
+        "pluginIds": [
+          "io.github.stackrats.mast"
+        ],
+        "commit": "8b75eace27ccc705e54aa02e10ab6b66b307b7b6",
+        "checkedAt": "2026-09-21T23:25:10.594Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.stackrats.mast": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
