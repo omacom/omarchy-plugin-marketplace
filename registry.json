@@ -199672,6 +199672,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stoneynutcase/omarchy-fx",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:57:06.583Z",
+      "listingValidatedCommit": "1faa2b330126f3031007c0cac5efb30c11f2ed8f",
+      "listingValidatedAt": "2026-09-21T19:57:06.583Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stoneynutcase/omarchy-fx",
+        "pluginIds": [
+          "omarchy-fx"
+        ],
+        "commit": "1faa2b330126f3031007c0cac5efb30c11f2ed8f",
+        "checkedAt": "2026-09-21T19:57:06.486Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stoneynutcase/omarchy-fx",
+        "pluginIds": [
+          "omarchy-fx"
+        ],
+        "commit": "1faa2b330126f3031007c0cac5efb30c11f2ed8f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T19:57:06.486Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T11:19:50.711Z",
+        "requestEventId": 31553787780,
+        "requestedAt": "2026-09-21T19:28:19Z",
+        "reviewedAt": "2026-09-21T19:57:06.486Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omarchy-fx": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
