@@ -201003,6 +201003,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nabdalla-prog/Rimuru-screentime",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:40:21.457Z",
+      "listingValidatedCommit": "12e6fdfa13a65ba273fbaf1952846a8137bcdf04",
+      "listingValidatedAt": "2026-09-21T21:40:21.457Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nabdalla-prog/rimuru-screentime",
+        "pluginIds": [
+          "rimuru.screentime"
+        ],
+        "commit": "12e6fdfa13a65ba273fbaf1952846a8137bcdf04",
+        "checkedAt": "2026-09-21T21:40:21.365Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rimuru.screentime": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
