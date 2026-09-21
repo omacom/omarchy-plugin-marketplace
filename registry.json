@@ -199581,6 +199581,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dadofsambonzuki/chezmoi-hound",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:50:36.962Z",
+      "listingValidatedCommit": "26e623d800fd31ae06696c0257e11bdbf5e9680e",
+      "listingValidatedAt": "2026-09-21T19:50:36.962Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dadofsambonzuki/chezmoi-hound",
+        "pluginIds": [
+          "io.github.dadofsambonzuki.chezmoi-hound"
+        ],
+        "commit": "26e623d800fd31ae06696c0257e11bdbf5e9680e",
+        "checkedAt": "2026-09-21T19:50:36.866Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dadofsambonzuki.chezmoi-hound": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
