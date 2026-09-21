@@ -198622,6 +198622,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/markatdataandbeyond/omarchy-workspace-overview",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T06:31:41.048Z",
+      "listingValidatedCommit": "8b462d5078a03ad09f14822ae4db939f95ed42a7",
+      "listingValidatedAt": "2026-09-21T06:31:41.048Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "markatdataandbeyond/omarchy-workspace-overview",
+        "pluginIds": [
+          "mpb.workspace-overview"
+        ],
+        "commit": "8b462d5078a03ad09f14822ae4db939f95ed42a7",
+        "checkedAt": "2026-09-21T06:31:40.955Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mpb.workspace-overview": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
