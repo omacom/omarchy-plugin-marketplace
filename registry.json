@@ -200670,6 +200670,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nodrej/omarchy-plexamp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:13:33.811Z",
+      "listingValidatedCommit": "a57677616e52ccc703c78f08acdbd23f639cc67d",
+      "listingValidatedAt": "2026-09-21T21:13:33.811Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nodrej/omarchy-plexamp",
+        "pluginIds": [
+          "nodrej.plexamp"
+        ],
+        "commit": "a57677616e52ccc703c78f08acdbd23f639cc67d",
+        "checkedAt": "2026-09-21T21:13:33.713Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nodrej/omarchy-plexamp",
+        "pluginIds": [
+          "nodrej.plexamp"
+        ],
+        "commit": "a57677616e52ccc703c78f08acdbd23f639cc67d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T21:13:33.713Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T23:35:01.168Z",
+        "requestEventId": 31559133625,
+        "requestedAt": "2026-09-21T21:02:42Z",
+        "reviewedAt": "2026-09-21T21:13:33.713Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nodrej.plexamp": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
