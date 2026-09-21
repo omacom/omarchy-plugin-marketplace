@@ -198589,6 +198589,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ejuro/omarchy-extended-theme-picker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T06:25:45.000Z",
+      "listingValidatedCommit": "548e10e78ebbb656bf9aed173e7acccc45238de9",
+      "listingValidatedAt": "2026-09-21T06:25:45.000Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ejuro/omarchy-extended-theme-picker",
+        "pluginIds": [
+          "io.github.ejuro.extended-theme-picker"
+        ],
+        "commit": "548e10e78ebbb656bf9aed173e7acccc45238de9",
+        "checkedAt": "2026-09-21T06:25:44.908Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ejuro.extended-theme-picker": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
