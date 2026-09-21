@@ -199253,6 +199253,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/FirstIntegral/Vigil",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:26:48.035Z",
+      "listingValidatedCommit": "27aebc1d5cabc74184c90a49cd275649579e0f76",
+      "listingValidatedAt": "2026-09-21T19:26:48.035Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "firstintegral/vigil",
+        "pluginIds": [
+          "brwsk.vigil"
+        ],
+        "commit": "27aebc1d5cabc74184c90a49cd275649579e0f76",
+        "checkedAt": "2026-09-21T19:26:47.949Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "firstintegral/vigil",
+        "pluginIds": [
+          "brwsk.vigil"
+        ],
+        "commit": "27aebc1d5cabc74184c90a49cd275649579e0f76",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T19:26:47.949Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T15:30:32.271Z",
+        "requestEventId": 31552955374,
+        "requestedAt": "2026-09-21T19:13:18Z",
+        "reviewedAt": "2026-09-21T19:26:47.949Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brwsk.vigil": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
