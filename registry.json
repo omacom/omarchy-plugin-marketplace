@@ -200241,6 +200241,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ziouf/omarchy-adaptive-brightness",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:38:31.114Z",
+      "listingValidatedCommit": "55acecf67bff656f86137d72fc59467327c44bd8",
+      "listingValidatedAt": "2026-09-21T20:38:31.114Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ziouf/omarchy-adaptive-brightness",
+        "pluginIds": [
+          "ziouf.adaptive-brightness"
+        ],
+        "commit": "55acecf67bff656f86137d72fc59467327c44bd8",
+        "checkedAt": "2026-09-21T20:38:31.033Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ziouf/omarchy-adaptive-brightness",
+        "pluginIds": [
+          "ziouf.adaptive-brightness"
+        ],
+        "commit": "55acecf67bff656f86137d72fc59467327c44bd8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T20:38:31.033Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T19:01:56.582Z",
+        "requestEventId": 31556351842,
+        "requestedAt": "2026-09-21T20:13:14Z",
+        "reviewedAt": "2026-09-21T20:38:31.033Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ziouf.adaptive-brightness": {
+          "category": "System",
+          "tags": [
+            "power-management",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
