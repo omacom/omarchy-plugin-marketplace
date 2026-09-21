@@ -200761,6 +200761,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/EZ-Attendance/EZ-bottom-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:21:01.805Z",
+      "listingValidatedCommit": "f14faf07aae8bb221c78b62a1405a74639792967",
+      "listingValidatedAt": "2026-09-21T21:21:01.805Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ez-attendance/ez-bottom-dock",
+        "pluginIds": [
+          "drace3000.bottom-dock"
+        ],
+        "commit": "f14faf07aae8bb221c78b62a1405a74639792967",
+        "checkedAt": "2026-09-21T21:21:01.710Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "drace3000.bottom-dock": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
