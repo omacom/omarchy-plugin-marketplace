@@ -200336,6 +200336,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/greenermoose/omarchy-fred-keyboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:47:06.025Z",
+      "listingValidatedCommit": "95e43dc7122ea8202adb64d614ede8df976acba5",
+      "listingValidatedAt": "2026-09-21T20:47:06.025Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "greenermoose/omarchy-fred-keyboard",
+        "pluginIds": [
+          "fred.keyboard"
+        ],
+        "commit": "95e43dc7122ea8202adb64d614ede8df976acba5",
+        "checkedAt": "2026-09-21T20:47:05.925Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fred.keyboard": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
