@@ -491,6 +491,12 @@ jobs:
           BASELINE_DISPOSITION: ${{ needs.validate.outputs.baseline_disposition }}
         run: |
           set -euo pipefail
+          # GitHub job outputs are line based. Normalize a possible CRLF
+          # boundary before matching the fixed result vocabulary so a valid
+          # `needs-fixes` result cannot be rejected during report publication.
+          VALIDATION_RESULT="$(printf '%s' "$VALIDATION_RESULT" | tr -d '\r\n')"
+          BASELINE_RESULT="$(printf '%s' "$BASELINE_RESULT" | tr -d '\r\n')"
+          BASELINE_DISPOSITION="$(printf '%s' "$BASELINE_DISPOSITION" | tr -d '\r\n')"
           reports="$RUNNER_TEMP/validation-reports"
           if [ -n "$(find "$reports" -type l -print -quit)" ]; then
             echo "Validation report artifact contains a symbolic link." >&2

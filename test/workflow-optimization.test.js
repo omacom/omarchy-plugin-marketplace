@@ -1337,6 +1337,14 @@ test("submission report consumer rejects tampering, links, and unexpected files"
       expectedStatus: 0,
     },
     {
+      name: "valid rejected submission with a CRLF job output boundary",
+      files: { "validation-report.md": "validation\n" },
+      result: "needs-fixes\r\n",
+      baseline: "\r\n",
+      disposition: "\r\n",
+      expectedStatus: 0,
+    },
+    {
       name: "valid accepted submission",
       files: {
         "validation-report.md": "validation\n",
