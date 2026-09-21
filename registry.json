@@ -199076,6 +199076,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/iuliansafta/omarchy-home-assistant-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:16:16.038Z",
+      "listingValidatedCommit": "4638b5e9cdf6d0912220ebea43f308a2dc5f9024",
+      "listingValidatedAt": "2026-09-21T19:16:16.038Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iuliansafta/omarchy-home-assistant-bar",
+        "pluginIds": [
+          "iulian.home-assistant"
+        ],
+        "commit": "4638b5e9cdf6d0912220ebea43f308a2dc5f9024",
+        "checkedAt": "2026-09-21T19:16:15.940Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "iuliansafta/omarchy-home-assistant-bar",
+        "pluginIds": [
+          "iulian.home-assistant"
+        ],
+        "commit": "4638b5e9cdf6d0912220ebea43f308a2dc5f9024",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T19:16:15.940Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T12:40:59.440Z",
+        "requestEventId": 31552887829,
+        "requestedAt": "2026-09-21T19:12:03Z",
+        "reviewedAt": "2026-09-21T19:16:15.940Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "iulian.home-assistant": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
