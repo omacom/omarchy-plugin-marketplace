@@ -197618,6 +197618,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Sarr77/WindowPeek",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T04:29:38.353Z",
+      "listingValidatedCommit": "eeb7444de87da7afcc8d32c9b2d63a947cf38dc7",
+      "listingValidatedAt": "2026-09-21T04:29:38.353Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sarr77/windowpeek",
+        "pluginIds": [
+          "sarr.windowpeek"
+        ],
+        "commit": "eeb7444de87da7afcc8d32c9b2d63a947cf38dc7",
+        "checkedAt": "2026-09-21T04:29:38.261Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sarr77/windowpeek",
+        "pluginIds": [
+          "sarr.windowpeek"
+        ],
+        "commit": "eeb7444de87da7afcc8d32c9b2d63a947cf38dc7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T04:29:38.261Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T00:00:35.287Z",
+        "requestEventId": 31504067022,
+        "requestedAt": "2026-09-21T04:26:05Z",
+        "reviewedAt": "2026-09-21T04:29:38.261Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sarr.windowpeek": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
