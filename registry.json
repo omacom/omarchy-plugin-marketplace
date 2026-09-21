@@ -199312,6 +199312,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/eithe/oma20-20-20",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:30:09.491Z",
+      "listingValidatedCommit": "930d9b49b90744716f9017de67cf02fa7a8993ad",
+      "listingValidatedAt": "2026-09-21T19:30:09.491Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eithe/oma20-20-20",
+        "pluginIds": [
+          "io.github.eithe.oma20-20-20"
+        ],
+        "commit": "930d9b49b90744716f9017de67cf02fa7a8993ad",
+        "checkedAt": "2026-09-21T19:30:09.413Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.eithe.oma20-20-20": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
