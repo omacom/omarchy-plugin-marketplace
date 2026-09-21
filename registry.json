@@ -198532,6 +198532,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/toha82-tech/touchtype",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T06:21:58.672Z",
+      "listingValidatedCommit": "bff59477ca3feab4ed7f2c6a94bb79497b327ed1",
+      "listingValidatedAt": "2026-09-21T06:21:58.672Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "toha82-tech/touchtype",
+        "pluginIds": [
+          "touchtype"
+        ],
+        "commit": "bff59477ca3feab4ed7f2c6a94bb79497b327ed1",
+        "checkedAt": "2026-09-21T06:21:58.572Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "toha82-tech/touchtype",
+        "pluginIds": [
+          "touchtype"
+        ],
+        "commit": "bff59477ca3feab4ed7f2c6a94bb79497b327ed1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T06:21:58.572Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T09:21:19.899Z",
+        "requestEventId": 31508085004,
+        "requestedAt": "2026-09-21T06:20:21Z",
+        "reviewedAt": "2026-09-21T06:21:58.572Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "touchtype": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "games",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
