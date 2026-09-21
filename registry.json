@@ -198164,6 +198164,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nventatech/dockplus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T05:08:16.801Z",
+      "listingValidatedCommit": "599725eebe0157e4f404bdc75b159cedc6766634",
+      "listingValidatedAt": "2026-09-21T05:08:16.801Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nventatech/dockplus",
+        "pluginIds": [
+          "io.github.nventatech.dockplus"
+        ],
+        "commit": "599725eebe0157e4f404bdc75b159cedc6766634",
+        "checkedAt": "2026-09-21T05:08:16.710Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.nventatech.dockplus": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
