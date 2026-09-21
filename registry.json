@@ -198498,6 +198498,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/artemisa81/lookaway",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T05:34:13.049Z",
+      "listingValidatedCommit": "f8afd21ec500c6821cb6693d75c80ce51df65f03",
+      "listingValidatedAt": "2026-09-21T05:34:13.049Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "artemisa81/lookaway",
+        "pluginIds": [
+          "io.github.artemisa81.lookaway"
+        ],
+        "commit": "f8afd21ec500c6821cb6693d75c80ce51df65f03",
+        "checkedAt": "2026-09-21T05:34:12.956Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.artemisa81.lookaway": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
