@@ -201972,6 +201972,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/shaggyrs6-netizen/omarchy-briefing",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:36:18.900Z",
+      "listingValidatedCommit": "b908963a6fc07cd140c7e2d0c09360f48d29290e",
+      "listingValidatedAt": "2026-09-21T23:36:18.900Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shaggyrs6-netizen/omarchy-briefing",
+        "pluginIds": [
+          "shaggyrs6.briefing"
+        ],
+        "commit": "b908963a6fc07cd140c7e2d0c09360f48d29290e",
+        "checkedAt": "2026-09-21T23:36:18.794Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shaggyrs6.briefing": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
