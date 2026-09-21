@@ -199939,6 +199939,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/HappyLDE/OMARCHY-Gap-Resize",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:17:02.618Z",
+      "listingValidatedCommit": "9c8c1c115835d9a6857f25886020c81a5cdf6cea",
+      "listingValidatedAt": "2026-09-21T20:17:02.618Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "happylde/omarchy-gap-resize",
+        "pluginIds": [
+          "io.github.leosilver.gap-resize"
+        ],
+        "commit": "9c8c1c115835d9a6857f25886020c81a5cdf6cea",
+        "checkedAt": "2026-09-21T20:17:02.519Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.leosilver.gap-resize": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
