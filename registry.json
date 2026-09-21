@@ -12,6 +12,7 @@
     "loxone",
     "m4teo.omaspotify",
     "mathew.breathe",
+    "multi-monitor.workspaces",
     "murphi.openfortivpn",
     "sphiment.omavcam",
     "taildrop",
@@ -4461,45 +4462,6 @@
           }
         }
       ]
-    },
-    {
-      "repo": "https://github.com/AndoNull/multi-monitor-workspaces",
-      "repositoryIdentity": {
-        "schemaVersion": 1,
-        "nodeId": "R_kgDOT33uvQ",
-        "databaseId": 1333653181,
-        "previousRepositories": [
-          "DillanMateusHkl/multi-monitor-workspaces"
-        ]
-      },
-      "type": "plugin-source",
-      "addedAt": "2026-08-14",
-      "listedAt": "2026-08-14T10:39:31.652Z",
-      "listingValidatedCommit": "af1a0789f850b7b8f2a745d244db9f410c9e3452",
-      "listingValidatedAt": "2026-08-14T10:39:31.652Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "dillanmateushkl/multi-monitor-workspaces",
-        "pluginIds": [
-          "multi-monitor.workspaces"
-        ],
-        "commit": "af1a0789f850b7b8f2a745d244db9f410c9e3452",
-        "checkedAt": "2026-08-14T04:57:44.044Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "multi-monitor.workspaces": {
-          "category": "Widgets",
-          "tags": [
-            "workspaces"
-          ]
-        }
-      }
     },
     {
       "repo": "https://github.com/ypMrg/omarchy-bambu-companion",
