@@ -198985,6 +198985,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdil/omarchy-omastudio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T18:17:13.939Z",
+      "listingValidatedCommit": "7f0ecc71252980694e74fb839e3e86dea6bdcb5b",
+      "listingValidatedAt": "2026-09-21T18:17:13.939Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdil/omarchy-omastudio",
+        "pluginIds": [
+          "ozdil.omastudio"
+        ],
+        "commit": "7f0ecc71252980694e74fb839e3e86dea6bdcb5b",
+        "checkedAt": "2026-09-21T18:17:13.844Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ozdil.omastudio": {
+          "category": "Desktop",
+          "tags": [
+            "ai",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
