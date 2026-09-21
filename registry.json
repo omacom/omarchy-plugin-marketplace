@@ -198952,6 +198952,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdil/omarchy-omarss",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T18:12:51.409Z",
+      "listingValidatedCommit": "d0ce844fe6fa7fe9a4640d8f39062ce41cef710a",
+      "listingValidatedAt": "2026-09-21T18:12:51.409Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdil/omarchy-omarss",
+        "pluginIds": [
+          "ozdil.omarss"
+        ],
+        "commit": "d0ce844fe6fa7fe9a4640d8f39062ce41cef710a",
+        "checkedAt": "2026-09-21T18:12:51.314Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ozdil.omarss": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
