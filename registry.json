@@ -199821,6 +199821,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lucaslus/omarchy-statusline",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:09:57.908Z",
+      "listingValidatedCommit": "d8a3b623420514468a1460732f8fb23575b268e3",
+      "listingValidatedAt": "2026-09-21T20:09:57.908Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lucaslus/omarchy-statusline",
+        "pluginIds": [
+          "lucas.system-pulse"
+        ],
+        "commit": "d8a3b623420514468a1460732f8fb23575b268e3",
+        "checkedAt": "2026-09-21T20:09:57.815Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lucaslus/omarchy-statusline",
+        "pluginIds": [
+          "lucas.system-pulse"
+        ],
+        "commit": "d8a3b623420514468a1460732f8fb23575b268e3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T20:09:57.815Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T06:17:23.877Z",
+        "requestEventId": 31554692497,
+        "requestedAt": "2026-09-21T19:44:11Z",
+        "reviewedAt": "2026-09-21T20:09:57.815Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "lucas.system-pulse": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
