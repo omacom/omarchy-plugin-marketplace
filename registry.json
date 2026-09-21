@@ -200609,6 +200609,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/enrell/omarchy-super-player",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:08:37.733Z",
+      "listingValidatedCommit": "7ec48de8537002711de44b3a0cb05eaf697fefb4",
+      "listingValidatedAt": "2026-09-21T21:08:37.733Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "enrell/omarchy-super-player",
+        "pluginIds": [
+          "io.github.enrell.super-player"
+        ],
+        "commit": "7ec48de8537002711de44b3a0cb05eaf697fefb4",
+        "checkedAt": "2026-09-21T21:08:37.633Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "enrell/omarchy-super-player",
+        "pluginIds": [
+          "io.github.enrell.super-player"
+        ],
+        "commit": "7ec48de8537002711de44b3a0cb05eaf697fefb4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T21:08:37.633Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T20:46:18.655Z",
+        "requestEventId": 31558991648,
+        "requestedAt": "2026-09-21T21:00:06Z",
+        "reviewedAt": "2026-09-21T21:08:37.633Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.enrell.super-player": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
