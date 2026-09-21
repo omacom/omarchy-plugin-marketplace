@@ -198288,6 +198288,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/simonezpx3/omarchy-vkeyboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T05:19:59.383Z",
+      "listingValidatedCommit": "7a821578e4e356f8352601e6c65030739341c1b2",
+      "listingValidatedAt": "2026-09-21T05:19:59.383Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simonezpx3/omarchy-vkeyboard",
+        "pluginIds": [
+          "simonez.vkeyboard"
+        ],
+        "commit": "7a821578e4e356f8352601e6c65030739341c1b2",
+        "checkedAt": "2026-09-21T05:19:59.285Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "simonezpx3/omarchy-vkeyboard",
+        "pluginIds": [
+          "simonez.vkeyboard"
+        ],
+        "commit": "7a821578e4e356f8352601e6c65030739341c1b2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T05:19:59.285Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T22:06:09.042Z",
+        "requestEventId": 31505182646,
+        "requestedAt": "2026-09-21T05:01:29Z",
+        "reviewedAt": "2026-09-21T05:19:59.285Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "simonez.vkeyboard": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
