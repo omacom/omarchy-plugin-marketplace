@@ -200429,6 +200429,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alexanderpuschkinberlin/workspace-gesture-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:53:35.429Z",
+      "listingValidatedCommit": "661d9e8e58073403b7704e7ca2463762c824b956",
+      "listingValidatedAt": "2026-09-21T20:53:35.429Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alexanderpuschkinberlin/workspace-gesture-switcher",
+        "pluginIds": [
+          "workspace-gesture-switcher"
+        ],
+        "commit": "661d9e8e58073403b7704e7ca2463762c824b956",
+        "checkedAt": "2026-09-21T20:53:35.345Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alexanderpuschkinberlin/workspace-gesture-switcher",
+        "pluginIds": [
+          "workspace-gesture-switcher"
+        ],
+        "commit": "661d9e8e58073403b7704e7ca2463762c824b956",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T20:53:35.345Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T20:22:13.642Z",
+        "requestEventId": 31558232279,
+        "requestedAt": "2026-09-21T20:45:44Z",
+        "reviewedAt": "2026-09-21T20:53:35.345Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "workspace-gesture-switcher": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
