@@ -198656,6 +198656,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rover-001/whimsy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T06:35:15.783Z",
+      "listingValidatedCommit": "a418bd2936409436fd68e57ae466509a87a03c46",
+      "listingValidatedAt": "2026-09-21T06:35:15.783Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rover-001/whimsy",
+        "pluginIds": [
+          "whimsy"
+        ],
+        "commit": "a418bd2936409436fd68e57ae466509a87a03c46",
+        "checkedAt": "2026-09-21T06:35:15.690Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "whimsy": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
