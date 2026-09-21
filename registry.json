@@ -198861,6 +198861,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dfrost90/oma-edge",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T18:04:52.236Z",
+      "listingValidatedCommit": "044f97b961588b672b97366cc8efbcacf13b7332",
+      "listingValidatedAt": "2026-09-21T18:04:52.236Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dfrost90/oma-edge",
+        "pluginIds": [
+          "io.github.dfrost90.edge-strip"
+        ],
+        "commit": "044f97b961588b672b97366cc8efbcacf13b7332",
+        "checkedAt": "2026-09-21T18:04:52.140Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dfrost90/oma-edge",
+        "pluginIds": [
+          "io.github.dfrost90.edge-strip"
+        ],
+        "commit": "044f97b961588b672b97366cc8efbcacf13b7332",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T18:04:52.140Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T09:48:16.319Z",
+        "requestEventId": 31548677178,
+        "requestedAt": "2026-09-21T17:58:42Z",
+        "reviewedAt": "2026-09-21T18:04:52.140Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dfrost90.edge-strip": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
