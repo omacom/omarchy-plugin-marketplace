@@ -201545,6 +201545,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tenfingerseddy/voicebind",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T22:34:35.440Z",
+      "listingValidatedCommit": "7852da45444877c6982388cf996411b048a5b53e",
+      "listingValidatedAt": "2026-09-21T22:34:35.440Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tenfingerseddy/voicebind",
+        "pluginIds": [
+          "io.github.tenfingerseddy.voicebind"
+        ],
+        "commit": "7852da45444877c6982388cf996411b048a5b53e",
+        "checkedAt": "2026-09-21T22:34:35.355Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tenfingerseddy/voicebind",
+        "pluginIds": [
+          "io.github.tenfingerseddy.voicebind"
+        ],
+        "commit": "7852da45444877c6982388cf996411b048a5b53e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T22:34:35.355Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T22:19:28.487Z",
+        "requestEventId": 31563378588,
+        "requestedAt": "2026-09-21T22:32:58Z",
+        "reviewedAt": "2026-09-21T22:34:35.355Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tenfingerseddy.voicebind": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
