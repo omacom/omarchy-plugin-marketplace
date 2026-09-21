@@ -200302,6 +200302,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lpanebr/omarchy-rpn-calc",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:42:24.942Z",
+      "listingValidatedCommit": "6a4474ccb41e25a583236bc3b4dcbc076f69b604",
+      "listingValidatedAt": "2026-09-21T20:42:24.942Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lpanebr/omarchy-rpn-calc",
+        "pluginIds": [
+          "lpanebr.rpn-calc"
+        ],
+        "commit": "6a4474ccb41e25a583236bc3b4dcbc076f69b604",
+        "checkedAt": "2026-09-21T20:42:24.840Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lpanebr.rpn-calc": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
