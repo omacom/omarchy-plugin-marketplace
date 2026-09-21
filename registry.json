@@ -201341,6 +201341,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cielebak/omarchy-elevenmates",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T22:12:13.881Z",
+      "listingValidatedCommit": "37c695675dab22178b9f6e7b43a6139894444f47",
+      "listingValidatedAt": "2026-09-21T22:12:13.881Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cielebak/omarchy-elevenmates",
+        "pluginIds": [
+          "elevenmates"
+        ],
+        "commit": "37c695675dab22178b9f6e7b43a6139894444f47",
+        "checkedAt": "2026-09-21T22:12:13.783Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "elevenmates": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
