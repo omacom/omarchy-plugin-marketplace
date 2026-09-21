@@ -201674,6 +201674,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/heroesofcode/omagesture",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T22:51:55.293Z",
+      "listingValidatedCommit": "37743d96b085e5b4ae27f481ccc10143f0843d26",
+      "listingValidatedAt": "2026-09-21T22:51:55.293Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "heroesofcode/omagesture",
+        "pluginIds": [
+          "io.github.heroesofcode.omagesture"
+        ],
+        "commit": "37743d96b085e5b4ae27f481ccc10143f0843d26",
+        "checkedAt": "2026-09-21T22:51:55.191Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.heroesofcode.omagesture": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
