@@ -201642,6 +201642,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0xNorin/omarchy-midnight-royale",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T22:47:53.569Z",
+      "listingValidatedCommit": "fa6092f62159346de933a89474b1d58fb83dfcfe",
+      "listingValidatedAt": "2026-09-21T22:47:53.569Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0xnorin/omarchy-midnight-royale",
+        "pluginIds": [
+          "app.0xnorin.midnight-royale"
+        ],
+        "commit": "fa6092f62159346de933a89474b1d58fb83dfcfe",
+        "checkedAt": "2026-09-21T22:47:53.478Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "app.0xnorin.midnight-royale": {
+          "category": "Widgets",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
