@@ -198754,6 +198754,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mrlund/omacam",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T06:42:56.071Z",
+      "listingValidatedCommit": "9beb6cba17c5cc53a42e7f4ffb5512a493b625cf",
+      "listingValidatedAt": "2026-09-21T06:42:56.071Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrlund/omacam",
+        "pluginIds": [
+          "mrlund.omacam"
+        ],
+        "commit": "9beb6cba17c5cc53a42e7f4ffb5512a493b625cf",
+        "checkedAt": "2026-09-21T06:42:55.981Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mrlund/omacam",
+        "pluginIds": [
+          "mrlund.omacam"
+        ],
+        "commit": "9beb6cba17c5cc53a42e7f4ffb5512a493b625cf",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T06:42:55.981Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T05:36:56.589Z",
+        "requestEventId": 31508880441,
+        "requestedAt": "2026-09-21T06:39:06Z",
+        "reviewedAt": "2026-09-21T06:42:55.981Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mrlund.omacam": {
+          "category": "Hardware",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
