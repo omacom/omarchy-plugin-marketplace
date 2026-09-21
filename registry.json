@@ -200910,6 +200910,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tdemers218/hyprworld",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:32:53.664Z",
+      "listingValidatedCommit": "932aabc00b5a40e1f1269b7659fbd847b39cfdb4",
+      "listingValidatedAt": "2026-09-21T21:32:53.664Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tdemers218/hyprworld",
+        "pluginIds": [
+          "io.github.tdemers218.hyprworld"
+        ],
+        "commit": "932aabc00b5a40e1f1269b7659fbd847b39cfdb4",
+        "checkedAt": "2026-09-21T21:32:53.577Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tdemers218/hyprworld",
+        "pluginIds": [
+          "io.github.tdemers218.hyprworld"
+        ],
+        "commit": "932aabc00b5a40e1f1269b7659fbd847b39cfdb4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T21:32:53.577Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T20:24:04.043Z",
+        "requestEventId": 31560030132,
+        "requestedAt": "2026-09-21T21:20:06Z",
+        "reviewedAt": "2026-09-21T21:32:53.577Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tdemers218.hyprworld": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
