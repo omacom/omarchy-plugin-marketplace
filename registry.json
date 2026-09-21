@@ -200119,6 +200119,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/betnbd/Omagic",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T20:31:25.468Z",
+      "listingValidatedCommit": "2c1aeaab6654f3d3f04a0891cbadfec8eae70d9f",
+      "listingValidatedAt": "2026-09-21T20:31:25.468Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "betnbd/omagic",
+        "pluginIds": [
+          "ben.omagic"
+        ],
+        "commit": "2c1aeaab6654f3d3f04a0891cbadfec8eae70d9f",
+        "checkedAt": "2026-09-21T20:31:25.364Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "betnbd/omagic",
+        "pluginIds": [
+          "ben.omagic"
+        ],
+        "commit": "2c1aeaab6654f3d3f04a0891cbadfec8eae70d9f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T20:31:25.364Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T19:01:19.081Z",
+        "requestEventId": 31556123543,
+        "requestedAt": "2026-09-21T20:09:08Z",
+        "reviewedAt": "2026-09-21T20:31:25.364Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ben.omagic": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
