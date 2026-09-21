@@ -202106,6 +202106,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Dielerorn/omarchy-game-center",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:53:08.658Z",
+      "listingValidatedCommit": "1c31025cd2775fe7d466c56852cf2eb517883630",
+      "listingValidatedAt": "2026-09-21T23:53:08.658Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dielerorn/omarchy-game-center",
+        "pluginIds": [
+          "dielerorn.gamecenter"
+        ],
+        "commit": "1c31025cd2775fe7d466c56852cf2eb517883630",
+        "checkedAt": "2026-09-21T23:53:08.600Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dielerorn/omarchy-game-center",
+        "pluginIds": [
+          "dielerorn.gamecenter"
+        ],
+        "commit": "1c31025cd2775fe7d466c56852cf2eb517883630",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T23:53:08.600Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T22:04:15.414Z",
+        "requestEventId": 31565941449,
+        "requestedAt": "2026-09-21T23:41:12Z",
+        "reviewedAt": "2026-09-21T23:53:08.600Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dielerorn.gamecenter": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
