@@ -198007,6 +198007,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Primly/ncaaf-ticker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T04:55:34.666Z",
+      "listingValidatedCommit": "a64efc3fd72b2dd52d6c41180c5b290e96ba95c6",
+      "listingValidatedAt": "2026-09-21T04:55:34.666Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "primly/ncaaf-ticker",
+        "pluginIds": [
+          "primly.ncaaf-ticker"
+        ],
+        "commit": "a64efc3fd72b2dd52d6c41180c5b290e96ba95c6",
+        "checkedAt": "2026-09-21T04:55:34.586Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "primly.ncaaf-ticker": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
