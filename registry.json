@@ -201162,6 +201162,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevinalfito69/omarchy-system-info-graph",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:56:11.019Z",
+      "listingValidatedCommit": "1141fa87d4cf4da618102657d0b4573904cb7561",
+      "listingValidatedAt": "2026-09-21T21:56:11.019Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevinalfito69/omarchy-system-info-graph",
+        "pluginIds": [
+          "io.github.kevinalfito69.system-graphs"
+        ],
+        "commit": "1141fa87d4cf4da618102657d0b4573904cb7561",
+        "checkedAt": "2026-09-21T21:56:10.915Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kevinalfito69.system-graphs": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
