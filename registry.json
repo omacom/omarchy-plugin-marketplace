@@ -201708,6 +201708,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zerwiz/omarchy-cpu-gpu-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T22:55:56.575Z",
+      "listingValidatedCommit": "2939bb5ff3f735c31c793c7361740e816dc1bf0f",
+      "listingValidatedAt": "2026-09-21T22:55:56.575Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zerwiz/omarchy-cpu-gpu-monitor",
+        "pluginIds": [
+          "io.github.zerwiz.cpu-gpu-monitor"
+        ],
+        "commit": "2939bb5ff3f735c31c793c7361740e816dc1bf0f",
+        "checkedAt": "2026-09-21T22:55:56.479Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.zerwiz.cpu-gpu-monitor": {
+          "category": "System",
+          "tags": [
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
