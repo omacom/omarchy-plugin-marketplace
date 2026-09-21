@@ -201741,6 +201741,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zerwiz/omarchy-indicators",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:00:06.290Z",
+      "listingValidatedCommit": "6d42f7634f10bf605ca13d0a8065511aa2e3a925",
+      "listingValidatedAt": "2026-09-21T23:00:06.290Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zerwiz/omarchy-indicators",
+        "pluginIds": [
+          "io.github.zerwiz.indicators"
+        ],
+        "commit": "6d42f7634f10bf605ca13d0a8065511aa2e3a925",
+        "checkedAt": "2026-09-21T23:00:06.134Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.zerwiz.indicators": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
