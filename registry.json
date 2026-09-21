@@ -198773,6 +198773,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/muellan/omababel",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T17:55:44.466Z",
+      "listingValidatedCommit": "f52016e2a65fa70a0adb5133e97c8961e953f950",
+      "listingValidatedAt": "2026-09-21T17:55:44.466Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "muellan/omababel",
+        "pluginIds": [
+          "muellan.omababel"
+        ],
+        "commit": "f52016e2a65fa70a0adb5133e97c8961e953f950",
+        "checkedAt": "2026-09-21T17:55:44.387Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "muellan/omababel",
+        "pluginIds": [
+          "muellan.omababel"
+        ],
+        "commit": "f52016e2a65fa70a0adb5133e97c8961e953f950",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T17:55:44.387Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T12:30:20.166Z",
+        "requestEventId": 31548422438,
+        "requestedAt": "2026-09-21T17:54:19Z",
+        "reviewedAt": "2026-09-21T17:55:44.387Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "muellan.omababel": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
