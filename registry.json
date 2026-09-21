@@ -199135,6 +199135,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-aura-cycler",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:19:53.165Z",
+      "listingValidatedCommit": "90b837f47d3ae565717fe67b73d220e9a2524859",
+      "listingValidatedAt": "2026-09-21T19:19:53.165Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-aura-cycler",
+        "pluginIds": [
+          "harshith.aura-cycler"
+        ],
+        "commit": "90b837f47d3ae565717fe67b73d220e9a2524859",
+        "checkedAt": "2026-09-21T19:19:53.070Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "harshithnadig/omarchy-aura-cycler",
+        "pluginIds": [
+          "harshith.aura-cycler"
+        ],
+        "commit": "90b837f47d3ae565717fe67b73d220e9a2524859",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T19:19:53.070Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-21T18:05:59.979Z",
+        "requestEventId": 31552898327,
+        "requestedAt": "2026-09-21T19:12:15Z",
+        "reviewedAt": "2026-09-21T19:19:53.070Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "harshith.aura-cycler": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
