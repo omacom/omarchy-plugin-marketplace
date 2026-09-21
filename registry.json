@@ -199547,6 +199547,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/harshithnadig/omarchy-friends",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T19:47:16.053Z",
+      "listingValidatedCommit": "f08abd8760ceb5dd1df53b6e71d959b03dddf687",
+      "listingValidatedAt": "2026-09-21T19:47:16.053Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harshithnadig/omarchy-friends",
+        "pluginIds": [
+          "community.omarchy-friends"
+        ],
+        "commit": "f08abd8760ceb5dd1df53b6e71d959b03dddf687",
+        "checkedAt": "2026-09-21T19:47:15.991Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "community.omarchy-friends": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
