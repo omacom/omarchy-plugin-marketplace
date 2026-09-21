@@ -200518,6 +200518,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dagnele/omarchy-network",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T21:01:02.296Z",
+      "listingValidatedCommit": "0fead377e19512face8360265c6b5f0d72169c79",
+      "listingValidatedAt": "2026-09-21T21:01:02.296Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dagnele/omarchy-network",
+        "pluginIds": [
+          "dagnele.network"
+        ],
+        "commit": "0fead377e19512face8360265c6b5f0d72169c79",
+        "checkedAt": "2026-09-21T21:01:02.199Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dagnele/omarchy-network",
+        "pluginIds": [
+          "dagnele.network"
+        ],
+        "commit": "0fead377e19512face8360265c6b5f0d72169c79",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-21T21:01:02.199Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T21:39:57.573Z",
+        "requestEventId": 31558706960,
+        "requestedAt": "2026-09-21T20:54:52Z",
+        "reviewedAt": "2026-09-21T21:01:02.199Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dagnele.network": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
