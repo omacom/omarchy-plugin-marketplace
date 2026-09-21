@@ -201774,6 +201774,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dmitry-solomadin/omanb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-21",
+      "listedAt": "2026-09-21T23:06:54.244Z",
+      "listingValidatedCommit": "f1d13b3be0a2079ec9e2ecde499a38c6a37c2bfa",
+      "listingValidatedAt": "2026-09-21T23:06:54.244Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dmitry-solomadin/omanb",
+        "pluginIds": [
+          "io.github.dmitry-solomadin.omanb"
+        ],
+        "commit": "f1d13b3be0a2079ec9e2ecde499a38c6a37c2bfa",
+        "checkedAt": "2026-09-21T23:06:54.147Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dmitry-solomadin.omanb": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
