@@ -153291,8 +153291,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T17:48:44.804Z",
-      "listingValidatedCommit": "8b22b315b7031670b594e918d972644cceef1605",
-      "listingValidatedAt": "2026-09-11T13:05:42.375Z",
+      "listingValidatedCommit": "8f9b9521424c3a16b42123251cd4bcf063aa9fb4",
+      "listingValidatedAt": "2026-09-22T22:04:41.755Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -153301,8 +153301,8 @@
         "pluginIds": [
           "banan.bananet"
         ],
-        "commit": "8b22b315b7031670b594e918d972644cceef1605",
-        "checkedAt": "2026-09-11T13:05:42.375Z",
+        "commit": "8f9b9521424c3a16b42123251cd4bcf063aa9fb4",
+        "checkedAt": "2026-09-22T22:04:41.755Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -153321,28 +153321,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "blazejkapala/omarchy-bananet",
-        "pluginIds": [
-          "banan.bananet"
-        ],
-        "commit": "8b22b315b7031670b594e918d972644cceef1605",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T13:05:42.375Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "sudoers-modification"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-09T13:25:28.673Z",
-        "requestEventId": 30973281952,
-        "requestedAt": "2026-09-11T13:04:20Z",
-        "reviewedAt": "2026-09-11T13:05:42.375Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -153389,8 +153367,75 @@
             "reviewedAt": "2026-09-08T17:48:44.737Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "8b22b315b7031670b594e918d972644cceef1605",
+          "validatedAt": "2026-09-11T13:05:42.375Z",
+          "branch": "master",
+          "supersededAt": "2026-09-22T22:04:41.755Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "blazejkapala/omarchy-bananet",
+            "pluginIds": [
+              "banan.bananet"
+            ],
+            "commit": "8b22b315b7031670b594e918d972644cceef1605",
+            "checkedAt": "2026-09-11T13:05:42.375Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "sudoers-modification"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "blazejkapala/omarchy-bananet",
+            "pluginIds": [
+              "banan.bananet"
+            ],
+            "commit": "8b22b315b7031670b594e918d972644cceef1605",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T13:05:42.375Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "sudoers-modification"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-09T13:25:28.673Z",
+            "requestEventId": 30973281952,
+            "requestedAt": "2026-09-11T13:04:20Z",
+            "reviewedAt": "2026-09-11T13:05:42.375Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "blazejkapala/omarchy-bananet",
+        "pluginIds": [
+          "banan.bananet"
+        ],
+        "commit": "8f9b9521424c3a16b42123251cd4bcf063aa9fb4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T22:04:41.755Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-14T09:28:23.219Z",
+        "requestEventId": 31634574362,
+        "requestedAt": "2026-09-22T21:59:17Z",
+        "reviewedAt": "2026-09-22T22:04:41.755Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/vornashev/omarchy-yandex-music",
