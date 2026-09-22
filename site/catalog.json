@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T10:20:50.958Z",
+  "generatedAt": "2026-09-22T10:24:38.718Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -210669,6 +210669,55 @@
       "upstreamValidatedAt": "2026-09-22T10:20:50.958Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "54e4a54ee8dc27f959fd0489ecf4114f0dc1fec97c464b74c2f2ea7812d758ff",
+      "status": "Available"
+    },
+    {
+      "id": "qdot.omasky",
+      "name": "OmaSky",
+      "description": "Sky: Children of the Light — daily event clock, shard eruptions, and current season tracker in one widget",
+      "author": "qdot",
+      "version": "1.0.2",
+      "repo": "https://github.com/datbuiquoc035/OmaSky",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "7309bac60b3dcc05318b2287cdd4915c84bd8019",
+      "verificationCheckedAt": "2026-09-22T10:24:38.076Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T10:24:38.180Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/datbuiquoc035/OmaSky.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Widgets",
+      "tags": [
+        "games"
+      ],
+      "license": "See repository",
+      "stars": 1,
+      "repositoryUpdatedAt": "2026-09-22T08:30:42Z",
+      "repositoryRelease": {
+        "tag": "v1.0.2",
+        "url": "https://github.com/datbuiquoc035/OmaSky/releases/tag/v1.0.2",
+        "publishedAt": "2026-09-09T10:20:10Z"
+      },
+      "accent": "coral",
+      "initials": "O",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "7309bac60b3dcc05318b2287cdd4915c84bd8019",
+      "listingValidatedAt": "2026-09-22T10:24:38.180Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "7309bac60b3dcc05318b2287cdd4915c84bd8019",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-22T10:24:38.718Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "7309bac60b3dcc05318b2287cdd4915c84bd8019",
+      "upstreamValidatedAt": "2026-09-22T10:24:38.718Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "a645fef74e9720e23e408323c7ff64d8b1dc4fbdc15c261d8b4afec08ebbe344",
       "status": "Available"
     },
     {
