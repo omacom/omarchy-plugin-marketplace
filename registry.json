@@ -211671,6 +211671,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/segersb/omarchy-printers",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:08:33.450Z",
+      "listingValidatedCommit": "6d40e4ad166704da671b837fa091d1b719432c0b",
+      "listingValidatedAt": "2026-09-22T22:08:33.450Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "segersb/omarchy-printers",
+        "pluginIds": [
+          "segersb.omarchy-printers"
+        ],
+        "commit": "6d40e4ad166704da671b837fa091d1b719432c0b",
+        "checkedAt": "2026-09-22T22:08:33.346Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "segersb/omarchy-printers",
+        "pluginIds": [
+          "segersb.omarchy-printers"
+        ],
+        "commit": "6d40e4ad166704da671b837fa091d1b719432c0b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T22:08:33.346Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T21:07:16.694Z",
+        "requestEventId": 31634577671,
+        "requestedAt": "2026-09-22T21:59:21Z",
+        "reviewedAt": "2026-09-22T22:08:33.346Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "segersb.omarchy-printers": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
