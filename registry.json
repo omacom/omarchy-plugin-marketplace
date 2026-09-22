@@ -208020,6 +208020,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RubarMo/omarchy-kinetics",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:07:03.310Z",
+      "listingValidatedCommit": "866bed58a949b448a00f575e371b53fea139fa78",
+      "listingValidatedAt": "2026-09-22T13:07:03.310Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rubarmo/omarchy-kinetics",
+        "pluginIds": [
+          "rubar.kinetics"
+        ],
+        "commit": "866bed58a949b448a00f575e371b53fea139fa78",
+        "checkedAt": "2026-09-22T13:07:03.203Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rubar.kinetics": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
