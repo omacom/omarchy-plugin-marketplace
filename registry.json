@@ -209031,6 +209031,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/protoavatar/clipbook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T15:19:15.048Z",
+      "listingValidatedCommit": "bda5fa046450e5b53ff549dd4fa0f4febf6d1261",
+      "listingValidatedAt": "2026-09-22T15:19:15.048Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "protoavatar/clipbook",
+        "pluginIds": [
+          "protoavatar.clipbook"
+        ],
+        "commit": "bda5fa046450e5b53ff549dd4fa0f4febf6d1261",
+        "checkedAt": "2026-09-22T15:19:14.946Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "protoavatar.clipbook": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
