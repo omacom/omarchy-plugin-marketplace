@@ -209757,6 +209757,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dmitry-solomadin/omarchy-desktop-restore",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:46:28.133Z",
+      "listingValidatedCommit": "3b1f43fb1343c7df5bdf98e4aa182a1e314ededb",
+      "listingValidatedAt": "2026-09-22T17:46:28.133Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dmitry-solomadin/omarchy-desktop-restore",
+        "pluginIds": [
+          "io.github.dmitry-solomadin.desktop-restore"
+        ],
+        "commit": "3b1f43fb1343c7df5bdf98e4aa182a1e314ededb",
+        "checkedAt": "2026-09-22T17:46:28.066Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dmitry-solomadin/omarchy-desktop-restore",
+        "pluginIds": [
+          "io.github.dmitry-solomadin.desktop-restore"
+        ],
+        "commit": "3b1f43fb1343c7df5bdf98e4aa182a1e314ededb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:46:28.066Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T15:53:45.382Z",
+        "requestEventId": 31619601143,
+        "requestedAt": "2026-09-22T17:44:43Z",
+        "reviewedAt": "2026-09-22T17:46:28.066Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dmitry-solomadin.desktop-restore": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
