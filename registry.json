@@ -210131,6 +210131,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Aniket1995/omarchy-predator-rgb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:26:11.933Z",
+      "listingValidatedCommit": "de6a06881672b02f2617f84515b3bb178177d25e",
+      "listingValidatedAt": "2026-09-22T18:26:11.933Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aniket1995/omarchy-predator-rgb",
+        "pluginIds": [
+          "predator-rgb"
+        ],
+        "commit": "de6a06881672b02f2617f84515b3bb178177d25e",
+        "checkedAt": "2026-09-22T18:26:11.826Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "predator-rgb": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
