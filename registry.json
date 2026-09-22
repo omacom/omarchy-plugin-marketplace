@@ -210293,6 +210293,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paytbidd/omarchy-soundstage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:52:25.029Z",
+      "listingValidatedCommit": "7fcafc980aeaf386f47efd5d7567c38c05a522b3",
+      "listingValidatedAt": "2026-09-22T18:52:25.029Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paytbidd/omarchy-soundstage",
+        "pluginIds": [
+          "payton.soundstage"
+        ],
+        "commit": "7fcafc980aeaf386f47efd5d7567c38c05a522b3",
+        "checkedAt": "2026-09-22T18:52:24.939Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paytbidd/omarchy-soundstage",
+        "pluginIds": [
+          "payton.soundstage"
+        ],
+        "commit": "7fcafc980aeaf386f47efd5d7567c38c05a522b3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:52:24.939Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:45:42.289Z",
+        "requestEventId": 31623482986,
+        "requestedAt": "2026-09-22T18:50:41Z",
+        "reviewedAt": "2026-09-22T18:52:24.939Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "payton.soundstage": {
+          "category": "System",
+          "tags": [
+            "media",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
