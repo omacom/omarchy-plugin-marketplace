@@ -102033,8 +102033,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T10:42:53.573Z",
-      "listingValidatedCommit": "378e530dc46e2451a402bcb8a4d2772d5427f961",
-      "listingValidatedAt": "2026-08-30T10:42:53.573Z",
+      "listingValidatedCommit": "1214283a931e2bf15d50fa19d7c7a6f03b9d46bf",
+      "listingValidatedAt": "2026-09-22T20:49:01.065Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -102043,8 +102043,8 @@
         "pluginIds": [
           "omarchy-tuxedo"
         ],
-        "commit": "378e530dc46e2451a402bcb8a4d2772d5427f961",
-        "checkedAt": "2026-08-30T10:42:53.523Z",
+        "commit": "1214283a931e2bf15d50fa19d7c7a6f03b9d46bf",
+        "checkedAt": "2026-09-22T20:49:01.065Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -102059,7 +102059,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "378e530dc46e2451a402bcb8a4d2772d5427f961",
+          "validatedAt": "2026-08-30T10:42:53.573Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T20:49:01.065Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "lpanebr/omarchy-tuxedo-todo",
+            "pluginIds": [
+              "omarchy-tuxedo"
+            ],
+            "commit": "378e530dc46e2451a402bcb8a4d2772d5427f961",
+            "checkedAt": "2026-08-30T10:42:53.523Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/shreyasmene06/DevTrack",
