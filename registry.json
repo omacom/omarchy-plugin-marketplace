@@ -206165,6 +206165,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/WokoFlipper/omarchy-network-ru",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:59:17.313Z",
+      "listingValidatedCommit": "0e2917ed6cddd50d36fc7d7b4cee8ef2eb5297f1",
+      "listingValidatedAt": "2026-09-22T09:59:17.313Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wokoflipper/omarchy-network-ru",
+        "pluginIds": [
+          "wifi-dns-ru"
+        ],
+        "commit": "0e2917ed6cddd50d36fc7d7b4cee8ef2eb5297f1",
+        "checkedAt": "2026-09-22T09:59:17.218Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wokoflipper/omarchy-network-ru",
+        "pluginIds": [
+          "wifi-dns-ru"
+        ],
+        "commit": "0e2917ed6cddd50d36fc7d7b4cee8ef2eb5297f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T09:59:17.218Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T08:40:37.967Z",
+        "requestEventId": 31588831420,
+        "requestedAt": "2026-09-22T09:30:37Z",
+        "reviewedAt": "2026-09-22T09:59:17.219Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "wifi-dns-ru": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
