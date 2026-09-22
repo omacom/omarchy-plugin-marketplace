@@ -211203,6 +211203,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chyld/omarchy-vista",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T21:14:16.764Z",
+      "listingValidatedCommit": "a09f092838f84d2a9add0de48415fa75d9caaee1",
+      "listingValidatedAt": "2026-09-22T21:14:16.764Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chyld/omarchy-vista",
+        "pluginIds": [
+          "chyld.vista"
+        ],
+        "commit": "a09f092838f84d2a9add0de48415fa75d9caaee1",
+        "checkedAt": "2026-09-22T21:14:16.660Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "chyld.vista": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
