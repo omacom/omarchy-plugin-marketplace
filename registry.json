@@ -210165,6 +210165,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/afruth/omarchy-xr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:30:57.241Z",
+      "listingValidatedCommit": "f594413e740219d3c733dd8707f72f3edbb3b18c",
+      "listingValidatedAt": "2026-09-22T18:30:57.241Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "afruth/omarchy-xr",
+        "pluginIds": [
+          "afruth.omarchy-xr"
+        ],
+        "commit": "f594413e740219d3c733dd8707f72f3edbb3b18c",
+        "checkedAt": "2026-09-22T18:30:57.133Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "afruth/omarchy-xr",
+        "pluginIds": [
+          "afruth.omarchy-xr"
+        ],
+        "commit": "f594413e740219d3c733dd8707f72f3edbb3b18c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:30:57.133Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:19:43.606Z",
+        "requestEventId": 31622183872,
+        "requestedAt": "2026-09-22T18:29:15Z",
+        "reviewedAt": "2026-09-22T18:30:57.133Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "afruth.omarchy-xr": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
