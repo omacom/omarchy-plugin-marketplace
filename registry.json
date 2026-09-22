@@ -203130,6 +203130,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/indibyte/NGNK-glass-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:22:14.597Z",
+      "listingValidatedCommit": "f1910021c45b42749eeefa8783d712cbbefe4963",
+      "listingValidatedAt": "2026-09-22T02:22:14.597Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "indibyte/ngnk-glass-weather",
+        "pluginIds": [
+          "ngnk.glass-weather"
+        ],
+        "commit": "f1910021c45b42749eeefa8783d712cbbefe4963",
+        "checkedAt": "2026-09-22T02:22:14.500Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ngnk.glass-weather": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
