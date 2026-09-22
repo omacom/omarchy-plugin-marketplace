@@ -208119,6 +208119,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jcarcinogen/omarchy-gaming-console",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:14:53.278Z",
+      "listingValidatedCommit": "0448e9ca78170d9d7219812e4d31670c27530524",
+      "listingValidatedAt": "2026-09-22T13:14:53.278Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jcarcinogen/omarchy-gaming-console",
+        "pluginIds": [
+          "io.github.jcarcinogen.gaming-console"
+        ],
+        "commit": "0448e9ca78170d9d7219812e4d31670c27530524",
+        "checkedAt": "2026-09-22T13:14:53.176Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jcarcinogen/omarchy-gaming-console",
+        "pluginIds": [
+          "io.github.jcarcinogen.gaming-console"
+        ],
+        "commit": "0448e9ca78170d9d7219812e4d31670c27530524",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T13:14:53.176Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T12:57:59.977Z",
+        "requestEventId": 31601468209,
+        "requestedAt": "2026-09-22T13:06:59Z",
+        "reviewedAt": "2026-09-22T13:14:53.176Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jcarcinogen.gaming-console": {
+          "category": "System",
+          "tags": [
+            "games",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
