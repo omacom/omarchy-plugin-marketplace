@@ -212111,6 +212111,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fluxcapctr/omaform",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:56:00.099Z",
+      "listingValidatedCommit": "67ce0f08e798152ef859bbd911293ea0139d9d6f",
+      "listingValidatedAt": "2026-09-22T22:56:00.099Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fluxcapctr/omaform",
+        "pluginIds": [
+          "io.github.fluxcapctr.omaform"
+        ],
+        "commit": "67ce0f08e798152ef859bbd911293ea0139d9d6f",
+        "checkedAt": "2026-09-22T22:55:59.999Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fluxcapctr/omaform",
+        "pluginIds": [
+          "io.github.fluxcapctr.omaform"
+        ],
+        "commit": "67ce0f08e798152ef859bbd911293ea0139d9d6f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T22:55:59.999Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T22:36:47.141Z",
+        "requestEventId": 31636979034,
+        "requestedAt": "2026-09-22T22:47:37Z",
+        "reviewedAt": "2026-09-22T22:55:59.999Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fluxcapctr.omaform": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
