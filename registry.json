@@ -212422,6 +212422,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dreed47/omarchy-esphome-dashboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T23:47:42.727Z",
+      "listingValidatedCommit": "942ed23d624df717076552f1c687c6da0bd2460d",
+      "listingValidatedAt": "2026-09-22T23:47:42.727Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dreed47/omarchy-esphome-dashboard",
+        "pluginIds": [
+          "io.github.dreed47.esphome-dashboard"
+        ],
+        "commit": "942ed23d624df717076552f1c687c6da0bd2460d",
+        "checkedAt": "2026-09-22T23:47:42.627Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dreed47/omarchy-esphome-dashboard",
+        "pluginIds": [
+          "io.github.dreed47.esphome-dashboard"
+        ],
+        "commit": "942ed23d624df717076552f1c687c6da0bd2460d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T23:47:42.627Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T23:33:03.851Z",
+        "requestEventId": 31639529481,
+        "requestedAt": "2026-09-22T23:45:59Z",
+        "reviewedAt": "2026-09-22T23:47:42.627Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dreed47.esphome-dashboard": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
