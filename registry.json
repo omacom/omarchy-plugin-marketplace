@@ -203314,6 +203314,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nicodiaz101/omado-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:52:43.510Z",
+      "listingValidatedCommit": "b5f586179ef4aa297df3df7e0c567cc11da94c81",
+      "listingValidatedAt": "2026-09-22T02:52:43.510Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nicodiaz101/omado-plugin",
+        "pluginIds": [
+          "omado.panel"
+        ],
+        "commit": "b5f586179ef4aa297df3df7e0c567cc11da94c81",
+        "checkedAt": "2026-09-22T02:52:43.411Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nicodiaz101/omado-plugin",
+        "pluginIds": [
+          "omado.panel"
+        ],
+        "commit": "b5f586179ef4aa297df3df7e0c567cc11da94c81",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T02:52:43.411Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T02:33:01.393Z",
+        "requestEventId": 31572118514,
+        "requestedAt": "2026-09-22T02:50:29Z",
+        "reviewedAt": "2026-09-22T02:52:43.411Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omado.panel": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
