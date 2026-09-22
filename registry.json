@@ -110320,8 +110320,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T12:36:19.982Z",
-      "listingValidatedCommit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
-      "listingValidatedAt": "2026-09-02T02:32:10.056Z",
+      "listingValidatedCommit": "9cd27425a5f0b39da21808acf10998fcfc6ecff0",
+      "listingValidatedAt": "2026-09-22T22:11:53.840Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -110330,8 +110330,8 @@
         "pluginIds": [
           "io.github.flathack.tunarchy"
         ],
-        "commit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
-        "checkedAt": "2026-09-02T02:32:10.056Z",
+        "commit": "9cd27425a5f0b39da21808acf10998fcfc6ecff0",
+        "checkedAt": "2026-09-22T22:11:53.840Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -110349,27 +110349,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "flathack/omarchy-tunarchy",
-        "pluginIds": [
-          "io.github.flathack.tunarchy"
-        ],
-        "commit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T02:32:10.056Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-01T18:46:37.206Z",
-        "requestEventId": 30383613939,
-        "requestedAt": "2026-09-02T00:52:10Z",
-        "reviewedAt": "2026-09-02T02:32:10.056Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -110414,8 +110393,72 @@
             "reviewedAt": "2026-08-31T12:36:19.933Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
+          "validatedAt": "2026-09-02T02:32:10.056Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T22:11:53.840Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "flathack/omarchy-tunarchy",
+            "pluginIds": [
+              "io.github.flathack.tunarchy"
+            ],
+            "commit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
+            "checkedAt": "2026-09-02T02:32:10.056Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "flathack/omarchy-tunarchy",
+            "pluginIds": [
+              "io.github.flathack.tunarchy"
+            ],
+            "commit": "07002e5221c952d3cc81dc98e8d3adbe554f88bc",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T02:32:10.056Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-01T18:46:37.206Z",
+            "requestEventId": 30383613939,
+            "requestedAt": "2026-09-02T00:52:10Z",
+            "reviewedAt": "2026-09-02T02:32:10.056Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "flathack/omarchy-tunarchy",
+        "pluginIds": [
+          "io.github.flathack.tunarchy"
+        ],
+        "commit": "9cd27425a5f0b39da21808acf10998fcfc6ecff0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T22:11:53.840Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-17T20:01:03.390Z",
+        "requestEventId": 31634822682,
+        "requestedAt": "2026-09-22T22:03:50Z",
+        "reviewedAt": "2026-09-22T22:11:53.840Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/vip32/omarchy-torbox-downloader",
