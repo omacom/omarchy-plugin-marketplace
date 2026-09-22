@@ -125881,8 +125881,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T14:06:33.261Z",
-      "listingValidatedCommit": "1593c7ced6d2cde7b156bf001e9ad365564ea9fb",
-      "listingValidatedAt": "2026-09-04T14:06:33.261Z",
+      "listingValidatedCommit": "7b2bad88e9e8eb053fe4943523fef5e9015c4e72",
+      "listingValidatedAt": "2026-09-22T23:55:51.710Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -125891,8 +125891,8 @@
         "pluginIds": [
           "io.github.majesticio.cliamped"
         ],
-        "commit": "1593c7ced6d2cde7b156bf001e9ad365564ea9fb",
-        "checkedAt": "2026-09-04T14:06:33.199Z",
+        "commit": "7b2bad88e9e8eb053fe4943523fef5e9015c4e72",
+        "checkedAt": "2026-09-22T23:55:51.710Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -125908,7 +125908,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1593c7ced6d2cde7b156bf001e9ad365564ea9fb",
+          "validatedAt": "2026-09-04T14:06:33.261Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T23:55:51.710Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "majesticio/omarchy-cliamped-plugin",
+            "pluginIds": [
+              "io.github.majesticio.cliamped"
+            ],
+            "commit": "1593c7ced6d2cde7b156bf001e9ad365564ea9fb",
+            "checkedAt": "2026-09-04T14:06:33.199Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mdelgert/omarchy-lan-mouse",
