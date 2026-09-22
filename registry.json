@@ -211838,6 +211838,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Lekonidus/omarchy-currency",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:26:17.548Z",
+      "listingValidatedCommit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
+      "listingValidatedAt": "2026-09-22T22:26:17.548Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lekonidus/omarchy-currency",
+        "pluginIds": [
+          "io.github.lekonidus.currency"
+        ],
+        "commit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
+        "checkedAt": "2026-09-22T22:26:17.434Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lekonidus.currency": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
