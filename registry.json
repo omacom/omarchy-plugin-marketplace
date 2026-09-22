@@ -210352,6 +210352,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paytbidd/omarchy-macromancy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:56:06.353Z",
+      "listingValidatedCommit": "2adc7947249df51a009670251c133f38daa42fcc",
+      "listingValidatedAt": "2026-09-22T18:56:06.353Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paytbidd/omarchy-macromancy",
+        "pluginIds": [
+          "payton.macromancy"
+        ],
+        "commit": "2adc7947249df51a009670251c133f38daa42fcc",
+        "checkedAt": "2026-09-22T18:56:06.249Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paytbidd/omarchy-macromancy",
+        "pluginIds": [
+          "payton.macromancy"
+        ],
+        "commit": "2adc7947249df51a009670251c133f38daa42fcc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:56:06.249Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:45:46.375Z",
+        "requestEventId": 31623561080,
+        "requestedAt": "2026-09-22T18:51:51Z",
+        "reviewedAt": "2026-09-22T18:56:06.249Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "payton.macromancy": {
+          "category": "Productivity",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
