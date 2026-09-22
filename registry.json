@@ -211905,6 +211905,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dreamsgarage/OmasteelRGB",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:34:50.608Z",
+      "listingValidatedCommit": "ebe7d4fa9d6cf963f91c5dc783c00ce5a6a7da19",
+      "listingValidatedAt": "2026-09-22T22:34:50.608Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dreamsgarage/omasteelrgb",
+        "pluginIds": [
+          "steelseries.keyboard"
+        ],
+        "commit": "ebe7d4fa9d6cf963f91c5dc783c00ce5a6a7da19",
+        "checkedAt": "2026-09-22T22:34:50.526Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dreamsgarage/omasteelrgb",
+        "pluginIds": [
+          "steelseries.keyboard"
+        ],
+        "commit": "ebe7d4fa9d6cf963f91c5dc783c00ce5a6a7da19",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T22:34:50.526Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T22:14:54.407Z",
+        "requestEventId": 31636167947,
+        "requestedAt": "2026-09-22T22:30:13Z",
+        "reviewedAt": "2026-09-22T22:34:50.526Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "steelseries.keyboard": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
