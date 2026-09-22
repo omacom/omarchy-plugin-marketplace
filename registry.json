@@ -206316,6 +206316,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gdeyoung/omarchy-displayplus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T10:17:22.684Z",
+      "listingValidatedCommit": "4458ad1f26113264d1e16881c004118932df87c3",
+      "listingValidatedAt": "2026-09-22T10:17:22.684Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gdeyoung/omarchy-displayplus",
+        "pluginIds": [
+          "gdeyoung.hyprmoncfg"
+        ],
+        "commit": "4458ad1f26113264d1e16881c004118932df87c3",
+        "checkedAt": "2026-09-22T10:17:22.584Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gdeyoung/omarchy-displayplus",
+        "pluginIds": [
+          "gdeyoung.hyprmoncfg"
+        ],
+        "commit": "4458ad1f26113264d1e16881c004118932df87c3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T10:17:22.584Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T09:43:05.717Z",
+        "requestEventId": 31591153972,
+        "requestedAt": "2026-09-22T10:10:32Z",
+        "reviewedAt": "2026-09-22T10:17:22.584Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gdeyoung.hyprmoncfg": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
