@@ -204369,6 +204369,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fingerskier/omarchy_motion",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T05:20:34.760Z",
+      "listingValidatedCommit": "4df77832b4d7a94b0c97793355e7688f3632d3ef",
+      "listingValidatedAt": "2026-09-22T05:20:34.760Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fingerskier/omarchy_motion",
+        "pluginIds": [
+          "fingerskier.motion"
+        ],
+        "commit": "4df77832b4d7a94b0c97793355e7688f3632d3ef",
+        "checkedAt": "2026-09-22T05:20:34.660Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fingerskier/omarchy_motion",
+        "pluginIds": [
+          "fingerskier.motion"
+        ],
+        "commit": "4df77832b4d7a94b0c97793355e7688f3632d3ef",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T05:20:34.660Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T05:05:52.434Z",
+        "requestEventId": 31576690362,
+        "requestedAt": "2026-09-22T05:16:13Z",
+        "reviewedAt": "2026-09-22T05:20:34.660Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "fingerskier.motion": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
