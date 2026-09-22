@@ -209574,6 +209574,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dragosol/omarchy-pear-passwords",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:34:37.304Z",
+      "listingValidatedCommit": "67a8637d372d9094e8d612e62f5e4e0ce92ec8a1",
+      "listingValidatedAt": "2026-09-22T17:34:37.304Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dragosol/omarchy-pear-passwords",
+        "pluginIds": [
+          "io.github.dragosol.pear-passwords"
+        ],
+        "commit": "67a8637d372d9094e8d612e62f5e4e0ce92ec8a1",
+        "checkedAt": "2026-09-22T17:34:37.191Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dragosol/omarchy-pear-passwords",
+        "pluginIds": [
+          "io.github.dragosol.pear-passwords"
+        ],
+        "commit": "67a8637d372d9094e8d612e62f5e4e0ce92ec8a1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:34:37.191Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T16:29:50.526Z",
+        "requestEventId": 31618596044,
+        "requestedAt": "2026-09-22T17:27:19Z",
+        "reviewedAt": "2026-09-22T17:34:37.191Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dragosol.pear-passwords": {
+          "category": "Productivity",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
