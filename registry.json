@@ -205193,6 +205193,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Lemondropai/omarchy-droid-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:55:39.417Z",
+      "listingValidatedCommit": "4fd77bdb4bdc59d6a35696bb0c2ec251d717eeab",
+      "listingValidatedAt": "2026-09-22T07:55:39.417Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lemondropai/omarchy-droid-usage",
+        "pluginIds": [
+          "io.github.lemondropai.droid-usage"
+        ],
+        "commit": "4fd77bdb4bdc59d6a35696bb0c2ec251d717eeab",
+        "checkedAt": "2026-09-22T07:55:39.316Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lemondropai.droid-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
