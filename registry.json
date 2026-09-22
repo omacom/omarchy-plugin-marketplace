@@ -207962,6 +207962,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/eudionelima/bookomarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:56:08.739Z",
+      "listingValidatedCommit": "ccd3bb3c12c27d841932f073ab79645058ea6b4e",
+      "listingValidatedAt": "2026-09-22T12:56:08.739Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eudionelima/bookomarchy",
+        "pluginIds": [
+          "eudionelima.bookomarchy"
+        ],
+        "commit": "ccd3bb3c12c27d841932f073ab79645058ea6b4e",
+        "checkedAt": "2026-09-22T12:56:08.640Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "eudionelima/bookomarchy",
+        "pluginIds": [
+          "eudionelima.bookomarchy"
+        ],
+        "commit": "ccd3bb3c12c27d841932f073ab79645058ea6b4e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T12:56:08.640Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T12:40:48.894Z",
+        "requestEventId": 31600422730,
+        "requestedAt": "2026-09-22T12:51:15Z",
+        "reviewedAt": "2026-09-22T12:56:08.640Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "eudionelima.bookomarchy": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
