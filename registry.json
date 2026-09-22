@@ -204708,6 +204708,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sclemance/ragtop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T05:51:24.354Z",
+      "listingValidatedCommit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+      "listingValidatedAt": "2026-09-22T05:51:24.354Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sclemance/ragtop",
+        "pluginIds": [
+          "sclemance.ragtop"
+        ],
+        "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+        "checkedAt": "2026-09-22T05:51:24.252Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sclemance/ragtop",
+        "pluginIds": [
+          "sclemance.ragtop"
+        ],
+        "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T05:51:24.252Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T05:45:44.223Z",
+        "requestEventId": 31577764150,
+        "requestedAt": "2026-09-22T05:48:00Z",
+        "reviewedAt": "2026-09-22T05:51:24.252Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sclemance.ragtop": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
