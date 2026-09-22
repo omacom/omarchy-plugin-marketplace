@@ -205375,6 +205375,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/waddey/paste0-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:17:25.149Z",
+      "listingValidatedCommit": "196d9bdf96a8a94c5549977932ef73fc5770637e",
+      "listingValidatedAt": "2026-09-22T08:17:25.149Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "waddey/paste0-omarchy",
+        "pluginIds": [
+          "com.paste0.paste"
+        ],
+        "commit": "196d9bdf96a8a94c5549977932ef73fc5770637e",
+        "checkedAt": "2026-09-22T08:17:25.047Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.paste0.paste": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
