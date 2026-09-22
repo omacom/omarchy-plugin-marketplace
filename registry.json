@@ -70017,8 +70017,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T06:18:17.919Z",
-      "listingValidatedCommit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
-      "listingValidatedAt": "2026-09-03T22:46:19.385Z",
+      "listingValidatedCommit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
+      "listingValidatedAt": "2026-09-22T23:14:52.363Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -70027,14 +70027,15 @@
         "pluginIds": [
           "io.github.weedwhitesandwine.plug"
         ],
-        "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
-        "checkedAt": "2026-09-03T22:46:19.384Z",
+        "commit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
+        "checkedAt": "2026-09-22T23:14:52.363Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege",
-          "service-management"
+          "service-management",
+          "package-manager"
         ]
       },
       "plugins": {
@@ -70228,6 +70229,51 @@
             "reviewedAt": "2026-08-31T13:38:24.359Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
+          "validatedAt": "2026-09-03T22:46:19.385Z",
+          "branch": "master",
+          "supersededAt": "2026-09-22T23:14:52.363Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "weedwhitesandwine/plug",
+            "pluginIds": [
+              "io.github.weedwhitesandwine.plug"
+            ],
+            "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
+            "checkedAt": "2026-09-03T22:46:19.384Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "weedwhitesandwine/plug",
+            "pluginIds": [
+              "io.github.weedwhitesandwine.plug"
+            ],
+            "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-03T22:46:19.384Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-02T13:56:38.730Z",
+            "requestEventId": 30518164495,
+            "requestedAt": "2026-09-03T21:44:25Z",
+            "reviewedAt": "2026-09-03T22:46:19.385Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -70236,20 +70282,21 @@
         "pluginIds": [
           "io.github.weedwhitesandwine.plug"
         ],
-        "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
+        "commit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-03T22:46:19.384Z",
+        "baselineCheckedAt": "2026-09-22T23:14:52.363Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "privilege",
-          "service-management"
+          "service-management",
+          "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-02T13:56:38.730Z",
-        "requestEventId": 30518164495,
-        "requestedAt": "2026-09-03T21:44:25Z",
-        "reviewedAt": "2026-09-03T22:46:19.385Z",
+        "reviewedBaselineCheckedAt": "2026-09-18T11:56:44.970Z",
+        "requestEventId": 31638084129,
+        "requestedAt": "2026-09-22T23:13:00Z",
+        "reviewedAt": "2026-09-22T23:14:52.363Z",
         "reviewer": "HANCORE-linux"
       }
     },
