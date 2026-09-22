@@ -205636,6 +205636,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hed1ad/CVE-Omarchy-Plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:51:50.554Z",
+      "listingValidatedCommit": "c9aa7dca79b4c8fdd6315d1a8e53d43ff051e094",
+      "listingValidatedAt": "2026-09-22T08:51:50.554Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hed1ad/cve-omarchy-plugin",
+        "pluginIds": [
+          "hed1ad.cve-search"
+        ],
+        "commit": "c9aa7dca79b4c8fdd6315d1a8e53d43ff051e094",
+        "checkedAt": "2026-09-22T08:51:50.458Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hed1ad/cve-omarchy-plugin",
+        "pluginIds": [
+          "hed1ad.cve-search"
+        ],
+        "commit": "c9aa7dca79b4c8fdd6315d1a8e53d43ff051e094",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T08:51:50.458Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T08:30:48.111Z",
+        "requestEventId": 31586267243,
+        "requestedAt": "2026-09-22T08:44:44Z",
+        "reviewedAt": "2026-09-22T08:51:50.458Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "hed1ad.cve-search": {
+          "category": "Other",
+          "tags": [
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
