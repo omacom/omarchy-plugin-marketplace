@@ -207198,6 +207198,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/canclini/omarchy-calculator",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:42:17.795Z",
+      "listingValidatedCommit": "0bfb983bcba2eaa04942938a37fb8406ad957050",
+      "listingValidatedAt": "2026-09-22T11:42:17.795Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "canclini/omarchy-calculator",
+        "pluginIds": [
+          "io.github.canclini.calculator"
+        ],
+        "commit": "0bfb983bcba2eaa04942938a37fb8406ad957050",
+        "checkedAt": "2026-09-22T11:42:17.712Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.canclini.calculator": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
