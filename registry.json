@@ -36889,8 +36889,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T05:35:14.122Z",
-      "listingValidatedCommit": "e290747c39e034088282181f61c13bbef307a80d",
-      "listingValidatedAt": "2026-08-23T22:47:56.640Z",
+      "listingValidatedCommit": "aae7d4cfc8f7ed06a9b6544c425d9497c2f49590",
+      "listingValidatedAt": "2026-09-22T20:30:14.823Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -36899,8 +36899,8 @@
         "pluginIds": [
           "io.github.mshareef-git.omavibes"
         ],
-        "commit": "e290747c39e034088282181f61c13bbef307a80d",
-        "checkedAt": "2026-08-23T22:47:56.639Z",
+        "commit": "aae7d4cfc8f7ed06a9b6544c425d9497c2f49590",
+        "checkedAt": "2026-09-22T20:30:14.823Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -37015,6 +37015,53 @@
             "reviewedAt": "2026-08-23T09:51:41.353Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "e290747c39e034088282181f61c13bbef307a80d",
+          "validatedAt": "2026-08-23T22:47:56.640Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T20:30:14.823Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mshareef-git/omavibes",
+            "pluginIds": [
+              "io.github.mshareef-git.omavibes"
+            ],
+            "commit": "e290747c39e034088282181f61c13bbef307a80d",
+            "checkedAt": "2026-08-23T22:47:56.639Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "privilege",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mshareef-git/omavibes",
+            "pluginIds": [
+              "io.github.mshareef-git.omavibes"
+            ],
+            "commit": "e290747c39e034088282181f61c13bbef307a80d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-23T22:47:56.639Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "privilege",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-23T22:45:28.385Z",
+            "requestEventId": 29883268558,
+            "requestedAt": "2026-08-23T22:46:10Z",
+            "reviewedAt": "2026-08-23T22:47:56.640Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -37023,10 +37070,10 @@
         "pluginIds": [
           "io.github.mshareef-git.omavibes"
         ],
-        "commit": "e290747c39e034088282181f61c13bbef307a80d",
+        "commit": "aae7d4cfc8f7ed06a9b6544c425d9497c2f49590",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-23T22:47:56.639Z",
+        "baselineCheckedAt": "2026-09-22T20:30:14.823Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -37034,10 +37081,10 @@
           "privilege",
           "remote-build"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-23T22:45:28.385Z",
-        "requestEventId": 29883268558,
-        "requestedAt": "2026-08-23T22:46:10Z",
-        "reviewedAt": "2026-08-23T22:47:56.640Z",
+        "reviewedBaselineCheckedAt": "2026-09-17T14:46:51.215Z",
+        "requestEventId": 31629401000,
+        "requestedAt": "2026-09-22T20:25:39Z",
+        "reviewedAt": "2026-09-22T20:30:14.823Z",
         "reviewer": "HANCORE-linux"
       }
     },
