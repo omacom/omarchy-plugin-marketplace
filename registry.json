@@ -104827,8 +104827,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T22:37:41.883Z",
-      "listingValidatedCommit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
-      "listingValidatedAt": "2026-09-13T21:49:41.741Z",
+      "listingValidatedCommit": "550c3491c8b3eb57d943baeb25566e804c1ef1f0",
+      "listingValidatedAt": "2026-09-22T21:56:55.475Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -104837,8 +104837,8 @@
         "pluginIds": [
           "io.github.x3me.nexthop"
         ],
-        "commit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
-        "checkedAt": "2026-09-13T21:49:41.741Z",
+        "commit": "550c3491c8b3eb57d943baeb25566e804c1ef1f0",
+        "checkedAt": "2026-09-22T21:56:55.475Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -105115,6 +105115,49 @@
             "reviewedAt": "2026-09-13T11:29:41.181Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
+          "validatedAt": "2026-09-13T21:49:41.741Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T21:56:55.475Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "x3me/omarchy-nexthop",
+            "pluginIds": [
+              "io.github.x3me.nexthop"
+            ],
+            "commit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
+            "checkedAt": "2026-09-13T21:49:41.741Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "x3me/omarchy-nexthop",
+            "pluginIds": [
+              "io.github.x3me.nexthop"
+            ],
+            "commit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-13T21:49:41.741Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-13T12:33:36.150Z",
+            "requestEventId": 31065658914,
+            "requestedAt": "2026-09-13T21:43:20Z",
+            "reviewedAt": "2026-09-13T21:49:41.741Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -105123,19 +105166,19 @@
         "pluginIds": [
           "io.github.x3me.nexthop"
         ],
-        "commit": "44ffcb56246dfc0f21663fc0d98b080f3cbe7bd5",
+        "commit": "550c3491c8b3eb57d943baeb25566e804c1ef1f0",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-13T21:49:41.741Z",
+        "baselineCheckedAt": "2026-09-22T21:56:55.475Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-13T12:33:36.150Z",
-        "requestEventId": 31065658914,
-        "requestedAt": "2026-09-13T21:43:20Z",
-        "reviewedAt": "2026-09-13T21:49:41.741Z",
+        "reviewedBaselineCheckedAt": "2026-09-21T09:05:59.783Z",
+        "requestEventId": 31634196373,
+        "requestedAt": "2026-09-22T21:52:14Z",
+        "reviewedAt": "2026-09-22T21:56:55.475Z",
         "reviewer": "HANCORE-linux"
       }
     },
