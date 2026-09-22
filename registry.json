@@ -204804,6 +204804,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jinchaofs/omarchy-agent-helm",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:12:10.102Z",
+      "listingValidatedCommit": "2cb9e3ca938d5b0d8b215b2d8b97f101d1b17b57",
+      "listingValidatedAt": "2026-09-22T07:12:10.102Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jinchaofs/omarchy-agent-helm",
+        "pluginIds": [
+          "jinchaofs.agent-helm"
+        ],
+        "commit": "2cb9e3ca938d5b0d8b215b2d8b97f101d1b17b57",
+        "checkedAt": "2026-09-22T07:12:10.001Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jinchaofs.agent-helm": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
