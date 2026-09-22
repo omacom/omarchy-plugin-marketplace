@@ -203973,6 +203973,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Azteriisk/omarchy-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:43:39.608Z",
+      "listingValidatedCommit": "b439e5e465c8535637d7fcfd7620ce6e220b17b9",
+      "listingValidatedAt": "2026-09-22T03:43:39.608Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "azteriisk/omarchy-menu",
+        "pluginIds": [
+          "azterisk.menu"
+        ],
+        "commit": "b439e5e465c8535637d7fcfd7620ce6e220b17b9",
+        "checkedAt": "2026-09-22T03:43:39.510Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "azteriisk/omarchy-menu",
+        "pluginIds": [
+          "azterisk.menu"
+        ],
+        "commit": "b439e5e465c8535637d7fcfd7620ce6e220b17b9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T03:43:39.510Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T03:13:28.032Z",
+        "requestEventId": 31573416818,
+        "requestedAt": "2026-09-22T03:33:07Z",
+        "reviewedAt": "2026-09-22T03:43:39.510Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "azterisk.menu": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
