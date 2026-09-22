@@ -210464,6 +210464,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ilysorc/omarchy-pointer-feel",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T19:03:39.020Z",
+      "listingValidatedCommit": "a36ee5e054c4584f7e798a7d1d68b507ba7e00f3",
+      "listingValidatedAt": "2026-09-22T19:03:39.020Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ilysorc/omarchy-pointer-feel",
+        "pluginIds": [
+          "ilysorc.pointer-feel"
+        ],
+        "commit": "a36ee5e054c4584f7e798a7d1d68b507ba7e00f3",
+        "checkedAt": "2026-09-22T19:03:38.927Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ilysorc/omarchy-pointer-feel",
+        "pluginIds": [
+          "ilysorc.pointer-feel"
+        ],
+        "commit": "a36ee5e054c4584f7e798a7d1d68b507ba7e00f3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T19:03:38.927Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:54:47.939Z",
+        "requestEventId": 31624205159,
+        "requestedAt": "2026-09-22T19:01:27Z",
+        "reviewedAt": "2026-09-22T19:03:38.927Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ilysorc.pointer-feel": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
