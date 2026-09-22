@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T13:19:34.068Z",
+  "generatedAt": "2026-09-22T13:28:15.371Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -212810,6 +212810,55 @@
       "upstreamValidatedAt": "2026-09-22T13:19:34.068Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "8be67651892c94e51a5e81581326e7841caa2f558576a7e80d20b6103e844b3a",
+      "status": "Available"
+    },
+    {
+      "id": "tcballard.github",
+      "name": "GitHub",
+      "description": "A native maintainer desk for GitHub notifications, issues, pull requests, discussions, and CI.",
+      "author": "tcballard",
+      "version": "0.3.1",
+      "repo": "https://github.com/tcballard/omarchy-github-panel",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "6d84d58a87f64e8bc8a00a406bd22d99aa30dca9",
+      "verificationCheckedAt": "2026-09-22T13:28:14.757Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:28:14.858Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/tcballard/omarchy-github-panel.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Developer Tools",
+      "tags": [
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 2,
+      "repositoryUpdatedAt": "2026-09-22T07:14:42Z",
+      "repositoryRelease": {
+        "tag": "v0.3.0",
+        "url": "https://github.com/tcballard/omarchy-github-panel/releases/tag/v0.3.0",
+        "publishedAt": "2026-09-08T21:14:46Z"
+      },
+      "accent": "violet",
+      "initials": "G",
+      "kind": "Panel",
+      "listingValidatedCommit": "6d84d58a87f64e8bc8a00a406bd22d99aa30dca9",
+      "listingValidatedAt": "2026-09-22T13:28:14.858Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "6d84d58a87f64e8bc8a00a406bd22d99aa30dca9",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-22T13:28:15.371Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "6d84d58a87f64e8bc8a00a406bd22d99aa30dca9",
+      "upstreamValidatedAt": "2026-09-22T13:28:15.371Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "8de4d73a14769abeb92cfc95554544a216f43fad26d10facf116d1e0616a22ab",
       "status": "Available"
     },
     {
