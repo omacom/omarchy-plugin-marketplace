@@ -210067,6 +210067,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Atzingen/hey-jarvis",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:22:21.473Z",
+      "listingValidatedCommit": "2a4b9d5e638add0af92fee3697368b23a4399e5d",
+      "listingValidatedAt": "2026-09-22T18:22:21.473Z",
+      "listingValidatedBranch": "stable",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "atzingen/hey-jarvis",
+        "pluginIds": [
+          "atzingen.jarvis"
+        ],
+        "commit": "2a4b9d5e638add0af92fee3697368b23a4399e5d",
+        "checkedAt": "2026-09-22T18:22:21.366Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "atzingen/hey-jarvis",
+        "pluginIds": [
+          "atzingen.jarvis"
+        ],
+        "commit": "2a4b9d5e638add0af92fee3697368b23a4399e5d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:22:21.366Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:02:42.424Z",
+        "requestEventId": 31621394783,
+        "requestedAt": "2026-09-22T18:15:48Z",
+        "reviewedAt": "2026-09-22T18:22:21.367Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "atzingen.jarvis": {
+          "category": "Desktop",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
