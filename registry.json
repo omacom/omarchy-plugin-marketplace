@@ -203429,6 +203429,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kasemeyer/omalink-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:59:34.361Z",
+      "listingValidatedCommit": "1c3c21dfe3f01ef2a1a5ae14125165975ea79ecc",
+      "listingValidatedAt": "2026-09-22T02:59:34.361Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kasemeyer/omalink-bar",
+        "pluginIds": [
+          "kc.omalink-bar"
+        ],
+        "commit": "1c3c21dfe3f01ef2a1a5ae14125165975ea79ecc",
+        "checkedAt": "2026-09-22T02:59:34.258Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kasemeyer/omalink-bar",
+        "pluginIds": [
+          "kc.omalink-bar"
+        ],
+        "commit": "1c3c21dfe3f01ef2a1a5ae14125165975ea79ecc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T02:59:34.258Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T02:33:11.566Z",
+        "requestEventId": 31572198776,
+        "requestedAt": "2026-09-22T02:52:59Z",
+        "reviewedAt": "2026-09-22T02:59:34.258Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kc.omalink-bar": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
