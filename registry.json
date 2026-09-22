@@ -211805,6 +211805,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/f360c4/omacall",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:22:32.259Z",
+      "listingValidatedCommit": "87123808234397a9cbbe395cbc4bc51e4c01ab2d",
+      "listingValidatedAt": "2026-09-22T22:22:32.259Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "f360c4/omacall",
+        "pluginIds": [
+          "f360c4.omacall"
+        ],
+        "commit": "87123808234397a9cbbe395cbc4bc51e4c01ab2d",
+        "checkedAt": "2026-09-22T22:22:32.148Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "f360c4.omacall": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
