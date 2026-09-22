@@ -207264,6 +207264,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ricardojrgpimentel/omarchy-myskoda",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:51:38.578Z",
+      "listingValidatedCommit": "9bf7b68beab88ab10542a5ca8a93ace68eec8797",
+      "listingValidatedAt": "2026-09-22T11:51:38.578Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ricardojrgpimentel/omarchy-myskoda",
+        "pluginIds": [
+          "community.myskoda"
+        ],
+        "commit": "9bf7b68beab88ab10542a5ca8a93ace68eec8797",
+        "checkedAt": "2026-09-22T11:51:38.478Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ricardojrgpimentel/omarchy-myskoda",
+        "pluginIds": [
+          "community.myskoda"
+        ],
+        "commit": "9bf7b68beab88ab10542a5ca8a93ace68eec8797",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T11:51:38.478Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T11:35:19.300Z",
+        "requestEventId": 31596045640,
+        "requestedAt": "2026-09-22T11:40:59Z",
+        "reviewedAt": "2026-09-22T11:51:38.478Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "community.myskoda": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
