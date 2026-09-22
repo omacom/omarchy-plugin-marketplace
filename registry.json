@@ -206257,6 +206257,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alebairos/omarchy-mx-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T10:13:44.776Z",
+      "listingValidatedCommit": "e46f1ce0920de51b55ae77d6cefe3dcef93be208",
+      "listingValidatedAt": "2026-09-22T10:13:44.776Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alebairos/omarchy-mx-plugin",
+        "pluginIds": [
+          "alebairos.mx-quick-control"
+        ],
+        "commit": "e46f1ce0920de51b55ae77d6cefe3dcef93be208",
+        "checkedAt": "2026-09-22T10:13:44.693Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alebairos/omarchy-mx-plugin",
+        "pluginIds": [
+          "alebairos.mx-quick-control"
+        ],
+        "commit": "e46f1ce0920de51b55ae77d6cefe3dcef93be208",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T10:13:44.693Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T09:42:28.916Z",
+        "requestEventId": 31591109378,
+        "requestedAt": "2026-09-22T10:09:42Z",
+        "reviewedAt": "2026-09-22T10:13:44.693Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "alebairos.mx-quick-control": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
