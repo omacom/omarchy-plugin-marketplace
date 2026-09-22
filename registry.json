@@ -206653,6 +206653,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/iamcheyan/omarchy-clipboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T10:49:09.520Z",
+      "listingValidatedCommit": "8dbfae766017389c95eef686ed1a4c2207c20437",
+      "listingValidatedAt": "2026-09-22T10:49:09.520Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iamcheyan/omarchy-clipboard",
+        "pluginIds": [
+          "iamcheyan.clipboard"
+        ],
+        "commit": "8dbfae766017389c95eef686ed1a4c2207c20437",
+        "checkedAt": "2026-09-22T10:49:09.457Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "iamcheyan.clipboard": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
