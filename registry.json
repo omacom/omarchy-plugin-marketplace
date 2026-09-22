@@ -203222,6 +203222,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lancefaul/omarchy-omarcal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:41:31.939Z",
+      "listingValidatedCommit": "2d20c1a9aeb7ed35237d93abe33a9e9a924fc879",
+      "listingValidatedAt": "2026-09-22T02:41:31.939Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lancefaul/omarchy-omarcal",
+        "pluginIds": [
+          "lancefaul.omarcal"
+        ],
+        "commit": "2d20c1a9aeb7ed35237d93abe33a9e9a924fc879",
+        "checkedAt": "2026-09-22T02:41:31.847Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lancefaul.omarcal": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
