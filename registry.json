@@ -205727,6 +205727,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/27mfp/miguel.omasports",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:59:25.305Z",
+      "listingValidatedCommit": "c4e82c208af28e7ad065cf027562b24f4b877439",
+      "listingValidatedAt": "2026-09-22T08:59:25.305Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "27mfp/miguel.omasports",
+        "pluginIds": [
+          "miguel.omasports"
+        ],
+        "commit": "c4e82c208af28e7ad065cf027562b24f4b877439",
+        "checkedAt": "2026-09-22T08:59:25.206Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "miguel.omasports": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
