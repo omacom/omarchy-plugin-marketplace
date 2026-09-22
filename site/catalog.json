@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T07:24:47.345Z",
+  "generatedAt": "2026-09-22T07:28:30.334Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -208689,6 +208689,55 @@
       "upstreamValidatedAt": "2026-09-22T07:24:47.345Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "fa52023b51bc5d2bad873fdb0924a301f555296c6decd3244d5d37743db42cab",
+      "status": "Available"
+    },
+    {
+      "id": "io.github.jfdnet.cn-indicator",
+      "name": "Omarchy CN Indicator",
+      "description": "Fcitx5 Chinese input method indicator for the Omarchy top bar: shows EN/中 at a glance and toggles input on click. Works with any fcitx5 engine (Rime, Pinyin, ...). Does not manage fcitx5 or Rime config.",
+      "author": "jfdnet",
+      "version": "1.0.0",
+      "repo": "https://github.com/jfdnet/omarchy-cn-indicator",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "4e171d19b2064eef669ab7b951df61720d5a8cb1",
+      "verificationCheckedAt": "2026-09-22T07:28:29.831Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:28:29.925Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/jfdnet/omarchy-cn-indicator.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Widgets",
+      "tags": [
+        "bar",
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-22T03:33:16Z",
+      "repositoryRelease": {
+        "tag": "v1.0.0",
+        "url": "https://github.com/jfdnet/omarchy-cn-indicator/tree/v1.0.0"
+      },
+      "accent": "rose",
+      "initials": "OC",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "4e171d19b2064eef669ab7b951df61720d5a8cb1",
+      "listingValidatedAt": "2026-09-22T07:28:29.925Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "4e171d19b2064eef669ab7b951df61720d5a8cb1",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-22T07:28:30.334Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "4e171d19b2064eef669ab7b951df61720d5a8cb1",
+      "upstreamValidatedAt": "2026-09-22T07:28:30.334Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "bde320bd07035ea33d44618da9aed3ca356a0b10a86dada28950b99a237c1f4c",
       "status": "Available"
     },
     {
