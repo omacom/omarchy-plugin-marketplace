@@ -208052,6 +208052,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gmaxxxie/omarchy-tablet-experience",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:11:08.661Z",
+      "listingValidatedCommit": "74095b83a0260398d2e60cef13b7c9fcb76ecf68",
+      "listingValidatedAt": "2026-09-22T13:11:08.661Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gmaxxxie/omarchy-tablet-experience",
+        "pluginIds": [
+          "maxt.tablet-experience"
+        ],
+        "commit": "74095b83a0260398d2e60cef13b7c9fcb76ecf68",
+        "checkedAt": "2026-09-22T13:11:08.557Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gmaxxxie/omarchy-tablet-experience",
+        "pluginIds": [
+          "maxt.tablet-experience"
+        ],
+        "commit": "74095b83a0260398d2e60cef13b7c9fcb76ecf68",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T13:11:08.557Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T13:02:56.329Z",
+        "requestEventId": 31601403865,
+        "requestedAt": "2026-09-22T13:06:05Z",
+        "reviewedAt": "2026-09-22T13:11:08.557Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "maxt.tablet-experience": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
