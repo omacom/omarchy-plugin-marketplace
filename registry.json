@@ -209515,6 +209515,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/07dcolem/omarchy-target-boot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:30:02.175Z",
+      "listingValidatedCommit": "05c7cf99918f59c1647d937c613690f2ea51e555",
+      "listingValidatedAt": "2026-09-22T17:30:02.175Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "07dcolem/omarchy-target-boot",
+        "pluginIds": [
+          "io.github.07dcolem.target-boot"
+        ],
+        "commit": "05c7cf99918f59c1647d937c613690f2ea51e555",
+        "checkedAt": "2026-09-22T17:30:02.087Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "07dcolem/omarchy-target-boot",
+        "pluginIds": [
+          "io.github.07dcolem.target-boot"
+        ],
+        "commit": "05c7cf99918f59c1647d937c613690f2ea51e555",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:30:02.087Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T16:57:59.735Z",
+        "requestEventId": 31618349389,
+        "requestedAt": "2026-09-22T17:23:08Z",
+        "reviewedAt": "2026-09-22T17:30:02.087Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.07dcolem.target-boot": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
