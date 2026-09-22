@@ -208437,6 +208437,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fortymileswest/omarchy-pcloud-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:52:08.906Z",
+      "listingValidatedCommit": "43b2713bc18d74dcf31deee2970721c68e5b6e34",
+      "listingValidatedAt": "2026-09-22T13:52:08.906Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fortymileswest/omarchy-pcloud-widget",
+        "pluginIds": [
+          "fortymileswest.pcloud"
+        ],
+        "commit": "43b2713bc18d74dcf31deee2970721c68e5b6e34",
+        "checkedAt": "2026-09-22T13:52:08.804Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fortymileswest/omarchy-pcloud-widget",
+        "pluginIds": [
+          "fortymileswest.pcloud"
+        ],
+        "commit": "43b2713bc18d74dcf31deee2970721c68e5b6e34",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T13:52:08.804Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T13:38:27.410Z",
+        "requestEventId": 31604156683,
+        "requestedAt": "2026-09-22T13:45:28Z",
+        "reviewedAt": "2026-09-22T13:52:08.804Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "fortymileswest.pcloud": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
