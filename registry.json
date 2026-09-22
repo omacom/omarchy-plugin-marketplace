@@ -206621,6 +206621,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yoprogramo/omanomorepass",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T10:46:04.467Z",
+      "listingValidatedCommit": "6fb7f545548ed77454e02c5ab0dd77ce937de587",
+      "listingValidatedAt": "2026-09-22T10:46:04.467Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yoprogramo/omanomorepass",
+        "pluginIds": [
+          "io.github.yoprogramo.omanomorepass"
+        ],
+        "commit": "6fb7f545548ed77454e02c5ab0dd77ce937de587",
+        "checkedAt": "2026-09-22T10:46:04.372Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.yoprogramo.omanomorepass": {
+          "category": "Productivity",
+          "tags": [
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
