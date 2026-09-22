@@ -205761,6 +205761,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/iampoul/sysstats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:04:22.559Z",
+      "listingValidatedCommit": "1a448a2bf30eed8b1f0c9dfdcbca3ce8b19b4d1c",
+      "listingValidatedAt": "2026-09-22T09:04:22.559Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iampoul/sysstats",
+        "pluginIds": [
+          "io.github.iampoul.sysstats"
+        ],
+        "commit": "1a448a2bf30eed8b1f0c9dfdcbca3ce8b19b4d1c",
+        "checkedAt": "2026-09-22T09:04:22.500Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.iampoul.sysstats": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
