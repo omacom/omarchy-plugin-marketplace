@@ -207725,6 +207725,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/taisau/omarchy-location",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:37:41.591Z",
+      "listingValidatedCommit": "fba2b720db51401ac29bc14cec48961b5c3b39ec",
+      "listingValidatedAt": "2026-09-22T12:37:41.591Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "taisau/omarchy-location",
+        "pluginIds": [
+          "io.github.taisau.location"
+        ],
+        "commit": "fba2b720db51401ac29bc14cec48961b5c3b39ec",
+        "checkedAt": "2026-09-22T12:37:41.492Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "taisau/omarchy-location",
+        "pluginIds": [
+          "io.github.taisau.location"
+        ],
+        "commit": "fba2b720db51401ac29bc14cec48961b5c3b39ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T12:37:41.492Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T12:21:09.289Z",
+        "requestEventId": 31599415457,
+        "requestedAt": "2026-09-22T12:34:59Z",
+        "reviewedAt": "2026-09-22T12:37:41.492Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.taisau.location": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
