@@ -203484,6 +203484,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SaifOmar/so.agent-notch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:03:13.495Z",
+      "listingValidatedCommit": "646c7fc69801cc025587aa3c527a9d3c54750ded",
+      "listingValidatedAt": "2026-09-22T03:03:13.495Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "saifomar/so.agent-notch",
+        "pluginIds": [
+          "so.agent-notch"
+        ],
+        "commit": "646c7fc69801cc025587aa3c527a9d3c54750ded",
+        "checkedAt": "2026-09-22T03:03:13.407Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "so.agent-notch": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
