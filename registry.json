@@ -156285,8 +156285,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T23:00:22.913Z",
-      "listingValidatedCommit": "4a1407ae1700b3d08cdf60f100666a611245197d",
-      "listingValidatedAt": "2026-09-08T23:00:22.913Z",
+      "listingValidatedCommit": "d182c8faa62107a94611334ddc51dc081354b9e2",
+      "listingValidatedAt": "2026-09-22T23:51:44.138Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -156295,8 +156295,8 @@
         "pluginIds": [
           "io.github.decadentsavant.bookmark-everything"
         ],
-        "commit": "4a1407ae1700b3d08cdf60f100666a611245197d",
-        "checkedAt": "2026-09-08T23:00:22.847Z",
+        "commit": "d182c8faa62107a94611334ddc51dc081354b9e2",
+        "checkedAt": "2026-09-22T23:51:44.138Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -156312,7 +156312,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4a1407ae1700b3d08cdf60f100666a611245197d",
+          "validatedAt": "2026-09-08T23:00:22.913Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T23:51:44.138Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "decadentsavant/bookmark-everything",
+            "pluginIds": [
+              "io.github.decadentsavant.bookmark-everything"
+            ],
+            "commit": "4a1407ae1700b3d08cdf60f100666a611245197d",
+            "checkedAt": "2026-09-08T23:00:22.847Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/keasbeexd/omarchy-hsk",
