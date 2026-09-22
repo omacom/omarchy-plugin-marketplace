@@ -211063,6 +211063,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/FerC10110/omarchy-active-break",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T20:52:51.427Z",
+      "listingValidatedCommit": "f8b1f769dd52e96a6a3e95b170cff67f9aa36911",
+      "listingValidatedAt": "2026-09-22T20:52:51.427Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ferc10110/omarchy-active-break",
+        "pluginIds": [
+          "io.github.ferc10110.active-break"
+        ],
+        "commit": "f8b1f769dd52e96a6a3e95b170cff67f9aa36911",
+        "checkedAt": "2026-09-22T20:52:51.323Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ferc10110.active-break": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
