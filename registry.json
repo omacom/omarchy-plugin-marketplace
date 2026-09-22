@@ -205795,6 +205795,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/adamperlis/omarchy-walkie",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:11:16.178Z",
+      "listingValidatedCommit": "6f26cc7fa87020f8db8122f93f546d43fc9085e1",
+      "listingValidatedAt": "2026-09-22T09:11:16.178Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "adamperlis/omarchy-walkie",
+        "pluginIds": [
+          "com.b150.walkie"
+        ],
+        "commit": "6f26cc7fa87020f8db8122f93f546d43fc9085e1",
+        "checkedAt": "2026-09-22T09:11:16.073Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "adamperlis/omarchy-walkie",
+        "pluginIds": [
+          "com.b150.walkie"
+        ],
+        "commit": "6f26cc7fa87020f8db8122f93f546d43fc9085e1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T09:11:16.073Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T09:07:24.465Z",
+        "requestEventId": 31587666441,
+        "requestedAt": "2026-09-22T09:09:30Z",
+        "reviewedAt": "2026-09-22T09:11:16.073Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.b150.walkie": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
