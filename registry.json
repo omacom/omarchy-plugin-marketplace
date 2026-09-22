@@ -210586,6 +210586,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paytbidd/omarchy-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T19:12:19.919Z",
+      "listingValidatedCommit": "530df8e7d7498b49f860efa06aded08163970459",
+      "listingValidatedAt": "2026-09-22T19:12:19.919Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paytbidd/omarchy-weather",
+        "pluginIds": [
+          "payton.forecast"
+        ],
+        "commit": "530df8e7d7498b49f860efa06aded08163970459",
+        "checkedAt": "2026-09-22T19:12:19.841Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "payton.forecast": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
