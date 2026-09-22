@@ -207691,6 +207691,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SirAllap/omarchy-swapkin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:31:19.213Z",
+      "listingValidatedCommit": "b45a550a5ac242dea9887268b3a395cd143671df",
+      "listingValidatedAt": "2026-09-22T12:31:19.213Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sirallap/omarchy-swapkin",
+        "pluginIds": [
+          "io.github.sirallap.swapkin"
+        ],
+        "commit": "b45a550a5ac242dea9887268b3a395cd143671df",
+        "checkedAt": "2026-09-22T12:31:19.118Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.sirallap.swapkin": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
