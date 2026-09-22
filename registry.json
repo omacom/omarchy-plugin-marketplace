@@ -207320,6 +207320,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TouchWorkStation/Omarchy-Beam-",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:57:27.750Z",
+      "listingValidatedCommit": "907169e932c7ff92a3f01b0d3bd1bd7014a60743",
+      "listingValidatedAt": "2026-09-22T11:57:27.750Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "touchworkstation/omarchy-beam-",
+        "pluginIds": [
+          "beam"
+        ],
+        "commit": "907169e932c7ff92a3f01b0d3bd1bd7014a60743",
+        "checkedAt": "2026-09-22T11:57:27.646Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "touchworkstation/omarchy-beam-",
+        "pluginIds": [
+          "beam"
+        ],
+        "commit": "907169e932c7ff92a3f01b0d3bd1bd7014a60743",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T11:57:27.646Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T11:35:19.607Z",
+        "requestEventId": 31596078945,
+        "requestedAt": "2026-09-22T11:41:33Z",
+        "reviewedAt": "2026-09-22T11:57:27.646Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "beam": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
