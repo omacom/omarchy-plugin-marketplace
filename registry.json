@@ -206877,6 +206877,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nocstah/omacards",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:12:11.621Z",
+      "listingValidatedCommit": "be19dca3940278c311e9a87471ecfa9cfd042815",
+      "listingValidatedAt": "2026-09-22T11:12:11.621Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nocstah/omacards",
+        "pluginIds": [
+          "io.github.nocstah.omacards"
+        ],
+        "commit": "be19dca3940278c311e9a87471ecfa9cfd042815",
+        "checkedAt": "2026-09-22T11:12:11.509Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.nocstah.omacards": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
