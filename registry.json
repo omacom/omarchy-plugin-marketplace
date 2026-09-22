@@ -207538,6 +207538,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dejan994/omarchy-priority-todos",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:18:05.261Z",
+      "listingValidatedCommit": "1cc889dd6716ad65ca501e5eb04b25b9fe5d5d58",
+      "listingValidatedAt": "2026-09-22T12:18:05.261Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dejan994/omarchy-priority-todos",
+        "pluginIds": [
+          "dejan94.todos"
+        ],
+        "commit": "1cc889dd6716ad65ca501e5eb04b25b9fe5d5d58",
+        "checkedAt": "2026-09-22T12:18:05.159Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dejan94.todos": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
