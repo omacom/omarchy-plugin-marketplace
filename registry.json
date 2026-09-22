@@ -204903,6 +204903,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/kuryrc/omarchy-mfa",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:19:33.316Z",
+      "listingValidatedCommit": "bc79af35e16b159eab510cf4a8a11571c49d7b22",
+      "listingValidatedAt": "2026-09-22T07:19:33.316Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kuryrc/omarchy-mfa",
+        "pluginIds": [
+          "kuryrc.mfa"
+        ],
+        "commit": "bc79af35e16b159eab510cf4a8a11571c49d7b22",
+        "checkedAt": "2026-09-22T07:19:33.219Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kuryrc.mfa": {
+          "category": "Productivity",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
