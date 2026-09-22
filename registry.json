@@ -202361,6 +202361,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TomFaulkner/crossy-hop",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T00:13:38.367Z",
+      "listingValidatedCommit": "fba9e1fd368eb0fa038053023244c94d1e089062",
+      "listingValidatedAt": "2026-09-22T00:13:38.367Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tomfaulkner/crossy-hop",
+        "pluginIds": [
+          "io.github.tomfaulkner.crossy-hop"
+        ],
+        "commit": "fba9e1fd368eb0fa038053023244c94d1e089062",
+        "checkedAt": "2026-09-22T00:13:38.261Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tomfaulkner.crossy-hop": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
