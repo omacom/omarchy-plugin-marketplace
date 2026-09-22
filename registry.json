@@ -208621,6 +208621,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/StavWasPlayZ/hyprbattles",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:08:41.715Z",
+      "listingValidatedCommit": "e0877eb230018315873ac8080ce500b9d84bd44f",
+      "listingValidatedAt": "2026-09-22T14:08:41.715Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stavwasplayz/hyprbattles",
+        "pluginIds": [
+          "dev.cstav.omarchy.plugin.hyprbattles"
+        ],
+        "commit": "e0877eb230018315873ac8080ce500b9d84bd44f",
+        "checkedAt": "2026-09-22T14:08:41.609Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stavwasplayz/hyprbattles",
+        "pluginIds": [
+          "dev.cstav.omarchy.plugin.hyprbattles"
+        ],
+        "commit": "e0877eb230018315873ac8080ce500b9d84bd44f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T14:08:41.609Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T13:35:43.391Z",
+        "requestEventId": 31604605621,
+        "requestedAt": "2026-09-22T13:52:07Z",
+        "reviewedAt": "2026-09-22T14:08:41.609Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dev.cstav.omarchy.plugin.hyprbattles": {
+          "category": "Desktop",
+          "tags": [
+            "games",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
