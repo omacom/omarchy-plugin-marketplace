@@ -209064,6 +209064,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vleeuwenmenno/omasshtunnels",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T15:24:40.817Z",
+      "listingValidatedCommit": "32390c6171b7282ffd4418d2f9241da65fbc8e77",
+      "listingValidatedAt": "2026-09-22T15:24:40.817Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vleeuwenmenno/omasshtunnels",
+        "pluginIds": [
+          "vleeuwenmenno.sshtunnels"
+        ],
+        "commit": "32390c6171b7282ffd4418d2f9241da65fbc8e77",
+        "checkedAt": "2026-09-22T15:24:40.716Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "vleeuwenmenno.sshtunnels": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
