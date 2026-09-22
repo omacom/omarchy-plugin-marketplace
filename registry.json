@@ -208343,6 +208343,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mastermendes74/omarchy-sports-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:43:37.685Z",
+      "listingValidatedCommit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+      "listingValidatedAt": "2026-09-22T13:43:37.685Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mastermendes74/omarchy-sports-bar",
+        "pluginIds": [
+          "mendestein.sports"
+        ],
+        "commit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+        "checkedAt": "2026-09-22T13:43:37.605Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mendestein.sports": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T13:38:30.014Z",
+  "generatedAt": "2026-09-22T13:43:38.207Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -212962,6 +212962,56 @@
       "upstreamValidatedAt": "2026-09-22T13:38:30.014Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "f8d7f05626d2084dd15fe553c6ba5946f5b695c8d2572d5e95eec067a37d7c85",
+      "status": "Available"
+    },
+    {
+      "id": "mendestein.sports",
+      "name": "Sports Bar",
+      "description": "Sports events pill for your favourite teams — upcoming, live status and results (football, NBA, NFL, MLB, NHL, WNBA, F1)",
+      "author": "mendestein",
+      "version": "0.3.0",
+      "repo": "https://github.com/mastermendes74/omarchy-sports-bar",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+      "verificationCheckedAt": "2026-09-22T13:43:37.605Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:43:37.685Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/mastermendes74/omarchy-sports-bar.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Widgets",
+      "tags": [
+        "bar",
+        "quickshell"
+      ],
+      "license": "See repository",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-17T08:05:15Z",
+      "repositoryRelease": {
+        "tag": "v0.2.0",
+        "url": "https://github.com/mastermendes74/omarchy-sports-bar/releases/tag/v0.2.0",
+        "publishedAt": "2026-09-10T20:52:01Z"
+      },
+      "accent": "cyan",
+      "initials": "SB",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+      "listingValidatedAt": "2026-09-22T13:43:37.685Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-22T13:43:38.207Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "bf2b6fb638bf6a0bc0e297c3236f75faf1f671d2",
+      "upstreamValidatedAt": "2026-09-22T13:43:38.207Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "d7c000627a6112f93834d281589561784a1ba7f6b2b3f731386296e142cc1fee",
       "status": "Available"
     },
     {
