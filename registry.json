@@ -207036,6 +207036,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Daz92/omarchy-toggl-track",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:23:07.221Z",
+      "listingValidatedCommit": "bff9ba524f58330accb9c15de7935d831a1ba2ff",
+      "listingValidatedAt": "2026-09-22T11:23:07.221Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "daz92/omarchy-toggl-track",
+        "pluginIds": [
+          "daz.toggl-track"
+        ],
+        "commit": "bff9ba524f58330accb9c15de7935d831a1ba2ff",
+        "checkedAt": "2026-09-22T11:23:07.128Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "daz92/omarchy-toggl-track",
+        "pluginIds": [
+          "daz.toggl-track"
+        ],
+        "commit": "bff9ba524f58330accb9c15de7935d831a1ba2ff",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T11:23:07.128Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T10:56:04.977Z",
+        "requestEventId": 31594419433,
+        "requestedAt": "2026-09-22T11:11:10Z",
+        "reviewedAt": "2026-09-22T11:23:07.128Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "daz.toggl-track": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
