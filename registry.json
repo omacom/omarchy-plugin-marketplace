@@ -207379,6 +207379,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/manateelazycat/omarchy-window-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:01:52.307Z",
+      "listingValidatedCommit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
+      "listingValidatedAt": "2026-09-22T12:01:52.307Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "manateelazycat/omarchy-window-switcher",
+        "pluginIds": [
+          "io.github.manateelazycat.window-switcher"
+        ],
+        "commit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
+        "checkedAt": "2026-09-22T12:01:52.214Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.manateelazycat.window-switcher": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
