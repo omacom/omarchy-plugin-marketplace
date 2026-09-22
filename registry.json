@@ -204189,6 +204189,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/digitalbase/omarchy-sayit",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T04:57:05.929Z",
+      "listingValidatedCommit": "c1803eaa8bbf741e25944cad7fa6ded1ab967d5d",
+      "listingValidatedAt": "2026-09-22T04:57:05.929Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "digitalbase/omarchy-sayit",
+        "pluginIds": [
+          "digitalbase.sayit"
+        ],
+        "commit": "c1803eaa8bbf741e25944cad7fa6ded1ab967d5d",
+        "checkedAt": "2026-09-22T04:57:05.863Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "digitalbase/omarchy-sayit",
+        "pluginIds": [
+          "digitalbase.sayit"
+        ],
+        "commit": "c1803eaa8bbf741e25944cad7fa6ded1ab967d5d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T04:57:05.863Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T04:52:04.533Z",
+        "requestEventId": 31576030955,
+        "requestedAt": "2026-09-22T04:55:45Z",
+        "reviewedAt": "2026-09-22T04:57:05.863Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "digitalbase.sayit": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
