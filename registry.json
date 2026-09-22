@@ -207844,6 +207844,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jhonoryza/omarchy-9router-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:45:12.966Z",
+      "listingValidatedCommit": "e162dc3b4c91c49d53edc71ac5e5562d80fb8a10",
+      "listingValidatedAt": "2026-09-22T12:45:12.966Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jhonoryza/omarchy-9router-monitor",
+        "pluginIds": [
+          "jhonoryza.9router"
+        ],
+        "commit": "e162dc3b4c91c49d53edc71ac5e5562d80fb8a10",
+        "checkedAt": "2026-09-22T12:45:12.871Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jhonoryza/omarchy-9router-monitor",
+        "pluginIds": [
+          "jhonoryza.9router"
+        ],
+        "commit": "e162dc3b4c91c49d53edc71ac5e5562d80fb8a10",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T12:45:12.871Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T12:33:30.999Z",
+        "requestEventId": 31599544722,
+        "requestedAt": "2026-09-22T12:36:58Z",
+        "reviewedAt": "2026-09-22T12:45:12.871Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jhonoryza.9router": {
+          "category": "System",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
