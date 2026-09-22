@@ -207165,6 +207165,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/clickety-clacks/omarchy-ask",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:37:34.542Z",
+      "listingValidatedCommit": "02921bb13d90e0995cb69bd6652407add14ea861",
+      "listingValidatedAt": "2026-09-22T11:37:34.542Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "clickety-clacks/omarchy-ask",
+        "pluginIds": [
+          "clickety-clacks.ask"
+        ],
+        "commit": "02921bb13d90e0995cb69bd6652407add14ea861",
+        "checkedAt": "2026-09-22T11:37:34.452Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "clickety-clacks.ask": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
