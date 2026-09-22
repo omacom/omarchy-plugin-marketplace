@@ -202453,6 +202453,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/byronroark/omarchy-streampip",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T00:46:55.384Z",
+      "listingValidatedCommit": "9beeb98eaf16a1ea373c6e8db34bb342b2bba8af",
+      "listingValidatedAt": "2026-09-22T00:46:55.384Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "byronroark/omarchy-streampip",
+        "pluginIds": [
+          "byronroark.streampip"
+        ],
+        "commit": "9beeb98eaf16a1ea373c6e8db34bb342b2bba8af",
+        "checkedAt": "2026-09-22T00:46:55.287Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "byronroark/omarchy-streampip",
+        "pluginIds": [
+          "byronroark.streampip"
+        ],
+        "commit": "9beeb98eaf16a1ea373c6e8db34bb342b2bba8af",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T00:46:55.287Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T00:42:38.114Z",
+        "requestEventId": 31568175214,
+        "requestedAt": "2026-09-22T00:45:09Z",
+        "reviewedAt": "2026-09-22T00:46:55.287Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "byronroark.streampip": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
