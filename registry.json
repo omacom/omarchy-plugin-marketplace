@@ -202789,6 +202789,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/whitcodes/oma-chrome-hardware-acceleration-toggle",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:18:31.846Z",
+      "listingValidatedCommit": "f740ba0fb55bf047193cb338ddd4f8f686d52163",
+      "listingValidatedAt": "2026-09-22T01:18:31.846Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "whitcodes/oma-chrome-hardware-acceleration-toggle",
+        "pluginIds": [
+          "whitcodes.chromehwaccel"
+        ],
+        "commit": "f740ba0fb55bf047193cb338ddd4f8f686d52163",
+        "checkedAt": "2026-09-22T01:18:31.747Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "whitcodes.chromehwaccel": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "media",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
