@@ -206132,6 +206132,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0xQuan93/omarchy-ominity-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:54:49.735Z",
+      "listingValidatedCommit": "f91a62ee9ff6572c9d187141486e7568583429c2",
+      "listingValidatedAt": "2026-09-22T09:54:49.735Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0xquan93/omarchy-ominity-plugin",
+        "pluginIds": [
+          "oxquan.ominity"
+        ],
+        "commit": "f91a62ee9ff6572c9d187141486e7568583429c2",
+        "checkedAt": "2026-09-22T09:54:49.635Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "oxquan.ominity": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
