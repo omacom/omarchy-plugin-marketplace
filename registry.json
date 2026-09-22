@@ -207901,6 +207901,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/meviusisback/omarchy-dropdown-terminal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:52:12.009Z",
+      "listingValidatedCommit": "c9ed9b642a52a5b11948e2fb49f372ab3ea9485d",
+      "listingValidatedAt": "2026-09-22T12:52:12.009Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "meviusisback/omarchy-dropdown-terminal",
+        "pluginIds": [
+          "meviusisback.dropdown-terminal"
+        ],
+        "commit": "c9ed9b642a52a5b11948e2fb49f372ab3ea9485d",
+        "checkedAt": "2026-09-22T12:52:11.894Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "meviusisback/omarchy-dropdown-terminal",
+        "pluginIds": [
+          "meviusisback.dropdown-terminal"
+        ],
+        "commit": "c9ed9b642a52a5b11948e2fb49f372ab3ea9485d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T12:52:11.894Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T12:40:08.485Z",
+        "requestEventId": 31600371309,
+        "requestedAt": "2026-09-22T12:50:27Z",
+        "reviewedAt": "2026-09-22T12:52:11.894Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "meviusisback.dropdown-terminal": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
