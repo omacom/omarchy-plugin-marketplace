@@ -204549,6 +204549,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hisnameismarco/odock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T05:35:25.227Z",
+      "listingValidatedCommit": "9298f7c6e13af4079d5a65f068f64fdf5e63ed35",
+      "listingValidatedAt": "2026-09-22T05:35:25.227Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hisnameismarco/odock",
+        "pluginIds": [
+          "odock"
+        ],
+        "commit": "9298f7c6e13af4079d5a65f068f64fdf5e63ed35",
+        "checkedAt": "2026-09-22T05:35:25.140Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hisnameismarco/odock",
+        "pluginIds": [
+          "odock"
+        ],
+        "commit": "9298f7c6e13af4079d5a65f068f64fdf5e63ed35",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T05:35:25.140Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T04:59:18.338Z",
+        "requestEventId": 31577254374,
+        "requestedAt": "2026-09-22T05:33:23Z",
+        "reviewedAt": "2026-09-22T05:35:25.140Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "odock": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
