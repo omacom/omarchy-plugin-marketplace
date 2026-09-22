@@ -205442,6 +205442,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/corywinterberg/omarchy-solitaire",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:30:28.902Z",
+      "listingValidatedCommit": "f2a95daf7b3e68fb639758692121ed9f7982e3db",
+      "listingValidatedAt": "2026-09-22T08:30:28.902Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "corywinterberg/omarchy-solitaire",
+        "pluginIds": [
+          "io.github.corywinterberg.solitaire"
+        ],
+        "commit": "f2a95daf7b3e68fb639758692121ed9f7982e3db",
+        "checkedAt": "2026-09-22T08:30:28.798Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.corywinterberg.solitaire": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
