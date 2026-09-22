@@ -43099,8 +43099,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T22:08:56.326Z",
-      "listingValidatedCommit": "31cbe4c8a7d9a8b3a0ba765faffa22377f5af3be",
-      "listingValidatedAt": "2026-08-22T17:22:42.011Z",
+      "listingValidatedCommit": "6ebf04603f85726ca21e6b8a9bfea2a9155a6e85",
+      "listingValidatedAt": "2026-09-22T21:10:27.147Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -43109,12 +43109,14 @@
         "pluginIds": [
           "io.github.jeffcortez23.omarchy-vibez"
         ],
-        "commit": "31cbe4c8a7d9a8b3a0ba765faffa22377f5af3be",
-        "checkedAt": "2026-08-22T17:22:42.011Z",
-        "outcome": "passed",
+        "commit": "6ebf04603f85726ca21e6b8a9bfea2a9155a6e85",
+        "checkedAt": "2026-09-22T21:10:27.147Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "service-management"
+        ]
       },
       "plugins": {
         "io.github.jeffcortez23.omarchy-vibez": {
@@ -43147,8 +43149,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "31cbe4c8a7d9a8b3a0ba765faffa22377f5af3be",
+          "validatedAt": "2026-08-22T17:22:42.011Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T21:10:27.147Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jeffcortez23/omarchy-vibez",
+            "pluginIds": [
+              "io.github.jeffcortez23.omarchy-vibez"
+            ],
+            "commit": "31cbe4c8a7d9a8b3a0ba765faffa22377f5af3be",
+            "checkedAt": "2026-08-22T17:22:42.011Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jeffcortez23/omarchy-vibez",
+        "pluginIds": [
+          "io.github.jeffcortez23.omarchy-vibez"
+        ],
+        "commit": "6ebf04603f85726ca21e6b8a9bfea2a9155a6e85",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T21:10:27.147Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T03:07:40.177Z",
+        "requestEventId": 31631268739,
+        "requestedAt": "2026-09-22T20:58:13Z",
+        "reviewedAt": "2026-09-22T21:10:27.147Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/jacob-vincent-mink/omadigest",
