@@ -203629,6 +203629,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jamesmcm/omarchy-vopono",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:17:28.880Z",
+      "listingValidatedCommit": "ef9623a606051cb3ba202a639dfd24538506cda8",
+      "listingValidatedAt": "2026-09-22T03:17:28.880Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jamesmcm/omarchy-vopono",
+        "pluginIds": [
+          "io.github.jamesmcm.vopono"
+        ],
+        "commit": "ef9623a606051cb3ba202a639dfd24538506cda8",
+        "checkedAt": "2026-09-22T03:17:28.790Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jamesmcm/omarchy-vopono",
+        "pluginIds": [
+          "io.github.jamesmcm.vopono"
+        ],
+        "commit": "ef9623a606051cb3ba202a639dfd24538506cda8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T03:17:28.790Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T03:01:18.801Z",
+        "requestEventId": 31572876721,
+        "requestedAt": "2026-09-22T03:15:11Z",
+        "reviewedAt": "2026-09-22T03:17:28.790Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jamesmcm.vopono": {
+          "category": "System",
+          "tags": [
+            "system",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
