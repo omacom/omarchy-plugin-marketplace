@@ -202823,6 +202823,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/abduldotdev/camera",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:22:45.684Z",
+      "listingValidatedCommit": "29a6aeebbac671a015030f9890271b6283b32f03",
+      "listingValidatedAt": "2026-09-22T01:22:45.684Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "abduldotdev/camera",
+        "pluginIds": [
+          "abduldotdev.camera"
+        ],
+        "commit": "29a6aeebbac671a015030f9890271b6283b32f03",
+        "checkedAt": "2026-09-22T01:22:45.603Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "abduldotdev/camera",
+        "pluginIds": [
+          "abduldotdev.camera"
+        ],
+        "commit": "29a6aeebbac671a015030f9890271b6283b32f03",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T01:22:45.603Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T01:06:08.835Z",
+        "requestEventId": 31569014788,
+        "requestedAt": "2026-09-22T01:13:49Z",
+        "reviewedAt": "2026-09-22T01:22:45.603Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "abduldotdev.camera": {
+          "category": "Hardware",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
