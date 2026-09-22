@@ -209917,6 +209917,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/devmercenario/omarchy-antigravity",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:02:21.337Z",
+      "listingValidatedCommit": "c1cd7081d31915577e94e7d71a450e0e35ec8486",
+      "listingValidatedAt": "2026-09-22T18:02:21.337Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "devmercenario/omarchy-antigravity",
+        "pluginIds": [
+          "devmercenario.antigravity"
+        ],
+        "commit": "c1cd7081d31915577e94e7d71a450e0e35ec8486",
+        "checkedAt": "2026-09-22T18:02:21.238Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "devmercenario/omarchy-antigravity",
+        "pluginIds": [
+          "devmercenario.antigravity"
+        ],
+        "commit": "c1cd7081d31915577e94e7d71a450e0e35ec8486",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:02:21.238Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T17:47:51.602Z",
+        "requestEventId": 31620502764,
+        "requestedAt": "2026-09-22T18:00:30Z",
+        "reviewedAt": "2026-09-22T18:02:21.238Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "devmercenario.antigravity": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
