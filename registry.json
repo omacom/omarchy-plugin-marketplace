@@ -209393,6 +209393,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Howard3/omarchy-tailnet-guard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:19:08.568Z",
+      "listingValidatedCommit": "db4714ebbede50e15c55969a00fc678df54ba77b",
+      "listingValidatedAt": "2026-09-22T17:19:08.568Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "howard3/omarchy-tailnet-guard",
+        "pluginIds": [
+          "howard3.tailnet-guard"
+        ],
+        "commit": "db4714ebbede50e15c55969a00fc678df54ba77b",
+        "checkedAt": "2026-09-22T17:19:08.481Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "howard3/omarchy-tailnet-guard",
+        "pluginIds": [
+          "howard3.tailnet-guard"
+        ],
+        "commit": "db4714ebbede50e15c55969a00fc678df54ba77b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:19:08.481Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T16:46:35.068Z",
+        "requestEventId": 31617818642,
+        "requestedAt": "2026-09-22T17:14:10Z",
+        "reviewedAt": "2026-09-22T17:19:08.481Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "howard3.tailnet-guard": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
