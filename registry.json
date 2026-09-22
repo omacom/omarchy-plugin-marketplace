@@ -203751,6 +203751,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zachsa999/bar-machine-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:24:53.520Z",
+      "listingValidatedCommit": "594b7dd4b8b93e424af731263a861deb3a4e64e2",
+      "listingValidatedAt": "2026-09-22T03:24:53.520Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zachsa999/bar-machine-switcher",
+        "pluginIds": [
+          "io.github.zachsa999.machine-switcher"
+        ],
+        "commit": "594b7dd4b8b93e424af731263a861deb3a4e64e2",
+        "checkedAt": "2026-09-22T03:24:53.422Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.zachsa999.machine-switcher": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
