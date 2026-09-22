@@ -202880,6 +202880,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Auxxed/omarchy-steelseries-oled",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:27:55.931Z",
+      "listingValidatedCommit": "21dd464ed4490fb69a7d5a2523611e87cd694fb3",
+      "listingValidatedAt": "2026-09-22T01:27:55.931Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "auxxed/omarchy-steelseries-oled",
+        "pluginIds": [
+          "io.github.auxxed.steelseries-oled"
+        ],
+        "commit": "21dd464ed4490fb69a7d5a2523611e87cd694fb3",
+        "checkedAt": "2026-09-22T01:27:55.842Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "auxxed/omarchy-steelseries-oled",
+        "pluginIds": [
+          "io.github.auxxed.steelseries-oled"
+        ],
+        "commit": "21dd464ed4490fb69a7d5a2523611e87cd694fb3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T01:27:55.842Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T01:16:22.311Z",
+        "requestEventId": 31569245810,
+        "requestedAt": "2026-09-22T01:22:07Z",
+        "reviewedAt": "2026-09-22T01:27:55.842Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.auxxed.steelseries-oled": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
