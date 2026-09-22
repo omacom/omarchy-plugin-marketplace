@@ -108115,8 +108115,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T08:03:17.524Z",
-      "listingValidatedCommit": "024a26a10c57d143a172b44d7e72f0c92682526b",
-      "listingValidatedAt": "2026-08-31T08:03:17.524Z",
+      "listingValidatedCommit": "91d65f21b78e891c89c82d6db7155e58b1978a1c",
+      "listingValidatedAt": "2026-09-22T21:30:30.644Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -108125,8 +108125,8 @@
         "pluginIds": [
           "org.librewebui.companion"
         ],
-        "commit": "024a26a10c57d143a172b44d7e72f0c92682526b",
-        "checkedAt": "2026-08-31T08:03:17.471Z",
+        "commit": "91d65f21b78e891c89c82d6db7155e58b1978a1c",
+        "checkedAt": "2026-09-22T21:30:30.644Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -108134,28 +108134,6 @@
           "service-management",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "libre-webui/omarchy-libre-webui",
-        "pluginIds": [
-          "org.librewebui.companion"
-        ],
-        "commit": "024a26a10c57d143a172b44d7e72f0c92682526b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-31T08:03:17.471Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-31T07:55:22.846Z",
-        "requestEventId": 30265375461,
-        "requestedAt": "2026-08-31T08:02:33Z",
-        "reviewedAt": "2026-08-31T08:03:17.471Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "org.librewebui.companion": {
@@ -108167,7 +108145,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "libre-webui/omarchy-libre-webui",
+        "pluginIds": [
+          "org.librewebui.companion"
+        ],
+        "commit": "91d65f21b78e891c89c82d6db7155e58b1978a1c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T21:30:30.644Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-13T22:37:35.353Z",
+        "requestEventId": 31632897906,
+        "requestedAt": "2026-09-22T21:28:04Z",
+        "reviewedAt": "2026-09-22T21:30:30.644Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "024a26a10c57d143a172b44d7e72f0c92682526b",
+          "validatedAt": "2026-08-31T08:03:17.524Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T21:30:30.644Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "libre-webui/omarchy-libre-webui",
+            "pluginIds": [
+              "org.librewebui.companion"
+            ],
+            "commit": "024a26a10c57d143a172b44d7e72f0c92682526b",
+            "checkedAt": "2026-08-31T08:03:17.471Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "libre-webui/omarchy-libre-webui",
+            "pluginIds": [
+              "org.librewebui.companion"
+            ],
+            "commit": "024a26a10c57d143a172b44d7e72f0c92682526b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-31T08:03:17.471Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T07:55:22.846Z",
+            "requestEventId": 30265375461,
+            "requestedAt": "2026-08-31T08:02:33Z",
+            "reviewedAt": "2026-08-31T08:03:17.471Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/RektyRowdyy/omarchy-mirror",
