@@ -204608,6 +204608,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ecylmz/omarchy-pulse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T05:38:43.661Z",
+      "listingValidatedCommit": "f6e68c88fd265bd7e41a61c0c6e79fcb2b493237",
+      "listingValidatedAt": "2026-09-22T05:38:43.661Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ecylmz/omarchy-pulse",
+        "pluginIds": [
+          "ecylmz.omarchy-pulse"
+        ],
+        "commit": "f6e68c88fd265bd7e41a61c0c6e79fcb2b493237",
+        "checkedAt": "2026-09-22T05:38:43.595Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ecylmz.omarchy-pulse": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
