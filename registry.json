@@ -202232,6 +202232,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gran-software-solutions/podmarchy-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T00:04:01.410Z",
+      "listingValidatedCommit": "18ad4bf610935163e8fa50e4f9512074f45562e2",
+      "listingValidatedAt": "2026-09-22T00:04:01.410Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gran-software-solutions/podmarchy-omarchy-plugin",
+        "pluginIds": [
+          "de.gransoftware.podmarchy"
+        ],
+        "commit": "18ad4bf610935163e8fa50e4f9512074f45562e2",
+        "checkedAt": "2026-09-22T00:04:01.351Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "de.gransoftware.podmarchy": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
