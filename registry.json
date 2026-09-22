@@ -206978,6 +206978,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Yakumy/Station",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:19:03.233Z",
+      "listingValidatedCommit": "dcba938567c72058e016223c4a9e18fe80f55bf9",
+      "listingValidatedAt": "2026-09-22T11:19:03.233Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yakumy/station",
+        "pluginIds": [
+          "yakumy.station"
+        ],
+        "commit": "dcba938567c72058e016223c4a9e18fe80f55bf9",
+        "checkedAt": "2026-09-22T11:19:03.159Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yakumy/station",
+        "pluginIds": [
+          "yakumy.station"
+        ],
+        "commit": "dcba938567c72058e016223c4a9e18fe80f55bf9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T11:19:03.159Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T10:38:26.289Z",
+        "requestEventId": 31594339060,
+        "requestedAt": "2026-09-22T11:09:43Z",
+        "reviewedAt": "2026-09-22T11:19:03.159Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yakumy.station": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
