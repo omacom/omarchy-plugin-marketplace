@@ -207095,6 +207095,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yooneskh/omani-vote",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T11:30:00.079Z",
+      "listingValidatedCommit": "f77c488d1324a98e59f56a5f3d092ec379d43afd",
+      "listingValidatedAt": "2026-09-22T11:30:00.079Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yooneskh/omani-vote",
+        "pluginIds": [
+          "yooneskh.omani-vote"
+        ],
+        "commit": "f77c488d1324a98e59f56a5f3d092ec379d43afd",
+        "checkedAt": "2026-09-22T11:29:59.996Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yooneskh.omani-vote": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
