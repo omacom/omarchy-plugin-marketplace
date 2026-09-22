@@ -209244,6 +209244,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pxllbt/Better-Recast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T16:54:36.549Z",
+      "listingValidatedCommit": "0afb6dfc12b91440765e116a44b1cc3139b04559",
+      "listingValidatedAt": "2026-09-22T16:54:36.549Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pxllbt/better-recast",
+        "pluginIds": [
+          "pix.recast"
+        ],
+        "commit": "0afb6dfc12b91440765e116a44b1cc3139b04559",
+        "checkedAt": "2026-09-22T16:54:36.449Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "pix.recast": {
+          "category": "System",
+          "tags": [
+            "media",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
