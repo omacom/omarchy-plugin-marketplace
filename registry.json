@@ -205508,6 +205508,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AnthonyPoschen/omarchy-instant-replay",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:38:09.592Z",
+      "listingValidatedCommit": "155b0bb01b5eea88dfc5ec290ba74787772163df",
+      "listingValidatedAt": "2026-09-22T08:38:09.592Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anthonyposchen/omarchy-instant-replay",
+        "pluginIds": [
+          "io.github.anthonyposchen.instant-replay"
+        ],
+        "commit": "155b0bb01b5eea88dfc5ec290ba74787772163df",
+        "checkedAt": "2026-09-22T08:38:09.514Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.anthonyposchen.instant-replay": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "media",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
