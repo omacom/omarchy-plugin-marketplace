@@ -203064,6 +203064,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/devsanbid/omarchy-mouse-mark",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:59:27.596Z",
+      "listingValidatedCommit": "d105ee5fe7ef2e456ebe6e2c1f69243bff727a49",
+      "listingValidatedAt": "2026-09-22T01:59:27.596Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "devsanbid/omarchy-mouse-mark",
+        "pluginIds": [
+          "sanbid.mouse-mark"
+        ],
+        "commit": "d105ee5fe7ef2e456ebe6e2c1f69243bff727a49",
+        "checkedAt": "2026-09-22T01:59:27.490Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sanbid.mouse-mark": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
