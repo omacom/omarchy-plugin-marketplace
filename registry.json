@@ -203372,6 +203372,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sudhir-asuracore/recents-commander",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:56:14.821Z",
+      "listingValidatedCommit": "5663338bb1b7a7787d830ff6fe0f5cfb0135d89f",
+      "listingValidatedAt": "2026-09-22T02:56:14.821Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sudhir-asuracore/recents-commander",
+        "pluginIds": [
+          "io.github.omarchy.recents-commander"
+        ],
+        "commit": "5663338bb1b7a7787d830ff6fe0f5cfb0135d89f",
+        "checkedAt": "2026-09-22T02:56:14.728Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sudhir-asuracore/recents-commander",
+        "pluginIds": [
+          "io.github.omarchy.recents-commander"
+        ],
+        "commit": "5663338bb1b7a7787d830ff6fe0f5cfb0135d89f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T02:56:14.728Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T02:33:10.910Z",
+        "requestEventId": 31572161410,
+        "requestedAt": "2026-09-22T02:51:46Z",
+        "reviewedAt": "2026-09-22T02:56:14.728Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.omarchy.recents-commander": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
