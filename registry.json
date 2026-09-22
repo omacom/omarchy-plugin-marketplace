@@ -118052,8 +118052,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T05:15:44.434Z",
-      "listingValidatedCommit": "e52c9474d2cbe7c51056380426831ddf74d7b6d0",
-      "listingValidatedAt": "2026-09-02T05:15:44.434Z",
+      "listingValidatedCommit": "f7627e5af131fc1d3489c56f9eac8f3790b9e29e",
+      "listingValidatedAt": "2026-09-22T21:22:42.415Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118062,8 +118062,8 @@
         "pluginIds": [
           "raiden-meixelysia.omarchy-pets"
         ],
-        "commit": "e52c9474d2cbe7c51056380426831ddf74d7b6d0",
-        "checkedAt": "2026-09-02T05:15:44.378Z",
+        "commit": "f7627e5af131fc1d3489c56f9eac8f3790b9e29e",
+        "checkedAt": "2026-09-22T21:22:42.415Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118078,7 +118078,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e52c9474d2cbe7c51056380426831ddf74d7b6d0",
+          "validatedAt": "2026-09-02T05:15:44.434Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T21:22:42.415Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zacharyzhang-ny/omarchy-pets",
+            "pluginIds": [
+              "raiden-meixelysia.omarchy-pets"
+            ],
+            "commit": "e52c9474d2cbe7c51056380426831ddf74d7b6d0",
+            "checkedAt": "2026-09-02T05:15:44.378Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/AdamMusa/omarchy-portal-doctor",
