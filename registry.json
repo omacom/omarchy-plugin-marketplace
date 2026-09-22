@@ -208248,6 +208248,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vitorpacheco/omarchy-pia",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T13:34:38.011Z",
+      "listingValidatedCommit": "f36400171c8241ee032109da77f1d536166bfc4a",
+      "listingValidatedAt": "2026-09-22T13:34:38.011Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vitorpacheco/omarchy-pia",
+        "pluginIds": [
+          "io.github.vitorpacheco.pia"
+        ],
+        "commit": "f36400171c8241ee032109da77f1d536166bfc4a",
+        "checkedAt": "2026-09-22T13:34:37.915Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vitorpacheco/omarchy-pia",
+        "pluginIds": [
+          "io.github.vitorpacheco.pia"
+        ],
+        "commit": "f36400171c8241ee032109da77f1d536166bfc4a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T13:34:37.915Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T13:31:38.393Z",
+        "requestEventId": 31603292684,
+        "requestedAt": "2026-09-22T13:32:59Z",
+        "reviewedAt": "2026-09-22T13:34:37.915Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.vitorpacheco.pia": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
