@@ -205602,6 +205602,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Giuliano-sn/omarchy-nextcloud-calendar-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:48:30.717Z",
+      "listingValidatedCommit": "7d510b5cec1caa92f9d8445dc76256619c67c1fc",
+      "listingValidatedAt": "2026-09-22T08:48:30.717Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "giuliano-sn/omarchy-nextcloud-calendar-plugin",
+        "pluginIds": [
+          "giuliano.nextcloud-calendar"
+        ],
+        "commit": "7d510b5cec1caa92f9d8445dc76256619c67c1fc",
+        "checkedAt": "2026-09-22T08:48:30.662Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "giuliano.nextcloud-calendar": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
