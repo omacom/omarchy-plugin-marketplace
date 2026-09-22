@@ -207571,6 +207571,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dragosol/omarchy-omapager-pro",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T12:22:09.211Z",
+      "listingValidatedCommit": "a2014510db21571140f973a905c9470934b50e25",
+      "listingValidatedAt": "2026-09-22T12:22:09.211Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dragosol/omarchy-omapager-pro",
+        "pluginIds": [
+          "io.github.dragosol.omapager-pro"
+        ],
+        "commit": "a2014510db21571140f973a905c9470934b50e25",
+        "checkedAt": "2026-09-22T12:22:09.119Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dragosol/omarchy-omapager-pro",
+        "pluginIds": [
+          "io.github.dragosol.omapager-pro"
+        ],
+        "commit": "a2014510db21571140f973a905c9470934b50e25",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T12:22:09.119Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T11:13:30.999Z",
+        "requestEventId": 31597201125,
+        "requestedAt": "2026-09-22T12:00:23Z",
+        "reviewedAt": "2026-09-22T12:22:09.119Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dragosol.omapager-pro": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
