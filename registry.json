@@ -203098,6 +203098,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mohamedmansour/omafinance",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T02:12:02.024Z",
+      "listingValidatedCommit": "ef96ada5fdc1c17c1564a9ad45db9985bb6d0eaf",
+      "listingValidatedAt": "2026-09-22T02:12:02.024Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mohamedmansour/omafinance",
+        "pluginIds": [
+          "mohamedmansour.finance"
+        ],
+        "commit": "ef96ada5fdc1c17c1564a9ad45db9985bb6d0eaf",
+        "checkedAt": "2026-09-22T02:12:01.946Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mohamedmansour.finance": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
