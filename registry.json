@@ -208813,6 +208813,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lewapf/marantz-remote",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:35:09.179Z",
+      "listingValidatedCommit": "3ae9182861fa00f298e3b1c20773530f48fef635",
+      "listingValidatedAt": "2026-09-22T14:35:09.179Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lewapf/marantz-remote",
+        "pluginIds": [
+          "io.github.lewapf.marantz-remote"
+        ],
+        "commit": "3ae9182861fa00f298e3b1c20773530f48fef635",
+        "checkedAt": "2026-09-22T14:35:09.075Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lewapf.marantz-remote": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
