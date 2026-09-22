@@ -203030,6 +203030,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lkzwieder/omarchy-opencode-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:49:24.833Z",
+      "listingValidatedCommit": "dae4d2efd62a3455bdcd12787fa736b0e9e37ba0",
+      "listingValidatedAt": "2026-09-22T01:49:24.833Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lkzwieder/omarchy-opencode-usage",
+        "pluginIds": [
+          "lkzwieder.opencode-usage"
+        ],
+        "commit": "dae4d2efd62a3455bdcd12787fa736b0e9e37ba0",
+        "checkedAt": "2026-09-22T01:49:24.738Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lkzwieder.opencode-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
