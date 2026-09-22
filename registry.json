@@ -209700,6 +209700,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/manateelazycat/omarchy-fctix-status",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:42:37.107Z",
+      "listingValidatedCommit": "3ca2cd75a4629b1961ff619c1a06002090e1a885",
+      "listingValidatedAt": "2026-09-22T17:42:37.107Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "manateelazycat/omarchy-fctix-status",
+        "pluginIds": [
+          "io.github.manateelazycat.fcitx-status"
+        ],
+        "commit": "3ca2cd75a4629b1961ff619c1a06002090e1a885",
+        "checkedAt": "2026-09-22T17:42:37.004Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "manateelazycat/omarchy-fctix-status",
+        "pluginIds": [
+          "io.github.manateelazycat.fcitx-status"
+        ],
+        "commit": "3ca2cd75a4629b1961ff619c1a06002090e1a885",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:42:37.004Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T15:39:10.521Z",
+        "requestEventId": 31619191628,
+        "requestedAt": "2026-09-22T17:37:22Z",
+        "reviewedAt": "2026-09-22T17:42:37.004Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.manateelazycat.fcitx-status": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
