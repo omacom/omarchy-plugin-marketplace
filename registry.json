@@ -208845,6 +208845,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CristoSolar/resumeet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:38:44.583Z",
+      "listingValidatedCommit": "19077db5151fd0a4df76549a0766e8137116cff2",
+      "listingValidatedAt": "2026-09-22T14:38:44.583Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cristosolar/resumeet",
+        "pluginIds": [
+          "io.github.cristosolar.resumeet"
+        ],
+        "commit": "19077db5151fd0a4df76549a0766e8137116cff2",
+        "checkedAt": "2026-09-22T14:38:44.482Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cristosolar/resumeet",
+        "pluginIds": [
+          "io.github.cristosolar.resumeet"
+        ],
+        "commit": "19077db5151fd0a4df76549a0766e8137116cff2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T14:38:44.482Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T14:15:50.341Z",
+        "requestEventId": 31606819800,
+        "requestedAt": "2026-09-22T14:22:51Z",
+        "reviewedAt": "2026-09-22T14:38:44.482Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cristosolar.resumeet": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
