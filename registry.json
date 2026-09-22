@@ -211418,6 +211418,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/midnightslicer/omarchy-menu-apps-first",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T21:40:09.477Z",
+      "listingValidatedCommit": "19469470009cbd32c28d3d70359ab2f150c91b56",
+      "listingValidatedAt": "2026-09-22T21:40:09.477Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "midnightslicer/omarchy-menu-apps-first",
+        "pluginIds": [
+          "midnightslicer.apps-first-menu"
+        ],
+        "commit": "19469470009cbd32c28d3d70359ab2f150c91b56",
+        "checkedAt": "2026-09-22T21:40:09.369Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "midnightslicer.apps-first-menu": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
