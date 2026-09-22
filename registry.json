@@ -202510,6 +202510,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Azteriisk/omarchy-idle-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T00:50:41.428Z",
+      "listingValidatedCommit": "e1e25fafade98a5530303ebedcfefb3f9c5d3c2c",
+      "listingValidatedAt": "2026-09-22T00:50:41.428Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "azteriisk/omarchy-idle-manager",
+        "pluginIds": [
+          "azterisk.idle"
+        ],
+        "commit": "e1e25fafade98a5530303ebedcfefb3f9c5d3c2c",
+        "checkedAt": "2026-09-22T00:50:41.349Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "azteriisk/omarchy-idle-manager",
+        "pluginIds": [
+          "azterisk.idle"
+        ],
+        "commit": "e1e25fafade98a5530303ebedcfefb3f9c5d3c2c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T00:50:41.349Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T00:41:25.502Z",
+        "requestEventId": 31568295714,
+        "requestedAt": "2026-09-22T00:48:58Z",
+        "reviewedAt": "2026-09-22T00:50:41.350Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "azterisk.idle": {
+          "category": "System",
+          "tags": [
+            "power-management",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
