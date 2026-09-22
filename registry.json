@@ -205476,6 +205476,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RobiAbebe/2D-workspace-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:34:33.852Z",
+      "listingValidatedCommit": "d8b1b36cddda045b6835c09669d4b277284d314b",
+      "listingValidatedAt": "2026-09-22T08:34:33.852Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "robiabebe/2d-workspace-omarchy",
+        "pluginIds": [
+          "com.robi.workspace-grid"
+        ],
+        "commit": "d8b1b36cddda045b6835c09669d4b277284d314b",
+        "checkedAt": "2026-09-22T08:34:33.743Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.robi.workspace-grid": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
