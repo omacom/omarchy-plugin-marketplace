@@ -208711,6 +208711,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lunanoir21/quay-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:23:46.760Z",
+      "listingValidatedCommit": "e5b4e796557b66849a6c2e1f29cfc72c9b797e3f",
+      "listingValidatedAt": "2026-09-22T14:23:46.760Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lunanoir21/quay-omarchy",
+        "pluginIds": [
+          "io.github.lunanoir21.quay"
+        ],
+        "commit": "e5b4e796557b66849a6c2e1f29cfc72c9b797e3f",
+        "checkedAt": "2026-09-22T14:23:46.656Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lunanoir21.quay": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
