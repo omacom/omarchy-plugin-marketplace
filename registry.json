@@ -203693,6 +203693,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/elynch303/proton-pass",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:21:14.221Z",
+      "listingValidatedCommit": "c493f0fa334a0643ed3223e38d1ae1c272d8fcf5",
+      "listingValidatedAt": "2026-09-22T03:21:14.221Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "elynch303/proton-pass",
+        "pluginIds": [
+          "io.github.elynch303.proton-pass"
+        ],
+        "commit": "c493f0fa334a0643ed3223e38d1ae1c272d8fcf5",
+        "checkedAt": "2026-09-22T03:21:14.127Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "elynch303/proton-pass",
+        "pluginIds": [
+          "io.github.elynch303.proton-pass"
+        ],
+        "commit": "c493f0fa334a0643ed3223e38d1ae1c272d8fcf5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T03:21:14.127Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T03:01:42.946Z",
+        "requestEventId": 31572891084,
+        "requestedAt": "2026-09-22T03:15:38Z",
+        "reviewedAt": "2026-09-22T03:21:14.127Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.elynch303.proton-pass": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
