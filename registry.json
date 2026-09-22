@@ -205408,6 +205408,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/andreconde21/omarchy-herdr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:21:09.305Z",
+      "listingValidatedCommit": "dbb2ac3493fbebf7cd8d03bfc66e8b346f386fe6",
+      "listingValidatedAt": "2026-09-22T08:21:09.305Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andreconde21/omarchy-herdr",
+        "pluginIds": [
+          "andreconde.herdr"
+        ],
+        "commit": "dbb2ac3493fbebf7cd8d03bfc66e8b346f386fe6",
+        "checkedAt": "2026-09-22T08:21:09.198Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "andreconde.herdr": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
