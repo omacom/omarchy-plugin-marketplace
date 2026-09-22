@@ -203907,6 +203907,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fooblahblah/omarchy-otp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:36:11.074Z",
+      "listingValidatedCommit": "c86d995f2adce938d4f38c9f3b781a447d4ce504",
+      "listingValidatedAt": "2026-09-22T03:36:11.074Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fooblahblah/omarchy-otp",
+        "pluginIds": [
+          "fooblahblah.otp"
+        ],
+        "commit": "c86d995f2adce938d4f38c9f3b781a447d4ce504",
+        "checkedAt": "2026-09-22T03:36:10.975Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fooblahblah.otp": {
+          "category": "Productivity",
+          "tags": [
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
