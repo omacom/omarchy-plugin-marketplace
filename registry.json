@@ -209636,6 +209636,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/OmarchyFans/omarchy-fans-plugin-browser",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T17:38:42.025Z",
+      "listingValidatedCommit": "18ffd2e7f379a5ef1151453d6d7f39aa2b9cac78",
+      "listingValidatedAt": "2026-09-22T17:38:42.025Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "omarchyfans/omarchy-fans-plugin-browser",
+        "pluginIds": [
+          "io.github.modpunk.plugin-browser"
+        ],
+        "commit": "18ffd2e7f379a5ef1151453d6d7f39aa2b9cac78",
+        "checkedAt": "2026-09-22T17:38:41.940Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege",
+          "service-management",
+          "sudoers-modification"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "omarchyfans/omarchy-fans-plugin-browser",
+        "pluginIds": [
+          "io.github.modpunk.plugin-browser"
+        ],
+        "commit": "18ffd2e7f379a5ef1151453d6d7f39aa2b9cac78",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T17:38:41.940Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege",
+          "service-management",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T16:00:48.051Z",
+        "requestEventId": 31618823992,
+        "requestedAt": "2026-09-22T17:31:12Z",
+        "reviewedAt": "2026-09-22T17:38:41.941Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.modpunk.plugin-browser": {
+          "category": "System",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
