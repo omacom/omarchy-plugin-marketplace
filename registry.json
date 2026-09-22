@@ -210408,6 +210408,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paytbidd/omarchy-patina",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T18:59:27.659Z",
+      "listingValidatedCommit": "a08ddd1df0af95109e154d825a612b06f069c4d4",
+      "listingValidatedAt": "2026-09-22T18:59:27.659Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paytbidd/omarchy-patina",
+        "pluginIds": [
+          "payton.patina"
+        ],
+        "commit": "a08ddd1df0af95109e154d825a612b06f069c4d4",
+        "checkedAt": "2026-09-22T18:59:27.576Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paytbidd/omarchy-patina",
+        "pluginIds": [
+          "payton.patina"
+        ],
+        "commit": "a08ddd1df0af95109e154d825a612b06f069c4d4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T18:59:27.576Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T18:45:51.355Z",
+        "requestEventId": 31623644634,
+        "requestedAt": "2026-09-22T18:53:08Z",
+        "reviewedAt": "2026-09-22T18:59:27.576Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "payton.patina": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
