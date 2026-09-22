@@ -208530,6 +208530,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/herman6888/newswire-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:00:16.480Z",
+      "listingValidatedCommit": "4ada56fac0de1203280de2f81279f11fce18411d",
+      "listingValidatedAt": "2026-09-22T14:00:16.480Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "herman6888/newswire-omarchy",
+        "pluginIds": [
+          "herman.newswire-zh"
+        ],
+        "commit": "4ada56fac0de1203280de2f81279f11fce18411d",
+        "checkedAt": "2026-09-22T14:00:16.379Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "herman.newswire-zh": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
