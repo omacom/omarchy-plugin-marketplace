@@ -205853,6 +205853,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/denialbb/relay",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:15:14.223Z",
+      "listingValidatedCommit": "1f7c49e6b566f007b5c1a79a4f77124865b51163",
+      "listingValidatedAt": "2026-09-22T09:15:14.223Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "denialbb/relay",
+        "pluginIds": [
+          "denialbb.beeper-relay"
+        ],
+        "commit": "1f7c49e6b566f007b5c1a79a4f77124865b51163",
+        "checkedAt": "2026-09-22T09:15:14.134Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "denialbb.beeper-relay": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
