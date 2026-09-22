@@ -206099,6 +206099,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/xtrimsystems/omarchy-fillet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T09:50:39.984Z",
+      "listingValidatedCommit": "3c2fcddd577bcb8a9ddee9088d8c67f1d6e2a075",
+      "listingValidatedAt": "2026-09-22T09:50:39.984Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xtrimsystems/omarchy-fillet",
+        "pluginIds": [
+          "io.github.xtrimsystems.fillet"
+        ],
+        "commit": "3c2fcddd577bcb8a9ddee9088d8c67f1d6e2a075",
+        "checkedAt": "2026-09-22T09:50:39.885Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.xtrimsystems.fillet": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
