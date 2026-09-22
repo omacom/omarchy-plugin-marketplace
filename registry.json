@@ -205227,6 +205227,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/locld9/jack.metar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:59:29.934Z",
+      "listingValidatedCommit": "12ff032ebaae4bb7956ce12fe60e8c6c5ebced3c",
+      "listingValidatedAt": "2026-09-22T07:59:29.934Z",
+      "listingValidatedBranch": "develop",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "locld9/jack.metar",
+        "pluginIds": [
+          "jack.metar"
+        ],
+        "commit": "12ff032ebaae4bb7956ce12fe60e8c6c5ebced3c",
+        "checkedAt": "2026-09-22T07:59:29.835Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jack.metar": {
+          "category": "Widgets",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
