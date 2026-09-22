@@ -139543,8 +139543,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:53:32.470Z",
-      "listingValidatedCommit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
-      "listingValidatedAt": "2026-09-06T02:53:32.470Z",
+      "listingValidatedCommit": "188fea0682341f6f7459f2ceeedf2b97cba3fd43",
+      "listingValidatedAt": "2026-09-22T20:01:05.771Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -139553,12 +139553,14 @@
         "pluginIds": [
           "ianm.capture-overlay"
         ],
-        "commit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
-        "checkedAt": "2026-09-06T02:53:32.413Z",
-        "outcome": "passed",
+        "commit": "188fea0682341f6f7459f2ceeedf2b97cba3fd43",
+        "checkedAt": "2026-09-22T20:01:05.771Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "installer"
+        ]
       },
       "plugins": {
         "ianm.capture-overlay": {
@@ -139574,7 +139576,50 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imcmurray/omarchy-capture-overlay",
+        "pluginIds": [
+          "ianm.capture-overlay"
+        ],
+        "commit": "188fea0682341f6f7459f2ceeedf2b97cba3fd43",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T20:01:05.771Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T05:46:38.780Z",
+        "requestEventId": 31627878130,
+        "requestedAt": "2026-09-22T19:59:18Z",
+        "reviewedAt": "2026-09-22T20:01:05.771Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
+          "validatedAt": "2026-09-06T02:53:32.470Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T20:01:05.771Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "imcmurray/omarchy-capture-overlay",
+            "pluginIds": [
+              "ianm.capture-overlay"
+            ],
+            "commit": "df7377b6c3d0a3a152ffdfa2bd50757f4bbd14c0",
+            "checkedAt": "2026-09-06T02:53:32.413Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Shirak-Semonian/deepspend-omarchy-plugin",
