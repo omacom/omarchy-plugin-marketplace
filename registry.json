@@ -8030,13 +8030,18 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T19:23:28.965Z",
-      "listingValidatedCommit": "c8087fe9f98b7252ceac6a82a4047911471714d1",
-      "listingValidatedAt": "2026-08-15T19:23:28.965Z",
+      "listingValidatedCommit": "e101d4c251397ad71d7bd1fe5b6184b6050afa26",
+      "listingValidatedAt": "2026-09-22T19:50:48.851Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
+        "schemaVersion": 1,
         "version": "3",
-        "commit": "c8087fe9f98b7252ceac6a82a4047911471714d1",
-        "checkedAt": "2026-08-15T15:20:20.727Z",
+        "repository": "salemsayed/omaprayers",
+        "pluginIds": [
+          "io.github.salemsayed.omaprayers"
+        ],
+        "commit": "e101d4c251397ad71d7bd1fe5b6184b6050afa26",
+        "checkedAt": "2026-09-22T19:50:48.851Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -8051,7 +8056,24 @@
             "system"
           ]
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c8087fe9f98b7252ceac6a82a4047911471714d1",
+          "validatedAt": "2026-08-15T19:23:28.965Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T19:50:48.851Z",
+          "automatedSecurityBaseline": {
+            "version": "3",
+            "commit": "c8087fe9f98b7252ceac6a82a4047911471714d1",
+            "checkedAt": "2026-08-15T15:20:20.727Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cempack/ProtonPassPlugin",
