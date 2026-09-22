@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T01:32:21.000Z",
+  "generatedAt": "2026-09-22T01:37:20.105Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -206436,6 +206436,55 @@
       "upstreamValidatedAt": "2026-09-22T01:32:21.000Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "704aae2619cc60b6282d2792ad2192540c8b21b400859f0ec228cbad60ceec62",
+      "status": "Available"
+    },
+    {
+      "id": "ngnk.glass-clock",
+      "name": "Glass Clock",
+      "description": "A frosted-glass desktop clock widget",
+      "author": "Jesse",
+      "version": "1.0.0",
+      "repo": "https://github.com/indibyte/NGNK-glass-clock",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+      "verificationCheckedAt": "2026-09-22T01:37:19.651Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:37:19.715Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/indibyte/NGNK-glass-clock.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Widgets",
+      "tags": [
+        "workspaces"
+      ],
+      "license": "See repository",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-21T01:36:30Z",
+      "repositoryRelease": {
+        "tag": "initial",
+        "url": "https://github.com/indibyte/NGNK-glass-clock/releases/tag/initial",
+        "publishedAt": "2026-09-20T18:42:33Z"
+      },
+      "accent": "amber",
+      "initials": "GC",
+      "kind": "Panel",
+      "listingValidatedCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+      "listingValidatedAt": "2026-09-22T01:37:19.715Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-22T01:37:20.105Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+      "upstreamValidatedAt": "2026-09-22T01:37:20.105Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "49730f217e0e81bbe144d309ce944657db61b825d718bd03199472521b4d8fe1",
       "status": "Available"
     },
     {

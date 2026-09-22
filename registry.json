@@ -202998,6 +202998,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/indibyte/NGNK-glass-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T01:37:19.715Z",
+      "listingValidatedCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+      "listingValidatedAt": "2026-09-22T01:37:19.715Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "indibyte/ngnk-glass-clock",
+        "pluginIds": [
+          "ngnk.glass-clock"
+        ],
+        "commit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+        "checkedAt": "2026-09-22T01:37:19.651Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ngnk.glass-clock": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
