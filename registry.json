@@ -204771,6 +204771,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/adamritter/kitty-live-config",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T07:08:30.950Z",
+      "listingValidatedCommit": "aefeb8ba1f88915dcad4fdc3693a1d321db5234c",
+      "listingValidatedAt": "2026-09-22T07:08:30.950Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "adamritter/kitty-live-config",
+        "pluginIds": [
+          "io.github.adamritter.kitty-live-config"
+        ],
+        "commit": "aefeb8ba1f88915dcad4fdc3693a1d321db5234c",
+        "checkedAt": "2026-09-22T07:08:30.852Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.adamritter.kitty-live-config": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
