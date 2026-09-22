@@ -205542,6 +205542,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/therealasclepius/omarchy-face-unlock",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T08:45:13.636Z",
+      "listingValidatedCommit": "cb59fac7cf20f1b93377476acc3f5a4eede4298f",
+      "listingValidatedAt": "2026-09-22T08:45:13.636Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "therealasclepius/omarchy-face-unlock",
+        "pluginIds": [
+          "io.github.therealasclepius.face-unlock"
+        ],
+        "commit": "cb59fac7cf20f1b93377476acc3f5a4eede4298f",
+        "checkedAt": "2026-09-22T08:45:13.533Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "therealasclepius/omarchy-face-unlock",
+        "pluginIds": [
+          "io.github.therealasclepius.face-unlock"
+        ],
+        "commit": "cb59fac7cf20f1b93377476acc3f5a4eede4298f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T08:45:13.533Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T08:30:33.698Z",
+        "requestEventId": 31586202860,
+        "requestedAt": "2026-09-22T08:43:32Z",
+        "reviewedAt": "2026-09-22T08:45:13.533Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.therealasclepius.face-unlock": {
+          "category": "System",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
