@@ -208970,6 +208970,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mihap/omarchy-transcribe",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:54:30.455Z",
+      "listingValidatedCommit": "82827efc71d8e80e4b7ee787bd273a9056718efb",
+      "listingValidatedAt": "2026-09-22T14:54:30.455Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mihap/omarchy-transcribe",
+        "pluginIds": [
+          "mihap.transcribe"
+        ],
+        "commit": "82827efc71d8e80e4b7ee787bd273a9056718efb",
+        "checkedAt": "2026-09-22T14:54:30.388Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mihap/omarchy-transcribe",
+        "pluginIds": [
+          "mihap.transcribe"
+        ],
+        "commit": "82827efc71d8e80e4b7ee787bd273a9056718efb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T14:54:30.388Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T14:39:28.804Z",
+        "requestEventId": 31608930070,
+        "requestedAt": "2026-09-22T14:52:23Z",
+        "reviewedAt": "2026-09-22T14:54:30.388Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mihap.transcribe": {
+          "category": "Productivity",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
