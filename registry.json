@@ -115185,7 +115185,7 @@
           "io.github.selfcrypto.power-saving"
         ],
         "commit": "874cac9e8db9b9babe36b3f58ff75bcb39c6e433",
-        "checkedAt": "2026-09-11T13:37:38.491Z",
+        "checkedAt": "2026-09-22T20:56:58.969Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -115199,11 +115199,7 @@
             "system",
             "bar"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       },
       "listingValidationHistory": [

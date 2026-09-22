@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T20:52:51.961Z",
+  "generatedAt": "2026-09-22T20:56:58.969Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -110356,14 +110356,14 @@
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
       "verificationCommit": "874cac9e8db9b9babe36b3f58ff75bcb39c6e433",
-      "verificationCheckedAt": "2026-09-11T13:37:38.491Z",
+      "verificationCheckedAt": "2026-09-22T20:56:58.969Z",
       "manifestPath": "manifest.json",
       "addedAt": "2026-09-01",
       "listedAt": "2026-09-01T02:12:35.878Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": false,
-      "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/selfcrypto/omarchy-power-saving.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
       "category": "System",
       "tags": [
         "power-management",
@@ -110400,7 +110400,7 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "77d3c243293f5117217654dfd77f2e8c010836d8a65c9f763d88c2860004427e",
       "versionUpdatedAt": "2026-09-10T08:57:03.312Z",
-      "status": "Manual setup"
+      "status": "Available"
     },
     {
       "id": "wg-omarchy",
