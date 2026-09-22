@@ -202200,6 +202200,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/scoop/omacopper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T00:00:10.163Z",
+      "listingValidatedCommit": "28e0d631a9b062da3654b5259dd9e37ed31fea12",
+      "listingValidatedAt": "2026-09-22T00:00:10.163Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "scoop/omacopper",
+        "pluginIds": [
+          "scoop.omacopper"
+        ],
+        "commit": "28e0d631a9b062da3654b5259dd9e37ed31fea12",
+        "checkedAt": "2026-09-22T00:00:10.064Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "scoop.omacopper": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
