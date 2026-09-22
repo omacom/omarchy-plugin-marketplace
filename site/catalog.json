@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T05:41:56.487Z",
+  "generatedAt": "2026-09-22T05:47:43.542Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -208316,6 +208316,55 @@
       "upstreamValidatedAt": "2026-09-22T05:41:56.487Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "e2dc7fd591eee215ae35cf19320b4d19dc815c6df5f6a192089f3d9e0441d431",
+      "status": "Available"
+    },
+    {
+      "id": "quicksticky.notepad",
+      "name": "Quick Sticky",
+      "description": "Persistent scratch notepad with multiple pages",
+      "author": "syxball",
+      "version": "1.1.0",
+      "repo": "https://github.com/Syxball/quicksticky-notepad",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "8b5d65336e84cf168ad88ce3ec2991e0f94a0d68",
+      "verificationCheckedAt": "2026-09-22T05:47:42.951Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T05:47:43.053Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/Syxball/quicksticky-notepad.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Widgets",
+      "tags": [
+        "bar"
+      ],
+      "license": "See repository",
+      "stars": 1,
+      "repositoryUpdatedAt": "2026-08-30T15:00:52Z",
+      "repositoryRelease": {
+        "tag": "v1.1.0",
+        "url": "https://github.com/Syxball/quicksticky-notepad/releases/tag/v1.1.0",
+        "publishedAt": "2026-08-30T15:01:01Z"
+      },
+      "accent": "cyan",
+      "initials": "QS",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "8b5d65336e84cf168ad88ce3ec2991e0f94a0d68",
+      "listingValidatedAt": "2026-09-22T05:47:43.053Z",
+      "listingValidatedBranch": "master",
+      "upstreamObservedCommit": "8b5d65336e84cf168ad88ce3ec2991e0f94a0d68",
+      "upstreamObservedBranch": "master",
+      "upstreamCheckedAt": "2026-09-22T05:47:43.542Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "8b5d65336e84cf168ad88ce3ec2991e0f94a0d68",
+      "upstreamValidatedAt": "2026-09-22T05:47:43.542Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "d55ad7c2dbabb5656c449210db1f77f69e1708af4f9ad26024b56a65422b3c89",
       "status": "Available"
     },
     {
