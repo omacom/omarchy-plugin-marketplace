@@ -203573,6 +203573,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pacman-vzla/omarchy-qemu-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T03:10:35.323Z",
+      "listingValidatedCommit": "192a077d0e57a0d012f41daa2c4c72812c4b601c",
+      "listingValidatedAt": "2026-09-22T03:10:35.323Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pacman-vzla/omarchy-qemu-plugin",
+        "pluginIds": [
+          "dix.qemu"
+        ],
+        "commit": "192a077d0e57a0d012f41daa2c4c72812c4b601c",
+        "checkedAt": "2026-09-22T03:10:35.228Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pacman-vzla/omarchy-qemu-plugin",
+        "pluginIds": [
+          "dix.qemu"
+        ],
+        "commit": "192a077d0e57a0d012f41daa2c4c72812c4b601c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T03:10:35.228Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T02:33:29.604Z",
+        "requestEventId": 31572311512,
+        "requestedAt": "2026-09-22T02:56:29Z",
+        "reviewedAt": "2026-09-22T03:10:35.228Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dix.qemu": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
