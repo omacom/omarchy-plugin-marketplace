@@ -211771,6 +211771,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mariusfanu/omarchy-octopus-agile",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T22:18:33.104Z",
+      "listingValidatedCommit": "c4754872bc2d723f9d1f28fe7baeb0eba1333ac9",
+      "listingValidatedAt": "2026-09-22T22:18:33.104Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mariusfanu/omarchy-octopus-agile",
+        "pluginIds": [
+          "io.github.mariusfanu.octopus-agile"
+        ],
+        "commit": "c4754872bc2d723f9d1f28fe7baeb0eba1333ac9",
+        "checkedAt": "2026-09-22T22:18:33.005Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mariusfanu.octopus-agile": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
