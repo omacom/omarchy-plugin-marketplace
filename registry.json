@@ -208563,6 +208563,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jfdnet/omarchy-auto-theme",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T14:04:14.959Z",
+      "listingValidatedCommit": "80fd51b59d9255d21e65d962dcf4df744c78bb66",
+      "listingValidatedAt": "2026-09-22T14:04:14.959Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jfdnet/omarchy-auto-theme",
+        "pluginIds": [
+          "io.github.jfdnet.auto-theme"
+        ],
+        "commit": "80fd51b59d9255d21e65d962dcf4df744c78bb66",
+        "checkedAt": "2026-09-22T14:04:14.854Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jfdnet/omarchy-auto-theme",
+        "pluginIds": [
+          "io.github.jfdnet.auto-theme"
+        ],
+        "commit": "80fd51b59d9255d21e65d962dcf4df744c78bb66",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-22T14:04:14.854Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-22T13:09:45.362Z",
+        "requestEventId": 31604557162,
+        "requestedAt": "2026-09-22T13:51:27Z",
+        "reviewedAt": "2026-09-22T14:04:14.854Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jfdnet.auto-theme": {
+          "category": "Appearance",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
