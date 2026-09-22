@@ -210941,6 +210941,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/outcrop-labs/skal-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-22",
+      "listedAt": "2026-09-22T20:25:50.136Z",
+      "listingValidatedCommit": "f9ea4e035400461f96c0b1bcf6a0f3212b3f61f1",
+      "listingValidatedAt": "2026-09-22T20:25:50.136Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "outcrop-labs/skal-menu",
+        "pluginIds": [
+          "skal.menu"
+        ],
+        "commit": "f9ea4e035400461f96c0b1bcf6a0f3212b3f61f1",
+        "checkedAt": "2026-09-22T20:25:50.029Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "skal.menu": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
