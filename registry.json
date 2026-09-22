@@ -105674,8 +105674,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T23:45:41.192Z",
-      "listingValidatedCommit": "297046a977dbe4cec5674d55b91c652f89139aed",
-      "listingValidatedAt": "2026-09-02T00:05:40.070Z",
+      "listingValidatedCommit": "549dd73198c890895ac41e52e340b18a829779d8",
+      "listingValidatedAt": "2026-09-22T21:18:30.710Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -105684,8 +105684,8 @@
         "pluginIds": [
           "io.github.weedwhitesandwine.omafetti"
         ],
-        "commit": "297046a977dbe4cec5674d55b91c652f89139aed",
-        "checkedAt": "2026-09-02T00:05:40.069Z",
+        "commit": "549dd73198c890895ac41e52e340b18a829779d8",
+        "checkedAt": "2026-09-22T21:18:30.710Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -105716,6 +105716,26 @@
             ],
             "commit": "a24e4a951a956a863ca7c49cefcf10a6b268e176",
             "checkedAt": "2026-08-30T23:45:41.138Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "297046a977dbe4cec5674d55b91c652f89139aed",
+          "validatedAt": "2026-09-02T00:05:40.070Z",
+          "branch": "main",
+          "supersededAt": "2026-09-22T21:18:30.710Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "weedwhitesandwine/omafetti",
+            "pluginIds": [
+              "io.github.weedwhitesandwine.omafetti"
+            ],
+            "commit": "297046a977dbe4cec5674d55b91c652f89139aed",
+            "checkedAt": "2026-09-02T00:05:40.069Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
