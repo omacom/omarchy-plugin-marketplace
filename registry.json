@@ -216962,6 +216962,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ozdadirri/omarchy-midi-visualizer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T12:48:10.278Z",
+      "listingValidatedCommit": "484dfae236b99b622bd0acb3709a165087295592",
+      "listingValidatedAt": "2026-09-23T12:48:10.278Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ozdadirri/omarchy-midi-visualizer",
+        "pluginIds": [
+          "ozdadirri.midiviz"
+        ],
+        "commit": "484dfae236b99b622bd0acb3709a165087295592",
+        "checkedAt": "2026-09-23T12:48:10.164Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ozdadirri/omarchy-midi-visualizer",
+        "pluginIds": [
+          "ozdadirri.midiviz"
+        ],
+        "commit": "484dfae236b99b622bd0acb3709a165087295592",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T12:48:10.164Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T12:19:20.386Z",
+        "requestEventId": 31675118864,
+        "requestedAt": "2026-09-23T12:26:40Z",
+        "reviewedAt": "2026-09-23T12:48:10.164Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ozdadirri.midiviz": {
+          "category": "Desktop",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
