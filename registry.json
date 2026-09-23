@@ -150670,8 +150670,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T13:41:52.972Z",
-      "listingValidatedCommit": "8b50bf84b3dea52977583b48eb45963c3f871926",
-      "listingValidatedAt": "2026-09-08T13:41:52.972Z",
+      "listingValidatedCommit": "5c6d3e3b16aaa180bd47e353ea9ebd0044c3ec0f",
+      "listingValidatedAt": "2026-09-23T00:08:03.411Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -150680,35 +150680,14 @@
         "pluginIds": [
           "io.github.gabbe2312.calendar"
         ],
-        "commit": "8b50bf84b3dea52977583b48eb45963c3f871926",
-        "checkedAt": "2026-09-08T13:41:52.900Z",
+        "commit": "5c6d3e3b16aaa180bd47e353ea9ebd0044c3ec0f",
+        "checkedAt": "2026-09-23T00:08:03.411Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "gabbe2312/omadates",
-        "pluginIds": [
-          "io.github.gabbe2312.calendar"
-        ],
-        "commit": "8b50bf84b3dea52977583b48eb45963c3f871926",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-08T13:41:52.900Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-07T19:34:35.804Z",
-        "requestEventId": 30758919570,
-        "requestedAt": "2026-09-08T13:40:49Z",
-        "reviewedAt": "2026-09-08T13:41:52.900Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.gabbe2312.calendar": {
@@ -150723,7 +150702,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gabbe2312/omadates",
+        "pluginIds": [
+          "io.github.gabbe2312.calendar"
+        ],
+        "commit": "5c6d3e3b16aaa180bd47e353ea9ebd0044c3ec0f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T00:08:03.411Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-12T12:44:31.982Z",
+        "requestEventId": 31639840954,
+        "requestedAt": "2026-09-22T23:54:27Z",
+        "reviewedAt": "2026-09-23T00:08:03.411Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8b50bf84b3dea52977583b48eb45963c3f871926",
+          "validatedAt": "2026-09-08T13:41:52.972Z",
+          "branch": "master",
+          "supersededAt": "2026-09-23T00:08:03.411Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gabbe2312/omadates",
+            "pluginIds": [
+              "io.github.gabbe2312.calendar"
+            ],
+            "commit": "8b50bf84b3dea52977583b48eb45963c3f871926",
+            "checkedAt": "2026-09-08T13:41:52.900Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gabbe2312/omadates",
+            "pluginIds": [
+              "io.github.gabbe2312.calendar"
+            ],
+            "commit": "8b50bf84b3dea52977583b48eb45963c3f871926",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-08T13:41:52.900Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-07T19:34:35.804Z",
+            "requestEventId": 30758919570,
+            "requestedAt": "2026-09-08T13:40:49Z",
+            "reviewedAt": "2026-09-08T13:41:52.900Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ravivasavan/Omalet",
