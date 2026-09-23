@@ -198225,8 +198225,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T19:43:13.479Z",
-      "listingValidatedCommit": "e79339673713e7345e917a93a7f59f38bdb613a6",
-      "listingValidatedAt": "2026-09-20T19:43:13.479Z",
+      "listingValidatedCommit": "54282fa9d0261da2f92c743e2275df7dca8a8f73",
+      "listingValidatedAt": "2026-09-23T11:13:09.738Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -198235,8 +198235,8 @@
         "pluginIds": [
           "io.github.arikisonfire.rsync"
         ],
-        "commit": "e79339673713e7345e917a93a7f59f38bdb613a6",
-        "checkedAt": "2026-09-20T19:43:13.384Z",
+        "commit": "54282fa9d0261da2f92c743e2275df7dca8a8f73",
+        "checkedAt": "2026-09-23T11:13:09.738Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -198252,7 +198252,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e79339673713e7345e917a93a7f59f38bdb613a6",
+          "validatedAt": "2026-09-20T19:43:13.479Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:13:09.738Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "arikisonfire/omarsync",
+            "pluginIds": [
+              "io.github.arikisonfire.rsync"
+            ],
+            "commit": "e79339673713e7345e917a93a7f59f38bdb613a6",
+            "checkedAt": "2026-09-20T19:43:13.384Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jxsparrou/spokenshelf",
