@@ -215103,6 +215103,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stevenwtlafrance-ship-it/YouTube-Music-Lite",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:16:52.673Z",
+      "listingValidatedCommit": "b7b29641ec0f8fa9b83a3684f91ebe585421ab1d",
+      "listingValidatedAt": "2026-09-23T08:16:52.673Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stevenwtlafrance-ship-it/youtube-music-lite",
+        "pluginIds": [
+          "yt-music"
+        ],
+        "commit": "b7b29641ec0f8fa9b83a3684f91ebe585421ab1d",
+        "checkedAt": "2026-09-23T08:16:52.575Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stevenwtlafrance-ship-it/youtube-music-lite",
+        "pluginIds": [
+          "yt-music"
+        ],
+        "commit": "b7b29641ec0f8fa9b83a3684f91ebe585421ab1d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T08:16:52.575Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T05:39:29.398Z",
+        "requestEventId": 31660305960,
+        "requestedAt": "2026-09-23T08:13:15Z",
+        "reviewedAt": "2026-09-23T08:16:52.575Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yt-music": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
