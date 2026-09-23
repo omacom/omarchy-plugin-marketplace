@@ -1,7 +1,8 @@
-import { accentColor, formatDate, setupThemeToggle } from "./shared.js?v=20260920-05";
-import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260920-05";
+import { accentColor, formatDate, legibleColor, setupThemeToggle } from "./shared.js?v=20260923-01";
+import { createExplorerSearchMatcher, repositoryPublisher } from "./explore-search.js?v=20260923-01";
+import { themeById } from "./themes.js?v=20260920-05";
 import { inclusiveDayCount, inclusiveRangeStart } from "./growth-range.js?v=20260828-18";
-import { matchesBarTaxonomy, matchesVpnTaxonomy } from "./taxonomy.js?v=20260920-05";
+import { matchesBarTaxonomy, matchesVpnTaxonomy } from "./taxonomy.js?v=20260923-01";
 
 const number = new Intl.NumberFormat("en-US");
 const shortDate = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", timeZone: "UTC" });
@@ -66,7 +67,12 @@ let matches = new Set();
 let query = "";
 let focusMode = true;
 let growthGuideModel = null;
+let growthProjectionYear = null;
 let syncCommunityScrollFade = () => {};
+let graphPalette = null;
+const communityFilterColors = new Map();
+const activePointers = new Map();
+let pinch = null;
 
 function element(name, className, text) {
   const node = document.createElement(name);
@@ -175,6 +181,37 @@ function nodeRadius(node) {
   return 2.8 + Math.min(9, Math.log10((node.stars || 0) + 1) * 1.8 + Math.sqrt(node.influence || 0) * .12);
 }
 
+function readGraphPalette() {
+  const root = document.documentElement;
+  const styles = getComputedStyle(root);
+  const token = (name, fallback) => styles.getPropertyValue(name).trim() || fallback;
+  const background = token("--bg", "#000");
+  return {
+    light: themeById(root.dataset.theme).light,
+    background,
+    panel: token("--panel", background),
+    heading: token("--heading", "#eee"),
+    text: token("--text", "#d7d7d9"),
+    colors: new Map(),
+  };
+}
+
+// Community and accent colors are tuned for dark surfaces; darken them where a theme needs it.
+function graphColor(color, surface = "background", minimum = 3) {
+  const key = `${surface}:${minimum}:${color}`;
+  if (!graphPalette.colors.has(key)) graphPalette.colors.set(key, legibleColor(color, graphPalette[surface], minimum));
+  return graphPalette.colors.get(key);
+}
+
+function applyGraphTheme() {
+  graphPalette = readGraphPalette();
+  document.querySelectorAll(".community-row").forEach((button) => {
+    const color = communityFilterColors.get(button.dataset.cluster);
+    if (color) button.style.setProperty("--community", graphColor(color));
+  });
+  if (selected) selectNode(selected);
+}
+
 function drawCanvasLabel({ text, x, y, font, color, opacity, haloColor, haloWidth }) {
   context.save();
   context.font = font;
@@ -193,8 +230,7 @@ function drawGraph() {
   if (!explorer || !canvasSize.width || graphView.hidden) return;
   context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
   context.clearRect(0, 0, canvasSize.width, canvasSize.height);
-  const lightTheme = document.documentElement.dataset.theme === "light";
-  const labelHaloColor = lightTheme ? "#f8f8f6" : "#000";
+  const { light: lightTheme, background: labelHaloColor, heading: headingColor, text: labelColor } = graphPalette;
   const occupiedLabels = [];
   const clusterLabels = [];
 
@@ -206,7 +242,7 @@ function drawGraph() {
     const highlighted = selected && (source.index === selected.index || target.index === selected.index);
     const muted = query && (!matches.has(source.index) || !matches.has(target.index));
     context.globalAlpha = highlighted ? .95 : muted ? .02 : lightTheme ? .34 + edge.similarity * .28 : .22 + edge.similarity * .3;
-    context.strokeStyle = clusterById.get(source.cluster).color;
+    context.strokeStyle = graphColor(clusterById.get(source.cluster).color);
     context.beginPath();
     context.moveTo(source.x * viewport.scale + viewport.x, source.y * viewport.scale + viewport.y);
     context.lineTo(target.x * viewport.scale + viewport.x, target.y * viewport.scale + viewport.y);
@@ -217,10 +253,11 @@ function drawGraph() {
     const members = explorer.nodes.filter((node) => node.cluster === cluster.id && visible(node)).sort((first, second) => second.influence - first.influence).slice(0, 9);
     if (!members.length) continue;
     const hub = worldToScreen(cluster.center);
+    const clusterColor = graphColor(cluster.color);
     for (const node of members) {
       const position = worldToScreen(node);
       context.globalAlpha = lightTheme ? .46 : .34;
-      context.strokeStyle = cluster.color;
+      context.strokeStyle = clusterColor;
       context.lineWidth = 1.05;
       context.beginPath();
       context.moveTo(hub.x, hub.y);
@@ -228,8 +265,8 @@ function drawGraph() {
       context.stroke();
     }
     context.globalAlpha = .95;
-    context.fillStyle = cluster.color;
-    context.shadowColor = cluster.color;
+    context.fillStyle = clusterColor;
+    context.shadowColor = clusterColor;
     context.shadowBlur = 14;
     context.beginPath();
     context.arc(hub.x, hub.y, 5.5 + Math.sqrt(members.length), 0, Math.PI * 2);
@@ -242,7 +279,7 @@ function drawGraph() {
       x: hub.x + 13,
       y: hub.y + 4,
       font,
-      color: lightTheme ? "#19191b" : "#efeff0",
+      color: headingColor,
       opacity: .95,
       haloColor: labelHaloColor,
       haloWidth: 4,
@@ -256,10 +293,10 @@ function drawGraph() {
     if (position.x < -20 || position.x > canvasSize.width + 20 || position.y < -20 || position.y > canvasSize.height + 20) continue;
     const focus = node === hovered || node === selected;
     const radius = nodeRadius(node) * (focus ? 1.8 : 1);
-    const cluster = clusterById.get(node.cluster);
+    const clusterColor = graphColor(clusterById.get(node.cluster).color);
     context.globalAlpha = emphasized(node) ? (focus ? 1 : .92) : .08;
-    context.fillStyle = focus ? (lightTheme ? "#111" : "#fff") : cluster.color;
-    context.shadowColor = cluster.color;
+    context.fillStyle = focus ? headingColor : clusterColor;
+    context.shadowColor = clusterColor;
     context.shadowBlur = focus ? 12 : 0;
     context.beginPath();
     context.arc(position.x, position.y, radius, 0, Math.PI * 2);
@@ -291,7 +328,7 @@ function drawGraph() {
       x: position.x + radius + 5,
       y: position.y + 4,
       font: context.font,
-      color: lightTheme ? "#19191b" : "#c5c5c8",
+      color: labelColor,
       opacity: focus ? 1 : lightTheme ? .72 : .65,
       haloColor: labelHaloColor,
       haloWidth: focus ? 4 : 3,
@@ -361,7 +398,7 @@ function selectNode(node, center = false) {
   if (center) centerNode(node);
   const score = Math.round(node.influence / maximumInfluence * 100);
   const cluster = clusterById.get(node.cluster);
-  const detailAccent = accentColor(node.accent);
+  const detailAccent = graphColor(accentColor(node.accent), "panel", 4.5);
   const publisher = repositoryPublisher(node.repo);
   detail.style.setProperty("--detail-accent", detailAccent);
   detail.style.borderLeftColor = detailAccent;
@@ -370,7 +407,7 @@ function selectNode(node, center = false) {
   detail.querySelector(".detail-identity").textContent = `${node.author || "Unknown"} · ${node.id}`;
   detail.querySelector(".detail-description").textContent = node.description || "No description available.";
   const community = detail.querySelector(".detail-community");
-  community.style.setProperty("--community", cluster.color);
+  community.style.setProperty("--community", graphColor(cluster.color, "panel"));
   community.querySelector('[data-detail="community"]').textContent = cluster.label;
   const stars = detail.querySelector(".detail-stars");
   stars.querySelector('[data-detail="stars"]').textContent = number.format(node.stars || 0);
@@ -417,8 +454,11 @@ function selectNode(node, center = false) {
     const button = element("button", "neighbor-row");
     button.type = "button";
     const similarity = Math.round(neighbor.similarity * 100);
-    button.setAttribute("aria-label", `Select related plugin ${candidate.name}, ${similarity}% similarity`);
-    button.append(element("span", "", candidate.name), element("small", "", `${similarity}% →`));
+    const candidatePublisher = repositoryPublisher(candidate.repo);
+    button.setAttribute("aria-label", `Select related plugin ${candidate.name}, ${similarity}% similarity${candidatePublisher ? `, by @${candidatePublisher}` : ""}`);
+    const name = element("span", "", candidate.name);
+    if (candidatePublisher) name.append(element("i", "neighbor-publisher", `@${candidatePublisher}`));
+    button.append(name, element("small", "", `${similarity}% →`));
     button.addEventListener("click", () => {
       if (!matchesActiveCommunity(candidate)) setActiveCluster(null);
       selectNode(candidate, true);
@@ -479,7 +519,8 @@ function renderAnalysis() {
       ? `${cluster.label} filter: ${number.format(cluster.count)} matching plugins`
       : `${cluster.label}: ${number.format(cluster.count)} plugins, ${Math.round(cluster.count / explorer.nodes.length * 100)} percent`);
     button.setAttribute("aria-pressed", "false");
-    button.style.setProperty("--community", cluster.color);
+    communityFilterColors.set(cluster.id, cluster.color);
+    button.style.setProperty("--community", graphColor(cluster.color));
     const meter = element("span", "community-meter");
     meter.setAttribute("aria-hidden", "true");
     meter.style.setProperty("--share", `${Math.round(cluster.count / largestCluster * 100)}%`);
@@ -503,6 +544,7 @@ function renderAnalysis() {
 }
 
 function setupGraph() {
+  graphPalette = readGraphPalette();
   clusterById = new Map(explorer.clusters.map((cluster) => [cluster.id, cluster]));
   rankedNodes = [...explorer.nodes].sort((first, second) => second.influence - first.influence);
   focusIndexes = new Set(rankedNodes.slice(0, 180).map((node) => node.index));
@@ -545,6 +587,7 @@ graphSearch.addEventListener("keydown", (event) => {
     button.setAttribute("aria-pressed", "false");
   });
   selectNode(explorer.nodes[[...matches][0]], true);
+  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
 });
 
 graphDensity.addEventListener("click", () => {
@@ -575,28 +618,57 @@ graphReset.addEventListener("click", () => {
   drawGraph();
 });
 
-canvas.addEventListener("wheel", (event) => {
-  event.preventDefault();
-  const position = pointerPosition(event);
-  const factor = Math.exp(-event.deltaY * .0012);
-  const nextScale = Math.min(3.2, Math.max(.1, viewport.scale * factor));
+function zoomAt(position, scale) {
+  const nextScale = Math.min(3.2, Math.max(.1, scale));
   const worldX = (position.x - viewport.x) / viewport.scale;
   const worldY = (position.y - viewport.y) / viewport.scale;
   viewport.x = position.x - worldX * nextScale;
   viewport.y = position.y - worldY * nextScale;
   viewport.scale = nextScale;
+}
+
+function pinchState() {
+  const [first, second] = [...activePointers.values()];
+  return {
+    distance: Math.max(1, Math.hypot(second.x - first.x, second.y - first.y)),
+    center: { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 },
+  };
+}
+
+canvas.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  zoomAt(pointerPosition(event), viewport.scale * Math.exp(-event.deltaY * .0012));
   drawGraph();
 }, { passive: false });
 
 canvas.addEventListener("pointerdown", (event) => {
+  const position = pointerPosition(event);
+  activePointers.set(event.pointerId, position);
+  canvas.setPointerCapture(event.pointerId);
+  if (activePointers.size === 2) {
+    // A second touch turns the drag into a pinch; a pinch never selects a plugin.
+    pinch = pinchState();
+    moved = true;
+    return;
+  }
+  if (activePointers.size > 2) return;
   dragging = true;
   moved = false;
-  pointer = pointerPosition(event);
-  canvas.setPointerCapture(event.pointerId);
+  pointer = position;
   canvas.classList.add("dragging");
 });
 canvas.addEventListener("pointermove", (event) => {
   const position = pointerPosition(event);
+  if (activePointers.has(event.pointerId)) activePointers.set(event.pointerId, position);
+  if (pinch && activePointers.size >= 2) {
+    const next = pinchState();
+    zoomAt(next.center, viewport.scale * next.distance / pinch.distance);
+    viewport.x += next.center.x - pinch.center.x;
+    viewport.y += next.center.y - pinch.center.y;
+    pinch = next;
+    drawGraph();
+    return;
+  }
   if (dragging) {
     const deltaX = position.x - pointer.x;
     const deltaY = position.y - pointer.y;
@@ -610,13 +682,25 @@ canvas.addEventListener("pointermove", (event) => {
     if (next !== hovered) { hovered = next; drawGraph(); }
   }
 });
-canvas.addEventListener("pointerup", (event) => {
+function endPointer(event, { select }) {
   const position = pointerPosition(event);
+  activePointers.delete(event.pointerId);
+  if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
+  if (pinch) {
+    if (activePointers.size >= 2) return;
+    pinch = null;
+    const remaining = [...activePointers.values()][0];
+    dragging = Boolean(remaining);
+    if (remaining) pointer = remaining;
+    else canvas.classList.remove("dragging");
+    return;
+  }
   dragging = false;
   canvas.classList.remove("dragging");
-  canvas.releasePointerCapture(event.pointerId);
-  if (!moved) selectNode(nearestNode(position.x, position.y));
-});
+  if (select && !moved) selectNode(nearestNode(position.x, position.y));
+}
+canvas.addEventListener("pointerup", (event) => endPointer(event, { select: true }));
+canvas.addEventListener("pointercancel", (event) => endPointer(event, { select: false }));
 canvas.addEventListener("pointerleave", () => { if (!dragging) { hovered = null; drawGraph(); } });
 canvas.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -844,6 +928,55 @@ function periodLabel(from, to, days) {
   return `${years} Year${years === 1 ? "" : "s"}${remainingMonths ? ` ${remainingMonths} Month${remainingMonths === 1 ? "" : "s"}` : ""}`;
 }
 
+function addUtcDays(date, days) {
+  const next = new Date(`${date}T00:00:00Z`);
+  next.setUTCDate(next.getUTCDate() + days);
+  return next.toISOString().slice(0, 10);
+}
+
+function dayOffset(from, to) {
+  return Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
+}
+
+// Linear year-end projection. The pace is the average of daily additions from the Quattro release to the last
+// completed day; the band spans the slowest and fastest complete week (7-day blocks from the day after the
+// release). Every projected value is anchored on the last completed day, because the latest day is still
+// filling up. Line, band, hover, and labels all use these functions.
+function quattroPaceProjection(endDate) {
+  const series = explorer.growth;
+  const latest = series.at(-1);
+  const completedIndex = Math.max(0, series.length - 2);
+  const completed = series[completedIndex];
+  const releaseIndex = Math.max(0, series.findIndex((point) => point.date === explorer.release.date));
+  const release = series[releaseIndex];
+  const paceDays = dayOffset(release.date, completed.date);
+  if (paceDays <= 0 || endDate <= latest.date) return null;
+  const perDay = (completed.total - release.total) / paceDays;
+  const weeklyPaces = [];
+  for (let end = releaseIndex + 7; end <= completedIndex; end += 7) weeklyPaces.push((series[end].total - series[end - 7].total) / 7);
+  // The band always contains the average pace, even if the unfinished week runs outside the complete weeks.
+  const slowest = Math.min(perDay, ...weeklyPaces);
+  const fastest = Math.max(perDay, ...weeklyPaces);
+  const at = (pace) => (date) => completed.total + pace * dayOffset(completed.date, date);
+  const valueAt = at(perDay);
+  const lowAt = at(slowest);
+  const highAt = at(fastest);
+  return {
+    perDay,
+    slowest,
+    fastest,
+    anchorDate: completed.date,
+    valueAt,
+    lowAt,
+    highAt,
+    endDate,
+    total: Math.round(valueAt(endDate)),
+    low: Math.round(lowAt(endDate)),
+    high: Math.round(highAt(endDate)),
+    days: dayOffset(latest.date, endDate),
+  };
+}
+
 function niceTickStep(maximum, targetTicks = 8) {
   const roughStep = maximum / targetTicks;
   const magnitude = 10 ** Math.floor(Math.log10(Math.max(1, roughStep)));
@@ -864,6 +997,7 @@ function setupGrowthGuide() {
   const hideGuide = () => {
     guide.classList.add("is-hidden");
     chartElement.querySelector("[data-chart-end-value]")?.classList.remove("is-obscured");
+    chartElement.querySelector("[data-chart-projection-value]")?.classList.remove("is-obscured");
   };
   chartElement.addEventListener("pointermove", (event) => {
     if (!growthGuideModel) return;
@@ -871,18 +1005,25 @@ function setupGrowthGuide() {
     const viewBox = chartElement.viewBox.baseVal;
     const pointerX = (event.clientX - bounds.left) / bounds.width * viewBox.width;
     const pointerY = (event.clientY - bounds.top) / bounds.height * viewBox.height;
-    const { points, chart, x, y, endValue } = growthGuideModel;
+    const { points, chart, x, y, endValue, lastSlot, projection, projectionValue, from } = growthGuideModel;
     if (pointerX < chart.left || pointerX > chart.right || pointerY < chart.top || pointerY > chart.bottom) {
       hideGuide();
       return;
     }
 
     const ratio = (pointerX - chart.left) / (chart.right - chart.left);
-    const index = points.length === 1 ? 0 : Math.round(ratio * (points.length - 1));
-    const point = points[Math.max(0, Math.min(points.length - 1, index))];
+    const index = lastSlot === 0 ? 0 : Math.round(ratio * lastSlot);
+    const projected = index > points.length - 1;
+    if (projected && !projection) {
+      hideGuide();
+      return;
+    }
+    const point = projected
+      ? { date: addUtcDays(from, index), total: projection.valueAt(addUtcDays(from, index)) }
+      : points[Math.max(0, index)];
     const pointX = x(index);
     const pointY = y(point.total);
-    const boxWidth = 198;
+    const boxWidth = projected ? 300 : 198;
     const boxHeight = 60;
     const boxX = pointX + boxWidth + 16 > chart.right ? pointX - boxWidth - 16 : pointX + 16;
     const boxY = Math.max(chart.top + 8, Math.min(chart.bottom - boxHeight - 8, pointY - boxHeight / 2));
@@ -894,12 +1035,17 @@ function setupGrowthGuide() {
     guidePoint.setAttribute("cy", pointY);
     guideBox.setAttribute("x", boxX);
     guideBox.setAttribute("y", boxY);
+    guideBox.setAttribute("width", boxWidth);
     guideValue.setAttribute("x", boxX + 13);
     guideValue.setAttribute("y", boxY + 25);
-    guideValue.textContent = `${number.format(point.total)} plugins`;
+    guideValue.textContent = projected
+      ? `≈ ${number.format(Math.round(point.total))} plugins`
+      : `${number.format(point.total)} plugins`;
     guideDate.setAttribute("x", boxX + 13);
     guideDate.setAttribute("y", boxY + 48);
-    guideDate.textContent = posterDate.format(new Date(`${point.date}T00:00:00Z`)).toUpperCase();
+    guideDate.textContent = projected
+      ? `${posterDate.format(new Date(`${point.date}T00:00:00Z`)).toUpperCase()} · ${number.format(Math.round(projection.lowAt(point.date)))}–${number.format(Math.round(projection.highAt(point.date)))}`
+      : posterDate.format(new Date(`${point.date}T00:00:00Z`)).toUpperCase();
     const collisionPadding = 10;
     const lineOverlapsEndValue = pointX >= endValue.x - collisionPadding
       && pointX <= endValue.x + endValue.width + collisionPadding;
@@ -907,6 +1053,12 @@ function setupGrowthGuide() {
       && boxX + boxWidth > endValue.x - collisionPadding
       && boxY < endValue.y + endValue.height + collisionPadding
       && boxY + boxHeight > endValue.y - collisionPadding;
+    const overlapsProjectionValue = Boolean(projectionValue)
+      && boxX < projectionValue.x + projectionValue.width + collisionPadding
+      && boxX + boxWidth > projectionValue.x - collisionPadding
+      && boxY < projectionValue.y + projectionValue.height + collisionPadding
+      && boxY + boxHeight > projectionValue.y - collisionPadding;
+    chartElement.querySelector("[data-chart-projection-value]")?.classList.toggle("is-obscured", overlapsProjectionValue || (projected && index === lastSlot));
     chartElement.querySelector("[data-chart-end-value]")?.classList.toggle("is-obscured", lineOverlapsEndValue || badgeOverlapsEndValue);
     guide.classList.remove("is-hidden");
   });
@@ -914,6 +1066,7 @@ function setupGrowthGuide() {
 }
 
 function renderGrowth({ updateUrl = true } = {}) {
+  document.querySelector(".growth-poster").classList.toggle("is-light", themeById(document.documentElement.dataset.theme).light);
   const fromInput = document.querySelector("#growth-from");
   const toInput = document.querySelector("#growth-to");
   let from = clampedDate(fromInput.value, explorer.growth[0].date);
@@ -955,10 +1108,26 @@ function renderGrowth({ updateUrl = true } = {}) {
     ? "since the Quattro release"
     : `${shortDate.format(new Date(`${from}T00:00:00Z`))}–${shortDate.format(new Date(`${to}T00:00:00Z`))}`;
   document.querySelector("#growth-as-of").textContent = `As of ${posterDate.format(new Date(`${to}T00:00:00Z`)).toUpperCase()}`;
-  const finalityDescription = end.date === explorer.growth.at(-1).date
-    ? "The latest UTC day in this range is provisional until a successful later-day build finalizes it."
-    : "All UTC days in this range are final.";
-  document.querySelector("#growth-chart-description").textContent = `Active community plugin listings changed from ${number.format(start.total)} to ${number.format(end.total)} between ${posterDate.format(new Date(`${from}T00:00:00Z`))} and ${posterDate.format(new Date(`${to}T00:00:00Z`))}${percentage === null ? "" : `, a ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(Math.abs(percentage))} percent ${trendWord}`}. ${finalityDescription}`;
+  document.querySelector("#growth-chart-description").textContent = `Active community plugin listings changed from ${number.format(start.total)} to ${number.format(end.total)} between ${posterDate.format(new Date(`${from}T00:00:00Z`))} and ${posterDate.format(new Date(`${to}T00:00:00Z`))}${percentage === null ? "" : `, a ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(Math.abs(percentage))} percent ${trendWord}`}.`;
+  const latestDate = explorer.growth.at(-1).date;
+  const projectionButtons = [...document.querySelectorAll("[data-projection-year]")];
+  projectionButtons.forEach((button) => {
+    button.hidden = `${button.dataset.projectionYear}-12-31` <= latestDate;
+    button.disabled = to !== latestDate;
+    button.setAttribute("aria-pressed", String(button.dataset.projectionYear === growthProjectionYear));
+  });
+  document.querySelector(".growth-projection-row").hidden = projectionButtons.every((button) => button.hidden);
+  const projection = growthProjectionYear && to === latestDate ? quattroPaceProjection(`${growthProjectionYear}-12-31`) : null;
+  document.querySelector("#growth-legend-projection").hidden = !projection;
+  document.querySelector("#growth-legend-band").hidden = !projection;
+  if (projection) {
+    document.querySelector("#growth-chart-description").textContent += ` Projected at the average pace since the Quattro release (${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(projection.perDay)} plugins per day): about ${number.format(projection.total)} by ${posterDate.format(new Date(`${projection.endDate}T00:00:00Z`))}. At the pace of the slowest and fastest complete week since the release (${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(projection.slowest)} and ${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(projection.fastest)} per day): ${number.format(projection.low)} to ${number.format(projection.high)}.`;
+    for (let year = Number(latestDate.slice(0, 4)); `${year}-12-31` < projection.endDate; year += 1) {
+      const date = `${year}-12-31`;
+      if (date <= latestDate) continue;
+      document.querySelector("#growth-chart-description").textContent += ` By ${posterDate.format(new Date(`${date}T00:00:00Z`))}: about ${number.format(Math.round(projection.valueAt(date)))} (${number.format(Math.round(projection.lowAt(date)))} to ${number.format(Math.round(projection.highAt(date)))}).`;
+    }
+  }
   if (updateUrl) setGrowthUrl(from, to);
 
   let activePreset = "";
@@ -976,18 +1145,21 @@ function renderGrowth({ updateUrl = true } = {}) {
   const labels = document.querySelector("[data-chart-labels]");
   const pointLayer = document.querySelector("[data-chart-points]");
   const releaseLayer = document.querySelector("[data-release-marker]");
+  const projectionLayer = document.querySelector("[data-chart-projection]");
   grid.replaceChildren();
   labels.replaceChildren();
   pointLayer.replaceChildren();
   releaseLayer.replaceChildren();
+  projectionLayer.replaceChildren();
 
   const chart = { left: 104, right: 1644, top: 70, bottom: 560 };
-  const maximum = Math.max(...points.map((point) => point.total));
+  const lastSlot = points.length - 1 + (projection ? projection.days : 0);
+  const maximum = Math.max(...points.map((point) => point.total), projection ? projection.highAt(projection.endDate) : 0);
   const tickStep = niceTickStep(maximum);
   const yMaximum = Math.max(tickStep, Math.ceil(maximum / tickStep) * tickStep);
-  const x = (index) => chart.left + (points.length === 1 ? 0 : index / (points.length - 1) * (chart.right - chart.left));
+  const x = (index) => chart.left + (lastSlot === 0 ? 0 : index / lastSlot * (chart.right - chart.left));
   const y = (value) => chart.bottom - value / yMaximum * (chart.bottom - chart.top);
-  growthGuideModel = { points, chart, x, y };
+  growthGuideModel = { points, chart, x, y, lastSlot, projection, from };
   document.querySelector("[data-chart-hover-guide]").classList.add("is-hidden");
 
   for (let value = 0; value <= yMaximum; value += tickStep) {
@@ -997,12 +1169,12 @@ function renderGrowth({ updateUrl = true } = {}) {
   }
 
   const maximumXLabels = 7;
-  const labelStep = Math.max(1, Math.ceil((points.length - 1) / (maximumXLabels - 1)));
-  const axisDate = period > 62 ? monthDate : shortDate;
-  points.forEach((point, index) => {
-    if (index !== 0 && index !== points.length - 1 && index % labelStep !== 0) return;
-    labels.append(svgElement("text", { class: "chart-axis-label", x: x(index), y: chart.bottom + 34, "text-anchor": "middle" }, axisDate.format(new Date(`${point.date}T00:00:00Z`)).toUpperCase()));
-  });
+  const labelStep = Math.max(1, Math.ceil(lastSlot / (maximumXLabels - 1)));
+  const axisDate = projection ? (lastSlot > 186 ? monthDate : shortDate) : period > 62 ? monthDate : shortDate;
+  for (let index = 0; index <= lastSlot; index += 1) {
+    if (index !== 0 && index !== lastSlot && index % labelStep !== 0) continue;
+    labels.append(svgElement("text", { class: "chart-axis-label", x: x(index), y: chart.bottom + 34, "text-anchor": "middle" }, axisDate.format(new Date(`${addUtcDays(from, index)}T00:00:00Z`)).toUpperCase()));
+  }
 
   const linePath = points.map((point, index) => `${index ? "L" : "M"}${x(index).toFixed(2)},${y(point.total).toFixed(2)}`).join(" ");
   const areaPath = `${linePath} L${x(points.length - 1)},${chart.bottom} L${x(0)},${chart.bottom} Z`;
@@ -1019,17 +1191,110 @@ function renderGrowth({ updateUrl = true } = {}) {
   const endValueGroup = svgElement("g", { class: "chart-end-value", "data-chart-end-value": "" });
   endValueGroup.append(svgElement("rect", { class: "chart-value-box", x: valueBoxX, y: valueBoxY, width: valueBoxWidth, height: 36 }));
   endValueGroup.append(svgElement("text", { class: "chart-value-label", x: valueBoxX + 14, y: valueBoxY + 24 }, number.format(end.total)));
-  labels.append(endValueGroup);
+  // With the projection, the current total moves into the TODAY badge instead.
+  if (!projection) labels.append(endValueGroup);
   growthGuideModel.endValue = { x: valueBoxX, y: valueBoxY, width: valueBoxWidth, height: 36 };
 
   const releaseIndex = points.findIndex((point) => point.date === explorer.release.date);
-  if (releaseIndex >= 0) {
+  const releaseBoxWidth = 340;
+  const releaseBoxHeight = 60;
+  const releaseBox = releaseIndex >= 0
+    ? { x: Math.min(chart.right - releaseBoxWidth, Math.max(chart.left, x(releaseIndex))), y: chart.top + 10, width: releaseBoxWidth, height: releaseBoxHeight }
+    : null;
+
+  if (projection) {
+    // Straight segments are exact here: every projected value is linear in days since the anchor.
+    const startSlot = Math.max(0, dayOffset(from, projection.anchorDate));
+    const startDate = addUtcDays(from, startSlot);
+    const startX = x(startSlot);
+    const endX = x(lastSlot);
+    const endY = y(projection.valueAt(projection.endDate));
+    projectionLayer.append(svgElement("path", {
+      class: "chart-projection-band",
+      d: `M${startX},${y(projection.highAt(startDate))} L${endX},${y(projection.highAt(projection.endDate))} L${endX},${y(projection.lowAt(projection.endDate))} L${startX},${y(projection.lowAt(startDate))} Z`,
+    }));
+    projectionLayer.append(svgElement("line", { class: "chart-projection-line", x1: startX, y1: y(projection.valueAt(startDate)), x2: endX, y2: endY }));
+    projectionLayer.append(svgElement("circle", { class: "chart-projection-point", cx: endX, cy: endY, r: 7 }));
+    // Point badges in the release badge style, each with a pointer to its point. The selected year end keeps its
+    // fixed spot above the band end. TODAY and every earlier year end try positions close above its point first (starting
+    // at the point like the release badge, then centered, then ending at the point), further up next, and below
+    // the point last. A position is taken only if its box overlaps no badge, its pointer crosses no badge, and
+    // its box covers no earlier pointer.
+    const occupied = releaseBox ? [releaseBox] : [];
+    const pointers = [];
+    const gap = 8;
+    const boxesOverlap = (first, second) => first.x < second.x + second.width + gap && first.x + first.width + gap > second.x
+      && first.y < second.y + second.height + gap && first.y + first.height + gap > second.y;
+    const pointerCrosses = (pointer, box) => pointer.x >= box.x - gap && pointer.x <= box.x + box.width + gap
+      && pointer.top < box.y + box.height && pointer.bottom > box.y;
+    const placeable = (box, pointer) => !occupied.some((other) => boxesOverlap(box, other) || pointerCrosses(pointer, other))
+      && !pointers.some((other) => pointerCrosses(other, box));
+    const pointBadge = (pointX, pointY, title, meta, { attributes = {}, fixed = null } = {}) => {
+      const badgeWidth = Math.ceil(Math.max(title.length * 12.4, meta.length * 10.4)) + 32;
+      const badgeHeight = 60;
+      let badgeX;
+      let badgeY;
+      if (fixed) {
+        ({ x: badgeX, y: badgeY } = fixed(badgeWidth, badgeHeight));
+      } else {
+        const lefts = [pointX - 20, pointX - badgeWidth / 2, pointX + 20 - badgeWidth]
+          .map((left) => Math.min(chart.right + 40 - badgeWidth, Math.max(chart.left, left)))
+          .filter((left) => pointX >= left + 8 && pointX <= left + badgeWidth - 8);
+        const tops = [];
+        for (let top = pointY - 48 - badgeHeight; top >= 8; top -= 34) tops.push(top);
+        for (let top = pointY + 48; top + badgeHeight <= chart.bottom - 8; top += 34) tops.push(top);
+        const spot = tops.flatMap((top) => lefts.map((left) => ({ left, top }))).find(({ left, top }) => placeable(
+          { x: left, y: top, width: badgeWidth, height: badgeHeight },
+          top > pointY ? { x: pointX, top: pointY + 18, bottom: top } : { x: pointX, top: top + badgeHeight, bottom: pointY - 18 },
+        ));
+        if (!spot) return null;
+        badgeX = spot.left;
+        badgeY = spot.top;
+      }
+      const rect = { x: badgeX, y: badgeY, width: badgeWidth, height: badgeHeight };
+      occupied.push(rect);
+      pointers.push(badgeY > pointY ? { x: pointX, top: pointY + 18, bottom: badgeY } : { x: pointX, top: badgeY + badgeHeight, bottom: pointY - 18 });
+      const badge = svgElement("g", attributes);
+      const below = badgeY > pointY;
+      const tip = below ? pointY + 18 : pointY - 18;
+      const direction = below ? 1 : -1;
+      badge.append(svgElement("line", { class: "today-pointer", x1: pointX, y1: below ? badgeY : badgeY + badgeHeight, x2: pointX, y2: tip + direction * 7 }));
+      badge.append(svgElement("path", { class: "today-pointer-head", d: `M${pointX - 6},${tip + direction * 9} L${pointX + 6},${tip + direction * 9} L${pointX},${tip} Z` }));
+      badge.append(svgElement("rect", { class: "release-label-box", x: badgeX, y: badgeY, width: badgeWidth, height: badgeHeight }));
+      badge.append(svgElement("rect", { class: "release-label-accent", x: badgeX, y: badgeY, width: 4, height: badgeHeight }));
+      badge.append(svgElement("text", { class: "release-label", x: badgeX + 16, y: badgeY + 25 }, title));
+      badge.append(svgElement("text", { class: "release-label-meta", x: badgeX + 16, y: badgeY + 48 }, meta));
+      projectionLayer.append(badge);
+      return rect;
+    };
+    const yearEndMeta = (date) => `${posterDate.format(new Date(`${date}T00:00:00Z`)).toUpperCase()} · ${number.format(Math.round(projection.lowAt(date)))}–${number.format(Math.round(projection.highAt(date)))}`;
+
+    growthGuideModel.projectionValue = pointBadge(endX, endY, `≈ ${number.format(projection.total)} PLUGINS`, yearEndMeta(projection.endDate), {
+      attributes: { class: "chart-end-value", "data-chart-projection-value": "" },
+      fixed: (width, height) => ({ x: endX + 20 - width, y: Math.max(8, y(projection.highAt(projection.endDate)) - height - 12) }),
+    });
+    const yearEnds = [];
+    for (let year = Number(end.date.slice(0, 4)); `${year}-12-31` < projection.endDate; year += 1) {
+      const date = `${year}-12-31`;
+      if (date <= end.date) continue;
+      const pointX = x(dayOffset(from, date));
+      const pointY = y(projection.valueAt(date));
+      projectionLayer.append(svgElement("circle", { class: "chart-projection-point", cx: pointX, cy: pointY, r: 6 }));
+      yearEnds.push({ date, pointX, pointY });
+    }
+    // Later year ends first, TODAY last: the points rise to the right, so this keeps pointers short.
+    yearEnds.reverse().forEach(({ date, pointX, pointY }) => {
+      pointBadge(pointX, pointY, `≈ ${number.format(Math.round(projection.valueAt(date)))} PLUGINS`, yearEndMeta(date));
+    });
+    const todayDate = posterDate.format(new Date(`${end.date}T00:00:00Z`)).toUpperCase();
+    pointBadge(x(points.length - 1), y(end.total), `${number.format(end.total)} PLUGINS`, `${todayDate} · TODAY`);
+  }
+
+  if (releaseBox) {
     const releaseX = x(releaseIndex);
     releaseLayer.append(svgElement("line", { class: "release-line", x1: releaseX, y1: chart.top, x2: releaseX, y2: chart.bottom }));
-    const releaseBoxWidth = 340;
-    const releaseBoxHeight = 60;
-    const boxX = Math.min(chart.right - releaseBoxWidth, Math.max(chart.left, releaseX));
-    const boxY = chart.top + 10;
+    const boxX = releaseBox.x;
+    const boxY = releaseBox.y;
     releaseLayer.append(svgElement("rect", { class: "release-label-box", x: boxX, y: boxY, width: releaseBoxWidth, height: releaseBoxHeight }));
     releaseLayer.append(svgElement("rect", { class: "release-label-accent", x: boxX, y: boxY, width: 4, height: releaseBoxHeight }));
     const releaseDate = posterDate.format(new Date(`${explorer.release.date}T00:00:00Z`)).toUpperCase();
@@ -1043,7 +1308,6 @@ function setupGrowth() {
   const toInput = document.querySelector("#growth-to");
   const minimum = explorer.growth[0].date;
   const maximum = explorer.growth.at(-1).date;
-  document.querySelector("#growth-finality-copy").textContent = `Earlier UTC days are final. The latest day (${maximum}, UTC) is provisional until a successful later-day build finalizes it.`;
   const growthMeta = explorer.growthMeta || {};
   const timezone = growthMeta.timezone || "UTC";
   document.querySelector("#growth-method-copy").textContent = growthMeta.historical
@@ -1066,6 +1330,13 @@ function setupGrowth() {
   toInput.addEventListener("change", renderGrowth);
   const closeGrowthCalendar = setupGrowthCalendar(fromInput, toInput, minimum, maximum);
   setupGrowthGuide();
+  document.querySelectorAll("[data-projection-year]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const year = button.dataset.projectionYear;
+      growthProjectionYear = growthProjectionYear === year ? null : year;
+      renderGrowth({ updateUrl: false });
+    });
+  });
   document.querySelectorAll("[data-growth-preset]").forEach((button) => {
     button.addEventListener("click", () => {
       closeGrowthCalendar();
@@ -1120,6 +1391,7 @@ document.querySelectorAll("[data-explore-view]").forEach((button) => {
 
 setupThemeToggle();
 new MutationObserver(() => {
+  applyGraphTheme();
   drawGraph();
   if (!growthView.hidden && explorer) renderGrowth({ updateUrl: false });
 }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });

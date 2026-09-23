@@ -16,6 +16,8 @@ import {
   inclusiveDayCount,
   inclusiveRangeStart,
 } from "../site/assets/js/growth-range.js";
+import { accentColor, contrastRatio, legibleColor } from "../site/assets/js/shared.js";
+import { siteThemes } from "../site/assets/js/themes.js";
 
 const catalog = JSON.parse(fs.readFileSync(new URL("../site/catalog.json", import.meta.url), "utf8"));
 const explorer = JSON.parse(fs.readFileSync(new URL("../site/explorer-data.json", import.meta.url), "utf8"));
@@ -501,10 +503,10 @@ test("growth view preserves the source graphic's presentation hierarchy", () => 
   assert.match(script, /growthDelta\.querySelector\("strong"\)\.textContent = `\$\{change > 0 \? "\+" : ""\}\$\{number\.format\(change\)\}`[\s\S]*plugin\$\{absoluteChange === 1 \? "" : "s"\} \$\{trendWord\} over the selected period/);
   assert.match(page, /class="growth-plot-meta"[\s\S]*Plugin Count[\s\S]*class="growth-plot-frame"[\s\S]*viewBox="0 0 1728 620"/);
   assert.match(page, /id="growth-chart"[^>]+aria-label="Community plugin growth"[^>]+aria-describedby="growth-chart-description"/);
-  assert.match(page, /<p id="growth-finality-copy">Earlier UTC days are final\. The latest day is provisional until a successful later-day build finalizes it\.<\/p>/);
-  assert.match(script, /querySelector\("#growth-finality-copy"\)\.textContent = `Earlier UTC days are final\. The latest day \(\$\{maximum\}, UTC\) is provisional/);
-  assert.match(script, /end\.date === explorer\.growth\.at\(-1\)\.date[\s\S]*latest UTC day in this range is provisional[\s\S]*All UTC days in this range are final/);
-  assert.match(script, /querySelector\("#growth-chart-description"\)\.textContent = .*\$\{finalityDescription\}/);
+  assert.doesNotMatch(page, /growth-finality-copy|provisional/);
+  assert.doesNotMatch(script, /growth-finality-copy|provisional until a successful later-day build/);
+  assert.match(script, /querySelector\("#growth-chart-description"\)\.textContent = `Active community plugin listings changed from/);
+  assert.doesNotMatch(script, /finalityDescription/);
   assert.doesNotMatch(page, /<title id="growth-chart-title">/);
   assert.doesNotMatch(script, /\.title\s*=\s*growthMeta\.detail/);
   assert.match(page, /class="explore-freshness"[\s\S]*Data updated[\s\S]*id="explorer-updated"[\s\S]*Daily refresh start[\s\S]*id="explorer-refresh-time"/);
@@ -522,7 +524,9 @@ test("explore UI follows marketplace geometry, readable type, and complete theme
   assert.doesNotMatch(styles, /box-shadow:\s*inset 0 -3px var\(--accent\)/);
   assert.match(styles, /\.date-range label\.is-open\s*\{\s*border-color:\s*var\(--accent\);\s*box-shadow:\s*none;/);
   assert.match(styles, /\.date-input-shell svg[\s\S]*stroke:\s*var\(--muted\)/);
-  assert.match(styles, /\[data-theme="light"\] \.growth-poster[\s\S]*--growth-bg:\s*#f8f8f6[\s\S]*--growth-accent:\s*#c6371c/);
+  assert.match(styles, /\.growth-poster\s*\{\s*--growth-bg:\s*var\(--bg\);[\s\S]*--growth-accent:\s*var\(--accent\);\s*--growth-accent-contrast:\s*var\(--accent-contrast\);/);
+  assert.match(script, /\.growth-poster"\)\.classList\.toggle\("is-light", themeById\(document\.documentElement\.dataset\.theme\)\.light\)/);
+  assert.doesNotMatch(styles, /#[0-9a-f]{3,6}\b|data-theme=/i);
   assert.match(styles, /\[data-chart-line\]\s*\{\s*stroke:\s*var\(--growth-accent\)/);
   assert.match(styles, /\.growth-summary > div\s*\{[^}]*padding:\s*0 16px[^}]*grid-template-rows:\s*49% 51%[^}]*gap:\s*0/);
   assert.match(styles, /\.growth-total > strong[\s\S]*grid-template-columns:\s*minmax\(60px, 1fr\) 18px minmax\(60px, 1fr\)/);
@@ -548,11 +552,76 @@ test("explore UI follows marketplace geometry, readable type, and complete theme
   assert.doesNotMatch(script, /navigator\.geolocation/);
 });
 
+test("graph colors follow the active site theme and stay legible", () => {
+  const accents = ["lime", "violet", "amber", "cyan", "coral", "blue", "mint", "rose"].map(accentColor);
+  for (const theme of siteThemes) {
+    for (const cluster of explorer.clusters) {
+      assert.ok(contrastRatio(legibleColor(cluster.color, theme.bg), theme.bg) >= 3, `${cluster.label} on ${theme.id}`);
+    }
+    for (const accent of accents) {
+      assert.ok(contrastRatio(legibleColor(accent, theme.bg, 4.5), theme.bg) >= 4.5, `${accent} text on ${theme.id}`);
+    }
+  }
+  assert.equal(legibleColor("#b7ef51", "#000000"), "#b7ef51");
+  assert.equal(legibleColor("var(--accent)", "#ffffff"), "var(--accent)");
+  assert.match(script, /const \{ light: lightTheme, background: labelHaloColor, heading: headingColor, text: labelColor \} = graphPalette/);
+  assert.doesNotMatch(script, /dataset\.theme === "light"|"#(?:f8f8f6|efeff0|c5c5c8|19191b)"/);
+  assert.match(script, /new MutationObserver\(\(\) => \{\s*applyGraphTheme\(\);/);
+  assert.match(script, /const detailAccent = graphColor\(accentColor\(node\.accent\), "panel", 4\.5\)/);
+  assert.match(script, /canvas\.addEventListener\("pointercancel", \(event\) => endPointer\(event, \{ select: false \}\)\)/);
+  assert.match(script, /selectNode\(explorer\.nodes\[\[\.\.\.matches\]\[0\]\], true\);\s*document\.querySelector\("#visible-nodes"\)/);
+  assert.match(script, /element\("i", "neighbor-publisher", `@\$\{candidatePublisher\}`\)/);
+});
+
+test("growth projection extends the chart to year end at the Quattro pace", () => {
+  assert.match(page, /<span id="growth-projection-title" class="growth-control-title">Projection<\/span>\s*<div class="growth-presets growth-projection-years" role="group" aria-labelledby="growth-projection-title">/);
+  assert.equal((page.match(/data-projection-year=/g) || []).length, 1);
+  assert.match(page, /data-projection-year="2026" aria-pressed="false" aria-label="Project to 31 Dec 2026 at the pace since the Quattro release">2026<\/button>/);
+  assert.match(script, /document\.querySelector\("\.growth-projection-row"\)\.hidden = projectionButtons\.every\(\(button\) => button\.hidden\);/);
+  assert.match(page, /<g data-release-marker><\/g>\s*<g data-chart-projection><\/g>/);
+  assert.match(page, /id="growth-legend-projection" hidden><i class="legend-projection"><\/i>Projection at Quattro pace/);
+  assert.match(script, /growthProjectionYear = growthProjectionYear === year \? null : year;/);
+  assert.match(script, /button\.hidden = `\$\{button\.dataset\.projectionYear\}-12-31` <= latestDate;/);
+  assert.match(script, /quattroPaceProjection\(`\$\{growthProjectionYear\}-12-31`\)/);
+  assert.match(script, /function quattroPaceProjection\(endDate\)[\s\S]*const completedIndex = Math\.max\(0, series\.length - 2\);[\s\S]*point\.date === explorer\.release\.date[\s\S]*for \(let end = releaseIndex \+ 7; end <= completedIndex; end \+= 7\)/);
+  assert.match(script, /const point = projected\s*\? \{ date: addUtcDays\(from, index\), total: projection\.valueAt\(addUtcDays\(from, index\)\) \}/);
+  assert.match(page, /id="growth-legend-band" hidden><i class="legend-band"><\/i>Slowest–fastest week/);
+  assert.match(script, /if \(!projection\) labels\.append\(endValueGroup\);/);
+  assert.match(script, /const pointBadge = \(pointX, pointY, title, meta, \{ attributes = \{\}, fixed = null \} = \{\}\) => \{[\s\S]*class: "release-label-box", x: badgeX[\s\S]*class: "release-label-meta", x: badgeX \+ 16, y: badgeY \+ 48 \}, meta/);
+  assert.match(script, /growthGuideModel\.projectionValue = pointBadge\(endX, endY, `≈ \$\{number\.format\(projection\.total\)\} PLUGINS`, yearEndMeta\(projection\.endDate\)/);
+  assert.doesNotMatch(styles, /chart-projection-box|chart-projection-label/);
+  assert.match(script, /fixed: \(width, height\) => \(\{ x: endX \+ 20 - width, y: Math\.max\(8, y\(projection\.highAt\(projection\.endDate\)\) - height - 12\) \}\)/);
+  assert.match(script, /pointBadge\(x\(points\.length - 1\), y\(end\.total\), `\$\{number\.format\(end\.total\)\} PLUGINS`, `\$\{todayDate\} · TODAY`\);/);
+  assert.match(script, /for \(let year = Number\(end\.date\.slice\(0, 4\)\); `\$\{year\}-12-31` < projection\.endDate; year \+= 1\)[\s\S]*yearEnds\.reverse\(\)\.forEach[\s\S]*pointBadge\(/);
+  assert.match(script, /const placeable = \(box, pointer\) => !occupied\.some\(\(other\) => boxesOverlap\(box, other\) \|\| pointerCrosses\(pointer, other\)\)\s*&& !pointers\.some\(\(other\) => pointerCrosses\(other, box\)\);/);
+  assert.match(script, /button\.disabled = to !== latestDate;/);
+  assert.match(script, /const projected = index > points\.length - 1;\s*if \(projected && !projection\) \{\s*hideGuide\(\);/);
+  assert.match(styles, /\.chart-projection-line \{ stroke: var\(--growth-accent\);[^}]*stroke-dasharray: 1 12;/);
+
+  const series = explorer.growth;
+  const completedIndex = series.length - 2;
+  const completed = series[completedIndex];
+  const releaseIndex = series.findIndex((point) => point.date === explorer.release.date);
+  const days = (from, to) => Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000);
+  const perDay = (completed.total - series[releaseIndex].total) / days(series[releaseIndex].date, completed.date);
+  const weekly = [];
+  for (let end = releaseIndex + 7; end <= completedIndex; end += 7) {
+    assert.equal(days(series[end - 7].date, series[end].date), 7);
+    weekly.push((series[end].total - series[end - 7].total) / 7);
+  }
+  assert.ok(weekly.length > 0 && perDay > 0);
+  assert.match(script, /const slowest = Math\.min\(perDay, \.\.\.weeklyPaces\);\s*const fastest = Math\.max\(perDay, \.\.\.weeklyPaces\);/);
+  const at = (pace, date) => completed.total + pace * days(completed.date, date);
+  assert.ok(at(Math.min(perDay, ...weekly), "2026-12-31") <= at(perDay, "2026-12-31"));
+  assert.ok(at(perDay, "2026-12-31") <= at(Math.max(perDay, ...weekly), "2026-12-31"));
+  assert.equal(at(perDay, completed.date), completed.total);
+});
+
 test("all semantic communities remain available in a compact labeled rail", () => {
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
   assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
-  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260920-05"/);
+  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20260923-01"/);
   assert.match(script, /id: "taxonomy:vpn",\s*label: "VPN",[\s\S]*anchor: "security",\s*matches: matchesVpnTaxonomy,/);
   assert.match(script, /id: "taxonomy:bar",\s*label: "Bar",[\s\S]*anchor: "appearance",\s*matches: matchesBarTaxonomy,/);
   assert.match(script, /const taxonomyFilter = taxonomyCommunityFilters\.find\(\(filter\) => filter\.id === activeCluster\);\s*return taxonomyFilter \? taxonomyFilter\.matches\(node\) : node\.cluster === activeCluster/);
@@ -730,8 +799,9 @@ test("custom growth calendar follows the site theme and supports keyboard date n
 
 test("growth hover scrubs exact daily totals and dates inside the plot", () => {
   assert.match(page, /data-chart-hover-guide[\s\S]*class="chart-hover-line"[\s\S]*class="chart-hover-point"[\s\S]*class="chart-hover-box"[\s\S]*class="chart-hover-value"[\s\S]*class="chart-hover-date"/);
-  assert.match(script, /function setupGrowthGuide[\s\S]*pointerX < chart\.left[\s\S]*pointerY < chart\.top[\s\S]*Math\.round\(ratio \* \(points\.length - 1\)\)/);
-  assert.match(script, /guideValue\.textContent = `\$\{number\.format\(point\.total\)\} plugins`[\s\S]*guideDate\.textContent = posterDate\.format/);
+  assert.match(script, /function setupGrowthGuide[\s\S]*pointerX < chart\.left[\s\S]*pointerY < chart\.top[\s\S]*Math\.round\(ratio \* lastSlot\)/);
+  assert.match(script, /const lastSlot = points\.length - 1 \+ \(projection \? projection\.days : 0\);/);
+  assert.match(script, /guideValue\.textContent = projected[\s\S]*`\$\{number\.format\(point\.total\)\} plugins`[\s\S]*guideDate\.textContent = projected[\s\S]*: posterDate\.format/);
   assert.match(script, /boxX = pointX \+ boxWidth \+ 16 > chart\.right[\s\S]*boxY = Math\.max\(chart\.top \+ 8/);
   assert.match(script, /data-chart-end-value[\s\S]*lineOverlapsEndValue[\s\S]*badgeOverlapsEndValue[\s\S]*classList\.toggle\("is-obscured"/);
   assert.match(styles, /\.chart-end-value\.is-obscured\s*\{\s*visibility:\s*hidden/);

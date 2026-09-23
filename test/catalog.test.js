@@ -31,12 +31,18 @@ import {
 import { catalogVerificationFields } from "../scripts/catalog-verification.mjs";
 import {
   activityTime,
+  comparePluginInstallRate,
+  installRateScore,
+  selectHiddenGems,
+  medianInstallRate,
   isRecentlyAdded,
   isRecentlyUpdated,
+  listingAgeLabel,
   listingCheckState,
   listingTime,
   paginationState,
   pluginVersionLabel,
+  recentListings,
 } from "../site/assets/js/shared.js";
 
 const catalog = JSON.parse(await readFile(new URL("../site/catalog.json", import.meta.url), "utf8"));
@@ -429,6 +435,73 @@ test("root plugins default to Quattro while curated exceptions use manual setup"
   const lacuna = catalog.plugins.find((entry) => entry.id === "lacuna.shell-suite");
   assert.equal(lacuna?.repositoryLayout, "suite");
   assert.equal(lacuna?.installAvailable, false);
+});
+
+test("install rate ranks by the Wilson lower bound of copies per view", () => {
+  const plugin = (id, extra = {}) => ({ id, name: id, installCommand: `omarchy plugin add ${id}`, ...extra });
+  const wilson = (copies, views) => {
+    const rate = copies / views;
+    const z = 1.96;
+    return (rate + z * z / (2 * views) - z * Math.sqrt((rate * (1 - rate) + z * z / (4 * views)) / views)) / (1 + z * z / views);
+  };
+  assert.ok(Math.abs(installRateScore(plugin("a"), { views: 297, copies: 161 }) - wilson(161, 297)) < 1e-12);
+  assert.ok(Math.abs(wilson(161, 297) - 0.4852) < 0.001);
+  assert.equal(installRateScore(plugin("few"), { views: 19, copies: 19 }), -1);
+  assert.equal(installRateScore(plugin("manual", { installCommand: "" }), { views: 500, copies: 0 }), -1);
+  // Zero copies is a rated 0, never a rounding error below 0 that reads as unrated (e.g. 480 views).
+  for (let views = 20; views <= 2000; views += 1) assert.equal(installRateScore(plugin("unused"), { views, copies: 0 }), 0);
+  assert.equal(installRateScore(plugin("capped"), { views: 40, copies: 55 }), installRateScore(plugin("full"), { views: 40, copies: 40 }));
+  const plugins = [plugin("lucky"), plugin("solid"), plugin("popular"), plugin("unrated"), plugin("manual", { installCommand: "" })];
+  const stats = {
+    lucky: { views: 20, copies: 10 },
+    solid: { views: 297, copies: 161 },
+    popular: { views: 21177, copies: 8281 },
+    unrated: { views: 5, copies: 5 },
+    manual: { views: 900, copies: 0 },
+  };
+  assert.deepEqual([...plugins].sort((a, b) => comparePluginInstallRate(a, b, stats)).map((entry) => entry.id), ["solid", "popular", "lucky", "manual", "unrated"]);
+});
+
+test("hidden gems are verified, less-seen plugins with a screenshot, ordered by install rate", () => {
+  const gem = (id, extra = {}) => ({ id, name: id, installCommand: `omarchy plugin add ${id}`, verificationStatus: "verified", previewThumbnail: `assets/img/plugins/${id}-card.webp`, ...extra });
+  const plugins = [gem("popular"), gem("strong"), gem("good"), gem("unverified", { verificationStatus: "unverified" }), gem("no-shot", { previewThumbnail: "" }), gem("quiet"), gem("built-in", { builtIn: true })];
+  const stats = {
+    popular: { views: 9000, copies: 5000 },
+    strong: { views: 240, copies: 130 },
+    good: { views: 200, copies: 90 },
+    unverified: { views: 250, copies: 200 },
+    "no-shot": { views: 250, copies: 200 },
+    quiet: { views: 10, copies: 10 },
+    "built-in": { views: 100, copies: 90 },
+  };
+  assert.deepEqual(selectHiddenGems(plugins, stats).map((plugin) => plugin.id), ["strong", "good"]);
+  // Rated: good .45, strong .542, popular .556, unverified .8, no-shot .8 → median .556 (5000/9000).
+  assert.equal(medianInstallRate(plugins, stats), 5000 / 9000);
+  assert.equal(medianInstallRate([], stats), null);
+  // A plugin with views but no copies counts as a rated 0.
+  assert.equal(medianInstallRate([plugins[0], { ...plugins[0], id: "zero" }], { ...stats, zero: { views: 480, copies: 0 } }), (5000 / 9000) / 2);
+  assert.equal(selectHiddenGems([], stats).length, 0);
+});
+
+test("recent listings are newest first and age labels are compact", () => {
+  const now = Date.parse("2026-09-23T12:00:00Z");
+  const listing = (id, hoursAgo, extra = {}) => ({ id, name: id, listedAt: new Date(now - hoursAgo * 60 * 60 * 1000).toISOString(), ...extra });
+  const plugins = [
+    listing("fresh", 1),
+    listing("older", 20),
+    listing("same-time-b", 5),
+    listing("same-time-a", 5),
+    listing("too-old", 30),
+    listing("built-in", 2, { builtIn: true }),
+    listing("placeholder", 2, { placeholder: true }),
+    listing("official", 2, { sourceType: "builtin" }),
+  ];
+  assert.deepEqual(recentListings(plugins, now, 24).map((plugin) => plugin.id), ["fresh", "same-time-a", "same-time-b", "older"]);
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T11:59:40Z" }, now), "just now");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T11:15:00Z" }, now), "45m ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T07:00:00Z" }, now), "5h ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-21T11:00:00Z" }, now), "2d ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T13:00:00Z" }, now), "");
 });
 
 test("recently added badges use a 12-hour listing window", () => {

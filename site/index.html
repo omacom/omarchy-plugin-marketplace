@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260920-05">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260923-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -61,12 +61,34 @@
         </button>
       </section>
 
+      <section class="gems-section" id="gems-section" aria-labelledby="gems-title" hidden>
+        <div class="market-section-head">
+          <h2 id="gems-title">HIDDEN GEMS</h2>
+          <div class="recent-head-meta">
+            <span id="gems-note" class="recent-summary">often copied · not among the most viewed</span>
+            <a id="gems-sort-link" href="?sort=installRate#catalog">sort by install rate →</a>
+            <div class="gems-nav" role="group" aria-label="Browse hidden gems" hidden>
+              <button type="button" class="recent-feed-toggle gems-nav-button" data-gems-step="-1" aria-controls="gems-grid" aria-label="Previous hidden gems">←</button>
+              <button type="button" class="recent-feed-toggle gems-nav-button" data-gems-step="1" aria-controls="gems-grid" aria-label="Next hidden gems">→</button>
+            </div>
+          </div>
+        </div>
+        <div id="gems-grid" class="recent-grid gems-track" aria-label="Hidden gems"></div>
+      </section>
+
       <section class="recent-section" id="recent-section" aria-labelledby="recent-title">
         <div class="market-section-head">
-          <h2 id="recent-title">RECENTLY ADDED</h2>
-          <a href="#catalog">view all →</a>
+          <h2 id="recent-title">JUST LANDED</h2>
+          <div class="recent-head-meta">
+            <span id="recent-summary" class="recent-summary"></span>
+            <a href="#catalog">view all →</a>
+            <button id="recent-feed-toggle" class="recent-feed-toggle" type="button" aria-controls="recent-latest" aria-label="Pause the Just landed feed" hidden>Pause</button>
+          </div>
         </div>
-        <div id="recent-grid" class="recent-grid" aria-label="Recently added plugins"></div>
+        <div id="recent-latest" class="landed-rows" hidden>
+          <div class="landed-row"><ul class="landed-track" data-landed-row aria-label="Newest plugins, first row"></ul></div>
+          <div class="landed-row"><ul class="landed-track" data-landed-row aria-label="Newest plugins, second row"></ul></div>
+        </div>
       </section>
 
       <section class="market-catalog" id="catalog" aria-labelledby="catalog-title" tabindex="-1">
@@ -110,6 +132,7 @@
               <option value="copies">Most copied</option>
               <option value="hearts">Most hearts</option>
               <option value="rank">Top ranked</option>
+              <option value="installRate">Install rate</option>
               <option value="name">A–Z</option>
               <option value="verified">Verified</option>
               <option value="unverified">Unverified</option>
@@ -217,6 +240,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20260920-05"></script>
+    <script type="module" src="assets/js/app.js?v=20260923-01"></script>
   </body>
 </html>

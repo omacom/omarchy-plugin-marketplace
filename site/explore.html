@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#000000">
     <title>Explore Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260920-05">
-    <link rel="stylesheet" href="assets/css/explore.css?v=20260828-27">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260923-01">
+    <link rel="stylesheet" href="assets/css/explore.css?v=20260923-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page explore-page">
@@ -143,6 +143,12 @@
             <button type="button" data-growth-preset="14" aria-pressed="false">14 Days</button>
             <button type="button" data-growth-preset="all" aria-pressed="false">All</button>
           </div>
+          <div class="growth-projection-row">
+            <span id="growth-projection-title" class="growth-control-title">Projection</span>
+            <div class="growth-presets growth-projection-years" role="group" aria-labelledby="growth-projection-title">
+              <button type="button" data-projection-year="2026" aria-pressed="false" aria-label="Project to 31 Dec 2026 at the pace since the Quattro release">2026</button>
+            </div>
+          </div>
           <div id="growth-calendar" class="growth-calendar" role="dialog" aria-modal="false" aria-labelledby="growth-calendar-month" hidden>
             <div class="growth-calendar-header">
               <button type="button" data-calendar-nav="-1" aria-label="Previous month">←</button>
@@ -164,7 +170,6 @@
               <span>Community Registry</span>
               <h2>community plugins</h2>
               <p><span id="growth-method-copy">End-of-day Git catalog snapshots (UTC)</span> · <span id="growth-range-copy">since the Quattro release</span></p>
-              <p id="growth-finality-copy">Earlier UTC days are final. The latest day is provisional until a successful later-day build finalizes it.</p>
             </div>
             <div class="growth-summary" aria-live="polite">
               <div class="growth-total">
@@ -195,6 +200,7 @@
                   <path data-chart-area fill="url(#growth-fill)"></path>
                   <path data-chart-line fill="none" stroke="#ff5a36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#growth-glow)"></path>
                   <g data-release-marker></g>
+                  <g data-chart-projection></g>
                   <g data-chart-points></g>
                   <g data-chart-labels></g>
                   <g class="chart-hover-guide is-hidden" data-chart-hover-guide aria-hidden="true">
@@ -210,7 +216,7 @@
           </div>
 
           <div class="growth-poster-footer">
-            <div class="growth-legend"><span><i class="legend-dot"></i><span id="growth-legend-copy">Active community listings</span></span><span><i class="legend-release"></i>Omarchy Quattro v4.0.0 release</span></div>
+            <div class="growth-legend"><span><i class="legend-dot"></i><span id="growth-legend-copy">Active community listings</span></span><span><i class="legend-release"></i>Omarchy Quattro v4.0.0 release</span><span id="growth-legend-projection" hidden><i class="legend-projection"></i>Projection at Quattro pace</span><span id="growth-legend-band" hidden><i class="legend-band"></i>Slowest–fastest week</span></div>
             <span class="growth-source">Source · <strong id="growth-source">Git catalog snapshots</strong></span>
           </div>
         </figure>
@@ -241,6 +247,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
 
-    <script type="module" src="assets/js/explore.js?v=20260920-05"></script>
+    <script type="module" src="assets/js/explore.js?v=20260923-01"></script>
   </body>
 </html>

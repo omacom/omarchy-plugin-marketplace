@@ -22,6 +22,43 @@ export function accentColor(name) {
   return accentColors[name] || accentColors.lime;
 }
 
+function hexChannels(value) {
+  const match = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(String(value || "").trim());
+  if (!match) return null;
+  const hex = match[1].length === 3 ? [...match[1]].map((digit) => digit + digit).join("") : match[1];
+  return [0, 2, 4].map((offset) => Number.parseInt(hex.slice(offset, offset + 2), 16));
+}
+
+function relativeLuminance(channels) {
+  const [red, green, blue] = channels.map((channel) => {
+    const value = channel / 255;
+    return value <= .03928 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4;
+  });
+  return .2126 * red + .7152 * green + .0722 * blue;
+}
+
+export function contrastRatio(first, second) {
+  const firstChannels = hexChannels(first);
+  const secondChannels = hexChannels(second);
+  if (!firstChannels || !secondChannels) return Number.NaN;
+  const [lighter, darker] = [relativeLuminance(firstChannels), relativeLuminance(secondChannels)].sort((a, b) => b - a);
+  return (lighter + .05) / (darker + .05);
+}
+
+// Keeps palette colors on theme surfaces: mixes toward black on light surfaces and white on dark ones
+// until the minimum contrast is reached. Colors that already pass, or cannot be parsed, are unchanged.
+export function legibleColor(color, surface, minimum = 3) {
+  const base = hexChannels(color);
+  const background = hexChannels(surface);
+  if (!base || !background || contrastRatio(color, surface) >= minimum) return color;
+  const target = relativeLuminance(background) > .18 ? 0 : 255;
+  for (let step = 1; step <= 20; step += 1) {
+    const mixed = `#${base.map((channel) => Math.round(channel + (target - channel) * step / 20).toString(16).padStart(2, "0")).join("")}`;
+    if (contrastRatio(mixed, surface) >= minimum) return mixed;
+  }
+  return color;
+}
+
 const taxonomyTagNames = Object.freeze({
   ai: "AI",
   games: "Games",
@@ -77,6 +114,65 @@ export function comparePluginEngagement(first, second, stats = {}, metric = "vie
   return value(second) - value(first)
     || String(first?.name || "").localeCompare(String(second?.name || ""))
     || String(first?.id || "").localeCompare(String(second?.id || ""));
+}
+
+export const installRateMinimumViews = 20;
+
+// Install rate: install-command copies per plugin detail view. Plugins are ranked by the lower bound of the 95 %
+// Wilson score interval, so a few views with a lucky copy cannot outrank a well-measured plugin. A copy can also
+// come from a card without a detail view, so the rate is capped at 100 %. Plugins without an install command or
+// with fewer than installRateMinimumViews views are not rated (-1).
+export function installRateScore(plugin, stats = {}) {
+  const hasCommand = Boolean(plugin?.builtIn ? plugin.officialCommand : plugin?.installCommand);
+  const views = engagementCount(stats?.views);
+  if (!hasCommand || views < installRateMinimumViews) return -1;
+  const copies = Math.min(engagementCount(stats?.copies), views);
+  // With zero copies the lower bound is exactly 0; the formula would round it to ±1e-17, and a negative value reads as unrated.
+  if (!copies) return 0;
+  const rate = copies / views;
+  const z = 1.96;
+  const center = rate + z * z / (2 * views);
+  const margin = z * Math.sqrt((rate * (1 - rate) + z * z / (4 * views)) / views);
+  return (center - margin) / (1 + z * z / views);
+}
+
+export function comparePluginInstallRate(first, second, stats = {}) {
+  return installRateScore(second, stats?.[second?.id]) - installRateScore(first, stats?.[first?.id])
+    || engagementCount(stats?.[second?.id]?.views) - engagementCount(stats?.[first?.id]?.views)
+    || String(first?.name || "").localeCompare(String(second?.name || ""))
+    || String(first?.id || "").localeCompare(String(second?.id || ""));
+}
+
+// Median install rate (copies per detail view, capped at 1) of all rated community plugins, as a fraction; null when none is rated.
+export function medianInstallRate(plugins, stats = {}) {
+  const rates = (plugins || [])
+    .filter((plugin) => plugin && !plugin.builtIn && !plugin.placeholder && (plugin.sourceType || "community") === "community"
+      && installRateScore(plugin, stats?.[plugin.id]) >= 0)
+    .map((plugin) => {
+      const views = engagementCount(stats[plugin.id].views);
+      return Math.min(engagementCount(stats[plugin.id].copies), views) / views;
+    })
+    .sort((a, b) => a - b);
+  if (!rates.length) return null;
+  const middle = Math.floor(rates.length / 2);
+  return rates.length % 2 ? rates[middle] : (rates[middle - 1] + rates[middle]) / 2;
+}
+
+// Hidden gems: verified, rated plugins with a screenshot that fewer people have seen (below the 75th percentile
+// of detail views across community plugins) but that convince the ones who do, ordered by install rate.
+export function selectHiddenGems(plugins, stats = {}, { limit = 3, viewShare = .75 } = {}) {
+  const community = (plugins || []).filter((plugin) => plugin && !plugin.builtIn && !plugin.placeholder
+    && (plugin.sourceType || "community") === "community");
+  if (!community.length) return [];
+  const views = community.map((plugin) => engagementCount(stats?.[plugin.id]?.views)).sort((a, b) => a - b);
+  const threshold = views[Math.min(views.length - 1, Math.floor(views.length * viewShare))];
+  return community
+    .filter((plugin) => plugin.verificationStatus === "verified"
+      && Boolean(plugin.previewThumbnail || plugin.previewImage)
+      && installRateScore(plugin, stats?.[plugin.id]) >= 0
+      && engagementCount(stats?.[plugin.id]?.views) < threshold)
+    .sort((first, second) => comparePluginInstallRate(first, second, stats))
+    .slice(0, limit);
 }
 
 function engagementMetric(type, count, detail) {
@@ -163,14 +259,30 @@ export function updatePluginHeart(root, pluginId, stats = {}, {
 const controlTooltipRoots = new WeakSet();
 const controlTooltipDocuments = new WeakSet();
 
+// A tooltip that sticks out of a horizontal scroller (the hidden-gems carousel) grows its scroll width and shifts it,
+// so it stays inside the nearest one when it fits there; otherwise only the viewport bounds it.
+function tooltipBounds(host, tooltipWidth, viewportWidth) {
+  const viewport = { left: 8, right: viewportWidth - 8 };
+  const view = host.ownerDocument.defaultView;
+  for (let node = host.parentElement; node && node !== host.ownerDocument.body; node = node.parentElement) {
+    const overflowX = view.getComputedStyle(node).overflowX;
+    if (overflowX !== "auto" && overflowX !== "scroll") continue;
+    const rect = node.getBoundingClientRect();
+    const bounds = { left: Math.max(viewport.left, rect.left), right: Math.min(viewport.right, rect.right) };
+    return bounds.right - bounds.left >= tooltipWidth ? bounds : viewport;
+  }
+  return viewport;
+}
+
 export function positionTooltip(host, tooltip) {
   const hostRect = host.getBoundingClientRect();
   const tooltipWidth = tooltip.getBoundingClientRect().width;
   const viewportWidth = host.ownerDocument.documentElement.clientWidth;
+  const bounds = tooltipBounds(host, tooltipWidth, viewportWidth);
   const originLeft = hostRect.left + host.clientLeft;
   const centered = (hostRect.width - tooltipWidth) / 2 - host.clientLeft;
-  const minimum = 8 - originLeft;
-  const maximum = viewportWidth - 8 - originLeft - tooltipWidth;
+  const minimum = bounds.left - originLeft;
+  const maximum = bounds.right - originLeft - tooltipWidth;
   const clamped = Math.min(Math.max(centered, minimum), maximum);
   const positioned = clamped <= minimum
     ? Math.ceil(clamped)
@@ -277,6 +389,28 @@ export function isRecentlyUpdated(plugin, now = Date.now(), windowHours = 12) {
   if (!Number.isFinite(updatedAt)) return false;
   const age = now - updatedAt;
   return age >= 0 && age < windowHours * 60 * 60 * 1000;
+}
+
+const hourMs = 60 * 60 * 1000;
+
+export function recentListings(plugins, now = Date.now(), windowHours = 24) {
+  return (plugins || [])
+    .filter((plugin) => {
+      if (!plugin || plugin.builtIn || plugin.placeholder || (plugin.sourceType || "community") !== "community") return false;
+      const age = now - listingTime(plugin);
+      return age >= 0 && age < windowHours * hourMs;
+    })
+    .sort((a, b) => listingTime(b) - listingTime(a) || String(a.name).localeCompare(String(b.name)));
+}
+
+export function listingAgeLabel(plugin, now = Date.now()) {
+  const age = now - listingTime(plugin);
+  if (!Number.isFinite(age) || age < 0) return "";
+  const minutes = Math.floor(age / 60000);
+  if (minutes < 1) return "just now";
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  return hours < 24 ? `${hours}h ago` : `${Math.floor(hours / 24)}d ago`;
 }
 
 export function pluginVersionLabel(plugin) {

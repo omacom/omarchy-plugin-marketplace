@@ -4,24 +4,31 @@ import {
   appendCatalogViewState,
   catalogViewControls,
   comparePluginEngagement,
+  comparePluginInstallRate,
   copyText,
   displayTaxonomyTag,
   engagementRanks,
   engagementSummary,
   escapeHtml,
+  formatDate,
   formatEngagementCount,
   formatStars,
   hidePendingEngagement,
   isRecentlyAdded,
   isRecentlyUpdated,
+  listingAgeLabel,
   listingTime,
   loadCatalog,
   matchesVerificationStatus,
   paginationState,
   pluginHeartButton,
+  pluginVersionLabel,
   pluginVerificationState,
   readCatalogView,
   readCatalogViewState,
+  selectHiddenGems,
+  medianInstallRate,
+  recentListings,
   setupControlTooltips,
   setupCopyButtons,
   setupThemeToggle,
@@ -30,14 +37,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260920-05";
+} from "./shared.js?v=20260923-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260920-05";
+} from "./engagement.js?v=20260923-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -65,13 +72,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260920-05";
+} from "./search.js?v=20260923-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260920-05";
+} from "./taxonomy.js?v=20260923-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -119,7 +126,7 @@ function cardTaxonomyLabels(plugin) {
   return labels.length ? labels : [category || "System"];
 }
 
-const engagementSorts = new Set(["views", "copies", "hearts", "rank"]);
+const engagementSorts = new Set(["views", "copies", "hearts", "rank", "installRate"]);
 const verificationFilters = new Set(["verified", "unverified"]);
 const taxonomyFilterTags = ["ai", "games", "security"];
 const taxonomyCatalogFilters = [
@@ -136,6 +143,7 @@ const sortOptions = {
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
     ["rank", "Top ranked"],
+    ["installRate", "Install rate"],
     ["name", "A–Z"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
@@ -147,6 +155,7 @@ const sortOptions = {
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
     ["rank", "Top ranked"],
+    ["installRate", "Install rate"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
   ]
@@ -659,6 +668,7 @@ function computeFilteredPlugins() {
     views: (a, b) => comparePluginEngagement(a, b, state.engagement, "views"),
     copies: (a, b) => comparePluginEngagement(a, b, state.engagement, "copies"),
     hearts: (a, b) => comparePluginEngagement(a, b, state.engagement, "hearts"),
+    installRate: (a, b) => comparePluginInstallRate(a, b, state.engagement),
     rank: (a, b) => (ranks.get(a.id)?.overall || Infinity) - (ranks.get(b.id)?.overall || Infinity)
       || String(a.name || "").localeCompare(String(b.name || "")),
     name: (a, b) => a.name.localeCompare(b.name),
@@ -791,7 +801,35 @@ function closeVerificationTooltips(except = null) {
   });
 }
 
-function pluginCard(plugin, { showNew = false } = {}) {
+// Card badges shared by plugin cards and the Just landed rows.
+function cardBadges(plugin) {
+  const installAction = plugin.builtIn
+    ? `<a class="card-install builtin-source-action" href="${escapeHtml(plugin.sourceUrl || plugin.repo)}" target="_blank" rel="noreferrer" aria-label="View source for ${escapeHtml(plugin.name)}">View source ↗</a>`
+    : plugin.placeholder
+      ? '<span class="card-install unavailable" aria-label="Installation not yet available"><span class="command-glyph" aria-hidden="true"></span> Preview only</span>'
+      : !plugin.installAvailable
+        ? `<span class="card-install unavailable" aria-label="Automatic installation unavailable"><span class="command-glyph" aria-hidden="true"></span> ${plugin.upstreamCheckStatus === "failed" ? "Unavailable" : "Manual"}</span>`
+        : `<button class="card-install has-control-tooltip" type="button" data-copy-command="${escapeHtml(plugin.installCommand)}" data-plugin-id="${escapeHtml(plugin.id)}" aria-label="Copy install command for ${escapeHtml(plugin.name)}">
+          <span class="command-glyph" aria-hidden="true"></span><span data-copy-label>Copy install</span>
+          <span class="copy-icon" aria-hidden="true"></span>
+          <span class="control-tooltip" role="tooltip" aria-hidden="true">Copy install command</span>
+        </button>`;
+  const stars = plugin.builtIn ? "" : `<span class="card-stars has-control-tooltip" aria-label="${formatStars(plugin.stars)} repository stars"><svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg><span class="social-count" aria-hidden="true">${formatStars(plugin.stars)}</span><span class="control-tooltip" role="tooltip" aria-hidden="true">Repository stars</span></span>`;
+  const hearted = hasPluginHeart(plugin.id);
+  const heart = state.engagementEnabled
+    ? pluginHeartButton(plugin, state.engagement[plugin.id], {
+        hearted,
+        pending: !state.engagementLoaded,
+      })
+    : "";
+  const rank = cardRankLabel(plugin);
+  const rankLine = state.engagementEnabled && !plugin.builtIn
+    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, views, and repository stars"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
+    : "";
+  return { installAction, stars, heart, rankLine };
+}
+
+function pluginCard(plugin, { showNew = false, previewBack = "", gemTimes = null } = {}) {
   const tags = cardTaxonomyLabels(plugin)
     .map((label) => `<span class="tag">${escapeHtml(label)}</span>`)
     .join("");
@@ -809,35 +847,20 @@ function pluginCard(plugin, { showNew = false } = {}) {
   const cardStates = activityState || verificationState
     ? `<div class="card-status-line">${activityState}${verificationState}</div>`
     : "";
-  const installAction = plugin.builtIn
-    ? `<a class="card-install builtin-source-action" href="${escapeHtml(plugin.sourceUrl || plugin.repo)}" target="_blank" rel="noreferrer" aria-label="View source for ${escapeHtml(plugin.name)}">View source ↗</a>`
-    : plugin.placeholder
-      ? '<span class="card-install unavailable" aria-label="Installation not yet available"><span class="command-glyph" aria-hidden="true"></span> Preview only</span>'
-      : !plugin.installAvailable
-        ? `<span class="card-install unavailable" aria-label="Automatic installation unavailable"><span class="command-glyph" aria-hidden="true"></span> ${plugin.upstreamCheckStatus === "failed" ? "Unavailable" : "Manual"}</span>`
-        : `<button class="card-install has-control-tooltip" type="button" data-copy-command="${escapeHtml(plugin.installCommand)}" data-plugin-id="${escapeHtml(plugin.id)}" aria-label="Copy install command for ${escapeHtml(plugin.name)}">
-          <span class="command-glyph" aria-hidden="true"></span><span data-copy-label>Copy install</span>
-          <span class="copy-icon" aria-hidden="true"></span>
-          <span class="control-tooltip" role="tooltip" aria-hidden="true">Copy install command</span>
-        </button>`;
   const previewSource = plugin.previewThumbnail || plugin.previewImage;
   const preview = previewSource
     ? `<div class="plugin-preview image-preview"><img src="${escapeHtml(previewSource)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy"></div>`
     : `<div class="plugin-preview" aria-hidden="true">
         <span class="plugin-preview-mark">${escapeHtml(plugin.initials)}</span>
       </div>`;
-  const stars = plugin.builtIn ? "" : `<span class="card-stars has-control-tooltip" aria-label="${formatStars(plugin.stars)} repository stars"><svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg><span class="social-count" aria-hidden="true">${formatStars(plugin.stars)}</span><span class="control-tooltip" role="tooltip" aria-hidden="true">Repository stars</span></span>`;
-  const hearted = hasPluginHeart(plugin.id);
-  const heart = state.engagementEnabled
-    ? pluginHeartButton(plugin, state.engagement[plugin.id], {
-        hearted,
-        pending: !state.engagementLoaded,
-      })
-    : "";
-  const rank = cardRankLabel(plugin);
-  const rankLine = state.engagementEnabled && !plugin.builtIn
-    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, views, and repository stars"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
-    : "";
+  // Hidden gems: listing date and how many times as many install-command copies per detail view it gets as the median plugin.
+  const gemModule = gemTimes === null ? "" : `
+        <p class="card-gem-facts">
+          <span class="card-gem-since">Listed since ${escapeHtml(formatDate(plugin.listedAt || plugin.addedAt))}</span>
+          ${gemTimes ? `<span class="card-gem-times"><strong>${gemTimes}×</strong><span><span>as many install copies per view</span> <span>as most plugins</span></span></span>` : ""}
+        </p>`;
+  const previewFace = previewBack ? `<div class="plugin-preview-flip">${preview}${previewBack}</div>` : preview;
+  const { installAction, stars, heart, rankLine } = cardBadges(plugin);
   const social = stars || heart || rankLine ? `<div class="card-social">${stars}${heart}${rankLine}</div>` : "";
   const publisher = publisherLogin(plugin);
   const authorLine = publisher && !plugin.builtIn
@@ -847,7 +870,7 @@ function pluginCard(plugin, { showNew = false } = {}) {
   return `
     <article class="plugin-card${plugin.builtIn ? " built-in-card" : ""}" data-card-plugin="${escapeHtml(plugin.id)}" style="--card-accent:${accentColor(plugin.accent)}">
       <a class="plugin-card-link" href="plugin.html?id=${encodeURIComponent(plugin.id)}" aria-label="View ${escapeHtml(plugin.name)}"></a>
-      ${preview}
+      ${previewFace}
       <div class="plugin-card-body">
         <div class="plugin-card-content">
           <div class="plugin-title-line">
@@ -858,6 +881,7 @@ function pluginCard(plugin, { showNew = false } = {}) {
           ${authorLine}
           <p class="plugin-description">${escapeHtml(plugin.description)}</p>
         </div>
+        ${gemModule}
         ${cardStates}
         <div class="plugin-card-bottom">
           <div class="plugin-tags">${tags}</div>
@@ -929,19 +953,145 @@ function bindCardActions(root) {
   });
 }
 
+// Small Just landed card: image, name, author, landing time, and the overall rank once engagement loads.
+// Duplicates close the endless loop and are on screen when it starts, so they stay clickable; only screen readers and the tab order skip them.
+function landedCard(plugin, now, duplicate = false) {
+  const publisher = publisherLogin(plugin);
+  const byline = publisher ? `@${publisher}` : plugin.author || "Unknown";
+  const image = plugin.previewThumbnail || plugin.previewImage;
+  const media = image
+    ? `<img src="${escapeHtml(image)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy" decoding="async">`
+    : `<span class="landed-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
+  const rank = cardRankLabel(plugin);
+  return `
+    <li${duplicate ? ' aria-hidden="true"' : ""}><a class="landed-card" href="plugin.html?id=${encodeURIComponent(plugin.id)}"${duplicate ? ' tabindex="-1"' : ""} style="--card-accent:${accentColor(plugin.accent)}">
+      <span class="landed-media">${media}</span>
+      <span class="landed-body">
+        <span class="landed-name">${escapeHtml(plugin.name)}</span>
+        <span class="landed-author">${escapeHtml(byline)}</span>
+        <span class="landed-foot">
+          <time datetime="${escapeHtml(new Date(listingTime(plugin)).toISOString())}">${escapeHtml(listingAgeLabel(plugin, now))}</time>
+          <span class="landed-rank" data-card-rank="${escapeHtml(plugin.id)}"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>
+        </span>
+      </span>
+    </a></li>`;
+}
+
+
+// Back of a card preview (Recently added and the Cards view): the full description and the detail
+// page's Version, License, and Owner.
+function cardPreviewBack(plugin) {
+  const versionLabel = pluginVersionLabel(plugin);
+  const meta = [versionLabel ? versionLabel.replace(/^manifest\s+/, "") : "—", plugin.license || "Unknown", plugin.author]
+    .map((value) => escapeHtml(value))
+    .join(" · ");
+  return `<div class="plugin-preview-back" aria-hidden="true">
+        <p class="plugin-preview-back-description">${escapeHtml(plugin.description)}</p>
+        <p class="plugin-preview-back-meta">${meta}</p>
+      </div>`;
+}
+
+// Mouse hover over a preview turns it to its back; the rest of the card keeps its controls.
+function setupPreviewFlip(root) {
+  if (root.dataset.previewFlipReady === "true") return;
+  root.dataset.previewFlipReady = "true";
+  const sync = (event) => {
+    root.querySelectorAll(".plugin-preview-flip").forEach((flip) => {
+      const rect = flip.getBoundingClientRect();
+      const inside = event?.pointerType === "mouse"
+        && event.clientX >= rect.left && event.clientX <= rect.right
+        && event.clientY >= rect.top && event.clientY <= rect.bottom;
+      flip.classList.toggle("is-flipped", inside);
+    });
+  };
+  root.addEventListener("pointermove", sync);
+  root.addEventListener("pointerleave", () => sync());
+}
+
+function renderHiddenGems() {
+  const section = document.querySelector("#gems-section");
+  const grid = document.querySelector("#gems-grid");
+  if (!section || !grid) return;
+  const gems = state.engagementEnabled && state.engagementLoaded ? selectHiddenGems(state.plugins, state.engagement, { limit: 9 }) : [];
+  const median = gems.length ? medianInstallRate(state.plugins, state.engagement) : null;
+  section.hidden = gems.length === 0;
+  const rateOf = (plugin) => {
+    const stats = state.engagement[plugin.id] || {};
+    const views = Math.max(0, Math.trunc(Number(stats.views) || 0));
+    return views ? Math.min(views, Math.max(0, Math.trunc(Number(stats.copies) || 0))) / views : 0;
+  };
+  // The Wilson bound picks the gems; they are shown by the multiple on the card, so the visible numbers descend.
+  grid.innerHTML = gems.map((plugin) => ({ plugin, rate: rateOf(plugin) })).sort((a, b) => b.rate - a.rate).map(({ plugin, rate }) => {
+    // "Most plugins": at least half of all rated plugins have the median rate or less, so the multiple holds for them.
+    const times = median ? rate / median : 0;
+    return pluginCard(plugin, { previewBack: cardPreviewBack(plugin), gemTimes: times >= 1.1 ? times.toFixed(1) : "" });
+  }).join("");
+  bindCardActions(grid);
+  setupPreviewFlip(grid);
+  grid.scrollLeft = 0;
+  setupGemsCarousel(grid);
+}
+
+// One row of gems scrolled by page: the arrows move one visible width, and hide when every card already fits.
+function setupGemsCarousel(grid) {
+  const nav = document.querySelector(".gems-nav");
+  if (!nav) return;
+  const buttons = [...nav.querySelectorAll("[data-gems-step]")];
+  const update = () => {
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    nav.hidden = maxScroll <= 1;
+    buttons.forEach((button) => {
+      button.disabled = Number(button.dataset.gemsStep) < 0 ? grid.scrollLeft <= 1 : grid.scrollLeft >= maxScroll - 1;
+    });
+  };
+  if (!grid.dataset.carousel) {
+    grid.dataset.carousel = "ready";
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      const gap = Number.parseFloat(getComputedStyle(grid).columnGap) || 0;
+      grid.scrollBy({ left: Number(button.dataset.gemsStep) * (grid.clientWidth + gap), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }));
+    grid.addEventListener("scroll", update, { passive: true });
+    addEventListener("resize", update);
+  }
+  update();
+}
+
+// Just landed: the last 24 hours as small cards drifting left to right in two rows (alternating newest first).
+// Each track holds its cards twice for a seamless loop; the copies are hidden from assistive technology and
+// focus. Hover, focus, and the Pause button stop the drift; reduced motion leaves scrollable static rows.
 function renderRecentlyAdded() {
   const section = document.querySelector("#recent-section");
-  const root = document.querySelector("#recent-grid");
-  if (!section || !root) return;
+  if (!section) return;
+  const summary = document.querySelector("#recent-summary");
+  const rows = document.querySelector("#recent-latest");
+  const toggle = document.querySelector("#recent-feed-toggle");
 
-  const recent = state.plugins
-    .filter((plugin) => (plugin.sourceType || "community") === "community" && isRecentlyAdded(plugin))
-    .sort((a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name))
-    .slice(0, 3);
+  const now = Date.now();
+  const lastDay = recentListings(state.plugins, now, 24);
+  const lastWeek = recentListings(state.plugins, now, 7 * 24);
+  section.hidden = lastDay.length === 0;
+  if (summary) summary.innerHTML = `<b>${lastDay.length.toLocaleString("en-US")}</b> new in 24h · <b>${lastWeek.length.toLocaleString("en-US")}</b> in 7 days`;
+  if (!rows || !toggle) return;
 
-  section.hidden = recent.length === 0;
-  root.innerHTML = recent.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
-  bindCardActions(root);
+  const items = lastDay.slice(0, 48);
+  const animated = items.length > 6 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  rows.hidden = items.length === 0;
+  rows.classList.toggle("is-animated", animated);
+  rows.querySelectorAll("[data-landed-row]").forEach((track, row) => {
+    const rowItems = items.filter((_, index) => index % 2 === row);
+    track.style.setProperty("--landed-duration", `${Math.max(30, rowItems.length * 5)}s`);
+    track.innerHTML = rowItems.map((plugin) => landedCard(plugin, now)).join("")
+      + (animated ? rowItems.map((plugin) => landedCard(plugin, now, true)).join("") : "");
+  });
+  toggle.hidden = !animated;
+  if (!toggle.dataset.ready) {
+    toggle.dataset.ready = "true";
+    toggle.addEventListener("click", () => {
+      const paused = rows.classList.toggle("is-paused");
+      toggle.textContent = paused ? "Play" : "Pause";
+      toggle.setAttribute("aria-label", `${paused ? "Play" : "Pause"} the Just landed feed`);
+    });
+  }
 }
 
 function renderPagination(totalItems, pageState) {
@@ -1299,8 +1449,9 @@ function render({ historyMode = "replace", announce = false } = {}) {
     grid.innerHTML = "";
     renderSplitView(pagePlugins);
   } else {
-    grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
+    grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true, previewBack: cardPreviewBack(plugin) })).join("");
     bindCardActions(grid);
+    setupPreviewFlip(grid);
   }
   grid.hidden = visible.length === 0 || splitView();
   splitRoot.hidden = visible.length === 0 || !splitView();
@@ -1703,6 +1854,18 @@ async function init() {
     });
     renderSearchTerms();
     renderRecentlyAdded();
+    renderHiddenGems();
+    document.querySelector("#gems-sort-link")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      state.sort = "installRate";
+      state.page = 1;
+      renderSortOptions();
+      render({ historyMode: "push", announce: true });
+      document.querySelector("#catalog").scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start",
+      });
+    });
     renderSourceFilters();
     renderSortOptions();
     renderCategories();
@@ -1712,6 +1875,7 @@ async function init() {
         state.engagement = { ...stats, ...state.engagementAuthoritative };
         state.engagementLoaded = true;
         engagementVersion += 1;
+        renderHiddenGems();
         document.querySelectorAll("[data-plugin-engagement]").forEach((summary) => {
           const pluginId = summary.dataset.pluginEngagement;
           const pluginStats = state.engagement[pluginId] || { views: 0, copies: 0, hearts: 0 };
