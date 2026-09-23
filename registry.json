@@ -214898,6 +214898,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/datbuiquoc035/OmaRay",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T07:59:05.975Z",
+      "listingValidatedCommit": "7fa691c125e8a8f9ab75c7f359e32265eb153486",
+      "listingValidatedAt": "2026-09-23T07:59:05.975Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "datbuiquoc035/omaray",
+        "pluginIds": [
+          "datbuiquoc035.omaray"
+        ],
+        "commit": "7fa691c125e8a8f9ab75c7f359e32265eb153486",
+        "checkedAt": "2026-09-23T07:59:05.870Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "datbuiquoc035/omaray",
+        "pluginIds": [
+          "datbuiquoc035.omaray"
+        ],
+        "commit": "7fa691c125e8a8f9ab75c7f359e32265eb153486",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T07:59:05.870Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T07:14:39.091Z",
+        "requestEventId": 31659431825,
+        "requestedAt": "2026-09-23T07:57:21Z",
+        "reviewedAt": "2026-09-23T07:59:05.870Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "datbuiquoc035.omaray": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
