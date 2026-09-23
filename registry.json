@@ -216233,6 +216233,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/C50NK4/Solaarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T11:01:23.291Z",
+      "listingValidatedCommit": "f3368528235fa1ac2b81072c837e41670aeadb2e",
+      "listingValidatedAt": "2026-09-23T11:01:23.291Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "c50nk4/solaarchy",
+        "pluginIds": [
+          "io.github.c50nk4.solaarchy"
+        ],
+        "commit": "f3368528235fa1ac2b81072c837e41670aeadb2e",
+        "checkedAt": "2026-09-23T11:01:23.183Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "c50nk4/solaarchy",
+        "pluginIds": [
+          "io.github.c50nk4.solaarchy"
+        ],
+        "commit": "f3368528235fa1ac2b81072c837e41670aeadb2e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T11:01:23.183Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T10:04:43.519Z",
+        "requestEventId": 31669867205,
+        "requestedAt": "2026-09-23T10:59:36Z",
+        "reviewedAt": "2026-09-23T11:01:23.183Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.c50nk4.solaarchy": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
