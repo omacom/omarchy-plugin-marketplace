@@ -191945,8 +191945,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-18",
       "listedAt": "2026-09-18T19:13:15.654Z",
-      "listingValidatedCommit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
-      "listingValidatedAt": "2026-09-18T19:13:15.654Z",
+      "listingValidatedCommit": "d042e9f6037e65394b5db00c501c45540e590a17",
+      "listingValidatedAt": "2026-09-23T17:33:37.649Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -191955,8 +191955,8 @@
         "pluginIds": [
           "brownfamilysports.observatory"
         ],
-        "commit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
-        "checkedAt": "2026-09-18T19:13:15.573Z",
+        "commit": "d042e9f6037e65394b5db00c501c45540e590a17",
+        "checkedAt": "2026-09-23T17:33:37.649Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -191972,7 +191972,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
+          "validatedAt": "2026-09-18T19:13:15.654Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:33:37.649Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "parker-brown-family/fix-everything-observatory",
+            "pluginIds": [
+              "brownfamilysports.observatory"
+            ],
+            "commit": "f6ccf5b1e26a41ad1145e4f28357122e193573ec",
+            "checkedAt": "2026-09-18T19:13:15.573Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/harshithnadig/omarchy-agent-shield",
