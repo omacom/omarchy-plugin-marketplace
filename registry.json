@@ -20416,8 +20416,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T19:59:50.392Z",
-      "listingValidatedCommit": "9f903b68ba8564a32ec44d47c823813d347f5c6f",
-      "listingValidatedAt": "2026-09-13T22:10:04.106Z",
+      "listingValidatedCommit": "6f164010ee65c047d3b08138d8522c51248f6494",
+      "listingValidatedAt": "2026-09-23T05:22:24.042Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -20426,8 +20426,8 @@
         "pluginIds": [
           "macos.dock"
         ],
-        "commit": "9f903b68ba8564a32ec44d47c823813d347f5c6f",
-        "checkedAt": "2026-09-13T22:10:04.106Z",
+        "commit": "6f164010ee65c047d3b08138d8522c51248f6494",
+        "checkedAt": "2026-09-23T05:22:24.042Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -20557,6 +20557,26 @@
             ],
             "commit": "d91ac3ec90516ff11a36e57977340f4d3bfbde17",
             "checkedAt": "2026-09-04T00:33:54.392Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "9f903b68ba8564a32ec44d47c823813d347f5c6f",
+          "validatedAt": "2026-09-13T22:10:04.106Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T05:22:24.042Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ifubaraboye/omarchy-dock",
+            "pluginIds": [
+              "macos.dock"
+            ],
+            "commit": "9f903b68ba8564a32ec44d47c823813d347f5c6f",
+            "checkedAt": "2026-09-13T22:10:04.106Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
