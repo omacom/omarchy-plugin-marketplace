@@ -170698,8 +170698,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T13:49:50.697Z",
-      "listingValidatedCommit": "6c7b695f3c7ae6be6281fdee2ba939f8a4912778",
-      "listingValidatedAt": "2026-09-17T13:16:06.613Z",
+      "listingValidatedCommit": "cb32f665022a1833259ca192fb6d56915cc6f017",
+      "listingValidatedAt": "2026-09-23T11:22:22.368Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -170708,8 +170708,8 @@
         "pluginIds": [
           "io.github.omarcodehub.plugin-manager"
         ],
-        "commit": "6c7b695f3c7ae6be6281fdee2ba939f8a4912778",
-        "checkedAt": "2026-09-17T13:16:06.613Z",
+        "commit": "cb32f665022a1833259ca192fb6d56915cc6f017",
+        "checkedAt": "2026-09-23T11:22:22.368Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -170741,6 +170741,26 @@
             ],
             "commit": "ad7cedebc9d42036a7c710a888cba1e820217eb6",
             "checkedAt": "2026-09-13T13:49:50.617Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "6c7b695f3c7ae6be6281fdee2ba939f8a4912778",
+          "validatedAt": "2026-09-17T13:16:06.613Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:22:22.368Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "omarcodehub/omarchy-marketplace",
+            "pluginIds": [
+              "io.github.omarcodehub.plugin-manager"
+            ],
+            "commit": "6c7b695f3c7ae6be6281fdee2ba939f8a4912778",
+            "checkedAt": "2026-09-17T13:16:06.613Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
