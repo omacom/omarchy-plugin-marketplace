@@ -213390,8 +213390,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T21:06:36.862Z",
-      "listingValidatedCommit": "cea62a026035e6df3482ae7d3faec55ef23eda96",
-      "listingValidatedAt": "2026-09-22T21:06:36.862Z",
+      "listingValidatedCommit": "88dea44cdb3cbeec93fd155dbc4b29049e99ab71",
+      "listingValidatedAt": "2026-09-23T17:05:43.867Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -213400,8 +213400,8 @@
         "pluginIds": [
           "floscom.kbd-backlight"
         ],
-        "commit": "cea62a026035e6df3482ae7d3faec55ef23eda96",
-        "checkedAt": "2026-09-22T21:06:36.758Z",
+        "commit": "88dea44cdb3cbeec93fd155dbc4b29049e99ab71",
+        "checkedAt": "2026-09-23T17:05:43.866Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -213417,7 +213417,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cea62a026035e6df3482ae7d3faec55ef23eda96",
+          "validatedAt": "2026-09-22T21:06:36.862Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:05:43.867Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "floscom/omarchy-kbd-backlight",
+            "pluginIds": [
+              "floscom.kbd-backlight"
+            ],
+            "commit": "cea62a026035e6df3482ae7d3faec55ef23eda96",
+            "checkedAt": "2026-09-22T21:06:36.758Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chyld/omarchy-vista",
