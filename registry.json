@@ -210786,8 +210786,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T13:19:33.555Z",
-      "listingValidatedCommit": "f01c0c99b2d09a5e76804b86fdb7d329e1fa27fd",
-      "listingValidatedAt": "2026-09-23T11:59:11.652Z",
+      "listingValidatedCommit": "2d359f1b0497f9d112a7d4d1fc830bf855ea615b",
+      "listingValidatedAt": "2026-09-23T19:09:20.241Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -210796,8 +210796,8 @@
         "pluginIds": [
           "io.github.manateelazycat.terminal-clipboard"
         ],
-        "commit": "f01c0c99b2d09a5e76804b86fdb7d329e1fa27fd",
-        "checkedAt": "2026-09-23T11:59:11.652Z",
+        "commit": "2d359f1b0497f9d112a7d4d1fc830bf855ea615b",
+        "checkedAt": "2026-09-23T19:09:20.241Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -210829,6 +210829,26 @@
             ],
             "commit": "49459b4187e02fbc87de9a0d00f59812edd03b6e",
             "checkedAt": "2026-09-22T13:19:33.455Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "f01c0c99b2d09a5e76804b86fdb7d329e1fa27fd",
+          "validatedAt": "2026-09-23T11:59:11.652Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T19:09:20.241Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "manateelazycat/omarchy-terminal-clipboard",
+            "pluginIds": [
+              "io.github.manateelazycat.terminal-clipboard"
+            ],
+            "commit": "f01c0c99b2d09a5e76804b86fdb7d329e1fa27fd",
+            "checkedAt": "2026-09-23T11:59:11.652Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
