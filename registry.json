@@ -46744,8 +46744,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-22",
       "listedAt": "2026-08-22T15:37:51.384Z",
-      "listingValidatedCommit": "276e95b4c4554d78b5160f30a0962e3feced786e",
-      "listingValidatedAt": "2026-08-22T15:37:51.384Z",
+      "listingValidatedCommit": "ed9cc4741b2337247546a80eea38bf13fa9cb9a4",
+      "listingValidatedAt": "2026-09-23T11:39:53.369Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -46754,8 +46754,8 @@
         "pluginIds": [
           "ianswope.stack"
         ],
-        "commit": "276e95b4c4554d78b5160f30a0962e3feced786e",
-        "checkedAt": "2026-08-22T15:37:51.363Z",
+        "commit": "ed9cc4741b2337247546a80eea38bf13fa9cb9a4",
+        "checkedAt": "2026-09-23T11:39:53.369Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -46770,7 +46770,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "276e95b4c4554d78b5160f30a0962e3feced786e",
+          "validatedAt": "2026-08-22T15:37:51.384Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:39:53.369Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ianswope/omarchy-stack",
+            "pluginIds": [
+              "ianswope.stack"
+            ],
+            "commit": "276e95b4c4554d78b5160f30a0962e3feced786e",
+            "checkedAt": "2026-08-22T15:37:51.363Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/l3aro/omarchy-sudoku",
