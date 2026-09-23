@@ -203614,8 +203614,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T22:43:44.119Z",
-      "listingValidatedCommit": "629e2fa4c0a77225c86df84fc55c636d0cda4cee",
-      "listingValidatedAt": "2026-09-21T22:43:44.119Z",
+      "listingValidatedCommit": "3be6774610898541b80ddb38011c869125077152",
+      "listingValidatedAt": "2026-09-23T11:26:00.187Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -203624,8 +203624,8 @@
         "pluginIds": [
           "dawestheperson.hyperwyrm"
         ],
-        "commit": "629e2fa4c0a77225c86df84fc55c636d0cda4cee",
-        "checkedAt": "2026-09-21T22:43:44.020Z",
+        "commit": "3be6774610898541b80ddb38011c869125077152",
+        "checkedAt": "2026-09-23T11:26:00.187Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -203641,7 +203641,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "629e2fa4c0a77225c86df84fc55c636d0cda4cee",
+          "validatedAt": "2026-09-21T22:43:44.119Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:26:00.187Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dawestheperson/hyperwyrm",
+            "pluginIds": [
+              "dawestheperson.hyperwyrm"
+            ],
+            "commit": "629e2fa4c0a77225c86df84fc55c636d0cda4cee",
+            "checkedAt": "2026-09-21T22:43:44.020Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/0xNorin/omarchy-midnight-royale",
