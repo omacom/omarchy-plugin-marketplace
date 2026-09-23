@@ -213549,6 +213549,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RohiRIK/omarchy-docker-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T02:07:59.060Z",
+      "listingValidatedCommit": "d0e6a0c8c102537ace81db89d2b7466b22fd7f9f",
+      "listingValidatedAt": "2026-09-23T02:07:59.060Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rohirik/omarchy-docker-monitor",
+        "pluginIds": [
+          "rohirik.docker-monitor"
+        ],
+        "commit": "d0e6a0c8c102537ace81db89d2b7466b22fd7f9f",
+        "checkedAt": "2026-09-23T02:07:58.953Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rohirik.docker-monitor": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
