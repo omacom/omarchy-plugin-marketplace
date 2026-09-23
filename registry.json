@@ -214173,6 +214173,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/quanru/doubao-say",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T06:34:29.113Z",
+      "listingValidatedCommit": "ccb8b32fad7ba8c71dbac28eef0dc97ba58d083d",
+      "listingValidatedAt": "2026-09-23T06:34:29.113Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "quanru/doubao-say",
+        "pluginIds": [
+          "md.lifeos.doubao-say"
+        ],
+        "commit": "ccb8b32fad7ba8c71dbac28eef0dc97ba58d083d",
+        "checkedAt": "2026-09-23T06:34:29.030Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "quanru/doubao-say",
+        "pluginIds": [
+          "md.lifeos.doubao-say"
+        ],
+        "commit": "ccb8b32fad7ba8c71dbac28eef0dc97ba58d083d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T06:34:29.030Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T03:44:57.056Z",
+        "requestEventId": 31654160142,
+        "requestedAt": "2026-09-23T06:08:32Z",
+        "reviewedAt": "2026-09-23T06:34:29.030Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "md.lifeos.doubao-say": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
