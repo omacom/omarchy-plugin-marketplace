@@ -181454,8 +181454,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T08:55:42.867Z",
-      "listingValidatedCommit": "8bfbdb89745f7712acfe0323b61b5ada01108fac",
-      "listingValidatedAt": "2026-09-16T08:55:42.867Z",
+      "listingValidatedCommit": "c2550236cf459f7e6025c3f62801e17c79df17a3",
+      "listingValidatedAt": "2026-09-23T17:20:57.207Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -181464,8 +181464,8 @@
         "pluginIds": [
           "ribattrw.todochy"
         ],
-        "commit": "8bfbdb89745f7712acfe0323b61b5ada01108fac",
-        "checkedAt": "2026-09-16T08:55:42.781Z",
+        "commit": "c2550236cf459f7e6025c3f62801e17c79df17a3",
+        "checkedAt": "2026-09-23T17:20:57.207Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -181480,7 +181480,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8bfbdb89745f7712acfe0323b61b5ada01108fac",
+          "validatedAt": "2026-09-16T08:55:42.867Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:20:57.207Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ribattrw/todochy",
+            "pluginIds": [
+              "ribattrw.todochy"
+            ],
+            "commit": "8bfbdb89745f7712acfe0323b61b5ada01108fac",
+            "checkedAt": "2026-09-16T08:55:42.781Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/RohitKaushal7/omarchy-ports",
