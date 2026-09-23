@@ -218179,6 +218179,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TerrifiedBug/omascreensaver",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T19:41:39.198Z",
+      "listingValidatedCommit": "bf445f7e6af66fae1132f7d7dfe1a3f1f1a36a44",
+      "listingValidatedAt": "2026-09-23T19:41:39.198Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "terrifiedbug/omascreensaver",
+        "pluginIds": [
+          "io.github.terrifiedbug.omascreensaver"
+        ],
+        "commit": "bf445f7e6af66fae1132f7d7dfe1a3f1f1a36a44",
+        "checkedAt": "2026-09-23T19:41:39.104Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.terrifiedbug.omascreensaver": {
+          "category": "System",
+          "tags": [
+            "media",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
