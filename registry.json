@@ -214096,8 +214096,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T23:06:14.458Z",
-      "listingValidatedCommit": "c43f2a0b616fad4ea3d2553de867f0619d76bc3a",
-      "listingValidatedAt": "2026-09-22T23:06:14.458Z",
+      "listingValidatedCommit": "722694cf14406941aa154f98b0f4e08a4cf8918a",
+      "listingValidatedAt": "2026-09-23T17:24:53.962Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -214106,8 +214106,8 @@
         "pluginIds": [
           "io.github.nodrej.speech-orb"
         ],
-        "commit": "c43f2a0b616fad4ea3d2553de867f0619d76bc3a",
-        "checkedAt": "2026-09-22T23:06:14.355Z",
+        "commit": "722694cf14406941aa154f98b0f4e08a4cf8918a",
+        "checkedAt": "2026-09-23T17:24:53.962Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -214123,7 +214123,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c43f2a0b616fad4ea3d2553de867f0619d76bc3a",
+          "validatedAt": "2026-09-22T23:06:14.458Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:24:53.962Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nodrej/omarchy-speech-orb",
+            "pluginIds": [
+              "io.github.nodrej.speech-orb"
+            ],
+            "commit": "c43f2a0b616fad4ea3d2553de867f0619d76bc3a",
+            "checkedAt": "2026-09-22T23:06:14.355Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/resn3t/omapom",
