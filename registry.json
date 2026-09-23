@@ -130296,8 +130296,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T18:56:04.290Z",
-      "listingValidatedCommit": "a5ca8fb871755a1d11336096d706ff5c7270a373",
-      "listingValidatedAt": "2026-09-04T18:56:04.290Z",
+      "listingValidatedCommit": "6a9248cf4fbc8c61796c2af8b9c161d5eb8ce968",
+      "listingValidatedAt": "2026-09-23T00:49:51.444Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -130306,8 +130306,8 @@
         "pluginIds": [
           "sliekens.margin"
         ],
-        "commit": "a5ca8fb871755a1d11336096d706ff5c7270a373",
-        "checkedAt": "2026-09-04T18:56:04.232Z",
+        "commit": "6a9248cf4fbc8c61796c2af8b9c161d5eb8ce968",
+        "checkedAt": "2026-09-23T00:49:51.444Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -130323,7 +130323,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a5ca8fb871755a1d11336096d706ff5c7270a373",
+          "validatedAt": "2026-09-04T18:56:04.290Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:49:51.444Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sliekens/omarchy-margin",
+            "pluginIds": [
+              "sliekens.margin"
+            ],
+            "commit": "a5ca8fb871755a1d11336096d706ff5c7270a373",
+            "checkedAt": "2026-09-04T18:56:04.232Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nathanp/omarchy-game-awake",
