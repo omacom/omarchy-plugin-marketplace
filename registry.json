@@ -186861,8 +186861,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-17",
       "listedAt": "2026-09-17T07:28:56.024Z",
-      "listingValidatedCommit": "66a88a834405aecf3e28e37831c234c1c0002948",
-      "listingValidatedAt": "2026-09-17T07:28:56.024Z",
+      "listingValidatedCommit": "4014e63db074b3b2efc95356217a7e56510bef56",
+      "listingValidatedAt": "2026-09-23T16:50:00.547Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -186871,8 +186871,8 @@
         "pluginIds": [
           "ghrepo.tracker"
         ],
-        "commit": "66a88a834405aecf3e28e37831c234c1c0002948",
-        "checkedAt": "2026-09-17T07:28:55.941Z",
+        "commit": "4014e63db074b3b2efc95356217a7e56510bef56",
+        "checkedAt": "2026-09-23T16:50:00.547Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -186886,7 +186886,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "66a88a834405aecf3e28e37831c234c1c0002948",
+          "validatedAt": "2026-09-17T07:28:56.024Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T16:50:00.547Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "davidhbigelow/githubrepotracker",
+            "pluginIds": [
+              "ghrepo.tracker"
+            ],
+            "commit": "66a88a834405aecf3e28e37831c234c1c0002948",
+            "checkedAt": "2026-09-17T07:28:55.941Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lancefaul/omarchy-omedia-controls",
