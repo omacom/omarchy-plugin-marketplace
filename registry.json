@@ -214841,6 +214841,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/the-curious-2025/zmanbar-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T07:52:46.643Z",
+      "listingValidatedCommit": "c7982efba578a901477dba3dd37257c16d6b9b5c",
+      "listingValidatedAt": "2026-09-23T07:52:46.643Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "the-curious-2025/zmanbar-omarchy",
+        "pluginIds": [
+          "zmanbar"
+        ],
+        "commit": "c7982efba578a901477dba3dd37257c16d6b9b5c",
+        "checkedAt": "2026-09-23T07:52:46.539Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "the-curious-2025/zmanbar-omarchy",
+        "pluginIds": [
+          "zmanbar"
+        ],
+        "commit": "c7982efba578a901477dba3dd37257c16d6b9b5c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T07:52:46.539Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T04:52:16.184Z",
+        "requestEventId": 31657832605,
+        "requestedAt": "2026-09-23T07:26:27Z",
+        "reviewedAt": "2026-09-23T07:52:46.539Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "zmanbar": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
