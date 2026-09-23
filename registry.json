@@ -218760,6 +218760,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Loedn/omarchy-workspace-router",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T20:32:00.955Z",
+      "listingValidatedCommit": "003d4dae90a9ad05b2bc45c237aa8c5db69b8f5a",
+      "listingValidatedAt": "2026-09-23T20:32:00.955Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "loedn/omarchy-workspace-router",
+        "pluginIds": [
+          "io.github.loedn.workspace-router"
+        ],
+        "commit": "003d4dae90a9ad05b2bc45c237aa8c5db69b8f5a",
+        "checkedAt": "2026-09-23T20:32:00.844Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "loedn/omarchy-workspace-router",
+        "pluginIds": [
+          "io.github.loedn.workspace-router"
+        ],
+        "commit": "003d4dae90a9ad05b2bc45c237aa8c5db69b8f5a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T20:32:00.844Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T14:51:18.373Z",
+        "requestEventId": 31704833376,
+        "requestedAt": "2026-09-23T19:47:56Z",
+        "reviewedAt": "2026-09-23T20:32:00.844Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.loedn.workspace-router": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces",
+            "launcher",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
