@@ -209603,8 +209603,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T12:01:52.307Z",
-      "listingValidatedCommit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
-      "listingValidatedAt": "2026-09-22T12:01:52.307Z",
+      "listingValidatedCommit": "24bc18d98722ff8800845ef865c7518c664c5661",
+      "listingValidatedAt": "2026-09-23T12:07:13.132Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -209613,8 +209613,8 @@
         "pluginIds": [
           "io.github.manateelazycat.window-switcher"
         ],
-        "commit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
-        "checkedAt": "2026-09-22T12:01:52.214Z",
+        "commit": "24bc18d98722ff8800845ef865c7518c664c5661",
+        "checkedAt": "2026-09-23T12:07:13.131Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -209630,7 +209630,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
+          "validatedAt": "2026-09-22T12:01:52.307Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T12:07:13.132Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "manateelazycat/omarchy-window-switcher",
+            "pluginIds": [
+              "io.github.manateelazycat.window-switcher"
+            ],
+            "commit": "7dc2a0c17ad5be3cb3ee1738648bc94f32aa9f4b",
+            "checkedAt": "2026-09-22T12:01:52.214Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/manateelazycat/omarchy-workspace-gallery",
