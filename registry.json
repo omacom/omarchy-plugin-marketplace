@@ -34060,8 +34060,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T21:26:14.689Z",
-      "listingValidatedCommit": "502bd06450555fded9072352bd9eed257a702611",
-      "listingValidatedAt": "2026-09-07T08:21:44.781Z",
+      "listingValidatedCommit": "e2fbef7ba73f3305426c7fc49206e15ae533f5cd",
+      "listingValidatedAt": "2026-09-23T18:49:53.309Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -34070,8 +34070,8 @@
         "pluginIds": [
           "crmne.ultimate-guitar"
         ],
-        "commit": "502bd06450555fded9072352bd9eed257a702611",
-        "checkedAt": "2026-09-07T08:21:44.781Z",
+        "commit": "e2fbef7ba73f3305426c7fc49206e15ae533f5cd",
+        "checkedAt": "2026-09-23T18:49:53.308Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -34103,6 +34103,26 @@
             ],
             "commit": "14e0e5e677abecd6adb29af0f07d395f49d6ac88",
             "checkedAt": "2026-08-20T20:54:12.019Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "502bd06450555fded9072352bd9eed257a702611",
+          "validatedAt": "2026-09-07T08:21:44.781Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T18:49:53.309Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crmne/omarchy-ultimate-guitar",
+            "pluginIds": [
+              "crmne.ultimate-guitar"
+            ],
+            "commit": "502bd06450555fded9072352bd9eed257a702611",
+            "checkedAt": "2026-09-07T08:21:44.781Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
