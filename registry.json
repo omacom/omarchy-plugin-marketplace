@@ -53304,8 +53304,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T10:14:32.876Z",
-      "listingValidatedCommit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
-      "listingValidatedAt": "2026-09-02T01:00:43.143Z",
+      "listingValidatedCommit": "5eade7147f6c13f9ed7dcbebfbf28b1aa8d74e3b",
+      "listingValidatedAt": "2026-09-23T06:08:42.746Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -53314,8 +53314,8 @@
         "pluginIds": [
           "io.github.jeremylongshore.wait-state"
         ],
-        "commit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
-        "checkedAt": "2026-09-02T01:00:43.142Z",
+        "commit": "5eade7147f6c13f9ed7dcbebfbf28b1aa8d74e3b",
+        "checkedAt": "2026-09-23T06:08:42.746Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -53467,6 +53467,49 @@
             "reviewedAt": "2026-08-30T10:51:28.761Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
+          "validatedAt": "2026-09-02T01:00:43.143Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T06:08:42.746Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jeremylongshore/omarchy-wait-state-entry",
+            "pluginIds": [
+              "io.github.jeremylongshore.wait-state"
+            ],
+            "commit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
+            "checkedAt": "2026-09-02T01:00:43.142Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jeremylongshore/omarchy-wait-state-entry",
+            "pluginIds": [
+              "io.github.jeremylongshore.wait-state"
+            ],
+            "commit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T01:00:43.142Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T22:20:52.189Z",
+            "requestEventId": 30382790031,
+            "requestedAt": "2026-09-02T00:27:50Z",
+            "reviewedAt": "2026-09-02T01:00:43.143Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -53475,19 +53518,19 @@
         "pluginIds": [
           "io.github.jeremylongshore.wait-state"
         ],
-        "commit": "fe61e052f075b34aa1c33ed598e8df4805b8aff3",
+        "commit": "5eade7147f6c13f9ed7dcbebfbf28b1aa8d74e3b",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T01:00:43.142Z",
+        "baselineCheckedAt": "2026-09-23T06:08:42.746Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-08-31T22:20:52.189Z",
-        "requestEventId": 30382790031,
-        "requestedAt": "2026-09-02T00:27:50Z",
-        "reviewedAt": "2026-09-02T01:00:43.143Z",
+        "reviewedBaselineCheckedAt": "2026-09-20T22:06:49.047Z",
+        "requestEventId": 31652486867,
+        "requestedAt": "2026-09-23T05:27:06Z",
+        "reviewedAt": "2026-09-23T06:08:42.746Z",
         "reviewer": "HANCORE-linux"
       }
     },
