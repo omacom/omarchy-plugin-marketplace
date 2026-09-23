@@ -146406,8 +146406,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T07:44:30.326Z",
-      "listingValidatedCommit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
-      "listingValidatedAt": "2026-09-11T07:12:13.192Z",
+      "listingValidatedCommit": "1ab20c7aaee2352c581225224112332253d63c08",
+      "listingValidatedAt": "2026-09-23T00:04:08.455Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -146416,8 +146416,8 @@
         "pluginIds": [
           "clouddown.cobalt"
         ],
-        "commit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
-        "checkedAt": "2026-09-11T07:12:13.192Z",
+        "commit": "1ab20c7aaee2352c581225224112332253d63c08",
+        "checkedAt": "2026-09-23T00:04:08.455Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -146433,27 +146433,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "clouddown/omarchy-cobalt",
-        "pluginIds": [
-          "clouddown.cobalt"
-        ],
-        "commit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T07:12:13.192Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-08T15:35:35.033Z",
-        "requestEventId": 30953961386,
-        "requestedAt": "2026-09-11T06:44:10Z",
-        "reviewedAt": "2026-09-11T07:12:13.192Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -146498,8 +146477,72 @@
             "reviewedAt": "2026-09-08T07:44:30.260Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
+          "validatedAt": "2026-09-11T07:12:13.192Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:04:08.455Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "clouddown/omarchy-cobalt",
+            "pluginIds": [
+              "clouddown.cobalt"
+            ],
+            "commit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
+            "checkedAt": "2026-09-11T07:12:13.192Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "clouddown/omarchy-cobalt",
+            "pluginIds": [
+              "clouddown.cobalt"
+            ],
+            "commit": "41ab3c2e0d5f2928351de7ea46188107856d3ab6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T07:12:13.192Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-08T15:35:35.033Z",
+            "requestEventId": 30953961386,
+            "requestedAt": "2026-09-11T06:44:10Z",
+            "reviewedAt": "2026-09-11T07:12:13.192Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "clouddown/omarchy-cobalt",
+        "pluginIds": [
+          "clouddown.cobalt"
+        ],
+        "commit": "1ab20c7aaee2352c581225224112332253d63c08",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T00:04:08.455Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-15T02:21:57.794Z",
+        "requestEventId": 31639824458,
+        "requestedAt": "2026-09-22T23:54:00Z",
+        "reviewedAt": "2026-09-23T00:04:08.455Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/glorics/omarchy-grok-bots",
