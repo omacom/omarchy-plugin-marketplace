@@ -112205,8 +112205,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T16:18:06.132Z",
-      "listingValidatedCommit": "d1756e08bec7a0288aba9b880a281e4544e6cbea",
-      "listingValidatedAt": "2026-08-31T16:18:06.132Z",
+      "listingValidatedCommit": "8427d1fb29562fec6c784bdd1ce0f442e834a4fe",
+      "listingValidatedAt": "2026-09-23T06:46:40.624Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -112215,8 +112215,8 @@
         "pluginIds": [
           "tobiasz-p.vision-hub"
         ],
-        "commit": "d1756e08bec7a0288aba9b880a281e4544e6cbea",
-        "checkedAt": "2026-08-31T16:18:06.068Z",
+        "commit": "8427d1fb29562fec6c784bdd1ce0f442e834a4fe",
+        "checkedAt": "2026-09-23T06:46:40.624Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -112236,7 +112236,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d1756e08bec7a0288aba9b880a281e4544e6cbea",
+          "validatedAt": "2026-08-31T16:18:06.132Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T06:46:40.624Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tobiasz-p/vision-hub",
+            "pluginIds": [
+              "tobiasz-p.vision-hub"
+            ],
+            "commit": "d1756e08bec7a0288aba9b880a281e4544e6cbea",
+            "checkedAt": "2026-08-31T16:18:06.068Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/p145085/omarchy-uptime-kuma",
