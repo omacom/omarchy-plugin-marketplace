@@ -205158,8 +205158,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T02:22:14.597Z",
-      "listingValidatedCommit": "f1910021c45b42749eeefa8783d712cbbefe4963",
-      "listingValidatedAt": "2026-09-22T02:22:14.597Z",
+      "listingValidatedCommit": "ca48df65fa759972593752f377b13797626d6cff",
+      "listingValidatedAt": "2026-09-23T11:29:26.298Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -205168,8 +205168,8 @@
         "pluginIds": [
           "ngnk.glass-weather"
         ],
-        "commit": "f1910021c45b42749eeefa8783d712cbbefe4963",
-        "checkedAt": "2026-09-22T02:22:14.500Z",
+        "commit": "ca48df65fa759972593752f377b13797626d6cff",
+        "checkedAt": "2026-09-23T11:29:26.298Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -205183,7 +205183,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f1910021c45b42749eeefa8783d712cbbefe4963",
+          "validatedAt": "2026-09-22T02:22:14.597Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:29:26.298Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "indibyte/ngnk-glass-weather",
+            "pluginIds": [
+              "ngnk.glass-weather"
+            ],
+            "commit": "f1910021c45b42749eeefa8783d712cbbefe4963",
+            "checkedAt": "2026-09-22T02:22:14.500Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lemonade-sdk/omarchy-lemonade",
