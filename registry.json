@@ -218246,6 +218246,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Turing-Cat/NetworkStats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T19:49:37.074Z",
+      "listingValidatedCommit": "11ee220506f5c736822eade464808e6aed33b6ba",
+      "listingValidatedAt": "2026-09-23T19:49:37.074Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "turing-cat/networkstats",
+        "pluginIds": [
+          "zjh.networkstats"
+        ],
+        "commit": "11ee220506f5c736822eade464808e6aed33b6ba",
+        "checkedAt": "2026-09-23T19:49:36.970Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "turing-cat/networkstats",
+        "pluginIds": [
+          "zjh.networkstats"
+        ],
+        "commit": "11ee220506f5c736822eade464808e6aed33b6ba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T19:49:36.970Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T14:37:04.031Z",
+        "requestEventId": 31702507113,
+        "requestedAt": "2026-09-23T19:12:27Z",
+        "reviewedAt": "2026-09-23T19:49:36.970Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "zjh.networkstats": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
