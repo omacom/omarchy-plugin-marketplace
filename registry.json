@@ -197854,8 +197854,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T10:34:29.148Z",
-      "listingValidatedCommit": "92e13380694661a6af36956c7f83440c9c8842eb",
-      "listingValidatedAt": "2026-09-20T10:34:29.148Z",
+      "listingValidatedCommit": "acf84f6611243d4d0919da0b73d7ffb6c569cc23",
+      "listingValidatedAt": "2026-09-23T19:26:44.187Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -197864,8 +197864,8 @@
         "pluginIds": [
           "agileautomation.omafloat"
         ],
-        "commit": "92e13380694661a6af36956c7f83440c9c8842eb",
-        "checkedAt": "2026-09-20T10:34:29.055Z",
+        "commit": "acf84f6611243d4d0919da0b73d7ffb6c569cc23",
+        "checkedAt": "2026-09-23T19:26:44.187Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -197881,7 +197881,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "92e13380694661a6af36956c7f83440c9c8842eb",
+          "validatedAt": "2026-09-20T10:34:29.148Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T19:26:44.187Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "unipsycho/omarchy-omafloat",
+            "pluginIds": [
+              "agileautomation.omafloat"
+            ],
+            "commit": "92e13380694661a6af36956c7f83440c9c8842eb",
+            "checkedAt": "2026-09-20T10:34:29.055Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/WhoIsCalebBrown/mic-effects",
