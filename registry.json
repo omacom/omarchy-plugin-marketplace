@@ -189144,8 +189144,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-18",
       "listedAt": "2026-09-18T01:00:03.103Z",
-      "listingValidatedCommit": "16a1b493de9ec2e5f6a8325987a355757d7d98cd",
-      "listingValidatedAt": "2026-09-18T01:00:03.103Z",
+      "listingValidatedCommit": "f208f8395fb05736215cbed53ec83ee54c0e86ce",
+      "listingValidatedAt": "2026-09-23T00:53:44.213Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -189154,8 +189154,8 @@
         "pluginIds": [
           "fstander.omoliday"
         ],
-        "commit": "16a1b493de9ec2e5f6a8325987a355757d7d98cd",
-        "checkedAt": "2026-09-18T01:00:03.020Z",
+        "commit": "f208f8395fb05736215cbed53ec83ee54c0e86ce",
+        "checkedAt": "2026-09-23T00:53:44.213Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -189170,7 +189170,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "16a1b493de9ec2e5f6a8325987a355757d7d98cd",
+          "validatedAt": "2026-09-18T01:00:03.103Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:53:44.213Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "badgetobytes/omoliday",
+            "pluginIds": [
+              "fstander.omoliday"
+            ],
+            "commit": "16a1b493de9ec2e5f6a8325987a355757d7d98cd",
+            "checkedAt": "2026-09-18T01:00:03.020Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chyld/omarchy-pindeck",
