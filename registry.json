@@ -6374,8 +6374,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T10:51:29.049Z",
-      "listingValidatedCommit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
-      "listingValidatedAt": "2026-09-11T16:22:58.811Z",
+      "listingValidatedCommit": "1843935c368328ebff34fe1db99722778d6831dd",
+      "listingValidatedAt": "2026-09-23T07:30:30.902Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -6384,8 +6384,8 @@
         "pluginIds": [
           "sh.lerd.glance"
         ],
-        "commit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
-        "checkedAt": "2026-09-11T16:22:58.811Z",
+        "commit": "1843935c368328ebff34fe1db99722778d6831dd",
+        "checkedAt": "2026-09-23T07:30:30.902Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -6411,6 +6411,26 @@
             "version": "3",
             "commit": "15b988ec581c2210f7d558fd6784b8ebc9d4fd61",
             "checkedAt": "2026-08-15T10:50:25.166Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
+          "validatedAt": "2026-09-11T16:22:58.811Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T07:30:30.902Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "lerd-env/lerd-omarchy-glance",
+            "pluginIds": [
+              "sh.lerd.glance"
+            ],
+            "commit": "dc48c0fa8b75ddfb4526b53f4cb681c96be2197a",
+            "checkedAt": "2026-09-11T16:22:58.811Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
