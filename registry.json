@@ -213367,6 +213367,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cgranier/omarchy-shorthand",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T01:33:16.154Z",
+      "listingValidatedCommit": "fd5e11238fdfab2d64e28414c0f6fe120897f87d",
+      "listingValidatedAt": "2026-09-23T01:33:16.154Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cgranier/omarchy-shorthand",
+        "pluginIds": [
+          "cgranier.shorthand"
+        ],
+        "commit": "fd5e11238fdfab2d64e28414c0f6fe120897f87d",
+        "checkedAt": "2026-09-23T01:33:16.057Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cgranier.shorthand": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
