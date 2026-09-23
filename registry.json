@@ -219184,6 +219184,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JMThomas00/omarchy-vantage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T21:21:43.320Z",
+      "listingValidatedCommit": "50afe7e073aee10ebfcc08d865bd30c07d0b38c9",
+      "listingValidatedAt": "2026-09-23T21:21:43.320Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmthomas00/omarchy-vantage",
+        "pluginIds": [
+          "jmthomas00.vantage"
+        ],
+        "commit": "50afe7e073aee10ebfcc08d865bd30c07d0b38c9",
+        "checkedAt": "2026-09-23T21:21:43.225Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jmthomas00/omarchy-vantage",
+        "pluginIds": [
+          "jmthomas00.vantage"
+        ],
+        "commit": "50afe7e073aee10ebfcc08d865bd30c07d0b38c9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T21:21:43.225Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T20:20:06.372Z",
+        "requestEventId": 31709014832,
+        "requestedAt": "2026-09-23T20:54:53Z",
+        "reviewedAt": "2026-09-23T21:21:43.225Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jmthomas00.vantage": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
