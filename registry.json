@@ -217017,6 +217017,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NiloyTheSpd/opencode-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T12:52:09.755Z",
+      "listingValidatedCommit": "a01d531d2d76d771c7e0c5568a5c402f805d4d2a",
+      "listingValidatedAt": "2026-09-23T12:52:09.755Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "niloythespd/opencode-tracker",
+        "pluginIds": [
+          "io.github.thespd.opencode-tracker"
+        ],
+        "commit": "a01d531d2d76d771c7e0c5568a5c402f805d4d2a",
+        "checkedAt": "2026-09-23T12:52:09.642Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.thespd.opencode-tracker": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
