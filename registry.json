@@ -219150,6 +219150,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/afinck/omarchy-soundstorm-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T21:17:31.141Z",
+      "listingValidatedCommit": "2f24f85ad337f0dd023b071d35dd098a83a2dd32",
+      "listingValidatedAt": "2026-09-23T21:17:31.141Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "afinck/omarchy-soundstorm-plugin",
+        "pluginIds": [
+          "afinck.soundstorm-radio"
+        ],
+        "commit": "2f24f85ad337f0dd023b071d35dd098a83a2dd32",
+        "checkedAt": "2026-09-23T21:17:31.034Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "afinck.soundstorm-radio": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
