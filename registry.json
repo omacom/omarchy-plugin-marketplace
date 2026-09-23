@@ -8881,8 +8881,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T22:11:44.752Z",
-      "listingValidatedCommit": "476755b800d09a1f660b59c87c88febbc938a69f",
-      "listingValidatedAt": "2026-08-24T15:09:54.012Z",
+      "listingValidatedCommit": "d6fd7e05589bacc40940a71b08eba97b976fcc89",
+      "listingValidatedAt": "2026-09-23T00:23:56.658Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -8891,8 +8891,8 @@
         "pluginIds": [
           "im0001gt.hw-tooltip"
         ],
-        "commit": "476755b800d09a1f660b59c87c88febbc938a69f",
-        "checkedAt": "2026-08-24T15:09:54.012Z",
+        "commit": "d6fd7e05589bacc40940a71b08eba97b976fcc89",
+        "checkedAt": "2026-09-23T00:23:56.658Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -8997,6 +8997,67 @@
             "requestedAt": "2026-08-24T14:33:47Z",
             "reviewedAt": "2026-08-24T14:34:13.078Z",
             "reviewer": "HANCORE-linux"
+          },
+          "maintainerVerificationReviewHistory": [
+            {
+              "maintainerVerificationReview": {
+                "schemaVersion": 1,
+                "repository": "im0001gt/omarchy-hw-tooltip",
+                "pluginIds": [
+                  "im0001gt.hw-tooltip"
+                ],
+                "commit": "87a7b80f2ac59a40b5a9e74a932ec2b9a03d3234",
+                "baselineVersion": "3",
+                "enforcementMode": "selective",
+                "baselineCheckedAt": "2026-08-21T11:17:51.518Z",
+                "baselineOutcome": "review-required",
+                "findings": [],
+                "capabilities": [
+                  "remote-build",
+                  "privilege",
+                  "installer",
+                  "package-manager"
+                ],
+                "reviewedBaselineCheckedAt": "2026-08-21T08:15:31.562Z",
+                "requestEventId": 29801002401,
+                "requestedAt": "2026-08-21T11:17:33Z",
+                "reviewedAt": "2026-08-21T11:17:51.519Z",
+                "reviewer": "HANCORE-linux"
+              },
+              "maintainerVerificationRevocation": {
+                "schemaVersion": 1,
+                "repository": "im0001gt/omarchy-hw-tooltip",
+                "pluginIds": [
+                  "im0001gt.hw-tooltip"
+                ],
+                "commit": "87a7b80f2ac59a40b5a9e74a932ec2b9a03d3234",
+                "requestEventId": 29801002401,
+                "revocationEventId": 29801291060,
+                "revokedBy": "HANCORE-linux",
+                "revokedAt": "2026-08-21T11:23:22Z",
+                "reason": "approval-applied-in-error"
+              }
+            }
+          ]
+        },
+        {
+          "commit": "476755b800d09a1f660b59c87c88febbc938a69f",
+          "validatedAt": "2026-08-24T15:09:54.012Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:23:56.658Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "im0001gt/omarchy-hw-tooltip",
+            "pluginIds": [
+              "im0001gt.hw-tooltip"
+            ],
+            "commit": "476755b800d09a1f660b59c87c88febbc938a69f",
+            "checkedAt": "2026-08-24T15:09:54.012Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
           },
           "maintainerVerificationReviewHistory": [
             {
