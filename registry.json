@@ -215459,6 +215459,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ivanvan08/omarchy-tick",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:41:56.716Z",
+      "listingValidatedCommit": "fd1d494f2d381e2d3ceb9c75cf8e13865626a78a",
+      "listingValidatedAt": "2026-09-23T08:41:56.716Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ivanvan08/omarchy-tick",
+        "pluginIds": [
+          "io.github.ivanvan08.tick"
+        ],
+        "commit": "fd1d494f2d381e2d3ceb9c75cf8e13865626a78a",
+        "checkedAt": "2026-09-23T08:41:56.612Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ivanvan08.tick": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
