@@ -197751,8 +197751,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T19:16:58.134Z",
-      "listingValidatedCommit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
-      "listingValidatedAt": "2026-09-20T19:16:58.134Z",
+      "listingValidatedCommit": "31c21375c2b7bd239fead6c9927419070bdb6ab3",
+      "listingValidatedAt": "2026-09-23T07:11:14.871Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -197761,8 +197761,8 @@
         "pluginIds": [
           "io.github.murali-lns.agents-usage"
         ],
-        "commit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
-        "checkedAt": "2026-09-20T19:16:58.038Z",
+        "commit": "31c21375c2b7bd239fead6c9927419070bdb6ab3",
+        "checkedAt": "2026-09-23T07:11:14.871Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -197776,7 +197776,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
+          "validatedAt": "2026-09-20T19:16:58.134Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T07:11:14.871Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "murali-lns/omarchy-agents-usage",
+            "pluginIds": [
+              "io.github.murali-lns.agents-usage"
+            ],
+            "commit": "4d2448c7569d4ef1df6893f2123d354a6a708406",
+            "checkedAt": "2026-09-20T19:16:58.038Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/szaidi-code/quran-plugin",
