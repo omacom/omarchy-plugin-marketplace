@@ -142850,8 +142850,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T20:37:00.072Z",
-      "listingValidatedCommit": "3856be2f93b4374763d35778c97d9bbd4d08ff59",
-      "listingValidatedAt": "2026-09-16T18:21:57.176Z",
+      "listingValidatedCommit": "abfc9350362922f81b80f1429fabca1b73acba94",
+      "listingValidatedAt": "2026-09-23T11:43:40.476Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -142860,8 +142860,8 @@
         "pluginIds": [
           "io.github.ollieedgeley.ai-frontier-status"
         ],
-        "commit": "3856be2f93b4374763d35778c97d9bbd4d08ff59",
-        "checkedAt": "2026-09-16T18:21:57.175Z",
+        "commit": "abfc9350362922f81b80f1429fabca1b73acba94",
+        "checkedAt": "2026-09-23T11:43:40.476Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -142893,6 +142893,26 @@
             ],
             "commit": "9bfaaa36759f2478469480712f67102d95f06dc6",
             "checkedAt": "2026-09-06T20:37:00.003Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "3856be2f93b4374763d35778c97d9bbd4d08ff59",
+          "validatedAt": "2026-09-16T18:21:57.176Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:43:40.476Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ollieedgeley/ai-frontier-status",
+            "pluginIds": [
+              "io.github.ollieedgeley.ai-frontier-status"
+            ],
+            "commit": "3856be2f93b4374763d35778c97d9bbd4d08ff59",
+            "checkedAt": "2026-09-16T18:21:57.175Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
