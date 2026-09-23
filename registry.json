@@ -213649,6 +213649,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nachtwerk/omarchy-command-toggle",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T02:29:10.149Z",
+      "listingValidatedCommit": "12dd64cc8014071a1638b299f2acd6cf1c51ea2e",
+      "listingValidatedAt": "2026-09-23T02:29:10.149Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nachtwerk/omarchy-command-toggle",
+        "pluginIds": [
+          "io.github.nachtwerk.command-toggle"
+        ],
+        "commit": "12dd64cc8014071a1638b299f2acd6cf1c51ea2e",
+        "checkedAt": "2026-09-23T02:29:10.051Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nachtwerk/omarchy-command-toggle",
+        "pluginIds": [
+          "io.github.nachtwerk.command-toggle"
+        ],
+        "commit": "12dd64cc8014071a1638b299f2acd6cf1c51ea2e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T02:29:10.051Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T02:20:51.251Z",
+        "requestEventId": 31645625878,
+        "requestedAt": "2026-09-23T02:27:32Z",
+        "reviewedAt": "2026-09-23T02:29:10.051Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nachtwerk.command-toggle": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
