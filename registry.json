@@ -219300,6 +219300,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sudo-WearTherinG/penguine.network",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T21:30:19.582Z",
+      "listingValidatedCommit": "3253d75b6288e549762bfd374d96d55b440315d3",
+      "listingValidatedAt": "2026-09-23T21:30:19.582Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sudo-wearthering/penguine.network",
+        "pluginIds": [
+          "penguine.network"
+        ],
+        "commit": "3253d75b6288e549762bfd374d96d55b440315d3",
+        "checkedAt": "2026-09-23T21:30:19.480Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sudo-wearthering/penguine.network",
+        "pluginIds": [
+          "penguine.network"
+        ],
+        "commit": "3253d75b6288e549762bfd374d96d55b440315d3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T21:30:19.480Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T20:20:38.504Z",
+        "requestEventId": 31709040652,
+        "requestedAt": "2026-09-23T20:55:19Z",
+        "reviewedAt": "2026-09-23T21:30:19.481Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "penguine.network": {
+          "category": "Other",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
