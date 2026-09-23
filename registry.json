@@ -160191,8 +160191,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T15:43:58.948Z",
-      "listingValidatedCommit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
-      "listingValidatedAt": "2026-09-09T15:43:58.948Z",
+      "listingValidatedCommit": "9f30016991ac1585480a4ba0c560bac0b8a4fc68",
+      "listingValidatedAt": "2026-09-23T07:37:33.711Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -160201,8 +160201,8 @@
         "pluginIds": [
           "miharekar.studio-display-auto-brightness"
         ],
-        "commit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
-        "checkedAt": "2026-09-09T15:43:58.873Z",
+        "commit": "9f30016991ac1585480a4ba0c560bac0b8a4fc68",
+        "checkedAt": "2026-09-23T07:37:33.711Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -160216,7 +160216,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
+          "validatedAt": "2026-09-09T15:43:58.948Z",
+          "branch": "master",
+          "supersededAt": "2026-09-23T07:37:33.711Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "miharekar/omarchy-studio-display-auto-brightness",
+            "pluginIds": [
+              "miharekar.studio-display-auto-brightness"
+            ],
+            "commit": "e54c90d5dd2a05cecd639c89ae001a185154d6e1",
+            "checkedAt": "2026-09-09T15:43:58.873Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/radres/omarchy-plugin-call-me",
