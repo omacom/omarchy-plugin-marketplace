@@ -80887,8 +80887,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T23:35:10.750Z",
-      "listingValidatedCommit": "c4018752125f2597f267531aaf717a4ef8c4b626",
-      "listingValidatedAt": "2026-08-26T23:35:10.750Z",
+      "listingValidatedCommit": "28b3a09facfde57e4500515a9e952fbe989ef703",
+      "listingValidatedAt": "2026-09-23T05:54:21.352Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -80897,8 +80897,8 @@
         "pluginIds": [
           "io.github.patrickfanella.shelfish"
         ],
-        "commit": "c4018752125f2597f267531aaf717a4ef8c4b626",
-        "checkedAt": "2026-08-26T23:35:10.711Z",
+        "commit": "28b3a09facfde57e4500515a9e952fbe989ef703",
+        "checkedAt": "2026-09-23T05:54:21.352Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -80913,7 +80913,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c4018752125f2597f267531aaf717a4ef8c4b626",
+          "validatedAt": "2026-08-26T23:35:10.750Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T05:54:21.352Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "patrickfanella/omarchy-plugin-shelfish",
+            "pluginIds": [
+              "io.github.patrickfanella.shelfish"
+            ],
+            "commit": "c4018752125f2597f267531aaf717a4ef8c4b626",
+            "checkedAt": "2026-08-26T23:35:10.711Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/0d4vid/omarkey",
