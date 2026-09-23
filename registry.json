@@ -67102,8 +67102,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T22:29:14.612Z",
-      "listingValidatedCommit": "6b5a30aa39ed0ea1c3687f9436637670922e2d49",
-      "listingValidatedAt": "2026-08-24T22:29:14.612Z",
+      "listingValidatedCommit": "7d7935a3f627b59512f98edfad5074a5f808af62",
+      "listingValidatedAt": "2026-09-23T07:26:24.329Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -67112,8 +67112,8 @@
         "pluginIds": [
           "space.passpage.shares"
         ],
-        "commit": "6b5a30aa39ed0ea1c3687f9436637670922e2d49",
-        "checkedAt": "2026-08-24T22:29:14.585Z",
+        "commit": "7d7935a3f627b59512f98edfad5074a5f808af62",
+        "checkedAt": "2026-09-23T07:26:24.329Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -67128,7 +67128,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6b5a30aa39ed0ea1c3687f9436637670922e2d49",
+          "validatedAt": "2026-08-24T22:29:14.612Z",
+          "branch": "master",
+          "supersededAt": "2026-09-23T07:26:24.329Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zeus-deus/passpage-omarchy-plugin",
+            "pluginIds": [
+              "space.passpage.shares"
+            ],
+            "commit": "6b5a30aa39ed0ea1c3687f9436637670922e2d49",
+            "checkedAt": "2026-08-24T22:29:14.585Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jesseburlamaque/omarchy-find",
