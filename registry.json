@@ -69620,8 +69620,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T23:25:58.834Z",
-      "listingValidatedCommit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
-      "listingValidatedAt": "2026-09-02T01:23:13.629Z",
+      "listingValidatedCommit": "d63e6b72b4ef7db9c599925ce85db54e48b6d6b5",
+      "listingValidatedAt": "2026-09-23T06:12:46.490Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -69630,8 +69630,8 @@
         "pluginIds": [
           "io.github.jeremylongshore.x-files"
         ],
-        "commit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
-        "checkedAt": "2026-09-02T01:23:13.629Z",
+        "commit": "d63e6b72b4ef7db9c599925ce85db54e48b6d6b5",
+        "checkedAt": "2026-09-23T06:12:46.490Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -69648,27 +69648,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jeremylongshore/omarchy-x-files-entry",
-        "pluginIds": [
-          "io.github.jeremylongshore.x-files"
-        ],
-        "commit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-02T01:23:13.629Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-31T23:14:17.187Z",
-        "requestEventId": 30383021278,
-        "requestedAt": "2026-09-02T00:34:46Z",
-        "reviewedAt": "2026-09-02T01:23:13.629Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -69713,8 +69692,72 @@
             "reviewedAt": "2026-08-24T23:25:58.797Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
+          "validatedAt": "2026-09-02T01:23:13.629Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T06:12:46.490Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jeremylongshore/omarchy-x-files-entry",
+            "pluginIds": [
+              "io.github.jeremylongshore.x-files"
+            ],
+            "commit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
+            "checkedAt": "2026-09-02T01:23:13.629Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jeremylongshore/omarchy-x-files-entry",
+            "pluginIds": [
+              "io.github.jeremylongshore.x-files"
+            ],
+            "commit": "b2c73470204c0ead857ff8e14af8cdbe191d6cac",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-02T01:23:13.629Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-31T23:14:17.187Z",
+            "requestEventId": 30383021278,
+            "requestedAt": "2026-09-02T00:34:46Z",
+            "reviewedAt": "2026-09-02T01:23:13.629Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jeremylongshore/omarchy-x-files-entry",
+        "pluginIds": [
+          "io.github.jeremylongshore.x-files"
+        ],
+        "commit": "d63e6b72b4ef7db9c599925ce85db54e48b6d6b5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T06:12:46.490Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T22:08:19.268Z",
+        "requestEventId": 31652488653,
+        "requestedAt": "2026-09-23T05:27:08Z",
+        "reviewedAt": "2026-09-23T06:12:46.490Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/TMartinPPC/omarchy-omavert",
