@@ -214747,6 +214747,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevanoullio/kevano.local-ai-dashboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T07:44:51.970Z",
+      "listingValidatedCommit": "8c4cce6d791ed9ee6526562598b3a230a0bc8d3f",
+      "listingValidatedAt": "2026-09-23T07:44:51.970Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevanoullio/kevano.local-ai-dashboard",
+        "pluginIds": [
+          "kevano.local-ai-dashboard"
+        ],
+        "commit": "8c4cce6d791ed9ee6526562598b3a230a0bc8d3f",
+        "checkedAt": "2026-09-23T07:44:51.866Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kevanoullio/kevano.local-ai-dashboard",
+        "pluginIds": [
+          "kevano.local-ai-dashboard"
+        ],
+        "commit": "8c4cce6d791ed9ee6526562598b3a230a0bc8d3f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T07:44:51.866Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T02:15:02.626Z",
+        "requestEventId": 31657405933,
+        "requestedAt": "2026-09-23T07:17:51Z",
+        "reviewedAt": "2026-09-23T07:44:51.866Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kevano.local-ai-dashboard": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
