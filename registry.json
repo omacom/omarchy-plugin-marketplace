@@ -215162,6 +215162,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zakkoo/proton-drive-sync",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:21:06.996Z",
+      "listingValidatedCommit": "ab51c1de540182deba3c9546139b79146820d774",
+      "listingValidatedAt": "2026-09-23T08:21:06.996Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zakkoo/proton-drive-sync",
+        "pluginIds": [
+          "io.github.zakkoo.proton-drive"
+        ],
+        "commit": "ab51c1de540182deba3c9546139b79146820d774",
+        "checkedAt": "2026-09-23T08:21:06.895Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zakkoo/proton-drive-sync",
+        "pluginIds": [
+          "io.github.zakkoo.proton-drive"
+        ],
+        "commit": "ab51c1de540182deba3c9546139b79146820d774",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T08:21:06.895Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T07:11:12.245Z",
+        "requestEventId": 31660489534,
+        "requestedAt": "2026-09-23T08:16:37Z",
+        "reviewedAt": "2026-09-23T08:21:06.895Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.zakkoo.proton-drive": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
