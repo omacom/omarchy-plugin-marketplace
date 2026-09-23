@@ -213515,6 +213515,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wicky14/omarchy-rounded-corner-blur",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T02:03:31.051Z",
+      "listingValidatedCommit": "29efce2c37919793bb965522b43af4fe44e9f5d9",
+      "listingValidatedAt": "2026-09-23T02:03:31.051Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wicky14/omarchy-rounded-corner-blur",
+        "pluginIds": [
+          "custom.rounded-corner-blur"
+        ],
+        "commit": "29efce2c37919793bb965522b43af4fe44e9f5d9",
+        "checkedAt": "2026-09-23T02:03:30.948Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "custom.rounded-corner-blur": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
