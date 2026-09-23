@@ -215945,6 +215945,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevinbsr/omarchy-firetv",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T09:49:09.700Z",
+      "listingValidatedCommit": "227bb2a4d24e2553b2f07b851a8700a860611d2b",
+      "listingValidatedAt": "2026-09-23T09:49:09.700Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevinbsr/omarchy-firetv",
+        "pluginIds": [
+          "kevin.firetv"
+        ],
+        "commit": "227bb2a4d24e2553b2f07b851a8700a860611d2b",
+        "checkedAt": "2026-09-23T09:49:09.615Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kevinbsr/omarchy-firetv",
+        "pluginIds": [
+          "kevin.firetv"
+        ],
+        "commit": "227bb2a4d24e2553b2f07b851a8700a860611d2b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T09:49:09.615Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T09:33:21.385Z",
+        "requestEventId": 31665739526,
+        "requestedAt": "2026-09-23T09:47:31Z",
+        "reviewedAt": "2026-09-23T09:49:09.615Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kevin.firetv": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
