@@ -136641,8 +136641,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T22:21:36.236Z",
-      "listingValidatedCommit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
-      "listingValidatedAt": "2026-09-05T22:21:36.236Z",
+      "listingValidatedCommit": "d94432bf0301920c2ab5e76dbfbc8e9c7670cba8",
+      "listingValidatedAt": "2026-09-23T06:01:23.083Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -136651,8 +136651,8 @@
         "pluginIds": [
           "rainan16.workspace-touch-swipe"
         ],
-        "commit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
-        "checkedAt": "2026-09-05T22:21:36.162Z",
+        "commit": "d94432bf0301920c2ab5e76dbfbc8e9c7670cba8",
+        "checkedAt": "2026-09-23T06:01:23.083Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -136667,7 +136667,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
+          "validatedAt": "2026-09-05T22:21:36.236Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T06:01:23.083Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rainan16/omarchy-workspace-touch-swipe",
+            "pluginIds": [
+              "rainan16.workspace-touch-swipe"
+            ],
+            "commit": "ff5ac391029dbb7c5e427d766eb76c2000845f06",
+            "checkedAt": "2026-09-05T22:21:36.162Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kristijanw/omarchy-password-generator",
