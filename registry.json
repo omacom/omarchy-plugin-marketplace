@@ -218396,6 +218396,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TheComputeCenter/omarchy-vpn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T20:02:32.569Z",
+      "listingValidatedCommit": "8b76509c3ad1c328ca0b5899471c35065fbaaceb",
+      "listingValidatedAt": "2026-09-23T20:02:32.569Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thecomputecenter/omarchy-vpn",
+        "pluginIds": [
+          "adarsh.vpn"
+        ],
+        "commit": "8b76509c3ad1c328ca0b5899471c35065fbaaceb",
+        "checkedAt": "2026-09-23T20:02:32.464Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thecomputecenter/omarchy-vpn",
+        "pluginIds": [
+          "adarsh.vpn"
+        ],
+        "commit": "8b76509c3ad1c328ca0b5899471c35065fbaaceb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T20:02:32.464Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T18:53:11.187Z",
+        "requestEventId": 31703123421,
+        "requestedAt": "2026-09-23T19:22:38Z",
+        "reviewedAt": "2026-09-23T20:02:32.464Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "adarsh.vpn": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "vpn"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
