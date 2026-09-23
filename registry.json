@@ -198005,8 +198005,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T19:28:23.939Z",
-      "listingValidatedCommit": "3a0cee2b673712d69dec1ba471214929d9caa838",
-      "listingValidatedAt": "2026-09-20T19:28:23.939Z",
+      "listingValidatedCommit": "d0429119c162f51d3cd0ca3941c55404b9ea622e",
+      "listingValidatedAt": "2026-09-23T07:34:03.467Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -198015,8 +198015,8 @@
         "pluginIds": [
           "io.github.roddygithub.omapip"
         ],
-        "commit": "3a0cee2b673712d69dec1ba471214929d9caa838",
-        "checkedAt": "2026-09-20T19:28:23.846Z",
+        "commit": "d0429119c162f51d3cd0ca3941c55404b9ea622e",
+        "checkedAt": "2026-09-23T07:34:03.467Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -198032,7 +198032,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3a0cee2b673712d69dec1ba471214929d9caa838",
+          "validatedAt": "2026-09-20T19:28:23.939Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T07:34:03.467Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "roddygithub/omapip",
+            "pluginIds": [
+              "io.github.roddygithub.omapip"
+            ],
+            "commit": "3a0cee2b673712d69dec1ba471214929d9caa838",
+            "checkedAt": "2026-09-20T19:28:23.846Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jacob-vincent-mink/omaspeak-plugin",
