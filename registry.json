@@ -216802,6 +216802,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aarushdalal/omarchy-system-pulse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T12:33:18.121Z",
+      "listingValidatedCommit": "ac6a9c1a42e8fc0adda0d3a2098d1b8fd34c146f",
+      "listingValidatedAt": "2026-09-23T12:33:18.121Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aarushdalal/omarchy-system-pulse",
+        "pluginIds": [
+          "daemon0.system-pulse"
+        ],
+        "commit": "ac6a9c1a42e8fc0adda0d3a2098d1b8fd34c146f",
+        "checkedAt": "2026-09-23T12:33:18.017Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aarushdalal/omarchy-system-pulse",
+        "pluginIds": [
+          "daemon0.system-pulse"
+        ],
+        "commit": "ac6a9c1a42e8fc0adda0d3a2098d1b8fd34c146f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T12:33:18.017Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T11:54:45.283Z",
+        "requestEventId": 31675009154,
+        "requestedAt": "2026-09-23T12:24:52Z",
+        "reviewedAt": "2026-09-23T12:33:18.017Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "daemon0.system-pulse": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
