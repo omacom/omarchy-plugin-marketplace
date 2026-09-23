@@ -170568,8 +170568,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T14:19:55.517Z",
-      "listingValidatedCommit": "8887a445e4f151b9697cd184723e62226c8d0de1",
-      "listingValidatedAt": "2026-09-13T14:19:55.517Z",
+      "listingValidatedCommit": "b11c293c4e6029feef3b1a06d536be89ed3e6316",
+      "listingValidatedAt": "2026-09-23T00:38:50.968Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -170578,8 +170578,8 @@
         "pluginIds": [
           "lukedaduke.connections"
         ],
-        "commit": "8887a445e4f151b9697cd184723e62226c8d0de1",
-        "checkedAt": "2026-09-13T14:19:55.441Z",
+        "commit": "b11c293c4e6029feef3b1a06d536be89ed3e6316",
+        "checkedAt": "2026-09-23T00:38:50.968Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -170595,7 +170595,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8887a445e4f151b9697cd184723e62226c8d0de1",
+          "validatedAt": "2026-09-13T14:19:55.517Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:38:50.968Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "duketopceo/omarchy-connections",
+            "pluginIds": [
+              "lukedaduke.connections"
+            ],
+            "commit": "8887a445e4f151b9697cd184723e62226c8d0de1",
+            "checkedAt": "2026-09-13T14:19:55.441Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/FerC10110/omarchy-save-them-all",
