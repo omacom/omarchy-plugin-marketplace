@@ -218942,6 +218942,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kevinbsr/omahub",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T20:57:44.469Z",
+      "listingValidatedCommit": "ec6fc2fbc5671211c0dbf955333f71abb2c278af",
+      "listingValidatedAt": "2026-09-23T20:57:44.469Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kevinbsr/omahub",
+        "pluginIds": [
+          "kevinbsr.omahub"
+        ],
+        "commit": "ec6fc2fbc5671211c0dbf955333f71abb2c278af",
+        "checkedAt": "2026-09-23T20:57:44.363Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kevinbsr/omahub",
+        "pluginIds": [
+          "kevinbsr.omahub"
+        ],
+        "commit": "ec6fc2fbc5671211c0dbf955333f71abb2c278af",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T20:57:44.363Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T20:18:47.036Z",
+        "requestEventId": 31708313943,
+        "requestedAt": "2026-09-23T20:42:46Z",
+        "reviewedAt": "2026-09-23T20:57:44.363Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kevinbsr.omahub": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
