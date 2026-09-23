@@ -216709,6 +216709,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ure/cece",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T12:20:43.415Z",
+      "listingValidatedCommit": "0d458ec32207398da248ebedf2cddd5198453801",
+      "listingValidatedAt": "2026-09-23T12:20:43.415Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ure/cece",
+        "pluginIds": [
+          "ure.cece"
+        ],
+        "commit": "0d458ec32207398da248ebedf2cddd5198453801",
+        "checkedAt": "2026-09-23T12:20:43.305Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ure/cece",
+        "pluginIds": [
+          "ure.cece"
+        ],
+        "commit": "0d458ec32207398da248ebedf2cddd5198453801",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T12:20:43.305Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T11:58:25.966Z",
+        "requestEventId": 31674352028,
+        "requestedAt": "2026-09-23T12:14:19Z",
+        "reviewedAt": "2026-09-23T12:20:43.305Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ure.cece": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "games",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
