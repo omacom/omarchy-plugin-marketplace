@@ -215492,6 +215492,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fewhnhouse/omarchy-rgb",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:46:18.393Z",
+      "listingValidatedCommit": "072017aa24a0d20b435c52a43e48a79c4e35721d",
+      "listingValidatedAt": "2026-09-23T08:46:18.393Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fewhnhouse/omarchy-rgb",
+        "pluginIds": [
+          "io.github.fewhnhouse.omarchy-rgb"
+        ],
+        "commit": "072017aa24a0d20b435c52a43e48a79c4e35721d",
+        "checkedAt": "2026-09-23T08:46:18.278Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fewhnhouse/omarchy-rgb",
+        "pluginIds": [
+          "io.github.fewhnhouse.omarchy-rgb"
+        ],
+        "commit": "072017aa24a0d20b435c52a43e48a79c4e35721d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T08:46:18.278Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T08:10:38.800Z",
+        "requestEventId": 31661319029,
+        "requestedAt": "2026-09-23T08:31:29Z",
+        "reviewedAt": "2026-09-23T08:46:18.278Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fewhnhouse.omarchy-rgb": {
+          "category": "Hardware",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
