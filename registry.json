@@ -217205,6 +217205,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ariDev1/omaLinea",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T13:07:54.583Z",
+      "listingValidatedCommit": "b23b7232c327d3dc462b9c365bb6a4b328191462",
+      "listingValidatedAt": "2026-09-23T13:07:54.583Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aridev1/omalinea",
+        "pluginIds": [
+          "rene.lalinea"
+        ],
+        "commit": "b23b7232c327d3dc462b9c365bb6a4b328191462",
+        "checkedAt": "2026-09-23T13:07:54.475Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aridev1/omalinea",
+        "pluginIds": [
+          "rene.lalinea"
+        ],
+        "commit": "b23b7232c327d3dc462b9c365bb6a4b328191462",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T13:07:54.475Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T12:22:47.116Z",
+        "requestEventId": 31675315203,
+        "requestedAt": "2026-09-23T12:29:51Z",
+        "reviewedAt": "2026-09-23T13:07:54.475Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rene.lalinea": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
