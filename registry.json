@@ -199234,8 +199234,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T20:46:19.579Z",
-      "listingValidatedCommit": "e5ae87013510d8e4336d1721b87ad3d8f239e95d",
-      "listingValidatedAt": "2026-09-20T20:46:19.579Z",
+      "listingValidatedCommit": "989cd4ed847e08e77f46eee4cd13d34788c710d0",
+      "listingValidatedAt": "2026-09-23T17:13:19.137Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -199244,8 +199244,8 @@
         "pluginIds": [
           "io.github.wouldja.mouse"
         ],
-        "commit": "e5ae87013510d8e4336d1721b87ad3d8f239e95d",
-        "checkedAt": "2026-09-20T20:46:19.481Z",
+        "commit": "989cd4ed847e08e77f46eee4cd13d34788c710d0",
+        "checkedAt": "2026-09-23T17:13:19.137Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -199261,7 +199261,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e5ae87013510d8e4336d1721b87ad3d8f239e95d",
+          "validatedAt": "2026-09-20T20:46:19.579Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:13:19.137Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wouldja/omarchy-mouse",
+            "pluginIds": [
+              "io.github.wouldja.mouse"
+            ],
+            "commit": "e5ae87013510d8e4336d1721b87ad3d8f239e95d",
+            "checkedAt": "2026-09-20T20:46:19.481Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tcballard/omarchy-plugin-kamal",
