@@ -133613,8 +133613,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T20:55:34.037Z",
-      "listingValidatedCommit": "c2a5c42db31d14eefe196d3cfa5ba85f32613112",
-      "listingValidatedAt": "2026-09-04T20:55:34.037Z",
+      "listingValidatedCommit": "7e6e2cd22732db8c110a9231ba4d220f9a5069b9",
+      "listingValidatedAt": "2026-09-23T18:53:47.803Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -133623,8 +133623,8 @@
         "pluginIds": [
           "leonavas.mouse"
         ],
-        "commit": "c2a5c42db31d14eefe196d3cfa5ba85f32613112",
-        "checkedAt": "2026-09-04T20:55:33.972Z",
+        "commit": "7e6e2cd22732db8c110a9231ba4d220f9a5069b9",
+        "checkedAt": "2026-09-23T18:53:47.803Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -133640,7 +133640,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c2a5c42db31d14eefe196d3cfa5ba85f32613112",
+          "validatedAt": "2026-09-04T20:55:34.037Z",
+          "branch": "master",
+          "supersededAt": "2026-09-23T18:53:47.803Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "leonavas/omarchy-mouse",
+            "pluginIds": [
+              "leonavas.mouse"
+            ],
+            "commit": "c2a5c42db31d14eefe196d3cfa5ba85f32613112",
+            "checkedAt": "2026-09-04T20:55:33.972Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/itsdotdev/omarchy-youtube-music",
