@@ -219003,6 +219003,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AlasdairAnderson/omarchy-wallpaper-frame-and-flow",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T21:01:51.601Z",
+      "listingValidatedCommit": "0c861645a5c7c947a86b4500977d83da65b1918c",
+      "listingValidatedAt": "2026-09-23T21:01:51.601Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alasdairanderson/omarchy-wallpaper-frame-and-flow",
+        "pluginIds": [
+          "alasdairanderson.wallpaper-frame-and-flow"
+        ],
+        "commit": "0c861645a5c7c947a86b4500977d83da65b1918c",
+        "checkedAt": "2026-09-23T21:01:51.492Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "alasdairanderson.wallpaper-frame-and-flow": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
