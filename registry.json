@@ -205026,8 +205026,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T01:37:19.715Z",
-      "listingValidatedCommit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
-      "listingValidatedAt": "2026-09-22T01:37:19.715Z",
+      "listingValidatedCommit": "b7aaa59fe3249b3892db5824083818637011707b",
+      "listingValidatedAt": "2026-09-23T11:32:40.867Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -205036,8 +205036,8 @@
         "pluginIds": [
           "ngnk.glass-clock"
         ],
-        "commit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
-        "checkedAt": "2026-09-22T01:37:19.651Z",
+        "commit": "b7aaa59fe3249b3892db5824083818637011707b",
+        "checkedAt": "2026-09-23T11:32:40.867Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -205051,7 +205051,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+          "validatedAt": "2026-09-22T01:37:19.715Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:32:40.867Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "indibyte/ngnk-glass-clock",
+            "pluginIds": [
+              "ngnk.glass-clock"
+            ],
+            "commit": "ead1d22f3a45d482de7da9809e515fa699d3e9cc",
+            "checkedAt": "2026-09-22T01:37:19.651Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lkzwieder/omarchy-opencode-usage",
