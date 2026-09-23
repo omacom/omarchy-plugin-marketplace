@@ -215221,6 +215221,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gdeyoung/omarchy-tailfin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:25:43.163Z",
+      "listingValidatedCommit": "05fdbd793f48bf2c4d846042df62c50485ef925d",
+      "listingValidatedAt": "2026-09-23T08:25:43.163Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gdeyoung/omarchy-tailfin",
+        "pluginIds": [
+          "gdeyoung.tailfin"
+        ],
+        "commit": "05fdbd793f48bf2c4d846042df62c50485ef925d",
+        "checkedAt": "2026-09-23T08:25:43.089Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gdeyoung/omarchy-tailfin",
+        "pluginIds": [
+          "gdeyoung.tailfin"
+        ],
+        "commit": "05fdbd793f48bf2c4d846042df62c50485ef925d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T08:25:43.089Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T04:53:36.998Z",
+        "requestEventId": 31660563825,
+        "requestedAt": "2026-09-23T08:17:58Z",
+        "reviewedAt": "2026-09-23T08:25:43.089Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gdeyoung.tailfin": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
