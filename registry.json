@@ -207196,8 +207196,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T07:39:14.127Z",
-      "listingValidatedCommit": "103b7856582699be59e7833e2eccce44f1f266eb",
-      "listingValidatedAt": "2026-09-22T07:39:14.127Z",
+      "listingValidatedCommit": "220a3800c801b9bf8ff66b8c10dc73246ccd9cac",
+      "listingValidatedAt": "2026-09-23T11:47:33.823Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -207206,8 +207206,8 @@
         "pluginIds": [
           "io.github.manateelazycat.power-awake"
         ],
-        "commit": "103b7856582699be59e7833e2eccce44f1f266eb",
-        "checkedAt": "2026-09-22T07:39:14.031Z",
+        "commit": "220a3800c801b9bf8ff66b8c10dc73246ccd9cac",
+        "checkedAt": "2026-09-23T11:47:33.823Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -207223,7 +207223,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "103b7856582699be59e7833e2eccce44f1f266eb",
+          "validatedAt": "2026-09-22T07:39:14.127Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:47:33.823Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "manateelazycat/omarchy-power-awake",
+            "pluginIds": [
+              "io.github.manateelazycat.power-awake"
+            ],
+            "commit": "103b7856582699be59e7833e2eccce44f1f266eb",
+            "checkedAt": "2026-09-22T07:39:14.031Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/manateelazycat/omarchy-smart-gaps",
