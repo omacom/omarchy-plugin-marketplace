@@ -214985,6 +214985,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Fearlex-creator/omarchy-v2rayn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T08:06:12.387Z",
+      "listingValidatedCommit": "9e11d3d48c0e853119841abf3089ace05a2ad3cf",
+      "listingValidatedAt": "2026-09-23T08:06:12.387Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fearlex-creator/omarchy-v2rayn",
+        "pluginIds": [
+          "sina.v2rayn"
+        ],
+        "commit": "9e11d3d48c0e853119841abf3089ace05a2ad3cf",
+        "checkedAt": "2026-09-23T08:06:12.304Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fearlex-creator/omarchy-v2rayn",
+        "pluginIds": [
+          "sina.v2rayn"
+        ],
+        "commit": "9e11d3d48c0e853119841abf3089ace05a2ad3cf",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T08:06:12.304Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T07:36:25.212Z",
+        "requestEventId": 31659826873,
+        "requestedAt": "2026-09-23T08:04:39Z",
+        "reviewedAt": "2026-09-23T08:06:12.304Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sina.v2rayn": {
+          "category": "System",
+          "tags": [
+            "vpn",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
