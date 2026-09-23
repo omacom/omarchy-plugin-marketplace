@@ -185813,8 +185813,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T20:15:20.461Z",
-      "listingValidatedCommit": "6eb72cb9bf98e3ca74b0a6617f408558b11eff25",
-      "listingValidatedAt": "2026-09-16T20:15:20.461Z",
+      "listingValidatedCommit": "15f457983b945e60494239d62f2eef9758966e72",
+      "listingValidatedAt": "2026-09-23T11:36:13.687Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -185823,8 +185823,8 @@
         "pluginIds": [
           "mark.retina-screenshot"
         ],
-        "commit": "6eb72cb9bf98e3ca74b0a6617f408558b11eff25",
-        "checkedAt": "2026-09-16T20:15:20.380Z",
+        "commit": "15f457983b945e60494239d62f2eef9758966e72",
+        "checkedAt": "2026-09-23T11:36:13.687Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -185840,7 +185840,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6eb72cb9bf98e3ca74b0a6617f408558b11eff25",
+          "validatedAt": "2026-09-16T20:15:20.461Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T11:36:13.687Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "markey/omarchy-retina-screenshot",
+            "pluginIds": [
+              "mark.retina-screenshot"
+            ],
+            "commit": "6eb72cb9bf98e3ca74b0a6617f408558b11eff25",
+            "checkedAt": "2026-09-16T20:15:20.380Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/BrunooMoniz/omarchy-duo-hinge",
