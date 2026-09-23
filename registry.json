@@ -213535,8 +213535,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T22:00:36.484Z",
-      "listingValidatedCommit": "1294d8071cbf06804b7d826ae066e4bfa7469c27",
-      "listingValidatedAt": "2026-09-22T22:00:36.484Z",
+      "listingValidatedCommit": "196d8143ccab0ff465ac1500379627076a595eeb",
+      "listingValidatedAt": "2026-09-23T17:16:59.319Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -213545,8 +213545,8 @@
         "pluginIds": [
           "io.github.ferc10110.hypr-rules-studio"
         ],
-        "commit": "1294d8071cbf06804b7d826ae066e4bfa7469c27",
-        "checkedAt": "2026-09-22T22:00:36.408Z",
+        "commit": "196d8143ccab0ff465ac1500379627076a595eeb",
+        "checkedAt": "2026-09-23T17:16:59.319Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -213562,7 +213562,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1294d8071cbf06804b7d826ae066e4bfa7469c27",
+          "validatedAt": "2026-09-22T22:00:36.484Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:16:59.319Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ferc10110/omarchy-hypr-rules-studio",
+            "pluginIds": [
+              "io.github.ferc10110.hypr-rules-studio"
+            ],
+            "commit": "1294d8071cbf06804b7d826ae066e4bfa7469c27",
+            "checkedAt": "2026-09-22T22:00:36.408Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/segersb/omarchy-printers",
