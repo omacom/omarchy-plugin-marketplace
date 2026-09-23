@@ -194128,8 +194128,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-19",
       "listedAt": "2026-09-19T12:42:17.295Z",
-      "listingValidatedCommit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
-      "listingValidatedAt": "2026-09-19T12:42:17.295Z",
+      "listingValidatedCommit": "43e07a261651772d8a758fd5cc2663b1e35aa908",
+      "listingValidatedAt": "2026-09-23T05:33:21.548Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -194138,8 +194138,8 @@
         "pluginIds": [
           "stickymongoose2.background-crop"
         ],
-        "commit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
-        "checkedAt": "2026-09-19T12:42:17.202Z",
+        "commit": "43e07a261651772d8a758fd5cc2663b1e35aa908",
+        "checkedAt": "2026-09-23T05:33:21.548Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -194153,7 +194153,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
+          "validatedAt": "2026-09-19T12:42:17.295Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T05:33:21.548Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "stickymongoose2/omarchy-background-crop",
+            "pluginIds": [
+              "stickymongoose2.background-crop"
+            ],
+            "commit": "5bdbc4306fb688a9c1376b3e9a57f6a4db5609e6",
+            "checkedAt": "2026-09-19T12:42:17.202Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mirzap/hyprknit",
