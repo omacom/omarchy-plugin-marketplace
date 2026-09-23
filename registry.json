@@ -213704,8 +213704,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T22:29:46.518Z",
-      "listingValidatedCommit": "f64a80625ccb6035cea062b73e6fb04ce6c35434",
-      "listingValidatedAt": "2026-09-22T22:29:46.518Z",
+      "listingValidatedCommit": "d8d7f90bf007d23c9c802d579569c3f70053909b",
+      "listingValidatedAt": "2026-09-23T17:09:38.202Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -213714,8 +213714,8 @@
         "pluginIds": [
           "jesusarchive.dynamic-menu"
         ],
-        "commit": "f64a80625ccb6035cea062b73e6fb04ce6c35434",
-        "checkedAt": "2026-09-22T22:29:46.429Z",
+        "commit": "d8d7f90bf007d23c9c802d579569c3f70053909b",
+        "checkedAt": "2026-09-23T17:09:38.201Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -213731,7 +213731,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f64a80625ccb6035cea062b73e6fb04ce6c35434",
+          "validatedAt": "2026-09-22T22:29:46.518Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T17:09:38.202Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jesusarchive/omarchy-dynamic-menu",
+            "pluginIds": [
+              "jesusarchive.dynamic-menu"
+            ],
+            "commit": "f64a80625ccb6035cea062b73e6fb04ce6c35434",
+            "checkedAt": "2026-09-22T22:29:46.429Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dreamsgarage/OmasteelRGB",
