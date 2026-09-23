@@ -207184,8 +207184,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T07:35:31.765Z",
-      "listingValidatedCommit": "77b0b6661682fd16a6f370234f25bb79b621aa66",
-      "listingValidatedAt": "2026-09-22T07:35:31.765Z",
+      "listingValidatedCommit": "fc49b59ea5fe4449b01aa1734143174cd5f18b7c",
+      "listingValidatedAt": "2026-09-23T12:03:25.418Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -207194,8 +207194,8 @@
         "pluginIds": [
           "io.github.manateelazycat.tray-bar"
         ],
-        "commit": "77b0b6661682fd16a6f370234f25bb79b621aa66",
-        "checkedAt": "2026-09-22T07:35:31.668Z",
+        "commit": "fc49b59ea5fe4449b01aa1734143174cd5f18b7c",
+        "checkedAt": "2026-09-23T12:03:25.418Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -207211,7 +207211,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "77b0b6661682fd16a6f370234f25bb79b621aa66",
+          "validatedAt": "2026-09-22T07:35:31.765Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T12:03:25.418Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "manateelazycat/omarchy-tray-bar",
+            "pluginIds": [
+              "io.github.manateelazycat.tray-bar"
+            ],
+            "commit": "77b0b6661682fd16a6f370234f25bb79b621aa66",
+            "checkedAt": "2026-09-22T07:35:31.668Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/manateelazycat/omarchy-power-awake",
