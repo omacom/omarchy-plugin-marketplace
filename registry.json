@@ -177624,8 +177624,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T20:51:51.550Z",
-      "listingValidatedCommit": "874f7c750f68082986437411104bec2755224bcf",
-      "listingValidatedAt": "2026-09-15T20:51:51.550Z",
+      "listingValidatedCommit": "5ce6d0e9baec3ea812bb73fe5af68e8ff67ab0cf",
+      "listingValidatedAt": "2026-09-23T16:46:18.257Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -177634,8 +177634,8 @@
         "pluginIds": [
           "io.github.pelukonline.input-freeze"
         ],
-        "commit": "874f7c750f68082986437411104bec2755224bcf",
-        "checkedAt": "2026-09-15T20:51:51.461Z",
+        "commit": "5ce6d0e9baec3ea812bb73fe5af68e8ff67ab0cf",
+        "checkedAt": "2026-09-23T16:46:18.257Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -177651,7 +177651,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "874f7c750f68082986437411104bec2755224bcf",
+          "validatedAt": "2026-09-15T20:51:51.550Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T16:46:18.257Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "pelukonline/omarchy-input-freeze",
+            "pluginIds": [
+              "io.github.pelukonline.input-freeze"
+            ],
+            "commit": "874f7c750f68082986437411104bec2755224bcf",
+            "checkedAt": "2026-09-15T20:51:51.461Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/WokoFlipper/resty-charge",
