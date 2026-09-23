@@ -218701,6 +218701,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/07dcolem/omarchy-appimages",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T20:28:22.500Z",
+      "listingValidatedCommit": "af54ce1aa533bc8bcd38837810a60e910ae78321",
+      "listingValidatedAt": "2026-09-23T20:28:22.500Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "07dcolem/omarchy-appimages",
+        "pluginIds": [
+          "07dcolem.appimages"
+        ],
+        "commit": "af54ce1aa533bc8bcd38837810a60e910ae78321",
+        "checkedAt": "2026-09-23T20:28:22.435Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "07dcolem/omarchy-appimages",
+        "pluginIds": [
+          "07dcolem.appimages"
+        ],
+        "commit": "af54ce1aa533bc8bcd38837810a60e910ae78321",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T20:28:22.435Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T14:56:24.531Z",
+        "requestEventId": 31704399307,
+        "requestedAt": "2026-09-23T19:41:31Z",
+        "reviewedAt": "2026-09-23T20:28:22.435Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "07dcolem.appimages": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "launcher",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
