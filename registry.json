@@ -173406,8 +173406,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T21:35:17.755Z",
-      "listingValidatedCommit": "82d284eb498bc067b222430165e8cc5d260b660e",
-      "listingValidatedAt": "2026-09-14T21:35:17.755Z",
+      "listingValidatedCommit": "b51d6f4e95c2a26eb5474b40b4208ed67e65f949",
+      "listingValidatedAt": "2026-09-23T00:34:58.268Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -173416,8 +173416,8 @@
         "pluginIds": [
           "lukedaduke.nexus"
         ],
-        "commit": "82d284eb498bc067b222430165e8cc5d260b660e",
-        "checkedAt": "2026-09-14T21:35:17.668Z",
+        "commit": "b51d6f4e95c2a26eb5474b40b4208ed67e65f949",
+        "checkedAt": "2026-09-23T00:34:58.268Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -173433,7 +173433,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "82d284eb498bc067b222430165e8cc5d260b660e",
+          "validatedAt": "2026-09-14T21:35:17.755Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:34:58.268Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "duketopceo/omarchy-nexus",
+            "pluginIds": [
+              "lukedaduke.nexus"
+            ],
+            "commit": "82d284eb498bc067b222430165e8cc5d260b660e",
+            "checkedAt": "2026-09-14T21:35:17.668Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/duketopceo/omarchy-power",
