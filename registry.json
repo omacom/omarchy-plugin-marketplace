@@ -215911,6 +215911,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0xmikko/voxtype-history",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T09:43:34.129Z",
+      "listingValidatedCommit": "1f756ab616e3d9b23dcbaa177490fb7975b9ba71",
+      "listingValidatedAt": "2026-09-23T09:43:34.129Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0xmikko/voxtype-history",
+        "pluginIds": [
+          "0xmikko.voxtype-history"
+        ],
+        "commit": "1f756ab616e3d9b23dcbaa177490fb7975b9ba71",
+        "checkedAt": "2026-09-23T09:43:34.027Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "0xmikko.voxtype-history": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
