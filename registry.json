@@ -219035,6 +219035,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bkbatchelor/omarchy-github-cli-cheatsheet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T21:06:12.779Z",
+      "listingValidatedCommit": "b7e0f4a251c92da4e7cd9a93da1468dc4554a017",
+      "listingValidatedAt": "2026-09-23T21:06:12.779Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bkbatchelor/omarchy-github-cli-cheatsheet",
+        "pluginIds": [
+          "io.github.bkbatchelor.omarchy-github-cli-cheatsheet"
+        ],
+        "commit": "b7e0f4a251c92da4e7cd9a93da1468dc4554a017",
+        "checkedAt": "2026-09-23T21:06:12.665Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bkbatchelor/omarchy-github-cli-cheatsheet",
+        "pluginIds": [
+          "io.github.bkbatchelor.omarchy-github-cli-cheatsheet"
+        ],
+        "commit": "b7e0f4a251c92da4e7cd9a93da1468dc4554a017",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T21:06:12.665Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T20:38:36.768Z",
+        "requestEventId": 31708423774,
+        "requestedAt": "2026-09-23T20:44:39Z",
+        "reviewedAt": "2026-09-23T21:06:12.665Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bkbatchelor.omarchy-github-cli-cheatsheet": {
+          "category": "Developer Tools",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
