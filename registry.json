@@ -173029,8 +173029,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T14:28:05.611Z",
-      "listingValidatedCommit": "f8db38cc9d3e1691c4b319096a6748bee85971a6",
-      "listingValidatedAt": "2026-09-14T14:28:05.611Z",
+      "listingValidatedCommit": "cd1c35c6179221cf93c47d933011f8bd9b72fcde",
+      "listingValidatedAt": "2026-09-23T00:31:40.090Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -173039,8 +173039,8 @@
         "pluginIds": [
           "lukedaduke.ticker"
         ],
-        "commit": "f8db38cc9d3e1691c4b319096a6748bee85971a6",
-        "checkedAt": "2026-09-14T14:28:05.523Z",
+        "commit": "cd1c35c6179221cf93c47d933011f8bd9b72fcde",
+        "checkedAt": "2026-09-23T00:31:40.090Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -173055,7 +173055,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f8db38cc9d3e1691c4b319096a6748bee85971a6",
+          "validatedAt": "2026-09-14T14:28:05.611Z",
+          "branch": "main",
+          "supersededAt": "2026-09-23T00:31:40.090Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "duketopceo/omarchy-ticker",
+            "pluginIds": [
+              "lukedaduke.ticker"
+            ],
+            "commit": "f8db38cc9d3e1691c4b319096a6748bee85971a6",
+            "checkedAt": "2026-09-14T14:28:05.523Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/duketopceo/omarchy-standby",
