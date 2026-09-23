@@ -213131,6 +213131,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cgranier/omarchy-capture-inbox",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T01:11:47.652Z",
+      "listingValidatedCommit": "e723825964ddee5beb72c2ef0f9131c9e7e29bdc",
+      "listingValidatedAt": "2026-09-23T01:11:47.652Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cgranier/omarchy-capture-inbox",
+        "pluginIds": [
+          "cgranier.capture"
+        ],
+        "commit": "e723825964ddee5beb72c2ef0f9131c9e7e29bdc",
+        "checkedAt": "2026-09-23T01:11:47.549Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cgranier.capture": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
