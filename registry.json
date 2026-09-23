@@ -218457,6 +218457,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SmoothPixels/lock-designs",
+      "type": "plugin-source",
+      "addedAt": "2026-09-23",
+      "listedAt": "2026-09-23T20:06:30.245Z",
+      "listingValidatedCommit": "2591e6805a6848e6bcc7f3c9372994af37786035",
+      "listingValidatedAt": "2026-09-23T20:06:30.245Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smoothpixels/lock-designs",
+        "pluginIds": [
+          "io.github.smoothpixels.lock-designs"
+        ],
+        "commit": "2591e6805a6848e6bcc7f3c9372994af37786035",
+        "checkedAt": "2026-09-23T20:06:30.142Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "smoothpixels/lock-designs",
+        "pluginIds": [
+          "io.github.smoothpixels.lock-designs"
+        ],
+        "commit": "2591e6805a6848e6bcc7f3c9372994af37786035",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-23T20:06:30.142Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T17:36:36.253Z",
+        "requestEventId": 31703352016,
+        "requestedAt": "2026-09-23T19:26:17Z",
+        "reviewedAt": "2026-09-23T20:06:30.142Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.smoothpixels.lock-designs": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "media",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
