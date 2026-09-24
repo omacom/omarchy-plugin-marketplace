@@ -219838,6 +219838,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lsongdev/omarchy-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T13:53:52.786Z",
+      "listingValidatedCommit": "8ca02729dfe1afc57d502e7aadb69a4e67b1111a",
+      "listingValidatedAt": "2026-09-24T13:53:52.786Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lsongdev/omarchy-switcher",
+        "pluginIds": [
+          "org.lsong.window-switcher"
+        ],
+        "commit": "8ca02729dfe1afc57d502e7aadb69a4e67b1111a",
+        "checkedAt": "2026-09-24T13:53:52.702Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "org.lsong.window-switcher": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
