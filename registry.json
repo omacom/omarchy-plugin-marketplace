@@ -180724,8 +180724,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T01:47:03.412Z",
-      "listingValidatedCommit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
-      "listingValidatedAt": "2026-09-16T01:47:03.412Z",
+      "listingValidatedCommit": "73d31f82141d643ae30d78f98648dc86fb771edc",
+      "listingValidatedAt": "2026-09-24T14:16:55.210Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -180734,35 +180734,14 @@
         "pluginIds": [
           "ninepointlabs.upcoming"
         ],
-        "commit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
-        "checkedAt": "2026-09-16T01:47:03.334Z",
+        "commit": "73d31f82141d643ae30d78f98648dc86fb771edc",
+        "checkedAt": "2026-09-24T14:16:55.210Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ninepointlabs/omarchy-upcoming",
-        "pluginIds": [
-          "ninepointlabs.upcoming"
-        ],
-        "commit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-16T01:47:03.334Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-15T01:59:06.433Z",
-        "requestEventId": 31214714470,
-        "requestedAt": "2026-09-16T01:45:45Z",
-        "reviewedAt": "2026-09-16T01:47:03.334Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "ninepointlabs.upcoming": {
@@ -180778,7 +180757,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ninepointlabs/omarchy-upcoming",
+        "pluginIds": [
+          "ninepointlabs.upcoming"
+        ],
+        "commit": "73d31f82141d643ae30d78f98648dc86fb771edc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T14:16:55.210Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T13:18:17.411Z",
+        "requestEventId": 31761467939,
+        "requestedAt": "2026-09-24T13:51:35Z",
+        "reviewedAt": "2026-09-24T14:16:55.210Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
+          "validatedAt": "2026-09-16T01:47:03.412Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T14:16:55.210Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ninepointlabs/omarchy-upcoming",
+            "pluginIds": [
+              "ninepointlabs.upcoming"
+            ],
+            "commit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
+            "checkedAt": "2026-09-16T01:47:03.334Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ninepointlabs/omarchy-upcoming",
+            "pluginIds": [
+              "ninepointlabs.upcoming"
+            ],
+            "commit": "45f0d46578bc7b12f52f4ef2e4bf34270280aecb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-16T01:47:03.334Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-15T01:59:06.433Z",
+            "requestEventId": 31214714470,
+            "requestedAt": "2026-09-16T01:45:45Z",
+            "reviewedAt": "2026-09-16T01:47:03.334Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/zednaked/omarchy-ganja",
