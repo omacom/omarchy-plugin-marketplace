@@ -220489,6 +220489,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Z0H0wizard/omannotate",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:00:30.534Z",
+      "listingValidatedCommit": "d330b024055e893284856f07aa4b715cbab11ec6",
+      "listingValidatedAt": "2026-09-24T18:00:30.534Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "z0h0wizard/omannotate",
+        "pluginIds": [
+          "omannotate"
+        ],
+        "commit": "d330b024055e893284856f07aa4b715cbab11ec6",
+        "checkedAt": "2026-09-24T18:00:30.411Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omannotate": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
