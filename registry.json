@@ -220749,6 +220749,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/a77lic7ion/omarchy-plugin-updates",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:28:22.935Z",
+      "listingValidatedCommit": "9b9d195a37d69f82d232a705b67e6bbcbdf47d3e",
+      "listingValidatedAt": "2026-09-24T18:28:22.935Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "a77lic7ion/omarchy-plugin-updates",
+        "pluginIds": [
+          "shaun.plugin-updater"
+        ],
+        "commit": "9b9d195a37d69f82d232a705b67e6bbcbdf47d3e",
+        "checkedAt": "2026-09-24T18:28:22.819Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shaun.plugin-updater": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
