@@ -221186,6 +221186,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ryuhzk/omarchy-phone-photos",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:43:24.783Z",
+      "listingValidatedCommit": "7aa92235908df3b2c77f882f1a56bcabf229f1b3",
+      "listingValidatedAt": "2026-09-24T20:43:24.783Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ryuhzk/omarchy-phone-photos",
+        "pluginIds": [
+          "ryuhzk.phone-photos"
+        ],
+        "commit": "7aa92235908df3b2c77f882f1a56bcabf229f1b3",
+        "checkedAt": "2026-09-24T20:43:24.680Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ryuhzk.phone-photos": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
