@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T20:58:12.855Z",
+  "generatedAt": "2026-09-24T21:04:49.972Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -224716,6 +224716,56 @@
       "upstreamValidatedAt": "2026-09-24T20:58:12.855Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "28186551a8d82ac67215d810fe7f25592963eeaa8e74cafb9cbb8e87becfe534",
+      "status": "Available"
+    },
+    {
+      "id": "yordan-kanchelov.passthrough",
+      "name": "hypr-passthrough",
+      "description": "Send SUPER shortcuts to fullscreen remote-desktop, streaming and VM windows (RustDesk, Moonlight, Parsec, virt-viewer...), and add your own apps from the bar",
+      "author": "Yordan Kanchelov",
+      "version": "1.2.0",
+      "repo": "https://github.com/yordan-kanchelov/hypr-passthrough",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+      "verificationCheckedAt": "2026-09-24T21:04:49.299Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:04:49.413Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/yordan-kanchelov/hypr-passthrough.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Desktop",
+      "tags": [
+        "hyprland",
+        "bar",
+        "system"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-09-24T21:00:12Z",
+      "repositoryRelease": {
+        "tag": "v1.2.0",
+        "url": "https://github.com/yordan-kanchelov/hypr-passthrough/tree/v1.2.0"
+      },
+      "accent": "amber",
+      "initials": "HP",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+      "listingValidatedAt": "2026-09-24T21:04:49.413Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-09-24T21:04:49.972Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+      "upstreamValidatedAt": "2026-09-24T21:04:49.972Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "623ad74079ff4d3515fdc7b0c4d6e0acde1800f14687c8dba93696ffce95205a",
       "status": "Available"
     },
     {

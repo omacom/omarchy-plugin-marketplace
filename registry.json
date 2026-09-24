@@ -221354,6 +221354,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yordan-kanchelov/hypr-passthrough",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:04:49.413Z",
+      "listingValidatedCommit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+      "listingValidatedAt": "2026-09-24T21:04:49.413Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yordan-kanchelov/hypr-passthrough",
+        "pluginIds": [
+          "yordan-kanchelov.passthrough"
+        ],
+        "commit": "f3dee2f0f6fb660372fee7c229a678fe99b6dbdd",
+        "checkedAt": "2026-09-24T21:04:49.299Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yordan-kanchelov.passthrough": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
