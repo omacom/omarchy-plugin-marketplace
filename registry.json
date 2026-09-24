@@ -221220,6 +221220,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PixDevsApps/omarchy-scarlett-control",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:47:15.203Z",
+      "listingValidatedCommit": "5ae47f2c3844a2096f1416bc7781a43b9321f418",
+      "listingValidatedAt": "2026-09-24T20:47:15.203Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pixdevsapps/omarchy-scarlett-control",
+        "pluginIds": [
+          "io.github.pixdevsapps.scarlett-control"
+        ],
+        "commit": "5ae47f2c3844a2096f1416bc7781a43b9321f418",
+        "checkedAt": "2026-09-24T20:47:15.104Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.pixdevsapps.scarlett-control": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
