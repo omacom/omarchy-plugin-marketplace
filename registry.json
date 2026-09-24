@@ -221388,6 +221388,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/glavman/omarchy-garmin-glance",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:19:38.912Z",
+      "listingValidatedCommit": "af653784b55d7e0c17b25aaf31ee3870114e4f5e",
+      "listingValidatedAt": "2026-09-24T21:19:38.912Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "glavman/omarchy-garmin-glance",
+        "pluginIds": [
+          "io.github.glavman.garmin-glance"
+        ],
+        "commit": "af653784b55d7e0c17b25aaf31ee3870114e4f5e",
+        "checkedAt": "2026-09-24T21:19:38.799Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "glavman/omarchy-garmin-glance",
+        "pluginIds": [
+          "io.github.glavman.garmin-glance"
+        ],
+        "commit": "af653784b55d7e0c17b25aaf31ee3870114e4f5e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T21:19:38.799Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-23T22:09:45.034Z",
+        "requestEventId": 31791360927,
+        "requestedAt": "2026-09-24T21:17:34Z",
+        "reviewedAt": "2026-09-24T21:19:38.799Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.glavman.garmin-glance": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
