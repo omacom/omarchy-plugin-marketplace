@@ -213783,8 +213783,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T19:54:08.656Z",
-      "listingValidatedCommit": "76aaa14040e667a468a2a12fec4953ee83cfee00",
-      "listingValidatedAt": "2026-09-22T19:54:08.656Z",
+      "listingValidatedCommit": "618b83678e44cd57f25475e3876781d7f29d2732",
+      "listingValidatedAt": "2026-09-24T14:00:47.062Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -213793,8 +213793,8 @@
         "pluginIds": [
           "io.github.14brussell.controller-idle"
         ],
-        "commit": "76aaa14040e667a468a2a12fec4953ee83cfee00",
-        "checkedAt": "2026-09-22T19:54:08.591Z",
+        "commit": "618b83678e44cd57f25475e3876781d7f29d2732",
+        "checkedAt": "2026-09-24T14:00:47.062Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -213810,7 +213810,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "76aaa14040e667a468a2a12fec4953ee83cfee00",
+          "validatedAt": "2026-09-22T19:54:08.656Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T14:00:47.062Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "14brussell/omarchy-controller-idle",
+            "pluginIds": [
+              "io.github.14brussell.controller-idle"
+            ],
+            "commit": "76aaa14040e667a468a2a12fec4953ee83cfee00",
+            "checkedAt": "2026-09-22T19:54:08.591Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dzanaga/omarchy-codex-account-switcher",
