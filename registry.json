@@ -220783,6 +220783,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zerobearing2/omarchy-omatalk-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:32:13.896Z",
+      "listingValidatedCommit": "c0d145fbd18bc4a7174f0d821d47ecf2fce0b378",
+      "listingValidatedAt": "2026-09-24T18:32:13.896Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zerobearing2/omarchy-omatalk-plugin",
+        "pluginIds": [
+          "zerobearing.omatalk"
+        ],
+        "commit": "c0d145fbd18bc4a7174f0d821d47ecf2fce0b378",
+        "checkedAt": "2026-09-24T18:32:13.788Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "zerobearing.omatalk": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
