@@ -172528,8 +172528,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T16:44:06.166Z",
-      "listingValidatedCommit": "7b6b4e58040d7797245129c66691825e6bce4e02",
-      "listingValidatedAt": "2026-09-14T20:59:18.709Z",
+      "listingValidatedCommit": "cf3300229a56aa91e4d25823c1e52ebcda50a715",
+      "listingValidatedAt": "2026-09-24T14:09:20.933Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -172538,8 +172538,8 @@
         "pluginIds": [
           "mlhunter.pomodoro"
         ],
-        "commit": "7b6b4e58040d7797245129c66691825e6bce4e02",
-        "checkedAt": "2026-09-14T20:59:18.709Z",
+        "commit": "cf3300229a56aa91e4d25823c1e52ebcda50a715",
+        "checkedAt": "2026-09-24T14:09:20.933Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -172570,6 +172570,26 @@
             ],
             "commit": "ffe9b1bee16c86302d63bc542b35fc3c3c231af9",
             "checkedAt": "2026-09-13T16:44:06.082Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "7b6b4e58040d7797245129c66691825e6bce4e02",
+          "validatedAt": "2026-09-14T20:59:18.709Z",
+          "branch": "master",
+          "supersededAt": "2026-09-24T14:09:20.933Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rokan00/omarchy-pomodoro",
+            "pluginIds": [
+              "mlhunter.pomodoro"
+            ],
+            "commit": "7b6b4e58040d7797245129c66691825e6bce4e02",
+            "checkedAt": "2026-09-14T20:59:18.709Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
