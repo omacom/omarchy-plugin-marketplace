@@ -219979,6 +219979,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/oidium/omarchy-system-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T14:12:54.965Z",
+      "listingValidatedCommit": "3b9829f8ce3b49008f64c76167dab566de510334",
+      "listingValidatedAt": "2026-09-24T14:12:54.965Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "oidium/omarchy-system-monitor",
+        "pluginIds": [
+          "io.github.oidium.system-monitor"
+        ],
+        "commit": "3b9829f8ce3b49008f64c76167dab566de510334",
+        "checkedAt": "2026-09-24T14:12:54.880Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.oidium.system-monitor": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
