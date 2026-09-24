@@ -174620,8 +174620,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T21:38:34.092Z",
-      "listingValidatedCommit": "b9f06df73bf311526729f847f224983d5af670dc",
-      "listingValidatedAt": "2026-09-14T21:38:34.092Z",
+      "listingValidatedCommit": "1cfac85e3a1bc3f96a4b9b52ddd3ae5d4f0356a6",
+      "listingValidatedAt": "2026-09-24T13:50:24.205Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -174630,8 +174630,8 @@
         "pluginIds": [
           "lukedaduke.power"
         ],
-        "commit": "b9f06df73bf311526729f847f224983d5af670dc",
-        "checkedAt": "2026-09-14T21:38:34.009Z",
+        "commit": "1cfac85e3a1bc3f96a4b9b52ddd3ae5d4f0356a6",
+        "checkedAt": "2026-09-24T13:50:24.204Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -174647,7 +174647,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b9f06df73bf311526729f847f224983d5af670dc",
+          "validatedAt": "2026-09-14T21:38:34.092Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T13:50:24.205Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "duketopceo/omarchy-power",
+            "pluginIds": [
+              "lukedaduke.power"
+            ],
+            "commit": "b9f06df73bf311526729f847f224983d5af670dc",
+            "checkedAt": "2026-09-14T21:38:34.009Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Deunnis/OmaMenu",
