@@ -221891,6 +221891,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ayandexyz/omarchy-glance",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T22:00:11.995Z",
+      "listingValidatedCommit": "8d8a68061728e4ccac799f64cfee24e2f2c48acd",
+      "listingValidatedAt": "2026-09-24T22:00:11.995Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ayandexyz/omarchy-glance",
+        "pluginIds": [
+          "io.github.ayandexyz.glance"
+        ],
+        "commit": "8d8a68061728e4ccac799f64cfee24e2f2c48acd",
+        "checkedAt": "2026-09-24T22:00:11.895Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ayandexyz/omarchy-glance",
+        "pluginIds": [
+          "io.github.ayandexyz.glance"
+        ],
+        "commit": "8d8a68061728e4ccac799f64cfee24e2f2c48acd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T22:00:11.895Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T21:25:31.674Z",
+        "requestEventId": 31793114206,
+        "requestedAt": "2026-09-24T21:50:25Z",
+        "reviewedAt": "2026-09-24T22:00:11.895Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ayandexyz.glance": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
