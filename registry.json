@@ -220821,6 +220821,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jkarmel/omarchy-omahelp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:36:15.174Z",
+      "listingValidatedCommit": "515d66f7dc7663dcbdb00d54dc2f050b674ff405",
+      "listingValidatedAt": "2026-09-24T18:36:15.174Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jkarmel/omarchy-omahelp",
+        "pluginIds": [
+          "jkarmel.omahelp"
+        ],
+        "commit": "515d66f7dc7663dcbdb00d54dc2f050b674ff405",
+        "checkedAt": "2026-09-24T18:36:15.066Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jkarmel/omarchy-omahelp",
+        "pluginIds": [
+          "jkarmel.omahelp"
+        ],
+        "commit": "515d66f7dc7663dcbdb00d54dc2f050b674ff405",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T18:36:15.066Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T05:24:55.153Z",
+        "requestEventId": 31780469064,
+        "requestedAt": "2026-09-24T18:20:57Z",
+        "reviewedAt": "2026-09-24T18:36:15.067Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jkarmel.omahelp": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
