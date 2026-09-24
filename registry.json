@@ -221254,6 +221254,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dobrician/omarchy-bokehpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:51:02.219Z",
+      "listingValidatedCommit": "5ed7206fbd932e3991fa4bb2a70a60ca10a8b97f",
+      "listingValidatedAt": "2026-09-24T20:51:02.219Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dobrician/omarchy-bokehpaper",
+        "pluginIds": [
+          "dc.bokehpaper"
+        ],
+        "commit": "5ed7206fbd932e3991fa4bb2a70a60ca10a8b97f",
+        "checkedAt": "2026-09-24T20:51:02.118Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dc.bokehpaper": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
