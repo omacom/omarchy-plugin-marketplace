@@ -222050,6 +222050,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Pinta365/omarchy-ovpn",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T22:44:39.929Z",
+      "listingValidatedCommit": "a8f9e4b3abbf0074b55857a676e912064d33bf59",
+      "listingValidatedAt": "2026-09-24T22:44:39.929Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pinta365/omarchy-ovpn",
+        "pluginIds": [
+          "pinta365.ovpn"
+        ],
+        "commit": "a8f9e4b3abbf0074b55857a676e912064d33bf59",
+        "checkedAt": "2026-09-24T22:44:39.839Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pinta365/omarchy-ovpn",
+        "pluginIds": [
+          "pinta365.ovpn"
+        ],
+        "commit": "a8f9e4b3abbf0074b55857a676e912064d33bf59",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T22:44:39.839Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T21:52:38.451Z",
+        "requestEventId": 31795826095,
+        "requestedAt": "2026-09-24T22:42:45Z",
+        "reviewedAt": "2026-09-24T22:44:39.839Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pinta365.ovpn": {
+          "category": "System",
+          "tags": [
+            "vpn",
+            "bar",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
