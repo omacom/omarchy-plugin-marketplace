@@ -220715,6 +220715,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mtolhuys/fathom",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:23:33.225Z",
+      "listingValidatedCommit": "6e032d00aeab35189c95b100009ad9f932757ec8",
+      "listingValidatedAt": "2026-09-24T18:23:33.225Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mtolhuys/fathom",
+        "pluginIds": [
+          "io.github.mtolhuys.fathom"
+        ],
+        "commit": "6e032d00aeab35189c95b100009ad9f932757ec8",
+        "checkedAt": "2026-09-24T18:23:33.126Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mtolhuys.fathom": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
