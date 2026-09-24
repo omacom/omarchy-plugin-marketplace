@@ -220388,6 +220388,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rtbhhi/hopkey",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T17:48:15.245Z",
+      "listingValidatedCommit": "3985577535dc2e4b283be36f5206ee9644f07d7e",
+      "listingValidatedAt": "2026-09-24T17:48:15.245Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rtbhhi/hopkey",
+        "pluginIds": [
+          "io.github.rtbhhi.hopkey"
+        ],
+        "commit": "3985577535dc2e4b283be36f5206ee9644f07d7e",
+        "checkedAt": "2026-09-24T17:48:15.138Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rtbhhi.hopkey": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
