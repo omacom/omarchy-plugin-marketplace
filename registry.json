@@ -221320,6 +221320,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RohitKaushal7/omarchy-beam",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:58:12.336Z",
+      "listingValidatedCommit": "ffa1a10e25af3e9ce59f62bc63e47cd244dd1c0f",
+      "listingValidatedAt": "2026-09-24T20:58:12.336Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rohitkaushal7/omarchy-beam",
+        "pluginIds": [
+          "dev.reuk.beam"
+        ],
+        "commit": "ffa1a10e25af3e9ce59f62bc63e47cd244dd1c0f",
+        "checkedAt": "2026-09-24T20:58:12.246Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dev.reuk.beam": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
