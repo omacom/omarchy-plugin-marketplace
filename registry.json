@@ -214486,8 +214486,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T22:26:17.548Z",
-      "listingValidatedCommit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
-      "listingValidatedAt": "2026-09-22T22:26:17.548Z",
+      "listingValidatedCommit": "6b02b49efa7afcd7ff732154b0b9e9c74c119104",
+      "listingValidatedAt": "2026-09-24T14:42:35.844Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -214496,8 +214496,8 @@
         "pluginIds": [
           "io.github.lekonidus.currency"
         ],
-        "commit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
-        "checkedAt": "2026-09-22T22:26:17.434Z",
+        "commit": "6b02b49efa7afcd7ff732154b0b9e9c74c119104",
+        "checkedAt": "2026-09-24T14:42:35.844Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -214512,7 +214512,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
+          "validatedAt": "2026-09-22T22:26:17.548Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T14:42:35.844Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "lekonidus/omarchy-currency",
+            "pluginIds": [
+              "io.github.lekonidus.currency"
+            ],
+            "commit": "16ac6ef3ef46a38392d389b8b1162cf9a8645bbf",
+            "checkedAt": "2026-09-22T22:26:17.434Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jesusarchive/omarchy-dynamic-menu",
