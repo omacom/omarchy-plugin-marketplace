@@ -221129,6 +221129,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tzglobic/omarchy-vitals",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:36:20.900Z",
+      "listingValidatedCommit": "6618c3bdfc2f988f9eb2be9d31b7ed424117644b",
+      "listingValidatedAt": "2026-09-24T20:36:20.900Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tzglobic/omarchy-vitals",
+        "pluginIds": [
+          "tzglobic.vitals"
+        ],
+        "commit": "6618c3bdfc2f988f9eb2be9d31b7ed424117644b",
+        "checkedAt": "2026-09-24T20:36:20.798Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tzglobic/omarchy-vitals",
+        "pluginIds": [
+          "tzglobic.vitals"
+        ],
+        "commit": "6618c3bdfc2f988f9eb2be9d31b7ed424117644b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T20:36:20.798Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T20:15:08.833Z",
+        "requestEventId": 31788728978,
+        "requestedAt": "2026-09-24T20:32:38Z",
+        "reviewedAt": "2026-09-24T20:36:20.798Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tzglobic.vitals": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
