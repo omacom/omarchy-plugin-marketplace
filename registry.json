@@ -151411,8 +151411,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T13:06:19.333Z",
-      "listingValidatedCommit": "3b8ef00f4f6c713aec43cc7af5a8a3964e00c4dd",
-      "listingValidatedAt": "2026-09-13T15:52:53.422Z",
+      "listingValidatedCommit": "95ddd23cb17fd34fea2c819773a52d8b065822c5",
+      "listingValidatedAt": "2026-09-24T14:38:05.997Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -151421,8 +151421,8 @@
         "pluginIds": [
           "callum.binaural"
         ],
-        "commit": "3b8ef00f4f6c713aec43cc7af5a8a3964e00c4dd",
-        "checkedAt": "2026-09-13T15:52:53.422Z",
+        "commit": "95ddd23cb17fd34fea2c819773a52d8b065822c5",
+        "checkedAt": "2026-09-24T14:38:05.997Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -151454,6 +151454,26 @@
             ],
             "commit": "9c1a9245fd9ef6ba2c1d7a883c2cb8d263692a6d",
             "checkedAt": "2026-09-08T13:06:19.246Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "3b8ef00f4f6c713aec43cc7af5a8a3964e00c4dd",
+          "validatedAt": "2026-09-13T15:52:53.422Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T14:38:05.997Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "clumzeez/omarchy-binaural",
+            "pluginIds": [
+              "callum.binaural"
+            ],
+            "commit": "3b8ef00f4f6c713aec43cc7af5a8a3964e00c4dd",
+            "checkedAt": "2026-09-13T15:52:53.422Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
