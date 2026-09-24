@@ -219871,6 +219871,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alexbic/omarchy-keyboard-layout-osd",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T13:57:08.054Z",
+      "listingValidatedCommit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
+      "listingValidatedAt": "2026-09-24T13:57:08.054Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alexbic/omarchy-keyboard-layout-osd",
+        "pluginIds": [
+          "alexbic.keyboard-osd"
+        ],
+        "commit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
+        "checkedAt": "2026-09-24T13:57:07.989Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "alexbic.keyboard-osd": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
