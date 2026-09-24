@@ -222017,6 +222017,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/workingtitle/firefox-omarchy-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T22:08:35.543Z",
+      "listingValidatedCommit": "78aeec87941bf72a6e6ffa507238c3fc745ee6a0",
+      "listingValidatedAt": "2026-09-24T22:08:35.543Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "workingtitle/firefox-omarchy-mode",
+        "pluginIds": [
+          "io.github.workingtitle.firefox-omarchy-mode"
+        ],
+        "commit": "78aeec87941bf72a6e6ffa507238c3fc745ee6a0",
+        "checkedAt": "2026-09-24T22:08:35.439Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.workingtitle.firefox-omarchy-mode": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
