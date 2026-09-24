@@ -219926,6 +219926,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/larissa04alves/omadoro",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T14:05:22.286Z",
+      "listingValidatedCommit": "628c9b34b91591cd935e0801c8c560732be2a5a8",
+      "listingValidatedAt": "2026-09-24T14:05:22.286Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "larissa04alves/omadoro",
+        "pluginIds": [
+          "larissa04alves.omadoro"
+        ],
+        "commit": "628c9b34b91591cd935e0801c8c560732be2a5a8",
+        "checkedAt": "2026-09-24T14:05:22.176Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "larissa04alves.omadoro": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
