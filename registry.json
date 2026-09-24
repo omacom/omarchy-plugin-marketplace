@@ -221287,6 +221287,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zenfoco/omarchy-commit-wallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T20:54:37.991Z",
+      "listingValidatedCommit": "ba447c5c4e5ac683fc61d59c443476bb345b057f",
+      "listingValidatedAt": "2026-09-24T20:54:37.991Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zenfoco/omarchy-commit-wallpaper",
+        "pluginIds": [
+          "io.github.zenfoco.commit-wallpaper"
+        ],
+        "commit": "ba447c5c4e5ac683fc61d59c443476bb345b057f",
+        "checkedAt": "2026-09-24T20:54:37.926Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.zenfoco.commit-wallpaper": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
