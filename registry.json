@@ -221782,6 +221782,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ricafe71/extra-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:49:24.095Z",
+      "listingValidatedCommit": "3cdfcbe4f233d339f81dd15837e7698b9987b700",
+      "listingValidatedAt": "2026-09-24T21:49:24.095Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ricafe71/extra-workspaces",
+        "pluginIds": [
+          "ricafe71.extra-workspaces"
+        ],
+        "commit": "3cdfcbe4f233d339f81dd15837e7698b9987b700",
+        "checkedAt": "2026-09-24T21:49:23.987Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ricafe71.extra-workspaces": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
