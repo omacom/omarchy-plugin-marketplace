@@ -221503,6 +221503,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/codydon/omatune",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:28:11.803Z",
+      "listingValidatedCommit": "7bc909916f0a1400bf34d3190c16cc357de8490b",
+      "listingValidatedAt": "2026-09-24T21:28:11.803Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "codydon/omatune",
+        "pluginIds": [
+          "codydon.omatune"
+        ],
+        "commit": "7bc909916f0a1400bf34d3190c16cc357de8490b",
+        "checkedAt": "2026-09-24T21:28:11.692Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "codydon/omatune",
+        "pluginIds": [
+          "codydon.omatune"
+        ],
+        "commit": "7bc909916f0a1400bf34d3190c16cc357de8490b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T21:28:11.692Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T08:28:22.369Z",
+        "requestEventId": 31791741899,
+        "requestedAt": "2026-09-24T21:24:14Z",
+        "reviewedAt": "2026-09-24T21:28:11.692Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "codydon.omatune": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
