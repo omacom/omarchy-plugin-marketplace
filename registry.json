@@ -220455,6 +220455,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/renardoberou/omarchy-plugin-whats-this",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T17:55:58.858Z",
+      "listingValidatedCommit": "608539b0c5494426704ef881365eea1d6e7f7de0",
+      "listingValidatedAt": "2026-09-24T17:55:58.858Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "renardoberou/omarchy-plugin-whats-this",
+        "pluginIds": [
+          "renardoberou.whats-this"
+        ],
+        "commit": "608539b0c5494426704ef881365eea1d6e7f7de0",
+        "checkedAt": "2026-09-24T17:55:58.754Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "renardoberou.whats-this": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
