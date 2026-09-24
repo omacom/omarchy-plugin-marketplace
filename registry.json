@@ -220323,6 +220323,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/igor-alexandrov/omarchy-pullover",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T17:28:06.692Z",
+      "listingValidatedCommit": "ed02a77e7f834426016cd961fba6bb9d4504cd34",
+      "listingValidatedAt": "2026-09-24T17:28:06.692Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "igor-alexandrov/omarchy-pullover",
+        "pluginIds": [
+          "igor-alexandrov.pullover"
+        ],
+        "commit": "ed02a77e7f834426016cd961fba6bb9d4504cd34",
+        "checkedAt": "2026-09-24T17:28:06.583Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "igor-alexandrov.pullover": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
