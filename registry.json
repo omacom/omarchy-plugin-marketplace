@@ -220681,6 +220681,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/itsgg/omarchy-headset",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:19:30.582Z",
+      "listingValidatedCommit": "ef44ded5bd3a3931144f2792e3a837fd64a39bb5",
+      "listingValidatedAt": "2026-09-24T18:19:30.582Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "itsgg/omarchy-headset",
+        "pluginIds": [
+          "io.github.itsgg.headset"
+        ],
+        "commit": "ef44ded5bd3a3931144f2792e3a837fd64a39bb5",
+        "checkedAt": "2026-09-24T18:19:30.492Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.itsgg.headset": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
