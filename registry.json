@@ -185381,8 +185381,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T19:10:10.187Z",
-      "listingValidatedCommit": "3d665ebaaf4887d95a4c7a203408856b32c8fc10",
-      "listingValidatedAt": "2026-09-16T19:10:10.187Z",
+      "listingValidatedCommit": "a7a67bde81e4206a5a43d0638c7ffba0465a18e0",
+      "listingValidatedAt": "2026-09-24T13:42:48.741Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -185391,8 +185391,8 @@
         "pluginIds": [
           "mero.caps-indicator"
         ],
-        "commit": "3d665ebaaf4887d95a4c7a203408856b32c8fc10",
-        "checkedAt": "2026-09-16T19:10:10.108Z",
+        "commit": "a7a67bde81e4206a5a43d0638c7ffba0465a18e0",
+        "checkedAt": "2026-09-24T13:42:48.741Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -185408,7 +185408,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3d665ebaaf4887d95a4c7a203408856b32c8fc10",
+          "validatedAt": "2026-09-16T19:10:10.187Z",
+          "branch": "main",
+          "supersededAt": "2026-09-24T13:42:48.741Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mero245/caps-indicator",
+            "pluginIds": [
+              "mero.caps-indicator"
+            ],
+            "commit": "3d665ebaaf4887d95a4c7a203408856b32c8fc10",
+            "checkedAt": "2026-09-16T19:10:10.108Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mero245/layout-label",
