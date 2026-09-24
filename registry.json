@@ -221744,6 +221744,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TheNeovimmer/omarec",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:45:41.409Z",
+      "listingValidatedCommit": "70dc147e55d1a60fd2b1c56ea7b17ef2ec9c8f34",
+      "listingValidatedAt": "2026-09-24T21:45:41.409Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "theneovimmer/omarec",
+        "pluginIds": [
+          "io.github.theneovimmer.omarec"
+        ],
+        "commit": "70dc147e55d1a60fd2b1c56ea7b17ef2ec9c8f34",
+        "checkedAt": "2026-09-24T21:45:41.326Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.theneovimmer.omarec": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "media",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
