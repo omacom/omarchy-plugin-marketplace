@@ -221686,6 +221686,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jsprada/lidr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T21:41:59.479Z",
+      "listingValidatedCommit": "c1be1bca0bd148ba65c7580d00dbe9ac58ca0e05",
+      "listingValidatedAt": "2026-09-24T21:41:59.479Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jsprada/lidr",
+        "pluginIds": [
+          "lidr"
+        ],
+        "commit": "c1be1bca0bd148ba65c7580d00dbe9ac58ca0e05",
+        "checkedAt": "2026-09-24T21:41:59.363Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jsprada/lidr",
+        "pluginIds": [
+          "lidr"
+        ],
+        "commit": "c1be1bca0bd148ba65c7580d00dbe9ac58ca0e05",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T21:41:59.363Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T14:16:46.474Z",
+        "requestEventId": 31792480430,
+        "requestedAt": "2026-09-24T21:37:45Z",
+        "reviewedAt": "2026-09-24T21:41:59.363Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "lidr": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
