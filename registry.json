@@ -220522,6 +220522,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DEMedus/omarchy-radio-tui",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:03:56.506Z",
+      "listingValidatedCommit": "4494ce3a09b4a3f49273b249dd421a00149374cb",
+      "listingValidatedAt": "2026-09-24T18:03:56.506Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "demedus/omarchy-radio-tui",
+        "pluginIds": [
+          "io.github.demedus.radio-tui"
+        ],
+        "commit": "4494ce3a09b4a3f49273b249dd421a00149374cb",
+        "checkedAt": "2026-09-24T18:03:56.440Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "demedus/omarchy-radio-tui",
+        "pluginIds": [
+          "io.github.demedus.radio-tui"
+        ],
+        "commit": "4494ce3a09b4a3f49273b249dd421a00149374cb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T18:03:56.440Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T03:24:00.012Z",
+        "requestEventId": 31778485096,
+        "requestedAt": "2026-09-24T17:50:25Z",
+        "reviewedAt": "2026-09-24T18:03:56.440Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.demedus.radio-tui": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
