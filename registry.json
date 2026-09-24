@@ -220581,6 +220581,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Nejcc/omarchy-keybindings-hint",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T18:07:47.639Z",
+      "listingValidatedCommit": "28ca884a40cbc4720ce12c2f6b8103816e9c6dd7",
+      "listingValidatedAt": "2026-09-24T18:07:47.639Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nejcc/omarchy-keybindings-hint",
+        "pluginIds": [
+          "nejcc.keybindings-hint"
+        ],
+        "commit": "28ca884a40cbc4720ce12c2f6b8103816e9c6dd7",
+        "checkedAt": "2026-09-24T18:07:47.524Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nejcc.keybindings-hint": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
