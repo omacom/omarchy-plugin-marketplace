@@ -220109,6 +220109,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brandonpollack23/omarchy-beautiful-workspace-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T14:24:48.458Z",
+      "listingValidatedCommit": "401a7af12b03279d20796188a385698255eb1f0e",
+      "listingValidatedAt": "2026-09-24T14:24:48.458Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brandonpollack23/omarchy-beautiful-workspace-bar",
+        "pluginIds": [
+          "brandonpollack23.beautiful-workspace-bar"
+        ],
+        "commit": "401a7af12b03279d20796188a385698255eb1f0e",
+        "checkedAt": "2026-09-24T14:24:48.386Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brandonpollack23/omarchy-beautiful-workspace-bar",
+        "pluginIds": [
+          "brandonpollack23.beautiful-workspace-bar"
+        ],
+        "commit": "401a7af12b03279d20796188a385698255eb1f0e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-24T14:24:48.386Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-24T02:42:52.568Z",
+        "requestEventId": 31761771072,
+        "requestedAt": "2026-09-24T13:55:46Z",
+        "reviewedAt": "2026-09-24T14:24:48.386Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brandonpollack23.beautiful-workspace-bar": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
