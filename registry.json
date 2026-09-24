@@ -220422,6 +220422,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/renardoberou/omarchy-plugin-typewriter",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T17:52:13.714Z",
+      "listingValidatedCommit": "51081d8af2c2b710fa29f3e81df40547de00ae2c",
+      "listingValidatedAt": "2026-09-24T17:52:13.714Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "renardoberou/omarchy-plugin-typewriter",
+        "pluginIds": [
+          "renardoberou.typewriter"
+        ],
+        "commit": "51081d8af2c2b710fa29f3e81df40547de00ae2c",
+        "checkedAt": "2026-09-24T17:52:13.609Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "renardoberou.typewriter": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
