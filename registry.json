@@ -220289,6 +220289,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Saikomantisu/omarchy-commandbar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-24",
+      "listedAt": "2026-09-24T17:21:38.778Z",
+      "listingValidatedCommit": "5a366a8f4c73f9ccf899f6d1db40269980b533c9",
+      "listingValidatedAt": "2026-09-24T17:21:38.778Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "saikomantisu/omarchy-commandbar",
+        "pluginIds": [
+          "io.github.saikomantisu.commandbar"
+        ],
+        "commit": "5a366a8f4c73f9ccf899f6d1db40269980b533c9",
+        "checkedAt": "2026-09-24T17:21:38.690Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.saikomantisu.commandbar": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
