@@ -223912,6 +223912,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/azeroht/idler",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T18:13:50.289Z",
+      "listingValidatedCommit": "6586e622b1c92caa355f4e0c57faa8e4a4e9f318",
+      "listingValidatedAt": "2026-09-25T18:13:50.289Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "azeroht/idler",
+        "pluginIds": [
+          "azeroht.idler"
+        ],
+        "commit": "6586e622b1c92caa355f4e0c57faa8e4a4e9f318",
+        "checkedAt": "2026-09-25T18:13:50.187Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "azeroht/idler",
+        "pluginIds": [
+          "azeroht.idler"
+        ],
+        "commit": "6586e622b1c92caa355f4e0c57faa8e4a4e9f318",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T18:13:50.187Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T17:35:20.022Z",
+        "requestEventId": 31854341770,
+        "requestedAt": "2026-09-25T17:46:57Z",
+        "reviewedAt": "2026-09-25T18:13:50.187Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "azeroht.idler": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
