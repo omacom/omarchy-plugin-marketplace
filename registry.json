@@ -222270,6 +222270,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SalimRK/macarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T07:52:23.366Z",
+      "listingValidatedCommit": "3891229a3d2d125c0b7ce1144b4f22eccb0b9fb2",
+      "listingValidatedAt": "2026-09-25T07:52:23.366Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "salimrk/macarchy",
+        "pluginIds": [
+          "oniomarchy.macarchy"
+        ],
+        "commit": "3891229a3d2d125c0b7ce1144b4f22eccb0b9fb2",
+        "checkedAt": "2026-09-25T07:52:23.263Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "salimrk/macarchy",
+        "pluginIds": [
+          "oniomarchy.macarchy"
+        ],
+        "commit": "3891229a3d2d125c0b7ce1144b4f22eccb0b9fb2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T07:52:23.263Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T03:15:09.285Z",
+        "requestEventId": 31819288909,
+        "requestedAt": "2026-09-25T07:50:28Z",
+        "reviewedAt": "2026-09-25T07:52:23.263Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "oniomarchy.macarchy": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
