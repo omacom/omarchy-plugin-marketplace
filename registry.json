@@ -223727,6 +223727,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/polidog/omarchy-gcal",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T17:52:37.553Z",
+      "listingValidatedCommit": "e58544d8a5d54f74e1d1618fffe1f2c19fbab82a",
+      "listingValidatedAt": "2026-09-25T17:52:37.553Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "polidog/omarchy-gcal",
+        "pluginIds": [
+          "io.github.polidog.gcal"
+        ],
+        "commit": "e58544d8a5d54f74e1d1618fffe1f2c19fbab82a",
+        "checkedAt": "2026-09-25T17:52:37.449Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.polidog.gcal": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
