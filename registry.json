@@ -222373,6 +222373,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fireantology/flatpak-explorer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T08:05:08.106Z",
+      "listingValidatedCommit": "dabcac42a8b4ae9db996089fc04a9b15d376258d",
+      "listingValidatedAt": "2026-09-25T08:05:08.106Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fireantology/flatpak-explorer",
+        "pluginIds": [
+          "com.fireantology.flatpak-explorer"
+        ],
+        "commit": "dabcac42a8b4ae9db996089fc04a9b15d376258d",
+        "checkedAt": "2026-09-25T08:05:08.004Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fireantology/flatpak-explorer",
+        "pluginIds": [
+          "com.fireantology.flatpak-explorer"
+        ],
+        "commit": "dabcac42a8b4ae9db996089fc04a9b15d376258d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T08:05:08.004Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T06:57:25.474Z",
+        "requestEventId": 31819576898,
+        "requestedAt": "2026-09-25T07:55:31Z",
+        "reviewedAt": "2026-09-25T08:05:08.004Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.fireantology.flatpak-explorer": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
