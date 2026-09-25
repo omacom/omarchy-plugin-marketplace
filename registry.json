@@ -208472,8 +208472,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T05:51:24.354Z",
-      "listingValidatedCommit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
-      "listingValidatedAt": "2026-09-22T05:51:24.354Z",
+      "listingValidatedCommit": "b55ed417465bd0e0298ff640f82195942d02d559",
+      "listingValidatedAt": "2026-09-25T20:44:05.975Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -208482,8 +208482,8 @@
         "pluginIds": [
           "sclemance.ragtop"
         ],
-        "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
-        "checkedAt": "2026-09-22T05:51:24.252Z",
+        "commit": "b55ed417465bd0e0298ff640f82195942d02d559",
+        "checkedAt": "2026-09-25T20:44:05.975Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -208493,30 +208493,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sclemance/ragtop",
-        "pluginIds": [
-          "sclemance.ragtop"
-        ],
-        "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-22T05:51:24.252Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "service-management",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-22T05:45:44.223Z",
-        "requestEventId": 31577764150,
-        "requestedAt": "2026-09-22T05:48:00Z",
-        "reviewedAt": "2026-09-22T05:51:24.252Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "sclemance.ragtop": {
@@ -208528,7 +208504,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sclemance/ragtop",
+        "pluginIds": [
+          "sclemance.ragtop"
+        ],
+        "commit": "b55ed417465bd0e0298ff640f82195942d02d559",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T20:44:05.975Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T19:43:55.573Z",
+        "requestEventId": 31864110817,
+        "requestedAt": "2026-09-25T20:41:40Z",
+        "reviewedAt": "2026-09-25T20:44:05.975Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+          "validatedAt": "2026-09-22T05:51:24.354Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T20:44:05.975Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sclemance/ragtop",
+            "pluginIds": [
+              "sclemance.ragtop"
+            ],
+            "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+            "checkedAt": "2026-09-22T05:51:24.252Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sclemance/ragtop",
+            "pluginIds": [
+              "sclemance.ragtop"
+            ],
+            "commit": "d5b863337f824f5d760e0323f08b93fab05b6c88",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-22T05:51:24.252Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-22T05:45:44.223Z",
+            "requestEventId": 31577764150,
+            "requestedAt": "2026-09-22T05:48:00Z",
+            "reviewedAt": "2026-09-22T05:51:24.252Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/adamritter/kitty-live-config",
