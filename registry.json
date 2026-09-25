@@ -179709,8 +179709,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T23:44:19.541Z",
-      "listingValidatedCommit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
-      "listingValidatedAt": "2026-09-15T23:44:19.541Z",
+      "listingValidatedCommit": "66d6dd014aa0ef633d037ee03a692de745438bf0",
+      "listingValidatedAt": "2026-09-25T18:33:26.673Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -179719,35 +179719,14 @@
         "pluginIds": [
           "axelfontaine.logitech-bolt"
         ],
-        "commit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
-        "checkedAt": "2026-09-15T23:44:19.449Z",
+        "commit": "66d6dd014aa0ef633d037ee03a692de745438bf0",
+        "checkedAt": "2026-09-25T18:33:26.673Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "axelfontaine/omarchy-logitech-bolt",
-        "pluginIds": [
-          "axelfontaine.logitech-bolt"
-        ],
-        "commit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-15T23:44:19.449Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-14T20:43:54.585Z",
-        "requestEventId": 31210431487,
-        "requestedAt": "2026-09-15T23:40:52Z",
-        "reviewedAt": "2026-09-15T23:44:19.449Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "axelfontaine.logitech-bolt": {
@@ -179758,7 +179737,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "axelfontaine/omarchy-logitech-bolt",
+        "pluginIds": [
+          "axelfontaine.logitech-bolt"
+        ],
+        "commit": "66d6dd014aa0ef633d037ee03a692de745438bf0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T18:33:26.673Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T12:33:07.828Z",
+        "requestEventId": 31856462047,
+        "requestedAt": "2026-09-25T18:22:26Z",
+        "reviewedAt": "2026-09-25T18:33:26.673Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
+          "validatedAt": "2026-09-15T23:44:19.541Z",
+          "branch": "master",
+          "supersededAt": "2026-09-25T18:33:26.673Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "axelfontaine/omarchy-logitech-bolt",
+            "pluginIds": [
+              "axelfontaine.logitech-bolt"
+            ],
+            "commit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
+            "checkedAt": "2026-09-15T23:44:19.449Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "axelfontaine/omarchy-logitech-bolt",
+            "pluginIds": [
+              "axelfontaine.logitech-bolt"
+            ],
+            "commit": "f3e9256758ca748f358b997bb7c5e41145cc3757",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-15T23:44:19.449Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-14T20:43:54.585Z",
+            "requestEventId": 31210431487,
+            "requestedAt": "2026-09-15T23:40:52Z",
+            "reviewedAt": "2026-09-15T23:44:19.449Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/RonHolt/omarchy-youtube-background",
