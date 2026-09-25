@@ -164155,8 +164155,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-10",
       "listedAt": "2026-09-10T20:10:58.369Z",
-      "listingValidatedCommit": "189a8bec6d39b59385ad744bd016cacedf315887",
-      "listingValidatedAt": "2026-09-10T20:10:58.369Z",
+      "listingValidatedCommit": "a015265e99fa27c360ae7a7e199f277df34d6746",
+      "listingValidatedAt": "2026-09-25T17:48:38.535Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -164165,35 +164165,14 @@
         "pluginIds": [
           "flaviozantut.close-confirm"
         ],
-        "commit": "189a8bec6d39b59385ad744bd016cacedf315887",
-        "checkedAt": "2026-09-10T20:10:58.296Z",
+        "commit": "a015265e99fa27c360ae7a7e199f277df34d6746",
+        "checkedAt": "2026-09-25T17:48:38.535Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "flaviozantut/omarchy-close-confirm",
-        "pluginIds": [
-          "flaviozantut.close-confirm"
-        ],
-        "commit": "189a8bec6d39b59385ad744bd016cacedf315887",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-10T20:10:58.296Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-09T19:58:30.158Z",
-        "requestEventId": 30928502190,
-        "requestedAt": "2026-09-10T20:05:45Z",
-        "reviewedAt": "2026-09-10T20:10:58.296Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "flaviozantut.close-confirm": {
@@ -164204,7 +164183,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "flaviozantut/omarchy-close-confirm",
+        "pluginIds": [
+          "flaviozantut.close-confirm"
+        ],
+        "commit": "a015265e99fa27c360ae7a7e199f277df34d6746",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T17:48:38.535Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T21:35:06.498Z",
+        "requestEventId": 31853364014,
+        "requestedAt": "2026-09-25T17:29:13Z",
+        "reviewedAt": "2026-09-25T17:48:38.535Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "189a8bec6d39b59385ad744bd016cacedf315887",
+          "validatedAt": "2026-09-10T20:10:58.369Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T17:48:38.535Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "flaviozantut/omarchy-close-confirm",
+            "pluginIds": [
+              "flaviozantut.close-confirm"
+            ],
+            "commit": "189a8bec6d39b59385ad744bd016cacedf315887",
+            "checkedAt": "2026-09-10T20:10:58.296Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "flaviozantut/omarchy-close-confirm",
+            "pluginIds": [
+              "flaviozantut.close-confirm"
+            ],
+            "commit": "189a8bec6d39b59385ad744bd016cacedf315887",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-10T20:10:58.296Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-09T19:58:30.158Z",
+            "requestEventId": 30928502190,
+            "requestedAt": "2026-09-10T20:05:45Z",
+            "reviewedAt": "2026-09-10T20:10:58.296Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/einarnot/omarchy-bibleverse",
