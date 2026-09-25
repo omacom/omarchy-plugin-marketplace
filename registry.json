@@ -189887,8 +189887,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-17",
       "listedAt": "2026-09-17T15:26:34.961Z",
-      "listingValidatedCommit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
-      "listingValidatedAt": "2026-09-17T15:26:34.961Z",
+      "listingValidatedCommit": "a395bb82b5609c8317299f82c79f5760fa70a37c",
+      "listingValidatedAt": "2026-09-25T21:22:48.607Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -189897,8 +189897,8 @@
         "pluginIds": [
           "joelgaff.hatchbox"
         ],
-        "commit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
-        "checkedAt": "2026-09-17T15:26:34.871Z",
+        "commit": "a395bb82b5609c8317299f82c79f5760fa70a37c",
+        "checkedAt": "2026-09-25T21:22:48.607Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -189913,7 +189913,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
+          "validatedAt": "2026-09-17T15:26:34.961Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T21:22:48.607Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joelgaff/omarchy-hatchbox",
+            "pluginIds": [
+              "joelgaff.hatchbox"
+            ],
+            "commit": "b55f601ac79c0fbbd9b921ec5a1d6b6b621f21ee",
+            "checkedAt": "2026-09-17T15:26:34.871Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/FelixDaCraft/omarchy-sony",
