@@ -222571,6 +222571,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alkin/omarchy-screenshare",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T08:33:52.010Z",
+      "listingValidatedCommit": "ca3fa06df386be65de62260bebff09631cbe9049",
+      "listingValidatedAt": "2026-09-25T08:33:52.010Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alkin/omarchy-screenshare",
+        "pluginIds": [
+          "io.github.alkin.screenshare"
+        ],
+        "commit": "ca3fa06df386be65de62260bebff09631cbe9049",
+        "checkedAt": "2026-09-25T08:33:51.892Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alkin/omarchy-screenshare",
+        "pluginIds": [
+          "io.github.alkin.screenshare"
+        ],
+        "commit": "ca3fa06df386be65de62260bebff09631cbe9049",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T08:33:51.892Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T01:56:43.155Z",
+        "requestEventId": 31820481226,
+        "requestedAt": "2026-09-25T08:10:27Z",
+        "reviewedAt": "2026-09-25T08:33:51.892Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.alkin.screenshare": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
