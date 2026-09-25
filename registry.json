@@ -165526,8 +165526,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T01:32:48.325Z",
-      "listingValidatedCommit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
-      "listingValidatedAt": "2026-09-13T11:32:27.275Z",
+      "listingValidatedCommit": "2cc20adf21b66de20a0562bfdd233799b205fa2d",
+      "listingValidatedAt": "2026-09-25T21:19:27.873Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -165536,8 +165536,8 @@
         "pluginIds": [
           "io.github.rickcaleg.keyboard-lang"
         ],
-        "commit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
-        "checkedAt": "2026-09-13T11:32:27.275Z",
+        "commit": "2cc20adf21b66de20a0562bfdd233799b205fa2d",
+        "checkedAt": "2026-09-25T21:19:27.873Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -165555,27 +165555,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "rickcaleg/omarchy-keyboard-lang",
-        "pluginIds": [
-          "io.github.rickcaleg.keyboard-lang"
-        ],
-        "commit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-13T11:32:27.275Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-12T15:48:27.753Z",
-        "requestEventId": 31050365200,
-        "requestedAt": "2026-09-13T11:14:46Z",
-        "reviewedAt": "2026-09-13T11:32:27.275Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -165620,8 +165599,72 @@
             "reviewedAt": "2026-09-11T01:32:48.247Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
+          "validatedAt": "2026-09-13T11:32:27.275Z",
+          "branch": "master",
+          "supersededAt": "2026-09-25T21:19:27.873Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rickcaleg/omarchy-keyboard-lang",
+            "pluginIds": [
+              "io.github.rickcaleg.keyboard-lang"
+            ],
+            "commit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
+            "checkedAt": "2026-09-13T11:32:27.275Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "rickcaleg/omarchy-keyboard-lang",
+            "pluginIds": [
+              "io.github.rickcaleg.keyboard-lang"
+            ],
+            "commit": "94bb24acf4e7549a4b4c6319872575ce6eb61c22",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-13T11:32:27.275Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-12T15:48:27.753Z",
+            "requestEventId": 31050365200,
+            "requestedAt": "2026-09-13T11:14:46Z",
+            "reviewedAt": "2026-09-13T11:32:27.275Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rickcaleg/omarchy-keyboard-lang",
+        "pluginIds": [
+          "io.github.rickcaleg.keyboard-lang"
+        ],
+        "commit": "2cc20adf21b66de20a0562bfdd233799b205fa2d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T21:19:27.873Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-18T18:55:20.821Z",
+        "requestEventId": 31864694816,
+        "requestedAt": "2026-09-25T20:53:07Z",
+        "reviewedAt": "2026-09-25T21:19:27.873Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/amikeal/omarchy-battery-plus",
