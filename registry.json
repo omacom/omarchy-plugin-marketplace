@@ -224037,6 +224037,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/grunkan/runalyzer",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T18:26:37.221Z",
+      "listingValidatedCommit": "08d199c88cc09c72b98ca08209567b54edb0fce6",
+      "listingValidatedAt": "2026-09-25T18:26:37.221Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grunkan/runalyzer",
+        "pluginIds": [
+          "grunkan.runalyzer"
+        ],
+        "commit": "08d199c88cc09c72b98ca08209567b54edb0fce6",
+        "checkedAt": "2026-09-25T18:26:37.102Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "grunkan/runalyzer",
+        "pluginIds": [
+          "grunkan.runalyzer"
+        ],
+        "commit": "08d199c88cc09c72b98ca08209567b54edb0fce6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T18:26:37.102Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T14:27:33.661Z",
+        "requestEventId": 31855289237,
+        "requestedAt": "2026-09-25T18:03:15Z",
+        "reviewedAt": "2026-09-25T18:26:37.102Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "grunkan.runalyzer": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
