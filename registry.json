@@ -195402,8 +195402,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-19",
       "listedAt": "2026-09-19T11:19:43.312Z",
-      "listingValidatedCommit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
-      "listingValidatedAt": "2026-09-19T11:19:43.312Z",
+      "listingValidatedCommit": "2f32e83a93914a36025a73e4cb4f06ebe36fbaab",
+      "listingValidatedAt": "2026-09-25T18:49:24.712Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -195412,8 +195412,8 @@
         "pluginIds": [
           "syaifulmain.omashowkeys"
         ],
-        "commit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
-        "checkedAt": "2026-09-19T11:19:43.229Z",
+        "commit": "2f32e83a93914a36025a73e4cb4f06ebe36fbaab",
+        "checkedAt": "2026-09-25T18:49:24.712Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -195427,7 +195427,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
+          "validatedAt": "2026-09-19T11:19:43.312Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T18:49:24.712Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "syaifulmain/omarchy-omashowkeys",
+            "pluginIds": [
+              "syaifulmain.omashowkeys"
+            ],
+            "commit": "2f933f56b78a3c0c0a8baa3d808012696cd3f5f3",
+            "checkedAt": "2026-09-19T11:19:43.229Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/FerC10110/omarchy-fresh-tube",
