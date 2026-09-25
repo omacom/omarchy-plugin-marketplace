@@ -222236,6 +222236,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JesusLovesYou1013/ctrlz-guard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T00:41:18.845Z",
+      "listingValidatedCommit": "abff5bf37c8b9d16937eab36b489437c084577f7",
+      "listingValidatedAt": "2026-09-25T00:41:18.845Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jesuslovesyou1013/ctrlz-guard",
+        "pluginIds": [
+          "io.github.jesuslovesyou1013.ctrlz-guard"
+        ],
+        "commit": "abff5bf37c8b9d16937eab36b489437c084577f7",
+        "checkedAt": "2026-09-25T00:41:18.744Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jesuslovesyou1013.ctrlz-guard": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
