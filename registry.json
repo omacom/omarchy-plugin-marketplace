@@ -222202,6 +222202,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PixDevsApps/omarchy-hertz-radio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T00:20:01.564Z",
+      "listingValidatedCommit": "d83da98bc252266e68166a9bc79b300228436f00",
+      "listingValidatedAt": "2026-09-25T00:20:01.564Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pixdevsapps/omarchy-hertz-radio",
+        "pluginIds": [
+          "io.github.pixdevsapps.hertz-radio"
+        ],
+        "commit": "d83da98bc252266e68166a9bc79b300228436f00",
+        "checkedAt": "2026-09-25T00:20:01.496Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.pixdevsapps.hertz-radio": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
