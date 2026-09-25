@@ -211035,8 +211035,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T11:07:54.997Z",
-      "listingValidatedCommit": "1780da1ff2306c3ea19ddcb787e7bb9e7541d6d1",
-      "listingValidatedAt": "2026-09-22T11:07:54.997Z",
+      "listingValidatedCommit": "e0d680f0752df87994bb3bdb1a1ecdff407728cd",
+      "listingValidatedAt": "2026-09-25T21:37:16.702Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -211045,8 +211045,8 @@
         "pluginIds": [
           "ribattrw.calm"
         ],
-        "commit": "1780da1ff2306c3ea19ddcb787e7bb9e7541d6d1",
-        "checkedAt": "2026-09-22T11:07:54.894Z",
+        "commit": "e0d680f0752df87994bb3bdb1a1ecdff407728cd",
+        "checkedAt": "2026-09-25T21:37:16.702Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -211062,7 +211062,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1780da1ff2306c3ea19ddcb787e7bb9e7541d6d1",
+          "validatedAt": "2026-09-22T11:07:54.997Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T21:37:16.702Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ribattrw/omarchy-calm",
+            "pluginIds": [
+              "ribattrw.calm"
+            ],
+            "commit": "1780da1ff2306c3ea19ddcb787e7bb9e7541d6d1",
+            "checkedAt": "2026-09-22T11:07:54.894Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nocstah/omacards",
