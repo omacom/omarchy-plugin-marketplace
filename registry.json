@@ -200859,8 +200859,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T04:36:44.345Z",
-      "listingValidatedCommit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
-      "listingValidatedAt": "2026-09-21T04:36:44.345Z",
+      "listingValidatedCommit": "ed79d92e243968505996de9fecc1ca3c2140c2d1",
+      "listingValidatedAt": "2026-09-25T17:15:41.527Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -200869,8 +200869,8 @@
         "pluginIds": [
           "cgranier.lowtide"
         ],
-        "commit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
-        "checkedAt": "2026-09-21T04:36:44.259Z",
+        "commit": "ed79d92e243968505996de9fecc1ca3c2140c2d1",
+        "checkedAt": "2026-09-25T17:15:41.527Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -200878,28 +200878,6 @@
           "service-management",
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "cgranier/omarchy-low-tide",
-        "pluginIds": [
-          "cgranier.lowtide"
-        ],
-        "commit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-21T04:36:44.259Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-20T02:35:56.384Z",
-        "requestEventId": 31504145991,
-        "requestedAt": "2026-09-21T04:28:21Z",
-        "reviewedAt": "2026-09-21T04:36:44.259Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "cgranier.lowtide": {
@@ -200911,7 +200889,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cgranier/omarchy-low-tide",
+        "pluginIds": [
+          "cgranier.lowtide"
+        ],
+        "commit": "ed79d92e243968505996de9fecc1ca3c2140c2d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T17:15:41.527Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T13:03:58.469Z",
+        "requestEventId": 31852307178,
+        "requestedAt": "2026-09-25T17:09:55Z",
+        "reviewedAt": "2026-09-25T17:15:41.527Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
+          "validatedAt": "2026-09-21T04:36:44.345Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T17:15:41.527Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cgranier/omarchy-low-tide",
+            "pluginIds": [
+              "cgranier.lowtide"
+            ],
+            "commit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
+            "checkedAt": "2026-09-21T04:36:44.259Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "cgranier/omarchy-low-tide",
+            "pluginIds": [
+              "cgranier.lowtide"
+            ],
+            "commit": "a591327cfa2d720b01e6c60d83d5e85f7b995980",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-21T04:36:44.259Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-20T02:35:56.384Z",
+            "requestEventId": 31504145991,
+            "requestedAt": "2026-09-21T04:28:21Z",
+            "reviewedAt": "2026-09-21T04:36:44.259Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/frostmute/omarchy-omaqwerty",
