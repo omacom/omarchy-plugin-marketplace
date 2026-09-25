@@ -182238,8 +182238,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T09:14:40.087Z",
-      "listingValidatedCommit": "1f994fb1610d3af37d1a22f15fb19cd56302d982",
-      "listingValidatedAt": "2026-09-16T09:14:40.087Z",
+      "listingValidatedCommit": "72b58789f3242825b96af691e35a82809783a07f",
+      "listingValidatedAt": "2026-09-25T08:16:01.188Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -182248,8 +182248,8 @@
         "pluginIds": [
           "air.auto-cafe"
         ],
-        "commit": "1f994fb1610d3af37d1a22f15fb19cd56302d982",
-        "checkedAt": "2026-09-16T09:14:40.006Z",
+        "commit": "72b58789f3242825b96af691e35a82809783a07f",
+        "checkedAt": "2026-09-25T08:16:01.188Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -182265,7 +182265,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1f994fb1610d3af37d1a22f15fb19cd56302d982",
+          "validatedAt": "2026-09-16T09:14:40.087Z",
+          "branch": "master",
+          "supersededAt": "2026-09-25T08:16:01.188Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "airenare/omarchy-auto-cafe",
+            "pluginIds": [
+              "air.auto-cafe"
+            ],
+            "commit": "1f994fb1610d3af37d1a22f15fb19cd56302d982",
+            "checkedAt": "2026-09-16T09:14:40.006Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/aserper/omarchy-power-aware-idle",
