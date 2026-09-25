@@ -223797,6 +223797,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/keylimesoda/omarchy-shell-render",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T18:01:15.406Z",
+      "listingValidatedCommit": "baa607f867e905ff0717ce662ce5dde29d2363a0",
+      "listingValidatedAt": "2026-09-25T18:01:15.406Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "keylimesoda/omarchy-shell-render",
+        "pluginIds": [
+          "ric.shell-render"
+        ],
+        "commit": "baa607f867e905ff0717ce662ce5dde29d2363a0",
+        "checkedAt": "2026-09-25T18:01:15.299Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ric.shell-render": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
