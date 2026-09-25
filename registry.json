@@ -225040,6 +225040,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/v3moreno/omarchy-minimized",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T22:16:50.776Z",
+      "listingValidatedCommit": "59ddb60bba8d23ad6b4a69e4937047ce829393a1",
+      "listingValidatedAt": "2026-09-25T22:16:50.776Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "v3moreno/omarchy-minimized",
+        "pluginIds": [
+          "omarchy-modes.minimized"
+        ],
+        "commit": "59ddb60bba8d23ad6b4a69e4937047ce829393a1",
+        "checkedAt": "2026-09-25T22:16:50.692Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy-modes.minimized": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
