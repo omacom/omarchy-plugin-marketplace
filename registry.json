@@ -201017,8 +201017,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T20:52:50.752Z",
-      "listingValidatedCommit": "f0b50568f2642936003b30afbc0f380634d42ca3",
-      "listingValidatedAt": "2026-09-20T20:52:50.752Z",
+      "listingValidatedCommit": "62840f13ec1646d1edcdcd3eb488c7c1051d44e7",
+      "listingValidatedAt": "2026-09-25T21:44:08.828Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -201027,8 +201027,8 @@
         "pluginIds": [
           "reidenxerx.varta"
         ],
-        "commit": "f0b50568f2642936003b30afbc0f380634d42ca3",
-        "checkedAt": "2026-09-20T20:52:50.665Z",
+        "commit": "62840f13ec1646d1edcdcd3eb488c7c1051d44e7",
+        "checkedAt": "2026-09-25T21:44:08.828Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -201044,7 +201044,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f0b50568f2642936003b30afbc0f380634d42ca3",
+          "validatedAt": "2026-09-20T20:52:50.752Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T21:44:08.828Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reidenxerx/omarchy-varta",
+            "pluginIds": [
+              "reidenxerx.varta"
+            ],
+            "commit": "f0b50568f2642936003b30afbc0f380634d42ca3",
+            "checkedAt": "2026-09-20T20:52:50.665Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/M44F4/omatouch",
