@@ -188693,8 +188693,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-17",
       "listedAt": "2026-09-17T14:26:13.464Z",
-      "listingValidatedCommit": "8d6aab25292f5852f56c5347564680eb1341b568",
-      "listingValidatedAt": "2026-09-17T14:26:13.464Z",
+      "listingValidatedCommit": "60ba50c34d1de4b753d89a406fca03cff51c06b8",
+      "listingValidatedAt": "2026-09-25T08:54:01.317Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -188703,8 +188703,8 @@
         "pluginIds": [
           "shivam.clock"
         ],
-        "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
-        "checkedAt": "2026-09-17T14:26:13.357Z",
+        "commit": "60ba50c34d1de4b753d89a406fca03cff51c06b8",
+        "checkedAt": "2026-09-25T08:54:01.317Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -188712,28 +188712,6 @@
           "installer",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "shivam-g10/omarchy-google-calendar",
-        "pluginIds": [
-          "shivam.clock"
-        ],
-        "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-17T14:26:13.357Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-16T13:59:47.686Z",
-        "requestEventId": 31326723091,
-        "requestedAt": "2026-09-17T14:24:35Z",
-        "reviewedAt": "2026-09-17T14:26:13.357Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "shivam.clock": {
@@ -188749,7 +188727,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shivam-g10/omarchy-google-calendar",
+        "pluginIds": [
+          "shivam.clock"
+        ],
+        "commit": "60ba50c34d1de4b753d89a406fca03cff51c06b8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T08:54:01.317Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T16:43:19.207Z",
+        "requestEventId": 31820834137,
+        "requestedAt": "2026-09-25T08:16:38Z",
+        "reviewedAt": "2026-09-25T08:54:01.317Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
+          "validatedAt": "2026-09-17T14:26:13.464Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T08:54:01.317Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "shivam-g10/omarchy-google-calendar",
+            "pluginIds": [
+              "shivam.clock"
+            ],
+            "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
+            "checkedAt": "2026-09-17T14:26:13.357Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "shivam-g10/omarchy-google-calendar",
+            "pluginIds": [
+              "shivam.clock"
+            ],
+            "commit": "8d6aab25292f5852f56c5347564680eb1341b568",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-17T14:26:13.357Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-16T13:59:47.686Z",
+            "requestEventId": 31326723091,
+            "requestedAt": "2026-09-17T14:24:35Z",
+            "reviewedAt": "2026-09-17T14:26:13.357Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/blazejkapala/omarchy-banatik",
