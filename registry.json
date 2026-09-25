@@ -224381,6 +224381,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Nombah501/n501-verse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T19:20:20.776Z",
+      "listingValidatedCommit": "9f37cfecca50c32db63e79c86052e56d80d6d103",
+      "listingValidatedAt": "2026-09-25T19:20:20.776Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nombah501/n501-verse",
+        "pluginIds": [
+          "n501.karaoke"
+        ],
+        "commit": "9f37cfecca50c32db63e79c86052e56d80d6d103",
+        "checkedAt": "2026-09-25T19:20:20.697Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "n501.karaoke": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
