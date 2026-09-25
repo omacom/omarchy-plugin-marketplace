@@ -224674,6 +224674,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SimonFrom/betterworkspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T21:15:36.356Z",
+      "listingValidatedCommit": "62e0147cc5ae2b9b2eec4af0af19112f4481d501",
+      "listingValidatedAt": "2026-09-25T21:15:36.356Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simonfrom/betterworkspaces",
+        "pluginIds": [
+          "io.github.simonfrom.betterworkspaces"
+        ],
+        "commit": "62e0147cc5ae2b9b2eec4af0af19112f4481d501",
+        "checkedAt": "2026-09-25T21:15:36.252Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.simonfrom.betterworkspaces": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
