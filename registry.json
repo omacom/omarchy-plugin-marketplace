@@ -224292,6 +224292,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/raeganwyble/per-app-audio",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T19:02:47.353Z",
+      "listingValidatedCommit": "0ae3d60f73f414f4044de36f39f3d930e98033d1",
+      "listingValidatedAt": "2026-09-25T19:02:47.353Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "raeganwyble/per-app-audio",
+        "pluginIds": [
+          "io.github.raeganwyble.per-app-audio"
+        ],
+        "commit": "0ae3d60f73f414f4044de36f39f3d930e98033d1",
+        "checkedAt": "2026-09-25T19:02:47.242Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.raeganwyble.per-app-audio": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
