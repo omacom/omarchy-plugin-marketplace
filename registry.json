@@ -223222,6 +223222,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/gregl83/omarchy-plancks",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:42:48.609Z",
+      "listingValidatedCommit": "391c8f80e23d0a89d4030f091c6d926e907065d7",
+      "listingValidatedAt": "2026-09-25T09:42:48.609Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gregl83/omarchy-plancks",
+        "pluginIds": [
+          "gregl83.plancks"
+        ],
+        "commit": "391c8f80e23d0a89d4030f091c6d926e907065d7",
+        "checkedAt": "2026-09-25T09:42:48.492Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gregl83/omarchy-plancks",
+        "pluginIds": [
+          "gregl83.plancks"
+        ],
+        "commit": "391c8f80e23d0a89d4030f091c6d926e907065d7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T09:42:48.492Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T05:08:13.455Z",
+        "requestEventId": 31822266812,
+        "requestedAt": "2026-09-25T08:42:26Z",
+        "reviewedAt": "2026-09-25T09:42:48.492Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gregl83.plancks": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
