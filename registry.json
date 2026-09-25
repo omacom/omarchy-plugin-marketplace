@@ -224914,6 +224914,42 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/07dcolem/omarchy-meeting-clipboard",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T21:51:11.813Z",
+      "listingValidatedCommit": "c54e2de358f50c046a73b69e1948edf57ade286f",
+      "listingValidatedAt": "2026-09-25T21:51:11.813Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "07dcolem/omarchy-meeting-clipboard",
+        "pluginIds": [
+          "io.github.07dcolem.meeting-clipboard"
+        ],
+        "commit": "c54e2de358f50c046a73b69e1948edf57ade286f",
+        "checkedAt": "2026-09-25T21:51:11.709Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.07dcolem.meeting-clipboard": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
