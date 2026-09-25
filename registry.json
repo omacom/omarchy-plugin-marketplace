@@ -222974,6 +222974,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jhonoryza/omarchy-commandcode-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:18:38.196Z",
+      "listingValidatedCommit": "25894f99521da8216f4cf65f1002d5d7ff529374",
+      "listingValidatedAt": "2026-09-25T09:18:38.196Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jhonoryza/omarchy-commandcode-usage",
+        "pluginIds": [
+          "dell.commandcode-usage"
+        ],
+        "commit": "25894f99521da8216f4cf65f1002d5d7ff529374",
+        "checkedAt": "2026-09-25T09:18:38.108Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dell.commandcode-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
