@@ -176655,8 +176655,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T18:08:33.224Z",
-      "listingValidatedCommit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
-      "listingValidatedAt": "2026-09-15T18:08:33.224Z",
+      "listingValidatedCommit": "4b261f75cbc2febb781c6dad243e0f35cae5e8de",
+      "listingValidatedAt": "2026-09-25T08:46:07.961Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -176665,35 +176665,14 @@
         "pluginIds": [
           "gmickel.gno-recall"
         ],
-        "commit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
-        "checkedAt": "2026-09-15T18:08:33.142Z",
+        "commit": "4b261f75cbc2febb781c6dad243e0f35cae5e8de",
+        "checkedAt": "2026-09-25T08:46:07.961Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "gmickel/omarchy-gno-recall",
-        "pluginIds": [
-          "gmickel.gno-recall"
-        ],
-        "commit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-15T18:08:33.142Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-15T04:25:02.781Z",
-        "requestEventId": 31193517897,
-        "requestedAt": "2026-09-15T18:01:37Z",
-        "reviewedAt": "2026-09-15T18:08:33.142Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "gmickel.gno-recall": {
@@ -176709,7 +176688,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gmickel/omarchy-gno-recall",
+        "pluginIds": [
+          "gmickel.gno-recall"
+        ],
+        "commit": "4b261f75cbc2febb781c6dad243e0f35cae5e8de",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T08:46:07.961Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-19T12:16:42.042Z",
+        "requestEventId": 31820774413,
+        "requestedAt": "2026-09-25T08:15:36Z",
+        "reviewedAt": "2026-09-25T08:46:07.961Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
+          "validatedAt": "2026-09-15T18:08:33.224Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T08:46:07.961Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gmickel/omarchy-gno-recall",
+            "pluginIds": [
+              "gmickel.gno-recall"
+            ],
+            "commit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
+            "checkedAt": "2026-09-15T18:08:33.142Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gmickel/omarchy-gno-recall",
+            "pluginIds": [
+              "gmickel.gno-recall"
+            ],
+            "commit": "8a6fd1a219072b03ca8df8b0106118531501ae06",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-15T18:08:33.142Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-15T04:25:02.781Z",
+            "requestEventId": 31193517897,
+            "requestedAt": "2026-09-15T18:01:37Z",
+            "reviewedAt": "2026-09-15T18:08:33.142Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/glasschan/appimage-for-omarchy",
