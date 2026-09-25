@@ -223040,6 +223040,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rubichandrap/omarchy-mozax",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:26:40.721Z",
+      "listingValidatedCommit": "a9fe34c2b25f0104b7e5e74df9f423916efda59c",
+      "listingValidatedAt": "2026-09-25T09:26:40.721Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rubichandrap/omarchy-mozax",
+        "pluginIds": [
+          "rubichandrap.mozax"
+        ],
+        "commit": "a9fe34c2b25f0104b7e5e74df9f423916efda59c",
+        "checkedAt": "2026-09-25T09:26:40.617Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rubichandrap/omarchy-mozax",
+        "pluginIds": [
+          "rubichandrap.mozax"
+        ],
+        "commit": "a9fe34c2b25f0104b7e5e74df9f423916efda59c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T09:26:40.617Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T08:30:44.277Z",
+        "requestEventId": 31822014969,
+        "requestedAt": "2026-09-25T08:37:51Z",
+        "reviewedAt": "2026-09-25T09:26:40.617Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rubichandrap.mozax": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
