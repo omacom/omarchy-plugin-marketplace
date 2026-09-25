@@ -223496,6 +223496,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/andersdosen/omarchy-nrkreviews",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T17:23:08.969Z",
+      "listingValidatedCommit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
+      "listingValidatedAt": "2026-09-25T17:23:08.969Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andersdosen/omarchy-nrkreviews",
+        "pluginIds": [
+          "andersdosen.nrkreviews"
+        ],
+        "commit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
+        "checkedAt": "2026-09-25T17:23:08.868Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "andersdosen.nrkreviews": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
