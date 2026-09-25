@@ -224619,6 +224619,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/renefoster/athena-kanban",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T21:11:44.936Z",
+      "listingValidatedCommit": "a7e43f6862452dd19f8a8688a08aeb20398109f7",
+      "listingValidatedAt": "2026-09-25T21:11:44.936Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "renefoster/athena-kanban",
+        "pluginIds": [
+          "renefoster.athena-kanban"
+        ],
+        "commit": "a7e43f6862452dd19f8a8688a08aeb20398109f7",
+        "checkedAt": "2026-09-25T21:11:44.849Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "renefoster/athena-kanban",
+        "pluginIds": [
+          "renefoster.athena-kanban"
+        ],
+        "commit": "a7e43f6862452dd19f8a8688a08aeb20398109f7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T21:11:44.849Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T20:51:19.190Z",
+        "requestEventId": 31864656481,
+        "requestedAt": "2026-09-25T20:52:22Z",
+        "reviewedAt": "2026-09-25T21:11:44.849Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "renefoster.athena-kanban": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
