@@ -224326,6 +224326,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dphov/omarchy-moergo-companion",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T19:14:52.364Z",
+      "listingValidatedCommit": "e0eef700963f3e9dcef0d2cee090d976d0ba0314",
+      "listingValidatedAt": "2026-09-25T19:14:52.364Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dphov/omarchy-moergo-companion",
+        "pluginIds": [
+          "dphov.omarchy-moergo-companion"
+        ],
+        "commit": "e0eef700963f3e9dcef0d2cee090d976d0ba0314",
+        "checkedAt": "2026-09-25T19:14:52.261Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dphov/omarchy-moergo-companion",
+        "pluginIds": [
+          "dphov.omarchy-moergo-companion"
+        ],
+        "commit": "e0eef700963f3e9dcef0d2cee090d976d0ba0314",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T19:14:52.261Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T12:41:33.639Z",
+        "requestEventId": 31859376935,
+        "requestedAt": "2026-09-25T19:12:58Z",
+        "reviewedAt": "2026-09-25T19:14:52.261Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dphov.omarchy-moergo-companion": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
