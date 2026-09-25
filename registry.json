@@ -222728,6 +222728,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/OBJLAKO/omarchy-lofi-focus",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T08:50:05.610Z",
+      "listingValidatedCommit": "a98d927586ed288c0d4b883a1e558121c0a70188",
+      "listingValidatedAt": "2026-09-25T08:50:05.610Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "objlako/omarchy-lofi-focus",
+        "pluginIds": [
+          "sky.lofi"
+        ],
+        "commit": "a98d927586ed288c0d4b883a1e558121c0a70188",
+        "checkedAt": "2026-09-25T08:50:05.508Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sky.lofi": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
