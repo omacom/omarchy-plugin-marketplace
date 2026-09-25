@@ -177931,8 +177931,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T20:17:27.027Z",
-      "listingValidatedCommit": "540bfa30809250e3c3bf2c02d6f86d4a0d868b60",
-      "listingValidatedAt": "2026-09-15T20:17:27.027Z",
+      "listingValidatedCommit": "bd4cca762929be3dbc00c8ee37eac1d1227fa1c1",
+      "listingValidatedAt": "2026-09-25T07:56:34.286Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -177941,8 +177941,8 @@
         "pluginIds": [
           "io.github.rbmrs.smart-enter"
         ],
-        "commit": "540bfa30809250e3c3bf2c02d6f86d4a0d868b60",
-        "checkedAt": "2026-09-15T20:17:26.940Z",
+        "commit": "bd4cca762929be3dbc00c8ee37eac1d1227fa1c1",
+        "checkedAt": "2026-09-25T07:56:34.286Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -177958,7 +177958,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "540bfa30809250e3c3bf2c02d6f86d4a0d868b60",
+          "validatedAt": "2026-09-15T20:17:27.027Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T07:56:34.286Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rbmrs/omarchy-smart-enter",
+            "pluginIds": [
+              "io.github.rbmrs.smart-enter"
+            ],
+            "commit": "540bfa30809250e3c3bf2c02d6f86d4a0d868b60",
+            "checkedAt": "2026-09-15T20:17:26.940Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/GruperTal/omarchy-biometric-hud",
