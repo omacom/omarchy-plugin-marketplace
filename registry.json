@@ -179653,8 +179653,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T23:41:15.676Z",
-      "listingValidatedCommit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
-      "listingValidatedAt": "2026-09-15T23:41:15.676Z",
+      "listingValidatedCommit": "dede8088f7525d6eb4dff67119cf21ce21913815",
+      "listingValidatedAt": "2026-09-25T18:37:11.227Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -179663,35 +179663,14 @@
         "pluginIds": [
           "axelfontaine.logitech-unifying"
         ],
-        "commit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
-        "checkedAt": "2026-09-15T23:41:15.589Z",
+        "commit": "dede8088f7525d6eb4dff67119cf21ce21913815",
+        "checkedAt": "2026-09-25T18:37:11.227Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "axelfontaine/omarchy-logitech-unifying",
-        "pluginIds": [
-          "axelfontaine.logitech-unifying"
-        ],
-        "commit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-15T23:41:15.589Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-14T20:42:48.610Z",
-        "requestEventId": 31210394934,
-        "requestedAt": "2026-09-15T23:39:50Z",
-        "reviewedAt": "2026-09-15T23:41:15.589Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "axelfontaine.logitech-unifying": {
@@ -179702,7 +179681,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "axelfontaine/omarchy-logitech-unifying",
+        "pluginIds": [
+          "axelfontaine.logitech-unifying"
+        ],
+        "commit": "dede8088f7525d6eb4dff67119cf21ce21913815",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T18:37:11.227Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-16T12:34:26.448Z",
+        "requestEventId": 31856470243,
+        "requestedAt": "2026-09-25T18:22:34Z",
+        "reviewedAt": "2026-09-25T18:37:11.227Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
+          "validatedAt": "2026-09-15T23:41:15.676Z",
+          "branch": "master",
+          "supersededAt": "2026-09-25T18:37:11.227Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "axelfontaine/omarchy-logitech-unifying",
+            "pluginIds": [
+              "axelfontaine.logitech-unifying"
+            ],
+            "commit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
+            "checkedAt": "2026-09-15T23:41:15.589Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "axelfontaine/omarchy-logitech-unifying",
+            "pluginIds": [
+              "axelfontaine.logitech-unifying"
+            ],
+            "commit": "be22d521a34c82e41ea296fdaf9fb3e731dfd849",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-15T23:41:15.589Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-14T20:42:48.610Z",
+            "requestEventId": 31210394934,
+            "requestedAt": "2026-09-15T23:39:50Z",
+            "reviewedAt": "2026-09-15T23:41:15.589Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/axelfontaine/omarchy-logitech-bolt",
