@@ -223130,6 +223130,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/voyagen/oma-dots",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:34:28.873Z",
+      "listingValidatedCommit": "6d594b1b14191b3f7af0b0eb2d8665a5cf86181c",
+      "listingValidatedAt": "2026-09-25T09:34:28.873Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "voyagen/oma-dots",
+        "pluginIds": [
+          "voyagen.oma-dots"
+        ],
+        "commit": "6d594b1b14191b3f7af0b0eb2d8665a5cf86181c",
+        "checkedAt": "2026-09-25T09:34:28.763Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "voyagen/oma-dots",
+        "pluginIds": [
+          "voyagen.oma-dots"
+        ],
+        "commit": "6d594b1b14191b3f7af0b0eb2d8665a5cf86181c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T09:34:28.763Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T08:14:46.245Z",
+        "requestEventId": 31822088776,
+        "requestedAt": "2026-09-25T08:39:12Z",
+        "reviewedAt": "2026-09-25T09:34:28.763Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "voyagen.oma-dots": {
+          "category": "Appearance",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
