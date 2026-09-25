@@ -191510,8 +191510,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-18",
       "listedAt": "2026-09-18T01:33:49.118Z",
-      "listingValidatedCommit": "3b1e864670047227be22b5e2259e33385b845b03",
-      "listingValidatedAt": "2026-09-18T01:33:49.118Z",
+      "listingValidatedCommit": "ea1ccb744417405f7214b1d47b8f1c531019f499",
+      "listingValidatedAt": "2026-09-25T18:41:22.624Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -191520,8 +191520,8 @@
         "pluginIds": [
           "renardoberou.plugin-tax"
         ],
-        "commit": "3b1e864670047227be22b5e2259e33385b845b03",
-        "checkedAt": "2026-09-18T01:33:49.046Z",
+        "commit": "ea1ccb744417405f7214b1d47b8f1c531019f499",
+        "checkedAt": "2026-09-25T18:41:22.624Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -191541,7 +191541,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3b1e864670047227be22b5e2259e33385b845b03",
+          "validatedAt": "2026-09-18T01:33:49.118Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T18:41:22.624Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "renardoberou/omarchy-plugin-tax",
+            "pluginIds": [
+              "renardoberou.plugin-tax"
+            ],
+            "commit": "3b1e864670047227be22b5e2259e33385b845b03",
+            "checkedAt": "2026-09-18T01:33:49.046Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lnewhart/themed_tray_omarchy",
