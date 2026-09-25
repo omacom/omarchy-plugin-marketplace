@@ -223603,6 +223603,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jonspinks/omarchy-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T17:40:23.406Z",
+      "listingValidatedCommit": "238c6f1125200cdee120fdbda20e1c05a5f60066",
+      "listingValidatedAt": "2026-09-25T17:40:23.406Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jonspinks/omarchy-workspaces",
+        "pluginIds": [
+          "blacksheep.workspaces"
+        ],
+        "commit": "238c6f1125200cdee120fdbda20e1c05a5f60066",
+        "checkedAt": "2026-09-25T17:40:23.292Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "blacksheep.workspaces": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
