@@ -223007,6 +223007,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/v3moreno/omarchy-resizeable",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:22:38.801Z",
+      "listingValidatedCommit": "7c83184577b9d318c008030a98399819c540010e",
+      "listingValidatedAt": "2026-09-25T09:22:38.801Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "v3moreno/omarchy-resizeable",
+        "pluginIds": [
+          "omarchy-resizeable.resizeable"
+        ],
+        "commit": "7c83184577b9d318c008030a98399819c540010e",
+        "checkedAt": "2026-09-25T09:22:38.696Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy-resizeable.resizeable": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
