@@ -223462,6 +223462,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/shiftynick/omarchy-agent-quota-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T17:19:09.273Z",
+      "listingValidatedCommit": "4f5b0233ad0de969514fb9930da0890ef3e7c00d",
+      "listingValidatedAt": "2026-09-25T17:19:09.273Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shiftynick/omarchy-agent-quota-bar",
+        "pluginIds": [
+          "shifty.agent-quota-bar"
+        ],
+        "commit": "4f5b0233ad0de969514fb9930da0890ef3e7c00d",
+        "checkedAt": "2026-09-25T17:19:09.188Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shifty.agent-quota-bar": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
