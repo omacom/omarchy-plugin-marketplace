@@ -222853,6 +222853,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JesusLovesYou1013/omaplugs_browser",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T09:06:48.595Z",
+      "listingValidatedCommit": "2ac91e7336eac88b5653b84b3aabad0ae78e1159",
+      "listingValidatedAt": "2026-09-25T09:06:48.595Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jesuslovesyou1013/omaplugs_browser",
+        "pluginIds": [
+          "io.github.jesuslovesyou1013.omaplugs-browser"
+        ],
+        "commit": "2ac91e7336eac88b5653b84b3aabad0ae78e1159",
+        "checkedAt": "2026-09-25T09:06:48.493Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jesuslovesyou1013/omaplugs_browser",
+        "pluginIds": [
+          "io.github.jesuslovesyou1013.omaplugs-browser"
+        ],
+        "commit": "2ac91e7336eac88b5653b84b3aabad0ae78e1159",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-25T09:06:48.493Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T04:03:24.977Z",
+        "requestEventId": 31821220124,
+        "requestedAt": "2026-09-25T08:23:28Z",
+        "reviewedAt": "2026-09-25T09:06:48.493Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jesuslovesyou1013.omaplugs-browser": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
