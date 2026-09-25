@@ -220339,8 +220339,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-24",
       "listedAt": "2026-09-24T13:57:08.054Z",
-      "listingValidatedCommit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
-      "listingValidatedAt": "2026-09-24T13:57:08.054Z",
+      "listingValidatedCommit": "94763e6748efcccd051723a33c8e9a47f671564a",
+      "listingValidatedAt": "2026-09-25T08:57:56.166Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -220349,8 +220349,8 @@
         "pluginIds": [
           "alexbic.keyboard-osd"
         ],
-        "commit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
-        "checkedAt": "2026-09-24T13:57:07.989Z",
+        "commit": "94763e6748efcccd051723a33c8e9a47f671564a",
+        "checkedAt": "2026-09-25T08:57:56.166Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -220365,7 +220365,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
+          "validatedAt": "2026-09-24T13:57:08.054Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T08:57:56.166Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alexbic/omarchy-keyboard-layout-osd",
+            "pluginIds": [
+              "alexbic.keyboard-osd"
+            ],
+            "commit": "4586dd63b2cf1ab3957b3013185e00921e1b7a26",
+            "checkedAt": "2026-09-24T13:57:07.989Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/larissa04alves/omadoro",
