@@ -175079,8 +175079,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T21:47:58.533Z",
-      "listingValidatedCommit": "43f0a49fda7b08b3f972f25ab2093c628b12fdd7",
-      "listingValidatedAt": "2026-09-14T21:47:58.533Z",
+      "listingValidatedCommit": "9781d59d90a5dbd747416eac7ac44949e8c22be0",
+      "listingValidatedAt": "2026-09-25T18:18:15.513Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -175089,8 +175089,8 @@
         "pluginIds": [
           "omdesky.remote"
         ],
-        "commit": "43f0a49fda7b08b3f972f25ab2093c628b12fdd7",
-        "checkedAt": "2026-09-14T21:47:58.480Z",
+        "commit": "9781d59d90a5dbd747416eac7ac44949e8c22be0",
+        "checkedAt": "2026-09-25T18:18:15.513Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -175104,7 +175104,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "43f0a49fda7b08b3f972f25ab2093c628b12fdd7",
+          "validatedAt": "2026-09-14T21:47:58.533Z",
+          "branch": "master",
+          "supersededAt": "2026-09-25T18:18:15.513Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "limahigor/omdesky-plugin",
+            "pluginIds": [
+              "omdesky.remote"
+            ],
+            "commit": "43f0a49fda7b08b3f972f25ab2093c628b12fdd7",
+            "checkedAt": "2026-09-14T21:47:58.480Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dutchbase/omarchy-webapps",
