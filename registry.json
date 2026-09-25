@@ -1622,8 +1622,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-10",
       "listedAt": "2026-08-10T18:01:39.507Z",
-      "listingValidatedCommit": "ceb93618f9a961efa8be733f9ac2fe2bacf7de25",
-      "listingValidatedAt": "2026-08-21T18:23:17.765Z",
+      "listingValidatedCommit": "0b1fac2a566de2ad3d4a8f4b0566d42414534dcc",
+      "listingValidatedAt": "2026-09-25T20:52:14.596Z",
       "listingValidatedBranch": "main",
       "plugins": {
         "ky.jellyfin-nowplaying": {
@@ -1642,8 +1642,8 @@
         "pluginIds": [
           "ky.jellyfin-nowplaying"
         ],
-        "commit": "ceb93618f9a961efa8be733f9ac2fe2bacf7de25",
-        "checkedAt": "2026-08-21T18:23:17.765Z",
+        "commit": "0b1fac2a566de2ad3d4a8f4b0566d42414534dcc",
+        "checkedAt": "2026-09-25T20:52:14.596Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -1664,6 +1664,26 @@
             ],
             "commit": "5380efdafc7edd5729369098f47508770474f4bc",
             "checkedAt": "2026-08-17T08:01:01.825Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "ceb93618f9a961efa8be733f9ac2fe2bacf7de25",
+          "validatedAt": "2026-08-21T18:23:17.765Z",
+          "branch": "main",
+          "supersededAt": "2026-09-25T20:52:14.596Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kyrunner/jellyfin-nowplaying",
+            "pluginIds": [
+              "ky.jellyfin-nowplaying"
+            ],
+            "commit": "ceb93618f9a961efa8be733f9ac2fe2bacf7de25",
+            "checkedAt": "2026-08-21T18:23:17.765Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
