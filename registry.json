@@ -223320,6 +223320,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KaykyM2411/omarchy-workspace-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-25",
+      "listedAt": "2026-09-25T17:08:27.701Z",
+      "listingValidatedCommit": "1ea283983c76d1409b35e746786481f187ca8ebe",
+      "listingValidatedAt": "2026-09-25T17:08:27.701Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kaykym2411/omarchy-workspace-switcher",
+        "pluginIds": [
+          "kaykym.workspace-switcher"
+        ],
+        "commit": "1ea283983c76d1409b35e746786481f187ca8ebe",
+        "checkedAt": "2026-09-25T17:08:27.596Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kaykym.workspace-switcher": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
