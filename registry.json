@@ -225613,6 +225613,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/v3moreno/omarchy-modes-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:26:16.339Z",
+      "listingValidatedCommit": "4ed0c703ba4d400bee9201cf52ad6e0e1ebd6f06",
+      "listingValidatedAt": "2026-09-26T06:26:16.339Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "v3moreno/omarchy-modes-switcher",
+        "pluginIds": [
+          "omarchy-modes.switcher"
+        ],
+        "commit": "4ed0c703ba4d400bee9201cf52ad6e0e1ebd6f06",
+        "checkedAt": "2026-09-26T06:26:16.236Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy-modes.switcher": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
