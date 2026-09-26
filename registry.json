@@ -226960,6 +226960,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/petealeon/DailyBibleReadings",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:15:36.246Z",
+      "listingValidatedCommit": "43a5047ef6014cb9c88a28f237df971b35efc359",
+      "listingValidatedAt": "2026-09-26T08:15:36.246Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "petealeon/dailybiblereadings",
+        "pluginIds": [
+          "petealeon.dailybiblereadings"
+        ],
+        "commit": "43a5047ef6014cb9c88a28f237df971b35efc359",
+        "checkedAt": "2026-09-26T08:15:36.138Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "petealeon/dailybiblereadings",
+        "pluginIds": [
+          "petealeon.dailybiblereadings"
+        ],
+        "commit": "43a5047ef6014cb9c88a28f237df971b35efc359",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T08:15:36.138Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T08:08:06.456Z",
+        "requestEventId": 31884072041,
+        "requestedAt": "2026-09-26T08:11:01Z",
+        "reviewedAt": "2026-09-26T08:15:36.138Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "petealeon.dailybiblereadings": {
+          "category": "Widgets",
+          "tags": [
+            "education",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
