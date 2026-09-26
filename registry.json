@@ -227782,6 +227782,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marcelinux303/epoche",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:12:48.375Z",
+      "listingValidatedCommit": "df553179abbbe185dceb4b9e5ec003a2eee89ba4",
+      "listingValidatedAt": "2026-09-26T16:12:48.375Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marcelinux303/epoche",
+        "pluginIds": [
+          "io.github.marcelinux303.epoche"
+        ],
+        "commit": "df553179abbbe185dceb4b9e5ec003a2eee89ba4",
+        "checkedAt": "2026-09-26T16:12:48.270Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.marcelinux303.epoche": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
