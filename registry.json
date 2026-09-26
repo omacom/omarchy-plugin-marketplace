@@ -225919,6 +225919,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jonspinks/omarchy-rclone",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:51:33.822Z",
+      "listingValidatedCommit": "07ba3e9eb8527a84da317dd988f1db6e1f4226ee",
+      "listingValidatedAt": "2026-09-26T06:51:33.822Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jonspinks/omarchy-rclone",
+        "pluginIds": [
+          "blacksheep.rclone"
+        ],
+        "commit": "07ba3e9eb8527a84da317dd988f1db6e1f4226ee",
+        "checkedAt": "2026-09-26T06:51:33.712Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jonspinks/omarchy-rclone",
+        "pluginIds": [
+          "blacksheep.rclone"
+        ],
+        "commit": "07ba3e9eb8527a84da317dd988f1db6e1f4226ee",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T06:51:33.712Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T16:52:21.732Z",
+        "requestEventId": 31881699923,
+        "requestedAt": "2026-09-26T06:32:53Z",
+        "reviewedAt": "2026-09-26T06:51:33.712Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "blacksheep.rclone": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
