@@ -225647,6 +225647,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Andean-Bridge/omarchy-notification-rules-mgr",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:30:07.147Z",
+      "listingValidatedCommit": "6b2d6cacc4ae65a43dc79f8cf23f7dcad71c1093",
+      "listingValidatedAt": "2026-09-26T06:30:07.147Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andean-bridge/omarchy-notification-rules-mgr",
+        "pluginIds": [
+          "andean-bridge.notification-rules-mgr"
+        ],
+        "commit": "6b2d6cacc4ae65a43dc79f8cf23f7dcad71c1093",
+        "checkedAt": "2026-09-26T06:30:07.040Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andean-bridge/omarchy-notification-rules-mgr",
+        "pluginIds": [
+          "andean-bridge.notification-rules-mgr"
+        ],
+        "commit": "6b2d6cacc4ae65a43dc79f8cf23f7dcad71c1093",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T06:30:07.040Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T22:31:33.938Z",
+        "requestEventId": 31881413310,
+        "requestedAt": "2026-09-26T06:20:33Z",
+        "reviewedAt": "2026-09-26T06:30:07.040Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "andean-bridge.notification-rules-mgr": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
