@@ -226692,6 +226692,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Coding-Sparrow/omarchy-cloudflare-warp",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:49:45.017Z",
+      "listingValidatedCommit": "c441055e3e467e83eaee30a96490691b5f2d0926",
+      "listingValidatedAt": "2026-09-26T07:49:45.017Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "coding-sparrow/omarchy-cloudflare-warp",
+        "pluginIds": [
+          "coding-sparrow.cloudflare-warp"
+        ],
+        "commit": "c441055e3e467e83eaee30a96490691b5f2d0926",
+        "checkedAt": "2026-09-26T07:49:44.907Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "coding-sparrow/omarchy-cloudflare-warp",
+        "pluginIds": [
+          "coding-sparrow.cloudflare-warp"
+        ],
+        "commit": "c441055e3e467e83eaee30a96490691b5f2d0926",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:49:44.907Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T02:18:58.642Z",
+        "requestEventId": 31882864162,
+        "requestedAt": "2026-09-26T07:21:16Z",
+        "reviewedAt": "2026-09-26T07:49:44.908Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "coding-sparrow.cloudflare-warp": {
+          "category": "System",
+          "tags": [
+            "vpn",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
