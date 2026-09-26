@@ -225159,6 +225159,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ArhamTheDeveloper/omarchy-launchbrake",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T00:42:28.972Z",
+      "listingValidatedCommit": "fe896b79cd705912f40185f53eea6881f5b26967",
+      "listingValidatedAt": "2026-09-26T00:42:28.972Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "arhamthedeveloper/omarchy-launchbrake",
+        "pluginIds": [
+          "io.github.arhamthedeveloper.launchbrake"
+        ],
+        "commit": "fe896b79cd705912f40185f53eea6881f5b26967",
+        "checkedAt": "2026-09-26T00:42:28.854Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "arhamthedeveloper/omarchy-launchbrake",
+        "pluginIds": [
+          "io.github.arhamthedeveloper.launchbrake"
+        ],
+        "commit": "fe896b79cd705912f40185f53eea6881f5b26967",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T00:42:28.854Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T16:27:16.152Z",
+        "requestEventId": 31873049943,
+        "requestedAt": "2026-09-26T00:36:26Z",
+        "reviewedAt": "2026-09-26T00:42:28.854Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.arhamthedeveloper.launchbrake": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
