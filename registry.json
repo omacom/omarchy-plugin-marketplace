@@ -227224,6 +227224,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AfonsoNeto/omarchledger",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:11:57.138Z",
+      "listingValidatedCommit": "083e2bc196361589a2075e5fe2b57171fc7850c1",
+      "listingValidatedAt": "2026-09-26T15:11:57.138Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "afonsoneto/omarchledger",
+        "pluginIds": [
+          "afonsoneto.omarchledger"
+        ],
+        "commit": "083e2bc196361589a2075e5fe2b57171fc7850c1",
+        "checkedAt": "2026-09-26T15:11:57.024Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "afonsoneto.omarchledger": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
