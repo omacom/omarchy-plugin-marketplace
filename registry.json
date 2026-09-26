@@ -226888,6 +226888,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aiob3/omany",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:07:34.811Z",
+      "listingValidatedCommit": "c76b15ff816f28df4f6e5c035dad58d429a34567",
+      "listingValidatedAt": "2026-09-26T08:07:34.811Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aiob3/omany",
+        "pluginIds": [
+          "io.github.aiob3.omany"
+        ],
+        "commit": "c76b15ff816f28df4f6e5c035dad58d429a34567",
+        "checkedAt": "2026-09-26T08:07:34.709Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.aiob3.omany": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "workspaces",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
