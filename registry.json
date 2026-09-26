@@ -227681,6 +227681,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stoneynutcase/omacounter",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:00:55.186Z",
+      "listingValidatedCommit": "fd66627b2cb8ced60a3e26410f3f69a78adef5d6",
+      "listingValidatedAt": "2026-09-26T16:00:55.186Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stoneynutcase/omacounter",
+        "pluginIds": [
+          "stoneynutcase.omacounter"
+        ],
+        "commit": "fd66627b2cb8ced60a3e26410f3f69a78adef5d6",
+        "checkedAt": "2026-09-26T16:00:55.080Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "stoneynutcase.omacounter": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
