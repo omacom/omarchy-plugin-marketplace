@@ -226926,6 +226926,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/filip-spaldon/omarchy-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:11:40.926Z",
+      "listingValidatedCommit": "021ae8718bfb8c8f7fcf8ee5096f33f4461d3aed",
+      "listingValidatedAt": "2026-09-26T08:11:40.926Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "filip-spaldon/omarchy-menu",
+        "pluginIds": [
+          "omarchy-menu-omni"
+        ],
+        "commit": "021ae8718bfb8c8f7fcf8ee5096f33f4461d3aed",
+        "checkedAt": "2026-09-26T08:11:40.826Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy-menu-omni": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
