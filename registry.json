@@ -226854,6 +226854,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/BearThomas/omarchy-luogu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:01:27.030Z",
+      "listingValidatedCommit": "842a92b9d0ef82d6a976ea001bd49d1b2ca5e324",
+      "listingValidatedAt": "2026-09-26T08:01:27.030Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bearthomas/omarchy-luogu",
+        "pluginIds": [
+          "bearthomas.luogu"
+        ],
+        "commit": "842a92b9d0ef82d6a976ea001bd49d1b2ca5e324",
+        "checkedAt": "2026-09-26T08:01:26.949Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bearthomas.luogu": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
