@@ -225704,6 +225704,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MrMo3/omarchy-ics-calendar-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:34:24.219Z",
+      "listingValidatedCommit": "acfb5a9e5bd7ec08ed8bbf68734350b5d21fa428",
+      "listingValidatedAt": "2026-09-26T06:34:24.219Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrmo3/omarchy-ics-calendar-widget",
+        "pluginIds": [
+          "mrmoe.ics-calendar"
+        ],
+        "commit": "acfb5a9e5bd7ec08ed8bbf68734350b5d21fa428",
+        "checkedAt": "2026-09-26T06:34:24.094Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mrmo3/omarchy-ics-calendar-widget",
+        "pluginIds": [
+          "mrmoe.ics-calendar"
+        ],
+        "commit": "acfb5a9e5bd7ec08ed8bbf68734350b5d21fa428",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T06:34:24.094Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T23:51:04.950Z",
+        "requestEventId": 31881451841,
+        "requestedAt": "2026-09-26T06:22:09Z",
+        "reviewedAt": "2026-09-26T06:34:24.094Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mrmoe.ics-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
