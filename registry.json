@@ -227876,6 +227876,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/vitorpacheco/omarchy-logitech-streamcam",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:20:57.575Z",
+      "listingValidatedCommit": "1beef6af1acc200ac5543fcf38e5f75702eda5ce",
+      "listingValidatedAt": "2026-09-26T16:20:57.575Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vitorpacheco/omarchy-logitech-streamcam",
+        "pluginIds": [
+          "io.github.vitorpacheco.streamcam"
+        ],
+        "commit": "1beef6af1acc200ac5543fcf38e5f75702eda5ce",
+        "checkedAt": "2026-09-26T16:20:57.466Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vitorpacheco/omarchy-logitech-streamcam",
+        "pluginIds": [
+          "io.github.vitorpacheco.streamcam"
+        ],
+        "commit": "1beef6af1acc200ac5543fcf38e5f75702eda5ce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T16:20:57.466Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T13:12:31.956Z",
+        "requestEventId": 31896800223,
+        "requestedAt": "2026-09-26T15:46:50Z",
+        "reviewedAt": "2026-09-26T16:20:57.466Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.vitorpacheco.streamcam": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
