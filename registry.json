@@ -227483,6 +227483,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/broken-branch/omarchy-atlas",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:36:01.878Z",
+      "listingValidatedCommit": "c0c2ffaa36318334b1fc67e4719680c390afff20",
+      "listingValidatedAt": "2026-09-26T15:36:01.878Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "broken-branch/omarchy-atlas",
+        "pluginIds": [
+          "io.github.broken-branch.atlas"
+        ],
+        "commit": "c0c2ffaa36318334b1fc67e4719680c390afff20",
+        "checkedAt": "2026-09-26T15:36:01.775Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "broken-branch/omarchy-atlas",
+        "pluginIds": [
+          "io.github.broken-branch.atlas"
+        ],
+        "commit": "c0c2ffaa36318334b1fc67e4719680c390afff20",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T15:36:01.775Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T14:10:12.691Z",
+        "requestEventId": 31896063607,
+        "requestedAt": "2026-09-26T15:22:32Z",
+        "reviewedAt": "2026-09-26T15:36:01.775Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.broken-branch.atlas": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
