@@ -227041,6 +227041,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gianmegantara/omarchy-hr-broadcast",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:31:07.168Z",
+      "listingValidatedCommit": "c1d7b79ddbea48a3e93497a4c0ed57703ffe5490",
+      "listingValidatedAt": "2026-09-26T08:31:07.168Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gianmegantara/omarchy-hr-broadcast",
+        "pluginIds": [
+          "gian.hr-broadcast"
+        ],
+        "commit": "c1d7b79ddbea48a3e93497a4c0ed57703ffe5490",
+        "checkedAt": "2026-09-26T08:31:07.061Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gianmegantara/omarchy-hr-broadcast",
+        "pluginIds": [
+          "gian.hr-broadcast"
+        ],
+        "commit": "c1d7b79ddbea48a3e93497a4c0ed57703ffe5490",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T08:31:07.061Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T08:15:56.154Z",
+        "requestEventId": 31884507550,
+        "requestedAt": "2026-09-26T08:29:13Z",
+        "reviewedAt": "2026-09-26T08:31:07.061Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gian.hr-broadcast": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
