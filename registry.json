@@ -226141,6 +226141,77 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/brightwalker25/omarchy-mac-fan",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:08:07.481Z",
+      "listingValidatedCommit": "bc32a4a6f8f22be4ff385dcc0b457c820a02619d",
+      "listingValidatedAt": "2026-09-26T07:08:07.481Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brightwalker25/omarchy-mac-fan",
+        "pluginIds": [
+          "brightwalker25.mac-fan"
+        ],
+        "commit": "bc32a4a6f8f22be4ff385dcc0b457c820a02619d",
+        "checkedAt": "2026-09-26T07:08:07.371Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "sudoers-modification",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brightwalker25/omarchy-mac-fan",
+        "pluginIds": [
+          "brightwalker25.mac-fan"
+        ],
+        "commit": "bc32a4a6f8f22be4ff385dcc0b457c820a02619d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:08:07.371Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "sudoers-modification",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T19:16:51.485Z",
+        "requestEventId": 31882084216,
+        "requestedAt": "2026-09-26T06:48:45Z",
+        "reviewedAt": "2026-09-26T07:08:07.372Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brightwalker25.mac-fan": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
