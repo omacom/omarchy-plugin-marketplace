@@ -226312,6 +226312,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AimAbe/corne-keymap",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:21:35.552Z",
+      "listingValidatedCommit": "03abe6bcadaa9e4c6b79ead0e6f741a068832429",
+      "listingValidatedAt": "2026-09-26T07:21:35.552Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aimabe/corne-keymap",
+        "pluginIds": [
+          "aimabe.corne-keymap"
+        ],
+        "commit": "03abe6bcadaa9e4c6b79ead0e6f741a068832429",
+        "checkedAt": "2026-09-26T07:21:35.471Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aimabe/corne-keymap",
+        "pluginIds": [
+          "aimabe.corne-keymap"
+        ],
+        "commit": "03abe6bcadaa9e4c6b79ead0e6f741a068832429",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:21:35.471Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T23:13:11.287Z",
+        "requestEventId": 31882416454,
+        "requestedAt": "2026-09-26T07:02:32Z",
+        "reviewedAt": "2026-09-26T07:21:35.471Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "aimabe.corne-keymap": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
