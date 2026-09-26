@@ -227542,6 +227542,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/scoop/omarchy-plugin-oxidone",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:41:35.731Z",
+      "listingValidatedCommit": "dc56d890fcbd28713fcd37dd6a3fb51597fdbe21",
+      "listingValidatedAt": "2026-09-26T15:41:35.731Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "scoop/omarchy-plugin-oxidone",
+        "pluginIds": [
+          "scoop.oxidone"
+        ],
+        "commit": "dc56d890fcbd28713fcd37dd6a3fb51597fdbe21",
+        "checkedAt": "2026-09-26T15:41:35.625Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "scoop.oxidone": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
