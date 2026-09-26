@@ -225457,6 +225457,42 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/mindows/mib-vlog",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:14:20.838Z",
+      "listingValidatedCommit": "6d5a022d25d1dc644dc924c1aa90527eebe1c40b",
+      "listingValidatedAt": "2026-09-26T06:14:20.838Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mindows/mib-vlog",
+        "pluginIds": [
+          "io.github.mindows.mib-vlog"
+        ],
+        "commit": "6d5a022d25d1dc644dc924c1aa90527eebe1c40b",
+        "checkedAt": "2026-09-26T06:14:20.732Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mindows.mib-vlog": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
