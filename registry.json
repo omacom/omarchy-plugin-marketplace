@@ -227102,6 +227102,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/lisboaphe/omachi-pet",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T08:36:08.390Z",
+      "listingValidatedCommit": "4a3d921d25916d20510ea797a94829c6462ef0d8",
+      "listingValidatedAt": "2026-09-26T08:36:08.390Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lisboaphe/omachi-pet",
+        "pluginIds": [
+          "community.omachi-pet"
+        ],
+        "commit": "4a3d921d25916d20510ea797a94829c6462ef0d8",
+        "checkedAt": "2026-09-26T08:36:08.325Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lisboaphe/omachi-pet",
+        "pluginIds": [
+          "community.omachi-pet"
+        ],
+        "commit": "4a3d921d25916d20510ea797a94829c6462ef0d8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T08:36:08.325Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T08:33:51.988Z",
+        "requestEventId": 31884637366,
+        "requestedAt": "2026-09-26T08:34:36Z",
+        "reviewedAt": "2026-09-26T08:36:08.325Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "community.omachi-pet": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
