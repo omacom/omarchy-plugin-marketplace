@@ -227332,6 +227332,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/TiniTinyTerminator/Olook",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:24:07.917Z",
+      "listingValidatedCommit": "77e35139102f8ba0d30af54d01592c66f1db9833",
+      "listingValidatedAt": "2026-09-26T15:24:07.917Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tinitinyterminator/olook",
+        "pluginIds": [
+          "ttt.olook"
+        ],
+        "commit": "77e35139102f8ba0d30af54d01592c66f1db9833",
+        "checkedAt": "2026-09-26T15:24:07.822Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tinitinyterminator/olook",
+        "pluginIds": [
+          "ttt.olook"
+        ],
+        "commit": "77e35139102f8ba0d30af54d01592c66f1db9833",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T15:24:07.822Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T11:38:03.685Z",
+        "requestEventId": 31895829761,
+        "requestedAt": "2026-09-26T15:15:04Z",
+        "reviewedAt": "2026-09-26T15:24:07.823Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ttt.olook": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
