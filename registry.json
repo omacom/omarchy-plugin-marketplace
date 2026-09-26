@@ -225762,6 +225762,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/OmarchyFans/omarchy-fans-arcade",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:38:26.084Z",
+      "listingValidatedCommit": "2ff6d680834868b4cd2a35c0112c39e38d59bedf",
+      "listingValidatedAt": "2026-09-26T06:38:26.084Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "omarchyfans/omarchy-fans-arcade",
+        "pluginIds": [
+          "fans.omarchy.arcade"
+        ],
+        "commit": "2ff6d680834868b4cd2a35c0112c39e38d59bedf",
+        "checkedAt": "2026-09-26T06:38:25.970Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "omarchyfans/omarchy-fans-arcade",
+        "pluginIds": [
+          "fans.omarchy.arcade"
+        ],
+        "commit": "2ff6d680834868b4cd2a35c0112c39e38d59bedf",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T06:38:25.970Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T01:13:52.412Z",
+        "requestEventId": 31881504665,
+        "requestedAt": "2026-09-26T06:24:22Z",
+        "reviewedAt": "2026-09-26T06:38:25.970Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "fans.omarchy.arcade": {
+          "category": "Other",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
