@@ -226372,6 +226372,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rfaile313/omarchy-menu-sysmon",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:25:15.378Z",
+      "listingValidatedCommit": "3f6efcaf6d83cc0d0229f7424374551fa4478261",
+      "listingValidatedAt": "2026-09-26T07:25:15.378Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rfaile313/omarchy-menu-sysmon",
+        "pluginIds": [
+          "rfaile313.menu-sysmon"
+        ],
+        "commit": "3f6efcaf6d83cc0d0229f7424374551fa4478261",
+        "checkedAt": "2026-09-26T07:25:15.268Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rfaile313.menu-sysmon": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
