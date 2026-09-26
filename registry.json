@@ -227815,6 +227815,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/taiku666/omarchy-music-eq",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:17:06.208Z",
+      "listingValidatedCommit": "693efd57c1fd2d9f5d38ffabbc8fc589a614e914",
+      "listingValidatedAt": "2026-09-26T16:17:06.208Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "taiku666/omarchy-music-eq",
+        "pluginIds": [
+          "io.github.taiku666.music-eq"
+        ],
+        "commit": "693efd57c1fd2d9f5d38ffabbc8fc589a614e914",
+        "checkedAt": "2026-09-26T16:17:06.102Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "taiku666/omarchy-music-eq",
+        "pluginIds": [
+          "io.github.taiku666.music-eq"
+        ],
+        "commit": "693efd57c1fd2d9f5d38ffabbc8fc589a614e914",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T16:17:06.102Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T13:25:37.210Z",
+        "requestEventId": 31896762129,
+        "requestedAt": "2026-09-26T15:45:35Z",
+        "reviewedAt": "2026-09-26T16:17:06.102Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.taiku666.music-eq": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
