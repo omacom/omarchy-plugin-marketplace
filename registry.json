@@ -226761,6 +226761,61 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SamuOsorio/omarchy-power-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:53:50.647Z",
+      "listingValidatedCommit": "708723bbf650aa1254f42802d994c7689c701e81",
+      "listingValidatedAt": "2026-09-26T07:53:50.647Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "samuosorio/omarchy-power-menu",
+        "pluginIds": [
+          "io.github.samuosorio.power-menu"
+        ],
+        "commit": "708723bbf650aa1254f42802d994c7689c701e81",
+        "checkedAt": "2026-09-26T07:53:50.542Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "samuosorio/omarchy-power-menu",
+        "pluginIds": [
+          "io.github.samuosorio.power-menu"
+        ],
+        "commit": "708723bbf650aa1254f42802d994c7689c701e81",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:53:50.542Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T02:31:09.606Z",
+        "requestEventId": 31882881246,
+        "requestedAt": "2026-09-26T07:21:56Z",
+        "reviewedAt": "2026-09-26T07:53:50.542Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.samuosorio.power-menu": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
