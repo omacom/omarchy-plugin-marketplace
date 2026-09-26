@@ -225981,6 +225981,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/brightwalker25/omarchy-system",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:55:45.179Z",
+      "listingValidatedCommit": "3ec798df30099ef56aab4131d4f26d31d2ad08e5",
+      "listingValidatedAt": "2026-09-26T06:55:45.179Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brightwalker25/omarchy-system",
+        "pluginIds": [
+          "brightwalker25.system"
+        ],
+        "commit": "3ec798df30099ef56aab4131d4f26d31d2ad08e5",
+        "checkedAt": "2026-09-26T06:55:45.069Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "brightwalker25.system": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
