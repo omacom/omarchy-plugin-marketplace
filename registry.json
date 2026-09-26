@@ -227579,6 +227579,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/TammyX44/OmaGlimpse",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:45:47.896Z",
+      "listingValidatedCommit": "5ec7548173f061bd62a42189304223d2d9f2d07b",
+      "listingValidatedAt": "2026-09-26T15:45:47.896Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tammyx44/omaglimpse",
+        "pluginIds": [
+          "io.github.tammyx44.omaglimpse"
+        ],
+        "commit": "5ec7548173f061bd62a42189304223d2d9f2d07b",
+        "checkedAt": "2026-09-26T15:45:47.792Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tammyx44.omaglimpse": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
