@@ -226246,6 +226246,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/florinbaci/omarchy-filmstrip",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:15:12.211Z",
+      "listingValidatedCommit": "3645555685262c576ad27ee2a55708cb18682cc3",
+      "listingValidatedAt": "2026-09-26T07:15:12.211Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "florinbaci/omarchy-filmstrip",
+        "pluginIds": [
+          "io.github.florinbaci.filmstrip"
+        ],
+        "commit": "3645555685262c576ad27ee2a55708cb18682cc3",
+        "checkedAt": "2026-09-26T07:15:12.113Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.florinbaci.filmstrip": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
