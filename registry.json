@@ -227159,6 +227159,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sceny/omarchy-devices",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:08:03.821Z",
+      "listingValidatedCommit": "bf9e41b0fd7a570ef26d5bd7384417c4c73d2e66",
+      "listingValidatedAt": "2026-09-26T15:08:03.821Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sceny/omarchy-devices",
+        "pluginIds": [
+          "sceny.devices"
+        ],
+        "commit": "bf9e41b0fd7a570ef26d5bd7384417c4c73d2e66",
+        "checkedAt": "2026-09-26T15:08:03.712Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sceny/omarchy-devices",
+        "pluginIds": [
+          "sceny.devices"
+        ],
+        "commit": "bf9e41b0fd7a570ef26d5bd7384417c4c73d2e66",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T15:08:03.712Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T09:39:56.628Z",
+        "requestEventId": 31895550953,
+        "requestedAt": "2026-09-26T15:06:01Z",
+        "reviewedAt": "2026-09-26T15:08:03.712Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sceny.devices": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
