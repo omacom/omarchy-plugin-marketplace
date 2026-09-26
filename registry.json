@@ -226404,6 +226404,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rfaile313/omarchy-menu-search",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:29:35.936Z",
+      "listingValidatedCommit": "92816b832ffeca94acc87838e7f02b80417d232f",
+      "listingValidatedAt": "2026-09-26T07:29:35.936Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rfaile313/omarchy-menu-search",
+        "pluginIds": [
+          "rfaile313.menu-search"
+        ],
+        "commit": "92816b832ffeca94acc87838e7f02b80417d232f",
+        "checkedAt": "2026-09-26T07:29:35.835Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rfaile313.menu-search": {
+          "category": "Productivity",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
