@@ -227390,6 +227390,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/G-Pappas/vid2mp3",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:28:06.885Z",
+      "listingValidatedCommit": "21e46f157e92873f71a17a55a1d5473bd252f808",
+      "listingValidatedAt": "2026-09-26T15:28:06.885Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "g-pappas/vid2mp3",
+        "pluginIds": [
+          "gpappas.vid2mp3"
+        ],
+        "commit": "21e46f157e92873f71a17a55a1d5473bd252f808",
+        "checkedAt": "2026-09-26T15:28:06.770Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "g-pappas/vid2mp3",
+        "pluginIds": [
+          "gpappas.vid2mp3"
+        ],
+        "commit": "21e46f157e92873f71a17a55a1d5473bd252f808",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T15:28:06.770Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T09:18:12.917Z",
+        "requestEventId": 31895889509,
+        "requestedAt": "2026-09-26T15:16:58Z",
+        "reviewedAt": "2026-09-26T15:28:06.770Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gpappas.vid2mp3": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
