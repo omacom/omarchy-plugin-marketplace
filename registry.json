@@ -227261,6 +227261,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidsmorais/omarchy-singularity-app",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:15:54.173Z",
+      "listingValidatedCommit": "d62a08ce2030228278f6dcbdb68580acb75e692b",
+      "listingValidatedAt": "2026-09-26T15:15:54.173Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidsmorais/omarchy-singularity-app",
+        "pluginIds": [
+          "david.singularity"
+        ],
+        "commit": "d62a08ce2030228278f6dcbdb68580acb75e692b",
+        "checkedAt": "2026-09-26T15:15:54.061Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "david.singularity": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
