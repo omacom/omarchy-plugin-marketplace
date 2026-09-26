@@ -226073,6 +226073,74 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brightwalker25/omarchy-black-ops",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:04:12.524Z",
+      "listingValidatedCommit": "a7be327ea6564cb3995ca898dd79fd9fff083563",
+      "listingValidatedAt": "2026-09-26T07:04:12.524Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brightwalker25/omarchy-black-ops",
+        "pluginIds": [
+          "brightwalker25.black-ops"
+        ],
+        "commit": "a7be327ea6564cb3995ca898dd79fd9fff083563",
+        "checkedAt": "2026-09-26T07:04:12.424Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brightwalker25/omarchy-black-ops",
+        "pluginIds": [
+          "brightwalker25.black-ops"
+        ],
+        "commit": "a7be327ea6564cb3995ca898dd79fd9fff083563",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:04:12.424Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T19:16:43.573Z",
+        "requestEventId": 31882019839,
+        "requestedAt": "2026-09-26T06:45:59Z",
+        "reviewedAt": "2026-09-26T07:04:12.424Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "brightwalker25.black-ops": {
+          "category": "System",
+          "tags": [
+            "security",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
