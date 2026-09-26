@@ -226816,6 +226816,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/flathack/Omarchy-PlexTales",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:57:47.020Z",
+      "listingValidatedCommit": "791b3590c057fd963ac396c6c37eee44ea91f4a0",
+      "listingValidatedAt": "2026-09-26T07:57:47.020Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flathack/omarchy-plextales",
+        "pluginIds": [
+          "io.github.flathack.plextales"
+        ],
+        "commit": "791b3590c057fd963ac396c6c37eee44ea91f4a0",
+        "checkedAt": "2026-09-26T07:57:46.922Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.flathack.plextales": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
