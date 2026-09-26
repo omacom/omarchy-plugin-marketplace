@@ -227294,6 +227294,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Mirceone/omarchy-omp-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:20:09.882Z",
+      "listingValidatedCommit": "16fa21bda49a67c7be7348b3da29d67c5c3ba9db",
+      "listingValidatedAt": "2026-09-26T15:20:09.882Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mirceone/omarchy-omp-usage",
+        "pluginIds": [
+          "omp.usage-monitor"
+        ],
+        "commit": "16fa21bda49a67c7be7348b3da29d67c5c3ba9db",
+        "checkedAt": "2026-09-26T15:20:09.774Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omp.usage-monitor": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
