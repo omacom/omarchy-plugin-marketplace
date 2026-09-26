@@ -227451,6 +227451,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SimonSchubert/omarchy-crypto-market",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T15:32:03.465Z",
+      "listingValidatedCommit": "2588b08c46a8c274d3c0be4d719060d23123b3db",
+      "listingValidatedAt": "2026-09-26T15:32:03.465Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simonschubert/omarchy-crypto-market",
+        "pluginIds": [
+          "io.github.simonschubert.crypto-market"
+        ],
+        "commit": "2588b08c46a8c274d3c0be4d719060d23123b3db",
+        "checkedAt": "2026-09-26T15:32:03.370Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.simonschubert.crypto-market": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
