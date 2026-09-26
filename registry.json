@@ -225300,6 +225300,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SirAllap/omarchy-solfa",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T06:01:27.100Z",
+      "listingValidatedCommit": "c4be4d77da2826d218a2e6317a03a811f1b29110",
+      "listingValidatedAt": "2026-09-26T06:01:27.100Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sirallap/omarchy-solfa",
+        "pluginIds": [
+          "io.github.sirallap.solfa"
+        ],
+        "commit": "c4be4d77da2826d218a2e6317a03a811f1b29110",
+        "checkedAt": "2026-09-26T06:01:27.004Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sirallap/omarchy-solfa",
+        "pluginIds": [
+          "io.github.sirallap.solfa"
+        ],
+        "commit": "c4be4d77da2826d218a2e6317a03a811f1b29110",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T06:01:27.004Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-25T16:32:32.048Z",
+        "requestEventId": 31880922328,
+        "requestedAt": "2026-09-26T05:59:28Z",
+        "reviewedAt": "2026-09-26T06:01:27.004Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sirallap.solfa": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
