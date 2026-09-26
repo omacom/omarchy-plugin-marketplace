@@ -226628,6 +226628,70 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/derekross/omarchy-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:45:56.977Z",
+      "listingValidatedCommit": "1d599b47ff6dd5a1980ff6962ec51a2f05fede84",
+      "listingValidatedAt": "2026-09-26T07:45:56.977Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "derekross/omarchy-calendar",
+        "pluginIds": [
+          "derekross.calendar"
+        ],
+        "commit": "1d599b47ff6dd5a1980ff6962ec51a2f05fede84",
+        "checkedAt": "2026-09-26T07:45:56.890Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "derekross/omarchy-calendar",
+        "pluginIds": [
+          "derekross.calendar"
+        ],
+        "commit": "1d599b47ff6dd5a1980ff6962ec51a2f05fede84",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:45:56.890Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T01:28:58.537Z",
+        "requestEventId": 31882823908,
+        "requestedAt": "2026-09-26T07:19:34Z",
+        "reviewedAt": "2026-09-26T07:45:56.890Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "derekross.calendar": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
