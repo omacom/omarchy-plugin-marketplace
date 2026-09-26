@@ -225106,6 +225106,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SimonSchubert/omarchy-couch",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T00:33:33.365Z",
+      "listingValidatedCommit": "1ced9d5f00ddc79a7fc31cb446a3e246b8dec6ed",
+      "listingValidatedAt": "2026-09-26T00:33:33.365Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simonschubert/omarchy-couch",
+        "pluginIds": [
+          "io.github.simonschubert.couch"
+        ],
+        "commit": "1ced9d5f00ddc79a7fc31cb446a3e246b8dec6ed",
+        "checkedAt": "2026-09-26T00:33:33.269Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.simonschubert.couch": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
