@@ -227993,6 +227993,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kolbenhans/qmk-vial-keycolors-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:29:10.552Z",
+      "listingValidatedCommit": "f7d86f80dc4b2a4c5a8e262d55837ff61c8aee3e",
+      "listingValidatedAt": "2026-09-26T16:29:10.552Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kolbenhans/qmk-vial-keycolors-omarchy",
+        "pluginIds": [
+          "io.github.kolbenhans.keycolors"
+        ],
+        "commit": "f7d86f80dc4b2a4c5a8e262d55837ff61c8aee3e",
+        "checkedAt": "2026-09-26T16:29:10.453Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kolbenhans/qmk-vial-keycolors-omarchy",
+        "pluginIds": [
+          "io.github.kolbenhans.keycolors"
+        ],
+        "commit": "f7d86f80dc4b2a4c5a8e262d55837ff61c8aee3e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T16:29:10.453Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T14:52:21.693Z",
+        "requestEventId": 31897103969,
+        "requestedAt": "2026-09-26T15:56:54Z",
+        "reviewedAt": "2026-09-26T16:29:10.453Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kolbenhans.keycolors": {
+          "category": "Hardware",
+          "tags": [
+            "games",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
