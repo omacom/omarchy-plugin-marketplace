@@ -119334,8 +119334,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T02:42:29.870Z",
-      "listingValidatedCommit": "5ab55d14a460d30d4981f63152300954aedd2195",
-      "listingValidatedAt": "2026-09-11T13:32:24.174Z",
+      "listingValidatedCommit": "a35325b6c24c93e97bbfd5cd0a7385075c9c28b7",
+      "listingValidatedAt": "2026-09-26T00:46:14.646Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -119344,12 +119344,14 @@
         "pluginIds": [
           "io.github.tbraxa.orderbell"
         ],
-        "commit": "5ab55d14a460d30d4981f63152300954aedd2195",
-        "checkedAt": "2026-09-11T13:32:24.174Z",
-        "outcome": "passed",
+        "commit": "a35325b6c24c93e97bbfd5cd0a7385075c9c28b7",
+        "checkedAt": "2026-09-26T00:46:14.646Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "package-manager"
+        ]
       },
       "plugins": {
         "io.github.tbraxa.orderbell": {
@@ -119385,8 +119387,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "5ab55d14a460d30d4981f63152300954aedd2195",
+          "validatedAt": "2026-09-11T13:32:24.174Z",
+          "branch": "main",
+          "supersededAt": "2026-09-26T00:46:14.646Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tbraxa/omarchy-orderbell",
+            "pluginIds": [
+              "io.github.tbraxa.orderbell"
+            ],
+            "commit": "5ab55d14a460d30d4981f63152300954aedd2195",
+            "checkedAt": "2026-09-11T13:32:24.174Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tbraxa/omarchy-orderbell",
+        "pluginIds": [
+          "io.github.tbraxa.orderbell"
+        ],
+        "commit": "a35325b6c24c93e97bbfd5cd0a7385075c9c28b7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T00:46:14.646Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-20T15:16:37.648Z",
+        "requestEventId": 31873183872,
+        "requestedAt": "2026-09-26T00:41:18Z",
+        "reviewedAt": "2026-09-26T00:46:14.646Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/raavail-lasso/Omarchy-Islands-Bar",
