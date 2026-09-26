@@ -226436,6 +226436,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AlxWolfenstein97/omaboot",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:33:57.053Z",
+      "listingValidatedCommit": "e8fcaa3e20763da74e4661190ab4a8b2e28bb770",
+      "listingValidatedAt": "2026-09-26T07:33:57.053Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alxwolfenstein97/omaboot",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaboot"
+        ],
+        "commit": "e8fcaa3e20763da74e4661190ab4a8b2e28bb770",
+        "checkedAt": "2026-09-26T07:33:56.947Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omaboot",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaboot"
+        ],
+        "commit": "e8fcaa3e20763da74e4661190ab4a8b2e28bb770",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-09-26T07:33:56.947Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-09-26T00:34:44.520Z",
+        "requestEventId": 31882631350,
+        "requestedAt": "2026-09-26T07:11:23Z",
+        "reviewedAt": "2026-09-26T07:33:56.947Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.alxwolfenstein97.omaboot": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
