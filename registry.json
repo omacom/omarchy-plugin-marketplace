@@ -228049,6 +228049,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AlxWolfenstein97/omarchy-lock-sound",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T16:33:24.520Z",
+      "listingValidatedCommit": "2b993f87d533a3ff77ff5b5cd5d7ed5f8117c12b",
+      "listingValidatedAt": "2026-09-26T16:33:24.520Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alxwolfenstein97/omarchy-lock-sound",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.lock-sound"
+        ],
+        "commit": "2b993f87d533a3ff77ff5b5cd5d7ed5f8117c12b",
+        "checkedAt": "2026-09-26T16:33:24.400Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.alxwolfenstein97.lock-sound": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
