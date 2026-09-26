@@ -226212,6 +226212,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/5h3rd1l/omapeats",
+      "type": "plugin-source",
+      "addedAt": "2026-09-26",
+      "listedAt": "2026-09-26T07:11:29.062Z",
+      "listingValidatedCommit": "a9f869e6f67b45e7d620b0c79cfd4354ec57f225",
+      "listingValidatedAt": "2026-09-26T07:11:29.062Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "5h3rd1l/omapeats",
+        "pluginIds": [
+          "io.github.5h3rd1l.soundpeats"
+        ],
+        "commit": "a9f869e6f67b45e7d620b0c79cfd4354ec57f225",
+        "checkedAt": "2026-09-26T07:11:28.991Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.5h3rd1l.soundpeats": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
