@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T00:37:45.351Z",
+  "generatedAt": "2026-09-27T01:03:16.908Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -228581,7 +228581,7 @@
       "repositoryLayout": "root-plugin",
       "installAvailable": false,
       "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installNote": "Add and enable DB Studio with Omarchy. In the cloned plugin directory, install the locked Node dependencies and the desktop launcher and icon. https://github.com/Andean-Bridge/omarchy-db-browser#install",
       "category": "Developer Tools",
       "tags": [
         "bar",
@@ -228589,7 +228589,7 @@
       ],
       "license": "MIT",
       "stars": 0,
-      "repositoryUpdatedAt": "2026-09-25T17:10:50Z",
+      "repositoryUpdatedAt": "2026-09-26T23:52:47Z",
       "accent": "lime",
       "initials": "DS",
       "kind": "Bar widget",
@@ -228606,12 +228606,12 @@
       "listingValidatedBranch": "main",
       "upstreamObservedCommit": "841853868b4bd55d2d99039a64e20c766456f7ee",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-09-26T06:46:34.534Z",
+      "upstreamCheckedAt": "2026-09-27T01:03:16.908Z",
       "upstreamCheckStatus": "passed",
       "upstreamValidatedCommit": "841853868b4bd55d2d99039a64e20c766456f7ee",
-      "upstreamValidatedAt": "2026-09-26T06:46:34.534Z",
+      "upstreamValidatedAt": "2026-09-27T01:03:16.908Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "eb82864b73e97fa068003fe42633bbaac4e0cc4b9ae97419e8df72280992b0ca",
+      "upstreamSourceFingerprint": "6d0fc419e2bb8ee0c6d775a4bd977696054f41891a17190fbc4ee162106d347f",
       "status": "Manual setup"
     },
     {

@@ -164,6 +164,29 @@ test("manual setup plugin details render the manual-install security context", (
   assert.doesNotMatch(html, /This Omarchy command clones the repository’s current HEAD\./);
 });
 
+test("manual setup note shows setup steps and links to the upstream install section", () => {
+  const html = render({
+    installAvailable: false,
+    installCommand: "",
+    installNote: "Add and enable DB Studio with Omarchy. Install the locked Node dependencies and desktop launcher. https://github.com/Andean-Bridge/omarchy-db-browser#install",
+    status: "Manual setup",
+  });
+
+  assert.match(html, /Add and enable DB Studio with Omarchy\. Install the locked Node dependencies and desktop launcher\./);
+  assert.match(html, /<a href="https:\/\/github\.com\/Andean-Bridge\/omarchy-db-browser#install" target="_blank" rel="noreferrer">Read installation instructions <span aria-hidden="true">↗<\/span><\/a>/);
+});
+
+test("manual setup note keeps unsafe links and markup inert", () => {
+  const html = render({
+    installAvailable: false,
+    installNote: '<img src=x onerror=alert(1)> javascript:alert(1)',
+    status: "Manual setup",
+  });
+
+  assert.match(html, /&lt;img src=x onerror=alert\(1\)&gt; javascript:alert\(1\)/);
+  assert.doesNotMatch(html, /<img|href="javascript:/);
+});
+
 test("verified plugin details render only the exact verified snapshot", () => {
   const html = render({
     verificationStatus: "verified",

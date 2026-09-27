@@ -21,7 +21,7 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260923-01";
+} from "./shared.js?v=20260926-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,7 +29,7 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20260923-01";
+} from "./engagement.js?v=20260926-01";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -45,6 +45,18 @@ function safeGitHubWebUrl(value) {
   } catch {
     return "";
   }
+}
+
+function renderInstallNote(note) {
+  const value = String(note || "");
+  const match = value.match(/(?:^|\s)(https:\/\/github\.com\/[^\s<>"']+)$/);
+  if (!match) return escapeHtml(value);
+
+  const url = safeGitHubWebUrl(match[1]);
+  if (!url) return escapeHtml(value);
+
+  const instructions = `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Read installation instructions <span aria-hidden="true">↗</span></a>`;
+  return `${escapeHtml(value.slice(0, match.index).trimEnd())} ${instructions}`;
 }
 
 function marketplaceInstallAvailable(plugin) {
@@ -217,14 +229,14 @@ export function detailTemplate(plugin, engagement, {
     ? ""
     : plugin.installNote || "";
   const installNote = displayedInstallNote
-    ? `<p class="install-note">${escapeHtml(displayedInstallNote)}</p>`
+    ? `<p class="install-note">${renderInstallNote(displayedInstallNote)}</p>`
     : "";
   const install = plugin.builtIn
     ? `${commandPanel}<div class="placeholder-install builtin-availability"><strong>Included with Omarchy Quattro</strong><p>This first-party plugin ships with Omarchy. The command configures the included plugin; it does not download marketplace code.</p></div>`
     : plugin.placeholder
       ? `<div class="placeholder-install"><strong>Coming soon</strong><p>${escapeHtml(plugin.installNote)}</p></div>`
       : !installAvailable
-        ? `<div class="placeholder-install"><strong>${escapeHtml(pluginStatus)}</strong><p>${escapeHtml(plugin.installNote || "")}</p></div>`
+        ? `<div class="placeholder-install"><strong>${escapeHtml(pluginStatus)}</strong><p>${renderInstallNote(plugin.installNote)}</p></div>`
         : `${commandPanel}${installNote}`;
 
   const availabilityHeading = plugin.builtIn || plugin.placeholder || !installAvailable
