@@ -226019,7 +226019,7 @@
           "manifestPath": "manifest.json",
           "installation": {
             "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+            "note": "Add and enable DB Studio with Omarchy. In the cloned plugin directory, install the locked Node dependencies and the desktop launcher and icon. https://github.com/Andean-Bridge/omarchy-db-browser#install"
           }
         }
       }

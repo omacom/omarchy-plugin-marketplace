@@ -1401,9 +1401,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260923-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260923-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260923-01");
+  assert.equal(keys[0], "20260926-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260926-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260926-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
@@ -1540,7 +1540,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.pluginJs, /issues\/new\?template=verify-plugin\.yml/);
   assert.doesNotMatch(files.pluginJs, /update-plugin\.yml/);
   assert.match(files.pluginJs, /security\/advisories\/new/);
-  assert.match(files.pluginJs, /const displayedInstallNote = installAvailable && plugin\.repositoryLayout === "root-plugin"\s*\? ""[\s\S]*const installNote = displayedInstallNote\s*\? `<p class="install-note">\$\{escapeHtml\(displayedInstallNote\)\}<\/p>`\s*:\s*""/);
+  assert.match(files.pluginJs, /const displayedInstallNote = installAvailable && plugin\.repositoryLayout === "root-plugin"\s*\? ""[\s\S]*const installNote = displayedInstallNote\s*\? `<p class="install-note">\$\{renderInstallNote\(displayedInstallNote\)\}<\/p>`\s*:\s*""/);
   assert.doesNotMatch(files.pluginJs, /Mutable upstream installation|Omarchy clones the current upstream repository, validates it locally/);
   assert.match(files.pluginJs, /function safeGitHubWebUrl\(value\)[\s\S]*url\.protocol !== "https:"[\s\S]*url\.hostname !== "github\.com"[\s\S]*return url\.href/);
   assert.match(files.pluginJs, /const repositoryReleaseUrl = safeGitHubWebUrl\(plugin\.repositoryRelease\?\.url\)[\s\S]*plugin\.repositoryRelease\?\.tag && repositoryReleaseUrl[\s\S]*: "No release tag"/);
