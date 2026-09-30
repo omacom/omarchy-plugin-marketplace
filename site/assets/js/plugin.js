@@ -299,7 +299,7 @@ export function detailTemplate(plugin, engagement, {
   return `
     <article class="plugin-detail-article" style="--card-accent:${accentColor(plugin.accent)}">
       <header class="page-header" id="overview"><div class="page-eyebrow">${escapeHtml(plugin.category)}</div>
-        <div class="detail-title"><span class="detail-icon">${escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
+        <div class="detail-title"><span class="detail-icon">${plugin.iconImage ? `<img src="${escapeHtml(plugin.iconImage)}" alt="" width="52" height="52">` : escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
         <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${escapeHtml(plugin.author)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
         ${engagementEnabled ? `<div class="detail-engagement-cluster">
           ${engagementSummary(plugin, engagement, { detail: true, pending: pendingEngagement })}

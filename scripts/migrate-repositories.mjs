@@ -374,7 +374,7 @@ function catalogPreviewPaths(catalog, pluginIds) {
   const ids = new Set(pluginIds);
   return new Set((catalog.plugins || [])
     .filter((plugin) => ids.has(plugin.id))
-    .flatMap((plugin) => [plugin.previewThumbnail, plugin.previewImage])
+    .flatMap((plugin) => [plugin.previewThumbnail, plugin.previewImage, plugin.iconImage])
     .filter(Boolean)
     .map((path) => path.replace(/^assets\/img\/plugins\//, "")));
 }

@@ -12,6 +12,7 @@ Before submitting, confirm that the repository:
 - Contains a root license file and documents external dependencies
 - Uses a globally unique plugin ID outside the reserved `omarchy.*` namespace
 - Optionally contains one root preview named `preview.png`, `preview.jpg`, `preview.jpeg`, `preview.webp`, or `preview.avif`
+- Optionally contains one root icon named `icon.png`, `icon.jpg`, `icon.jpeg`, `icon.webp`, or `icon.avif`, shown in the title tile instead of the plugin's initials
 
 The marketplace removes preview metadata and generates optimized card and detail images automatically. Normal screenshots need no manual resizing or compression. Preview input is limited to 50 MB and 40 megapixels to protect the build runner from malformed or exceptionally large images.
 

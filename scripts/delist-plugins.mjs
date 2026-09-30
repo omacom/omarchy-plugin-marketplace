@@ -127,14 +127,14 @@ export function planPluginDelisting(registry, catalog, requestedPluginIds, optio
 
   const previewPaths = new Set();
   for (const plugin of removedPlugins) {
-    for (const field of ["previewImage", "previewThumbnail"]) {
+    for (const field of ["previewImage", "previewThumbnail", "iconImage"]) {
       const previewPath = normalizedPreviewPath(plugin[field]);
       if (previewPath) previewPaths.add(previewPath);
     }
   }
   const remainingPlugins = catalog.plugins.filter((plugin) => !requested.has(plugin.id));
   for (const plugin of remainingPlugins) {
-    for (const field of ["previewImage", "previewThumbnail"]) {
+    for (const field of ["previewImage", "previewThumbnail", "iconImage"]) {
       const previewPath = normalizedPreviewPath(plugin[field]);
       if (previewPath && previewPaths.has(previewPath)) {
         throw new Error(`Preview is shared with a retained plugin: ${previewPath}`);
