@@ -93,6 +93,7 @@ jobs:
           ref: main
           fetch-depth: 0
           persist-credentials: false
+          filter: blob:none
 
       - name: Record verification base commit
         id: base

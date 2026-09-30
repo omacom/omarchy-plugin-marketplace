@@ -75,6 +75,7 @@ jobs:
           ref: main
           fetch-depth: 0
           persist-credentials: false
+          filter: blob:none
 
       - name: Record delisting base commit
         id: base
@@ -205,6 +206,7 @@ jobs:
           ref: ${{ needs.delist.outputs.base_commit }}
           fetch-depth: 0
           persist-credentials: false
+          filter: blob:none
 
       - name: Set up verification Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6

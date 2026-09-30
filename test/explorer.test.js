@@ -484,6 +484,58 @@ test("Explorer builder fails closed for shallow and truncated repositories", () 
   }
 });
 
+test("Explorer builder fetches blobless clone history snapshots in one explicit fetch", () => {
+  const complete = createExplorerBuilderFixture([{ date: "2026-09-03", total: 3, added: 3 }], fixturePlugins(3), {
+    generatedAt: "2026-09-03T12:00:00.000Z", committedAt: "2026-09-03T12:01:00Z",
+  });
+  const server = fs.mkdtempSync(path.join(os.tmpdir(), "explorer-blobless-server-"));
+  const blobless = fs.mkdtempSync(path.join(os.tmpdir(), "explorer-blobless-clone-"));
+  const nextCatalog = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "explorer-blobless-catalog-")), "catalog.json");
+  try {
+    writeFixtureCatalog(complete, "2026-09-04T12:00:00.000Z", 4);
+    buildFixtureExplorer(complete);
+    commitFixtureSnapshot(complete, "2026-09-04T12:01:00Z");
+    execFileSync("git", ["clone", "--quiet", "--bare", complete, server]);
+    execFileSync("git", ["config", "uploadpack.allowFilter", "true"], { cwd: server });
+    execFileSync("git", ["config", "uploadpack.allowAnySHA1InWant", "true"], { cwd: server });
+    execFileSync("git", ["clone", "--quiet", "--filter=blob:none", `file://${server}`, blobless]);
+    assert.equal(execFileSync("git", ["config", "--get", "remote.origin.promisor"], { cwd: blobless, encoding: "utf8" }).trim(), "true");
+    const firstCommit = execFileSync("git", ["rev-list", "--max-parents=0", "HEAD"], { cwd: blobless, encoding: "utf8" }).trim();
+    const lazyProbe = spawnSync("git", ["cat-file", "-e", `${firstCommit}:site/catalog.json`], {
+      cwd: blobless,
+      env: { ...process.env, GIT_NO_LAZY_FETCH: "1" },
+    });
+    assert.notEqual(lazyProbe.status, 0, "GIT_NO_LAZY_FETCH must block lazy fetches for this test to be meaningful");
+    fs.writeFileSync(nextCatalog, JSON.stringify({ generatedAt: "2026-09-05T12:00:00.000Z", plugins: fixturePlugins(5) }));
+    const trace = path.join(path.dirname(nextCatalog), "trace.json");
+
+    const outputs = [complete, blobless].map((directory) => {
+      const result = spawnSync(process.execPath, ["scripts/build-explorer-data.mjs"], {
+        cwd: directory,
+        encoding: "utf8",
+        env: {
+          ...process.env,
+          GIT_NO_LAZY_FETCH: "1",
+          ...(directory === blobless ? { GIT_TRACE2_EVENT: trace } : {}),
+          MARKETPLACE_EXPLORER_CATALOG_PATH: nextCatalog,
+          MARKETPLACE_EXPLORER_OUTPUT_PATH: path.join(directory, "site", "explorer-data.json"),
+        },
+      });
+      assert.equal(result.status, 0, result.stderr);
+      return fs.readFileSync(path.join(directory, "site", "explorer-data.json"), "utf8");
+    });
+    assert.equal(outputs[1], outputs[0]);
+    assert.deepEqual(JSON.parse(outputs[1]).growth.map(({ total }) => total), [3, 4, 5]);
+    const fetches = fs.readFileSync(trace, "utf8").split("\n")
+      .filter((line) => line.includes('"event":"start"') && line.includes('"fetch.negotiationAlgorithm=noop","fetch"'));
+    assert.equal(fetches.length, 1);
+  } finally {
+    for (const directory of [complete, server, blobless, path.dirname(nextCatalog)]) {
+      fs.rmSync(directory, { recursive: true, force: true });
+    }
+  }
+});
+
 test("explore page exposes graph and date-filtered growth views", () => {
   assert.match(page, /<span class="page-eyebrow">Community registry<\/span>/);
   assert.match(page, /role="tab"[^>]+aria-controls="graph-view"/);
@@ -765,6 +817,25 @@ test("catalog writers publish catalog and Explorer data as one checksummed trans
   assert.ok(verificationProducer.indexOf("node scripts/verify-listed-plugin.mjs") < verificationProducer.indexOf("run: npm run build:explorer"));
   assert.ok(verificationProducer.indexOf("run: npm run build:explorer") < verificationProducer.indexOf("run: npm test"));
   assert.match(workflowJobSource(verificationWorkflow, "publish", "deploy"), /git diff --exit-code -- \. ':!registry\.json' ':!site\/catalog\.json' ':!site\/explorer-data\.json'/);
+});
+
+test("catalog-history checkouts omit historical file contents while PR verification keeps them", () => {
+  const workflowDirectory = new URL("../.github/workflows/", import.meta.url);
+  const fullContentWorkflows = new Set(["verify.yml"]);
+  let checked = 0;
+  for (const name of fs.readdirSync(workflowDirectory).filter((file) => file.endsWith(".yml"))) {
+    const workflow = fs.readFileSync(new URL(name, workflowDirectory), "utf8");
+    for (const block of workflow.match(/ {8}with:\n(?: {10}[^\n]*\n)+/g) || []) {
+      if (!block.includes("fetch-depth: 0")) continue;
+      checked += 1;
+      if (fullContentWorkflows.has(name)) {
+        assert.doesNotMatch(block, /filter: blob:none/, `${name} range diffs need historical file contents`);
+      } else {
+        assert.match(block, /filter: blob:none/, `${name} full-history checkout must stay blobless`);
+      }
+    }
+  }
+  assert.ok(checked > 0);
 });
 
 test("all four Pages timeout paths require deployment, catalog, and Explorer identities", () => {

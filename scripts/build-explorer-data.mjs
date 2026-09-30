@@ -296,6 +296,48 @@ function dailySeries(snapshots) {
   return growth;
 }
 
+function gitConfigValue(args) {
+  try {
+    return execFileSync("git", ["config", ...args], {
+      cwd: projectRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+  } catch {
+    return "";
+  }
+}
+
+function promisorRemote() {
+  const legacy = gitConfigValue(["--get", "extensions.partialclone"]);
+  if (legacy) return legacy;
+  const promisor = gitConfigValue(["--bool", "--get-regexp", "^remote\\..*\\.promisor$"])
+    .split("\n")
+    .map((line) => line.split(" "))
+    .find(([key, value]) => key && value === "true");
+  return promisor ? promisor[0].slice("remote.".length, -".promisor".length) : "";
+}
+
+function prefetchPartialCloneSnapshots(entries) {
+  const remote = promisorRemote();
+  if (!remote || !entries.length) return;
+  const blobs = execFileSync(
+    "git",
+    ["rev-parse", ...entries.map(({ commit }) => `${commit}:site/catalog.json`)],
+    { cwd: projectRoot, encoding: "utf8" },
+  ).trim();
+  execFileSync(
+    "git",
+    [
+      "-c", "fetch.negotiationAlgorithm=noop",
+      "fetch", remote,
+      "--no-tags", "--no-write-fetch-head", "--recurse-submodules=no",
+      "--filter=blob:none", "--stdin",
+    ],
+    { cwd: projectRoot, input: `${blobs}\n`, stdio: ["pipe", "ignore", "inherit"] },
+  );
+}
+
 function historicalCatalogGrowth() {
   const log = execFileSync(
     "git",
@@ -315,8 +357,10 @@ function historicalCatalogGrowth() {
   // A cross-midnight commit must not create a day beyond that catalog's day.
   // Later snapshots become eligible when a later-day catalog is supplied.
   const currentDate = String(catalog.generatedAt).slice(0, 10);
-  const snapshots = [...latestCommitByDay.values()]
-    .filter(({ date }) => date <= currentDate)
+  const snapshotEntries = [...latestCommitByDay.values()]
+    .filter(({ date }) => date <= currentDate);
+  prefetchPartialCloneSnapshots(snapshotEntries);
+  const snapshots = snapshotEntries
     .map(({ commit, date }) => {
       const snapshot = JSON.parse(execFileSync("git", ["show", `${commit}:site/catalog.json`], {
         cwd: projectRoot,
