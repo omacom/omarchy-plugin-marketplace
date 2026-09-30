@@ -876,6 +876,97 @@ test("a built-in source without previous catalog state aborts the refresh and na
   assert.ok(errors.includes("Built-in catalog refresh aborted for example/built-in [repository-unreachable]."), errors.join("\n"));
 });
 
+test("a built-in bar widget is listed with the plugin enable command", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "marketplace-built-in-command-"));
+  const registryPath = join(directory, "registry.json");
+  const catalogPath = join(directory, "site/catalog.json");
+  const previewDirectory = join(directory, "site/assets/img/plugins");
+  const manifest = JSON.stringify({
+    schemaVersion: 1,
+    id: "omarchy.clock",
+    name: "Clock",
+    version: "1.0.0",
+    kinds: ["bar-widget"],
+    entryPoints: { barWidget: "Widget.qml" },
+  });
+  const originalFetch = globalThis.fetch;
+  await mkdir(previewDirectory, { recursive: true });
+  await writeFile(registryPath, `${JSON.stringify({
+    sources: [],
+    builtInSources: [{
+      repo: "https://github.com/example/built-in",
+      branch: "main",
+      manifestRoot: "shell/plugins",
+      exclude: [],
+    }],
+    placeholders: [],
+  }, null, 2)}\n`);
+  await writeFile(catalogPath, `${JSON.stringify({
+    generatedAt: validatedAt,
+    stateSchemaVersion: 2,
+    mode: "production",
+    plugins: [],
+    warnings: [],
+  }, null, 2)}\n`);
+
+  globalThis.fetch = async (input, init = {}) => {
+    const url = String(input);
+    if (url === "https://api.github.com/graphql") {
+      const request = JSON.parse(init.body);
+      if (request.query.includes("CatalogRefreshBudget")) {
+        return jsonResponse({ data: { rateLimit: graphqlRate(4999) } });
+      }
+      return jsonResponse({
+        data: {
+          r0: {
+            ...graphqlRepository({ nameWithOwner: "example/built-in" }),
+            configuredRef: { name: "main", target: { oid: commit, tree: { oid: tree } } },
+          },
+          rateLimit: graphqlRate(4998),
+        },
+      });
+    }
+    if (url === "https://api.github.com/rate_limit") {
+      return jsonResponse({
+        resources: { core: { limit: 5000, remaining: 4998, reset: 1787997600 } },
+      });
+    }
+    if (url === `https://api.github.com/repos/example/built-in/git/trees/${tree}?recursive=1`) {
+      return jsonResponse({
+        truncated: false,
+        tree: [
+          { path: "shell/plugins/clock/manifest.json", type: "blob", mode: "100644", size: 200 },
+          { path: "shell/plugins/clock/Widget.qml", type: "blob", mode: "100644", size: 10 },
+        ],
+      });
+    }
+    if (url === `https://raw.githubusercontent.com/example/built-in/${commit}/shell/plugins/clock/manifest.json`) {
+      return new Response(manifest, {
+        status: 200,
+        headers: { "content-length": String(Buffer.byteLength(manifest)) },
+      });
+    }
+    throw new Error(`Unexpected fixture request: ${url}`);
+  };
+
+  try {
+    await buildCatalog({
+      registryPath,
+      catalogPath,
+      previewDirectory,
+      graphqlBudgetReserve: 0,
+    });
+    const { plugins } = JSON.parse(await readFile(catalogPath, "utf8"));
+    const plugin = plugins.find((entry) => entry.id === "omarchy.clock");
+    assert.equal(plugin?.builtIn, true);
+    assert.equal(plugin.officialCommand, "omarchy plugin enable omarchy.clock");
+    assert.equal(plugin.officialCommandLabel, "Enable plugin");
+  } finally {
+    globalThis.fetch = originalFetch;
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
 test("an unchanged full refresh skips REST trees and raw files without refreshing validation time", async () => {
   const directory = await mkdtemp(join(tmpdir(), "marketplace-graphql-fast-path-"));
   const registryPath = join(directory, "registry.json");
