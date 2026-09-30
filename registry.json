@@ -319,6 +319,471 @@
       "observedHeadCommit": "ab934b1c331362c7e90ea0ebc50335ac117363ac",
       "observedBranch": "main",
       "observedAt": "2026-09-03T19:35:09.305Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "andreivinca/omarchy-note-note",
+      "toRepository": "andreivinca/note-note",
+      "nodeId": "R_kgDOUAxETg",
+      "databaseId": 1342981198,
+      "pluginIds": [
+        "io.github.andreivinca.note-note"
+      ],
+      "listedCommit": "9f6b8a27ea41a096cfdc238588430b55a4749278",
+      "previousValidatedCommit": "fe87821f66ed3626daf81bb543c843dbf2a7ef79",
+      "observedHeadCommit": "fc9e70f9e48fea881d6abbcd6119eefc6a05a489",
+      "observedBranch": "master",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "BlippyOhNo/omarchy-steam",
+      "toRepository": "BlippyOhNo/omarchy-steambar",
+      "nodeId": "R_kgDOUtJGUQ",
+      "databaseId": 1389512273,
+      "pluginIds": [
+        "blip.steam"
+      ],
+      "listedCommit": "5e198380c3798a8b9fd2747cf6b7bde1fdbf562a",
+      "previousValidatedCommit": "5e198380c3798a8b9fd2747cf6b7bde1fdbf562a",
+      "observedHeadCommit": "5e198380c3798a8b9fd2747cf6b7bde1fdbf562a",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "Danubii/omarchy-cockpit",
+      "toRepository": "zeq0r/omarchy-cockpit",
+      "nodeId": "R_kgDOUPV73g",
+      "databaseId": 1358265310,
+      "pluginIds": [
+        "zeq0r.cockpit"
+      ],
+      "listedCommit": "59940205a5edebc100f3b4f5ce1ab13ebef506e3",
+      "previousValidatedCommit": "38fae23266fa5d9d76a6d3a0a9a96902cc525f22",
+      "observedHeadCommit": "36612ab6e21f42bc01d6b9dfce7ae63f97a90bfa",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "DevInBlack001/omarchy-transfer-manager",
+      "toRepository": "DevInBlack001/arch-transfer-manager",
+      "nodeId": "R_kgDOUHRPCw",
+      "databaseId": 1349799691,
+      "pluginIds": [
+        "filetransfer"
+      ],
+      "listedCommit": "33d74f9cb5e30ce63d7ffac75dd8558f25b31273",
+      "previousValidatedCommit": "33d74f9cb5e30ce63d7ffac75dd8558f25b31273",
+      "observedHeadCommit": "55810e9e01ca1dcc26b0696723e33ea48f5b214a",
+      "observedBranch": "master",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "djspatule/tts-clip",
+      "toRepository": "lionel-arnaud/tts-clip",
+      "nodeId": "R_kgDOULrnyw",
+      "databaseId": 1354426315,
+      "pluginIds": [
+        "io.github.djspatule.tts-clip"
+      ],
+      "listedCommit": "dd806926e91772683004c3feac284afb51bc04b2",
+      "previousValidatedCommit": "dd806926e91772683004c3feac284afb51bc04b2",
+      "observedHeadCommit": "8000e99493acba576359f05e058c4b36b964477f",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "elranu/omarchy-panorama",
+      "toRepository": "elranu/omarchy-vista",
+      "nodeId": "R_kgDOULB_kg",
+      "databaseId": 1353744274,
+      "pluginIds": [
+        "ranu.panorama"
+      ],
+      "listedCommit": "9141c662c5854c93fbdcd36beae3a592b16607ea",
+      "previousValidatedCommit": "d71981b1d9a5950c46608bdd67f2070f3cbd56f6",
+      "observedHeadCommit": "f557c0b2f5a86023f23e4718740acc026e05636f",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "eudionelima/bookomarchy",
+      "toRepository": "0xdun0/bookomarchy",
+      "nodeId": "R_kgDOUYE7Ng",
+      "databaseId": 1367423798,
+      "pluginIds": [
+        "eudionelima.bookomarchy"
+      ],
+      "listedCommit": "ccd3bb3c12c27d841932f073ab79645058ea6b4e",
+      "previousValidatedCommit": "ccd3bb3c12c27d841932f073ab79645058ea6b4e",
+      "observedHeadCommit": "780853cc1f48e9ce03ac8f0422989b54ddcddf39",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "gigasolo/omarchy-fizzy",
+      "toRepository": "gigasolo/omafizzy",
+      "nodeId": "R_kgDOT4tQXQ",
+      "databaseId": 1334530141,
+      "pluginIds": [
+        "gigasolo.fizzy"
+      ],
+      "listedCommit": "ed57041851d65b7b249479e9e9d627bf88cce797",
+      "previousValidatedCommit": "a43c9a7367bab6ab1bc85de2d686f9e378275921",
+      "observedHeadCommit": "d9a9dc687a84ef2154b087c1b313b49a1f232375",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "greenermoose/omarchy-fred-clock",
+      "toRepository": "greenermoose/clock-fred-tamlinux",
+      "nodeId": "R_kgDOUXWV9Q",
+      "databaseId": 1366660597,
+      "pluginIds": [
+        "fred.clock"
+      ],
+      "listedCommit": "dc6f3dbd1323e8bc11bbf481ab9909a4d4fd009f",
+      "previousValidatedCommit": "74ff982d3f770364e08c47880034adf5f8ef48fb",
+      "observedHeadCommit": "ed5140ccefc83c0a2fdd5f899bbd290acc35d88a",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "greenermoose/omarchy-fred-keyboard",
+      "toRepository": "greenermoose/keyboard-fred-tamlinux",
+      "nodeId": "R_kgDOUh--DA",
+      "databaseId": 1377811980,
+      "pluginIds": [
+        "fred.keyboard"
+      ],
+      "listedCommit": "95e43dc7122ea8202adb64d614ede8df976acba5",
+      "previousValidatedCommit": "95e43dc7122ea8202adb64d614ede8df976acba5",
+      "observedHeadCommit": "6fa043ebab6485a0a5a072fa4b6346b06d7d569b",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "greenermoose/omarchy-fred-workspaces",
+      "toRepository": "greenermoose/workspaces-fred-tamlinux",
+      "nodeId": "R_kgDOUW6u2w",
+      "databaseId": 1366208219,
+      "pluginIds": [
+        "fred.workspaces"
+      ],
+      "listedCommit": "94362b0c7bf7ba4ddc883d2fd2b96277a4080d8a",
+      "previousValidatedCommit": "345795005aaba14bc8e320be8e161acf99bb2410",
+      "observedHeadCommit": "4ddac791fcb6f4cbd9f857255bc950e73b901e7f",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "itchyfeetleech/omarchy-op1we",
+      "toRepository": "itchyfeetleech/OP1we-Control",
+      "nodeId": "R_kgDOURANGQ",
+      "databaseId": 1360006425,
+      "pluginIds": [
+        "hoppcx.op1we"
+      ],
+      "listedCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "previousValidatedCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "observedHeadCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "observedBranch": "master",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "javihuh/recurring-schedule-omarchy",
+      "toRepository": "javihuh/niku-calendar-omarchy",
+      "nodeId": "R_kgDOUd0c-Q",
+      "databaseId": 1373445369,
+      "pluginIds": [
+        "io.github.javihuh.schedule"
+      ],
+      "listedCommit": "3e1967a6a4bba1d4b33b5925a07f0c2a95abccfd",
+      "previousValidatedCommit": "f603b1cef24dca084545160df0a8d89a8154c124",
+      "observedHeadCommit": "c9b4b8c0ee26ba2d4dff627c71c569e5b7eb9669",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "lkzwieder/omarchy-opencode-usage",
+      "toRepository": "lkzwieder/omarchy-opencode-savings",
+      "nodeId": "R_kgDOUNi4Xg",
+      "databaseId": 1356380254,
+      "pluginIds": [
+        "lkzwieder.opencode-usage"
+      ],
+      "listedCommit": "dae4d2efd62a3455bdcd12787fa736b0e9e37ba0",
+      "previousValidatedCommit": "dae4d2efd62a3455bdcd12787fa736b0e9e37ba0",
+      "observedHeadCommit": "dae4d2efd62a3455bdcd12787fa736b0e9e37ba0",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "MAXI8594/omarchy-sec-plugin",
+      "toRepository": "0xMax-Sec/omarchy-sec-plugin",
+      "nodeId": "R_kgDOULEhKA",
+      "databaseId": 1353785640,
+      "pluginIds": [
+        "io.github.maxi8594.omarchy-sec"
+      ],
+      "listedCommit": "d3b8426dc08802147387cfe1489730a0bb17359c",
+      "previousValidatedCommit": "d3b8426dc08802147387cfe1489730a0bb17359c",
+      "observedHeadCommit": "d3b8426dc08802147387cfe1489730a0bb17359c",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "modoterra/omadesk",
+      "toRepository": "csfh/omadesk",
+      "nodeId": "R_kgDOT_DnXg",
+      "databaseId": 1341187934,
+      "pluginIds": [
+        "com.mdtrr.omadesk"
+      ],
+      "listedCommit": "e71dfdf0bdf7308ad71cbf8660df3e76bdb277a8",
+      "previousValidatedCommit": "3667d839161218d166dd3749273cac632f2c6e46",
+      "observedHeadCommit": "3667d839161218d166dd3749273cac632f2c6e46",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "modpunk/omarchy-help",
+      "toRepository": "OmarchyFans/omarchy-fans-help",
+      "nodeId": "R_kgDOUS5enQ",
+      "databaseId": 1361993373,
+      "pluginIds": [
+        "io.github.modpunk.omarchy-help"
+      ],
+      "listedCommit": "851e471db704e4310e83f878de9180ab888e5c56",
+      "previousValidatedCommit": "851e471db704e4310e83f878de9180ab888e5c56",
+      "observedHeadCommit": "6972fecfe5dad5e83af61fefcbd2caef0404ce64",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "njpatel/omapager",
+      "toRepository": "ryanrhughes/omapager",
+      "nodeId": "R_kgDOUPAQ-w",
+      "databaseId": 1357910267,
+      "pluginIds": [
+        "njpatel.omapager"
+      ],
+      "listedCommit": "6fe51b5ea84a172bb43a26a6dee67bdd9bef9d87",
+      "previousValidatedCommit": "5cde92ac662418a877fc858bb5859a0933526d64",
+      "observedHeadCommit": "c389e73516828d18f26e8efec2127c0c3dc3cb97",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "nventatech/dockplus",
+      "toRepository": "gabrielsitta4/dockplus",
+      "nodeId": "R_kgDOUgsTPg",
+      "databaseId": 1376457534,
+      "pluginIds": [
+        "io.github.nventatech.dockplus"
+      ],
+      "listedCommit": "599725eebe0157e4f404bdc75b159cedc6766634",
+      "previousValidatedCommit": "599725eebe0157e4f404bdc75b159cedc6766634",
+      "observedHeadCommit": "62f8a59ca5e62579a364ae92ae405ec08773d114",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "omribenami/omarchy-ai-settings",
+      "toRepository": "omribenami/omarchy-ai-plugin",
+      "nodeId": "R_kgDOUvN3ng",
+      "databaseId": 1391687582,
+      "pluginIds": [
+        "omarchy-ai.settings"
+      ],
+      "listedCommit": "7f7aa9a350c68847f5689517c8c961525ba34289",
+      "previousValidatedCommit": "7f7aa9a350c68847f5689517c8c961525ba34289",
+      "observedHeadCommit": "91f3acdf26e10e5443a8be36d84404848485ff8c",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "owainharris/omarchy-span-wallpaper",
+      "toRepository": "owainharris/omarchy-horizon",
+      "nodeId": "R_kgDOUNx4Jw",
+      "databaseId": 1356625959,
+      "pluginIds": [
+        "kudos.span-wallpaper"
+      ],
+      "listedCommit": "450329ac8dc89fcffe84a1741dfab7cfd32be87a",
+      "previousValidatedCommit": "450329ac8dc89fcffe84a1741dfab7cfd32be87a",
+      "observedHeadCommit": "450329ac8dc89fcffe84a1741dfab7cfd32be87a",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "plasticcupgames/Omachy-Pixels",
+      "toRepository": "timhyattgames/Omachy-Pixels",
+      "nodeId": "R_kgDOUPqs-A",
+      "databaseId": 1358605560,
+      "pluginIds": [
+        "plasticcupgames.omachy-pixels"
+      ],
+      "listedCommit": "ad8ff2cc5891dc8b73b6990054e3e5b15da90aa2",
+      "previousValidatedCommit": "ad8ff2cc5891dc8b73b6990054e3e5b15da90aa2",
+      "observedHeadCommit": "63b36557fd88353566f4233d7e2cd1a041ed4f4f",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "ReidenXerx/omarchy-keyboard-layout-per-app",
+      "toRepository": "ReidenXerx/omarchy-omalang",
+      "nodeId": "R_kgDOUT8q6w",
+      "databaseId": 1363094251,
+      "pluginIds": [
+        "reidenxerx.keyboard-layout-per-app"
+      ],
+      "listedCommit": "2c092fb25062a183b13e1fdcffc0701a6dd2f1e4",
+      "previousValidatedCommit": "2c092fb25062a183b13e1fdcffc0701a6dd2f1e4",
+      "observedHeadCommit": "6445c108da1672158612e438c1d6e1c698af91eb",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "rfaile313/omarchy-menu-sysmon",
+      "toRepository": "rfaile313/omarchy-bar-sysmon",
+      "nodeId": "R_kgDOUeRcWg",
+      "databaseId": 1373920346,
+      "pluginIds": [
+        "rfaile313.menu-sysmon"
+      ],
+      "listedCommit": "3f6efcaf6d83cc0d0229f7424374551fa4478261",
+      "previousValidatedCommit": "3f6efcaf6d83cc0d0229f7424374551fa4478261",
+      "observedHeadCommit": "3f6efcaf6d83cc0d0229f7424374551fa4478261",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "TheBoxer71/OmniTiler",
+      "toRepository": "PixDevsApps/OmniTiler",
+      "nodeId": "R_kgDOUdN6lg",
+      "databaseId": 1372813974,
+      "pluginIds": [
+        "theboxer71.omnitiler"
+      ],
+      "listedCommit": "377553b1b9f3c9e087ad6c233b9c30f9a46c47b5",
+      "previousValidatedCommit": "377553b1b9f3c9e087ad6c233b9c30f9a46c47b5",
+      "observedHeadCommit": "9f200fd42cc02899842350257919f42a72625aed",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "tsouth89/omarchy-omcp",
+      "toRepository": "btsouth/omarchy-omcp",
+      "nodeId": "R_kgDOT-GWlw",
+      "databaseId": 1340184215,
+      "pluginIds": [
+        "tsouth89.omcp"
+      ],
+      "listedCommit": "5f5a0cc8dcdccb120764af7c7b8c9fec8879e32b",
+      "previousValidatedCommit": "02dc690685c41fcad55c2129a6bc43bbe701bda9",
+      "observedHeadCommit": "7beab7183eddaa8106b0d1b12ebbba3adcead50e",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "tsouth89/omarchy-resurrect",
+      "toRepository": "btsouth/omarchy-resurrect",
+      "nodeId": "R_kgDOT-BIEQ",
+      "databaseId": 1340098577,
+      "pluginIds": [
+        "tsouth89.resurrect"
+      ],
+      "listedCommit": "2915980c22950f047e2d4d407e4ec1e2090872c2",
+      "previousValidatedCommit": "bde0b3dfe2a37e71155c81b747c2dd0c4cd051f3",
+      "observedHeadCommit": "0693a4a6b30c46f63369c8370728a965cc2a1f43",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "tsouth89/signal",
+      "toRepository": "btsouth/signal",
+      "nodeId": "R_kgDOT_BSHA",
+      "databaseId": 1341149724,
+      "pluginIds": [
+        "tsouth89.signal"
+      ],
+      "listedCommit": "d3786df264f3b3f8fbfd44852570abe934fbae5c",
+      "previousValidatedCommit": "d3786df264f3b3f8fbfd44852570abe934fbae5c",
+      "observedHeadCommit": "41b6c71fdce3093b30959bddd26bda4328a7090e",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "umbraxc/omarchy-agent-launcher",
+      "toRepository": "umbraxc/omarchy-umbra",
+      "nodeId": "R_kgDOUtGgVA",
+      "databaseId": 1389469780,
+      "pluginIds": [
+        "io.github.umbraxc.agent-launcher"
+      ],
+      "listedCommit": "9160f5b5b231046450e1df67321abf7bacbc5a75",
+      "previousValidatedCommit": "9160f5b5b231046450e1df67321abf7bacbc5a75",
+      "observedHeadCommit": "89d4ea6681075669a8c8911588c7d3a9e74d6518",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "UnderStackDev/omarchy_kdeconnect_quick_reply",
+      "toRepository": "UnderStackDev/omarchy_plugin_kdeconnect_quick_reply",
+      "nodeId": "R_kgDOUTgpmg",
+      "databaseId": 1362635162,
+      "pluginIds": [
+        "io.github.understackdev.quick-reply"
+      ],
+      "listedCommit": "39d395ed068e4123ced25db9d71a8c81dd080d83",
+      "previousValidatedCommit": "0100d6100278598716e18ffde831af6777df127b",
+      "observedHeadCommit": "0100d6100278598716e18ffde831af6777df127b",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "Westy47/omarchy-hidden-bar",
+      "toRepository": "hugogeay/omarchy-hidden-bar",
+      "nodeId": "R_kgDOULDd-A",
+      "databaseId": 1353768440,
+      "pluginIds": [
+        "westy47.hidden-bar"
+      ],
+      "listedCommit": "fe9cde297e8c6a425f271c14ffd83c370cb0311b",
+      "previousValidatedCommit": "fe9cde297e8c6a425f271c14ffd83c370cb0311b",
+      "observedHeadCommit": "fe9cde297e8c6a425f271c14ffd83c370cb0311b",
+      "observedBranch": "main",
+      "observedAt": "2026-09-30T16:12:28.998Z"
     }
   ],
   "sources": [
@@ -6722,7 +7187,15 @@
       }
     },
     {
-      "repo": "https://github.com/gigasolo/omarchy-fizzy",
+      "repo": "https://github.com/gigasolo/omafizzy",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOT4tQXQ",
+        "databaseId": 1334530141,
+        "previousRepositories": [
+          "gigasolo/omarchy-fizzy"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T11:22:21.367Z",
@@ -6730,7 +7203,12 @@
       "listingValidatedAt": "2026-08-15T11:22:21.367Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
+        "schemaVersion": 1,
         "version": "3",
+        "repository": "gigasolo/omarchy-fizzy",
+        "pluginIds": [
+          "gigasolo.fizzy"
+        ],
         "commit": "ed57041851d65b7b249479e9e9d627bf88cce797",
         "checkedAt": "2026-08-15T04:49:03.190Z",
         "outcome": "review-required",
@@ -28789,7 +29267,15 @@
       }
     },
     {
-      "repo": "https://github.com/tsouth89/omarchy-resurrect",
+      "repo": "https://github.com/btsouth/omarchy-resurrect",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOT-BIEQ",
+        "databaseId": 1340098577,
+        "previousRepositories": [
+          "tsouth89/omarchy-resurrect"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T04:02:43.678Z",
@@ -34413,7 +34899,15 @@
       }
     },
     {
-      "repo": "https://github.com/tsouth89/omarchy-omcp",
+      "repo": "https://github.com/btsouth/omarchy-omcp",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOT-GWlw",
+        "databaseId": 1340184215,
+        "previousRepositories": [
+          "tsouth89/omarchy-omcp"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T00:11:12.655Z",
@@ -40513,7 +41007,15 @@
       }
     },
     {
-      "repo": "https://github.com/tsouth89/signal",
+      "repo": "https://github.com/btsouth/signal",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOT_BSHA",
+        "databaseId": 1341149724,
+        "previousRepositories": [
+          "tsouth89/signal"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T11:11:03.821Z",
@@ -81250,7 +81752,15 @@
       }
     },
     {
-      "repo": "https://github.com/andreivinca/omarchy-note-note",
+      "repo": "https://github.com/andreivinca/note-note",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUAxETg",
+        "databaseId": 1342981198,
+        "previousRepositories": [
+          "andreivinca/omarchy-note-note"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T22:31:52.324Z",
@@ -81345,7 +81855,15 @@
       ]
     },
     {
-      "repo": "https://github.com/modoterra/omadesk",
+      "repo": "https://github.com/csfh/omadesk",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOT_DnXg",
+        "databaseId": 1341187934,
+        "previousRepositories": [
+          "modoterra/omadesk"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T22:33:08.215Z",
@@ -94511,7 +95029,15 @@
       }
     },
     {
-      "repo": "https://github.com/DevInBlack001/omarchy-transfer-manager",
+      "repo": "https://github.com/DevInBlack001/arch-transfer-manager",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUHRPCw",
+        "databaseId": 1349799691,
+        "previousRepositories": [
+          "DevInBlack001/omarchy-transfer-manager"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T20:13:51.088Z",
@@ -135534,7 +136060,15 @@
       }
     },
     {
-      "repo": "https://github.com/MAXI8594/omarchy-sec-plugin",
+      "repo": "https://github.com/0xMax-Sec/omarchy-sec-plugin",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOULEhKA",
+        "databaseId": 1353785640,
+        "previousRepositories": [
+          "MAXI8594/omarchy-sec-plugin"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T22:11:56.457Z",
@@ -137690,7 +138224,15 @@
       }
     },
     {
-      "repo": "https://github.com/Westy47/omarchy-hidden-bar",
+      "repo": "https://github.com/hugogeay/omarchy-hidden-bar",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOULDd-A",
+        "databaseId": 1353768440,
+        "previousRepositories": [
+          "Westy47/omarchy-hidden-bar"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T18:52:17.633Z",
@@ -138147,7 +138689,15 @@
       ]
     },
     {
-      "repo": "https://github.com/owainharris/omarchy-span-wallpaper",
+      "repo": "https://github.com/owainharris/omarchy-horizon",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUNx4Jw",
+        "databaseId": 1356625959,
+        "previousRepositories": [
+          "owainharris/omarchy-span-wallpaper"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-05",
       "listedAt": "2026-09-05T22:17:01.893Z",
@@ -141565,7 +142115,15 @@
       }
     },
     {
-      "repo": "https://github.com/plasticcupgames/Omachy-Pixels",
+      "repo": "https://github.com/timhyattgames/Omachy-Pixels",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUPqs-A",
+        "databaseId": 1358605560,
+        "previousRepositories": [
+          "plasticcupgames/Omachy-Pixels"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:28:45.588Z",
@@ -141821,7 +142379,15 @@
       }
     },
     {
-      "repo": "https://github.com/Danubii/omarchy-cockpit",
+      "repo": "https://github.com/zeq0r/omarchy-cockpit",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUPV73g",
+        "databaseId": 1358265310,
+        "previousRepositories": [
+          "Danubii/omarchy-cockpit"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T02:41:28.745Z",
@@ -149726,7 +150292,15 @@
       }
     },
     {
-      "repo": "https://github.com/itchyfeetleech/omarchy-op1we",
+      "repo": "https://github.com/itchyfeetleech/OP1we-Control",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOURANGQ",
+        "databaseId": 1360006425,
+        "previousRepositories": [
+          "itchyfeetleech/omarchy-op1we"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T11:09:41.106Z",
@@ -157903,7 +158477,15 @@
       }
     },
     {
-      "repo": "https://github.com/njpatel/omapager",
+      "repo": "https://github.com/ryanrhughes/omapager",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUPAQ-w",
+        "databaseId": 1357910267,
+        "previousRepositories": [
+          "njpatel/omapager"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T22:24:21.793Z",
@@ -160495,7 +161077,15 @@
       }
     },
     {
-      "repo": "https://github.com/modpunk/omarchy-help",
+      "repo": "https://github.com/OmarchyFans/omarchy-fans-help",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUS5enQ",
+        "databaseId": 1361993373,
+        "previousRepositories": [
+          "modpunk/omarchy-help"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-09",
       "listedAt": "2026-09-09T01:53:53.481Z",
@@ -166783,7 +167373,15 @@
       }
     },
     {
-      "repo": "https://github.com/UnderStackDev/omarchy_kdeconnect_quick_reply",
+      "repo": "https://github.com/UnderStackDev/omarchy_plugin_kdeconnect_quick_reply",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUTgpmg",
+        "databaseId": 1362635162,
+        "previousRepositories": [
+          "UnderStackDev/omarchy_kdeconnect_quick_reply"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T07:30:45.329Z",
@@ -168241,7 +168839,15 @@
       ]
     },
     {
-      "repo": "https://github.com/ReidenXerx/omarchy-keyboard-layout-per-app",
+      "repo": "https://github.com/ReidenXerx/omarchy-omalang",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUT8q6w",
+        "databaseId": 1363094251,
+        "previousRepositories": [
+          "ReidenXerx/omarchy-keyboard-layout-per-app"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-11",
       "listedAt": "2026-09-11T18:56:57.937Z",
@@ -172447,7 +173053,15 @@
       }
     },
     {
-      "repo": "https://github.com/greenermoose/omarchy-fred-workspaces",
+      "repo": "https://github.com/greenermoose/workspaces-fred-tamlinux",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUW6u2w",
+        "databaseId": 1366208219,
+        "previousRepositories": [
+          "greenermoose/omarchy-fred-workspaces"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T13:09:19.783Z",
@@ -183199,7 +183813,15 @@
       }
     },
     {
-      "repo": "https://github.com/greenermoose/omarchy-fred-clock",
+      "repo": "https://github.com/greenermoose/clock-fred-tamlinux",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUXWV9Q",
+        "databaseId": 1366660597,
+        "previousRepositories": [
+          "greenermoose/omarchy-fred-clock"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T07:42:33.187Z",
@@ -187148,7 +187770,15 @@
       ]
     },
     {
-      "repo": "https://github.com/TheBoxer71/OmniTiler",
+      "repo": "https://github.com/PixDevsApps/OmniTiler",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUdN6lg",
+        "databaseId": 1372813974,
+        "previousRepositories": [
+          "TheBoxer71/OmniTiler"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T18:50:07.115Z",
@@ -188410,7 +189040,15 @@
       ]
     },
     {
-      "repo": "https://github.com/javihuh/recurring-schedule-omarchy",
+      "repo": "https://github.com/javihuh/niku-calendar-omarchy",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUd0c-Q",
+        "databaseId": 1373445369,
+        "previousRepositories": [
+          "javihuh/recurring-schedule-omarchy"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T20:08:59.149Z",
@@ -194518,7 +195156,15 @@
       }
     },
     {
-      "repo": "https://github.com/djspatule/tts-clip",
+      "repo": "https://github.com/lionel-arnaud/tts-clip",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOULrnyw",
+        "databaseId": 1354426315,
+        "previousRepositories": [
+          "djspatule/tts-clip"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-18",
       "listedAt": "2026-09-18T18:48:47.516Z",
@@ -203792,7 +204438,15 @@
       }
     },
     {
-      "repo": "https://github.com/elranu/omarchy-panorama",
+      "repo": "https://github.com/elranu/omarchy-vista",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOULB_kg",
+        "databaseId": 1353744274,
+        "previousRepositories": [
+          "elranu/omarchy-panorama"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T04:58:53.220Z",
@@ -203917,7 +204571,15 @@
       }
     },
     {
-      "repo": "https://github.com/nventatech/dockplus",
+      "repo": "https://github.com/gabrielsitta4/dockplus",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUgsTPg",
+        "databaseId": 1376457534,
+        "previousRepositories": [
+          "nventatech/dockplus"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T05:08:16.801Z",
@@ -206216,7 +206878,15 @@
       }
     },
     {
-      "repo": "https://github.com/greenermoose/omarchy-fred-keyboard",
+      "repo": "https://github.com/greenermoose/keyboard-fred-tamlinux",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUh--DA",
+        "databaseId": 1377811980,
+        "previousRepositories": [
+          "greenermoose/omarchy-fred-keyboard"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T20:47:06.025Z",
@@ -209137,7 +209807,15 @@
       ]
     },
     {
-      "repo": "https://github.com/lkzwieder/omarchy-opencode-usage",
+      "repo": "https://github.com/lkzwieder/omarchy-opencode-savings",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUNi4Xg",
+        "databaseId": 1356380254,
+        "previousRepositories": [
+          "lkzwieder/omarchy-opencode-usage"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T01:49:24.833Z",
@@ -214653,7 +215331,15 @@
       }
     },
     {
-      "repo": "https://github.com/eudionelima/bookomarchy",
+      "repo": "https://github.com/0xdun0/bookomarchy",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUYE7Ng",
+        "databaseId": 1367423798,
+        "previousRepositories": [
+          "eudionelima/bookomarchy"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T12:56:08.739Z",
@@ -229456,7 +230142,15 @@
       }
     },
     {
-      "repo": "https://github.com/rfaile313/omarchy-menu-sysmon",
+      "repo": "https://github.com/rfaile313/omarchy-bar-sysmon",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUeRcWg",
+        "databaseId": 1373920346,
+        "previousRepositories": [
+          "rfaile313/omarchy-menu-sysmon"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T07:25:15.378Z",
@@ -231407,7 +232101,15 @@
       }
     },
     {
-      "repo": "https://github.com/umbraxc/omarchy-agent-launcher",
+      "repo": "https://github.com/umbraxc/omarchy-umbra",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUtGgVA",
+        "databaseId": 1389469780,
+        "previousRepositories": [
+          "umbraxc/omarchy-agent-launcher"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T23:45:34.327Z",
@@ -239578,7 +240280,15 @@
       }
     },
     {
-      "repo": "https://github.com/omribenami/omarchy-ai-settings",
+      "repo": "https://github.com/omribenami/omarchy-ai-plugin",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUvN3ng",
+        "databaseId": 1391687582,
+        "previousRepositories": [
+          "omribenami/omarchy-ai-settings"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T05:00:05.785Z",
@@ -244201,7 +244911,15 @@
       }
     },
     {
-      "repo": "https://github.com/BlippyOhNo/omarchy-steam",
+      "repo": "https://github.com/BlippyOhNo/omarchy-steambar",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOUtJGUQ",
+        "databaseId": 1389512273,
+        "previousRepositories": [
+          "BlippyOhNo/omarchy-steam"
+        ]
+      },
       "type": "plugin-source",
       "addedAt": "2026-09-29",
       "listedAt": "2026-09-29T06:37:37.188Z",
