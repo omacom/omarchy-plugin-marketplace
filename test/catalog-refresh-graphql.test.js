@@ -504,21 +504,21 @@ test("REST tree budget is explicit, bounded, and fail-closed", async () => {
     globalThis.fetch = async (input) => {
       assert.equal(String(input), "https://api.github.com/rate_limit");
       return jsonResponse({
-        resources: { core: { limit: 5000, remaining: 700, reset: 1787997600 } },
+        resources: { core: { limit: 5000, remaining: 200 + catalogRefreshRestBudgetReserve, reset: 1787997600 } },
       });
     };
     await assert.rejects(
       assertFullRefreshRestBudget(250),
       (error) => error instanceof CatalogBuildError
         && error.code === "api-budget-insufficient"
-        && /trees 250, reserve 500/.test(error.message),
+        && error.message.includes(`trees 250, reserve ${catalogRefreshRestBudgetReserve}`),
     );
 
     globalThis.fetch = async () => jsonResponse({
-      resources: { core: { limit: 5000, remaining: 751, reset: 1787997600 } },
+      resources: { core: { limit: 5000, remaining: 251 + catalogRefreshRestBudgetReserve, reset: 1787997600 } },
     });
     const accepted = await assertFullRefreshRestBudget(250);
-    assert.equal(accepted.remaining, 751);
+    assert.equal(accepted.remaining, 251 + catalogRefreshRestBudgetReserve);
     assert.equal(currentCatalogApiUsage().restRateLimitRequests, 2);
   } finally {
     globalThis.fetch = originalFetch;
