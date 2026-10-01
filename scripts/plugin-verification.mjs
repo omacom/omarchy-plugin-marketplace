@@ -32,6 +32,7 @@ import {
   serializeMaintainerVerificationExpectation,
 } from "./verification-review.mjs";
 import {
+  canonicalRepositoryRequest,
   resolveListedSource,
   resolveVerificationSubject,
   VerificationSubjectError,
@@ -290,7 +291,7 @@ export function revokeMaintainerVerification({
       commitSha: String(candidate.listingValidatedCommit || "").toLowerCase(),
     };
   } else {
-    request = parseVerificationRequest(body);
+    request = canonicalRepositoryRequest(registry, parseVerificationRequest(body));
     if (request.action !== listedSnapshotVerificationAction) {
       throw new PluginVerificationError(
         "verification-revocation-action-invalid",
@@ -395,7 +396,7 @@ export async function analyzeListedPluginVerification({
   maintainerReview = null,
   standardInstallationApproval = null,
 }) {
-  const request = parseVerificationRequest(body);
+  const request = canonicalRepositoryRequest(registry, parseVerificationRequest(body));
   const standardInstallationRequested = request.action === standardInstallationVerificationAction;
   if (
     standardInstallationRequested

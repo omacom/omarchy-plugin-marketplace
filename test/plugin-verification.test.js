@@ -22,6 +22,7 @@ import {
   securityBaselineVersion,
 } from "../scripts/security-baseline-policy.mjs";
 import { catalogVerificationFields } from "../scripts/catalog-verification.mjs";
+import { canonicalRepositoryRequest } from "../scripts/verification-subject.mjs";
 import { sourceVerification } from "../scripts/verification-status.mjs";
 import {
   legacyListedSnapshotAcknowledgment,
@@ -859,6 +860,49 @@ test("verification requests must match one existing registry source exactly", ()
   assert.throws(
     () => listedSourceForRequest(registry, { ...request, commitSha: otherCommit }),
     (error) => error.code === "verification-commit-mismatch",
+  );
+});
+
+test("verification requests may name a recorded former repository of their own listing", () => {
+  const identity = {
+    schemaVersion: 1,
+    nodeId: "R_kgDOExample",
+    databaseId: 123456789,
+    previousRepositories: ["Former/Plugin"],
+  };
+  const migrated = source({ repositoryIdentity: identity });
+  const registry = { sources: [migrated] };
+  const request = parseVerificationRequest(requestBody());
+  assert.equal(canonicalRepositoryRequest(registry, request), request);
+
+  const former = parseVerificationRequest(requestBody({ repoUrl: "https://github.com/Former/Plugin" }));
+  assert.equal(former.repository, "former/plugin");
+  const canonical = canonicalRepositoryRequest(registry, former);
+  assert.equal(canonical.repository, "example/plugin");
+  assert.equal(canonical.repoUrl, migrated.repo);
+  assert.equal(canonical.pluginId, former.pluginId);
+  assert.equal(canonical.commitSha, former.commitSha);
+  assert.equal(canonical.action, former.action);
+  assert.equal(listedSourceForRequest(registry, canonical), migrated);
+
+  const otherListing = source({
+    repo: "https://github.com/second/plugin",
+    plugins: { "second.plugin": { category: "System", tags: ["system"] } },
+    repositoryIdentity: { ...identity, previousRepositories: ["Third/Plugin"] },
+  });
+  for (const [candidateRegistry, candidate] of [
+    [registry, { ...request, repository: "other/plugin" }],
+    [{ sources: [migrated, otherListing] }, { ...request, repository: "third/plugin" }],
+    [{ sources: [source()] }, former],
+    [{ sources: [source({ repositoryIdentity: { ...identity, nodeId: "invalid" } })] }, former],
+    [{ sources: [migrated, source({ repo: "https://github.com/copy/plugin" })] }, former],
+    [registry, { ...former, pluginId: "missing.plugin" }],
+  ]) {
+    assert.equal(canonicalRepositoryRequest(candidateRegistry, candidate), candidate);
+  }
+  assert.throws(
+    () => listedSourceForRequest({ sources: [source()] }, canonicalRepositoryRequest({ sources: [source()] }, former)),
+    (error) => error.code === "verification-repository-mismatch",
   );
 });
 

@@ -13,6 +13,7 @@ import {
   resolvePluginUpdate,
   sourceForPluginUpdate,
 } from "./plugin-update.mjs";
+import { canonicalRepositoryRequest } from "./verification-subject.mjs";
 
 function requiredEnvironment(name) {
   const value = process.env[name];
@@ -28,9 +29,12 @@ async function main() {
       "Plugin verification title must start with [Verify]:",
     );
   }
-  const request = parsePluginUpdateRequest(requiredEnvironment("ISSUE_BODY"));
   const root = resolve(import.meta.dirname, "..");
   const registry = JSON.parse(await readFile(resolve(root, "registry.json"), "utf8"));
+  const request = canonicalRepositoryRequest(
+    registry,
+    parsePluginUpdateRequest(requiredEnvironment("ISSUE_BODY")),
+  );
   const source = sourceForPluginUpdate(registry, request);
   let inspection;
   try {

@@ -23,6 +23,7 @@ import {
 } from "./plugin-update.mjs";
 import { assertApprovalAllowed } from "./security-baseline-approval.mjs";
 import { runSecurityBaseline } from "./security-baseline-scanner.mjs";
+import { canonicalRepositoryRequest } from "./verification-subject.mjs";
 
 function requiredEnvironment(name) {
   const value = process.env[name]?.trim();
@@ -95,9 +96,9 @@ export async function recheckPluginUpdateApproval({
       "The plugin update title changed after approval",
     );
   }
-  const request = parsePluginUpdateRequest(issue.body);
   const root = resolve(import.meta.dirname, "..");
   const registry = JSON.parse(await readFile(resolve(root, "registry.json"), "utf8"));
+  const request = canonicalRepositoryRequest(registry, parsePluginUpdateRequest(issue.body));
   const source = sourceForPluginUpdate(registry, request);
   const [inspection, comments, events, permission] = await Promise.all([
     inspectListedPluginSource(source),
