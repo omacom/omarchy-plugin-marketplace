@@ -44,7 +44,7 @@ export const catalogRefreshGraphqlBudgetReserve = 50;
 export const catalogRefreshGraphqlPointsPerBatchReserve = 10;
 const catalogRefreshGraphqlAttempts = 3;
 const catalogRefreshRestBudgetAttempts = 3;
-export const catalogRefreshRestBudgetReserve = 250;
+export const catalogRefreshRestBudgetReserve = 500;
 export const catalogSourceValidationVersion = 1;
 const accents = ["lime", "amber", "coral", "cyan", "violet", "rose"];
 const supportedKinds = new Set(["bar", "bar-widget", "menu", "overlay", "panel", "service"]);
@@ -1204,28 +1204,45 @@ function previousCatalogSourcePlugins(source, previousPlugins) {
   });
 }
 
-export function canReuseFullRefreshSource(source, identity, previousPlugins) {
-  if (!identity || !/^[a-f0-9]{40}$/.test(identity.commitSha || "")) return false;
+function fullRefreshPreviousState(source, identity, previousPlugins) {
+  if (!identity || !/^[a-f0-9]{40}$/.test(identity.commitSha || "")) return "";
   const expectedIds = sourceCatalogPluginIds(source);
   const previous = previousCatalogSourcePlugins(source, previousPlugins);
   if (
     !expectedIds.length
     || JSON.stringify(previous.map((plugin) => plugin.id).sort()) !== JSON.stringify(expectedIds)
-  ) return false;
+  ) return "";
   const fingerprint = catalogSourceFingerprint(source);
-  return previous.every((plugin) => (
+  const unchanged = previous.every((plugin) => (
     plugin.upstreamCheckStatus === "passed"
-    && plugin.upstreamValidationVersion === catalogSourceValidationVersion
     && plugin.upstreamSourceFingerprint === fingerprint
     && String(plugin.upstreamObservedCommit || "").toLowerCase() === identity.commitSha
     && String(plugin.upstreamValidatedCommit || "").toLowerCase() === identity.commitSha
     && plugin.upstreamObservedBranch === identity.branch
     && Number.isFinite(Date.parse(plugin.upstreamValidatedAt || ""))
   ));
+  if (!unchanged) return "";
+  if (previous.every((plugin) => plugin.upstreamValidationVersion === catalogSourceValidationVersion)) {
+    return "current";
+  }
+  return previous.every((plugin) => (
+    Number.isSafeInteger(plugin.upstreamValidationVersion)
+    && plugin.upstreamValidationVersion >= 0
+    && plugin.upstreamValidationVersion < catalogSourceValidationVersion
+  ))
+    ? "outdated"
+    : "";
 }
 
-export function reusableFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
-  if (!canReuseFullRefreshSource(source, identity, previousPlugins)) return null;
+export function canReuseFullRefreshSource(source, identity, previousPlugins) {
+  return fullRefreshPreviousState(source, identity, previousPlugins) === "current";
+}
+
+export function canDeferFullRefreshRevalidation(source, identity, previousPlugins) {
+  return fullRefreshPreviousState(source, identity, previousPlugins) === "outdated";
+}
+
+function carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, { keepValidationVersion }) {
   return previousCatalogSourcePlugins(source, previousPlugins).map((plugin) => {
     const next = {
       ...plugin,
@@ -1235,12 +1252,34 @@ export function reusableFullRefreshPlugins(source, identity, previousPlugins, ch
       upstreamObservedBranch: identity.branch,
       upstreamCheckedAt: checkedAt,
       upstreamCheckStatus: "passed",
-      upstreamValidationVersion: catalogSourceValidationVersion,
+      upstreamValidationVersion: keepValidationVersion
+        ? plugin.upstreamValidationVersion
+        : catalogSourceValidationVersion,
       upstreamSourceFingerprint: catalogSourceFingerprint(source),
     };
     delete next.upstreamCheckError;
     return projectPluginVerification(next, source);
   });
+}
+
+export function reusableFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
+  if (!canReuseFullRefreshSource(source, identity, previousPlugins)) return null;
+  return carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, {
+    keepValidationVersion: false,
+  });
+}
+
+export function deferredFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
+  if (!canDeferFullRefreshRevalidation(source, identity, previousPlugins)) return null;
+  return carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, {
+    keepValidationVersion: true,
+  });
+}
+
+function oldestFullRefreshValidation(source, previousPlugins) {
+  return Math.min(...previousCatalogSourcePlugins(source, previousPlugins).map((plugin) => (
+    Date.parse(plugin.upstreamValidatedAt)
+  )));
 }
 
 function repositoryMetadata(metadata) {
@@ -1941,17 +1980,25 @@ async function githubRateLimit() {
   );
 }
 
-export async function assertFullRefreshRestBudget(requiredTreeRequests, options = {}) {
+export async function planFullRefreshRestBudget(
+  requiredTreeRequests,
+  deferrableTreeRequests = 0,
+  options = {},
+) {
   const reserve = options.reserve ?? catalogRefreshRestBudgetReserve;
   if (
     !Number.isSafeInteger(requiredTreeRequests)
     || requiredTreeRequests < 0
+    || !Number.isSafeInteger(deferrableTreeRequests)
+    || deferrableTreeRequests < 0
     || !Number.isSafeInteger(reserve)
     || reserve < 0
   ) {
     throw new CatalogBuildError("internal-error", "Catalog refresh REST budget requirement is invalid");
   }
-  if (!requiredTreeRequests) return Object.freeze({ limit: 0, remaining: 0, resetAt: "" });
+  if (!requiredTreeRequests && !deferrableTreeRequests) {
+    return Object.freeze({ limit: 0, remaining: 0, resetAt: "", revalidations: 0 });
+  }
   const rateLimit = await githubRateLimit();
   const core = rateLimit?.resources?.core;
   const limit = Number(core?.limit);
@@ -1984,9 +2031,16 @@ export async function assertFullRefreshRestBudget(requiredTreeRequests, options 
       `GitHub REST core budget is insufficient for catalog trees (remaining ${remaining}, trees ${requiredTreeRequests}, reserve ${reserve}, resetAt ${resetAt})`,
     );
   }
+  const revalidations = Math.min(deferrableTreeRequests, remaining - required);
+  const deferred = deferrableTreeRequests - revalidations;
   console.log(
-    `Catalog refresh REST plan: ${requiredTreeRequests} trees, ${remaining} remaining, ${reserve} reserved.`,
+    `Catalog refresh REST plan: ${requiredTreeRequests + revalidations} trees, ${remaining} remaining, ${reserve} reserved${deferred ? `, ${deferred} policy revalidations deferred` : ""}.`,
   );
+  return Object.freeze({ limit, remaining, resetAt, revalidations });
+}
+
+export async function assertFullRefreshRestBudget(requiredTreeRequests, options = {}) {
+  const { limit, remaining, resetAt } = await planFullRefreshRestBudget(requiredTreeRequests, 0, options);
   return Object.freeze({ limit, remaining, resetAt });
 }
 
@@ -2034,6 +2088,7 @@ async function buildCatalogInternal(options = {}) {
   const checkedAt = new Date().toISOString();
   let fullRefreshIdentities = null;
   let migrationIdentities = null;
+  let deferredPolicyRevalidations = new Set();
   if (!sourcePlan.incremental) {
     const identitySources = [
       ...(registry.sources || []),
@@ -2045,7 +2100,9 @@ async function buildCatalogInternal(options = {}) {
         ? { budgetReserve: options.graphqlBudgetReserve }
         : {}),
     });
-    const requiredCommunityTrees = (registry.sources || []).filter((source) => {
+    let requiredCommunityTrees = 0;
+    const policyRevalidationSources = [];
+    for (const source of registry.sources || []) {
       const key = parseGitHubRepository(source.repo).slug.toLowerCase();
       const identity = fullRefreshIdentities.get(key);
       if (!identity) {
@@ -2054,9 +2111,11 @@ async function buildCatalogInternal(options = {}) {
           "Catalog refresh identity map is incomplete",
         );
       }
-      return identity.context
-        && !canReuseFullRefreshSource(source, identity.context, previousPlugins);
-    }).length;
+      if (!identity.context) continue;
+      const previousState = fullRefreshPreviousState(source, identity.context, previousPlugins);
+      if (previousState === "outdated") policyRevalidationSources.push(source);
+      else if (previousState !== "current") requiredCommunityTrees += 1;
+    }
     const requiredBuiltInTrees = (registry.builtInSources || []).filter((source) => {
       const key = parseGitHubRepository(source.repo).slug.toLowerCase();
       const identity = fullRefreshIdentities.get(key);
@@ -2068,10 +2127,18 @@ async function buildCatalogInternal(options = {}) {
       }
       return Boolean(identity.context);
     }).length;
-    await assertFullRefreshRestBudget(
+    const restPlan = await planFullRefreshRestBudget(
       requiredCommunityTrees + requiredBuiltInTrees,
+      policyRevalidationSources.length,
       options.restBudgetReserve === undefined ? {} : { reserve: options.restBudgetReserve },
     );
+    deferredPolicyRevalidations = new Set(policyRevalidationSources
+      .map((source) => ({ source, validatedAt: oldestFullRefreshValidation(source, previousPlugins) }))
+      .sort((left, right) => (
+        left.validatedAt - right.validatedAt || left.source.repo.localeCompare(right.source.repo)
+      ))
+      .slice(restPlan.revalidations)
+      .map(({ source }) => source.repo));
   } else if (sourcePlan.migration) {
     migrationIdentities = await resolveFullRefreshIdentities(sourcePlan.refreshSources, {
       ...(options.graphqlBatchSize ? { batchSize: options.graphqlBatchSize } : {}),
@@ -2150,6 +2217,18 @@ async function buildCatalogInternal(options = {}) {
           if (reused) {
             plugins.push(...reused);
             continue;
+          }
+          if (deferredPolicyRevalidations.has(source.repo)) {
+            const deferred = deferredFullRefreshPlugins(
+              source,
+              identity.context,
+              previousPlugins,
+              checkedAt,
+            );
+            if (deferred) {
+              plugins.push(...deferred);
+              continue;
+            }
           }
           context = identity.context;
           context = await resolveSnapshotTree(context);

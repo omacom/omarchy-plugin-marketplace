@@ -6,6 +6,7 @@ import test from "node:test";
 import {
   assertFullRefreshRestBudget,
   buildCatalog,
+  canDeferFullRefreshRevalidation,
   canReuseFullRefreshSource,
   catalogRefreshGraphqlBatchSize,
   catalogRefreshGraphqlBudgetReserve,
@@ -17,7 +18,9 @@ import {
   CatalogBuildError,
   CatalogCheckError,
   currentCatalogApiUsage,
+  deferredFullRefreshPlugins,
   failedSourcePlugins,
+  planFullRefreshRestBudget,
   resetCatalogApiUsage,
   resolveFullRefreshIdentities,
   reusableFullRefreshPlugins,
@@ -213,6 +216,72 @@ test("full refresh reuse requires exact passed commit, branch, policy, fingerpri
   ]) {
     assert.equal(canReuseFullRefreshSource(...invalid), false);
     assert.equal(reusableFullRefreshPlugins(...invalid, checkedAt), null);
+  }
+});
+
+test("a policy-only revalidation can be deferred without promoting the stored validation", () => {
+  const activeSource = source();
+  const currentIdentity = identity();
+  const outdatedVersion = catalogSourceValidationVersion - 1;
+  const previous = [priorPlugin(activeSource, { upstreamValidationVersion: outdatedVersion })];
+  assert.equal(canReuseFullRefreshSource(activeSource, currentIdentity, previous), false);
+  assert.equal(canDeferFullRefreshRevalidation(activeSource, currentIdentity, previous), true);
+
+  const deferred = deferredFullRefreshPlugins(activeSource, currentIdentity, previous, checkedAt);
+  assert.equal(deferred.length, 1);
+  assert.equal(deferred[0].upstreamValidationVersion, outdatedVersion);
+  assert.equal(deferred[0].upstreamValidatedAt, validatedAt);
+  assert.equal(deferred[0].upstreamCheckedAt, checkedAt);
+  assert.equal(deferred[0].upstreamCheckStatus, "passed");
+
+  for (const invalid of [
+    [activeSource, currentIdentity, [priorPlugin(activeSource)]],
+    [activeSource, identity({ commitSha: "d".repeat(40) }), previous],
+    [activeSource, identity({ branch: "next" }), previous],
+    [activeSource, currentIdentity, [priorPlugin(activeSource, {
+      upstreamCheckStatus: "failed",
+      upstreamValidationVersion: outdatedVersion,
+    })]],
+    [activeSource, currentIdentity, [priorPlugin(activeSource, {
+      upstreamSourceFingerprint: "0".repeat(64),
+      upstreamValidationVersion: outdatedVersion,
+    })]],
+    [activeSource, currentIdentity, [priorPlugin(activeSource, { upstreamValidationVersion: null })]],
+    [activeSource, currentIdentity, [...previous, { ...previous[0], id: "example.extra" }]],
+  ]) {
+    assert.equal(canDeferFullRefreshRevalidation(...invalid), false);
+    assert.equal(deferredFullRefreshPlugins(...invalid, checkedAt), null);
+  }
+});
+
+test("REST tree planning always covers required trees and spends only the remaining budget on policy revalidations", async () => {
+  const originalFetch = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => {
+      throw new Error("An empty plan must not query the REST budget");
+    };
+    assert.equal((await planFullRefreshRestBudget(0, 0)).revalidations, 0);
+
+    for (const [remaining, deferrable, expected] of [
+      [catalogRefreshRestBudgetReserve + 13, 7, 3],
+      [catalogRefreshRestBudgetReserve + 100, 7, 7],
+      [catalogRefreshRestBudgetReserve + 10, 7, 0],
+    ]) {
+      globalThis.fetch = async () => jsonResponse({
+        resources: { core: { limit: 5000, remaining, reset: 1787997600 } },
+      });
+      assert.equal((await planFullRefreshRestBudget(10, deferrable)).revalidations, expected);
+    }
+
+    globalThis.fetch = async () => jsonResponse({
+      resources: { core: { limit: 5000, remaining: catalogRefreshRestBudgetReserve + 9, reset: 1787997600 } },
+    });
+    await assert.rejects(
+      planFullRefreshRestBudget(10, 7),
+      (error) => error instanceof CatalogBuildError && error.code === "api-budget-insufficient",
+    );
+  } finally {
+    globalThis.fetch = originalFetch;
   }
 });
 
@@ -1033,9 +1102,153 @@ test("an unchanged full refresh skips REST trees and raw files without refreshin
   }
 });
 
-test("the current registry fits a complete policy revalidation inside the reserved REST budget", async () => {
-  const registry = JSON.parse(await readFile(new URL("../registry.json", import.meta.url), "utf8"));
-  const sourceCount = (registry.sources || []).length + (registry.builtInSources || []).length;
-  assert.ok(sourceCount > 1_600);
-  assert.ok(sourceCount + catalogRefreshRestBudgetReserve < 5_000);
+async function refreshPolicyRevalidation({ sources, previousPlugins, remaining }) {
+  const directory = await mkdtemp(join(tmpdir(), "marketplace-policy-revalidation-"));
+  const registryPath = join(directory, "registry.json");
+  const catalogPath = join(directory, "site/catalog.json");
+  const previewDirectory = join(directory, "site/assets/img/plugins");
+  const originalFetch = globalThis.fetch;
+  const originalLog = console.log;
+  const logs = [];
+  const trees = [];
+  await mkdir(previewDirectory, { recursive: true });
+  await writeFile(registryPath, `${JSON.stringify({
+    sources,
+    builtInSources: [],
+    placeholders: [],
+  }, null, 2)}\n`);
+  await writeFile(catalogPath, `${JSON.stringify({
+    generatedAt: validatedAt,
+    stateSchemaVersion: 2,
+    mode: "production",
+    plugins: previousPlugins,
+    warnings: [],
+  }, null, 2)}\n`);
+
+  globalThis.fetch = async (input, init = {}) => {
+    const url = String(input);
+    if (url === "https://api.github.com/graphql") {
+      const request = JSON.parse(init.body);
+      if (request.query.includes("CatalogRefreshBudget")) {
+        return jsonResponse({ data: { rateLimit: graphqlRate(4999) } });
+      }
+      return jsonResponse({
+        data: {
+          ...Object.fromEntries(sources.map((entry, index) => [
+            `r${index}`,
+            graphqlRepository({ nameWithOwner: entry.repo.replace("https://github.com/", "") }),
+          ])),
+          rateLimit: graphqlRate(4998),
+        },
+      });
+    }
+    if (url === "https://api.github.com/rate_limit") {
+      return jsonResponse({ resources: { core: { limit: 5000, remaining, reset: 1787997600 } } });
+    }
+    const treeMatch = url.match(/^https:\/\/api\.github\.com\/repos\/(example\/[a-z]+)\/git\/trees\//);
+    if (treeMatch) {
+      trees.push(treeMatch[1]);
+      return jsonResponse({
+        truncated: false,
+        tree: [
+          { path: "README.md", type: "blob", mode: "100644", size: 10 },
+          { path: "LICENSE", type: "blob", mode: "100644", size: 10 },
+          { path: "manifest.json", type: "blob", mode: "100644", size: 200 },
+          { path: "Main.qml", type: "blob", mode: "100644", size: 10 },
+        ],
+      });
+    }
+    const rawMatch = url.match(/^https:\/\/raw\.githubusercontent\.com\/example\/([a-z]+)\/[a-f0-9]{40}\/manifest\.json$/);
+    if (rawMatch) {
+      const manifest = JSON.stringify({
+        schemaVersion: 1,
+        id: `example.${rawMatch[1]}`,
+        name: `Example ${rawMatch[1]}`,
+        version: "1.0.0",
+        author: "Example",
+        description: "Example plugin",
+        license: "MIT",
+        kinds: ["overlay"],
+        entryPoints: { overlay: "Main.qml" },
+      });
+      return new Response(manifest, {
+        status: 200,
+        headers: { "content-length": String(Buffer.byteLength(manifest)) },
+      });
+    }
+    throw new Error(`Unexpected fixture request: ${url}`);
+  };
+  console.log = (...args) => logs.push(args.join(" "));
+
+  try {
+    await buildCatalog({
+      registryPath,
+      catalogPath,
+      previewDirectory,
+      graphqlBudgetReserve: 0,
+    });
+    const result = JSON.parse(await readFile(catalogPath, "utf8"));
+    return { plugins: new Map(result.plugins.map((plugin) => [plugin.id, plugin])), logs, trees };
+  } finally {
+    console.log = originalLog;
+    globalThis.fetch = originalFetch;
+    await rm(directory, { recursive: true, force: true });
+  }
+}
+
+test("a policy revalidation larger than the REST budget is spread across refreshes, oldest first", async () => {
+  const outdatedVersion = catalogSourceValidationVersion - 1;
+  const sources = ["a", "b", "c"].map((name) => source({
+    repo: `https://github.com/example/${name}`,
+    plugins: { [`example.${name}`]: { category: "Desktop", tags: ["overlay"] } },
+  }));
+  const validatedTimes = [
+    "2026-08-01T00:00:00.000Z",
+    "2026-08-02T00:00:00.000Z",
+    "2026-08-03T00:00:00.000Z",
+  ];
+  const previousPlugins = sources.map((entry, index) => priorPlugin(entry, {
+    id: `example.${"abc"[index]}`,
+    upstreamValidatedAt: validatedTimes[index],
+    upstreamValidationVersion: outdatedVersion,
+  }));
+
+  const first = await refreshPolicyRevalidation({
+    sources,
+    previousPlugins,
+    remaining: catalogRefreshRestBudgetReserve + 1,
+  });
+  assert.deepEqual(first.trees, ["example/a"]);
+  assert.equal(first.plugins.get("example.a").upstreamValidationVersion, catalogSourceValidationVersion);
+  assert.notEqual(first.plugins.get("example.a").upstreamValidatedAt, validatedTimes[0]);
+  for (const [id, time] of [["example.b", validatedTimes[1]], ["example.c", validatedTimes[2]]]) {
+    const plugin = first.plugins.get(id);
+    assert.equal(plugin.upstreamValidationVersion, outdatedVersion);
+    assert.equal(plugin.upstreamValidatedAt, time);
+    assert.equal(plugin.upstreamCheckStatus, "passed");
+    assert.notEqual(plugin.upstreamCheckedAt, validatedAt);
+  }
+  assert.ok(first.logs.some((line) => line.includes("2 policy revalidations deferred")), first.logs.join("\n"));
+
+  const second = await refreshPolicyRevalidation({
+    sources,
+    previousPlugins: [...first.plugins.values()],
+    remaining: catalogRefreshRestBudgetReserve + 5,
+  });
+  assert.deepEqual(second.trees, ["example/b", "example/c"]);
+  for (const plugin of second.plugins.values()) {
+    assert.equal(plugin.upstreamValidationVersion, catalogSourceValidationVersion);
+  }
+  assert.ok(!second.logs.some((line) => line.includes("deferred")), second.logs.join("\n"));
+
+  const changed = await refreshPolicyRevalidation({
+    sources: sources.slice(0, 2),
+    previousPlugins: [
+      { ...previousPlugins[0], upstreamObservedCommit: "d".repeat(40), upstreamValidatedCommit: "d".repeat(40) },
+      previousPlugins[1],
+    ],
+    remaining: catalogRefreshRestBudgetReserve + 1,
+  });
+  assert.deepEqual(changed.trees, ["example/a"]);
+  assert.equal(changed.plugins.get("example.b").upstreamValidationVersion, outdatedVersion);
 });
