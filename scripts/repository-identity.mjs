@@ -244,10 +244,24 @@ export function validateRegistryRepositoryMigrations(registry) {
       throw new Error("Repository migration history is not one append-only chain");
     }
 
-    const source = sourceByRepository.get(tails[0]);
-    if (!source) throw new Error("Repository migration chain does not end at an active source");
-    const identity = parseRepositoryIdentity(source.repositoryIdentity);
     const first = chain[0].migration;
+    const source = sourceByRepository.get(tails[0]);
+    if (!source) {
+      const retired = new Set(registry.retiredPluginIds || []);
+      const activePluginIds = new Set(sources.flatMap(sourceRepositoryPluginIds));
+      if (
+        !first.pluginIds.every((id) => retired.has(id) && !activePluginIds.has(id))
+        || chain.some(({ migration }) => (
+          JSON.stringify(migration.pluginIds) !== JSON.stringify(first.pluginIds)
+          || sourceByRepository.has(migration.fromRepository.toLowerCase())
+          || sourceByRepository.has(migration.toRepository.toLowerCase())
+        ))
+      ) {
+        throw new Error("Repository migration chain does not end at an active source or fully retired plugins");
+      }
+      continue;
+    }
+    const identity = parseRepositoryIdentity(source.repositoryIdentity);
     const expectedPrevious = new Set(chain.map((entry) => (
       entry.migration.fromRepository.toLowerCase()
     )));

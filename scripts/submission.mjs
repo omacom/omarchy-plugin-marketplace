@@ -39,6 +39,7 @@ export const allowedTags = Object.freeze([
   "quickshell",
   "security",
   "system",
+  "vpn",
   "workspaces",
 ]);
 

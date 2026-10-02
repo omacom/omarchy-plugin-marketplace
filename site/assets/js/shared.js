@@ -1,3 +1,12 @@
+import {
+  applyTheme,
+  pickerLayout,
+  readStoredTheme,
+  siteThemes,
+  themeById,
+  themePreviewPath,
+} from "./themes.js?v=20260920-05";
+
 const accentColors = {
   lime: "#b7ef51",
   violet: "#a78bfa",
@@ -13,6 +22,43 @@ export function accentColor(name) {
   return accentColors[name] || accentColors.lime;
 }
 
+function hexChannels(value) {
+  const match = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(String(value || "").trim());
+  if (!match) return null;
+  const hex = match[1].length === 3 ? [...match[1]].map((digit) => digit + digit).join("") : match[1];
+  return [0, 2, 4].map((offset) => Number.parseInt(hex.slice(offset, offset + 2), 16));
+}
+
+function relativeLuminance(channels) {
+  const [red, green, blue] = channels.map((channel) => {
+    const value = channel / 255;
+    return value <= .03928 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4;
+  });
+  return .2126 * red + .7152 * green + .0722 * blue;
+}
+
+export function contrastRatio(first, second) {
+  const firstChannels = hexChannels(first);
+  const secondChannels = hexChannels(second);
+  if (!firstChannels || !secondChannels) return Number.NaN;
+  const [lighter, darker] = [relativeLuminance(firstChannels), relativeLuminance(secondChannels)].sort((a, b) => b - a);
+  return (lighter + .05) / (darker + .05);
+}
+
+// Keeps palette colors on theme surfaces: mixes toward black on light surfaces and white on dark ones
+// until the minimum contrast is reached. Colors that already pass, or cannot be parsed, are unchanged.
+export function legibleColor(color, surface, minimum = 3) {
+  const base = hexChannels(color);
+  const background = hexChannels(surface);
+  if (!base || !background || contrastRatio(color, surface) >= minimum) return color;
+  const target = relativeLuminance(background) > .18 ? 0 : 255;
+  for (let step = 1; step <= 20; step += 1) {
+    const mixed = `#${base.map((channel) => Math.round(channel + (target - channel) * step / 20).toString(16).padStart(2, "0")).join("")}`;
+    if (contrastRatio(mixed, surface) >= minimum) return mixed;
+  }
+  return color;
+}
+
 const taxonomyTagNames = Object.freeze({
   ai: "AI",
   games: "Games",
@@ -21,6 +67,7 @@ const taxonomyTagNames = Object.freeze({
   "power-management": "Power",
   security: "Security",
   system: "System",
+  vpn: "VPN",
   workspaces: "Workspace",
 });
 
@@ -67,6 +114,65 @@ export function comparePluginEngagement(first, second, stats = {}, metric = "vie
   return value(second) - value(first)
     || String(first?.name || "").localeCompare(String(second?.name || ""))
     || String(first?.id || "").localeCompare(String(second?.id || ""));
+}
+
+export const installRateMinimumViews = 20;
+
+// Install rate: install-command copies per plugin detail view. Plugins are ranked by the lower bound of the 95 %
+// Wilson score interval, so a few views with a lucky copy cannot outrank a well-measured plugin. A copy can also
+// come from a card without a detail view, so the rate is capped at 100 %. Plugins without an install command or
+// with fewer than installRateMinimumViews views are not rated (-1).
+export function installRateScore(plugin, stats = {}) {
+  const hasCommand = Boolean(plugin?.builtIn ? plugin.officialCommand : plugin?.installCommand);
+  const views = engagementCount(stats?.views);
+  if (!hasCommand || views < installRateMinimumViews) return -1;
+  const copies = Math.min(engagementCount(stats?.copies), views);
+  // With zero copies the lower bound is exactly 0; the formula would round it to ±1e-17, and a negative value reads as unrated.
+  if (!copies) return 0;
+  const rate = copies / views;
+  const z = 1.96;
+  const center = rate + z * z / (2 * views);
+  const margin = z * Math.sqrt((rate * (1 - rate) + z * z / (4 * views)) / views);
+  return (center - margin) / (1 + z * z / views);
+}
+
+export function comparePluginInstallRate(first, second, stats = {}) {
+  return installRateScore(second, stats?.[second?.id]) - installRateScore(first, stats?.[first?.id])
+    || engagementCount(stats?.[second?.id]?.views) - engagementCount(stats?.[first?.id]?.views)
+    || String(first?.name || "").localeCompare(String(second?.name || ""))
+    || String(first?.id || "").localeCompare(String(second?.id || ""));
+}
+
+// Median install rate (copies per detail view, capped at 1) of all rated community plugins, as a fraction; null when none is rated.
+export function medianInstallRate(plugins, stats = {}) {
+  const rates = (plugins || [])
+    .filter((plugin) => plugin && !plugin.builtIn && !plugin.placeholder && (plugin.sourceType || "community") === "community"
+      && installRateScore(plugin, stats?.[plugin.id]) >= 0)
+    .map((plugin) => {
+      const views = engagementCount(stats[plugin.id].views);
+      return Math.min(engagementCount(stats[plugin.id].copies), views) / views;
+    })
+    .sort((a, b) => a - b);
+  if (!rates.length) return null;
+  const middle = Math.floor(rates.length / 2);
+  return rates.length % 2 ? rates[middle] : (rates[middle - 1] + rates[middle]) / 2;
+}
+
+// Hidden gems: verified, rated plugins with a screenshot that fewer people have seen (below the 75th percentile
+// of detail views across community plugins) but that convince the ones who do, ordered by install rate.
+export function selectHiddenGems(plugins, stats = {}, { limit = 3, viewShare = .75 } = {}) {
+  const community = (plugins || []).filter((plugin) => plugin && !plugin.builtIn && !plugin.placeholder
+    && (plugin.sourceType || "community") === "community");
+  if (!community.length) return [];
+  const views = community.map((plugin) => engagementCount(stats?.[plugin.id]?.views)).sort((a, b) => a - b);
+  const threshold = views[Math.min(views.length - 1, Math.floor(views.length * viewShare))];
+  return community
+    .filter((plugin) => plugin.verificationStatus === "verified"
+      && Boolean(plugin.previewThumbnail || plugin.previewImage)
+      && installRateScore(plugin, stats?.[plugin.id]) >= 0
+      && engagementCount(stats?.[plugin.id]?.views) < threshold)
+    .sort((first, second) => comparePluginInstallRate(first, second, stats))
+    .slice(0, limit);
 }
 
 function engagementMetric(type, count, detail) {
@@ -153,14 +259,30 @@ export function updatePluginHeart(root, pluginId, stats = {}, {
 const controlTooltipRoots = new WeakSet();
 const controlTooltipDocuments = new WeakSet();
 
+// A tooltip that sticks out of a horizontal scroller (the hidden-gems carousel) grows its scroll width and shifts it,
+// so it stays inside the nearest one when it fits there; otherwise only the viewport bounds it.
+function tooltipBounds(host, tooltipWidth, viewportWidth) {
+  const viewport = { left: 8, right: viewportWidth - 8 };
+  const view = host.ownerDocument.defaultView;
+  for (let node = host.parentElement; node && node !== host.ownerDocument.body; node = node.parentElement) {
+    const overflowX = view.getComputedStyle(node).overflowX;
+    if (overflowX !== "auto" && overflowX !== "scroll") continue;
+    const rect = node.getBoundingClientRect();
+    const bounds = { left: Math.max(viewport.left, rect.left), right: Math.min(viewport.right, rect.right) };
+    return bounds.right - bounds.left >= tooltipWidth ? bounds : viewport;
+  }
+  return viewport;
+}
+
 export function positionTooltip(host, tooltip) {
   const hostRect = host.getBoundingClientRect();
   const tooltipWidth = tooltip.getBoundingClientRect().width;
   const viewportWidth = host.ownerDocument.documentElement.clientWidth;
+  const bounds = tooltipBounds(host, tooltipWidth, viewportWidth);
   const originLeft = hostRect.left + host.clientLeft;
   const centered = (hostRect.width - tooltipWidth) / 2 - host.clientLeft;
-  const minimum = 8 - originLeft;
-  const maximum = viewportWidth - 8 - originLeft - tooltipWidth;
+  const minimum = bounds.left - originLeft;
+  const maximum = bounds.right - originLeft - tooltipWidth;
   const clamped = Math.min(Math.max(centered, minimum), maximum);
   const positioned = clamped <= minimum
     ? Math.ceil(clamped)
@@ -267,6 +389,28 @@ export function isRecentlyUpdated(plugin, now = Date.now(), windowHours = 12) {
   if (!Number.isFinite(updatedAt)) return false;
   const age = now - updatedAt;
   return age >= 0 && age < windowHours * 60 * 60 * 1000;
+}
+
+const hourMs = 60 * 60 * 1000;
+
+export function recentListings(plugins, now = Date.now(), windowHours = 24) {
+  return (plugins || [])
+    .filter((plugin) => {
+      if (!plugin || plugin.builtIn || plugin.placeholder || (plugin.sourceType || "community") !== "community") return false;
+      const age = now - listingTime(plugin);
+      return age >= 0 && age < windowHours * hourMs;
+    })
+    .sort((a, b) => listingTime(b) - listingTime(a) || String(a.name).localeCompare(String(b.name)));
+}
+
+export function listingAgeLabel(plugin, now = Date.now()) {
+  const age = now - listingTime(plugin);
+  if (!Number.isFinite(age) || age < 0) return "";
+  const minutes = Math.floor(age / 60000);
+  if (minutes < 1) return "just now";
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  return hours < 24 ? `${hours}h ago` : `${Math.floor(hours / 24)}d ago`;
 }
 
 export function pluginVersionLabel(plugin) {
@@ -400,6 +544,61 @@ export function listingCheckState(plugin) {
     lastSuccessfulAt: plugin?.upstreamValidatedAt,
     comparison: "unknown",
   };
+}
+
+export const engagementRankMetrics = Object.freeze(["hearts", "copies", "views", "stars"]);
+
+export function engagementRanks(plugins, stats = {}) {
+  const starsById = new Map(plugins.map((plugin) => [plugin.id, Number(plugin.stars) || 0]));
+  const count = (id, metric) => (metric === "stars" ? starsById.get(id) || 0 : Number(stats[id]?.[metric]) || 0);
+  const ids = plugins.map((plugin) => plugin.id);
+  const ranked = ids.filter((id) => engagementRankMetrics.some((metric) => count(id, metric) > 0));
+  const ranks = new Map(ids.map((id) => [id, {
+    total: ranked.length, hearts: null, copies: null, views: null, stars: null, overall: null,
+  }]));
+  engagementRankMetrics.forEach((metric) => {
+    const ordered = [...ranked].sort((a, b) => count(b, metric) - count(a, metric) || a.localeCompare(b));
+    let rank = 0;
+    let previous = null;
+    ordered.forEach((id, index) => {
+      const value = count(id, metric);
+      if (value !== previous) rank = index + 1;
+      previous = value;
+      ranks.get(id)[metric] = rank;
+    });
+  });
+  const score = (id) => engagementRankMetrics.reduce((sum, metric) => sum + ranks.get(id)[metric], 0);
+  const overall = [...ranked].sort((a, b) => score(a) - score(b) || a.localeCompare(b));
+  let rank = 0;
+  let previous = null;
+  overall.forEach((id, index) => {
+    const value = score(id);
+    if (value !== previous) rank = index + 1;
+    previous = value;
+    ranks.get(id).overall = rank;
+  });
+  return ranks;
+}
+
+export function splitViewPageSize(gridWidth, { tileWidth = 140, rows = 3, fallbackColumns = 5 } = {}) {
+  const columns = gridWidth > 0 ? Math.max(1, Math.floor(gridWidth / tileWidth)) : fallbackColumns;
+  return columns * rows;
+}
+
+export function readCatalogView(storage = globalThis.localStorage) {
+  try {
+    return storage?.getItem("omarchy-catalog-view") === "split" ? "split" : "cards";
+  } catch {
+    return "cards";
+  }
+}
+
+export function storeCatalogView(view, storage = globalThis.localStorage) {
+  try {
+    storage?.setItem("omarchy-catalog-view", view === "split" ? "split" : "cards");
+  } catch {
+    /* storage unavailable */
+  }
 }
 
 export function paginationState(totalItems, requestedPage = 1, pageSize = 9) {
@@ -566,23 +765,195 @@ export function escapeHtml(value = "") {
 export function setupThemeToggle() {
   const toggle = document.querySelector(".theme-toggle");
   if (!toggle) return;
+  const header = toggle.closest(".market-header") || document.body;
+  const label = toggle.querySelector(".theme-toggle-label");
+  const compact = () => window.matchMedia("(max-width: 760px)").matches;
 
-  const syncThemeState = () => {
-    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
-    const next = current === "dark" ? "light" : "dark";
-    toggle.setAttribute("aria-label", `${current} theme active; switch to ${next} theme`);
-    toggle.setAttribute("aria-pressed", String(current === "light"));
-    const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.content = current === "light" ? "#f8f8f6" : "#000000";
+  const picker = document.createElement("div");
+  picker.className = "theme-picker";
+  picker.hidden = true;
+  picker.setAttribute("aria-label", "Choose an Omarchy theme");
+  picker.innerHTML = `
+    <div class="theme-picker-strip">${siteThemes.map((theme) => `
+      <button class="theme-picker-item" type="button" tabindex="-1" aria-pressed="false" data-theme-value="${escapeHtml(theme.id)}" aria-label="${escapeHtml(theme.name)}">
+        <span class="theme-picker-pane" style="--pane-bg:${escapeHtml(theme.bg)};--pane-accent:${escapeHtml(theme.accent)}">${
+          themePreviewPath(theme)
+            ? `<img data-src="${escapeHtml(themePreviewPath(theme))}" alt="" width="800" height="450" loading="lazy" decoding="async" draggable="false">`
+            : `<span class="theme-picker-swatch" aria-hidden="true"><b></b><i></i><i></i><i></i></span>`
+        }<span class="theme-picker-name" aria-hidden="true">${escapeHtml(theme.name)}</span><i class="theme-picker-shade" aria-hidden="true"></i></span>
+      </button>`).join("")}
+    </div>
+    <p class="theme-picker-label" role="status" aria-live="polite" aria-atomic="true"><b></b><span class="theme-picker-help">←→ browse · enter apply · esc cancel</span></p>`;
+  header.after(picker);
+  const strip = picker.querySelector(".theme-picker-strip");
+  const options = [...picker.querySelectorAll("[data-theme-value]")];
+  const status = picker.querySelector(".theme-picker-label b");
+  let selected = 0;
+  let committed = readStoredTheme();
+  let wheelAcc = 0;
+  let previewsLoaded = false;
+  let restoreFocusElement = null;
+
+  const reflect = () => {
+    const current = themeById(document.documentElement.dataset.theme);
+    if (label) label.textContent = current.name;
+    toggle.setAttribute("aria-label", `Choose color theme; current ${current.name}`);
+    options.forEach((option) => {
+      option.setAttribute("aria-pressed", String(option.dataset.themeValue === current.id));
+    });
+  };
+  const loadPreviews = () => {
+    if (previewsLoaded) return;
+    previewsLoaded = true;
+    picker.querySelectorAll("img[data-src]").forEach((img) => { img.src = img.dataset.src; });
+  };
+  const layout = () => {
+    picker.style.top = `${Math.round(header.getBoundingClientRect().bottom)}px`;
+    if (compact()) {
+      strip.style.removeProperty("height");
+      options.forEach((option) => {
+        option.hidden = false;
+        ["left", "top", "width", "height", "z-index"].forEach((property) => option.style.removeProperty(property));
+      });
+      return;
+    }
+    const result = pickerLayout(options.length, selected, strip.clientWidth || window.innerWidth);
+    strip.style.height = `${result.height}px`;
+    result.items.forEach((item, index) => {
+      const option = options[index];
+      option.style.left = `${item.left}px`;
+      option.style.top = `${item.top}px`;
+      option.style.width = `${item.width}px`;
+      option.style.height = `${item.height}px`;
+      option.style.zIndex = String(item.zIndex);
+      option.hidden = item.hidden;
+    });
+  };
+  const preview = () => {
+    const option = options[selected];
+    applyTheme(option.dataset.themeValue, { persist: false });
+    status.textContent = `Previewing ${themeById(option.dataset.themeValue).name}`;
+    options.forEach((other, index) => {
+      other.classList.toggle("is-selected", index === selected);
+      other.tabIndex = index === selected ? 0 : -1;
+    });
+  };
+  const focusOption = () => {
+    const option = options[selected];
+    option?.focus({ preventScroll: !compact() });
+    if (compact()) option?.scrollIntoView({ block: "nearest" });
+  };
+  const close = () => {
+    picker.hidden = true;
+    picker.classList.remove("is-ready");
+    toggle.setAttribute("aria-expanded", "false");
+    document.removeEventListener("keydown", onKeydown);
+    document.removeEventListener("click", onDocumentClick);
+  };
+  const restoreFocus = () => {
+    const target = restoreFocusElement?.isConnected ? restoreFocusElement : toggle;
+    target.focus({ preventScroll: true });
+    restoreFocusElement = null;
+  };
+  const apply = ({ restore = false } = {}) => {
+    committed = applyTheme(options[selected].dataset.themeValue).id;
+    reflect();
+    close();
+    if (restore) restoreFocus();
+  };
+  const cancel = ({ restore = false } = {}) => {
+    applyTheme(committed);
+    reflect();
+    close();
+    if (restore) restoreFocus();
+  };
+  const move = (direction) => {
+    selected = (selected + direction + options.length) % options.length;
+    preview();
+    layout();
+    focusOption();
+  };
+  const open = () => {
+    const active = document.activeElement;
+    restoreFocusElement = active instanceof HTMLElement && active !== document.body ? active : toggle;
+    loadPreviews();
+    committed = themeById(document.documentElement.dataset.theme).id;
+    selected = Math.max(0, options.findIndex((option) => option.dataset.themeValue === committed));
+    picker.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+    document.addEventListener("keydown", onKeydown);
+    document.addEventListener("click", onDocumentClick);
+    preview();
+    layout();
+    focusOption();
+    window.requestAnimationFrame(() => picker.classList.add("is-ready"));
+  };
+  const onKeydown = (event) => {
+    if (!["Escape", "Enter", "ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      cancel({ restore: true });
+      return;
+    }
+    if (!picker.contains(event.target)) return;
+    event.preventDefault();
+    if (event.key === "Enter") apply({ restore: true });
+    else move(event.key === "ArrowLeft" ? -1 : 1);
+  };
+  const onDocumentClick = (event) => {
+    if (picker.contains(event.target) || toggle.contains(event.target)) return;
+    cancel();
   };
 
-  syncThemeState();
-  toggle.addEventListener("click", () => {
-    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("omarchy-theme", next);
-    syncThemeState();
+  options.forEach((option, index) => {
+    option.addEventListener("click", () => {
+      if (compact() || index === selected) {
+        selected = index;
+        preview();
+        apply({ restore: true });
+        return;
+      }
+      selected = index;
+      preview();
+      layout();
+    });
   });
+  picker.addEventListener("wheel", (event) => {
+    if (compact()) return;
+    event.preventDefault();
+    wheelAcc += event.deltaY + event.deltaX;
+    if (Math.abs(wheelAcc) >= 60) {
+      move(wheelAcc > 0 ? 1 : -1);
+      wheelAcc = 0;
+    }
+  }, { passive: false });
+  picker.addEventListener("focusout", () => {
+    window.requestAnimationFrame(() => {
+      if (picker.hidden) return;
+      const focused = document.activeElement;
+      if (!picker.contains(focused) && focused !== toggle) cancel();
+    });
+  });
+  window.addEventListener("resize", () => {
+    if (!picker.hidden) layout();
+  });
+  document.addEventListener("keydown", (event) => {
+    const target = event.target;
+    const typing = /^(input|textarea|select)$/i.test(target?.tagName || "") || target?.isContentEditable;
+    if (event.key.toLowerCase() !== "t" || event.metaKey || event.ctrlKey || event.altKey || typing) return;
+    event.preventDefault();
+    if (picker.hidden) open();
+    else cancel({ restore: true });
+  });
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-haspopup", "true");
+  toggle.addEventListener("click", () => {
+    if (picker.hidden) open();
+    else cancel();
+  });
+
+  applyTheme(readStoredTheme(), { persist: false });
+  reflect();
 }
 
 let toastTimer;

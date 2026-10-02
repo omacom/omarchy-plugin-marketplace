@@ -11,7 +11,7 @@ body:
     id: verification-action
     attributes:
       label: Verification action
-      description: A newer commit uses the guarded update and atomic promotion workflow. Standard installation requests are limited to an exact listed root plugin, require a passing automated baseline, and must be approved by applying the standard-installation-approved maintainer label.
+      description: A newer commit uses the guarded update and atomic promotion workflow. Standard installation requests are limited to an exact listed root plugin, require a passing baseline or an existing valid installer-only review with a matching rescan, and must be approved by applying the standard-installation-approved maintainer label.
       options:
         - Verify the currently listed snapshot
         - Verify the listed snapshot and enable standard installation

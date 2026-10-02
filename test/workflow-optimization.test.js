@@ -1686,3 +1686,61 @@ test("submission publication guard rejects stale current state", async () => {
     await rm(unavailableDirectory, { recursive: true, force: true });
   }
 });
+
+test("refresh warns only about sources that newly fail, with sanitized names", async () => {
+  const workflow = await readFile(new URL(".github/workflows/refresh-catalog.yml", root), "utf8");
+  const refreshJob = workflowJob(workflow, "refresh", "publish");
+  assert.match(workflowStep(refreshJob, "Report newly failing catalog sources"), /\n        continue-on-error: true\n/);
+  const script = workflowStepScript(refreshJob, "Report newly failing catalog sources");
+  const directory = await mkdtemp(join(tmpdir(), "refresh-newly-failing-"));
+  const temporary = join(directory, "runner-temp");
+  const summary = join(directory, "summary.md");
+  const catalogPath = join(directory, "site", "catalog.json");
+  const catalog = (plugins) => `${JSON.stringify({ plugins })}\n`;
+  const previous = catalog([
+    { repo: "https://github.com/example/regressed", upstreamCheckStatus: "passed" },
+    { repo: "https://github.com/example/still-failing", upstreamCheckStatus: "failed", upstreamCheckError: "manifest-invalid" },
+    { repo: "https://github.com/example/unreachable", upstreamCheckStatus: "passed" },
+    { repo: "https://github.com/evil/x::warning::y\nz", upstreamCheckStatus: "passed" },
+  ]);
+  const env = { RUNNER_TEMP: temporary, GITHUB_STEP_SUMMARY: summary };
+  try {
+    await mkdir(join(directory, "site"), { recursive: true });
+    await mkdir(temporary);
+    await writeFile(summary, "");
+    await writeFile(catalogPath, previous);
+    for (const args of [
+      ["init", "--quiet"],
+      ["add", "."],
+      ["-c", "user.name=Refresh Test", "-c", "user.email=refresh-test@example.invalid", "commit", "--quiet", "-m", "Previous catalog"],
+    ]) {
+      assert.equal(spawnSync("git", args, { cwd: directory }).status, 0);
+    }
+
+    const unchanged = runWorkflowScript(script, { cwd: directory, env });
+    assert.equal(unchanged.status, 0, unchanged.stderr);
+    assert.equal(unchanged.stdout, "");
+    assert.equal(await readFile(summary, "utf8"), "");
+
+    await writeFile(catalogPath, catalog([
+      { repo: "https://github.com/example/regressed", upstreamCheckStatus: "failed", upstreamCheckError: "manifest-invalid" },
+      { repo: "https://github.com/example/regressed", upstreamCheckStatus: "failed", upstreamCheckError: "manifest-invalid" },
+      { repo: "https://github.com/example/still-failing", upstreamCheckStatus: "failed", upstreamCheckError: "manifest-invalid" },
+      { repo: "https://github.com/example/unreachable", upstreamCheckStatus: "unreachable", upstreamCheckError: "repository-unreachable" },
+      { repo: "https://github.com/evil/x::warning::y\nz", upstreamCheckStatus: "failed", upstreamCheckError: "Manifest::Invalid" },
+      { placeholder: true, upstreamCheckStatus: "failed" },
+    ]));
+    const regressed = runWorkflowScript(script, { cwd: directory, env });
+    assert.equal(regressed.status, 0, regressed.stderr);
+    assert.deepEqual(regressed.stdout.trim().split("\n"), [
+      "::warning title=Catalog source newly failing::evil/x--warning--y-z [-anifest---nvalid]",
+      "::warning title=Catalog source newly failing::example/regressed [manifest-invalid]",
+    ]);
+    assert.equal(
+      await readFile(summary, "utf8"),
+      "## Newly failing catalog sources\n\n- `evil/x--warning--y-z [-anifest---nvalid]`\n- `example/regressed [manifest-invalid]`\n",
+    );
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});

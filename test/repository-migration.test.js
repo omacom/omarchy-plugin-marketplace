@@ -21,6 +21,7 @@ import {
   validateRegistryRepositoryMigrations,
 } from "../scripts/repository-identity.mjs";
 import { sourceVerification } from "../scripts/verification-status.mjs";
+import { planPluginDelisting } from "../scripts/delist-plugins.mjs";
 
 const oldRepository = "Example/old-plugin";
 const newRepository = "Example/new-plugin";
@@ -165,14 +166,17 @@ function graphqlRepository(overrides = {}) {
   };
 }
 
-test("current registry and catalog contain complete active repository migration chains", async () => {
+test("current registry and catalog contain complete active or retired repository migration chains", async () => {
   const registry = JSON.parse(await readFile(new URL("../registry.json", import.meta.url), "utf8"));
   const catalog = JSON.parse(await readFile(new URL("../site/catalog.json", import.meta.url), "utf8"));
   const migrations = validateRegistryRepositoryMigrations(registry);
   assert.equal(migrations.length, registry.repositoryMigrations.length);
   const identifiedSources = registry.sources.filter((entry) => entry.repositoryIdentity);
-  const migratedIdentities = new Set(migrations.map((entry) => `${entry.nodeId}:${entry.databaseId}`));
+  const retired = new Set(registry.retiredPluginIds);
+  const activeMigrations = migrations.filter((entry) => !entry.pluginIds.every((id) => retired.has(id)));
+  const migratedIdentities = new Set(activeMigrations.map((entry) => `${entry.nodeId}:${entry.databaseId}`));
   assert.equal(identifiedSources.length, migratedIdentities.size);
+  assert.ok(catalog.plugins.every((plugin) => !retired.has(plugin.id)));
   for (const source of identifiedSources) {
     const identity = parseRepositoryIdentity(source.repositoryIdentity);
     const pluginIds = sourceRepositoryIds(source);
@@ -212,6 +216,43 @@ test("current registry and catalog contain complete active repository migration 
 function sourceRepositoryIds(value) {
   return value.type === "suite" ? [value.catalog.id] : Object.keys(value.plugins).sort();
 }
+
+test("delisting a migrated repository preserves valid immutable migration history", () => {
+  const registry = migratedRegistry();
+  const catalog = previousCatalog();
+  catalog.plugins = [{ ...catalog.plugins[0], repo: newUrl, sourceType: "community" }];
+  catalog.warnings = [];
+  const result = planPluginDelisting(registry, catalog, [pluginId], {
+    generatedAt: "2026-08-30T10:00:00.000Z",
+  });
+  assert.deepEqual(result.nextRegistry.repositoryMigrations, registry.repositoryMigrations);
+  assert.deepEqual(result.nextRegistry.retiredPluginIds, [pluginId]);
+  assert.deepEqual(validateRegistryRepositoryMigrations(result.nextRegistry), [migration()]);
+});
+
+test("retired migration chains still reject missing retirement, active reuse, and inconsistent history", () => {
+  const retired = migratedRegistry({ sources: [], retiredPluginIds: [pluginId] });
+  assert.throws(() => validateRegistryRepositoryMigrations({ ...retired, retiredPluginIds: [] }));
+  assert.throws(() => validateRegistryRepositoryMigrations({ ...retired, sources: [source()] }));
+  assert.throws(() => validateRegistryRepositoryMigrations({
+    ...retired, sources: [source({ repo: "https://github.com/Other/reuse" })],
+  }));
+  const second = migration({ fromRepository: newRepository, toRepository: "Example/final-plugin" });
+  assert.equal(validateRegistryRepositoryMigrations({
+    ...retired, repositoryMigrations: [migration(), second],
+  }).length, 2);
+  assert.throws(() => validateRegistryRepositoryMigrations({
+    ...retired,
+    retiredPluginIds: [pluginId, "example.extra"],
+    repositoryMigrations: [migration(), { ...second, pluginIds: ["example.extra"] }],
+  }));
+  assert.throws(() => validateRegistryRepositoryMigrations({
+    ...retired, repositoryMigrations: [migration({ pluginIds: [pluginId, "example.extra"] })],
+  }));
+  assert.throws(() => validateRegistryRepositoryMigrations({
+    ...retired, repositoryMigrations: [migration(), { ...second, toRepository: oldRepository }],
+  }));
+});
 
 test("source repository identities require global append-only migration evidence", () => {
   const registry = migratedRegistry();

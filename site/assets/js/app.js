@@ -4,35 +4,47 @@ import {
   appendCatalogViewState,
   catalogViewControls,
   comparePluginEngagement,
+  comparePluginInstallRate,
   copyText,
   displayTaxonomyTag,
+  engagementRanks,
   engagementSummary,
   escapeHtml,
+  formatDate,
+  formatEngagementCount,
   formatStars,
   hidePendingEngagement,
   isRecentlyAdded,
   isRecentlyUpdated,
+  listingAgeLabel,
   listingTime,
   loadCatalog,
   matchesVerificationStatus,
   paginationState,
   pluginHeartButton,
+  pluginVersionLabel,
   pluginVerificationState,
+  readCatalogView,
   readCatalogViewState,
+  selectHiddenGems,
+  medianInstallRate,
+  recentListings,
   setupControlTooltips,
   setupCopyButtons,
   setupThemeToggle,
   showToast,
+  splitViewPageSize,
+  storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260831-01";
+} from "./shared.js?v=20260930-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260831-01";
+} from "./engagement.js?v=20260930-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -44,25 +56,32 @@ import {
   handleSearchEscape,
   hasFulltextSearchDraft,
   inlineSearchCompletionSuffix,
-  matchesCommittedSearchTerm,
   matchesDirectSearch,
-  matchesDraftSearchTerm,
+  matchesSearchSelection,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
   parseSearchDraft,
+  pluginSearchContext,
   readSearchState,
   removeSearchTermTypeFromDraft,
+  repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
   searchTermDisplayValue,
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260831-01";
-import { catalogCategoryTotals, matchesKidsTaxonomy } from "./taxonomy.js?v=20260831-01";
+} from "./search.js?v=20260930-01";
+import {
+  catalogCategoryTotals,
+  matchesBarTaxonomy,
+  matchesKidsTaxonomy,
+  matchesVpnTaxonomy,
+} from "./taxonomy.js?v=20260930-01";
 
 const pluginsPerPage = 9;
+const splitViewRows = 3;
 const hiddenCardTags = new Set([
   "bar",
   "bar-widget",
@@ -107,9 +126,14 @@ function cardTaxonomyLabels(plugin) {
   return labels.length ? labels : [category || "System"];
 }
 
-const engagementSorts = new Set(["views", "copies", "hearts"]);
+const engagementSorts = new Set(["views", "copies", "hearts", "rank", "installRate"]);
 const verificationFilters = new Set(["verified", "unverified"]);
 const taxonomyFilterTags = ["ai", "games", "security"];
+const taxonomyCatalogFilters = [
+  ["VPN", matchesVpnTaxonomy],
+  ["Bar", matchesBarTaxonomy],
+];
+const taxonomyCatalogFilterNames = new Set(taxonomyCatalogFilters.map(([value]) => value));
 const sortOptions = {
   community: [
     ["added", "Recently added"],
@@ -118,6 +142,8 @@ const sortOptions = {
     ["views", "Most viewed"],
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
+    ["rank", "Top ranked"],
+    ["installRate", "Install rate"],
     ["name", "A–Z"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
@@ -128,6 +154,8 @@ const sortOptions = {
     ["views", "Most viewed"],
     ["copies", "Most copied"],
     ["hearts", "Most hearts"],
+    ["rank", "Top ranked"],
+    ["installRate", "Install rate"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
   ]
@@ -142,6 +170,8 @@ const state = {
   sort: "added",
   page: 1,
   showAll: false,
+  view: "cards",
+  selected: "",
   engagement: {},
   engagementAuthoritative: {},
   engagementEnabled: false,
@@ -149,6 +179,7 @@ const state = {
 };
 
 const grid = document.querySelector("#plugin-grid");
+const catalogTitle = document.querySelector("#catalog-title");
 const count = document.querySelector("#plugin-count");
 const countLabel = document.querySelector("#plugin-count-label");
 const empty = document.querySelector("#empty-state");
@@ -173,6 +204,21 @@ const viewButton = document.querySelector("#catalog-view-button");
 const viewLabel = document.querySelector("#catalog-view-label");
 const viewDock = document.querySelector("#catalog-view-dock");
 const viewDockButton = document.querySelector("#catalog-view-dock-button");
+const viewMode = document.querySelector("#catalog-view-mode");
+const splitRoot = document.querySelector("#catalog-split");
+const splitGrid = document.querySelector("#split-grid");
+const splitPanelCount = document.querySelector("#split-panel-count");
+const splitCard = document.querySelector("#split-card");
+const splitStatsBody = document.querySelector("#split-stats-body");
+const splitStatsTotal = document.querySelector("#split-stats-total");
+const splitFilters = document.querySelector("#split-filters");
+const splitTopRank = document.querySelector("#split-top-rank");
+const splitPagePrevious = document.querySelector("#split-page-previous");
+const splitPageNext = document.querySelector("#split-page-next");
+const splitPageInput = document.querySelector("#split-page-input");
+const splitPageTotal = document.querySelector("#split-page-total");
+const categoryBar = document.querySelector(".category-bar");
+const clearFilters = document.querySelector("#clear-filters");
 const viewDockStatus = document.querySelector("#catalog-view-dock-status");
 const catalogResultStatus = document.querySelector("#catalog-result-status");
 let viewScrollFrame = 0;
@@ -185,64 +231,14 @@ function sourcePlugins() {
 }
 
 function publisherLogin(plugin) {
-  try {
-    const url = new URL(plugin.repo);
-    if (url.hostname.toLowerCase() !== "github.com") return "";
-    return url.pathname.split("/").filter(Boolean)[0] || "";
-  } catch {
-    return "";
-  }
-}
-
-function pluginSearchText(plugin) {
-  const publisher = publisherLogin(plugin);
-  return foldSearchTerm([
-    plugin.name,
-    plugin.description,
-    plugin.author,
-    publisher,
-    `@${publisher}`,
-    plugin.id,
-    plugin.category,
-    plugin.kind,
-    ...(plugin.tags || [])
-  ].join(" "));
-}
-
-function pluginSearchContext(plugin) {
-  return {
-    publisher: publisherLogin(plugin),
-    primaryText: [plugin.name, plugin.id, ...(plugin.tags || [])].join(" "),
-    searchText: pluginSearchText(plugin),
-  };
+  return repositoryPublisher(plugin?.repo);
 }
 
 function pluginMatchesActiveSearch(plugin) {
-  const { publisher, primaryText, searchText } = pluginSearchContext(plugin);
-  const hasTerms = state.terms.length > 0;
-  const draftTerms = parseSearchDraft(state.query);
-  if (!hasTerms && !draftTerms.length) return true;
-  const matchContext = {
-    publisher,
-    primaryText,
-    searchText,
-    tags: plugin.tags || [],
-    pluginName: plugin.name,
-    pluginId: plugin.id,
-    pluginKind: plugin.kind,
-  };
-  const matchesTerm = state.terms.some((term) => term.type === "text"
-    ? matchesDirectSearch(term.value, matchContext)
-    : matchesCommittedSearchTerm(term, matchContext));
-  const textDraftTerms = draftTerms.filter((term) => term.type === "text");
-  const typedDraftTerms = draftTerms.filter((term) => term.type !== "text");
-  const textDraft = textDraftTerms.map((term) => term.value).join(" ");
-  const matchesTextDraft = Boolean(textDraft)
-    && matchesDirectSearch(textDraft, matchContext);
-  const matchesTypedDraft = typedDraftTerms.some((term) =>
-    matchesDraftSearchTerm(term, matchContext)
-  );
-  return matchesTerm || matchesTextDraft || matchesTypedDraft;
+  return matchesSearchSelection(pluginSearchContext(plugin), {
+    terms: state.terms,
+    draftTerms: parseSearchDraft(state.query),
+  });
 }
 
 function completionMatches(value) {
@@ -457,7 +453,7 @@ function updateSearchAffordances() {
   searchClear.hidden = !active;
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
-    ? "Add search term…"
+    ? "Narrow by another term…"
     : "Search plugins, tag:panel, text:bar, or @author…";
 }
 
@@ -542,6 +538,24 @@ function clearSearchTerms({ focus = true } = {}) {
   searchSuggestionStatus.textContent = searchResultMessage("Cleared all search terms");
 }
 
+const searchSuggestionDelay = 80;
+let searchSuggestionTimer = 0;
+
+function scheduleSearchSuggestions() {
+  window.clearTimeout(searchSuggestionTimer);
+  searchSuggestionTimer = window.setTimeout(() => {
+    searchSuggestionTimer = 0;
+    updateSearchSuggestions();
+  }, searchSuggestionDelay);
+}
+
+function flushSearchSuggestions() {
+  if (!searchSuggestionTimer) return;
+  window.clearTimeout(searchSuggestionTimer);
+  searchSuggestionTimer = 0;
+  updateSearchSuggestions();
+}
+
 function updateSearchSuggestions() {
   const rawQuery = search.value.trim();
   const token = currentSearchToken(search.value);
@@ -553,7 +567,7 @@ function updateSearchSuggestions() {
   activeSuggestion = -1;
   search.removeAttribute("aria-activedescendant");
   const resultCount = filteredPlugins().length;
-  const summaryAction = state.terms.length ? "Add" : "Search for";
+  const summaryAction = state.terms.length ? "Narrow by" : "Search for";
   searchSuggestions.innerHTML = `
     <div class="search-query-summary" role="presentation" aria-hidden="true">
       <span>${summaryAction} “${escapeHtml(rawQuery)}”</span>
@@ -601,6 +615,9 @@ function allCategoryLabel() {
 function matchesCatalogFilter(plugin, filter = state.category) {
   if (filter === "all") return true;
   if (filter === "Kids") return matchesKidsTaxonomy(plugin);
+  for (const [value, matches] of taxonomyCatalogFilters) {
+    if (filter === value) return matches(plugin);
+  }
   if (filter.startsWith("tag:")) return (plugin.tags || []).includes(filter.slice(4));
   return plugin.category === filter;
 }
@@ -617,9 +634,34 @@ function searchScopePlugins() {
   ));
 }
 
+let engagementVersion = 0;
+let filteredCache = { key: "", value: [] };
+let ranksCache = { key: "", value: new Map() };
+
+function rankedPlugins() {
+  return state.plugins.filter((plugin) => (plugin.sourceType || "community") === "community");
+}
+
+function catalogRanks() {
+  const key = `${state.plugins.length}:${engagementVersion}`;
+  if (ranksCache.key !== key) ranksCache = { key, value: engagementRanks(rankedPlugins(), state.engagement) };
+  return ranksCache.value;
+}
+
 function filteredPlugins() {
+  const key = JSON.stringify([
+    state.plugins.length, state.source, state.category, state.sort, state.terms, state.query, engagementVersion,
+  ]);
+  if (filteredCache.key === key) return filteredCache.value;
+  const value = computeFilteredPlugins();
+  filteredCache = { key, value };
+  return value;
+}
+
+function computeFilteredPlugins() {
   const result = searchScopePlugins().filter((plugin) => pluginMatchesActiveSearch(plugin));
 
+  const ranks = state.sort === "rank" ? catalogRanks() : new Map();
   const sorters = {
     added: (a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name),
     updated: (a, b) => activityTime(b) - activityTime(a) || a.name.localeCompare(b.name),
@@ -627,6 +669,9 @@ function filteredPlugins() {
     views: (a, b) => comparePluginEngagement(a, b, state.engagement, "views"),
     copies: (a, b) => comparePluginEngagement(a, b, state.engagement, "copies"),
     hearts: (a, b) => comparePluginEngagement(a, b, state.engagement, "hearts"),
+    installRate: (a, b) => comparePluginInstallRate(a, b, state.engagement),
+    rank: (a, b) => (ranks.get(a.id)?.overall || Infinity) - (ranks.get(b.id)?.overall || Infinity)
+      || String(a.name || "").localeCompare(String(b.name || "")),
     name: (a, b) => a.name.localeCompare(b.name),
     kind: (a, b) => (a.kind || "").localeCompare(b.kind || "") || a.name.localeCompare(b.name)
   };
@@ -643,7 +688,7 @@ function pluginEngagement(plugin) {
 
 function pluginCardFocusToken(element = document.activeElement) {
   const card = element?.closest?.("[data-card-plugin]");
-  if (!card || !grid.contains(card)) return null;
+  if (!card || !(grid.contains(card) || splitCard.contains(card))) return null;
   let control = "details";
   if (element.matches?.("[data-plugin-heart]")) control = "heart";
   else if (element.matches?.("[data-verification-tooltip]")) control = "verification";
@@ -655,7 +700,7 @@ function pluginCardFocusToken(element = document.activeElement) {
 
 function restorePluginCardFocus(token) {
   if (!token) return false;
-  const card = [...grid.querySelectorAll("[data-card-plugin]")]
+  const card = [...grid.querySelectorAll("[data-card-plugin]"), ...splitCard.querySelectorAll("[data-card-plugin]")]
     .find((candidate) => candidate.dataset.cardPlugin === token.pluginId);
   if (!card) return false;
   const selectors = {
@@ -686,13 +731,18 @@ function applyAuthoritativeEngagement(pluginId, result, {
   };
   state.engagementAuthoritative[pluginId] = next;
   state.engagement[pluginId] = next;
+  engagementVersion += 1;
   updateEngagementSummary(document, pluginId, next);
   updatePluginHeart(document, pluginId, next, {
     hearted: hasPluginHeart(pluginId),
   });
-  if (state.sort === sortMetric) {
+  if (state.sort === sortMetric || state.sort === "rank") {
     render();
     if (!restorePluginCardFocus(focusToken) && focusToken) focusCatalogResult();
+  } else if (splitView()) {
+    refreshSplitRanks();
+  } else {
+    refreshCardRanks();
   }
 }
 
@@ -752,7 +802,35 @@ function closeVerificationTooltips(except = null) {
   });
 }
 
-function pluginCard(plugin, { showNew = false } = {}) {
+// Card badges shared by plugin cards and the Just landed rows.
+function cardBadges(plugin) {
+  const installAction = plugin.builtIn
+    ? `<a class="card-install builtin-source-action" href="${escapeHtml(plugin.sourceUrl || plugin.repo)}" target="_blank" rel="noreferrer" aria-label="View source for ${escapeHtml(plugin.name)}">View source ↗</a>`
+    : plugin.placeholder
+      ? '<span class="card-install unavailable" aria-label="Installation not yet available"><span class="command-glyph" aria-hidden="true"></span> Preview only</span>'
+      : !plugin.installAvailable
+        ? `<span class="card-install unavailable" aria-label="Automatic installation unavailable"><span class="command-glyph" aria-hidden="true"></span> ${plugin.upstreamCheckStatus === "failed" ? "Unavailable" : "Manual"}</span>`
+        : `<button class="card-install has-control-tooltip" type="button" data-copy-command="${escapeHtml(plugin.installCommand)}" data-plugin-id="${escapeHtml(plugin.id)}" aria-label="Copy install command for ${escapeHtml(plugin.name)}">
+          <span class="command-glyph" aria-hidden="true"></span><span data-copy-label>Copy install</span>
+          <span class="copy-icon" aria-hidden="true"></span>
+          <span class="control-tooltip" role="tooltip" aria-hidden="true">Copy install command</span>
+        </button>`;
+  const stars = plugin.builtIn ? "" : `<span class="card-stars has-control-tooltip" aria-label="${formatStars(plugin.stars)} repository stars"><svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg><span class="social-count" aria-hidden="true">${formatStars(plugin.stars)}</span><span class="control-tooltip" role="tooltip" aria-hidden="true">Repository stars</span></span>`;
+  const hearted = hasPluginHeart(plugin.id);
+  const heart = state.engagementEnabled
+    ? pluginHeartButton(plugin, state.engagement[plugin.id], {
+        hearted,
+        pending: !state.engagementLoaded,
+      })
+    : "";
+  const rank = cardRankLabel(plugin);
+  const rankLine = state.engagementEnabled && !plugin.builtIn
+    ? `<span class="card-rank" data-card-rank="${escapeHtml(plugin.id)}" title="Overall rank from hearts, install copies, views, and repository stars"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>`
+    : "";
+  return { installAction, stars, heart, rankLine };
+}
+
+function pluginCard(plugin, { showNew = false, previewBack = "", gemTimes = null } = {}) {
   const tags = cardTaxonomyLabels(plugin)
     .map((label) => `<span class="tag">${escapeHtml(label)}</span>`)
     .join("");
@@ -770,32 +848,21 @@ function pluginCard(plugin, { showNew = false } = {}) {
   const cardStates = activityState || verificationState
     ? `<div class="card-status-line">${activityState}${verificationState}</div>`
     : "";
-  const installAction = plugin.builtIn
-    ? `<a class="card-install builtin-source-action" href="${escapeHtml(plugin.sourceUrl || plugin.repo)}" target="_blank" rel="noreferrer" aria-label="View source for ${escapeHtml(plugin.name)}">View source ↗</a>`
-    : plugin.placeholder
-      ? '<span class="card-install unavailable" aria-label="Installation not yet available"><span class="command-glyph" aria-hidden="true"></span> Preview only</span>'
-      : !plugin.installAvailable
-        ? `<span class="card-install unavailable" aria-label="Automatic installation unavailable"><span class="command-glyph" aria-hidden="true"></span> ${plugin.upstreamCheckStatus === "failed" ? "Unavailable" : "Manual"}</span>`
-        : `<button class="card-install has-control-tooltip" type="button" data-copy-command="${escapeHtml(plugin.installCommand)}" data-plugin-id="${escapeHtml(plugin.id)}" aria-label="Copy install command for ${escapeHtml(plugin.name)}">
-          <span class="command-glyph" aria-hidden="true"></span><span data-copy-label>Copy install</span>
-          <span class="copy-icon" aria-hidden="true"></span>
-          <span class="control-tooltip" role="tooltip" aria-hidden="true">Copy install command</span>
-        </button>`;
   const previewSource = plugin.previewThumbnail || plugin.previewImage;
   const preview = previewSource
     ? `<div class="plugin-preview image-preview"><img src="${escapeHtml(previewSource)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy"></div>`
     : `<div class="plugin-preview" aria-hidden="true">
         <span class="plugin-preview-mark">${escapeHtml(plugin.initials)}</span>
       </div>`;
-  const stars = plugin.builtIn ? "" : `<span class="card-stars has-control-tooltip" aria-label="${formatStars(plugin.stars)} repository stars"><svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg><span class="social-count" aria-hidden="true">${formatStars(plugin.stars)}</span><span class="control-tooltip" role="tooltip" aria-hidden="true">Repository stars</span></span>`;
-  const hearted = hasPluginHeart(plugin.id);
-  const heart = state.engagementEnabled
-    ? pluginHeartButton(plugin, state.engagement[plugin.id], {
-        hearted,
-        pending: !state.engagementLoaded,
-      })
-    : "";
-  const social = stars || heart ? `<div class="card-social">${stars}${heart}</div>` : "";
+  // Hidden gems: listing date and how many times as many install-command copies per detail view it gets as the median plugin.
+  const gemModule = gemTimes === null ? "" : `
+        <p class="card-gem-facts">
+          <span class="card-gem-since">Listed since ${escapeHtml(formatDate(plugin.listedAt || plugin.addedAt))}</span>
+          ${gemTimes ? `<span class="card-gem-times"><strong>${gemTimes}×</strong><span><span>as many install copies per view</span> <span>as most plugins</span></span></span>` : ""}
+        </p>`;
+  const previewFace = previewBack ? `<div class="plugin-preview-flip">${preview}${previewBack}</div>` : preview;
+  const { installAction, stars, heart, rankLine } = cardBadges(plugin);
+  const social = stars || heart || rankLine ? `<div class="card-social">${stars}${heart}${rankLine}</div>` : "";
   const publisher = publisherLogin(plugin);
   const authorLine = publisher && !plugin.builtIn
     ? `<span class="plugin-author">by <button type="button" data-author="${escapeHtml(publisher)}" aria-label="Show all plugins by @${escapeHtml(publisher)}">@${escapeHtml(publisher)}</button> · ${escapeHtml(plugin.kind || plugin.category)}</span>`
@@ -804,7 +871,7 @@ function pluginCard(plugin, { showNew = false } = {}) {
   return `
     <article class="plugin-card${plugin.builtIn ? " built-in-card" : ""}" data-card-plugin="${escapeHtml(plugin.id)}" style="--card-accent:${accentColor(plugin.accent)}">
       <a class="plugin-card-link" href="plugin.html?id=${encodeURIComponent(plugin.id)}" aria-label="View ${escapeHtml(plugin.name)}"></a>
-      ${preview}
+      ${previewFace}
       <div class="plugin-card-body">
         <div class="plugin-card-content">
           <div class="plugin-title-line">
@@ -815,6 +882,7 @@ function pluginCard(plugin, { showNew = false } = {}) {
           ${authorLine}
           <p class="plugin-description">${escapeHtml(plugin.description)}</p>
         </div>
+        ${gemModule}
         ${cardStates}
         <div class="plugin-card-bottom">
           <div class="plugin-tags">${tags}</div>
@@ -886,26 +954,157 @@ function bindCardActions(root) {
   });
 }
 
+// Small Just landed card: image, name, author, landing time, and the overall rank once engagement loads.
+// Duplicates close the endless loop and are on screen when it starts, so they stay clickable; only screen readers and the tab order skip them.
+function landedCard(plugin, now, duplicate = false) {
+  const publisher = publisherLogin(plugin);
+  const byline = publisher ? `@${publisher}` : plugin.author || "Unknown";
+  const image = plugin.previewThumbnail || plugin.previewImage;
+  const media = image
+    ? `<img src="${escapeHtml(image)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy" decoding="async">`
+    : `<span class="landed-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
+  const rank = cardRankLabel(plugin);
+  return `
+    <li${duplicate ? ' aria-hidden="true"' : ""}><a class="landed-card" href="plugin.html?id=${encodeURIComponent(plugin.id)}"${duplicate ? ' tabindex="-1"' : ""} style="--card-accent:${accentColor(plugin.accent)}">
+      <span class="landed-media">${media}</span>
+      <span class="landed-body">
+        <span class="landed-name">${escapeHtml(plugin.name)}</span>
+        <span class="landed-author">${escapeHtml(byline)}</span>
+        <span class="landed-foot">
+          <time datetime="${escapeHtml(new Date(listingTime(plugin)).toISOString())}">${escapeHtml(listingAgeLabel(plugin, now))}</time>
+          <span class="landed-rank" data-card-rank="${escapeHtml(plugin.id)}"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>
+        </span>
+      </span>
+    </a></li>`;
+}
+
+
+// Back of a card preview (Recently added and the Cards view): the full description and the detail
+// page's Version, License, and Owner.
+function cardPreviewBack(plugin) {
+  const versionLabel = pluginVersionLabel(plugin);
+  const meta = [versionLabel ? versionLabel.replace(/^manifest\s+/, "") : "—", plugin.license || "Unknown", plugin.author]
+    .map((value) => escapeHtml(value))
+    .join(" · ");
+  return `<div class="plugin-preview-back" aria-hidden="true">
+        <p class="plugin-preview-back-description">${escapeHtml(plugin.description)}</p>
+        <p class="plugin-preview-back-meta">${meta}</p>
+      </div>`;
+}
+
+// Mouse hover over a preview turns it to its back; the rest of the card keeps its controls.
+function setupPreviewFlip(root) {
+  if (root.dataset.previewFlipReady === "true") return;
+  root.dataset.previewFlipReady = "true";
+  const sync = (event) => {
+    root.querySelectorAll(".plugin-preview-flip").forEach((flip) => {
+      const rect = flip.getBoundingClientRect();
+      const inside = event?.pointerType === "mouse"
+        && event.clientX >= rect.left && event.clientX <= rect.right
+        && event.clientY >= rect.top && event.clientY <= rect.bottom;
+      flip.classList.toggle("is-flipped", inside);
+    });
+  };
+  root.addEventListener("pointermove", sync);
+  root.addEventListener("pointerleave", () => sync());
+}
+
+function renderHiddenGems() {
+  const section = document.querySelector("#gems-section");
+  const grid = document.querySelector("#gems-grid");
+  if (!section || !grid) return;
+  const gems = state.engagementEnabled && state.engagementLoaded ? selectHiddenGems(state.plugins, state.engagement, { limit: 9 }) : [];
+  const median = gems.length ? medianInstallRate(state.plugins, state.engagement) : null;
+  section.hidden = gems.length === 0;
+  const rateOf = (plugin) => {
+    const stats = state.engagement[plugin.id] || {};
+    const views = Math.max(0, Math.trunc(Number(stats.views) || 0));
+    return views ? Math.min(views, Math.max(0, Math.trunc(Number(stats.copies) || 0))) / views : 0;
+  };
+  // The Wilson bound picks the gems; they are shown by the multiple on the card, so the visible numbers descend.
+  grid.innerHTML = gems.map((plugin) => ({ plugin, rate: rateOf(plugin) })).sort((a, b) => b.rate - a.rate).map(({ plugin, rate }) => {
+    // "Most plugins": at least half of all rated plugins have the median rate or less, so the multiple holds for them.
+    const times = median ? rate / median : 0;
+    return pluginCard(plugin, { previewBack: cardPreviewBack(plugin), gemTimes: times >= 1.1 ? times.toFixed(1) : "" });
+  }).join("");
+  bindCardActions(grid);
+  setupPreviewFlip(grid);
+  grid.scrollLeft = 0;
+  setupGemsCarousel(grid);
+}
+
+// One row of gems scrolled by page: the arrows move one visible width, and hide when every card already fits.
+function setupGemsCarousel(grid) {
+  const nav = document.querySelector(".gems-nav");
+  if (!nav) return;
+  const buttons = [...nav.querySelectorAll("[data-gems-step]")];
+  const update = () => {
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    nav.hidden = maxScroll <= 1;
+    buttons.forEach((button) => {
+      button.disabled = Number(button.dataset.gemsStep) < 0 ? grid.scrollLeft <= 1 : grid.scrollLeft >= maxScroll - 1;
+    });
+  };
+  if (!grid.dataset.carousel) {
+    grid.dataset.carousel = "ready";
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      const gap = Number.parseFloat(getComputedStyle(grid).columnGap) || 0;
+      grid.scrollBy({ left: Number(button.dataset.gemsStep) * (grid.clientWidth + gap), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }));
+    grid.addEventListener("scroll", update, { passive: true });
+    addEventListener("resize", update);
+  }
+  update();
+}
+
+// Just landed: the last 24 hours as small cards drifting left to right in two rows (alternating newest first).
+// Each track holds its cards twice for a seamless loop; the copies are hidden from assistive technology and
+// focus. Hover, focus, and the Pause button stop the drift; reduced motion leaves scrollable static rows.
 function renderRecentlyAdded() {
   const section = document.querySelector("#recent-section");
-  const root = document.querySelector("#recent-grid");
-  if (!section || !root) return;
+  if (!section) return;
+  const summary = document.querySelector("#recent-summary");
+  const rows = document.querySelector("#recent-latest");
+  const toggle = document.querySelector("#recent-feed-toggle");
 
-  const recent = state.plugins
-    .filter((plugin) => (plugin.sourceType || "community") === "community" && isRecentlyAdded(plugin))
-    .sort((a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name))
-    .slice(0, 3);
+  const now = Date.now();
+  const lastDay = recentListings(state.plugins, now, 24);
+  const lastWeek = recentListings(state.plugins, now, 7 * 24);
+  section.hidden = lastDay.length === 0;
+  if (summary) summary.innerHTML = `<b>${lastDay.length.toLocaleString("en-US")}</b> new in 24h · <b>${lastWeek.length.toLocaleString("en-US")}</b> in 7 days`;
+  if (!rows || !toggle) return;
 
-  section.hidden = recent.length === 0;
-  root.innerHTML = recent.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
-  bindCardActions(root);
+  const items = lastDay.slice(0, 48);
+  const animated = items.length > 6 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  rows.hidden = items.length === 0;
+  rows.classList.toggle("is-animated", animated);
+  rows.querySelectorAll("[data-landed-row]").forEach((track, row) => {
+    const rowItems = items.filter((_, index) => index % 2 === row);
+    track.style.setProperty("--landed-duration", `${Math.max(30, rowItems.length * 5)}s`);
+    track.innerHTML = rowItems.map((plugin) => landedCard(plugin, now)).join("")
+      + (animated ? rowItems.map((plugin) => landedCard(plugin, now, true)).join("") : "");
+  });
+  toggle.hidden = !animated;
+  if (!toggle.dataset.ready) {
+    toggle.dataset.ready = "true";
+    toggle.addEventListener("click", () => {
+      const paused = rows.classList.toggle("is-paused");
+      toggle.textContent = paused ? "Play" : "Pause";
+      toggle.setAttribute("aria-label", `${paused ? "Play" : "Pause"} the Just landed feed`);
+    });
+  }
 }
 
 function renderPagination(totalItems, pageState) {
   const controls = catalogViewControls(totalItems, state.showAll, pluginsPerPage);
   document.body.classList.toggle("catalog-show-all", controls.reserveDockSpace);
-  pagination.hidden = controls.paginationHidden;
-  viewToggle.hidden = controls.browseAllHidden;
+  pagination.hidden = controls.paginationHidden || splitView();
+  splitPagePrevious.disabled = !pageState.hasPrevious;
+  splitPageNext.disabled = !pageState.hasNext;
+  splitPageInput.value = String(pageState.page);
+  splitPageInput.max = String(pageState.totalPages);
+  splitPageTotal.textContent = `of ${pageState.totalPages} · ${pageSize()} per page`;
+  viewToggle.hidden = controls.browseAllHidden || splitView();
   viewDock.hidden = controls.dockHidden;
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
   viewLabel.textContent = `Browse all ${totalItems} ${sourceLabel} plugin${totalItems === 1 ? "" : "s"}`;
@@ -924,6 +1123,220 @@ function renderPagination(totalItems, pageState) {
   nextPage.setAttribute("aria-label", pageState.hasNext
     ? `Go to plugin page ${pageState.page + 1}`
     : "No next plugin page");
+}
+
+function splitTile(plugin, rank) {
+  const previewSource = plugin.previewThumbnail || plugin.previewImage;
+  const preview = previewSource
+    ? `<img class="split-tile-thumb" src="${escapeHtml(previewSource)}" alt="" loading="lazy" decoding="async">`
+    : `<span class="split-tile-thumb split-tile-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
+  const rankLabel = rank?.overall ? `#${rank.overall}` : "—";
+  const selected = plugin.id === state.selected;
+  return `
+    <a class="split-tile${selected ? " is-selected" : ""}" role="option" aria-selected="${selected}" data-split-plugin="${escapeHtml(plugin.id)}" href="plugin.html?id=${encodeURIComponent(plugin.id)}" target="_blank" rel="noopener" draggable="false" aria-label="${escapeHtml(plugin.name)}, rank ${escapeHtml(rankLabel)}. Control Enter opens the plugin page in a background tab">
+      ${preview}
+      <span class="split-tile-name">${escapeHtml(plugin.name)}</span>
+      <span class="split-tile-meta"><span>${escapeHtml(plugin.kind || plugin.category)}</span><b>${escapeHtml(rankLabel)}</b></span>
+    </a>`;
+}
+
+function splitStatRow(metric, label, icon, rank, value) {
+  const total = rank?.total || 0;
+  const position = rank?.[metric] || 0;
+  if (!position) {
+    return `
+    <div class="split-stat is-unranked" data-split-metric="${metric}">
+      <div class="split-stat-key"><span class="split-stat-icon">${icon}</span><b>${escapeHtml(formatEngagementCount(value))}</b><span class="sr-only">${label}</span></div>
+      <div class="split-stat-bar"></div>
+      <div class="split-stat-rank">Unranked<small>${total ? `of ${total}` : "no activity yet"}</small></div>
+    </div>`;
+  }
+  const percent = total > 1 ? Math.max(2, Math.round((1 - (position - 1) / (total - 1)) * 100)) : 100;
+  const top = Math.max(1, Math.round((position / total) * 100));
+  return `
+    <div class="split-stat" data-split-metric="${metric}">
+      <div class="split-stat-key"><span class="split-stat-icon">${icon}</span><b>${escapeHtml(formatEngagementCount(value))}</b><span class="sr-only">${label}</span></div>
+      <div class="split-stat-bar"><i style="width:${percent}%"></i><em style="left:${percent}%">top ${top}%</em></div>
+      <div class="split-stat-rank">#${position}<small>of ${total}</small></div>
+    </div>`;
+}
+
+function renderSplitView(pagePlugins) {
+  const ranks = catalogRanks();
+  if (!pagePlugins.some((plugin) => plugin.id === state.selected)) state.selected = pagePlugins[0]?.id || "";
+  splitGrid.innerHTML = pagePlugins.map((plugin) => splitTile(plugin, state.engagementLoaded ? ranks.get(plugin.id) : null)).join("");
+  splitGrid.classList.toggle("is-full", pagePlugins.length >= pageSize());
+  splitPanelCount.textContent = `${pagePlugins.length} of ${sourcePlugins().length}`;
+  splitTopRank.hidden = !state.engagementEnabled;
+  splitTopRank.setAttribute("aria-pressed", String(state.sort === "rank"));
+  const tiles = [...splitGrid.querySelectorAll("[data-split-plugin]")];
+  const selectTile = (tile, { focus = false, force = false } = {}) => {
+    tiles.forEach((other) => {
+      const active = other === tile;
+      other.classList.toggle("is-selected", active);
+      other.setAttribute("aria-selected", String(active));
+      other.tabIndex = active ? 0 : -1;
+    });
+    if (focus) tile.focus({ preventScroll: true });
+    if (!force && state.selected === tile.dataset.splitPlugin) return;
+    state.selected = tile.dataset.splitPlugin;
+    renderSplitSelection();
+  };
+  tiles.forEach((tile) => {
+    tile.tabIndex = tile.dataset.splitPlugin === state.selected ? 0 : -1;
+    tile.addEventListener("click", (event) => {
+      // Modifier clicks keep the browser's native background-tab behaviour; plain clicks only select.
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) {
+        selectTile(tile);
+        return;
+      }
+      event.preventDefault();
+      selectTile(tile, { focus: true });
+    });
+  });
+  splitGrid.onkeydown = (event) => {
+    let index = tiles.indexOf(document.activeElement);
+    if (index < 0) {
+      if (document.activeElement !== splitGrid) return;
+      index = Math.max(0, tiles.findIndex((tile) => tile.dataset.splitPlugin === state.selected));
+      if (!(event.key in { ArrowRight: 1, ArrowLeft: 1, ArrowDown: 1, ArrowUp: 1, Home: 1, End: 1, Enter: 1, " ": 1 })) return;
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
+    const columns = splitGridColumns();
+    const targets = {
+      ArrowRight: index + 1,
+      ArrowLeft: index - 1,
+      ArrowDown: index + columns,
+      ArrowUp: index - columns,
+      Home: 0,
+      End: tiles.length - 1,
+    };
+    if (event.key === "Enter") {
+      // Control or Command Enter lets the link open natively in a background tab; plain Enter only selects.
+      if (event.ctrlKey || event.metaKey || event.shiftKey) return;
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
+    if (event.key === " ") {
+      event.preventDefault();
+      selectTile(tiles[index], { focus: true });
+      return;
+    }
+    if (event.key === "PageDown" || event.key === "PageUp") {
+      const button = event.key === "PageDown" ? nextPage : previousPage;
+      if (button.disabled) return;
+      event.preventDefault();
+      splitFocusPending = true;
+      button.click();
+      return;
+    }
+    if (!(event.key in targets)) return;
+    event.preventDefault();
+    const target = targets[event.key];
+    if (target > tiles.length - 1 && !nextPage.disabled && event.key !== "End") {
+      splitFocusIndex = event.key === "ArrowDown" ? index % columns : 0;
+      nextPage.click();
+      return;
+    }
+    if (target < 0 && !previousPage.disabled && event.key !== "Home") {
+      splitFocusIndex = event.key === "ArrowUp" ? -columns + (index % columns) : -1;
+      previousPage.click();
+      return;
+    }
+    const next = tiles[Math.max(0, Math.min(tiles.length - 1, target))];
+    if (next) selectTile(next, { focus: true });
+  };
+  splitGrid.tabIndex = tiles.length ? -1 : 0;
+  if (splitFocusIndex !== null && tiles.length) {
+    const index = splitFocusIndex < 0 ? tiles.length + splitFocusIndex : splitFocusIndex;
+    splitFocusIndex = null;
+    selectTile(tiles[Math.max(0, Math.min(tiles.length - 1, index))], { focus: true, force: true });
+    return;
+  }
+  if (splitFocusPending) {
+    splitFocusPending = false;
+    tiles.find((tile) => tile.dataset.splitPlugin === state.selected)?.focus({ preventScroll: true });
+  }
+  renderSplitSelection();
+}
+
+let splitFocusPending = false;
+let splitFocusIndex = null;
+
+function splitGridColumns() {
+  const columns = getComputedStyle(splitGrid).gridTemplateColumns.split(" ").filter(Boolean).length;
+  return Math.max(1, columns);
+}
+
+function cardRankLabel(plugin) {
+  if (!state.engagementEnabled || !state.engagementLoaded) return "";
+  const rank = catalogRanks().get(plugin.id);
+  return rank?.overall ? `#${rank.overall}` : "";
+}
+
+function refreshCardRanks(root = document) {
+  root.querySelectorAll("[data-card-rank]").forEach((element) => {
+    const plugin = state.plugins.find((candidate) => candidate.id === element.dataset.cardRank);
+    const label = plugin ? cardRankLabel(plugin) : "";
+    element.textContent = label;
+    element.hidden = !label;
+  });
+}
+
+function refreshSplitRanks() {
+  const ranks = catalogRanks();
+  splitGrid.querySelectorAll("[data-split-plugin]").forEach((tile) => {
+    const rank = state.engagementLoaded ? ranks.get(tile.dataset.splitPlugin) : null;
+    const label = tile.querySelector(".split-tile-meta b");
+    if (label) label.textContent = rank?.overall ? `#${rank.overall}` : "—";
+  });
+  const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
+  if (plugin) renderSplitStats(plugin);
+  refreshCardRanks();
+}
+
+function renderSplitSelection() {
+  const plugin = sourcePlugins().find((candidate) => candidate.id === state.selected);
+  if (!plugin) {
+    splitCard.innerHTML = "";
+    splitStatsBody.innerHTML = "";
+    return;
+  }
+  splitCard.innerHTML = pluginCard(plugin, { showNew: true });
+  bindCardActions(splitCard);
+  renderSplitStats(plugin);
+}
+
+function renderSplitStats(plugin) {
+  const stats = state.engagement[plugin.id] || { views: 0, copies: 0, hearts: 0 };
+  const rank = state.engagementLoaded ? catalogRanks().get(plugin.id) : null;
+  splitStatsTotal.textContent = `of ${rankedPlugins().length} community plugins`;
+  splitStatsBody.innerHTML = !state.engagementEnabled
+    ? '<p class="split-stats-empty">Engagement statistics are unavailable here.</p>'
+    : plugin.sourceType === "builtin"
+      ? '<p class="split-stats-empty">Built-in plugins are not ranked.</p>'
+    : !state.engagementLoaded
+      ? '<p class="split-stats-empty" aria-busy="true">Loading engagement statistics…</p>'
+      : [
+      ["hearts", "hearts", '<span class="social-glyph heart-glyph" aria-hidden="true">\uf004</span>'],
+      ["copies", "install copies", '<span class="copy-icon engagement-copy-icon" aria-hidden="true"></span>'],
+      ["views", "views", '<span class="engagement-glyph" aria-hidden="true">\uf441</span>'],
+      ["stars", "repository stars", '<svg class="social-glyph star-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 .5 8.9 4.6l4.6.6-3.35 3.15L11 13 7 10.75 3 13l.85-4.65L.5 5.2l4.6-.6Z"/></svg>'],
+      ].map(([metric, label, icon]) => splitStatRow(metric, label, icon, rank, metric === "stars" ? plugin.stars || 0 : stats[metric])).join("");
+}
+
+function setCatalogView(view) {
+  state.view = view === "split" ? "split" : "cards";
+  storeCatalogView(state.view);
+  viewMode.querySelectorAll("[data-view]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.view === state.view));
+  });
+  document.body.classList.toggle("catalog-split-view", splitView());
+  if (splitView()) splitFilters.append(categoriesRoot);
+  else categoryBar.insertBefore(categoriesRoot, clearFilters);
 }
 
 function placeViewDock() {
@@ -962,7 +1375,7 @@ function catalogResultMessage(totalItems, pageState) {
   const sourceLabel = state.source === "builtin" ? "built-in" : "community";
   if (totalItems === 0) return `No ${sourceLabel} plugins found`;
   if (state.showAll) return `Showing all ${totalItems} ${sourceLabel} plugin${totalItems === 1 ? "" : "s"}`;
-  const shown = Math.min(pluginsPerPage, totalItems - pageState.start);
+  const shown = Math.min(pageSize(), totalItems - pageState.start);
   return `Showing ${shown} of ${totalItems} ${sourceLabel} plugins, page ${pageState.page} of ${pageState.totalPages}`;
 }
 
@@ -1007,10 +1420,19 @@ function restoreCatalogControlFocus(token) {
   return Boolean(target);
 }
 
+function splitView() {
+  return state.view === "split";
+}
+
+function pageSize() {
+  return splitView() ? splitViewPageSize(splitGrid.clientWidth, { rows: splitViewRows }) : pluginsPerPage;
+}
+
 function render({ historyMode = "replace", announce = false } = {}) {
   cancelViewScroll();
+  if (splitView()) state.showAll = false;
   const visible = filteredPlugins();
-  const pageState = paginationState(visible.length, state.page, pluginsPerPage);
+  const pageState = paginationState(visible.length, state.page, pageSize());
   state.page = state.showAll ? 1 : pageState.page;
   const pagePlugins = state.showAll
     ? visible
@@ -1018,15 +1440,24 @@ function render({ historyMode = "replace", announce = false } = {}) {
   const categoryPlugins = sourcePlugins().filter((plugin) => matchesCatalogFilter(plugin));
   const hasSearch = state.terms.length > 0 || Boolean(state.query.trim());
   const hasResultFilter = hasSearch || verificationFilters.has(state.sort);
+  const authorTerm = state.terms.find((term) => term.type === "author");
+  catalogTitle.textContent = authorTerm ? `plugins by @${authorTerm.value}` : "browse all plugins";
   count.textContent = hasResultFilter
     ? `${visible.length} of ${categoryPlugins.length}`
     : String(categoryPlugins.length);
   countLabel.textContent = state.category === "all"
     ? (state.source === "builtin" ? "built-in plugins" : "community plugins")
     : `${state.source === "builtin" ? "built-in plugins" : "plugins"} in ${catalogFilterLabel(state.category)}`;
-  grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true })).join("");
-  bindCardActions(grid);
-  grid.hidden = visible.length === 0;
+  if (splitView()) {
+    grid.innerHTML = "";
+    renderSplitView(pagePlugins);
+  } else {
+    grid.innerHTML = pagePlugins.map((plugin) => pluginCard(plugin, { showNew: true, previewBack: cardPreviewBack(plugin) })).join("");
+    bindCardActions(grid);
+    setupPreviewFlip(grid);
+  }
+  grid.hidden = visible.length === 0 || splitView();
+  splitRoot.hidden = visible.length === 0 || !splitView();
   empty.hidden = visible.length !== 0;
   renderPagination(visible.length, pageState);
   placeViewDock();
@@ -1096,6 +1527,7 @@ function renderCategories() {
   const plugins = sourcePlugins();
   const categoryTotals = catalogCategoryTotals(plugins);
   const categoryFilters = [...categoryTotals.entries()]
+    .filter(([value]) => !taxonomyCatalogFilterNames.has(value))
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([value, total]) => ({ value, label: value, total }));
   const tagFilters = taxonomyFilterTags
@@ -1105,10 +1537,18 @@ function renderCategories() {
       total: plugins.filter((plugin) => (plugin.tags || []).includes(tag)).length,
     }))
     .filter(({ total }) => total > 0);
+  const taxonomyFilters = taxonomyCatalogFilters
+    .map(([value, matches]) => ({
+      value,
+      label: value,
+      total: plugins.filter(matches).length,
+    }))
+    .filter(({ total }) => total > 0);
   const filters = [
     { value: "all", label: allCategoryLabel(), total: plugins.length },
     ...categoryFilters,
     ...tagFilters,
+    ...taxonomyFilters,
   ];
 
   categoriesRoot.innerHTML = filters.map(({ value, label, total }) => `
@@ -1347,6 +1787,17 @@ async function init() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeVerificationTooltips();
   });
+  document.addEventListener("keydown", (event) => {
+    if (!splitView() || splitRoot.hidden || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(event.key)) return;
+    const active = document.activeElement;
+    if (active && active !== document.body && !active.matches("main, section, [tabindex='-1']")) return;
+    const tile = splitGrid.querySelector(`[data-split-plugin="${CSS.escape(state.selected)}"]`) || splitGrid.querySelector("[data-split-plugin]");
+    if (!tile) return;
+    event.preventDefault();
+    tile.focus({ preventScroll: true });
+    tile.scrollIntoView({ block: "nearest" });
+  });
 
   try {
     const catalog = await loadCatalog();
@@ -1356,8 +1807,68 @@ async function init() {
     state.plugins = catalog.plugins;
     state.engagementEnabled = Boolean(engagementApiBaseUrl());
     restoreUrl();
+    setCatalogView(readCatalogView());
+    viewMode.querySelectorAll("[data-view]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.dataset.view === state.view) return;
+        setCatalogView(button.dataset.view);
+        state.page = 1;
+        splitFocusPending = splitView();
+        render({ announce: true });
+      });
+    });
+    splitTopRank.addEventListener("click", () => {
+      state.sort = state.sort === "rank" ? sourceDefaultSort() : "rank";
+      state.page = 1;
+      renderSortOptions();
+      render({ announce: true });
+    });
+    const jumpToPage = () => {
+      const requested = Number.parseInt(splitPageInput.value, 10);
+      const totalPages = Number(splitPageInput.max) || 1;
+      const page = Number.isFinite(requested) ? Math.min(totalPages, Math.max(1, requested)) : state.page;
+      if (page === state.page) {
+        splitPageInput.value = String(state.page);
+        return;
+      }
+      state.page = page;
+      splitFocusPending = true;
+      render({ historyMode: "push", announce: true });
+    };
+    splitPageInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        jumpToPage();
+      } else if (event.key === "Escape") {
+        splitPageInput.value = String(state.page);
+        splitPageInput.blur();
+      }
+    });
+    splitPageInput.addEventListener("change", jumpToPage);
+    splitPagePrevious.addEventListener("click", () => previousPage.click());
+    splitPageNext.addEventListener("click", () => nextPage.click());
+    let splitResizeFrame = 0;
+    window.addEventListener("resize", () => {
+      if (!splitView() || splitResizeFrame) return;
+      splitResizeFrame = window.requestAnimationFrame(() => {
+        splitResizeFrame = 0;
+        render({ historyMode: "none" });
+      });
+    });
     renderSearchTerms();
     renderRecentlyAdded();
+    renderHiddenGems();
+    document.querySelector("#gems-sort-link")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      state.sort = "installRate";
+      state.page = 1;
+      renderSortOptions();
+      render({ historyMode: "push", announce: true });
+      document.querySelector("#catalog").scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start",
+      });
+    });
     renderSourceFilters();
     renderSortOptions();
     renderCategories();
@@ -1366,6 +1877,8 @@ async function init() {
       loadEngagementStats().then((stats) => {
         state.engagement = { ...stats, ...state.engagementAuthoritative };
         state.engagementLoaded = true;
+        engagementVersion += 1;
+        renderHiddenGems();
         document.querySelectorAll("[data-plugin-engagement]").forEach((summary) => {
           const pluginId = summary.dataset.pluginEngagement;
           const pluginStats = state.engagement[pluginId] || { views: 0, copies: 0, hearts: 0 };
@@ -1374,6 +1887,8 @@ async function init() {
             hearted: hasPluginHeart(pluginId),
           });
         });
+        refreshCardRanks();
+        if (splitView() && !engagementSorts.has(state.sort)) render({ historyMode: "none" });
         if (engagementSorts.has(state.sort)) {
           const focusToken = pluginCardFocusToken();
           render();
@@ -1386,6 +1901,7 @@ async function init() {
         const focusToken = pluginCardFocusToken();
         state.engagementEnabled = false;
         hidePendingEngagement(document);
+        if (splitView()) render({ historyMode: "none" });
         const previousSort = state.sort;
         const previousLabel = sortOptions[state.source]
           .find(([value]) => value === previousSort)?.[1] || previousSort;
@@ -1412,12 +1928,13 @@ async function init() {
     state.query = search.value;
     state.page = 1;
     updateSearchAffordances();
-    updateSearchSuggestions();
     render();
+    scheduleSearchSuggestions();
   });
 
   search.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
+    if (["Enter", "ArrowDown", "ArrowUp", "ArrowRight", "Tab", "Escape"].includes(event.key)) flushSearchSuggestions();
     if (handleSearchEscape(event, {
       hasSuggestions: !searchSuggestions.hidden,
       closeSuggestions: closeSearchSuggestions,

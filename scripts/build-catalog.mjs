@@ -43,6 +43,7 @@ export const catalogRefreshGraphqlBatchSize = 50;
 export const catalogRefreshGraphqlBudgetReserve = 50;
 export const catalogRefreshGraphqlPointsPerBatchReserve = 10;
 const catalogRefreshGraphqlAttempts = 3;
+const catalogRefreshRestBudgetAttempts = 3;
 export const catalogRefreshRestBudgetReserve = 500;
 export const catalogSourceValidationVersion = 1;
 const accents = ["lime", "amber", "coral", "cyan", "violet", "rose"];
@@ -145,6 +146,11 @@ export function catalogRefreshFailureMessage(repoUrl, error, options = {}) {
   const safeSegment = (value) => String(value).replace(/[^A-Za-z0-9_.-]/g, "-").slice(0, 100);
   const slug = `${safeSegment(repository.owner)}/${safeSegment(repository.repository)}`;
   const source = options.builtIn ? "Built-in catalog" : "Catalog source";
+  if (options.fatal) {
+    const unclassified = !(error instanceof CatalogBuildError) && !(error instanceof CatalogCheckError);
+    const kind = unclassified ? `: ${safeSegment(error?.name || "Error")}` : "";
+    return `${source} refresh aborted for ${slug} [${catalogErrorCode(error, "internal-error")}${kind}].`;
+  }
   return `${source} refresh failed for ${slug} [${catalogErrorCode(error)}].`;
 }
 
@@ -165,9 +171,10 @@ async function fetchWithTimeout(url, options = {}) {
       signal: AbortSignal.timeout(requestTimeout),
     });
   } catch (error) {
+    const cause = error?.cause?.code || error?.cause?.name || "";
     throw new CatalogCheckError(
       "repository-unreachable",
-      `Network request failed for ${new URL(url).hostname}: ${error.message}`,
+      `Network request failed for ${new URL(url).hostname}: ${error?.name || "Error"}: ${error?.message}${cause ? ` (${cause})` : ""}`,
     );
   }
 }
@@ -1197,28 +1204,45 @@ function previousCatalogSourcePlugins(source, previousPlugins) {
   });
 }
 
-export function canReuseFullRefreshSource(source, identity, previousPlugins) {
-  if (!identity || !/^[a-f0-9]{40}$/.test(identity.commitSha || "")) return false;
+function fullRefreshPreviousState(source, identity, previousPlugins) {
+  if (!identity || !/^[a-f0-9]{40}$/.test(identity.commitSha || "")) return "";
   const expectedIds = sourceCatalogPluginIds(source);
   const previous = previousCatalogSourcePlugins(source, previousPlugins);
   if (
     !expectedIds.length
     || JSON.stringify(previous.map((plugin) => plugin.id).sort()) !== JSON.stringify(expectedIds)
-  ) return false;
+  ) return "";
   const fingerprint = catalogSourceFingerprint(source);
-  return previous.every((plugin) => (
+  const unchanged = previous.every((plugin) => (
     plugin.upstreamCheckStatus === "passed"
-    && plugin.upstreamValidationVersion === catalogSourceValidationVersion
     && plugin.upstreamSourceFingerprint === fingerprint
     && String(plugin.upstreamObservedCommit || "").toLowerCase() === identity.commitSha
     && String(plugin.upstreamValidatedCommit || "").toLowerCase() === identity.commitSha
     && plugin.upstreamObservedBranch === identity.branch
     && Number.isFinite(Date.parse(plugin.upstreamValidatedAt || ""))
   ));
+  if (!unchanged) return "";
+  if (previous.every((plugin) => plugin.upstreamValidationVersion === catalogSourceValidationVersion)) {
+    return "current";
+  }
+  return previous.every((plugin) => (
+    Number.isSafeInteger(plugin.upstreamValidationVersion)
+    && plugin.upstreamValidationVersion >= 0
+    && plugin.upstreamValidationVersion < catalogSourceValidationVersion
+  ))
+    ? "outdated"
+    : "";
 }
 
-export function reusableFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
-  if (!canReuseFullRefreshSource(source, identity, previousPlugins)) return null;
+export function canReuseFullRefreshSource(source, identity, previousPlugins) {
+  return fullRefreshPreviousState(source, identity, previousPlugins) === "current";
+}
+
+export function canDeferFullRefreshRevalidation(source, identity, previousPlugins) {
+  return fullRefreshPreviousState(source, identity, previousPlugins) === "outdated";
+}
+
+function carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, { keepValidationVersion }) {
   return previousCatalogSourcePlugins(source, previousPlugins).map((plugin) => {
     const next = {
       ...plugin,
@@ -1228,12 +1252,34 @@ export function reusableFullRefreshPlugins(source, identity, previousPlugins, ch
       upstreamObservedBranch: identity.branch,
       upstreamCheckedAt: checkedAt,
       upstreamCheckStatus: "passed",
-      upstreamValidationVersion: catalogSourceValidationVersion,
+      upstreamValidationVersion: keepValidationVersion
+        ? plugin.upstreamValidationVersion
+        : catalogSourceValidationVersion,
       upstreamSourceFingerprint: catalogSourceFingerprint(source),
     };
     delete next.upstreamCheckError;
     return projectPluginVerification(next, source);
   });
+}
+
+export function reusableFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
+  if (!canReuseFullRefreshSource(source, identity, previousPlugins)) return null;
+  return carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, {
+    keepValidationVersion: false,
+  });
+}
+
+export function deferredFullRefreshPlugins(source, identity, previousPlugins, checkedAt) {
+  if (!canDeferFullRefreshRevalidation(source, identity, previousPlugins)) return null;
+  return carriedFullRefreshPlugins(source, identity, previousPlugins, checkedAt, {
+    keepValidationVersion: true,
+  });
+}
+
+function oldestFullRefreshValidation(source, previousPlugins) {
+  return Math.min(...previousCatalogSourcePlugins(source, previousPlugins).map((plugin) => (
+    Date.parse(plugin.upstreamValidatedAt)
+  )));
 }
 
 function repositoryMetadata(metadata) {
@@ -1327,8 +1373,7 @@ export function communityInstall(source, manifestPath, overrides = {}) {
   const installation = overrides.installation;
   if (installation !== undefined) {
     if (
-      manifestPath !== "manifest.json"
-      || !installation
+      !installation
       || typeof installation !== "object"
       || Array.isArray(installation)
       || installation.mode !== "manual"
@@ -1337,6 +1382,12 @@ export function communityInstall(source, manifestPath, overrides = {}) {
       || Object.keys(installation).some((field) => !["mode", "note"].includes(field))
     ) {
       throw new Error(`${source.repo}: invalid manual installation override`);
+    }
+    if (manifestPath !== "manifest.json") {
+      checkError(
+        "unsupported-repository-layout",
+        `${source.repo}: manual installation requires a root plugin manifest`,
+      );
     }
     return {
       repositoryLayout: "root-plugin",
@@ -1442,6 +1493,7 @@ export async function discoveredPlugins(source, context, preview) {
   );
   const plugins = [];
   const seenIds = new Set();
+  const listedManifests = [];
   for (const manifestPath of manifestPaths) {
     let manifest;
     try {
@@ -1455,11 +1507,14 @@ export async function discoveredPlugins(source, context, preview) {
     if (!looksLikePluginManifest(manifest)) continue;
     const candidateId = typeof manifest.id === "string" ? manifest.id.trim() : manifest.id;
     if (!isListedPlugin(source, candidateId)) continue;
-    validateManifestFiles(manifest, manifestPath, context, { community: true });
     if (seenIds.has(manifest.id)) {
       checkError("manifest-invalid", `${context.repository.slug}: duplicate plugin id`);
     }
     seenIds.add(manifest.id);
+    listedManifests.push({ manifestPath, manifest });
+  }
+  for (const { manifestPath, manifest } of listedManifests) {
+    validateManifestFiles(manifest, manifestPath, context, { community: true });
     const kinds = manifest.kinds.map(String);
     const overrides = source.plugins?.[manifest.id] || {};
     const addedAt = listingDate(
@@ -1570,10 +1625,7 @@ function builtInKind(kinds) {
   return kinds.map((kind) => labels[kind] || kind).join(" + ");
 }
 
-function builtInCommand(id, kinds) {
-  if (kinds.includes("bar-widget")) {
-    return { command: `omarchy bar plugin add ${id}`, label: "Add to bar" };
-  }
+function builtInCommand(id) {
   return { command: `omarchy plugin enable ${id}`, label: "Enable plugin" };
 }
 
@@ -1611,7 +1663,7 @@ async function discoveredBuiltIns(source, context) {
     validateManifestFiles(manifest, manifestPath, context);
     if (excluded.has(manifest.id)) return null;
     const kinds = manifest.kinds.map(String);
-    const officialCommand = builtInCommand(manifest.id, kinds);
+    const officialCommand = builtInCommand(manifest.id);
     const sourceDirectory = dirname(manifestPath);
     return {
       id: manifest.id,
@@ -1909,18 +1961,45 @@ export function assertRepositoryMigrationPreviousState(sourcePlan, previous) {
   return byCurrentRepository;
 }
 
-export async function assertFullRefreshRestBudget(requiredTreeRequests, options = {}) {
+async function githubRateLimit() {
+  let lastError;
+  for (let attempt = 1; attempt <= catalogRefreshRestBudgetAttempts; attempt += 1) {
+    try {
+      return await githubApi("/rate_limit");
+    } catch (error) {
+      if (!(error instanceof CatalogCheckError)) throw error;
+      lastError = error;
+      if (attempt < catalogRefreshRestBudgetAttempts) {
+        await new Promise((resolveDelay) => setTimeout(resolveDelay, attempt * 250));
+      }
+    }
+  }
+  throw new CatalogBuildError(
+    "api-budget-insufficient",
+    `GitHub REST core budget request failed: ${lastError.message}`,
+  );
+}
+
+export async function planFullRefreshRestBudget(
+  requiredTreeRequests,
+  deferrableTreeRequests = 0,
+  options = {},
+) {
   const reserve = options.reserve ?? catalogRefreshRestBudgetReserve;
   if (
     !Number.isSafeInteger(requiredTreeRequests)
     || requiredTreeRequests < 0
+    || !Number.isSafeInteger(deferrableTreeRequests)
+    || deferrableTreeRequests < 0
     || !Number.isSafeInteger(reserve)
     || reserve < 0
   ) {
     throw new CatalogBuildError("internal-error", "Catalog refresh REST budget requirement is invalid");
   }
-  if (!requiredTreeRequests) return Object.freeze({ limit: 0, remaining: 0, resetAt: "" });
-  const rateLimit = await githubApi("/rate_limit");
+  if (!requiredTreeRequests && !deferrableTreeRequests) {
+    return Object.freeze({ limit: 0, remaining: 0, resetAt: "", revalidations: 0 });
+  }
+  const rateLimit = await githubRateLimit();
   const core = rateLimit?.resources?.core;
   const limit = Number(core?.limit);
   const remaining = Number(core?.remaining);
@@ -1952,9 +2031,16 @@ export async function assertFullRefreshRestBudget(requiredTreeRequests, options 
       `GitHub REST core budget is insufficient for catalog trees (remaining ${remaining}, trees ${requiredTreeRequests}, reserve ${reserve}, resetAt ${resetAt})`,
     );
   }
+  const revalidations = Math.min(deferrableTreeRequests, remaining - required);
+  const deferred = deferrableTreeRequests - revalidations;
   console.log(
-    `Catalog refresh REST plan: ${requiredTreeRequests} trees, ${remaining} remaining, ${reserve} reserved.`,
+    `Catalog refresh REST plan: ${requiredTreeRequests + revalidations} trees, ${remaining} remaining, ${reserve} reserved${deferred ? `, ${deferred} policy revalidations deferred` : ""}.`,
   );
+  return Object.freeze({ limit, remaining, resetAt, revalidations });
+}
+
+export async function assertFullRefreshRestBudget(requiredTreeRequests, options = {}) {
+  const { limit, remaining, resetAt } = await planFullRefreshRestBudget(requiredTreeRequests, 0, options);
   return Object.freeze({ limit, remaining, resetAt });
 }
 
@@ -2002,6 +2088,7 @@ async function buildCatalogInternal(options = {}) {
   const checkedAt = new Date().toISOString();
   let fullRefreshIdentities = null;
   let migrationIdentities = null;
+  let deferredPolicyRevalidations = new Set();
   if (!sourcePlan.incremental) {
     const identitySources = [
       ...(registry.sources || []),
@@ -2013,7 +2100,9 @@ async function buildCatalogInternal(options = {}) {
         ? { budgetReserve: options.graphqlBudgetReserve }
         : {}),
     });
-    const requiredCommunityTrees = (registry.sources || []).filter((source) => {
+    let requiredCommunityTrees = 0;
+    const policyRevalidationSources = [];
+    for (const source of registry.sources || []) {
       const key = parseGitHubRepository(source.repo).slug.toLowerCase();
       const identity = fullRefreshIdentities.get(key);
       if (!identity) {
@@ -2022,9 +2111,11 @@ async function buildCatalogInternal(options = {}) {
           "Catalog refresh identity map is incomplete",
         );
       }
-      return identity.context
-        && !canReuseFullRefreshSource(source, identity.context, previousPlugins);
-    }).length;
+      if (!identity.context) continue;
+      const previousState = fullRefreshPreviousState(source, identity.context, previousPlugins);
+      if (previousState === "outdated") policyRevalidationSources.push(source);
+      else if (previousState !== "current") requiredCommunityTrees += 1;
+    }
     const requiredBuiltInTrees = (registry.builtInSources || []).filter((source) => {
       const key = parseGitHubRepository(source.repo).slug.toLowerCase();
       const identity = fullRefreshIdentities.get(key);
@@ -2036,10 +2127,18 @@ async function buildCatalogInternal(options = {}) {
       }
       return Boolean(identity.context);
     }).length;
-    await assertFullRefreshRestBudget(
+    const restPlan = await planFullRefreshRestBudget(
       requiredCommunityTrees + requiredBuiltInTrees,
+      policyRevalidationSources.length,
       options.restBudgetReserve === undefined ? {} : { reserve: options.restBudgetReserve },
     );
+    deferredPolicyRevalidations = new Set(policyRevalidationSources
+      .map((source) => ({ source, validatedAt: oldestFullRefreshValidation(source, previousPlugins) }))
+      .sort((left, right) => (
+        left.validatedAt - right.validatedAt || left.source.repo.localeCompare(right.source.repo)
+      ))
+      .slice(restPlan.revalidations)
+      .map(({ source }) => source.repo));
   } else if (sourcePlan.migration) {
     migrationIdentities = await resolveFullRefreshIdentities(sourcePlan.refreshSources, {
       ...(options.graphqlBatchSize ? { batchSize: options.graphqlBatchSize } : {}),
@@ -2119,6 +2218,18 @@ async function buildCatalogInternal(options = {}) {
             plugins.push(...reused);
             continue;
           }
+          if (deferredPolicyRevalidations.has(source.repo)) {
+            const deferred = deferredFullRefreshPlugins(
+              source,
+              identity.context,
+              previousPlugins,
+              checkedAt,
+            );
+            if (deferred) {
+              plugins.push(...deferred);
+              continue;
+            }
+          }
           context = identity.context;
           context = await resolveSnapshotTree(context);
         }
@@ -2161,9 +2272,18 @@ async function buildCatalogInternal(options = {}) {
           migrationSourcesUsed.add(parseGitHubRepository(source.repo).slug.toLowerCase());
         }
       } catch (error) {
+        if (pinThisSource || migrateThisSource || !(error instanceof CatalogCheckError)) {
+          console.error(catalogRefreshFailureMessage(source.repo, error, { fatal: true }));
+        }
         if (pinThisSource || migrateThisSource) throw error;
         assertRecoverableCatalogError(error);
-        const preserved = failedSourcePlugins(source, previousPlugins, context, checkedAt, error);
+        let preserved;
+        try {
+          preserved = failedSourcePlugins(source, previousPlugins, context, checkedAt, error);
+        } catch (recoveryError) {
+          console.error(catalogRefreshFailureMessage(source.repo, recoveryError, { fatal: true }));
+          throw recoveryError;
+        }
         plugins.push(...preserved);
         const code = catalogErrorCode(error);
         warnings.push(`${source.repo}: ${code}`);
@@ -2199,11 +2319,17 @@ async function buildCatalogInternal(options = {}) {
           const context = await resolveSnapshotTree(identity.context);
           plugins.push(...await discoveredBuiltIns(source, context));
         } catch (error) {
+          if (!(error instanceof CatalogCheckError)) {
+            console.error(catalogRefreshFailureMessage(source.repo, error, { builtIn: true, fatal: true }));
+          }
           assertRecoverableCatalogError(error);
           const preserved = previousPlugins.filter(
             (plugin) => plugin.builtIn && plugin.repo === source.repo,
           );
-          if (!preserved.length) throw error;
+          if (!preserved.length) {
+            console.error(catalogRefreshFailureMessage(source.repo, error, { builtIn: true, fatal: true }));
+            throw error;
+          }
           plugins.push(...preserved);
           warnings.push(`${source.repo}: built-in catalog refresh unavailable`);
           console.error(catalogRefreshFailureMessage(source.repo, error, { builtIn: true }));

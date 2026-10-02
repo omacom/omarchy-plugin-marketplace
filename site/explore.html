@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#000000">
     <title>Explore Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260820-21">
-    <link rel="stylesheet" href="assets/css/explore.css?v=20260828-27">
-    <script>document.documentElement.dataset.theme = localStorage.getItem("omarchy-theme") || "dark";</script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20260930-01">
+    <link rel="stylesheet" href="assets/css/explore.css?v=20260930-01">
+    <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page explore-page">
     <a class="skip-link" href="#explorer">Skip to plugin explorer</a>
@@ -29,9 +29,9 @@
           <a href="develop.html" aria-label="Develop a plugin">Develop<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="https://github.com/omacom/omarchy-plugin-marketplace" target="_blank" rel="noreferrer" aria-label="Contribute a plugin">Contribute<span class="market-nav-detail">&nbsp;a plugin</span></a>
           <a href="publish.html" aria-label="Publish a plugin">Publish<span class="market-nav-detail">&nbsp;a plugin</span><span aria-hidden="true">&nbsp;→</span></a>
-          <button class="square-action icon-only theme-toggle" type="button" aria-label="Toggle color theme">
-            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg>
+          <button class="square-action theme-toggle" type="button" aria-label="Choose color theme">
+            <svg class="palette-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1 .9-1.8 2-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.7-9-7.7Z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10.5" cy="7" r="1.3"/><circle cx="15" cy="7.5" r="1.3"/></svg>
+            <span class="theme-toggle-label">Theme</span>
           </button>
         </nav>
       </div>
@@ -143,6 +143,12 @@
             <button type="button" data-growth-preset="14" aria-pressed="false">14 Days</button>
             <button type="button" data-growth-preset="all" aria-pressed="false">All</button>
           </div>
+          <div class="growth-projection-row">
+            <span id="growth-projection-title" class="growth-control-title">Projection</span>
+            <div class="growth-presets growth-projection-years" role="group" aria-labelledby="growth-projection-title">
+              <button type="button" data-projection-year="2026" aria-pressed="false" aria-label="Project to 31 Dec 2026 at the pace since the Quattro release">2026</button>
+            </div>
+          </div>
           <div id="growth-calendar" class="growth-calendar" role="dialog" aria-modal="false" aria-labelledby="growth-calendar-month" hidden>
             <div class="growth-calendar-header">
               <button type="button" data-calendar-nav="-1" aria-label="Previous month">←</button>
@@ -164,7 +170,6 @@
               <span>Community Registry</span>
               <h2>community plugins</h2>
               <p><span id="growth-method-copy">End-of-day Git catalog snapshots (UTC)</span> · <span id="growth-range-copy">since the Quattro release</span></p>
-              <p id="growth-finality-copy">Earlier UTC days are final. The latest day is provisional until a successful later-day build finalizes it.</p>
             </div>
             <div class="growth-summary" aria-live="polite">
               <div class="growth-total">
@@ -195,6 +200,7 @@
                   <path data-chart-area fill="url(#growth-fill)"></path>
                   <path data-chart-line fill="none" stroke="#ff5a36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#growth-glow)"></path>
                   <g data-release-marker></g>
+                  <g data-chart-projection></g>
                   <g data-chart-points></g>
                   <g data-chart-labels></g>
                   <g class="chart-hover-guide is-hidden" data-chart-hover-guide aria-hidden="true">
@@ -210,7 +216,7 @@
           </div>
 
           <div class="growth-poster-footer">
-            <div class="growth-legend"><span><i class="legend-dot"></i><span id="growth-legend-copy">Active community listings</span></span><span><i class="legend-release"></i>Omarchy Quattro v4.0.0 release</span></div>
+            <div class="growth-legend"><span><i class="legend-dot"></i><span id="growth-legend-copy">Active community listings</span></span><span><i class="legend-release"></i>Omarchy Quattro v4.0.0 release</span><span id="growth-legend-projection" hidden><i class="legend-projection"></i>Projection at Quattro pace</span><span id="growth-legend-band" hidden><i class="legend-band"></i>Slowest–fastest week</span></div>
             <span class="growth-source">Source · <strong id="growth-source">Git catalog snapshots</strong></span>
           </div>
         </figure>
@@ -223,7 +229,9 @@
       <div class="footer-status">
         <a class="footer-status-link footer-maintainer" href="https://github.com/HANCORE-linux" target="_blank" rel="noreferrer">HANCORE <span aria-hidden="true">↗</span></a>
         <div class="footer-status-copy">
-          <span class="footer-project-name">OMARCHY PLUGIN MARKETPLACE</span>
+          <a class="footer-wordmark-link" href="https://omarchy.org/" target="_blank" rel="noreferrer" aria-label="Visit Omarchy">
+            <img src="assets/img/omarchy-wordmark.png" alt="" width="656" height="192">
+          </a>
         </div>
         <div class="footer-resource-links">
           <a class="footer-status-link" href="https://github.com/omacom/omarchy-plugin-marketplace/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT LICENSE <span aria-hidden="true">↗</span></a>
@@ -239,6 +247,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
 
-    <script type="module" src="assets/js/explore.js?v=20260905-01"></script>
+    <script type="module" src="assets/js/explore.js?v=20260930-01"></script>
   </body>
 </html>

@@ -22,6 +22,7 @@ import {
   securityBaselineVersion,
 } from "../scripts/security-baseline-policy.mjs";
 import { catalogVerificationFields } from "../scripts/catalog-verification.mjs";
+import { canonicalRepositoryRequest } from "../scripts/verification-subject.mjs";
 import { sourceVerification } from "../scripts/verification-status.mjs";
 import {
   legacyListedSnapshotAcknowledgment,
@@ -762,7 +763,7 @@ test("standard installation verification fails closed for non-passing or ineligi
   });
   assert.equal(rejected.status, "unverified");
   assert.equal(rejected.standardInstallationRejected, true);
-  assert.equal(rejected.code, "verification-standard-installation-requires-passing");
+  assert.equal(rejected.code, "verification-standard-installation-evidence-required");
   await assert.rejects(
     analyzeListedPluginVerification({
       body: standardInstallationRequestBody(),
@@ -859,6 +860,49 @@ test("verification requests must match one existing registry source exactly", ()
   assert.throws(
     () => listedSourceForRequest(registry, { ...request, commitSha: otherCommit }),
     (error) => error.code === "verification-commit-mismatch",
+  );
+});
+
+test("verification requests may name a recorded former repository of their own listing", () => {
+  const identity = {
+    schemaVersion: 1,
+    nodeId: "R_kgDOExample",
+    databaseId: 123456789,
+    previousRepositories: ["Former/Plugin"],
+  };
+  const migrated = source({ repositoryIdentity: identity });
+  const registry = { sources: [migrated] };
+  const request = parseVerificationRequest(requestBody());
+  assert.equal(canonicalRepositoryRequest(registry, request), request);
+
+  const former = parseVerificationRequest(requestBody({ repoUrl: "https://github.com/Former/Plugin" }));
+  assert.equal(former.repository, "former/plugin");
+  const canonical = canonicalRepositoryRequest(registry, former);
+  assert.equal(canonical.repository, "example/plugin");
+  assert.equal(canonical.repoUrl, migrated.repo);
+  assert.equal(canonical.pluginId, former.pluginId);
+  assert.equal(canonical.commitSha, former.commitSha);
+  assert.equal(canonical.action, former.action);
+  assert.equal(listedSourceForRequest(registry, canonical), migrated);
+
+  const otherListing = source({
+    repo: "https://github.com/second/plugin",
+    plugins: { "second.plugin": { category: "System", tags: ["system"] } },
+    repositoryIdentity: { ...identity, previousRepositories: ["Third/Plugin"] },
+  });
+  for (const [candidateRegistry, candidate] of [
+    [registry, { ...request, repository: "other/plugin" }],
+    [{ sources: [migrated, otherListing] }, { ...request, repository: "third/plugin" }],
+    [{ sources: [source()] }, former],
+    [{ sources: [source({ repositoryIdentity: { ...identity, nodeId: "invalid" } })] }, former],
+    [{ sources: [migrated, source({ repo: "https://github.com/copy/plugin" })] }, former],
+    [registry, { ...former, pluginId: "missing.plugin" }],
+  ]) {
+    assert.equal(canonicalRepositoryRequest(candidateRegistry, candidate), candidate);
+  }
+  assert.throws(
+    () => listedSourceForRequest({ sources: [source()] }, canonicalRepositoryRequest({ sources: [source()] }, former)),
+    (error) => error.code === "verification-repository-mismatch",
   );
 });
 
@@ -1787,4 +1831,83 @@ test("verification issue, workflow, and documentation preserve automatic publica
   assert.match(guide, /`Update unverified`/);
   assert.match(guide, /current Omarchy command clones the repository's mutable current HEAD/);
   assert.match(guide, /not verification-bound/);
+});
+
+function reviewedInstallationFixture() {
+  const record = storedReviewBaseline({ capabilities: ["installer"] });
+  const reviewedSource = source({
+    automatedSecurityBaseline: record,
+    maintainerVerificationReview: storedReview(record),
+    plugins: { "example.plugin": {
+      category: "System", tags: ["system"], manifestPath: "manifest.json",
+      installation: { mode: "manual", note: "Requires extra setup." },
+    } },
+  });
+  const manualCatalog = catalog();
+  Object.assign(manualCatalog.plugins[0], {
+    repositoryLayout: "root-plugin", upstreamCheckStatus: "passed",
+    installAvailable: false, installCommand: "", installNote: "Requires extra setup.", status: "Manual setup",
+  });
+  return {
+    body: standardInstallationRequestBody(), registry: { sources: [reviewedSource] }, catalog: manualCatalog,
+    standardInstallationApproval: standardInstallationApproval({ requestedAt: "2026-08-16T14:00:00.000Z" }),
+    runBaseline: async () => baseline({ outcome: "review-required", capabilities: [{ id: "installer" }], checkedAt: "2026-08-16T15:00:00.000Z" }),
+  };
+}
+
+test("standard installation reuses the exact installer review without minting or retiming an attestation", async () => {
+  const fixture = reviewedInstallationFixture();
+  const original = structuredClone(fixture.registry);
+  const result = await analyzeListedPluginVerification(fixture);
+  assert.equal(result.status, "verified");
+  assert.equal(result.verification.method, "maintainer-reviewed");
+  assert.equal(result.maintainerReviewRequested, false);
+  assert.equal(result.installationChanged, true);
+  assert.equal(result.catalog.plugins[0].installAvailable, true);
+  assert.equal(result.source.plugins["example.plugin"].installation, undefined);
+  assert.deepEqual(result.source.maintainerVerificationReview, original.sources[0].maintainerVerificationReview);
+  assert.deepEqual(result.source.automatedSecurityBaseline, original.sources[0].automatedSecurityBaseline);
+  assert.equal(result.scanResult.checkedAt, "2026-08-16T15:00:00.000Z");
+  assert.deepEqual(fixture.registry, original);
+});
+
+test("standard installation rejects missing, revoked, stale, or mismatched installer reviews", async () => {
+  const mutations = [
+    (f, s) => { delete s.maintainerVerificationReview; },
+    (f, s) => { s.maintainerVerificationReview.commit = otherCommit; },
+    (f, s) => { s.maintainerVerificationReview.repository = "other/plugin"; },
+    (f, s) => { s.maintainerVerificationReview.pluginIds = ["other.plugin"]; },
+    (f, s) => { s.maintainerVerificationReview.baselineVersion = "0"; },
+    (f, s) => { s.maintainerVerificationReviewHistory = [{}]; },
+    (f, s) => { s.maintainerVerificationRevocation = {
+      schemaVersion: 1, repository: "example/plugin", pluginIds: ["example.plugin"], commit,
+      requestEventId: reviewRequestEventId, revocationEventId: reviewRequestEventId + 1,
+      revokedBy: "hancore", revokedAt: "2026-08-16T13:30:00.000Z", reason: maintainerVerificationRevocationReason,
+    }; },
+    (f) => { f.standardInstallationApproval.requestedAt = reviewedAt; },
+    (f) => { f.standardInstallationApproval = null; },
+    (f) => { f.body = standardInstallationRequestBody({ commitSha: otherCommit }); },
+    (f) => { f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: [{ id: "installer" }], checkedAt }); },
+    (f, s) => {
+      s.automatedSecurityBaseline.capabilities.push("privilege");
+      s.maintainerVerificationReview = storedReview(s.automatedSecurityBaseline);
+      f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: [{ id: "installer" }, { id: "privilege" }], checkedAt: "2026-08-16T15:00:00.000Z" });
+    },
+    (f) => { f.runBaseline = async () => baseline({ outcome: "needs-fixes", findings: [{ ruleId: "curl-pipe-shell" }], capabilities: [{ id: "installer" }] }); },
+    (f) => { f.runBaseline = async () => { throw new Error("scan failed"); }; },
+  ];
+  for (const mutate of mutations) {
+    const fixture = reviewedInstallationFixture();
+    mutate(fixture, fixture.registry.sources[0]);
+    const original = structuredClone({ registry: fixture.registry, catalog: fixture.catalog });
+    let result;
+    try { result = await analyzeListedPluginVerification(fixture); }
+    catch (error) { assert.ok(error instanceof PluginVerificationError || error.message === "scan failed"); }
+    if (result) {
+      assert.equal(result.status, "unverified");
+      assert.equal(result.changed, false);
+      assert.equal(result.installationChanged, false);
+    }
+    assert.deepEqual({ registry: fixture.registry, catalog: fixture.catalog }, original);
+  }
 });

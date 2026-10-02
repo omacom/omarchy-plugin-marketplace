@@ -51,8 +51,15 @@ export function selectSearchCompletions(matches, limit = 3) {
   ];
 }
 
+let lastTokensValue = null;
+let lastTokens = [];
+
 export function searchTokens(value) {
-  return foldSearchTerm(value).split(/\s+/).filter(Boolean);
+  const text = String(value || "");
+  if (text === lastTokensValue) return lastTokens;
+  lastTokensValue = text;
+  lastTokens = foldSearchTerm(text).split(/\s+/).filter(Boolean);
+  return lastTokens;
 }
 
 export function currentSearchToken(value) {
@@ -72,12 +79,26 @@ const searchStateTermTypes = new Map([
 export const maximumSearchTerms = 24;
 export const maximumSearchTermLength = 160;
 
+const foldCacheLimit = 20000;
+const foldCache = new Map();
+
+function remember(cache, key, compute) {
+  const cached = cache.get(key);
+  if (cached !== undefined) return cached;
+  const value = compute();
+  if (cache.size >= foldCacheLimit) cache.clear();
+  cache.set(key, value);
+  return value;
+}
+
 export function normalizeSearchTerm(value) {
   return String(value || "").normalize("NFC").trim().replace(/\s+/g, " ");
 }
 
 export function foldSearchTerm(value) {
-  return normalizeSearchTerm(value).toLowerCase();
+  const text = String(value || "");
+  if (text.length < 32) return normalizeSearchTerm(text).toLowerCase();
+  return remember(foldCache, text, () => normalizeSearchTerm(text).toLowerCase());
 }
 
 export function searchPhraseKey(value) {
@@ -89,6 +110,20 @@ export function searchPhraseKey(value) {
 
 export function pluginKindKey(value) {
   return searchPhraseKey(value).replace(/ /g, "-");
+}
+
+const compactCache = new Map();
+
+export function compactSearchKey(value) {
+  const text = String(value || "");
+  if (text.length < 32) return foldSearchTerm(text).replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
+  return remember(compactCache, text, () => foldSearchTerm(text).replace(/[^\p{L}\p{M}\p{N}]+/gu, ""));
+}
+
+function matchesCompactSearch(token, searchText) {
+  if (!/^[\p{L}\p{M}\p{N}]+(?:-[\p{L}\p{M}\p{N}]+)*$/u.test(token)) return false;
+  const compactToken = compactSearchKey(token);
+  return compactToken.length > 3 && compactSearchKey(searchText).includes(compactToken);
 }
 
 export function createSearchTerm(type, value) {
@@ -245,6 +280,79 @@ export function removeSearchTermTypeFromDraft(value, type) {
     .join(" ");
 }
 
+const pluginIdHostSegments = new Set(["io", "com", "org", "net", "dev", "github", "gitlab", "codeberg"]);
+
+export function repositoryPublisher(repo) {
+  try {
+    const url = new URL(repo);
+    if (url.hostname.toLowerCase() !== "github.com") return "";
+    return url.pathname.split("/").filter(Boolean)[0] || "";
+  } catch {
+    return "";
+  }
+}
+
+export function localPluginId(pluginId) {
+  return String(pluginId || "").split(".").at(-1) || "";
+}
+
+export function searchablePluginId(pluginId) {
+  return String(pluginId || "")
+    .split(".")
+    .filter((segment) => !pluginIdHostSegments.has(segment.toLowerCase()))
+    .join(".");
+}
+
+const contextCache = new WeakMap();
+
+export function pluginSearchContext(plugin) {
+  if (!plugin || typeof plugin !== "object") return buildPluginSearchContext(plugin);
+  const cached = contextCache.get(plugin);
+  if (cached) return cached;
+  const context = buildPluginSearchContext(plugin);
+  contextCache.set(plugin, context);
+  return context;
+}
+
+function buildPluginSearchContext(plugin) {
+  const publisher = repositoryPublisher(plugin?.repo);
+  const tags = Array.isArray(plugin?.tags) ? plugin.tags : [];
+  return {
+    publisher,
+    primaryText: [plugin?.name, localPluginId(plugin?.id), ...tags].join(" "),
+    searchText: foldSearchTerm([
+      plugin?.name,
+      plugin?.description,
+      plugin?.author,
+      publisher,
+      `@${publisher}`,
+      searchablePluginId(plugin?.id),
+      plugin?.category,
+      plugin?.kind,
+      ...tags,
+    ].join(" ")),
+    tags,
+    pluginName: plugin?.name,
+    pluginId: plugin?.id,
+    pluginKind: plugin?.kind,
+  };
+}
+
+export function matchesSearchSelection(context, { terms = [], draftTerms = [] } = {}) {
+  const matchesTerms = terms.every((term) => (term.type === "text"
+    ? matchesDirectSearch(term.value, context)
+    : matchesCommittedSearchTerm(term, context)));
+  const textDraft = draftTerms
+    .filter((term) => term.type === "text")
+    .map((term) => term.value)
+    .join(" ");
+  const matchesTextDraft = !textDraft || matchesDirectSearch(textDraft, context);
+  const matchesTypedDraft = draftTerms
+    .filter((term) => term.type !== "text")
+    .every((term) => matchesDraftSearchTerm(term, context));
+  return matchesTerms && matchesTextDraft && matchesTypedDraft;
+}
+
 export function matchesShortSearch(query, primaryText, searchText) {
   const normalized = foldSearchTerm(String(query || "").replace(/^@/, ""));
   if (!normalized) return true;
@@ -258,8 +366,10 @@ export function matchesShortSearch(query, primaryText, searchText) {
   ) {
     return true;
   }
+  const wordPrefix = searchPhraseKey(normalized);
+  if (!wordPrefix) return normalizedSearchText.includes(normalized);
   const words = normalizedSearchText.match(/[\p{L}\p{M}\p{N}]+/gu) || [];
-  return words.some((word) => word.startsWith(normalized));
+  return words.some((word) => word.startsWith(wordPrefix));
 }
 
 export function matchesDirectSearch(value, {
@@ -275,7 +385,9 @@ export function matchesDirectSearch(value, {
         && foldSearchTerm(publisher).startsWith(requestedPublisher);
     }
     const normalizedText = foldSearchTerm(searchText);
-    if (token.length > 3) return normalizedText.includes(token);
+    if (token.length > 3) {
+      return normalizedText.includes(token) || matchesCompactSearch(token, searchText);
+    }
     return matchesShortSearch(token, primaryText, searchText);
   });
 }
@@ -295,7 +407,7 @@ export function matchesCommittedSearchTerm(term, {
   if (normalized.type === "fulltext") {
     return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText });
   }
-  if (normalized.type === "author") return foldSearchTerm(publisher) === requested;
+  if (normalized.type === "author") return foldSearchTerm(publisher).startsWith(requested);
   if (normalized.type === "tag") {
     return tags.some((tag) => foldSearchTerm(tag) === requested);
   }

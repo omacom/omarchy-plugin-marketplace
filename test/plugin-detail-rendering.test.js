@@ -306,3 +306,22 @@ test("suite listings do not offer the unsupported verification workflow", () => 
   assert.match(html, /Verification unavailable:<\/strong> Suite listings are outside the plugin verification workflow\./);
   assert.doesNotMatch(html, /Snapshot verified:|Snapshot unverified:|Update unverified:|Contributor action:|plugin verification form|detail-verification/);
 });
+
+test("community plugin author links to the marketplace author filter", () => {
+  const html = render();
+
+  assert.match(html, /<span>by <a href="index\.html\?author=example" aria-label="Show all plugins by @example">Example Maintainer<\/a><\/span>/);
+});
+
+test("built-in plugin author renders as plain text", () => {
+  const html = render({
+    builtIn: true,
+    repo: "https://github.com/basecamp/omarchy",
+    sourceType: "builtin",
+    officialCommand: "omarchy plugin enable example.community-plugin",
+    officialCommandLabel: "Enable plugin",
+  });
+
+  assert.match(html, /<span>by Example Maintainer<\/span>/);
+  assert.doesNotMatch(html, /<a href="index\.html\?author=/);
+});

@@ -70,6 +70,9 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesShortSearch,
+  matchesSearchSelection,
+  pluginSearchContext,
+  compactSearchKey,
   maximumSearchTermLength,
   parseSearchDraft,
   pluginKindKey,
@@ -91,11 +94,25 @@ import {
   pluginVerificationState,
   readCatalogViewState,
   showCopiedState,
+  engagementRanks,
+  splitViewPageSize,
+  readCatalogView,
   writeClipboard,
 } from "../site/assets/js/shared.js";
 import {
+  applyTheme,
+  defaultThemeId,
+  isThemeId,
+  pickerLayout,
+  readStoredTheme,
+  siteThemes,
+  themePreviewPath,
+} from "../site/assets/js/themes.js";
+import {
   catalogCategoryTotals,
   matchesKidsTaxonomy,
+  matchesBarTaxonomy,
+  matchesVpnTaxonomy,
 } from "../site/assets/js/taxonomy.js";
 
 function contrastRatio(first, second) {
@@ -422,6 +439,58 @@ test("inline completion accepts genuine plugin, tag, and author prefixes", () =>
   ), "");
 });
 
+test("committed text terms match hyphenated and joined spellings", () => {
+  const codexBar = {
+    primaryText: "CodexBar codexbar ai",
+    searchText: "CodexBar Every AI coding limit in one Omarchy panel ai",
+  };
+  const nightLight = {
+    primaryText: "Night Light nightlight system",
+    searchText: "Night Light Owns the hyprsunset night light temperature system",
+  };
+  assert.equal(matchesDirectSearch("codex-bar", codexBar), true);
+  assert.equal(matchesDirectSearch("codexbar", codexBar), true);
+  assert.equal(matchesDirectSearch("codex bar", codexBar), true);
+  assert.equal(matchesDirectSearch("nightlight", nightLight), true);
+  assert.equal(matchesDirectSearch("night-light", nightLight), true);
+  assert.equal(matchesDirectSearch("night+light", nightLight), false);
+  assert.equal(matchesDirectSearch("codex-cli", codexBar), false);
+  assert.equal(matchesDirectSearch("C. elegans Pet", {
+    primaryText: "C. elegans Pet pet games",
+    searchText: "C. elegans Pet A wandering worm for the bar games",
+  }), true);
+  assert.equal(matchesDirectSearch("git", {
+    primaryText: "Nova Lock lock system",
+    searchText: "Nova Lock Quickshell session lock dkgamer02ai dkgamer02ai.lock system",
+  }), false);
+  assert.equal(compactSearchKey("Codex-Bar  v2"), "codexbarv2");
+});
+
+test("search selection narrows with every committed and drafted term", () => {
+  const securityGame = pluginSearchContext({
+    id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade",
+    description: "A guarded arcade.", category: "Other", kind: "Bar widget", tags: ["security", "games"],
+  });
+  const securityOnly = pluginSearchContext({
+    id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault",
+    description: "Secrets in the bar.", category: "System", kind: "Bar widget", tags: ["security"],
+  });
+  const both = parseSearchDraft("tag:security tag:games");
+  assert.equal(matchesSearchSelection(securityGame, { draftTerms: both }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]], draftTerms: [both[1]] }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]] }), true);
+  assert.equal(matchesSearchSelection(securityOnly, {}), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @example") }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @other") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("git") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("io.github") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("example.vault") }), true);
+  assert.equal(securityOnly.primaryText, "Vault vault security");
+  assert.equal(securityOnly.publisher, "example");
+});
+
 test("typed committed chips use exact field-specific matching", () => {
   const plugin = {
     publisher: "spaceXrace",
@@ -436,7 +505,8 @@ test("typed committed chips use exact field-specific matching", () => {
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "bar"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "widget"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "@spaceXrace"), plugin), true);
-  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), false);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), true);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "xrace"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "Power Profiles"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "dizziee.power-profiles"), plugin), true);
   assert.equal(matchesDirectSearch("dark mode", {
@@ -1177,6 +1247,113 @@ test("Kids catalog filtering uses only the exact controlled taxonomy", () => {
   assert.equal(catalogCategoryTotals([{ category: "Other", tags: [] }]).has("Kids"), false);
 });
 
+test("Bar catalog filtering covers bar replacements and bar modifiers, not bar widgets", () => {
+  for (const plugin of [
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "example.custom", name: "Custom", category: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "  BAR ", tags: [] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["hyprland", "bar"] },
+    { id: "henri.hide-bar-on-fullscreen", name: "Hide Bar on Video Fullscreen", category: "Desktop", kind: "Service", tags: ["bar"] },
+    { id: "fixlixpender.bar-color", name: "Bar Color", category: "Appearance", kind: "Bar widget", tags: ["hyprland"] },
+    { id: "floating-waybar", name: "Floating Waybar", category: "Appearance", kind: "Bar", tags: ["quickshell"] },
+    { id: "kc.omarchy-menubar-manager", name: "Omarchy Menubar Manager", category: "Appearance", kind: "Bar widget", tags: ["bar"] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), true, plugin.name);
+  }
+  for (const plugin of [
+    undefined,
+    null,
+    {},
+    "Bar",
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+    { id: "gennaro.hwmon", name: "HW Monitor", category: "Widgets", kind: "Bar widget", tags: ["bar", "quickshell"], description: "Sparkline panel for the Omarchy bar." },
+    { id: "io.github.austindixson.touchbar", name: "Touch Bar", category: "Hardware", kind: "Service", tags: ["hyprland"] },
+    { id: "gurvindersingh-web.system-stats", name: "System Stats (Waybar Style)", category: "Hardware", kind: "Bar widget", tags: ["bar"] },
+    { id: "sportsbar", name: "Sportsbar", category: "Widgets", kind: "Bar widget", tags: ["bar", "media"] },
+    { id: "io.github.rizmi.services", name: "Services Manager", category: "Widgets", kind: "Service", tags: ["system"] },
+    { id: "example.bar", name: "Bar Tools", category: "Productivity", kind: "Bar widget", tags: ["bar"] },
+    { id: "example.bar", name: "Bar", category: "bars", kind: "bar widget", tags: [] },
+    { id: 7, name: 8, category: 9, kind: 10, tags: 11 },
+    { id: { toString: null }, name: ["Bar"], kind: { value: "Bar" }, tags: [] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), false, JSON.stringify(plugin));
+  }
+
+  const totals = catalogCategoryTotals([
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["bar"] },
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+  ]);
+  assert.equal(totals.get("Bar"), 2);
+  assert.equal(totals.get("Bars"), 1);
+  assert.equal(totals.get("Appearance"), 1);
+  assert.equal(totals.get("Widgets"), 1);
+  assert.equal(catalogCategoryTotals([
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["bar"] },
+  ]).has("Bar"), false);
+});
+
+test("VPN catalog filtering requires exact category, VPN identity, or security-scoped description evidence", () => {
+  for (const plugin of [
+    { id: "example.client", name: "Client", category: "VPN", tags: [] },
+    { id: "example.airvpn", name: "AirVPN", tags: [] },
+    { id: "example.wireguard", name: "Tunnel", tags: [] },
+    { id: "antesmd.amneziawg", name: "Omazia", tags: ["system", "bar"], description: "Manage AmneziaWG tunnels." },
+    { id: "io.github.feilian", name: "飞连", tags: ["bar", "quickshell"], description: "Feilian VPN connection toggle." },
+    { id: "jwhall.omanodes", name: "Omanodes", tags: ["system"], description: "Manage ZeroTier networks." },
+    { id: "example.client", name: "Mullvad", tags: [] },
+    { id: "example.client", name: "Tailscale", tags: [] },
+    { id: "example.client", name: "ZeroTier", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["vpn"] },
+    { id: "local.warp", name: "Cloudflare WARP", tags: ["security"] },
+    { id: "io.github.justspica.omaguard", name: "Omaguard", tags: ["bar", "quickshell", "security"], description: "Mullvad VPN state, connection, and server switching." },
+    { id: "ecylmz.omarchy-tunnel", name: "Omarchy Tunnel", tags: ["bar", "quickshell", "security"], description: "A WireGuard VPN manager with connect controls and tunnel status." },
+    { id: "jaabell.sshuttledeck", name: "SSHuttleDeck", tags: ["bar", "security", "quickshell"], description: "An SSH VPN tunnel launcher." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), true);
+  }
+  for (const plugin of [
+    undefined,
+    {},
+    { id: "example.network", name: "Network Monitor", category: "vpn", tags: [] },
+    { id: "example.client", name: "Client", category: "VPN ", repo: "https://github.com/example/tailscale", tags: [] },
+    { id: "example.companion", name: "Companion", tags: [], description: "Connects over a Tailscale VPN." },
+    { id: "example.warp", name: "Warp terminal", tags: [] },
+    { id: "io.github.wireguard.clock", name: "Clock", tags: [] },
+    { id: "vpnvendor.notes", name: "Notes", tags: [] },
+    { id: "example.notvpn", name: "Client", tags: [] },
+    { id: "example.client", name: "NotVPN", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["VPN"] },
+    { id: "example.client", name: "Client", tags: ["security"], description: "A notavpn helper." },
+    { id: "io.github.shirak-semonian.myip", name: "MyIP", tags: ["bar", "security", "system"], description: "Public IP history with a VPN-leak alert." },
+    { id: { toString: null }, name: ["VPN"], tags: [], description: { value: "VPN connection" } },
+    { id: 7, name: 8, tags: [], description: 9 },
+    { id: "example.tunnel", name: "Tunnel", tags: "security", description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["Security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), false);
+  }
+
+  assert.doesNotThrow(() => catalogCategoryTotals([
+    { id: { toString: null }, name: ["VPN"], category: "Other", tags: [] },
+  ]));
+
+  const totals = catalogCategoryTotals([
+    { id: "example.vpn", category: "System", tags: [] },
+    { id: "example.wireguard", category: "System", tags: ["security"], description: "VPN control." },
+    { id: "example.tunnel", category: "Other", tags: ["security"], description: "WireGuard control." },
+    { id: "example.network", category: "Other", tags: [] },
+  ]);
+  assert.equal([...totals.keys()].filter((category) => category === "VPN").length, 1);
+  assert.equal(totals.get("VPN"), 3);
+  assert.equal(totals.get("System"), 2);
+  assert.equal(totals.get("Other"), 2);
+  assert.equal(catalogCategoryTotals([{ id: "example.network", category: "Other", tags: [] }]).has("VPN"), false);
+});
+
 test("entry modules and their shared dependency use one cache key", async () => {
   const root = new URL("../", import.meta.url);
   const files = {
@@ -1224,21 +1401,25 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260831-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260905-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260831-01");
+  assert.equal(keys[0], "20260930-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260930-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260930-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260820-21");
+  assert.equal(styleKeys[0], "20260930-01");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
   assert.equal(new Set(faviconKeys).size, 1);
   assert.match(files.index, /<title>Browse Plugins \| Omarchy Plugins<\/title>/);
-  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/github\.com\/omacom\/omarchy\/tree\/quattro"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.plugin, files.publish, files.develop, files.explore]) {
+    assert.doesNotMatch(page, /omarchy-brand-(?:action|logo)/);
+  }
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
   assert.equal((files.index.match(/href="develop\.html"/g) || []).length, 2);
   assert.equal((files.index.match(/href="explore\.html"/g) || []).length, 2);
   assert.match(files.index, /class="market-hero-actions"[\s\S]*Browse plugins[\s\S]*href="develop\.html">Develop a plugin[\s\S]*Publish a plugin/);
@@ -1299,13 +1480,16 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.index, /<option value="stars">Most starred<\/option>[\s\S]*<option value="views">Most viewed<\/option>[\s\S]*<option value="copies">Most copied<\/option>[\s\S]*<option value="hearts">Most hearts<\/option>/);
   assert.match(files.index, /<span class="sr-only">Sort or filter plugins<\/span>[\s\S]*<select id="sort-select">[\s\S]*<option value="name">A–Z<\/option>[\s\S]*<option value="verified">Verified<\/option>[\s\S]*<option value="unverified">Unverified<\/option>/);
   assert.doesNotMatch(files.index, /verification-bar|verification-select/);
-  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts"\]\)/);
+  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts", "rank", "installRate"\]\)/);
+  assert.match(files.index, /<option value="hearts">Most hearts<\/option>\s*<option value="rank">Top ranked<\/option>\s*<option value="installRate">Install rate<\/option>/);
+  assert.match(files.app, /installRate: \(a, b\) => comparePluginInstallRate\(a, b, state\.engagement\)/);
+  assert.match(files.app, /rank: \(a, b\) => \(ranks\.get\(a\.id\)\?\.overall \|\| Infinity\) - \(ranks\.get\(b\.id\)\?\.overall \|\| Infinity\)/);
   assert.match(files.app, /views: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "views"\)/);
   assert.match(files.app, /copies: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "copies"\)/);
   assert.match(files.app, /hearts: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "hearts"\)/);
   assert.match(files.app, /state\.engagementEnabled = false;[\s\S]*renderSortOptions\(\);[\s\S]*state\.sort !== previousSort/);
   assert.match(files.app, /data-card-plugin="\$\{escapeHtml\(plugin\.id\)\}"/);
-  assert.match(files.app, /state\.sort === sortMetric[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)/);
+  assert.match(files.app, /state\.sort === sortMetric \|\| state\.sort === "rank"[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)[\s\S]*\} else if \(splitView\(\)\) \{\s*refreshSplitRanks\(\);/);
   assert.match(files.app, /Engagement loaded\. Sorted plugins by/);
   assert.match(files.app, /is unavailable because engagement stats could not be loaded/);
   assert.match(files.index, /id="search-input"[^>]*role="combobox"[^>]*aria-autocomplete="both"/);
@@ -1521,7 +1705,47 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.develop, /omarchy plugin validate/);
   assert.match(files.develop, /qs log -p/);
   assert.doesNotMatch(files.develop, /<script[^>]+src=["']https?:/);
-  assert.match(files.index, /<h2 id="recent-title">RECENTLY ADDED<\/h2>/);
+  assert.match(files.index, /<h2 id="recent-title">JUST LANDED<\/h2>/);
+  assert.doesNotMatch(files.index, /RECENTLY ADDED|recent-latest-title/);
+  assert.match(files.index, /id="gems-section"[\s\S]*id="recent-section"/);
+  assert.match(files.index, /id="recent-summary" class="recent-summary"[\s\S]*id="recent-feed-toggle" class="recent-feed-toggle" type="button"[\s\S]*<div id="recent-latest" class="landed-rows" hidden>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>/);
+  assert.match(files.app, /function landedCard\(plugin, now, duplicate = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
+  assert.match(files.app, /const animated = items\.length > 6 && !window\.matchMedia\("\(prefers-reduced-motion: reduce\)"\)\.matches;/);
+  assert.match(files.style, /@keyframes landed-drift \{ from \{ transform: translateX\(-50%\); \} to \{ transform: translateX\(0\); \} \}/);
+  assert.match(files.style, /\.landed-rows:hover \.landed-track,\s*\.landed-rows:focus-within \.landed-track,\s*\.landed-rows\.is-paused \.landed-track \{ animation-play-state: paused; \}/);
+  assert.doesNotMatch(files.app, /createRecentFeed|layoutPreview/);
+  assert.match(files.style, /\.recent-summary b \{ color: var\(--accent\);/);
+  assert.doesNotMatch(files.app, /recent-row-badges/);
+  assert.doesNotMatch(files.index, /id="recent-grid"/);
+  assert.doesNotMatch(files.app, /selectRecentHighlights/);
+  assert.match(files.index, /<section class="gems-section" id="gems-section" aria-labelledby="gems-title" hidden>[\s\S]*id="gems-sort-link" href="\?sort=installRate#catalog"[\s\S]*<div class="gems-nav" role="group" aria-label="Browse hidden gems" hidden>[\s\S]*data-gems-step="-1"[\s\S]*data-gems-step="1"[\s\S]*<div id="gems-grid" class="recent-grid gems-track" aria-label="Hidden gems"><\/div>/);
+  assert.match(files.app, /selectHiddenGems\(state\.plugins, state\.engagement, \{ limit: 9 \}\)[\s\S]*\.sort\(\(a, b\) => b\.rate - a\.rate\)[\s\S]*setupGemsCarousel\(grid\);/);
+  assert.match(files.style, /\.recent-grid\.gems-track \{\s*display: flex; overflow-x: auto;[^}]*scroll-snap-type: x mandatory;/);
+  assert.doesNotMatch(files.style, /\.recent-grid \.plugin-card:nth-child\(n\+3\)/);
+  assert.match(files.app, /grid\.innerHTML = gems\.map\([\s\S]*\}\)\.join\(""\);\s*bindCardActions\(grid\);\s*setupPreviewFlip\(grid\);/);
+  assert.match(files.app, /function cardPreviewBack\(plugin\)[\s\S]*pluginVersionLabel\(plugin\)[\s\S]*plugin\.license \|\| "Unknown", plugin\.author[\s\S]*class="plugin-preview-back" aria-hidden="true"/);
+  assert.match(files.app, /const previewFace = previewBack \? `<div class="plugin-preview-flip">\$\{preview\}\$\{previewBack\}<\/div>` : preview;/);
+  assert.match(files.app, /<span class="card-gem-since">Listed since \$\{escapeHtml\(formatDate\(plugin\.listedAt \|\| plugin\.addedAt\)\)\}<\/span>[\s\S]*<strong>\$\{gemTimes\}×<\/strong><span><span>as many install copies per view<\/span> <span>as most plugins<\/span><\/span>/);
+  assert.doesNotMatch(files.app, /aria-hidden="true" inert|likely to be installed/);
+  assert.match(files.style, /\.landed-rows:not\(\.is-animated\) \.landed-row \{ overflow-x: auto;/);
+  assert.match(files.style, /\.gems-section \.recent-summary \{ white-space: normal; \}/);
+  assert.match(files.style, /\.gems-track > \.plugin-card \{[^}]*min-width: 0;/);
+  assert.match(files.style, /\.plugin-card-bottom \.plugin-tags \{ min-width: 0; height: 28px; overflow: hidden; flex-wrap: wrap; row-gap: 8px; \}/);
+  assert.match(files.style, /@media \(max-width: 360px\) \{\s*\.plugin-card-bottom \.tag \{\s*display: block; min-width: 0; padding: 0 6px; overflow: hidden; flex: 0 1 auto; line-height: 26px; text-overflow: ellipsis;/);
+  assert.match(files.style, /\.market-section-head a \{ color: var\(--accent\); \}\n\.market-section-head a:hover \{ color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\); \}/);
+  assert.match(files.app, /const times = median \? rate \/ median : 0;[\s\S]*gemTimes: times >= 1\.1 \? times\.toFixed\(1\) : ""/);
+  assert.match(files.index, /<span id="gems-note" class="recent-summary">often copied · not among the most viewed<\/span>/);
+  assert.doesNotMatch(files.app, /installModule|gemCounts/);
+  assert.doesNotMatch(files.style, /card-install-rate/);
+  assert.match(files.style, /\.landed-rows::after \{\s*position: absolute; z-index: 2; top: 0; bottom: 0; width: 12px;/);
+  assert.match(files.style, /\.landed-rows::before \{\s*left: 0; border-left: 1px solid var\(--line-strong\);[\s\S]*light-dark\(rgb\(0 0 0 \/ \.14\), rgb\(0 0 0 \/ \.7\)\)/);
+  assert.doesNotMatch(files.style, /\.landed-row::/);
+  assert.doesNotMatch(files.style, /is-install-rate|card-install-meter/);
+  assert.match(files.app, /event\?\.pointerType === "mouse"/);
+  assert.match(files.app, /grid\.innerHTML = pagePlugins\.map\(\(plugin\) => pluginCard\(plugin, \{ showNew: true, previewBack: cardPreviewBack\(plugin\) \}\)\)\.join\(""\);\s*bindCardActions\(grid\);\s*setupPreviewFlip\(grid\);/);
+  assert.match(files.app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);/);
+  assert.match(files.style, /\.button\.publish-primary:hover \{\s*border-color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\);/);
+  assert.doesNotMatch(files.style, /#ff795b/);
   assert.match(files.publish, /<span>3 min read<\/span>/);
   assert.equal((files.publish.match(/class="docs-section"/g) || []).length, 3);
   assert.match(files.publish, /<details class="manifest-reference">/);
@@ -1543,9 +1767,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
   assert.match(files.app, /function publisherLogin\(plugin\)/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
-  assert.match(files.app, /function pluginSearchContext\(plugin\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\)/);
-  assert.match(files.app, /matchesDirectSearch\(term\.value, matchContext\)/);
+  assert.match(files.searchJs, /matchesDirectSearch\(term\.value, context\)/);
   assert.match(files.app, /const verificationFilters = new Set\(\["verified", "unverified"\]\)/);
   assert.match(files.app, /function searchScopePlugins\(\) \{[\s\S]*matchesCatalogFilter\(plugin\)[\s\S]*!verificationFilters\.has\(state\.sort\) \|\| matchesVerificationStatus\(plugin, state\.sort\)/);
   assert.match(files.app, /function completionMatches\(value\) \{[\s\S]*const query = foldSearchTerm\([\s\S]*const plugins = searchScopePlugins\(\)/);
@@ -1555,11 +1779,17 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
   assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
+  assert.match(files.app, /const taxonomyCatalogFilters = \[\s*\["VPN", matchesVpnTaxonomy\],\s*\["Bar", matchesBarTaxonomy\],\s*\]/);
   assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
-  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)/);
+  assert.match(files.app, /for \(const \[value, matches\] of taxonomyCatalogFilters\) \{\s*if \(filter === value\) return matches\(plugin\);/);
+  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => !taxonomyCatalogFilterNames\.has\(value\)\)/);
+  assert.match(files.app, /const taxonomyFilters = taxonomyCatalogFilters[\s\S]*total: plugins\.filter\(matches\)\.length[\s\S]*\.\.\.tagFilters,\s*\.\.\.taxonomyFilters,/);
+  assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /export function matchesBarTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /tags\.includes\("vpn"\)/);
   assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
+  assert.match(files.sharedJs, /vpn: "VPN"/);
   assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"kids"/);
-  assert.match(files.app, /value: `tag:\$\{tag\}`/);
   assert.match(files.app, /return labels\.length \? labels : \[category \|\| "System"\]/);
   assert.match(files.sharedJs, /function matchesVerificationStatus\(plugin, status\) \{[\s\S]*!plugin\?\.builtIn[\s\S]*plugin\?\.repositoryLayout !== "suite"[\s\S]*plugin\?\.verificationStatus === status/);
   assert.match(files.searchJs, /function fuzzyScore\(query, candidate\)/);
@@ -1591,9 +1821,13 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /tabindex="-1" aria-selected="false"/);
   assert.match(files.app, /\$\{visible\.length\} of \$\{categoryPlugins\.length\}/);
   assert.match(files.app, /const hasResultFilter = hasSearch \|\| verificationFilters\.has\(state\.sort\);[\s\S]*count\.textContent = hasResultFilter/);
-  assert.match(files.app, /state\.terms\.some\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /typedDraftTerms\.some\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /return matchesTerm \|\| matchesTextDraft \|\| matchesTypedDraft/);
+  assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\) \{\s*return matchesSearchSelection\(pluginSearchContext\(plugin\), \{\s*terms: state\.terms,\s*draftTerms: parseSearchDraft\(state\.query\),/);
+  assert.match(files.app, /function publisherLogin\(plugin\) \{\s*return repositoryPublisher\(plugin\?\.repo\);/);
+  assert.doesNotMatch(files.app, /state\.terms\.some\(|function pluginSearchText\(|function searchablePluginId\(/);
+  assert.match(files.exploreSearchJs, /return \(node\) => matchesSearchSelection\(pluginSearchContext\(node\), \{ draftTerms \}\)/);
+  assert.doesNotMatch(files.exploreSearchJs, /\.some\(|\|\| matchesTypedDraft/);
+  assert.match(files.searchJs, /export function matchesSearchSelection\(context, \{ terms = \[\], draftTerms = \[\] \} = \{\}\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);
@@ -1656,7 +1890,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(sharedJs, /link\.dataset\.sectionIds[\s\S]*sectionIds\.includes\(id\)/);
   assert.match(sharedJs, /window\.scrollY \+ Math\.min\(markerMax, window\.innerHeight \* markerRatio\)/);
   assert.match(sharedJs, /section\.getBoundingClientRect\(\)\.top \+ window\.scrollY/);
-  assert.match(sharedJs, /\$\{current\} theme active; switch to \$\{next\} theme/);
+  assert.match(sharedJs, /`Choose color theme; current \$\{current\.name\}`/);
+  assert.match(sharedJs, /applyTheme\(readStoredTheme\(\), \{ persist: false \}\)/);
   assert.match(sharedJs, /Copy failed\. Select and copy manually\./);
   assert.match(files.pluginJs, /title: "Catalog unavailable"/);
   assert.match(files.pluginJs, /title: "Plugin not found"/);
@@ -1742,6 +1977,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(sharedJs, /plugin-heart\$\{detail \? " detail-heart" : " has-control-tooltip"\}[\s\S]*data-heart-tooltip/);
   assert.match(sharedJs, /button\.querySelector\("\[data-heart-tooltip\]"\)/);
   assert.match(sharedJs, /export function positionTooltip\(host, tooltip\)[\s\S]*documentElement\.clientWidth[\s\S]*const centered = \(hostRect\.width - tooltipWidth\) \/ 2[\s\S]*Math\.round/);
+  assert.match(sharedJs, /function tooltipBounds\(host, tooltipWidth, viewportWidth\)[\s\S]*overflowX !== "auto" && overflowX !== "scroll"[\s\S]*bounds\.right - bounds\.left >= tooltipWidth \? bounds : viewport;/);
+  assert.match(sharedJs, /const minimum = bounds\.left - originLeft;\s*const maximum = bounds\.right - originLeft - tooltipWidth;/);
   assert.match(sharedJs, /tooltip\.textContent = action;\s*positionControlTooltip\(button\);/);
   assert.match(sharedJs, /event\.key !== "Escape"[\s\S]*classList\.add\("is-tooltip-dismissed"\)/);
   assert.match(sharedJs, /defaultView\?\.addEventListener\("resize"[\s\S]*forEach\(positionControlTooltip\)/);
@@ -1792,7 +2029,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.pagination-direction \{[\s\S]*color: var\(--muted\)/);
   assert.match(styles, /\.catalog-view-toggle \{ display: flex; margin-top: 16px; justify-content: center; \}/);
   assert.match(styles, /\.catalog-view-button \{[\s\S]*min-height: 44px;[\s\S]*font-family: var\(--mono\);[\s\S]*text-transform: uppercase/);
-  assert.match(styles, /\.catalog-view-button:hover, \.catalog-view-button:focus-visible \{ color: var\(--accent\); \}/);
+  assert.match(styles, /\.catalog-view-button \{[^}]*color: var\(--accent\);/);
+  assert.match(styles, /\.catalog-view-button:hover, \.catalog-view-button:focus-visible \{ color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\); \}/);
   assert.match(styles, /\.catalog-view-dock \{[\s\S]*position: fixed; z-index: 55;[\s\S]*bottom: calc\(20px \+ env\(safe-area-inset-bottom\)\)/);
   assert.match(styles, /\.catalog-view-dock button \{[\s\S]*min-height: 48px;[\s\S]*background: var\(--panel-2\);[\s\S]*text-transform: uppercase/);
   assert.match(styles, /\.catalog-show-all \.toast \{ bottom: calc\(88px \+ env\(safe-area-inset-bottom\)\); \}/);
@@ -1825,12 +2063,206 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.plugin-author button \{[\s\S]*z-index: 3/);
   assert.match(styles, /\.plugin-author button \{[\s\S]*min-height: 24px/);
   assert.match(styles, /\.plugin-author button:hover, \.plugin-author button:focus-visible \{ color: var\(--accent\); \}/);
-  assert.match(files.index, /class="footer-status"/);
-  assert.match(files.index, /HANCORE[\s\S]*OMARCHY PLUGIN MARKETPLACE[\s\S]*GITHUB/);
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.explore]) {
+    assert.match(page, /class="footer-status"/);
+    assert.match(page, /HANCORE[\s\S]*<a class="footer-wordmark-link" href="https:\/\/omarchy\.org\/"[^>]*aria-label="Visit Omarchy">[\s\S]*<img src="assets\/img\/omarchy-wordmark\.png" alt="" width="656" height="192">\s*<\/a>[\s\S]*GITHUB/);
+    assert.doesNotMatch(page, /omarchy-footer(?:-still)?\.svg/);
+    assert.equal((page.match(/<span>PLUGIN MARKETPLACE<\/span>/g) || []).length, 1);
+  }
+  assert.doesNotMatch(styles, /omarchy-brand-(?:action|logo)/);
+  assert.match(styles, /\.footer-wordmark-link \{ display: block; border: 0; background: transparent; line-height: 0; \}/);
+  assert.match(styles, /\.footer-wordmark-link img \{[\s\S]*width: 82px; height: 24px;[\s\S]*image-rendering: pixelated;/);
+  assert.match(styles, /\.footer-wordmark-link:hover img \{ filter: brightness\(1\.15\); \}/);
+  assert.doesNotMatch(styles, /\.footer-wordmark-link[^}]*padding|\.footer-wordmark-link:hover[^}]*background/);
+  assert.doesNotMatch(`${files.app}${files.exploreJs}${styles}`, /FooterWordmarkDecrypt|footer-wordmark-decrypt|is-decrypting/);
+  assert.match(styles, /\.footer-status::before \{[\s\S]*background: linear-gradient/);
+  assert.match(styles, /\.footer-status::after \{[\s\S]*background: var\(--accent\); content: "";/);
   assert.doesNotMatch(files.index, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
   assert.doesNotMatch(files.explore, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
   assert.doesNotMatch(files.index, /footer-tech-canvas|footer-project-canvas/);
   assert.doesNotMatch(files.app, /setupHancoreAsciiHover|setupFooterAsciiField/);
+});
+
+test("site themes stay consistent between the theme list, stylesheet, previews, and boot script", async () => {
+  const root = new URL("../", import.meta.url);
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const ids = siteThemes.map((theme) => theme.id);
+  assert.deepEqual(ids.slice(0, 2), ["dark", "light"]);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.equal(siteThemes.filter((theme) => theme.light).length, 6);
+  for (const theme of siteThemes) {
+    assert.match(theme.id, /^[a-z0-9-]{1,32}$/);
+    assert.match(theme.bg, /^#[0-9a-f]{6}$/);
+    assert.match(theme.accent, /^#[0-9a-f]{6}$/);
+    if (theme.builtin) {
+      assert.equal(themePreviewPath(theme), "");
+      continue;
+    }
+    const block = styles.match(new RegExp(`:root\\[data-theme="${theme.id}"\\] \\{([\\s\\S]*?)\\n\\}`))?.[1];
+    assert.ok(block, theme.id);
+    assert.match(block, new RegExp(`color-scheme: ${theme.light ? "light" : "dark"};`));
+    assert.match(block, new RegExp(`--bg: ${theme.bg};`));
+    assert.match(block, new RegExp(`--accent: ${theme.accent};`));
+    assert.match(block, /--heading: #[0-9a-f]{6};/);
+    await readFile(new URL(`site/${themePreviewPath(theme)}`, root));
+  }
+  assert.equal(isThemeId("nord"), true);
+  assert.equal(isThemeId("light"), true);
+  assert.equal(isThemeId("Nord"), false);
+  assert.equal(isThemeId(""), false);
+  assert.equal(readStoredTheme({ getItem: () => "gruvbox" }), "gruvbox");
+  assert.equal(readStoredTheme({ getItem: () => "bogus" }), defaultThemeId);
+  assert.equal(readStoredTheme({ getItem: () => { throw new Error("blocked"); } }), defaultThemeId);
+  const root2 = { dataset: {}, ownerDocument: { querySelector: () => null } };
+  const stored = new Map();
+  const storage = { setItem: (key, value) => stored.set(key, value), getItem: (key) => stored.get(key) };
+  assert.equal(applyTheme("kanagawa", { root: root2, storage }).id, "kanagawa");
+  assert.equal(root2.dataset.theme, "kanagawa");
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  assert.equal(applyTheme("unknown", { root: root2, storage, persist: false }).id, defaultThemeId);
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  for (const page of ["index", "explore", "plugin", "develop", "publish"]) {
+    const html = await readFile(new URL(`site/${page}.html`, root), "utf8");
+    assert.match(html, /\/\^\[a-z0-9-\]\{1,32\}\$\/\.test\(t\|\|""\)\?t:"dark"/);
+    assert.match(html, /class="square-action theme-toggle" type="button" aria-label="Choose color theme"[\s\S]*class="theme-toggle-label">Theme</);
+    assert.doesNotMatch(html, /sun-icon|moon-icon/);
+  }
+  assert.match(styles, /\.theme-picker \{[\s\S]*position: fixed;[\s\S]*width: min\(1104px, calc\(100% - 40px\)\)/);
+  assert.doesNotMatch(styles, /\.sun-icon|\.moon-icon|#424247|#09090b|color: #eee;|color: #efeff0;|color: #f0f0f1;/);
+});
+
+test("theme picker layout expands the selected slice and stacks the rest", () => {
+  const layout = pickerLayout(24, 5, 1000);
+  assert.equal(layout.items.length, 24);
+  assert.equal(layout.height, Math.round(220 * 0.62));
+  const selected = layout.items[5];
+  assert.equal(selected.width, 220);
+  assert.equal(selected.top, 0);
+  assert.equal(selected.zIndex, 100);
+  assert.ok(layout.items[4].width < selected.width);
+  assert.ok(layout.items[4].left < selected.left);
+  assert.ok(layout.items[6].left > selected.left);
+  assert.ok(layout.items[6].left < selected.left + selected.width);
+  assert.ok(layout.items.every((item, index) => index === 5 || item.zIndex < 100));
+  assert.equal(layout.items.filter((item) => item.hidden).length, 0);
+  assert.equal(pickerLayout(60, 0, 1000).items.filter((item) => item.hidden).length, 39);
+});
+
+test("engagement ranks combine hearts, copies, and views into one standing", () => {
+  const plugins = [{ id: "a", stars: 40 }, { id: "b", stars: 5 }, { id: "c", stars: 40 }, { id: "d" }, { id: "e", stars: 2 }];
+  const stats = {
+    a: { hearts: 10, copies: 5, views: 100 },
+    b: { hearts: 10, copies: 50, views: 10 },
+    c: { hearts: 1, copies: 1, views: 1000 },
+  };
+  const ranks = engagementRanks(plugins, stats);
+  assert.deepEqual(ranks.get("a"), { total: 4, hearts: 1, copies: 2, views: 2, stars: 1, overall: 1 });
+  assert.deepEqual(ranks.get("b"), { total: 4, hearts: 1, copies: 1, views: 3, stars: 3, overall: 2 });
+  assert.deepEqual(ranks.get("c"), { total: 4, hearts: 3, copies: 3, views: 1, stars: 1, overall: 2 });
+  assert.deepEqual(ranks.get("d"), { total: 4, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(ranks.get("e"), { total: 4, hearts: 4, copies: 4, views: 4, stars: 4, overall: 4 });
+  assert.equal(engagementRanks([], {}).size, 0);
+  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 0, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(engagementRanks([{ id: "x" }, { id: "y" }], { y: { views: 1 } }).get("y"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
+  assert.deepEqual(engagementRanks([{ id: "x", stars: "12" }], {}).get("x"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
+  assert.equal(splitViewPageSize(734), 15);
+  assert.equal(splitViewPageSize(500), 9);
+  assert.equal(splitViewPageSize(100), 3);
+  assert.equal(splitViewPageSize(0), 15);
+  assert.equal(readCatalogView({ getItem: () => "split" }), "split");
+  assert.equal(readCatalogView({ getItem: () => "other" }), "cards");
+  assert.equal(readCatalogView({ getItem: () => { throw new Error("blocked"); } }), "cards");
+});
+
+test("split view keeps the original card and adds tiles with an overall rank", async () => {
+  const root = new URL("../", import.meta.url);
+  const html = await readFile(new URL("site/index.html", root), "utf8");
+  const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const searchJs = await readFile(new URL("site/assets/js/search.js", root), "utf8");
+  assert.match(html, /class="catalog-heading-side">\s*<div id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"[\s\S]*id="plugin-count"/);
+  assert.match(html, /<div class="catalog-controls">\s*<div class="market-search">/);
+  assert.doesNotMatch(html.slice(html.indexOf('class="catalog-controls"'), html.indexOf('class="source-bar"')), /catalog-view-mode/);
+  assert.match(html, /id="split-filters"[\s\S]*id="split-grid"[\s\S]*class="split-pager">\s*<span class="split-pager-start">\s*<button id="split-page-previous"[\s\S]*id="split-page-summary"><label class="split-page-jump">Page <input id="split-page-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Go to page"><\/label> <span id="split-page-total"><\/span><\/b>[\s\S]*id="split-page-next"/);
+  assert.match(app, /splitPageInput\.value = String\(pageState\.page\);\s*splitPageInput\.max = String\(pageState\.totalPages\);\s*splitPageTotal\.textContent = `of \$\{pageState\.totalPages\} · \$\{pageSize\(\)\} per page`;/);
+  assert.match(app, /const jumpToPage = \(\) => \{[\s\S]*Math\.min\(totalPages, Math\.max\(1, requested\)\)[\s\S]*splitFocusPending = true;\s*render\(\{ historyMode: "push", announce: true \}\);/);
+  assert.match(app, /splitPageInput\.addEventListener\("change", jumpToPage\)/);
+  assert.match(app, /const rankLine = state\.engagementEnabled && !plugin\.builtIn\s*\? `<span class="card-rank" data-card-rank="\$\{escapeHtml\(plugin\.id\)\}"/);
+  assert.match(app, /function cardRankLabel\(plugin\) \{[\s\S]*return rank\?\.overall \? `#\$\{rank\.overall\}` : "";/);
+  assert.match(app, /function refreshCardRanks\(root = document\) \{[\s\S]*element\.hidden = !label;/);
+  assert.match(app, /const social = stars \|\| heart \|\| rankLine \? `<div class="card-social">\$\{stars\}\$\{heart\}\$\{rankLine\}<\/div>` : "";/);
+  assert.match(styles, /\.card-rank \{\s*flex-basis: 100%; color: var\(--faint\);/);
+  assert.doesNotMatch(styles, /\.market-plugin-grid \.card-rank/);
+  assert.match(app, /if \(event\.key === " "\) \{\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option"/);
+  assert.doesNotMatch(app, /has-control-tooltip\$\{selected|split-tile[^\n]*title="|setupControlTooltips\(splitGrid\)/);
+  assert.match(html, /<span class="split-pager-start">\s*<button id="split-page-previous" type="button">← Previous<\/button>\s*<span class="split-hint" aria-hidden="true">Ctrl\+Enter or<br>Ctrl\+click: new tab<\/span>\s*<\/span>/);
+  assert.match(styles, /\.split-hint \{ position: absolute; top: 50%; left: 100%; margin-left: 14px;[^}]*opacity: 0;/);
+  assert.match(styles, /\.split-panel:has\(\.split-tile:hover\) \.split-hint, \.split-panel:has\(\.split-tile:focus-visible\) \.split-hint \{ opacity: 1; \}/);
+  assert.match(styles, /@media \(max-width: 760px\) \{ \.split-hint \{ display: none; \} \}/);
+  assert.match(app, /if \(splitView\(\)\) splitFilters\.append\(categoriesRoot\);\s*else categoryBar\.insertBefore\(categoriesRoot, clearFilters\)/);
+  assert.match(app, /pagination\.hidden = controls\.paginationHidden \|\| splitView\(\)/);
+  assert.match(app, /splitPagePrevious\.addEventListener\("click", \(\) => previousPage\.click\(\)\)/);
+  assert.match(styles, /\.catalog-controls \{ display: grid; border: 1px solid var\(--line\); grid-template-columns: minmax\(0, 1fr\) 180px; \}/);
+  assert.match(styles, /\.catalog-split-view \.category-bar \{ display: none; \}/);
+  assert.match(html, /id="catalog-split" class="catalog-split" hidden>[\s\S]*id="split-grid"[\s\S]*id="split-card" class="plugin-grid market-plugin-grid split-card"[\s\S]*id="split-stats-body"/);
+  assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
+  assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
+  assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
+  assert.match(app, /function rankedPlugins\(\) \{\s*return state\.plugins\.filter\(\(plugin\) => \(plugin\.sourceType \|\| "community"\) === "community"\);/);
+  assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(rankedPlugins\(\), state\.engagement\)/);
+  assert.doesNotMatch(app, /engagementRanks\(state\.plugins|engagementRanks\(sourcePlugins/);
+  assert.match(app, /splitStatsTotal\.textContent = `of \$\{rankedPlugins\(\)\.length\} community plugins`/);
+  assert.match(styles, /\.split-grid::after \{[\s\S]*mask: url\("\.\.\/img\/omarchy-wordmark\.svg"\) center \/ 80% auto no-repeat/);
+  assert.match(styles, /\.split-grid \{[\s\S]*gap: 1px;[\s\S]*overflow: hidden; background: var\(--panel\);/);
+  assert.doesNotMatch(styles, /\.split-grid \{[^}]*margin-right: -1px/);
+  assert.match(styles, /\.split-tile \{[^}]*box-shadow: 1px 1px 0 0 var\(--line\);/);
+  await readFile(new URL("site/assets/img/omarchy-wordmark.svg", root));
+  assert.match(styles, /\.split-tile \{\s*position: relative; z-index: 1;/);
+  assert.match(app, /Built-in plugins are not ranked\./);
+  assert.match(app, /const ranks = catalogRanks\(\);/);
+  assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
+  assert.match(app, /render\(\);\s*scheduleSearchSuggestions\(\);\s*\}\);/);
+  assert.match(app, /if \(event\.isComposing\) return;\s*if \(\["Enter", "ArrowDown", "ArrowUp", "ArrowRight", "Tab", "Escape"\]\.includes\(event\.key\)\) flushSearchSuggestions\(\);/);
+  assert.match(app, /splitGrid\.classList\.toggle\("is-full", pagePlugins\.length >= pageSize\(\)\)/);
+  assert.match(styles, /\.split-grid\.is-full::after \{ display: none; \}/);
+  assert.doesNotMatch(styles, /nth-child\(15\)/);
+  assert.match(app, /if \(!card \|\| !\(grid\.contains\(card\) \|\| splitCard\.contains\(card\)\)\) return null;/);
+  assert.match(app, /\[\.\.\.grid\.querySelectorAll\("\[data-card-plugin\]"\), \.\.\.splitCard\.querySelectorAll\("\[data-card-plugin\]"\)\]/);
+  assert.match(app, /function refreshSplitRanks\(\) \{[\s\S]*label\.textContent = rank\?\.overall \? `#\$\{rank\.overall\}` : "—";[\s\S]*renderSplitStats\(plugin\)/);
+  assert.match(searchJs, /const contextCache = new WeakMap\(\);/);
+  assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);
+  assert.match(app, /const rankLabel = rank\?\.overall \? `#\$\{rank\.overall\}` : "—"/);
+  assert.match(app, /Loading engagement statistics…/);
+  assert.match(app, /<div class="split-stat-rank">Unranked<small>\$\{total \? `of \$\{total\}` : "no activity yet"\}<\/small><\/div>/);
+  assert.match(app, /hidePendingEngagement\(document\);\s*if \(splitView\(\)\) render\(\{ historyMode: "none" \}\);/);
+  assert.match(app, /selectTile\(tiles\[Math\.max\(0, Math\.min\(tiles\.length - 1, index\)\)\], \{ focus: true, force: true \}\)/);
+  assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"[\s\S]*\["stars", "repository stars", '<svg class="social-glyph star-glyph"/);
+  assert.match(app, /metric === "stars" \? plugin\.stars \|\| 0 : stats\[metric\]/);
+  assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
+  assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
+  assert.match(app, /other\.tabIndex = active \? 0 : -1;/);
+  assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
+  assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
+  assert.match(app, /if \(target > tiles\.length - 1 && !nextPage\.disabled && event\.key !== "End"\) \{\s*splitFocusIndex = event\.key === "ArrowDown" \? index % columns : 0;\s*nextPage\.click\(\)/);
+  assert.match(app, /if \(target < 0 && !previousPage\.disabled && event\.key !== "Home"\) \{\s*splitFocusIndex = event\.key === "ArrowUp" \? -columns \+ \(index % columns\) : -1;\s*previousPage\.click\(\)/);
+  assert.match(app, /const index = splitFocusIndex < 0 \? tiles\.length \+ splitFocusIndex : splitFocusIndex;/);
+  assert.match(app, /if \(!splitView\(\) \|\| splitRoot\.hidden \|\| event\.altKey[\s\S]*\["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"\]\.includes\(event\.key\)[\s\S]*CSS\.escape\(state\.selected\)[\s\S]*tile\.focus\(\{ preventScroll: true \}\)/);
+  assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
+  assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page, Control Enter opens the plugin page in a background tab"/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option" aria-selected="\$\{selected\}" data-split-plugin="\$\{escapeHtml\(plugin\.id\)\}" href="plugin\.html\?id=\$\{encodeURIComponent\(plugin\.id\)\}" target="_blank" rel="noopener"/);
+  assert.match(app, /if \(event\.key === "Enter"\) \{[\s\S]*if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey\) return;\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);\s*return;/);
+  assert.match(app, /if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey \|\| event\.button !== 0\) \{\s*selectTile\(tile\);\s*return;\s*\}\s*event\.preventDefault\(\);\s*selectTile\(tile, \{ focus: true \}\);/);
+  assert.doesNotMatch(app, /window\.open\(|openPluginDetail/);
+  assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
+  assert.match(html, /<button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank<\/button>/);
+  assert.match(app, /splitTopRank\.hidden = !state\.engagementEnabled;\s*splitTopRank\.setAttribute\("aria-pressed", String\(state\.sort === "rank"\)\)/);
+  assert.match(app, /state\.sort = state\.sort === "rank" \? sourceDefaultSort\(\) : "rank";/);
+  assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);
+  assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);
+  assert.match(styles, /\.split-grid \{[^}]*minmax\(140px, 1fr\)/);
+  assert.match(styles, /@media \(max-width: 1100px\) \{\s*\.catalog-split \{ grid-template-columns: minmax\(0, 1fr\); \}/);
 });
 
 test("theme text and accent surfaces meet WCAG AA contrast", async () => {
@@ -1841,7 +2273,11 @@ test("theme text and accent surfaces meet WCAG AA contrast", async () => {
   const darkBlock = styles.match(/^:root \{([\s\S]*?)\n\}/)?.[1] || "";
   const lightBlock = styles.match(/:root\[data-theme="light"\] \{([\s\S]*?)\n\}/)?.[1] || "";
   const value = (block, name) => block.match(new RegExp(`--${name}:\\s*(#[a-f0-9]+);`, "i"))?.[1];
-  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock]]) {
+  const omarchyBlocks = [...styles.matchAll(/:root\[data-theme="([a-z0-9-]+)"\] \{([\s\S]*?)\n\}/g)]
+    .filter(([, id]) => id !== "light")
+    .map(([, id, block]) => [id, block]);
+  assert.equal(omarchyBlocks.length, siteThemes.length - 2);
+  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock], ...omarchyBlocks]) {
     const themeValue = (name) => value(block, name);
     const background = themeValue("bg");
     const panel = themeValue("panel");
@@ -2277,10 +2713,10 @@ test("submission tags use the curated vocabulary across web and CLI formats", ()
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({
-      tags: "Games, Media",
+      tags: "Games, Media, VPN",
       includeSuggestedTag: false,
     })).tags,
-    ["games", "media"],
+    ["games", "media", "vpn"],
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({

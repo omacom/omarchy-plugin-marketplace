@@ -32,6 +32,7 @@ jobs:
           ref: main
           fetch-depth: 0
           persist-credentials: false
+          filter: blob:none
 
       - name: Record build base commit
         id: base
@@ -49,6 +50,26 @@ jobs:
         run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report newly failing catalog sources
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          git show HEAD:site/catalog.json > "$RUNNER_TEMP/previous-catalog.json"
+          jq -r --slurpfile previous "$RUNNER_TEMP/previous-catalog.json" '
+            (reduce ($previous[0].plugins[] | select(.upstreamCheckStatus == "passed") | (.repo // empty)) as $repo ({}; .[$repo] = true)) as $passed
+            | [.plugins[]
+                | select(.upstreamCheckStatus == "failed" and $passed[.repo // ""] == true)
+                | "\(.repo | sub("^https://github\\.com/"; "") | gsub("[^A-Za-z0-9_./-]"; "-")) [\(.upstreamCheckError // "unknown" | gsub("[^a-z-]"; "-"))]"]
+            | unique[]
+          ' site/catalog.json > "$RUNNER_TEMP/newly-failing-sources.txt"
+          if [[ -s "$RUNNER_TEMP/newly-failing-sources.txt" ]]; then
+            printf '## Newly failing catalog sources\n\n' >> "$GITHUB_STEP_SUMMARY"
+            while IFS= read -r source; do
+              echo "::warning title=Catalog source newly failing::${source}"
+              printf -- '- `%s`\n' "$source" >> "$GITHUB_STEP_SUMMARY"
+            done < "$RUNNER_TEMP/newly-failing-sources.txt"
+          fi
 
       - name: Record immutable artifact identities
         id: artifacts
