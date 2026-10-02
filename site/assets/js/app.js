@@ -37,14 +37,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-02";
+} from "./shared.js?v=20261002-03";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-02";
+} from "./engagement.js?v=20261002-03";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -68,17 +68,18 @@ import {
   repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
+  searchRelevanceTier,
   searchTermDisplayValue,
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-02";
+} from "./search.js?v=20261002-03";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-02";
+} from "./taxonomy.js?v=20261002-03";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -241,6 +242,13 @@ function pluginMatchesActiveSearch(plugin) {
   });
 }
 
+function searchRankingQuery(draftTerms) {
+  return [...state.terms, ...draftTerms]
+    .filter((term) => term.type === "text" || term.type === "fulltext")
+    .map((term) => term.value)
+    .join(" ");
+}
+
 function completionMatches(value) {
   if (hasFulltextSearchDraft(value)) return [];
   const rawQuery = currentSearchToken(value);
@@ -273,7 +281,7 @@ function completionMatches(value) {
   }) => {
     if (rawQuery.startsWith("@") && type !== "author") return;
     const candidates = type === "author"
-      ? [completionValue.replace(/^@/, "")]
+      ? [completionValue.replace(/^@/, ""), matchValue].filter(Boolean)
       : [label, matchValue].filter(Boolean);
     const completionQueries = ["plugin", "kind"].includes(type) ? pluginQueries : [query];
     const score = Math.min(...completionQueries.flatMap((candidateQuery) =>
@@ -347,10 +355,17 @@ function completionMatches(value) {
       ).length,
     });
   }
+  const typedAuthor = /^author:/i.test(rawQuery);
+  const typedTag = /^tag:/i.test(rawQuery);
   plugins.forEach((plugin) => {
     const login = publisherLogin(plugin);
     if (login && state.source === "community") {
-      addMatch({ type: "author", value: login, label: `@${login}` });
+      addMatch({
+        type: "author",
+        value: login,
+        label: `@${login}`,
+        ...(typedAuthor ? { matchValue: `author:${login}` } : {}),
+      });
     }
     addMatch({
       type: "plugin",
@@ -360,7 +375,12 @@ function completionMatches(value) {
       detail: login ? `@${login}` : plugin.id,
     });
     (plugin.tags || []).forEach((tag) => {
-      addMatch({ type: "tag", value: tag, label: tag });
+      addMatch({
+        type: "tag",
+        value: tag,
+        label: tag,
+        ...(typedTag ? { matchValue: `tag:${tag}`, insertValue: `tag:${tag}` } : {}),
+      });
     });
   });
   return selectSearchCompletions(matches.values());
@@ -454,7 +474,7 @@ function updateSearchAffordances() {
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
     ? "Narrow by another term…"
-    : "Search plugins, tag:panel, text:bar, or @author…";
+    : "Search plugins, tag:media, kind:panel, or @author…";
 }
 
 function removeSearchTerm(index) {
@@ -676,7 +696,14 @@ function computeFilteredPlugins() {
     kind: (a, b) => (a.kind || "").localeCompare(b.kind || "") || a.name.localeCompare(b.name)
   };
 
-  return result.sort(sorters[state.sort] || sorters[sourceDefaultSort()]);
+  const sorter = sorters[state.sort] || sorters[sourceDefaultSort()];
+  const rankingQuery = searchRankingQuery(parseSearchDraft(state.query));
+  if (!rankingQuery) return result.sort(sorter);
+  const tiers = [[], [], [], []];
+  for (const plugin of result) {
+    tiers[searchRelevanceTier(pluginSearchContext(plugin), rankingQuery)].push(plugin);
+  }
+  return tiers.flatMap((tier) => tier.sort(sorter));
 }
 
 function pluginEngagement(plugin) {

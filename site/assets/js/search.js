@@ -95,10 +95,18 @@ export function normalizeSearchTerm(value) {
   return String(value || "").normalize("NFC").trim().replace(/\s+/g, " ");
 }
 
+function foldDiacritics(text) {
+  if (!/[^\u0000-\u007f]/.test(text)) return text;
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").normalize("NFC");
+}
+
 export function foldSearchTerm(value) {
   const text = String(value || "");
-  if (text.length < 32) return normalizeSearchTerm(text).toLowerCase();
-  return remember(foldCache, text, () => normalizeSearchTerm(text).toLowerCase());
+  if (text.length < 32) {
+    if (/^[\x21-\x7e]+(?: [\x21-\x7e]+)*$/.test(text)) return text.toLowerCase();
+    return foldDiacritics(normalizeSearchTerm(text).toLowerCase());
+  }
+  return remember(foldCache, text, () => foldDiacritics(normalizeSearchTerm(text).toLowerCase()));
 }
 
 export function searchPhraseKey(value) {
@@ -317,9 +325,10 @@ export function pluginSearchContext(plugin) {
 function buildPluginSearchContext(plugin) {
   const publisher = repositoryPublisher(plugin?.repo);
   const tags = Array.isArray(plugin?.tags) ? plugin.tags : [];
+  const localId = localPluginId(plugin?.id);
   return {
     publisher,
-    primaryText: [plugin?.name, localPluginId(plugin?.id), ...tags].join(" "),
+    primaryText: [plugin?.name, localId, ...tags].join(" "),
     searchText: foldSearchTerm([
       plugin?.name,
       plugin?.description,
@@ -335,6 +344,11 @@ function buildPluginSearchContext(plugin) {
     pluginName: plugin?.name,
     pluginId: plugin?.id,
     pluginKind: plugin?.kind,
+    rankingKeys: [
+      foldSearchTerm(plugin?.name),
+      foldSearchTerm(plugin?.id),
+      foldSearchTerm(localId),
+    ],
   };
 }
 
@@ -354,10 +368,11 @@ export function matchesSearchSelection(context, { terms = [], draftTerms = [] } 
 }
 
 export function matchesShortSearch(query, primaryText, searchText) {
-  const normalized = foldSearchTerm(String(query || "").replace(/^@/, ""));
-  if (!normalized) return true;
+  const folded = foldSearchTerm(String(query || "").replace(/^@/, ""));
+  if (!folded) return true;
+  const normalized = folded.replace(/^[.,;:!?]+|[.,;:!?]+$/g, "") || folded;
   const normalizedSearchText = foldSearchTerm(searchText);
-  if (!/[\p{L}\p{M}\p{N}]/u.test(normalized)) {
+  if (/[^\p{L}\p{M}\p{N}]/u.test(normalized)) {
     return normalizedSearchText.includes(normalized);
   }
   if (
@@ -376,6 +391,7 @@ export function matchesDirectSearch(value, {
   publisher = "",
   primaryText = "",
   searchText = "",
+  pluginId = "",
 } = {}) {
   const tokens = searchTokens(value);
   return tokens.length === 0 || tokens.every((token) => {
@@ -384,6 +400,11 @@ export function matchesDirectSearch(value, {
       return Boolean(requestedPublisher)
         && foldSearchTerm(publisher).startsWith(requestedPublisher);
     }
+    if (
+      token.includes(".")
+      && token.split(".").some((segment) => segment && !pluginIdHostSegments.has(segment))
+      && foldSearchTerm(pluginId).includes(token)
+    ) return true;
     const normalizedText = foldSearchTerm(searchText);
     if (token.length > 3) {
       return normalizedText.includes(token) || matchesCompactSearch(token, searchText);
@@ -405,7 +426,7 @@ export function matchesCommittedSearchTerm(term, {
   if (!normalized) return false;
   const requested = foldSearchTerm(normalized.value);
   if (normalized.type === "fulltext") {
-    return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText });
+    return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText, pluginId });
   }
   if (normalized.type === "author") return foldSearchTerm(publisher).startsWith(requested);
   if (normalized.type === "tag") {
@@ -434,7 +455,7 @@ export function matchesDraftSearchTerm(term, {
   if (!normalized || normalized.type === "text") return false;
   const requested = foldSearchTerm(normalized.value);
   if (normalized.type === "fulltext") {
-    return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText });
+    return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText, pluginId });
   }
   if (normalized.type === "author") return foldSearchTerm(publisher).startsWith(requested);
   if (normalized.type === "tag") {
@@ -443,6 +464,27 @@ export function matchesDraftSearchTerm(term, {
   if (normalized.type === "kind") return pluginKindKey(pluginKind) === requested;
   return foldSearchTerm(pluginName).startsWith(requested)
     || foldSearchTerm(pluginId).startsWith(requested);
+}
+
+let lastRelevanceQuery = null;
+let lastRelevanceNeedle = "";
+
+export function searchRelevanceTier(context, query) {
+  if (query !== lastRelevanceQuery) {
+    lastRelevanceQuery = query;
+    lastRelevanceNeedle = foldSearchTerm(query);
+  }
+  const needle = lastRelevanceNeedle;
+  if (!needle) return 0;
+  const [name, pluginId, localId] = context?.rankingKeys || [
+    foldSearchTerm(context?.pluginName),
+    foldSearchTerm(context?.pluginId),
+    foldSearchTerm(localPluginId(context?.pluginId)),
+  ];
+  if (name === needle || pluginId === needle || localId === needle) return 0;
+  if (name.startsWith(needle) || pluginId.startsWith(needle) || localId.startsWith(needle)) return 1;
+  if (name.includes(needle)) return 2;
+  return 3;
 }
 
 export function completionTarget(suggestion) {

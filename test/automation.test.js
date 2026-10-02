@@ -62,6 +62,7 @@ import {
   committedTermsFromDraft,
   createSearchTerm,
   currentSearchToken,
+  foldSearchTerm,
   fuzzyScore,
   handleSearchEscape,
   hasFulltextSearchDraft,
@@ -80,6 +81,7 @@ import {
   readSearchState,
   removeSearchTermTypeFromDraft,
   searchKeyAction,
+  searchRelevanceTier,
   searchTermKey,
   searchTokens,
   selectSearchCompletions,
@@ -329,7 +331,7 @@ test("kind and full-text completions remain available beside catalog suggestions
 
 test("search tokens support multi-word matching and current-token completion", () => {
   assert.deepEqual(searchTokens("  AirVPN   system "), ["airvpn", "system"]);
-  assert.deepEqual(searchTokens("  Expose\u0301   System "), ["exposé", "system"]);
+  assert.deepEqual(searchTokens("  Expose\u0301   System "), ["expose", "system"]);
   assert.equal(currentSearchToken("airvpn sys"), "sys");
   assert.equal(currentSearchToken("airvpn "), "");
   assert.equal(fuzzyScore("Expose\u0301", "Exposé"), 0);
@@ -414,6 +416,68 @@ test("short searches find terms within plugin names and tags", () => {
     "Unrelated plugin productivity launcher",
     "A command palette for applications",
   ), false);
+});
+
+test("dotted searches match complete plugin IDs beyond the host namespace", () => {
+  const fanMonitor = pluginSearchContext({
+    id: "io.github.elynch303.fan-monitor",
+    name: "Fan Monitor",
+    description: "Fan speed in the bar.",
+    repo: "https://github.com/elynch303/fan-monitor",
+    tags: ["system"],
+  });
+  for (const query of [
+    "io.github.elynch303.fan-monitor",
+    "IO.GitHub.elynch303.Fan-Monitor",
+    "io.github.elynch303",
+    "github.elynch303.fan",
+  ]) {
+    assert.equal(matchesSearchSelection(fanMonitor, { draftTerms: parseSearchDraft(query) }), true, query);
+  }
+  for (const query of ["io.github", "io.", "github.io", "io.github.other.fan-monitor"]) {
+    assert.equal(matchesSearchSelection(fanMonitor, { draftTerms: parseSearchDraft(query) }), false, query);
+  }
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("fulltext", "io.github.elynch303"), fanMonitor), true);
+});
+
+test("search ignores diacritics on both sides of the comparison", () => {
+  const context = pluginSearchContext({
+    id: "robertlindomar.omarchy-ptbr.clock",
+    name: "Relógio",
+    description: "Notificações e café für Müller",
+    tags: ["system"],
+  });
+  for (const query of ["relogio", "Relógio", "notificacoes", "cafe", "café", "muller", "MÜLLER", "fur"]) {
+    assert.equal(matchesSearchSelection(context, { draftTerms: parseSearchDraft(query) }), true, query);
+  }
+  assert.equal(foldSearchTerm("İstanbul Ünlü"), "istanbul unlu");
+  assert.equal(foldSearchTerm("調べ"), "調べ");
+  assert.equal(foldSearchTerm("  Fan  Monitor "), "fan monitor");
+});
+
+test("short searches with symbols match literally instead of as a letter prefix", () => {
+  const cppDaily = { primaryText: "C++ Daily cpp-daily education", searchText: "C++ Daily Practice C++ every day education" };
+  const clock = { primaryText: "Clock clock system", searchText: "Clock A calm clock for the bar system" };
+  assert.equal(matchesDirectSearch("c++", cppDaily), true);
+  assert.equal(matchesDirectSearch("c++", clock), false);
+  assert.equal(matchesDirectSearch("c#", clock), false);
+  assert.equal(matchesDirectSearch("cl,", clock), true);
+  assert.equal(matchesShortSearch("+", "Media Controls + Album Art", "Media Controls + Album Art"), true);
+});
+
+test("search relevance ranks exact names and IDs before prefixes and other matches", () => {
+  const context = (name, id) => pluginSearchContext({ name, id, tags: [] });
+  const archy = context("Archy", "io.github.example.archy");
+  const archyBar = context("Archy Bar", "example.archy-bar");
+  const omarchyClock = context("Omarchy Clock", "example.clock");
+  const unrelatedName = context("Weather", "example.weather");
+  assert.equal(searchRelevanceTier(archy, "archy"), 0);
+  assert.equal(searchRelevanceTier(archy, "io.github.example.archy"), 0);
+  assert.equal(searchRelevanceTier(archyBar, "archy"), 1);
+  assert.equal(searchRelevanceTier(omarchyClock, "archy"), 2);
+  assert.equal(searchRelevanceTier(unrelatedName, "archy"), 3);
+  assert.equal(searchRelevanceTier(archy, ""), 0);
+  assert.equal(searchRelevanceTier(context("Müller Notes", "example.notes"), "muller notes"), 0);
 });
 
 test("inline completion accepts genuine plugin, tag, and author prefixes", () => {
@@ -639,7 +703,7 @@ test("typed terms normalize, parse, and deduplicate by type and value", () => {
   });
   assert.equal(createSearchTerm("kind", "---"), null);
   assert.equal(createSearchTerm("kind", "x".repeat(maximumSearchTermLength + 1)), null);
-  assert.equal(pluginKindKey("Bär + Panel"), "bär-panel");
+  assert.equal(pluginKindKey("Bär + Panel"), "bar-panel");
   assert.equal(hasFulltextSearchDraft("vpn text:panel"), true);
   assert.equal(hasFulltextSearchDraft("vpn panel"), false);
   assert.deepEqual(parseSearchDraft("tag: author: @bad_login @foo- @foo--bar"), [
@@ -1401,15 +1465,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261002-02");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261002-02");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261002-02");
+  assert.equal(keys[0], "20261002-03");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261002-03");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261002-03");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261002-02");
+  assert.equal(styleKeys[0], "20261002-03");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1478,7 +1542,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.thirdPartyNotices, /Lucide[\s\S]*ISC License[\s\S]*Copyright \(c\) 2026 Lucide Icons and Contributors[\s\S]*Permission to use, copy, modify, and\/or distribute/);
   assert.match(files.favicon, /Cable icon geometry from Lucide[\s\S]*Copyright \(c\) 2026 Lucide Icons and Contributors[\s\S]*Permission to use, copy, modify, and\/or distribute[\s\S]*THE SOFTWARE IS PROVIDED "AS IS"/);
   assert.match(files.index, />Search plugins, tags, text, or authors<\/label>/);
-  assert.match(files.index, /placeholder="Search plugins, tag:panel, text:bar, or @author…"/);
+  assert.match(files.index, /placeholder="Search plugins, tag:media, kind:panel, or @author…"/);
   assert.match(files.index, /<option value="updated">Recent activity<\/option>/);
   assert.match(files.index, /<option value="stars">Most starred<\/option>[\s\S]*<option value="views">Most viewed<\/option>[\s\S]*<option value="copies">Most copied<\/option>[\s\S]*<option value="hearts">Most hearts<\/option>/);
   assert.match(files.index, /<span class="sr-only">Sort or filter plugins<\/span>[\s\S]*<select id="sort-select">[\s\S]*<option value="name">A–Z<\/option>[\s\S]*<option value="verified">Verified<\/option>[\s\S]*<option value="unverified">Unverified<\/option>/);
@@ -1779,7 +1843,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /type: "kind",[\s\S]*label: `kind:\$\{key\}`,[\s\S]*matchValue: label,[\s\S]*detail: label/);
   assert.match(files.app, /type: "fulltext",[\s\S]*insertValue: searchTermInputValue\(fulltextTerm\),[\s\S]*detail: "broad search"/);
   assert.match(files.app, /completion\.type === "fulltext" \? "text" : completion\.type/);
-  assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
+  assert.match(files.app, /"Search plugins, tag:media, kind:panel, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
   assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
   assert.match(files.app, /const taxonomyCatalogFilters = \[\s*\["VPN", matchesVpnTaxonomy\],\s*\["Bar", matchesBarTaxonomy\],\s*\]/);
