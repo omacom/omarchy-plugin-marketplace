@@ -1401,15 +1401,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260930-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20260930-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20260930-01");
+  assert.equal(keys[0], "20261002-02");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261002-02");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261002-02");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260930-01");
+  assert.equal(styleKeys[0], "20261002-02");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1462,6 +1462,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.pluginJs, /catch\(\(reason\) => \{[\s\S]*if \(!engagementLoaded\) \{[\s\S]*hidePendingEngagement\(document\)/);
   assert.match(files.pluginJs, /recordPluginHeart\(plugin\.id\)[\s\S]*showToast\("Heart could not be sent\. Try again\."\)[\s\S]*showToast\("Heart sent\."\)/);
   assert.match(files.app, /recordPluginHeart\(pluginId\)[\s\S]*showToast\("Heart could not be sent\. Try again\."\)[\s\S]*showToast\("Heart sent\."\)/);
+  for (const source of [files.pluginJs, files.app]) {
+    assert.match(source, /if \(result\?\.reason === "repeat"\) showToast\("Heart already counted from your network today\."\);\s*else showToast\("Heart could not be sent\. Try again\."\);/);
+  }
   assert.match(files.sharedJs, /aria-disabled="true"[\s\S]*button\.disabled = false/);
   assert.doesNotMatch(files.sharedJs, /hearted \? " disabled"/);
   assert.match(files.rightsRequest, /name: Rights or asset removal request[\s\S]*id: material[\s\S]*id: basis[\s\S]*id: action[\s\S]*made in good faith/);

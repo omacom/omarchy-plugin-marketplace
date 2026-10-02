@@ -37,14 +37,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260930-01";
+} from "./shared.js?v=20261002-02";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20260930-01";
+} from "./engagement.js?v=20261002-02";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -72,13 +72,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20260930-01";
+} from "./search.js?v=20261002-02";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20260930-01";
+} from "./taxonomy.js?v=20261002-02";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -756,7 +756,8 @@ async function heartPlugin(button) {
   delete button.dataset.heartSubmitting;
   button.removeAttribute("aria-busy");
   if (!result?.recorded) {
-    showToast("Heart could not be sent. Try again.");
+    if (result?.reason === "repeat") showToast("Heart already counted from your network today.");
+    else showToast("Heart could not be sent. Try again.");
     return;
   }
   applyAuthoritativeEngagement(pluginId, result, {

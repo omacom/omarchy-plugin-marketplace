@@ -13,10 +13,16 @@ const defaultDailyEventLimit = 10_000;
 const catalogCacheLifetime = 5 * 60 * 1000;
 const hourWindowSeconds = 60 * 60;
 const dayWindowSeconds = 24 * hourWindowSeconds;
-const defaultAddressWindows = {
-  view: { hour: 60, day: 240, pluginHour: 5 },
-  copy: { hour: 12, day: 36, pluginHour: 1 },
-  heart: { hour: 8, day: 24, pluginDay: 1 },
+const addressWindows = {
+  view: [{ scope: "address", limit: 1, windowSeconds: hourWindowSeconds }],
+  copy: [
+    { scope: "address", limit: 1, windowSeconds: dayWindowSeconds },
+    { scope: "network", limit: 4, windowSeconds: dayWindowSeconds },
+  ],
+  heart: [
+    { scope: "address", limit: 1, windowSeconds: dayWindowSeconds },
+    { scope: "network", limit: 4, windowSeconds: dayWindowSeconds },
+  ],
 };
 let catalogCache = { url: "", expiresAt: 0, pluginIds: new Set() };
 const addressOperationTails = new Map();
@@ -95,6 +101,11 @@ export function normalizeClientAddress(value) {
   return `v6:${padded.slice(0, 4).join(":")}/64`;
 }
 
+export function clientNetwork(address) {
+  const match = /^v6:([0-9a-f]{4}:[0-9a-f]{4}:[0-9a-f]{4}:[0-9a-f]{2})[0-9a-f]{2}\/64$/.exec(String(address || ""));
+  return match ? `v6:${match[1]}00/56` : "";
+}
+
 function hexDigest(buffer) {
   let hex = "";
   for (const byte of new Uint8Array(buffer)) hex += byte.toString(16).padStart(2, "0");
@@ -120,53 +131,6 @@ async function serializeAddressOperation(address, operation) {
     release();
     if (addressOperationTails.get(address) === tail) addressOperationTails.delete(address);
   }
-}
-
-function addressLimit(value, fallback) {
-  return configuredEventLimit(value) || fallback;
-}
-
-function addressWindowLimits(env) {
-  const defaults = defaultAddressWindows;
-  return {
-    view: {
-      hour: addressLimit(env.VIEW_ADDRESS_HOUR_EVENT_LIMIT, defaults.view.hour),
-      day: addressLimit(env.VIEW_ADDRESS_DAY_EVENT_LIMIT, defaults.view.day),
-      pluginHour: addressLimit(env.VIEW_ADDRESS_PLUGIN_HOUR_EVENT_LIMIT, defaults.view.pluginHour),
-    },
-    copy: {
-      hour: addressLimit(env.COPY_ADDRESS_HOUR_EVENT_LIMIT, defaults.copy.hour),
-      day: addressLimit(env.COPY_ADDRESS_DAY_EVENT_LIMIT, defaults.copy.day),
-      pluginHour: addressLimit(env.COPY_ADDRESS_PLUGIN_HOUR_EVENT_LIMIT, defaults.copy.pluginHour),
-    },
-    heart: {
-      hour: addressLimit(env.HEART_ADDRESS_HOUR_EVENT_LIMIT, defaults.heart.hour),
-      day: addressLimit(env.HEART_ADDRESS_DAY_EVENT_LIMIT, defaults.heart.day),
-      pluginDay: addressLimit(env.HEART_ADDRESS_PLUGIN_DAY_EVENT_LIMIT, defaults.heart.pluginDay),
-    },
-  };
-}
-
-function addressWindowsFor(type, pluginId, limits) {
-  const spec = limits[type];
-  const windows = [
-    { limit: spec.hour, windowSeconds: hourWindowSeconds, parts: ["hour", type] },
-    { limit: spec.day, windowSeconds: dayWindowSeconds, parts: ["day", type] },
-  ];
-  if (type === "heart") {
-    windows.push({
-      limit: spec.pluginDay,
-      windowSeconds: dayWindowSeconds,
-      parts: ["plugin-day", type, pluginId],
-    });
-  } else {
-    windows.push({
-      limit: spec.pluginHour,
-      windowSeconds: hourWindowSeconds,
-      parts: ["plugin-hour", type, pluginId],
-    });
-  }
-  return windows;
 }
 
 export async function consumeSlidingWindow(cache, {
@@ -216,59 +180,33 @@ async function writeSlidingWindow(cache, request, events, windowSeconds, now) {
   }));
 }
 
-async function restoreAddressWindows(cache, reservations, now) {
-  const results = await Promise.allSettled(reservations.map((reservation) => (
-    writeSlidingWindow(
-      cache,
-      reservation.request,
-      reservation.previousEvents,
-      reservation.windowSeconds,
-      now,
-    )
-  )));
-  const failed = results.find((result) => result.status === "rejected");
-  if (failed) throw failed.reason;
-}
-
-async function reserveAddressWindows(cache, address, pluginId, type, env, now) {
-  const windows = addressWindowsFor(type, pluginId, addressWindowLimits(env));
-  const pending = [];
-  let retryAfter = 0;
-  for (const window of windows) {
+async function checkAddressWindows(cache, address, { pluginId, type }, now) {
+  const checked = [];
+  for (const window of addressWindows[type]) {
+    const key = window.scope === "network" ? clientNetwork(address) : address;
+    if (!key) continue;
     const result = await consumeSlidingWindow(cache, {
-      key: await quotaRequest([address, ...window.parts]),
+      key: await quotaRequest([key, window.scope, type, pluginId]),
       limit: window.limit,
       windowSeconds: window.windowSeconds,
       now,
       record: false,
     });
-    if (result.unavailable) return result;
-    if (!result.success) retryAfter = Math.max(retryAfter, result.retryAfter);
-    else pending.push({ ...window, result });
+    if (result.unavailable) return { unavailable: true };
+    if (!result.success) return { repeat: true };
+    checked.push({ ...window, request: result.request, events: result.events });
   }
-  if (retryAfter) return { success: false, retryAfter };
-  const reservations = [];
-  try {
-    for (const { result, windowSeconds } of pending) {
-      const reservation = {
-        previousEvents: result.events,
-        request: result.request,
-        windowSeconds,
-      };
-      reservations.push(reservation);
-      await writeSlidingWindow(
-        cache,
-        result.request,
-        [...result.events, now],
-        windowSeconds,
-        now,
-      );
-    }
-  } catch (error) {
-    await restoreAddressWindows(cache, reservations, now);
-    throw error;
-  }
-  return { success: true, retryAfter: 0, reservations };
+  return { checked };
+}
+
+async function recordAddressWindows(cache, checked, now) {
+  await Promise.allSettled(checked.map((window) => writeSlidingWindow(
+    cache,
+    window.request,
+    [...window.events, now],
+    window.windowSeconds,
+    now,
+  )));
 }
 
 function corsHeaders(origin) {
@@ -600,24 +538,13 @@ async function eventResponse(request, env, origin, fetchImpl, cache, now) {
     );
   }
 
-  return serializeAddressOperation(address, async () => {
-    const addressLimitResult = await reserveAddressWindows(
-      cache,
-      address,
-      event.pluginId,
-      event.type,
-      env,
-      now,
-    );
-    if (addressLimitResult.unavailable) {
+  return serializeAddressOperation(clientNetwork(address) || address, async () => {
+    const windows = await checkAddressWindows(cache, address, event, now);
+    if (windows.unavailable) {
       return json({ error: "Event service unavailable" }, 503, corsHeaders(origin));
     }
-    if (!addressLimitResult.success) {
-      return json(
-        { error: "Rate limit exceeded" },
-        429,
-        { ...corsHeaders(origin), "Retry-After": String(addressLimitResult.retryAfter) },
-      );
+    if (windows.repeat) {
+      return json({ recorded: false, reason: "repeat" }, 202, corsHeaders(origin));
     }
 
     const timestamp = new Date(now).toISOString();
@@ -627,33 +554,26 @@ async function eventResponse(request, env, origin, fetchImpl, cache, now) {
     const copies = event.type === "copy" ? 1 : 0;
     const hearts = event.type === "heart" ? 1 : 0;
     const limit = eventLimit(env.DAILY_EVENT_LIMIT);
-    let writeResult;
-    let totalsResult;
-    try {
-      [writeResult, totalsResult] = await env.ENGAGEMENT_DB.batch([
-        env.ENGAGEMENT_DB.prepare(engagementUpsertSql).bind(
-          event.pluginId,
-          day,
-          minute,
-          views,
-          copies,
-          hearts,
-          limit,
-          minuteLimits.views,
-          minuteLimits.copies,
-          minuteLimits.hearts,
-        ),
-        env.ENGAGEMENT_DB.prepare(engagementTotalsSql).bind(event.pluginId),
-      ]);
-    } catch (error) {
-      await restoreAddressWindows(cache, addressLimitResult.reservations, now);
-      throw error;
-    }
+    const [writeResult, totalsResult] = await env.ENGAGEMENT_DB.batch([
+      env.ENGAGEMENT_DB.prepare(engagementUpsertSql).bind(
+        event.pluginId,
+        day,
+        minute,
+        views,
+        copies,
+        hearts,
+        limit,
+        minuteLimits.views,
+        minuteLimits.copies,
+        minuteLimits.hearts,
+      ),
+      env.ENGAGEMENT_DB.prepare(engagementTotalsSql).bind(event.pluginId),
+    ]);
 
     if (!writeResult?.results?.length) {
-      await restoreAddressWindows(cache, addressLimitResult.reservations, now);
       return json({ recorded: false, reason: "limit" }, 202, corsHeaders(origin));
     }
+    await recordAddressWindows(cache, windows.checked, now);
     return json({
       recorded: true,
       plugin: normalizedTotals(totalsResult?.results?.[0]),
@@ -686,6 +606,9 @@ export async function handleRequest(request, env, {
     }
   }
   if (url.pathname === "/v1/events") {
+    if (url.hostname.endsWith(".workers.dev")) {
+      return json({ error: "Not found" }, 404, corsHeaders(origin));
+    }
     if (request.method !== "POST") {
       return json({ error: "Method not allowed" }, 405, { Allow: "POST", ...corsHeaders(origin) });
     }

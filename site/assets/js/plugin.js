@@ -21,7 +21,7 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260930-01";
+} from "./shared.js?v=20261002-02";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,8 +29,8 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20260930-01";
-import { repositoryPublisher } from "./search.js?v=20260930-01";
+} from "./engagement.js?v=20261002-02";
+import { repositoryPublisher } from "./search.js?v=20261002-02";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -468,7 +468,8 @@ async function init() {
       delete heartButton.dataset.heartSubmitting;
       heartButton.removeAttribute("aria-busy");
       if (!result?.recorded) {
-        showToast("Heart could not be sent. Try again.");
+        if (result?.reason === "repeat") showToast("Heart already counted from your network today.");
+        else showToast("Heart could not be sent. Try again.");
         return;
       }
       applyAuthoritativeEngagement(result);

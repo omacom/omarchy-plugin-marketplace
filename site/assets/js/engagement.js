@@ -93,7 +93,11 @@ export async function recordEngagementEvent(pluginId, type, {
     });
     if (!response.ok) return null;
     const payload = await response.json();
-    if (payload?.recorded === false) return { recorded: false, stats: null };
+    if (payload?.recorded === false) {
+      return payload.reason === "repeat"
+        ? { recorded: false, stats: null, reason: "repeat" }
+        : { recorded: false, stats: null };
+    }
     const stats = normalizedPluginStats(payload?.plugin);
     return payload?.recorded === true && stats
       ? { recorded: true, stats }

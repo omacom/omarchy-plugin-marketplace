@@ -21,6 +21,7 @@ import {
   pluginHeartButton,
 } from "../site/assets/js/shared.js";
 import {
+  clientNetwork,
   consumeSlidingWindow,
   engagementUpsertStatement,
   handleRequest,
@@ -429,6 +430,13 @@ test("plugin hearts are recorded once per browser and only persisted after succe
   });
   assert.equal(failed, null);
   assert.equal(hasPluginHeart("failed.plugin", storage), false);
+
+  const repeated = await recordPluginHeart("shared.plugin", {
+    ...options,
+    fetchImpl: async () => responseJson({ recorded: false, reason: "repeat" }, { status: 202 }),
+  });
+  assert.deepEqual(repeated, { recorded: false, stats: null, reason: "repeat" });
+  assert.equal(hasPluginHeart("shared.plugin", storage), false);
 });
 
 test("parallel heart attempts share one in-flight request", async () => {
@@ -969,6 +977,10 @@ test("normalizeClientAddress maps IPv4, mapped IPv6, and IPv6 /64 prefixes", () 
   assert.equal(normalizeClientAddress(""), "");
   assert.equal(normalizeClientAddress("999.0.2.1"), "");
   assert.equal(normalizeClientAddress("2001:db8::1::2"), "");
+  assert.equal(clientNetwork("v6:2001:0db8:0001:0002/64"), "v6:2001:0db8:0001:0000/56");
+  assert.equal(clientNetwork("v6:2001:0db8:0001:02ff/64"), "v6:2001:0db8:0001:0200/56");
+  assert.equal(clientNetwork("v4:192.0.2.1"), "");
+  assert.equal(clientNetwork(""), "");
 });
 
 test("sliding windows reject overflow until the oldest event expires", async () => {
@@ -1049,9 +1061,8 @@ test("Worker address windows stop repeat hearts from one address without D1 acto
   assert.equal(database.calls.length, 2);
 
   const blocked = await handleRequest(request(), env, options);
-  assert.equal(blocked.status, 429);
-  assert.deepEqual(await blocked.json(), { error: "Rate limit exceeded" });
-  assert.equal(blocked.headers.get("Retry-After"), "86400");
+  assert.equal(blocked.status, 202);
+  assert.deepEqual(await blocked.json(), { recorded: false, reason: "repeat" });
   assert.equal(database.calls.length, 2);
   assert.equal([...cache.values.keys()].every((url) => (
     url.startsWith("https://engagement-quota.invalid/")
@@ -1094,11 +1105,14 @@ test("Worker serializes concurrent address-window consumption", async () => {
   });
 
   const responses = await Promise.all([post(), post()]);
-  assert.deepEqual(responses.map(({ status }) => status).sort(), [202, 429]);
+  assert.deepEqual(responses.map(({ status }) => status), [202, 202]);
+  const bodies = await Promise.all(responses.map((response) => response.json()));
+  assert.deepEqual(bodies.map((body) => body.recorded).sort(), [false, true]);
+  assert.deepEqual(bodies.find((body) => !body.recorded), { recorded: false, reason: "repeat" });
   assert.equal(database.calls.length, 2);
 });
 
-test("Worker releases address windows when D1 fails or rejects an event", async () => {
+test("Worker counts an address window only after D1 records the event", async () => {
   const cache = fakeCache();
   const env = (database) => ({
     ENGAGEMENT_DB: database,
@@ -1121,12 +1135,14 @@ test("Worker releases address windows when D1 fails or rejects an event", async 
   assert.equal(failed.status, 503);
   const afterFailure = await post(fakeDatabase(), "192.0.2.20");
   assert.equal(afterFailure.status, 202);
+  assert.equal((await afterFailure.json()).recorded, true);
 
   const rejected = await post(fakeDatabase([], { recorded: null }), "192.0.2.21");
   assert.equal(rejected.status, 202);
   assert.deepEqual(await rejected.json(), { recorded: false, reason: "limit" });
   const afterRejection = await post(fakeDatabase(), "192.0.2.21");
   assert.equal(afterRejection.status, 202);
+  assert.equal((await afterRejection.json()).recorded, true);
 });
 
 test("Worker shares IPv6 /64 quota across interface IDs", async () => {
@@ -1150,39 +1166,99 @@ test("Worker shares IPv6 /64 quota across interface IDs", async () => {
   });
 
   assert.equal((await post("2001:db8:1:2::1")).status, 202);
-  assert.equal((await post("2001:db8:1:2:0:0:0:ffff")).status, 429);
-  assert.equal((await post("2001:db8:1:3::1")).status, 202);
+  assert.deepEqual(await (await post("2001:db8:1:2:0:0:0:ffff")).json(), { recorded: false, reason: "repeat" });
+  assert.deepEqual((await (await post("2001:db8:1:3::1")).json()).recorded, true);
   assert.equal(database.calls.length, 4);
 });
 
-test("Worker hour windows cap spray across plugins from one address", async () => {
+test("Worker address windows are per plugin and cap IPv6 /56 networks", async () => {
   const database = fakeDatabase();
   const cache = fakeCache();
   const env = {
     ENGAGEMENT_DB: database,
     ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
     ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
-    CATALOG_URL: "https://catalog-spray.example/catalog.json",
-    HEART_ADDRESS_HOUR_EVENT_LIMIT: "2",
+    CATALOG_URL: "https://catalog-network.example/catalog.json",
     ...testMinuteLimitVars,
   };
   const plugins = [{ id: "alpha.plugin" }, { id: "beta.plugin" }, { id: "gamma.plugin" }];
-  const post = (pluginId) => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+  const post = (pluginId, ip = "192.0.2.30") => handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
     method: "POST",
-    headers: eventHeaders(),
+    headers: eventHeaders({ ip }),
     body: JSON.stringify({ pluginId, type: "heart" }),
   }), env, {
     cache,
     fetchImpl: async () => responseJson({ plugins }),
     now: Date.parse("2026-08-21T16:00:00.000Z"),
   });
+  const recorded = async (pluginId, ip) => (await (await post(pluginId, ip)).json()).recorded;
 
-  assert.equal((await post("alpha.plugin")).status, 202);
-  assert.equal((await post("beta.plugin")).status, 202);
-  const blocked = await post("gamma.plugin");
-  assert.equal(blocked.status, 429);
-  assert.equal(blocked.headers.get("Retry-After"), "3600");
-  assert.equal(database.calls.length, 4);
+  assert.equal(await recorded("alpha.plugin"), true);
+  assert.equal(await recorded("beta.plugin"), true);
+  assert.equal(await recorded("gamma.plugin"), true);
+
+  for (const ip of ["2001:db8:1:200::1", "2001:db8:1:201::1", "2001:db8:1:2fe::1", "2001:db8:1:2ff::1"]) {
+    assert.equal(await recorded("alpha.plugin", ip), true, ip);
+  }
+  assert.equal(await recorded("alpha.plugin", "2001:db8:1:210::1"), false);
+  assert.equal(await recorded("beta.plugin", "2001:db8:1:210::1"), true);
+  assert.equal(await recorded("alpha.plugin", "2001:db8:1:300::1"), true);
+  assert.equal(database.calls.length, 18);
+});
+
+test("Worker counts views once per address and plugin per hour and copies once per day", async () => {
+  const database = fakeDatabase();
+  const cache = fakeCache();
+  const start = Date.parse("2026-08-21T18:00:00.000Z");
+  const env = {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: fakeRateLimiter(),
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-windows.example/catalog.json",
+    ...testMinuteLimitVars,
+  };
+  const recorded = async (type, offset, ip = "192.0.2.40") => (await (await handleRequest(new Request("https://api.omarchyplugins.com/v1/events", {
+    method: "POST",
+    headers: eventHeaders({ ip }),
+    body: JSON.stringify({ pluginId: "example.plugin", type }),
+  }), env, {
+    cache,
+    fetchImpl: async () => responseJson({ plugins: [{ id: "example.plugin" }] }),
+    now: start + offset,
+  })).json()).recorded;
+
+  assert.equal(await recorded("view", 0), true);
+  assert.equal(await recorded("view", 59 * 60_000), false);
+  assert.equal(await recorded("view", 60 * 60_000), true);
+  assert.equal(await recorded("copy", 0), true);
+  assert.equal(await recorded("copy", 23 * 3_600_000), false);
+  assert.equal(await recorded("copy", 24 * 3_600_000), true);
+  for (const ip of ["2001:db8:2:100::1", "2001:db8:2:101::1", "2001:db8:2:102::1", "2001:db8:2:103::1"]) {
+    assert.equal(await recorded("copy", 0, ip), true, ip);
+  }
+  assert.equal(await recorded("copy", 0, "2001:db8:2:104::1"), false);
+});
+
+test("Worker refuses events on workers.dev, where the Cache API has no effect", async () => {
+  const database = fakeDatabase();
+  const rateLimiter = fakeRateLimiter();
+  const response = await handleRequest(new Request("https://omarchy-plugin-engagement.example.workers.dev/v1/events", {
+    method: "POST",
+    headers: eventHeaders(),
+    body: JSON.stringify({ pluginId: "example.plugin", type: "heart" }),
+  }), {
+    ENGAGEMENT_DB: database,
+    ENGAGEMENT_RATE_LIMITER: rateLimiter,
+    ENGAGEMENT_TARGET_RATE_LIMITER: fakeRateLimiter(),
+    CATALOG_URL: "https://catalog-workers-dev.example/catalog.json",
+    ...testMinuteLimitVars,
+  }, {
+    cache: fakeCache(),
+    fetchImpl: async () => { throw new Error("catalog must not be fetched"); },
+  });
+  assert.equal(response.status, 404);
+  assert.equal(rateLimiter.keys.length, 0);
+  assert.equal(database.calls.length, 0);
 });
 
 test("Worker fails closed when the address-window cache is unavailable", async () => {
@@ -1224,7 +1300,6 @@ test("Worker deployment files contain placeholders but no credentials", async ()
   assert.match(template, /"simple": \{ "limit": 60, "period": 60 \}/);
   assert.match(template, /"name": "ENGAGEMENT_TARGET_RATE_LIMITER"/);
   assert.match(template, /REPLACE_WITH_TARGET_RATE_LIMIT/);
-  assert.match(template, /"HEART_MINUTE_EVENT_LIMIT": "REPLACE_WITH_HEART_MINUTE_LIMIT",\s*\/\/ Optional/);
   const configuredTemplate = template.replace('"REPLACE_WITH_TARGET_RATE_LIMIT"', "7");
   assert.match(configuredTemplate, /"simple": \{ "limit": 7, "period": 60 \}/);
   assert.doesNotMatch(configuredTemplate, /"limit": "7"/);
