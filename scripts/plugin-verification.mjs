@@ -469,7 +469,7 @@ export async function analyzeListedPluginVerification({
       maintainerReviewRequested: Boolean(maintainerReview),
       standardInstallationRejected: true,
       code: "verification-standard-installation-evidence-required",
-      reason: "Standard installation requires a passing baseline or an existing valid installer-only review for the exact commit with matching scan evidence.",
+      reason: "Standard installation requires a passing baseline or an existing valid installer review (optionally including package management) for the exact commit with matching scan evidence.",
       installationChanged: false,
     });
   }
@@ -673,7 +673,7 @@ export function buildVerificationReport(result) {
     if (result.standardInstallationRejected) {
       lines.push(
         "",
-        "Standard installation requires a passing baseline or an existing valid installer-only review for this exact commit. The fresh scan must match the accepted evidence.",
+        "Standard installation requires a passing baseline or an existing valid installer review (optionally including package management) for this exact commit. The fresh scan must match the accepted evidence.",
       );
     } else if (result.reviewInvalid) {
       lines.push(
@@ -759,7 +759,7 @@ export function publicVerificationFailure(error) {
     "verification-standard-installation-ineligible": "Standard installation changes are limited to one listed root plugin with a valid manual installation override.",
     "verification-standard-installation-catalog-mismatch": "The catalog does not describe the same root-plugin installation boundary as the listing.",
     "verification-standard-installation-compatibility-failed": "Standard installation remains unavailable while the current upstream compatibility check is failed.",
-    "verification-standard-installation-evidence-required": "Standard installation requires a passing baseline or an existing valid installer-only review for the exact commit with matching scan evidence.",
+    "verification-standard-installation-evidence-required": "Standard installation requires a passing baseline or an existing valid installer review (optionally including package management) for the exact commit with matching scan evidence.",
     "verification-standard-installation-authorization-missing": "Standard installation changes require an authenticated maintainer approval label event.",
     "verification-revocation-action-invalid": "Maintainer verification revocation is limited to listed-snapshot verification issues.",
     "verification-revocation-ineligible": "Only a current exact commit-bound maintainer review can be revoked.",

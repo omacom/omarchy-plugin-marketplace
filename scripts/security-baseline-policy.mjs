@@ -223,9 +223,10 @@ export const currentSecurityBaselinePolicy = Object.freeze({
   capabilities: securityBaselineCapabilityCatalog,
 });
 
-// Standard installation may reuse only an installer-only manual verification.
+// Reuse an exact installer review, optionally with reviewed package management.
 export function securityBaselineEligibleForReviewedStandardInstallation(value) {
   const capabilities = securityBaselineCapabilityIds(value);
   return securityBaselineEligibleForMaintainerVerification(value)
-    && capabilities.length === 1 && capabilities[0] === "installer";
+    && capabilities.includes("installer")
+    && capabilities.every((id) => id === "installer" || id === "package-manager");
 }

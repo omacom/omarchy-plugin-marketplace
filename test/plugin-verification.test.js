@@ -1833,8 +1833,8 @@ test("verification issue, workflow, and documentation preserve automatic publica
   assert.match(guide, /not verification-bound/);
 });
 
-function reviewedInstallationFixture() {
-  const record = storedReviewBaseline({ capabilities: ["installer"] });
+function reviewedInstallationFixture(capabilities = ["installer"]) {
+  const record = storedReviewBaseline({ capabilities });
   const reviewedSource = source({
     automatedSecurityBaseline: record,
     maintainerVerificationReview: storedReview(record),
@@ -1851,27 +1851,29 @@ function reviewedInstallationFixture() {
   return {
     body: standardInstallationRequestBody(), registry: { sources: [reviewedSource] }, catalog: manualCatalog,
     standardInstallationApproval: standardInstallationApproval({ requestedAt: "2026-08-16T14:00:00.000Z" }),
-    runBaseline: async () => baseline({ outcome: "review-required", capabilities: [{ id: "installer" }], checkedAt: "2026-08-16T15:00:00.000Z" }),
+    runBaseline: async () => baseline({ outcome: "review-required", capabilities: capabilities.map((id) => ({ id })), checkedAt: "2026-08-16T15:00:00.000Z" }),
   };
 }
 
-test("standard installation reuses the exact installer review without minting or retiming an attestation", async () => {
-  const fixture = reviewedInstallationFixture();
-  const original = structuredClone(fixture.registry);
-  const result = await analyzeListedPluginVerification(fixture);
-  assert.equal(result.status, "verified");
-  assert.equal(result.verification.method, "maintainer-reviewed");
-  assert.equal(result.maintainerReviewRequested, false);
-  assert.equal(result.installationChanged, true);
-  assert.equal(result.catalog.plugins[0].installAvailable, true);
-  assert.equal(result.source.plugins["example.plugin"].installation, undefined);
-  assert.deepEqual(result.source.maintainerVerificationReview, original.sources[0].maintainerVerificationReview);
-  assert.deepEqual(result.source.automatedSecurityBaseline, original.sources[0].automatedSecurityBaseline);
-  assert.equal(result.scanResult.checkedAt, "2026-08-16T15:00:00.000Z");
-  assert.deepEqual(fixture.registry, original);
-});
+for (const capabilities of [["installer"], ["installer", "package-manager"]]) {
+  test(`standard installation reuses the exact ${capabilities.join(" + ")} review without minting or retiming an attestation`, async () => {
+    const fixture = reviewedInstallationFixture(capabilities);
+    const original = structuredClone(fixture.registry);
+    const result = await analyzeListedPluginVerification(fixture);
+    assert.equal(result.status, "verified");
+    assert.equal(result.verification.method, "maintainer-reviewed");
+    assert.equal(result.maintainerReviewRequested, false);
+    assert.equal(result.installationChanged, true);
+    assert.equal(result.catalog.plugins[0].installAvailable, true);
+    assert.equal(result.source.plugins["example.plugin"].installation, undefined);
+    assert.deepEqual(result.source.maintainerVerificationReview, original.sources[0].maintainerVerificationReview);
+    assert.deepEqual(result.source.automatedSecurityBaseline, original.sources[0].automatedSecurityBaseline);
+    assert.equal(result.scanResult.checkedAt, "2026-08-16T15:00:00.000Z");
+    assert.deepEqual(fixture.registry, original);
+  });
+}
 
-test("standard installation rejects missing, revoked, stale, or mismatched installer reviews", async () => {
+test("standard installation rejects missing, revoked, stale, or mismatched installation reviews", async () => {
   const mutations = [
     (f, s) => { delete s.maintainerVerificationReview; },
     (f, s) => { s.maintainerVerificationReview.commit = otherCommit; },
@@ -1887,7 +1889,7 @@ test("standard installation rejects missing, revoked, stale, or mismatched insta
     (f) => { f.standardInstallationApproval.requestedAt = reviewedAt; },
     (f) => { f.standardInstallationApproval = null; },
     (f) => { f.body = standardInstallationRequestBody({ commitSha: otherCommit }); },
-    (f) => { f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: [{ id: "installer" }], checkedAt }); },
+    (f, s) => { f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: s.automatedSecurityBaseline.capabilities.map((id) => ({ id })), checkedAt }); },
     (f, s) => {
       s.automatedSecurityBaseline.capabilities.push("privilege");
       s.maintainerVerificationReview = storedReview(s.automatedSecurityBaseline);
@@ -1895,19 +1897,31 @@ test("standard installation rejects missing, revoked, stale, or mismatched insta
     },
     (f) => { f.runBaseline = async () => baseline({ outcome: "needs-fixes", findings: [{ ruleId: "curl-pipe-shell" }], capabilities: [{ id: "installer" }] }); },
     (f) => { f.runBaseline = async () => { throw new Error("scan failed"); }; },
+    (f, s) => {
+      const capabilities = s.automatedSecurityBaseline.capabilities.includes("package-manager")
+        ? ["installer"] : ["installer", "package-manager"];
+      f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: capabilities.map((id) => ({ id })), checkedAt: "2026-08-16T15:00:00.000Z" });
+    },
+    (f, s) => {
+      s.automatedSecurityBaseline.capabilities = ["package-manager"];
+      s.maintainerVerificationReview = storedReview(s.automatedSecurityBaseline);
+      f.runBaseline = async () => baseline({ outcome: "review-required", capabilities: [{ id: "package-manager" }], checkedAt: "2026-08-16T15:00:00.000Z" });
+    },
   ];
-  for (const mutate of mutations) {
-    const fixture = reviewedInstallationFixture();
-    mutate(fixture, fixture.registry.sources[0]);
-    const original = structuredClone({ registry: fixture.registry, catalog: fixture.catalog });
-    let result;
-    try { result = await analyzeListedPluginVerification(fixture); }
-    catch (error) { assert.ok(error instanceof PluginVerificationError || error.message === "scan failed"); }
-    if (result) {
-      assert.equal(result.status, "unverified");
-      assert.equal(result.changed, false);
-      assert.equal(result.installationChanged, false);
+  for (const capabilities of [["installer"], ["installer", "package-manager"]]) {
+    for (const mutate of mutations) {
+      const fixture = reviewedInstallationFixture(capabilities);
+      mutate(fixture, fixture.registry.sources[0]);
+      const original = structuredClone({ registry: fixture.registry, catalog: fixture.catalog });
+      let result;
+      try { result = await analyzeListedPluginVerification(fixture); }
+      catch (error) { assert.ok(error instanceof PluginVerificationError || error.message === "scan failed"); }
+      if (result) {
+        assert.equal(result.status, "unverified");
+        assert.equal(result.changed, false);
+        assert.equal(result.installationChanged, false);
+      }
+      assert.deepEqual({ registry: fixture.registry, catalog: fixture.catalog }, original);
     }
-    assert.deepEqual({ registry: fixture.registry, catalog: fixture.catalog }, original);
   }
 });
