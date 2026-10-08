@@ -602,6 +602,42 @@ test("absolute system utilities are not remote execution sinks", () => {
   }
 });
 
+test("pip install with nothing after it is a mention, not package management", () => {
+  // A README saying the plugin needs no packages still says the words. The
+  // pattern matched them, and a submission whose sentence was "Standard library
+  // only: nothing to compile, nothing to pip install, no D-Bus bindings" was
+  // labelled as able to install software.
+  //
+  // Only the case with no operand at all is excluded. "pip install <anything>"
+  // is still package management wherever it appears, including inside a denial,
+  // which is the same treatment sudo gets above.
+  for (const prose of [
+    "Standard library only: nothing to compile, nothing to pip install, no D-Bus bindings.",
+    "No pip install.",
+    "There is nothing to pip install",
+  ]) {
+    assert.deepEqual(
+      detectElevatedCapabilities([file("README.md", prose)]).map((capability) => capability.id),
+      [],
+      prose,
+    );
+  }
+  for (const command of [
+    "pip install openwakeword",
+    "pip3 install --user example",
+    "pipx install example-tool",
+    "${VENV}/bin/pip install openwakeword",
+    "python3 -m pip install example",
+    "Do not run pip install here",
+  ]) {
+    assert.ok(
+      detectElevatedCapabilities([file("scripts/setup.sh", command)])
+        .some((capability) => capability.id === "package-manager"),
+      command,
+    );
+  }
+});
+
 test("package managers, privilege boundaries, installers, and services require review", () => {
   const files = [
     file("bin/wake-word-setup", `${"${VENV}"}/bin/pip install openwakeword`),
