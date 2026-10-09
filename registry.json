@@ -318150,6 +318150,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MaNi4/omarchy-ai-scratchpad",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T18:28:34.459Z",
+      "listingValidatedCommit": "b57c1df5505546d535f9f9485d65edf21756c685",
+      "listingValidatedAt": "2026-10-09T18:28:34.459Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mani4/omarchy-ai-scratchpad",
+        "pluginIds": [
+          "mani4.ai-scratchpad"
+        ],
+        "commit": "b57c1df5505546d535f9f9485d65edf21756c685",
+        "checkedAt": "2026-10-09T18:28:34.327Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mani4.ai-scratchpad": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
