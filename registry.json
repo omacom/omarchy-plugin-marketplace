@@ -61461,8 +61461,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T17:46:57.990Z",
-      "listingValidatedCommit": "877c11c103172aab97d6c17d286ddf9e1df73d80",
-      "listingValidatedAt": "2026-09-02T01:30:22.418Z",
+      "listingValidatedCommit": "62d6c9f98706e2f3b0173ea146bb748e779eea4c",
+      "listingValidatedAt": "2026-10-09T21:12:20.592Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -61471,8 +61471,8 @@
         "pluginIds": [
           "io.github.whelanh.catholic-reference"
         ],
-        "commit": "877c11c103172aab97d6c17d286ddf9e1df73d80",
-        "checkedAt": "2026-09-02T01:30:22.418Z",
+        "commit": "62d6c9f98706e2f3b0173ea146bb748e779eea4c",
+        "checkedAt": "2026-10-09T21:12:20.592Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -61583,6 +61583,26 @@
             ],
             "commit": "5ee457bc221fc5b3d2266f49439e2d7f62cef258",
             "checkedAt": "2026-08-27T16:40:25.409Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "877c11c103172aab97d6c17d286ddf9e1df73d80",
+          "validatedAt": "2026-09-02T01:30:22.418Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T21:12:20.592Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "whelanh/omarchy-catholic-reference",
+            "pluginIds": [
+              "io.github.whelanh.catholic-reference"
+            ],
+            "commit": "877c11c103172aab97d6c17d286ddf9e1df73d80",
+            "checkedAt": "2026-09-02T01:30:22.418Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
