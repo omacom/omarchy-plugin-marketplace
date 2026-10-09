@@ -318217,6 +318217,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joseluiss2003/joseluis.weather",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T18:44:48.361Z",
+      "listingValidatedCommit": "285dad641f5a40e22e8bf1b8437389db095060dd",
+      "listingValidatedAt": "2026-10-09T18:44:48.361Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joseluiss2003/joseluis.weather",
+        "pluginIds": [
+          "joseluis.weather"
+        ],
+        "commit": "285dad641f5a40e22e8bf1b8437389db095060dd",
+        "checkedAt": "2026-10-09T18:44:48.212Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "joseluis.weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
