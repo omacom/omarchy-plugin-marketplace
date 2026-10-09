@@ -318771,6 +318771,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kaaldev73/Omarchy_RustDeskPassthrough",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T20:16:00.617Z",
+      "listingValidatedCommit": "fdd28243165048205eacb0c615a7d208d1b45615",
+      "listingValidatedAt": "2026-10-09T20:16:00.617Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kaaldev73/omarchy_rustdeskpassthrough",
+        "pluginIds": [
+          "io.github.kaaldev73.rustdesk-passthrough"
+        ],
+        "commit": "fdd28243165048205eacb0c615a7d208d1b45615",
+        "checkedAt": "2026-10-09T20:16:00.485Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kaaldev73/omarchy_rustdeskpassthrough",
+        "pluginIds": [
+          "io.github.kaaldev73.rustdesk-passthrough"
+        ],
+        "commit": "fdd28243165048205eacb0c615a7d208d1b45615",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T20:16:00.485Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T20:11:57.862Z",
+        "requestEventId": 32906320951,
+        "requestedAt": "2026-10-09T20:15:32Z",
+        "reviewedAt": "2026-10-09T20:16:00.485Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kaaldev73.rustdesk-passthrough": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
