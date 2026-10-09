@@ -316084,8 +316084,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T03:45:14.581Z",
-      "listingValidatedCommit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
-      "listingValidatedAt": "2026-10-09T03:45:14.581Z",
+      "listingValidatedCommit": "701880614a5efa5dbbc3039de4e4cdbd22c3f7e7",
+      "listingValidatedAt": "2026-10-09T15:38:30.709Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -316094,8 +316094,8 @@
         "pluginIds": [
           "io.github.syfra3.keyritual"
         ],
-        "commit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
-        "checkedAt": "2026-10-09T03:45:14.448Z",
+        "commit": "701880614a5efa5dbbc3039de4e4cdbd22c3f7e7",
+        "checkedAt": "2026-10-09T15:38:30.709Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -316104,29 +316104,6 @@
           "package-manager",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "syfra3/keyritual",
-        "pluginIds": [
-          "io.github.syfra3.keyritual"
-        ],
-        "commit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-09T03:45:14.448Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-09T03:33:23.795Z",
-        "requestEventId": 32844118290,
-        "requestedAt": "2026-10-09T03:44:44Z",
-        "reviewedAt": "2026-10-09T03:45:14.448Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.syfra3.keyritual": {
@@ -316137,7 +316114,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "syfra3/keyritual",
+        "pluginIds": [
+          "io.github.syfra3.keyritual"
+        ],
+        "commit": "701880614a5efa5dbbc3039de4e4cdbd22c3f7e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T15:38:30.709Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T14:56:56.460Z",
+        "requestEventId": 32888519787,
+        "requestedAt": "2026-10-09T15:38:00Z",
+        "reviewedAt": "2026-10-09T15:38:30.709Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
+          "validatedAt": "2026-10-09T03:45:14.581Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T15:38:30.709Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "syfra3/keyritual",
+            "pluginIds": [
+              "io.github.syfra3.keyritual"
+            ],
+            "commit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
+            "checkedAt": "2026-10-09T03:45:14.448Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "syfra3/keyritual",
+            "pluginIds": [
+              "io.github.syfra3.keyritual"
+            ],
+            "commit": "cfc9a1ea795e3e657d008bfa603b4ba8e7fe9acb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-09T03:45:14.448Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-09T03:33:23.795Z",
+            "requestEventId": 32844118290,
+            "requestedAt": "2026-10-09T03:44:44Z",
+            "reviewedAt": "2026-10-09T03:45:14.448Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/mvalkier/omarchy-mailflow-plugin",
