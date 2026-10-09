@@ -244850,8 +244850,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-25",
       "listedAt": "2026-09-25T08:50:05.610Z",
-      "listingValidatedCommit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
-      "listingValidatedAt": "2026-10-02T20:47:21.257Z",
+      "listingValidatedCommit": "528d75047ae78bb874fbce1a4edca0c036370ef3",
+      "listingValidatedAt": "2026-10-09T20:35:51.106Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -244860,8 +244860,8 @@
         "pluginIds": [
           "sky.lofi"
         ],
-        "commit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
-        "checkedAt": "2026-10-02T20:47:21.256Z",
+        "commit": "528d75047ae78bb874fbce1a4edca0c036370ef3",
+        "checkedAt": "2026-10-09T20:35:51.106Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -244920,6 +244920,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
+          "validatedAt": "2026-10-02T20:47:21.257Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:35:51.106Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "objlako/omarchy-lofi-focus",
+            "pluginIds": [
+              "sky.lofi"
+            ],
+            "commit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
+            "checkedAt": "2026-10-02T20:47:21.256Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "objlako/omarchy-lofi-focus",
+            "pluginIds": [
+              "sky.lofi"
+            ],
+            "commit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T20:47:21.256Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-02T19:16:29.829Z",
+            "requestEventId": 32364217946,
+            "requestedAt": "2026-10-02T20:39:56Z",
+            "reviewedAt": "2026-10-02T20:47:21.257Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -244928,19 +244971,19 @@
         "pluginIds": [
           "sky.lofi"
         ],
-        "commit": "1d8ae0dea22e9b980f39284519708aeb80aabec7",
+        "commit": "528d75047ae78bb874fbce1a4edca0c036370ef3",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T20:47:21.256Z",
+        "baselineCheckedAt": "2026-10-09T20:35:51.106Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "bundled-executable-binary"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-02T19:16:29.829Z",
-        "requestEventId": 32364217946,
-        "requestedAt": "2026-10-02T20:39:56Z",
-        "reviewedAt": "2026-10-02T20:47:21.257Z",
+        "reviewedBaselineCheckedAt": "2026-10-09T10:46:00.696Z",
+        "requestEventId": 32907506319,
+        "requestedAt": "2026-10-09T20:35:19Z",
+        "reviewedAt": "2026-10-09T20:35:51.106Z",
         "reviewer": "HANCORE-linux"
       }
     },
