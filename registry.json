@@ -318432,6 +318432,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KOUSTAV2409/omnicast",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T19:35:12.978Z",
+      "listingValidatedCommit": "cf429447092aca3f9b05dfd083cd851b87926c62",
+      "listingValidatedAt": "2026-10-09T19:35:12.978Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "koustav2409/omnicast",
+        "pluginIds": [
+          "koustav.omnicast"
+        ],
+        "commit": "cf429447092aca3f9b05dfd083cd851b87926c62",
+        "checkedAt": "2026-10-09T19:35:12.832Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "koustav2409/omnicast",
+        "pluginIds": [
+          "koustav.omnicast"
+        ],
+        "commit": "cf429447092aca3f9b05dfd083cd851b87926c62",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T19:35:12.832Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T19:24:49.991Z",
+        "requestEventId": 32903656053,
+        "requestedAt": "2026-10-09T19:32:04Z",
+        "reviewedAt": "2026-10-09T19:35:12.832Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "koustav.omnicast": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
