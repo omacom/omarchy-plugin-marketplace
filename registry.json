@@ -249024,8 +249024,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T08:11:40.926Z",
-      "listingValidatedCommit": "a6f0bc983357a22625dc900bfd34586c9a403b5a",
-      "listingValidatedAt": "2026-10-01T08:43:22.792Z",
+      "listingValidatedCommit": "01430609e7371fbde9af516a2f4e99ef0bd2c1a9",
+      "listingValidatedAt": "2026-10-09T18:14:08.734Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -249034,8 +249034,8 @@
         "pluginIds": [
           "omarchy-menu-omni"
         ],
-        "commit": "a6f0bc983357a22625dc900bfd34586c9a403b5a",
-        "checkedAt": "2026-10-01T08:43:22.792Z",
+        "commit": "01430609e7371fbde9af516a2f4e99ef0bd2c1a9",
+        "checkedAt": "2026-10-09T18:14:08.734Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -249067,6 +249067,26 @@
             ],
             "commit": "021ae8718bfb8c8f7fcf8ee5096f33f4461d3aed",
             "checkedAt": "2026-09-26T08:11:40.826Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a6f0bc983357a22625dc900bfd34586c9a403b5a",
+          "validatedAt": "2026-10-01T08:43:22.792Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T18:14:08.734Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "filip-spaldon/omarchy-menu",
+            "pluginIds": [
+              "omarchy-menu-omni"
+            ],
+            "commit": "a6f0bc983357a22625dc900bfd34586c9a403b5a",
+            "checkedAt": "2026-10-01T08:43:22.792Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
