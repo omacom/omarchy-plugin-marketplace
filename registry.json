@@ -318184,6 +318184,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DavidGudovic/omawrapped",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T18:40:50.915Z",
+      "listingValidatedCommit": "0677cef3a6ab40e6b126e4783155d7ee727fce8f",
+      "listingValidatedAt": "2026-10-09T18:40:50.915Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidgudovic/omawrapped",
+        "pluginIds": [
+          "io.github.davidgudovic.omawrapped"
+        ],
+        "commit": "0677cef3a6ab40e6b126e4783155d7ee727fce8f",
+        "checkedAt": "2026-10-09T18:40:50.766Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.davidgudovic.omawrapped": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
