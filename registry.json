@@ -318953,6 +318953,77 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tcballard/omarchy-plugin-familiar-desktop",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T20:39:26.923Z",
+      "listingValidatedCommit": "3e72a99f2077b99726029870363d63569dfc8fec",
+      "listingValidatedAt": "2026-10-09T20:39:26.923Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tcballard/omarchy-plugin-familiar-desktop",
+        "pluginIds": [
+          "io.github.tcballard.familiar-desktop"
+        ],
+        "commit": "3e72a99f2077b99726029870363d63569dfc8fec",
+        "checkedAt": "2026-10-09T20:39:26.818Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "installer",
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tcballard/omarchy-plugin-familiar-desktop",
+        "pluginIds": [
+          "io.github.tcballard.familiar-desktop"
+        ],
+        "commit": "3e72a99f2077b99726029870363d63569dfc8fec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T20:39:26.818Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "installer",
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T20:32:35.586Z",
+        "requestEventId": 32907538804,
+        "requestedAt": "2026-10-09T20:35:54Z",
+        "reviewedAt": "2026-10-09T20:39:26.818Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tcballard.familiar-desktop": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
