@@ -317721,6 +317721,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/XNinety9/c411trend",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T16:50:25.208Z",
+      "listingValidatedCommit": "b9fa587e65686362271722227b48d4a4628a2521",
+      "listingValidatedAt": "2026-10-09T16:50:25.208Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xninety9/c411trend",
+        "pluginIds": [
+          "x99.c411trend"
+        ],
+        "commit": "b9fa587e65686362271722227b48d4a4628a2521",
+        "checkedAt": "2026-10-09T16:50:25.129Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "x99.c411trend": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
