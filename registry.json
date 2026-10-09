@@ -311420,8 +311420,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-07",
       "listedAt": "2026-10-07T10:56:28.575Z",
-      "listingValidatedCommit": "20ed70e566bdd21595f0d42a7c047b1e3879a714",
-      "listingValidatedAt": "2026-10-07T15:50:08.077Z",
+      "listingValidatedCommit": "9c05b571bd00c071ab634ffaf14b9e9c4f84a69c",
+      "listingValidatedAt": "2026-10-09T20:19:16.356Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -311430,8 +311430,8 @@
         "pluginIds": [
           "io.github.qempexe.omanager"
         ],
-        "commit": "20ed70e566bdd21595f0d42a7c047b1e3879a714",
-        "checkedAt": "2026-10-07T15:50:08.077Z",
+        "commit": "9c05b571bd00c071ab634ffaf14b9e9c4f84a69c",
+        "checkedAt": "2026-10-09T20:19:16.356Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -311463,6 +311463,26 @@
             ],
             "commit": "b1fecc5f634a7e4797a6ffcf306b46412e0a3d19",
             "checkedAt": "2026-10-07T10:56:28.457Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "20ed70e566bdd21595f0d42a7c047b1e3879a714",
+          "validatedAt": "2026-10-07T15:50:08.077Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:19:16.356Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-omanager",
+            "pluginIds": [
+              "io.github.qempexe.omanager"
+            ],
+            "commit": "20ed70e566bdd21595f0d42a7c047b1e3879a714",
+            "checkedAt": "2026-10-07T15:50:08.077Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
