@@ -318563,6 +318563,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Xpounder-com/omarchy-hormuz-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T19:44:58.372Z",
+      "listingValidatedCommit": "316b12e887760a3a881e2a21bac8ab9a75a9c483",
+      "listingValidatedAt": "2026-10-09T19:44:58.372Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xpounder-com/omarchy-hormuz-plugin",
+        "pluginIds": [
+          "io.hormuz.optimizer"
+        ],
+        "commit": "316b12e887760a3a881e2a21bac8ab9a75a9c483",
+        "checkedAt": "2026-10-09T19:44:58.261Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "xpounder-com/omarchy-hormuz-plugin",
+        "pluginIds": [
+          "io.hormuz.optimizer"
+        ],
+        "commit": "316b12e887760a3a881e2a21bac8ab9a75a9c483",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T19:44:58.261Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T19:37:59.411Z",
+        "requestEventId": 32904426631,
+        "requestedAt": "2026-10-09T19:44:31Z",
+        "reviewedAt": "2026-10-09T19:44:58.261Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.hormuz.optimizer": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
