@@ -252110,8 +252110,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T11:13:42.621Z",
-      "listingValidatedCommit": "51767976c32e0eb38d63f5ec962571521f1e10db",
-      "listingValidatedAt": "2026-09-29T12:58:18.282Z",
+      "listingValidatedCommit": "3628b4ea2e67656524ca7758f7c90c08dc7282fc",
+      "listingValidatedAt": "2026-10-09T20:31:16.267Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -252120,8 +252120,8 @@
         "pluginIds": [
           "lef.windows-vm"
         ],
-        "commit": "51767976c32e0eb38d63f5ec962571521f1e10db",
-        "checkedAt": "2026-09-29T12:58:18.282Z",
+        "commit": "3628b4ea2e67656524ca7758f7c90c08dc7282fc",
+        "checkedAt": "2026-10-09T20:31:16.267Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -252153,6 +252153,26 @@
             ],
             "commit": "e7c4e7b1e5ec2e9aa96f9e1902c34a3ecff9670b",
             "checkedAt": "2026-09-27T11:13:42.514Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "51767976c32e0eb38d63f5ec962571521f1e10db",
+          "validatedAt": "2026-09-29T12:58:18.282Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:31:16.267Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "somnius/windows-vm-for-omarchy",
+            "pluginIds": [
+              "lef.windows-vm"
+            ],
+            "commit": "51767976c32e0eb38d63f5ec962571521f1e10db",
+            "checkedAt": "2026-09-29T12:58:18.282Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
