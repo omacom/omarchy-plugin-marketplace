@@ -317252,6 +317252,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/derekross/carnelian",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T15:14:46.114Z",
+      "listingValidatedCommit": "36198ede6ec3d5588483652ce8b1872aaebabf21",
+      "listingValidatedAt": "2026-10-09T15:14:46.114Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "derekross/carnelian",
+        "pluginIds": [
+          "derekross.carnelian"
+        ],
+        "commit": "36198ede6ec3d5588483652ce8b1872aaebabf21",
+        "checkedAt": "2026-10-09T15:14:45.990Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "derekross/carnelian",
+        "pluginIds": [
+          "derekross.carnelian"
+        ],
+        "commit": "36198ede6ec3d5588483652ce8b1872aaebabf21",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T15:14:45.990Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T15:10:12.923Z",
+        "requestEventId": 32886665455,
+        "requestedAt": "2026-10-09T15:12:19Z",
+        "reviewedAt": "2026-10-09T15:14:45.990Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "derekross.carnelian": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
