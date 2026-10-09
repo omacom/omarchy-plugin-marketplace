@@ -275881,8 +275881,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T16:36:29.844Z",
-      "listingValidatedCommit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
-      "listingValidatedAt": "2026-10-03T22:26:20.223Z",
+      "listingValidatedCommit": "b1e41227191e91757735420690675243261eaaa7",
+      "listingValidatedAt": "2026-10-09T23:52:51.155Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -275891,8 +275891,8 @@
         "pluginIds": [
           "io.github.donnishcomau.snote-simplenote"
         ],
-        "commit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
-        "checkedAt": "2026-10-03T22:26:20.223Z",
+        "commit": "b1e41227191e91757735420690675243261eaaa7",
+        "checkedAt": "2026-10-09T23:52:51.155Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -275913,27 +275913,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "donnishcomau/snote",
-        "pluginIds": [
-          "io.github.donnishcomau.snote-simplenote"
-        ],
-        "commit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T22:26:20.223Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-03T22:02:35.841Z",
-        "requestEventId": 32417414857,
-        "requestedAt": "2026-10-03T22:23:56Z",
-        "reviewedAt": "2026-10-03T22:26:20.223Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -275978,8 +275957,72 @@
             "reviewedAt": "2026-10-01T16:36:29.733Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
+          "validatedAt": "2026-10-03T22:26:20.223Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T23:52:51.155Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "donnishcomau/snote",
+            "pluginIds": [
+              "io.github.donnishcomau.snote-simplenote"
+            ],
+            "commit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
+            "checkedAt": "2026-10-03T22:26:20.223Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "donnishcomau/snote",
+            "pluginIds": [
+              "io.github.donnishcomau.snote-simplenote"
+            ],
+            "commit": "7ed8f547d1c902cf58c487f19ccd451289ea9bc8",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-03T22:26:20.223Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-03T22:02:35.841Z",
+            "requestEventId": 32417414857,
+            "requestedAt": "2026-10-03T22:23:56Z",
+            "reviewedAt": "2026-10-03T22:26:20.223Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "donnishcomau/snote",
+        "pluginIds": [
+          "io.github.donnishcomau.snote-simplenote"
+        ],
+        "commit": "b1e41227191e91757735420690675243261eaaa7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T23:52:51.155Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T23:02:21.397Z",
+        "requestEventId": 32916837972,
+        "requestedAt": "2026-10-09T23:52:11Z",
+        "reviewedAt": "2026-10-09T23:52:51.155Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/HurlyDesousa/omarchy-task-manager-plugin",
