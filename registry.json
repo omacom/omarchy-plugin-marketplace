@@ -319418,6 +319418,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ekkostech/omarchy-ombre",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T21:38:37.468Z",
+      "listingValidatedCommit": "6771eab3e534893e1810e0458834cf1d36bf0457",
+      "listingValidatedAt": "2026-10-09T21:38:37.468Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ekkostech/omarchy-ombre",
+        "pluginIds": [
+          "ekkostech.ombre"
+        ],
+        "commit": "6771eab3e534893e1810e0458834cf1d36bf0457",
+        "checkedAt": "2026-10-09T21:38:37.343Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ekkostech/omarchy-ombre",
+        "pluginIds": [
+          "ekkostech.ombre"
+        ],
+        "commit": "6771eab3e534893e1810e0458834cf1d36bf0457",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T21:38:37.343Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T21:34:44.040Z",
+        "requestEventId": 32910874424,
+        "requestedAt": "2026-10-09T21:36:36Z",
+        "reviewedAt": "2026-10-09T21:38:37.343Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ekkostech.ombre": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
