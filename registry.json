@@ -287672,8 +287672,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T19:37:53.706Z",
-      "listingValidatedCommit": "8408ccaafd95f53019fa35fce9bc703983233b98",
-      "listingValidatedAt": "2026-10-02T19:37:53.706Z",
+      "listingValidatedCommit": "13b112bc6d53cc1a51be0508cbcd357b3614ecc1",
+      "listingValidatedAt": "2026-10-09T21:31:24.152Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -287682,8 +287682,8 @@
         "pluginIds": [
           "foamy.notifications"
         ],
-        "commit": "8408ccaafd95f53019fa35fce9bc703983233b98",
-        "checkedAt": "2026-10-02T19:37:53.603Z",
+        "commit": "13b112bc6d53cc1a51be0508cbcd357b3614ecc1",
+        "checkedAt": "2026-10-09T21:31:24.152Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -287698,7 +287698,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8408ccaafd95f53019fa35fce9bc703983233b98",
+          "validatedAt": "2026-10-02T19:37:53.706Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T21:31:24.152Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-notifications",
+            "pluginIds": [
+              "foamy.notifications"
+            ],
+            "commit": "8408ccaafd95f53019fa35fce9bc703983233b98",
+            "checkedAt": "2026-10-02T19:37:53.603Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/LinuxGamerUK/omallamacpp",
