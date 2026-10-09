@@ -316117,8 +316117,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-08",
       "listedAt": "2026-10-08T20:46:06.335Z",
-      "listingValidatedCommit": "48468a524dbf81be37368079b66b2f4102656114",
-      "listingValidatedAt": "2026-10-08T20:46:06.335Z",
+      "listingValidatedCommit": "0ecbe1da92d34ae2d4ae81de8cdbd5e5afd94b76",
+      "listingValidatedAt": "2026-10-09T20:55:44.416Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -316127,35 +316127,14 @@
         "pluginIds": [
           "io.github.dragosol.psywall"
         ],
-        "commit": "48468a524dbf81be37368079b66b2f4102656114",
-        "checkedAt": "2026-10-08T20:46:06.208Z",
+        "commit": "0ecbe1da92d34ae2d4ae81de8cdbd5e5afd94b76",
+        "checkedAt": "2026-10-09T20:55:44.415Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dragosol/omarchy-psywall",
-        "pluginIds": [
-          "io.github.dragosol.psywall"
-        ],
-        "commit": "48468a524dbf81be37368079b66b2f4102656114",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-08T20:46:06.208Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-08T20:24:01.126Z",
-        "requestEventId": 32824338354,
-        "requestedAt": "2026-10-08T20:45:36Z",
-        "reviewedAt": "2026-10-08T20:46:06.209Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.dragosol.psywall": {
@@ -316167,7 +316146,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dragosol/omarchy-psywall",
+        "pluginIds": [
+          "io.github.dragosol.psywall"
+        ],
+        "commit": "0ecbe1da92d34ae2d4ae81de8cdbd5e5afd94b76",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T20:55:44.415Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-08T21:25:47.523Z",
+        "requestEventId": 32908628682,
+        "requestedAt": "2026-10-09T20:54:39Z",
+        "reviewedAt": "2026-10-09T20:55:44.416Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "48468a524dbf81be37368079b66b2f4102656114",
+          "validatedAt": "2026-10-08T20:46:06.335Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:55:44.416Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dragosol/omarchy-psywall",
+            "pluginIds": [
+              "io.github.dragosol.psywall"
+            ],
+            "commit": "48468a524dbf81be37368079b66b2f4102656114",
+            "checkedAt": "2026-10-08T20:46:06.208Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dragosol/omarchy-psywall",
+            "pluginIds": [
+              "io.github.dragosol.psywall"
+            ],
+            "commit": "48468a524dbf81be37368079b66b2f4102656114",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-08T20:46:06.208Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-08T20:24:01.126Z",
+            "requestEventId": 32824338354,
+            "requestedAt": "2026-10-08T20:45:36Z",
+            "reviewedAt": "2026-10-08T20:46:06.209Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cesarfilho/omakeylog",
