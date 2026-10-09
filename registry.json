@@ -319076,6 +319076,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jburchel/omarchy-meeting-mode",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T20:52:53.578Z",
+      "listingValidatedCommit": "b5da857b25c70f21c80a1f87d721feca143d3034",
+      "listingValidatedAt": "2026-10-09T20:52:53.578Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jburchel/omarchy-meeting-mode",
+        "pluginIds": [
+          "io.github.jburchel.meeting-mode"
+        ],
+        "commit": "b5da857b25c70f21c80a1f87d721feca143d3034",
+        "checkedAt": "2026-10-09T20:52:53.486Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jburchel.meeting-mode": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
