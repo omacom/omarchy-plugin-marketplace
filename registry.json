@@ -317825,6 +317825,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sendaljpt/taskq",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T17:11:58.236Z",
+      "listingValidatedCommit": "357837588c8fa0fa5bc6506ca03d767df4829591",
+      "listingValidatedAt": "2026-10-09T17:11:58.236Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sendaljpt/taskq",
+        "pluginIds": [
+          "sendaljpt.taskq"
+        ],
+        "commit": "357837588c8fa0fa5bc6506ca03d767df4829591",
+        "checkedAt": "2026-10-09T17:11:58.104Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sendaljpt/taskq",
+        "pluginIds": [
+          "sendaljpt.taskq"
+        ],
+        "commit": "357837588c8fa0fa5bc6506ca03d767df4829591",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T17:11:58.104Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T17:02:31.185Z",
+        "requestEventId": 32894771538,
+        "requestedAt": "2026-10-09T17:11:15Z",
+        "reviewedAt": "2026-10-09T17:11:58.104Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sendaljpt.taskq": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
