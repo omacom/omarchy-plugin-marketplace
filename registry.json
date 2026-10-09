@@ -305271,8 +305271,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-05",
       "listedAt": "2026-10-05T21:35:29.180Z",
-      "listingValidatedCommit": "ab5294b66c4c1a3f8dd8aac5cfecd07e1c4eb6fd",
-      "listingValidatedAt": "2026-10-07T04:48:31.930Z",
+      "listingValidatedCommit": "df0a4fe5b34ca360d1ae8d41e88be2fb82cd95a2",
+      "listingValidatedAt": "2026-10-09T19:13:49.958Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -305281,8 +305281,8 @@
         "pluginIds": [
           "grivera.agents"
         ],
-        "commit": "ab5294b66c4c1a3f8dd8aac5cfecd07e1c4eb6fd",
-        "checkedAt": "2026-10-07T04:48:31.930Z",
+        "commit": "df0a4fe5b34ca360d1ae8d41e88be2fb82cd95a2",
+        "checkedAt": "2026-10-09T19:13:49.958Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -305313,6 +305313,26 @@
             ],
             "commit": "17ef61d08b9aef6331868b05c633206c67b026af",
             "checkedAt": "2026-10-05T21:35:29.063Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "ab5294b66c4c1a3f8dd8aac5cfecd07e1c4eb6fd",
+          "validatedAt": "2026-10-07T04:48:31.930Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T19:13:49.958Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "grivera82/omarchy-agents",
+            "pluginIds": [
+              "grivera.agents"
+            ],
+            "commit": "ab5294b66c4c1a3f8dd8aac5cfecd07e1c4eb6fd",
+            "checkedAt": "2026-10-07T04:48:31.930Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
