@@ -317880,6 +317880,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/whiteOvis/Light",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T17:19:55.818Z",
+      "listingValidatedCommit": "9246fa9e4263dcc0ceb0603e30b4c496b99f9c58",
+      "listingValidatedAt": "2026-10-09T17:19:55.818Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "whiteovis/light",
+        "pluginIds": [
+          "light.bible-reader"
+        ],
+        "commit": "9246fa9e4263dcc0ceb0603e30b4c496b99f9c58",
+        "checkedAt": "2026-10-09T17:19:55.736Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "whiteovis/light",
+        "pluginIds": [
+          "light.bible-reader"
+        ],
+        "commit": "9246fa9e4263dcc0ceb0603e30b4c496b99f9c58",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T17:19:55.736Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T16:55:35.313Z",
+        "requestEventId": 32895295287,
+        "requestedAt": "2026-10-09T17:19:29Z",
+        "reviewedAt": "2026-10-09T17:19:55.736Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "light.bible-reader": {
+          "category": "Widgets",
+          "tags": [
+            "education",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
