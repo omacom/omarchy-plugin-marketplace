@@ -318042,6 +318042,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joseluiss2003/joseluis.media",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T17:46:34.142Z",
+      "listingValidatedCommit": "13ba2b6ed0679945b079c82f800bb09ae999807f",
+      "listingValidatedAt": "2026-10-09T17:46:34.142Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joseluiss2003/joseluis.media",
+        "pluginIds": [
+          "joseluis.media"
+        ],
+        "commit": "13ba2b6ed0679945b079c82f800bb09ae999807f",
+        "checkedAt": "2026-10-09T17:46:34.035Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "joseluis.media": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
