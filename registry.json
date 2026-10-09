@@ -287806,8 +287806,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T20:03:09.655Z",
-      "listingValidatedCommit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
-      "listingValidatedAt": "2026-10-02T20:03:09.655Z",
+      "listingValidatedCommit": "53145937b2766e5f363035444edcdf74311074ec",
+      "listingValidatedAt": "2026-10-09T19:06:12.138Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -287816,8 +287816,8 @@
         "pluginIds": [
           "vxavierr.framelet"
         ],
-        "commit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
-        "checkedAt": "2026-10-02T20:03:09.530Z",
+        "commit": "53145937b2766e5f363035444edcdf74311074ec",
+        "checkedAt": "2026-10-09T19:06:12.138Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -287825,28 +287825,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "vxavierr/framelet",
-        "pluginIds": [
-          "vxavierr.framelet"
-        ],
-        "commit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T20:03:09.530Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-02T19:40:22.676Z",
-        "requestEventId": 32360839675,
-        "requestedAt": "2026-10-02T19:42:57Z",
-        "reviewedAt": "2026-10-02T20:03:09.530Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "vxavierr.framelet": {
@@ -287862,7 +287840,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vxavierr/framelet",
+        "pluginIds": [
+          "vxavierr.framelet"
+        ],
+        "commit": "53145937b2766e5f363035444edcdf74311074ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T19:06:12.138Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T18:33:23.593Z",
+        "requestEventId": 32902049876,
+        "requestedAt": "2026-10-09T19:05:30Z",
+        "reviewedAt": "2026-10-09T19:06:12.138Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
+          "validatedAt": "2026-10-02T20:03:09.655Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T19:06:12.138Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vxavierr/framelet",
+            "pluginIds": [
+              "vxavierr.framelet"
+            ],
+            "commit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
+            "checkedAt": "2026-10-02T20:03:09.530Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "vxavierr/framelet",
+            "pluginIds": [
+              "vxavierr.framelet"
+            ],
+            "commit": "d8c708d9c9a4ce5a20f05f5d4862ab21068fcdb7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T20:03:09.530Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-02T19:40:22.676Z",
+            "requestEventId": 32360839675,
+            "requestedAt": "2026-10-02T19:42:57Z",
+            "reviewedAt": "2026-10-02T20:03:09.530Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/MaenExists/omaopus",
