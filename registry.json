@@ -254899,8 +254899,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T15:23:28.783Z",
-      "listingValidatedCommit": "8f17740f16ab3699f71da3d7d2e4ec00f0e74533",
-      "listingValidatedAt": "2026-09-27T15:23:28.783Z",
+      "listingValidatedCommit": "da638212085a4fb08898ea2fd6e4e66f77a2a3eb",
+      "listingValidatedAt": "2026-10-09T21:46:42.300Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -254909,8 +254909,8 @@
         "pluginIds": [
           "foamy.weather"
         ],
-        "commit": "8f17740f16ab3699f71da3d7d2e4ec00f0e74533",
-        "checkedAt": "2026-09-27T15:23:28.689Z",
+        "commit": "da638212085a4fb08898ea2fd6e4e66f77a2a3eb",
+        "checkedAt": "2026-10-09T21:46:42.300Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -254925,7 +254925,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8f17740f16ab3699f71da3d7d2e4ec00f0e74533",
+          "validatedAt": "2026-09-27T15:23:28.783Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T21:46:42.300Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-weather",
+            "pluginIds": [
+              "foamy.weather"
+            ],
+            "commit": "8f17740f16ab3699f71da3d7d2e4ec00f0e74533",
+            "checkedAt": "2026-09-27T15:23:28.689Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/NeatOuk/citadel",
