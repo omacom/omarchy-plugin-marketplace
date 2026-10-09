@@ -317629,8 +317629,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T09:36:45.823Z",
-      "listingValidatedCommit": "11bdc0d9115db3db0123845283cf6dd07f1278c1",
-      "listingValidatedAt": "2026-10-09T09:36:45.823Z",
+      "listingValidatedCommit": "65981fdf19da6bea9980fd546c905a07d86f8b20",
+      "listingValidatedAt": "2026-10-09T22:23:09.280Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -317639,8 +317639,8 @@
         "pluginIds": [
           "io.github.eddie175.true-glass"
         ],
-        "commit": "11bdc0d9115db3db0123845283cf6dd07f1278c1",
-        "checkedAt": "2026-10-09T09:36:45.676Z",
+        "commit": "65981fdf19da6bea9980fd546c905a07d86f8b20",
+        "checkedAt": "2026-10-09T22:23:09.280Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -317660,7 +317660,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "11bdc0d9115db3db0123845283cf6dd07f1278c1",
+          "validatedAt": "2026-10-09T09:36:45.823Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T22:23:09.280Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "eddie175/omarchy-true-glass",
+            "pluginIds": [
+              "io.github.eddie175.true-glass"
+            ],
+            "commit": "11bdc0d9115db3db0123845283cf6dd07f1278c1",
+            "checkedAt": "2026-10-09T09:36:45.676Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/andreiyurik/omarchy-colorful-terminals",
