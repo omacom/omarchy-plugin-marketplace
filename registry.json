@@ -61686,8 +61686,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T17:50:35.308Z",
-      "listingValidatedCommit": "45769e8592342a0cb67779763e2c0ceb3c244d11",
-      "listingValidatedAt": "2026-08-23T17:50:35.308Z",
+      "listingValidatedCommit": "d3b00bc2f23bafaa6b4b816fc9ceb00df2ed07f4",
+      "listingValidatedAt": "2026-10-09T20:25:31.965Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -61696,8 +61696,8 @@
         "pluginIds": [
           "lef.messaging"
         ],
-        "commit": "45769e8592342a0cb67779763e2c0ceb3c244d11",
-        "checkedAt": "2026-08-23T17:50:35.276Z",
+        "commit": "d3b00bc2f23bafaa6b4b816fc9ceb00df2ed07f4",
+        "checkedAt": "2026-10-09T20:25:31.965Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -61712,7 +61712,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "45769e8592342a0cb67779763e2c0ceb3c244d11",
+          "validatedAt": "2026-08-23T17:50:35.308Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:25:31.965Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "somnius/messaging-for-omarchy",
+            "pluginIds": [
+              "lef.messaging"
+            ],
+            "commit": "45769e8592342a0cb67779763e2c0ceb3c244d11",
+            "checkedAt": "2026-08-23T17:50:35.276Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Somnius/Keyboard-Layout-for-Omarchy",
