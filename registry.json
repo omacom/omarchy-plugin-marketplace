@@ -297257,8 +297257,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-04",
       "listedAt": "2026-10-04T15:28:03.989Z",
-      "listingValidatedCommit": "e5f85690afd72b83c245551f05cfb61584e307a7",
-      "listingValidatedAt": "2026-10-04T16:40:07.214Z",
+      "listingValidatedCommit": "7dd72a85b8add95f0d77844b30c52da9af877bb1",
+      "listingValidatedAt": "2026-10-09T19:53:00.658Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -297267,8 +297267,8 @@
         "pluginIds": [
           "io.github.qempexe.omadrawers"
         ],
-        "commit": "e5f85690afd72b83c245551f05cfb61584e307a7",
-        "checkedAt": "2026-10-04T16:40:07.214Z",
+        "commit": "7dd72a85b8add95f0d77844b30c52da9af877bb1",
+        "checkedAt": "2026-10-09T19:53:00.658Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -297300,6 +297300,26 @@
             ],
             "commit": "fab91f4331e29a2d0733978bc7e5bf009ef9141b",
             "checkedAt": "2026-10-04T15:28:03.868Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "e5f85690afd72b83c245551f05cfb61584e307a7",
+          "validatedAt": "2026-10-04T16:40:07.214Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T19:53:00.658Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-omadrawers",
+            "pluginIds": [
+              "io.github.qempexe.omadrawers"
+            ],
+            "commit": "e5f85690afd72b83c245551f05cfb61584e307a7",
+            "checkedAt": "2026-10-04T16:40:07.214Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
