@@ -317610,6 +317610,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kaktycgmd/wallpaper-drop",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T16:33:03.300Z",
+      "listingValidatedCommit": "567a1def273bde7aefb49d1fc2aa69963b69afb9",
+      "listingValidatedAt": "2026-10-09T16:33:03.300Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kaktycgmd/wallpaper-drop",
+        "pluginIds": [
+          "kaktyc.wallpaper-drop"
+        ],
+        "commit": "567a1def273bde7aefb49d1fc2aa69963b69afb9",
+        "checkedAt": "2026-10-09T16:33:03.149Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kaktyc.wallpaper-drop": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
