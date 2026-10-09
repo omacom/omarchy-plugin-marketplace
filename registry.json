@@ -228851,8 +228851,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T10:17:22.684Z",
-      "listingValidatedCommit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
-      "listingValidatedAt": "2026-09-29T17:40:49.843Z",
+      "listingValidatedCommit": "651755ee371a505f1641a78c6d10eac22a381303",
+      "listingValidatedAt": "2026-10-09T22:26:50.284Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -228861,8 +228861,8 @@
         "pluginIds": [
           "gdeyoung.hyprmoncfg"
         ],
-        "commit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
-        "checkedAt": "2026-09-29T17:40:49.843Z",
+        "commit": "651755ee371a505f1641a78c6d10eac22a381303",
+        "checkedAt": "2026-10-09T22:26:50.284Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -228880,27 +228880,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "gdeyoung/omarchy-displayplus",
-        "pluginIds": [
-          "gdeyoung.hyprmoncfg"
-        ],
-        "commit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-29T17:40:49.843Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-23T01:21:44.136Z",
-        "requestEventId": 32092187154,
-        "requestedAt": "2026-09-29T15:29:27Z",
-        "reviewedAt": "2026-09-29T17:40:49.843Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -228945,8 +228924,72 @@
             "reviewedAt": "2026-09-22T10:17:22.584Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
+          "validatedAt": "2026-09-29T17:40:49.843Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T22:26:50.284Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gdeyoung/omarchy-displayplus",
+            "pluginIds": [
+              "gdeyoung.hyprmoncfg"
+            ],
+            "commit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
+            "checkedAt": "2026-09-29T17:40:49.843Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gdeyoung/omarchy-displayplus",
+            "pluginIds": [
+              "gdeyoung.hyprmoncfg"
+            ],
+            "commit": "c7b6425350a9cc027fda0b73261c6ea4fc604ff7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-29T17:40:49.843Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-23T01:21:44.136Z",
+            "requestEventId": 32092187154,
+            "requestedAt": "2026-09-29T15:29:27Z",
+            "reviewedAt": "2026-09-29T17:40:49.843Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gdeyoung/omarchy-displayplus",
+        "pluginIds": [
+          "gdeyoung.hyprmoncfg"
+        ],
+        "commit": "651755ee371a505f1641a78c6d10eac22a381303",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T22:26:50.284Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T20:00:26.045Z",
+        "requestEventId": 32913174533,
+        "requestedAt": "2026-10-09T22:24:17Z",
+        "reviewedAt": "2026-10-09T22:26:50.284Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/metachow/omarchy-local-drop",
