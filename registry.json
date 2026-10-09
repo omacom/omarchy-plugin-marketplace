@@ -317171,6 +317171,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/timlittle/omamessenger",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T15:05:26.032Z",
+      "listingValidatedCommit": "36b1b79078488a76678a9dc1d172dff9820e3056",
+      "listingValidatedAt": "2026-10-09T15:05:26.032Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "timlittle/omamessenger",
+        "pluginIds": [
+          "io.github.omamessenger"
+        ],
+        "commit": "36b1b79078488a76678a9dc1d172dff9820e3056",
+        "checkedAt": "2026-10-09T15:05:25.894Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "timlittle/omamessenger",
+        "pluginIds": [
+          "io.github.omamessenger"
+        ],
+        "commit": "36b1b79078488a76678a9dc1d172dff9820e3056",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T15:05:25.894Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T15:02:51.159Z",
+        "requestEventId": 32886111739,
+        "requestedAt": "2026-10-09T15:04:54Z",
+        "reviewedAt": "2026-10-09T15:05:25.894Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.omamessenger": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
