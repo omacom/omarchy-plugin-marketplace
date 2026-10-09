@@ -118163,8 +118163,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-31",
       "listedAt": "2026-08-31T14:13:47.454Z",
-      "listingValidatedCommit": "19bd083da27dc9a4809e415ec5cfefef1b521648",
-      "listingValidatedAt": "2026-08-31T14:13:47.454Z",
+      "listingValidatedCommit": "a6958184f50eb242fb5f2b0512eb00aae3fda40d",
+      "listingValidatedAt": "2026-10-09T15:11:12.856Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -118173,8 +118173,8 @@
         "pluginIds": [
           "io.github.dfrost90.air-alert"
         ],
-        "commit": "19bd083da27dc9a4809e415ec5cfefef1b521648",
-        "checkedAt": "2026-08-31T14:13:47.406Z",
+        "commit": "a6958184f50eb242fb5f2b0512eb00aae3fda40d",
+        "checkedAt": "2026-10-09T15:11:12.856Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -118189,7 +118189,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "19bd083da27dc9a4809e415ec5cfefef1b521648",
+          "validatedAt": "2026-08-31T14:13:47.454Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T15:11:12.856Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dfrost90/omarchy-ukraine-air-alert",
+            "pluginIds": [
+              "io.github.dfrost90.air-alert"
+            ],
+            "commit": "19bd083da27dc9a4809e415ec5cfefef1b521648",
+            "checkedAt": "2026-08-31T14:13:47.406Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lucasjr76/omarchy-workspace-icons",
