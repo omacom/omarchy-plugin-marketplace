@@ -317644,6 +317644,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DavidGudovic/omalint",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T16:36:34.840Z",
+      "listingValidatedCommit": "3fff22ba046860b7472cbd2349e88d342257a3e0",
+      "listingValidatedAt": "2026-10-09T16:36:34.840Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidgudovic/omalint",
+        "pluginIds": [
+          "io.github.davidgudovic.omalint"
+        ],
+        "commit": "3fff22ba046860b7472cbd2349e88d342257a3e0",
+        "checkedAt": "2026-10-09T16:36:34.695Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.davidgudovic.omalint": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
