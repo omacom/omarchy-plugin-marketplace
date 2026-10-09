@@ -319499,6 +319499,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/saurasanchezpablo/oma-cam",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T21:55:55.170Z",
+      "listingValidatedCommit": "9e6db777d43d1893da380fc6a604689befc7747f",
+      "listingValidatedAt": "2026-10-09T21:55:55.170Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "saurasanchezpablo/oma-cam",
+        "pluginIds": [
+          "io.github.saurasanchezpablo.droidcam"
+        ],
+        "commit": "9e6db777d43d1893da380fc6a604689befc7747f",
+        "checkedAt": "2026-10-09T21:55:55.045Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.saurasanchezpablo.droidcam": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
