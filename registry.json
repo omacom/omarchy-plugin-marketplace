@@ -317754,6 +317754,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jchisholm59/omarchy-ups-status",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T16:54:10.855Z",
+      "listingValidatedCommit": "3b8b5646a4b23f4f376ddfe160ff15c5efb66abf",
+      "listingValidatedAt": "2026-10-09T16:54:10.855Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jchisholm59/omarchy-ups-status",
+        "pluginIds": [
+          "jim.ups-status"
+        ],
+        "commit": "3b8b5646a4b23f4f376ddfe160ff15c5efb66abf",
+        "checkedAt": "2026-10-09T16:54:10.717Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jim.ups-status": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
