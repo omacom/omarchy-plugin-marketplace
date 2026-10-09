@@ -213547,8 +213547,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T00:06:39.894Z",
-      "listingValidatedCommit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
-      "listingValidatedAt": "2026-09-20T00:06:39.894Z",
+      "listingValidatedCommit": "ce61cd4bb93c015f31356e31f927df8074aab037",
+      "listingValidatedAt": "2026-10-09T22:59:08.333Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -213557,8 +213557,8 @@
         "pluginIds": [
           "io.github.jburchel.jarvis"
         ],
-        "commit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
-        "checkedAt": "2026-09-20T00:06:39.800Z",
+        "commit": "ce61cd4bb93c015f31356e31f927df8074aab037",
+        "checkedAt": "2026-10-09T22:59:08.333Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -213566,28 +213566,6 @@
           "service-management",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jburchel/omarchy-jarvis",
-        "pluginIds": [
-          "io.github.jburchel.jarvis"
-        ],
-        "commit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-20T00:06:39.800Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-19T23:29:26.167Z",
-        "requestEventId": 31464416982,
-        "requestedAt": "2026-09-19T23:51:22Z",
-        "reviewedAt": "2026-09-20T00:06:39.800Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.jburchel.jarvis": {
@@ -213599,7 +213577,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jburchel/omarchy-jarvis",
+        "pluginIds": [
+          "io.github.jburchel.jarvis"
+        ],
+        "commit": "ce61cd4bb93c015f31356e31f927df8074aab037",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T22:59:08.333Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T20:16:41.386Z",
+        "requestEventId": 32914748801,
+        "requestedAt": "2026-10-09T22:58:33Z",
+        "reviewedAt": "2026-10-09T22:59:08.333Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
+          "validatedAt": "2026-09-20T00:06:39.894Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T22:59:08.333Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jburchel/omarchy-jarvis",
+            "pluginIds": [
+              "io.github.jburchel.jarvis"
+            ],
+            "commit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
+            "checkedAt": "2026-09-20T00:06:39.800Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jburchel/omarchy-jarvis",
+            "pluginIds": [
+              "io.github.jburchel.jarvis"
+            ],
+            "commit": "4d789bb58052f9271d0aa682849e1e63cf8f8e86",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-20T00:06:39.800Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-19T23:29:26.167Z",
+            "requestEventId": 31464416982,
+            "requestedAt": "2026-09-19T23:51:22Z",
+            "reviewedAt": "2026-09-20T00:06:39.800Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Gmacadoches/astro-arc",
