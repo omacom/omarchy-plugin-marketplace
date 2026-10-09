@@ -230802,7 +230802,11 @@
             "hyprland",
             "system"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires the documented ./install.sh step (Hyprland configuration, CLI link and Foot user unit) after installation. Follow the upstream installation instructions."
+          }
         }
       },
       "maintainerVerificationReview": {
