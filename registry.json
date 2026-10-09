@@ -317411,6 +317411,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/35c0b4r/floaterr",
+      "type": "plugin-source",
+      "addedAt": "2026-10-09",
+      "listedAt": "2026-10-09T15:45:40.822Z",
+      "listingValidatedCommit": "7eb3c649157d41ba207638651ca65f864c793158",
+      "listingValidatedAt": "2026-10-09T15:45:40.822Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "35c0b4r/floaterr",
+        "pluginIds": [
+          "io.github.35c0b4r.floaterr"
+        ],
+        "commit": "7eb3c649157d41ba207638651ca65f864c793158",
+        "checkedAt": "2026-10-09T15:45:40.712Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "35c0b4r/floaterr",
+        "pluginIds": [
+          "io.github.35c0b4r.floaterr"
+        ],
+        "commit": "7eb3c649157d41ba207638651ca65f864c793158",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T15:45:40.712Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T15:35:47.162Z",
+        "requestEventId": 32889019449,
+        "requestedAt": "2026-10-09T15:45:07Z",
+        "reviewedAt": "2026-10-09T15:45:40.712Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.35c0b4r.floaterr": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
