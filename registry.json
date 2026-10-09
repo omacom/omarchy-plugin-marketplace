@@ -61741,8 +61741,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T17:51:46.512Z",
-      "listingValidatedCommit": "4ca9732c7a3b00eb298ed1b329c5fbce1a88756e",
-      "listingValidatedAt": "2026-09-27T13:04:45.633Z",
+      "listingValidatedCommit": "0c7642de179dcf12351eade8055169f5c5f71f61",
+      "listingValidatedAt": "2026-10-09T20:42:15.975Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -61751,8 +61751,8 @@
         "pluginIds": [
           "lef.keyboard-layout"
         ],
-        "commit": "4ca9732c7a3b00eb298ed1b329c5fbce1a88756e",
-        "checkedAt": "2026-09-27T13:04:45.633Z",
+        "commit": "0c7642de179dcf12351eade8055169f5c5f71f61",
+        "checkedAt": "2026-10-09T20:42:15.975Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -61784,6 +61784,26 @@
             ],
             "commit": "c47b531e72edeabfa5d816c959c756fce121bb98",
             "checkedAt": "2026-08-23T17:51:46.482Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "4ca9732c7a3b00eb298ed1b329c5fbce1a88756e",
+          "validatedAt": "2026-09-27T13:04:45.633Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T20:42:15.975Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "somnius/keyboard-layout-for-omarchy",
+            "pluginIds": [
+              "lef.keyboard-layout"
+            ],
+            "commit": "4ca9732c7a3b00eb298ed1b329c5fbce1a88756e",
+            "checkedAt": "2026-09-27T13:04:45.633Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
