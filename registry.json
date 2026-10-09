@@ -311863,8 +311863,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-07",
       "listedAt": "2026-10-07T13:06:34.204Z",
-      "listingValidatedCommit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
-      "listingValidatedAt": "2026-10-07T13:06:34.204Z",
+      "listingValidatedCommit": "7c1b6bb606d1466b01b9de1e8f756e34b4d93fa5",
+      "listingValidatedAt": "2026-10-09T19:59:55.998Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -311873,35 +311873,14 @@
         "pluginIds": [
           "io.github.alexwest1981.gameshelf"
         ],
-        "commit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
-        "checkedAt": "2026-10-07T13:06:34.098Z",
+        "commit": "7c1b6bb606d1466b01b9de1e8f756e34b4d93fa5",
+        "checkedAt": "2026-10-09T19:59:55.998Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alexwest1981/gameshelf",
-        "pluginIds": [
-          "io.github.alexwest1981.gameshelf"
-        ],
-        "commit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-07T13:06:34.098Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-07T13:00:41.357Z",
-        "requestEventId": 32691611391,
-        "requestedAt": "2026-10-07T13:05:56Z",
-        "reviewedAt": "2026-10-07T13:06:34.098Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.alexwest1981.gameshelf": {
@@ -311913,7 +311892,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alexwest1981/gameshelf",
+        "pluginIds": [
+          "io.github.alexwest1981.gameshelf"
+        ],
+        "commit": "7c1b6bb606d1466b01b9de1e8f756e34b4d93fa5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-09T19:59:55.998Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-09T16:06:53.340Z",
+        "requestEventId": 32905200307,
+        "requestedAt": "2026-10-09T19:57:11Z",
+        "reviewedAt": "2026-10-09T19:59:55.998Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
+          "validatedAt": "2026-10-07T13:06:34.204Z",
+          "branch": "main",
+          "supersededAt": "2026-10-09T19:59:55.998Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alexwest1981/gameshelf",
+            "pluginIds": [
+              "io.github.alexwest1981.gameshelf"
+            ],
+            "commit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
+            "checkedAt": "2026-10-07T13:06:34.098Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alexwest1981/gameshelf",
+            "pluginIds": [
+              "io.github.alexwest1981.gameshelf"
+            ],
+            "commit": "74186b5b4e73913239f4017fa8df0e9e5fa0179c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-07T13:06:34.098Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-07T13:00:41.357Z",
+            "requestEventId": 32691611391,
+            "requestedAt": "2026-10-07T13:05:56Z",
+            "reviewedAt": "2026-10-07T13:06:34.098Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/drewdunne/omarchy-herdr-dot",
