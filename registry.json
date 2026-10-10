@@ -323027,6 +323027,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/arorashu/dhwani-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T21:18:27.852Z",
+      "listingValidatedCommit": "2b342057c4e2b460649daa095b67d256320a348b",
+      "listingValidatedAt": "2026-10-10T21:18:27.852Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "arorashu/dhwani-omarchy",
+        "pluginIds": [
+          "io.dhwani.listen"
+        ],
+        "commit": "2b342057c4e2b460649daa095b67d256320a348b",
+        "checkedAt": "2026-10-10T21:18:27.721Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.dhwani.listen": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
