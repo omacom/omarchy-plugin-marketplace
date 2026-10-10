@@ -305037,8 +305037,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-05",
       "listedAt": "2026-10-05T13:57:16.617Z",
-      "listingValidatedCommit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
-      "listingValidatedAt": "2026-10-05T13:57:16.617Z",
+      "listingValidatedCommit": "be07f15bbc74f755e7712b0367a886b2f9a535f5",
+      "listingValidatedAt": "2026-10-10T22:00:08.265Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -305047,43 +305047,18 @@
         "pluginIds": [
           "io.github.fiifiofosu.dbforge"
         ],
-        "commit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
-        "checkedAt": "2026-10-05T13:57:16.518Z",
+        "commit": "be07f15bbc74f755e7712b0367a886b2f9a535f5",
+        "checkedAt": "2026-10-10T22:00:08.265Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management",
+          "privilege",
           "remote-build",
           "package-manager",
-          "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "fiifiofosu/omarchy-dbforge",
-        "pluginIds": [
-          "io.github.fiifiofosu.dbforge"
-        ],
-        "commit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-05T13:57:16.518Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "remote-build",
-          "package-manager",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-05T13:49:43.253Z",
-        "requestEventId": 32514170471,
-        "requestedAt": "2026-10-05T13:54:02Z",
-        "reviewedAt": "2026-10-05T13:57:16.518Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.fiifiofosu.dbforge": {
@@ -305099,7 +305074,85 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fiifiofosu/omarchy-dbforge",
+        "pluginIds": [
+          "io.github.fiifiofosu.dbforge"
+        ],
+        "commit": "be07f15bbc74f755e7712b0367a886b2f9a535f5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T22:00:08.265Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T21:42:37.440Z",
+        "requestEventId": 32960092583,
+        "requestedAt": "2026-10-10T21:59:37Z",
+        "reviewedAt": "2026-10-10T22:00:08.265Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
+          "validatedAt": "2026-10-05T13:57:16.617Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T22:00:08.265Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "fiifiofosu/omarchy-dbforge",
+            "pluginIds": [
+              "io.github.fiifiofosu.dbforge"
+            ],
+            "commit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
+            "checkedAt": "2026-10-05T13:57:16.518Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "package-manager",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "fiifiofosu/omarchy-dbforge",
+            "pluginIds": [
+              "io.github.fiifiofosu.dbforge"
+            ],
+            "commit": "6edc32a6e48c35c4fdfaffcbcfc4e992376a4875",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-05T13:57:16.518Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "package-manager",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-05T13:49:43.253Z",
+            "requestEventId": 32514170471,
+            "requestedAt": "2026-10-05T13:54:02Z",
+            "reviewedAt": "2026-10-05T13:57:16.518Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/goarstne/omacheck",
