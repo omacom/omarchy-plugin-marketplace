@@ -321194,6 +321194,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/uBruckhaus/omarchy-wlan-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T11:51:33.649Z",
+      "listingValidatedCommit": "5f8ffd47184515996de3b5a90a804deb6189210a",
+      "listingValidatedAt": "2026-10-10T11:51:33.649Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ubruckhaus/omarchy-wlan-monitor",
+        "pluginIds": [
+          "ubruckhaus.wlan-monitor"
+        ],
+        "commit": "5f8ffd47184515996de3b5a90a804deb6189210a",
+        "checkedAt": "2026-10-10T11:51:33.525Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ubruckhaus.wlan-monitor": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
