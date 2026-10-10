@@ -320570,6 +320570,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davidboulay/omarchy-screensaver-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T04:53:18.968Z",
+      "listingValidatedCommit": "8af027e31ad185957f33ecab0bb090b2bc435611",
+      "listingValidatedAt": "2026-10-10T04:53:18.968Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davidboulay/omarchy-screensaver-lock",
+        "pluginIds": [
+          "io.github.davidboulay.screensaver-lock"
+        ],
+        "commit": "8af027e31ad185957f33ecab0bb090b2bc435611",
+        "checkedAt": "2026-10-10T04:53:18.881Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.davidboulay.screensaver-lock": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
