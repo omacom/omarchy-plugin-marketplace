@@ -322817,8 +322817,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T20:13:29.392Z",
-      "listingValidatedCommit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
-      "listingValidatedAt": "2026-10-10T20:13:29.392Z",
+      "listingValidatedCommit": "d4e2402d794f55a51e3e4f81e4da125013720a82",
+      "listingValidatedAt": "2026-10-10T21:31:45.093Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -322827,37 +322827,16 @@
         "pluginIds": [
           "io.github.cyberbuddhy.omarchy-play"
         ],
-        "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
-        "checkedAt": "2026-10-10T20:13:29.239Z",
+        "commit": "d4e2402d794f55a51e3e4f81e4da125013720a82",
+        "checkedAt": "2026-10-10T21:31:45.093Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager",
-          "remote-build"
+          "remote-build",
+          "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "cyberbuddhy/omarchy-play",
-        "pluginIds": [
-          "io.github.cyberbuddhy.omarchy-play"
-        ],
-        "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-10T20:13:29.239Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-10T20:08:20.719Z",
-        "requestEventId": 32956549308,
-        "requestedAt": "2026-10-10T20:11:30Z",
-        "reviewedAt": "2026-10-10T20:13:29.239Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.cyberbuddhy.omarchy-play": {
@@ -322871,7 +322850,77 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cyberbuddhy/omarchy-play",
+        "pluginIds": [
+          "io.github.cyberbuddhy.omarchy-play"
+        ],
+        "commit": "d4e2402d794f55a51e3e4f81e4da125013720a82",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T21:31:45.093Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T20:56:37.847Z",
+        "requestEventId": 32959193033,
+        "requestedAt": "2026-10-10T21:31:19Z",
+        "reviewedAt": "2026-10-10T21:31:45.093Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+          "validatedAt": "2026-10-10T20:13:29.392Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T21:31:45.093Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cyberbuddhy/omarchy-play",
+            "pluginIds": [
+              "io.github.cyberbuddhy.omarchy-play"
+            ],
+            "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+            "checkedAt": "2026-10-10T20:13:29.239Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "cyberbuddhy/omarchy-play",
+            "pluginIds": [
+              "io.github.cyberbuddhy.omarchy-play"
+            ],
+            "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-10T20:13:29.239Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-10T20:08:20.719Z",
+            "requestEventId": 32956549308,
+            "requestedAt": "2026-10-10T20:11:30Z",
+            "reviewedAt": "2026-10-10T20:13:29.239Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/pshouse/omarchy-obs-onair",
