@@ -320752,6 +320752,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marcho78/ubernotebook",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T07:29:25.136Z",
+      "listingValidatedCommit": "1dff5a6037dcbbe5eda270d4f1c8facec2fd5287",
+      "listingValidatedAt": "2026-10-10T07:29:25.136Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marcho78/ubernotebook",
+        "pluginIds": [
+          "marcho78.uber-notebook"
+        ],
+        "commit": "1dff5a6037dcbbe5eda270d4f1c8facec2fd5287",
+        "checkedAt": "2026-10-10T07:29:25.020Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "marcho78.uber-notebook": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
