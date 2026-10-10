@@ -322878,8 +322878,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T20:25:34.588Z",
-      "listingValidatedCommit": "1d65fa1b71696b67381aa14dc9d55a54df627905",
-      "listingValidatedAt": "2026-10-10T20:25:34.588Z",
+      "listingValidatedCommit": "1eb5096fbbd5df8917d05e95a5d5ec78770d7848",
+      "listingValidatedAt": "2026-10-10T21:09:00.777Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -322888,8 +322888,8 @@
         "pluginIds": [
           "io.github.pshouse.obs-onair"
         ],
-        "commit": "1d65fa1b71696b67381aa14dc9d55a54df627905",
-        "checkedAt": "2026-10-10T20:25:34.458Z",
+        "commit": "1eb5096fbbd5df8917d05e95a5d5ec78770d7848",
+        "checkedAt": "2026-10-10T21:09:00.777Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -322909,7 +322909,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1d65fa1b71696b67381aa14dc9d55a54df627905",
+          "validatedAt": "2026-10-10T20:25:34.588Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T21:09:00.777Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "pshouse/omarchy-obs-onair",
+            "pluginIds": [
+              "io.github.pshouse.obs-onair"
+            ],
+            "commit": "1d65fa1b71696b67381aa14dc9d55a54df627905",
+            "checkedAt": "2026-10-10T20:25:34.458Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Migleve/omarchy-omp-voice",
