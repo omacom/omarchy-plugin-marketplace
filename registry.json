@@ -322536,6 +322536,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/soham3301/omarchy-spinning-disks",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T19:21:05.060Z",
+      "listingValidatedCommit": "4d8f3e5153d737d0dfd4f9c549e75f0b8bf5a148",
+      "listingValidatedAt": "2026-10-10T19:21:05.060Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "soham3301/omarchy-spinning-disks",
+        "pluginIds": [
+          "io.github.soham3301.spinning-disks"
+        ],
+        "commit": "4d8f3e5153d737d0dfd4f9c549e75f0b8bf5a148",
+        "checkedAt": "2026-10-10T19:21:04.928Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "soham3301/omarchy-spinning-disks",
+        "pluginIds": [
+          "io.github.soham3301.spinning-disks"
+        ],
+        "commit": "4d8f3e5153d737d0dfd4f9c549e75f0b8bf5a148",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T19:21:04.928Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T18:14:44.673Z",
+        "requestEventId": 32954673902,
+        "requestedAt": "2026-10-10T19:17:24Z",
+        "reviewedAt": "2026-10-10T19:21:04.929Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.soham3301.spinning-disks": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
