@@ -289825,8 +289825,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T22:13:27.737Z",
-      "listingValidatedCommit": "db8b8334afc106dc302c18091b026351af1ae32b",
-      "listingValidatedAt": "2026-10-04T13:55:54.241Z",
+      "listingValidatedCommit": "a47eab2d2f225a503399c00822eb432a697fe8dd",
+      "listingValidatedAt": "2026-10-10T13:34:14.478Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -289835,8 +289835,8 @@
         "pluginIds": [
           "roubilibo.windows-new-workspace"
         ],
-        "commit": "db8b8334afc106dc302c18091b026351af1ae32b",
-        "checkedAt": "2026-10-04T13:55:54.241Z",
+        "commit": "a47eab2d2f225a503399c00822eb432a697fe8dd",
+        "checkedAt": "2026-10-10T13:34:14.477Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -289872,6 +289872,26 @@
             ],
             "commit": "2b7223cb837a63b2ed45c7028ae5f95d2804edf6",
             "checkedAt": "2026-10-02T22:13:27.603Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "db8b8334afc106dc302c18091b026351af1ae32b",
+          "validatedAt": "2026-10-04T13:55:54.241Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T13:34:14.478Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "roubilibo/omarchy-windows-new-workspace",
+            "pluginIds": [
+              "roubilibo.windows-new-workspace"
+            ],
+            "commit": "db8b8334afc106dc302c18091b026351af1ae32b",
+            "checkedAt": "2026-10-04T13:55:54.241Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
