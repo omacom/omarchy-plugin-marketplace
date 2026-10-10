@@ -320851,6 +320851,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/soham3301/net-rain",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T08:02:29.053Z",
+      "listingValidatedCommit": "99a37b4ca612ecc7d268fc7572bb349b8c96b1e9",
+      "listingValidatedAt": "2026-10-10T08:02:29.053Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "soham3301/net-rain",
+        "pluginIds": [
+          "io.github.soham3301.net-rain"
+        ],
+        "commit": "99a37b4ca612ecc7d268fc7572bb349b8c96b1e9",
+        "checkedAt": "2026-10-10T08:02:28.910Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.soham3301.net-rain": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
