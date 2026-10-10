@@ -255871,8 +255871,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T15:40:46.052Z",
-      "listingValidatedCommit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
-      "listingValidatedAt": "2026-09-29T17:02:50.286Z",
+      "listingValidatedCommit": "3fc05af7a8a43211a18e857c98facf4ee15ee0d4",
+      "listingValidatedAt": "2026-10-10T19:01:43.153Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -255881,8 +255881,8 @@
         "pluginIds": [
           "foamy.syncthing"
         ],
-        "commit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
-        "checkedAt": "2026-09-29T17:02:50.286Z",
+        "commit": "3fc05af7a8a43211a18e857c98facf4ee15ee0d4",
+        "checkedAt": "2026-10-10T19:01:43.153Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -255903,30 +255903,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "foamrider/foamy-syncthing",
-        "pluginIds": [
-          "foamy.syncthing"
-        ],
-        "commit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-29T17:02:50.286Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary",
-          "package-manager",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-29T12:31:05.553Z",
-        "requestEventId": 32091204839,
-        "requestedAt": "2026-09-29T15:16:07Z",
-        "reviewedAt": "2026-09-29T17:02:50.286Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -255977,8 +255953,81 @@
             "reviewedAt": "2026-09-27T15:40:45.948Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
+          "validatedAt": "2026-09-29T17:02:50.286Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T19:01:43.153Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-syncthing",
+            "pluginIds": [
+              "foamy.syncthing"
+            ],
+            "commit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
+            "checkedAt": "2026-09-29T17:02:50.286Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "foamrider/foamy-syncthing",
+            "pluginIds": [
+              "foamy.syncthing"
+            ],
+            "commit": "791d94f02161c8a4501ce91d8bf5e03a3ee66ff0",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-29T17:02:50.286Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-29T12:31:05.553Z",
+            "requestEventId": 32091204839,
+            "requestedAt": "2026-09-29T15:16:07Z",
+            "reviewedAt": "2026-09-29T17:02:50.286Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "foamrider/foamy-syncthing",
+        "pluginIds": [
+          "foamy.syncthing"
+        ],
+        "commit": "3fc05af7a8a43211a18e857c98facf4ee15ee0d4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T19:01:43.153Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T17:24:46.390Z",
+        "requestEventId": 32954117095,
+        "requestedAt": "2026-10-10T19:01:13Z",
+        "reviewedAt": "2026-10-10T19:01:43.153Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/diogocezar/omarchy-hymos",
