@@ -323378,6 +323378,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/raimoghg/omarchy-rgb-sync",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T23:25:23.821Z",
+      "listingValidatedCommit": "c1274fce9ee37f018ba20173057f78dcda3c2626",
+      "listingValidatedAt": "2026-10-10T23:25:23.821Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "raimoghg/omarchy-rgb-sync",
+        "pluginIds": [
+          "raimoghg.rgb-sync"
+        ],
+        "commit": "c1274fce9ee37f018ba20173057f78dcda3c2626",
+        "checkedAt": "2026-10-10T23:25:23.690Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "raimoghg/omarchy-rgb-sync",
+        "pluginIds": [
+          "raimoghg.rgb-sync"
+        ],
+        "commit": "c1274fce9ee37f018ba20173057f78dcda3c2626",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T23:25:23.690Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T23:17:56.960Z",
+        "requestEventId": 32962647776,
+        "requestedAt": "2026-10-10T23:24:54Z",
+        "reviewedAt": "2026-10-10T23:25:23.691Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "raimoghg.rgb-sync": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
