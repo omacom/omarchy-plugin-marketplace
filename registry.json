@@ -320109,8 +320109,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T22:49:46.097Z",
-      "listingValidatedCommit": "35cb649b63748bebebc7764273105b9c95d83ea5",
-      "listingValidatedAt": "2026-10-09T22:49:46.097Z",
+      "listingValidatedCommit": "878c34fe86056afc3a19281751af8ca7f3a24fe8",
+      "listingValidatedAt": "2026-10-10T00:40:09.143Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -320119,8 +320119,8 @@
         "pluginIds": [
           "io.github.akton1.omashaders"
         ],
-        "commit": "35cb649b63748bebebc7764273105b9c95d83ea5",
-        "checkedAt": "2026-10-09T22:49:45.988Z",
+        "commit": "878c34fe86056afc3a19281751af8ca7f3a24fe8",
+        "checkedAt": "2026-10-10T00:40:09.143Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -320136,7 +320136,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "35cb649b63748bebebc7764273105b9c95d83ea5",
+          "validatedAt": "2026-10-09T22:49:46.097Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T00:40:09.143Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "akton1/omashaders",
+            "pluginIds": [
+              "io.github.akton1.omashaders"
+            ],
+            "commit": "35cb649b63748bebebc7764273105b9c95d83ea5",
+            "checkedAt": "2026-10-09T22:49:45.988Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ekkostech/omarchy-cockpit",
