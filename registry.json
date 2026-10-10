@@ -320260,6 +320260,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pwn27sbx/2048",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T02:01:16.149Z",
+      "listingValidatedCommit": "7c53724282db4eb49abbb6fa493816979eec6dbb",
+      "listingValidatedAt": "2026-10-10T02:01:16.149Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pwn27sbx/2048",
+        "pluginIds": [
+          "pwnsxb.2048"
+        ],
+        "commit": "7c53724282db4eb49abbb6fa493816979eec6dbb",
+        "checkedAt": "2026-10-10T02:01:16.036Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "pwnsxb.2048": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
