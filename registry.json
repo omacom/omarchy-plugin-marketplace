@@ -321954,6 +321954,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rwilson131/omarchy.music-assistant",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T15:39:09.408Z",
+      "listingValidatedCommit": "0b10dffbcebde040138d12af597868a899294451",
+      "listingValidatedAt": "2026-10-10T15:39:09.408Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rwilson131/omarchy.music-assistant",
+        "pluginIds": [
+          "io.github.rwilson131.music-assistant"
+        ],
+        "commit": "0b10dffbcebde040138d12af597868a899294451",
+        "checkedAt": "2026-10-10T15:39:09.289Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rwilson131.music-assistant": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
