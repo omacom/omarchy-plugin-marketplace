@@ -307562,8 +307562,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-06",
       "listedAt": "2026-10-06T10:58:16.220Z",
-      "listingValidatedCommit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
-      "listingValidatedAt": "2026-10-06T10:58:16.220Z",
+      "listingValidatedCommit": "f7b6617316e0691c7b7c715a1ac6bc9c795c8cbe",
+      "listingValidatedAt": "2026-10-10T12:29:36.484Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -307572,8 +307572,8 @@
         "pluginIds": [
           "io.github.bbssyl.creality"
         ],
-        "commit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
-        "checkedAt": "2026-10-06T10:58:16.090Z",
+        "commit": "f7b6617316e0691c7b7c715a1ac6bc9c795c8cbe",
+        "checkedAt": "2026-10-10T12:29:36.484Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -307581,28 +307581,6 @@
           "package-manager",
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "bbssyl/omarchy-creality",
-        "pluginIds": [
-          "io.github.bbssyl.creality"
-        ],
-        "commit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-06T10:58:16.090Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-05T15:43:06.055Z",
-        "requestEventId": 32589403071,
-        "requestedAt": "2026-10-06T10:28:29Z",
-        "reviewedAt": "2026-10-06T10:58:16.090Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.bbssyl.creality": {
@@ -307614,7 +307592,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bbssyl/omarchy-creality",
+        "pluginIds": [
+          "io.github.bbssyl.creality"
+        ],
+        "commit": "f7b6617316e0691c7b7c715a1ac6bc9c795c8cbe",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T12:29:36.484Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T12:11:17.685Z",
+        "requestEventId": 32940591091,
+        "requestedAt": "2026-10-10T12:29:04Z",
+        "reviewedAt": "2026-10-10T12:29:36.484Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
+          "validatedAt": "2026-10-06T10:58:16.220Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T12:29:36.484Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bbssyl/omarchy-creality",
+            "pluginIds": [
+              "io.github.bbssyl.creality"
+            ],
+            "commit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
+            "checkedAt": "2026-10-06T10:58:16.090Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bbssyl/omarchy-creality",
+            "pluginIds": [
+              "io.github.bbssyl.creality"
+            ],
+            "commit": "9c5d2971ca4bc45d3db076e452802959ac325ee7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-06T10:58:16.090Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-05T15:43:06.055Z",
+            "requestEventId": 32589403071,
+            "requestedAt": "2026-10-06T10:28:29Z",
+            "reviewedAt": "2026-10-06T10:58:16.090Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/grivera82/omarchy-matchday",
