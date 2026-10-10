@@ -320538,6 +320538,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/xpader/omarchy-coding-plan-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T03:30:15.768Z",
+      "listingValidatedCommit": "b3c39e2bac8087ebabe1c08d1bf187623cb635d3",
+      "listingValidatedAt": "2026-10-10T03:30:15.768Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xpader/omarchy-coding-plan-usage",
+        "pluginIds": [
+          "pader.coding-plan-usage"
+        ],
+        "commit": "b3c39e2bac8087ebabe1c08d1bf187623cb635d3",
+        "checkedAt": "2026-10-10T03:30:15.633Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "pader.coding-plan-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
