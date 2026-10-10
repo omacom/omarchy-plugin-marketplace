@@ -320635,6 +320635,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jmb11111/omarchy-rencal-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T05:45:18.037Z",
+      "listingValidatedCommit": "8af7589e6fb8b88642a8aa881a99b0a5a32009f3",
+      "listingValidatedAt": "2026-10-10T05:45:18.037Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmb11111/omarchy-rencal-clock",
+        "pluginIds": [
+          "jmb11111.rencal-clock"
+        ],
+        "commit": "8af7589e6fb8b88642a8aa881a99b0a5a32009f3",
+        "checkedAt": "2026-10-10T05:45:17.905Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jmb11111/omarchy-rencal-clock",
+        "pluginIds": [
+          "jmb11111.rencal-clock"
+        ],
+        "commit": "8af7589e6fb8b88642a8aa881a99b0a5a32009f3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T05:45:17.905Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T05:36:29.677Z",
+        "requestEventId": 32927981902,
+        "requestedAt": "2026-10-10T05:41:40Z",
+        "reviewedAt": "2026-10-10T05:45:17.905Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jmb11111.rencal-clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
