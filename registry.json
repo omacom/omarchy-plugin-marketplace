@@ -320884,6 +320884,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/BasantPandey/omarchy-power-rename",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T09:28:05.329Z",
+      "listingValidatedCommit": "019176f9cb20dace8ccb76c8fa1fd4c121573a23",
+      "listingValidatedAt": "2026-10-10T09:28:05.329Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "basantpandey/omarchy-power-rename",
+        "pluginIds": [
+          "io.github.basantpandey.power-rename"
+        ],
+        "commit": "019176f9cb20dace8ccb76c8fa1fd4c121573a23",
+        "checkedAt": "2026-10-10T09:28:05.196Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.basantpandey.power-rename": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
