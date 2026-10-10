@@ -2040,6 +2040,7 @@
             "quickshell",
             "system"
           ],
+          "manifestPath": "manifest.json",
           "installation": {
             "mode": "manual",
             "note": "Nearby requires a version-matched native helper. Follow the upstream installation instructions to install the plugin and helper together."
