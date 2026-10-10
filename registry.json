@@ -257898,8 +257898,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T19:00:25.344Z",
-      "listingValidatedCommit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
-      "listingValidatedAt": "2026-09-27T19:00:25.344Z",
+      "listingValidatedCommit": "7ffd6e2ef6ac4fd9e276921948f1b2db2106e15d",
+      "listingValidatedAt": "2026-10-10T11:36:28.252Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -257908,35 +257908,12 @@
         "pluginIds": [
           "io.github.fabandrade88.omawidgets"
         ],
-        "commit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
-        "checkedAt": "2026-09-27T19:00:25.234Z",
-        "outcome": "review-required",
+        "commit": "7ffd6e2ef6ac4fd9e276921948f1b2db2106e15d",
+        "checkedAt": "2026-10-10T11:36:28.252Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "installer"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "fabandrade88/omawidgets",
-        "pluginIds": [
-          "io.github.fabandrade88.omawidgets"
-        ],
-        "commit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-27T19:00:25.234Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-27T18:19:55.671Z",
-        "requestEventId": 31942012909,
-        "requestedAt": "2026-09-27T18:21:28Z",
-        "reviewedAt": "2026-09-27T19:00:25.235Z",
-        "reviewer": "HANCORE-linux"
+        "capabilities": []
       },
       "plugins": {
         "io.github.fabandrade88.omawidgets": {
@@ -257948,7 +257925,52 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
+          "validatedAt": "2026-09-27T19:00:25.344Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T11:36:28.252Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "fabandrade88/omawidgets",
+            "pluginIds": [
+              "io.github.fabandrade88.omawidgets"
+            ],
+            "commit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
+            "checkedAt": "2026-09-27T19:00:25.234Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "fabandrade88/omawidgets",
+            "pluginIds": [
+              "io.github.fabandrade88.omawidgets"
+            ],
+            "commit": "b4bd3289d1bb74b9db66234cd1a2731d2e515a77",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-27T19:00:25.234Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-27T18:19:55.671Z",
+            "requestEventId": 31942012909,
+            "requestedAt": "2026-09-27T18:21:28Z",
+            "reviewedAt": "2026-09-27T19:00:25.235Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jgarza9788/omaLens",
