@@ -321613,6 +321613,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Jholloway12/omarchy-per-monitor-background",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T13:37:47.066Z",
+      "listingValidatedCommit": "166e88fda5cc125f8e0b0d4ac73b77220ce99f4a",
+      "listingValidatedAt": "2026-10-10T13:37:47.066Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jholloway12/omarchy-per-monitor-background",
+        "pluginIds": [
+          "io.github.jholloway12.per-monitor-background"
+        ],
+        "commit": "166e88fda5cc125f8e0b0d4ac73b77220ce99f4a",
+        "checkedAt": "2026-10-10T13:37:46.932Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jholloway12.per-monitor-background": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
