@@ -322868,6 +322868,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Migleve/omarchy-omp-voice",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T20:36:42.704Z",
+      "listingValidatedCommit": "f9a44d86a461519d31b3290dd84bf6279d25e62c",
+      "listingValidatedAt": "2026-10-10T20:36:42.704Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "migleve/omarchy-omp-voice",
+        "pluginIds": [
+          "migleve.omp-voice"
+        ],
+        "commit": "f9a44d86a461519d31b3290dd84bf6279d25e62c",
+        "checkedAt": "2026-10-10T20:36:42.570Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "migleve/omarchy-omp-voice",
+        "pluginIds": [
+          "migleve.omp-voice"
+        ],
+        "commit": "f9a44d86a461519d31b3290dd84bf6279d25e62c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T20:36:42.570Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T20:26:37.750Z",
+        "requestEventId": 32957382048,
+        "requestedAt": "2026-10-10T20:36:18Z",
+        "reviewedAt": "2026-10-10T20:36:42.570Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "migleve.omp-voice": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "hyprland",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
