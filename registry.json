@@ -196332,8 +196332,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T10:17:07.266Z",
-      "listingValidatedCommit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
-      "listingValidatedAt": "2026-09-16T10:17:07.266Z",
+      "listingValidatedCommit": "58fc5521dab5bd6b71cf483e963320d0c39ae527",
+      "listingValidatedAt": "2026-10-10T15:21:04.296Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -196342,8 +196342,8 @@
         "pluginIds": [
           "ridgetopai.omarcade"
         ],
-        "commit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
-        "checkedAt": "2026-09-16T10:17:07.195Z",
+        "commit": "58fc5521dab5bd6b71cf483e963320d0c39ae527",
+        "checkedAt": "2026-10-10T15:21:04.296Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -196354,30 +196354,6 @@
           "installer"
         ]
       },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ridgetopai/omarcade",
-        "pluginIds": [
-          "ridgetopai.omarcade"
-        ],
-        "commit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-16T10:17:07.195Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-13T22:35:25.102Z",
-        "requestEventId": 31236846336,
-        "requestedAt": "2026-09-16T10:13:49Z",
-        "reviewedAt": "2026-09-16T10:17:07.195Z",
-        "reviewer": "HANCORE-linux"
-      },
       "plugins": {
         "ridgetopai.omarcade": {
           "category": "Other",
@@ -196386,7 +196362,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ridgetopai/omarcade",
+        "pluginIds": [
+          "ridgetopai.omarcade"
+        ],
+        "commit": "58fc5521dab5bd6b71cf483e963320d0c39ae527",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T15:21:04.296Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T12:41:52.690Z",
+        "requestEventId": 32946444706,
+        "requestedAt": "2026-10-10T15:20:33Z",
+        "reviewedAt": "2026-10-10T15:21:04.296Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
+          "validatedAt": "2026-09-16T10:17:07.266Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T15:21:04.296Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ridgetopai/omarcade",
+            "pluginIds": [
+              "ridgetopai.omarcade"
+            ],
+            "commit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
+            "checkedAt": "2026-09-16T10:17:07.195Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ridgetopai/omarcade",
+            "pluginIds": [
+              "ridgetopai.omarcade"
+            ],
+            "commit": "8cad95a74cd16fceba37d8e532f6fd8d9717994e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-16T10:17:07.195Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-13T22:35:25.102Z",
+            "requestEventId": 31236846336,
+            "requestedAt": "2026-09-16T10:13:49Z",
+            "reviewedAt": "2026-09-16T10:17:07.195Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/NobleDoodle/omarchroma",
