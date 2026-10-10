@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T00:48:37.407Z",
+  "generatedAt": "2026-10-10T01:00:22.595Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -289367,7 +289367,7 @@
     {
       "id": "io.github.samjage.background-umami",
       "name": "Background Umami",
-      "description": "Pick any wallpaper from your themes or your own folders, see it applied before you commit, and keep it through theme changes. Adds Umami under Style > Background.",
+      "description": "Umami for your background. Season to taste. Omarchy is omakase: every theme comes with wallpapers the chef picked, and they're good. Umami is the seasoning on the table for when you want a little more. Browse everything you've got, see it on your desktop before you commit, keep it when you change themes, or let it shuffle. Stock Omarchy stays exactly as it is.",
       "author": "Sam Jage",
       "version": "0.1.1",
       "repo": "https://github.com/samjage/omarchy-background-umami",
@@ -289376,10 +289376,10 @@
       "verificationSnapshotStatus": "verified",
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
-      "verificationCommit": "7f4edd13168a5d2f37dd8dbc83431860f38c54c6",
-      "verificationCheckedAt": "2026-10-09T12:26:14.275Z",
+      "verificationCommit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+      "verificationCheckedAt": "2026-10-10T01:00:22.177Z",
       "verificationMethod": "maintainer-reviewed",
-      "verificationReviewedAt": "2026-10-09T12:26:14.275Z",
+      "verificationReviewedAt": "2026-10-10T01:00:22.177Z",
       "verificationReviewedBy": "HANCORE-linux",
       "manifestPath": "manifest.json",
       "addedAt": "2026-10-09",
@@ -289394,7 +289394,7 @@
       ],
       "license": "See repository",
       "stars": 0,
-      "repositoryUpdatedAt": "2026-10-09T12:13:02Z",
+      "repositoryUpdatedAt": "2026-10-09T23:36:47Z",
       "repositoryRelease": {
         "tag": "v0.1.1",
         "url": "https://github.com/samjage/omarchy-background-umami/tree/v0.1.1"
@@ -289410,17 +289410,17 @@
       "previewThumbnailHeight": 281,
       "previewSourceWidth": 1920,
       "previewSourceHeight": 750,
-      "listingValidatedCommit": "7f4edd13168a5d2f37dd8dbc83431860f38c54c6",
-      "listingValidatedAt": "2026-10-09T12:26:14.411Z",
+      "listingValidatedCommit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+      "listingValidatedAt": "2026-10-10T01:00:22.177Z",
       "listingValidatedBranch": "main",
-      "upstreamObservedCommit": "7f4edd13168a5d2f37dd8dbc83431860f38c54c6",
+      "upstreamObservedCommit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-10-09T12:26:15.061Z",
+      "upstreamCheckedAt": "2026-10-10T01:00:22.595Z",
       "upstreamCheckStatus": "passed",
-      "upstreamValidatedCommit": "7f4edd13168a5d2f37dd8dbc83431860f38c54c6",
-      "upstreamValidatedAt": "2026-10-09T12:26:15.061Z",
+      "upstreamValidatedCommit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+      "upstreamValidatedAt": "2026-10-10T01:00:22.595Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "07f0ad36d09a5adf2a5d73eacc99645705fb9127b3436bee5fe636a1a50b35f5",
+      "upstreamSourceFingerprint": "135d708e9d21775d9ba847fc8b205bf907f85e8ed20257a6d3dc52fcf41aed05",
       "status": "Available"
     },
     {
