@@ -321988,6 +321988,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Neaxic/omagenda",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T15:55:08.437Z",
+      "listingValidatedCommit": "efd4e227984288ab9a9b38f5dade63f9518a4176",
+      "listingValidatedAt": "2026-10-10T15:55:08.437Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "neaxic/omagenda",
+        "pluginIds": [
+          "io.github.neaxic.omagenda"
+        ],
+        "commit": "efd4e227984288ab9a9b38f5dade63f9518a4176",
+        "checkedAt": "2026-10-10T15:55:08.354Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.neaxic.omagenda": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
