@@ -321646,6 +321646,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bmaltais/StartBar",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T14:09:30.587Z",
+      "listingValidatedCommit": "2235c0d4965fa10998e01183e0328f3dfdc489c0",
+      "listingValidatedAt": "2026-10-10T14:09:30.587Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bmaltais/startbar",
+        "pluginIds": [
+          "io.github.bmaltais.startbar"
+        ],
+        "commit": "2235c0d4965fa10998e01183e0328f3dfdc489c0",
+        "checkedAt": "2026-10-10T14:09:30.456Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bmaltais/startbar",
+        "pluginIds": [
+          "io.github.bmaltais.startbar"
+        ],
+        "commit": "2235c0d4965fa10998e01183e0328f3dfdc489c0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T14:09:30.456Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T14:01:06.144Z",
+        "requestEventId": 32943919565,
+        "requestedAt": "2026-10-10T14:09:01Z",
+        "reviewedAt": "2026-10-10T14:09:30.456Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bmaltais.startbar": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "launcher",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
