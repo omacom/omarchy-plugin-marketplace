@@ -322130,6 +322130,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/flyingtulipdotcom/omarchy-ft-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T17:12:06.487Z",
+      "listingValidatedCommit": "80968a2ed53e21c350432e65922fc7f1d42489f5",
+      "listingValidatedAt": "2026-10-10T17:12:06.487Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flyingtulipdotcom/omarchy-ft-bar",
+        "pluginIds": [
+          "flyingtulip.ft-bar"
+        ],
+        "commit": "80968a2ed53e21c350432e65922fc7f1d42489f5",
+        "checkedAt": "2026-10-10T17:12:06.349Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "flyingtulip.ft-bar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
