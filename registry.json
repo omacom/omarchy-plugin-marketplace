@@ -322769,6 +322769,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/cyberbuddhy/omarchy-play",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T20:13:29.392Z",
+      "listingValidatedCommit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+      "listingValidatedAt": "2026-10-10T20:13:29.392Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cyberbuddhy/omarchy-play",
+        "pluginIds": [
+          "io.github.cyberbuddhy.omarchy-play"
+        ],
+        "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+        "checkedAt": "2026-10-10T20:13:29.239Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cyberbuddhy/omarchy-play",
+        "pluginIds": [
+          "io.github.cyberbuddhy.omarchy-play"
+        ],
+        "commit": "233cb867e7c0fc5869af100eb43a03c6b28ed48d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T20:13:29.239Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T20:08:20.719Z",
+        "requestEventId": 32956549308,
+        "requestedAt": "2026-10-10T20:11:30Z",
+        "reviewedAt": "2026-10-10T20:13:29.239Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cyberbuddhy.omarchy-play": {
+          "category": "Other",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
