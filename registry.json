@@ -77335,8 +77335,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-25",
       "listedAt": "2026-08-25T17:50:50.071Z",
-      "listingValidatedCommit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
-      "listingValidatedAt": "2026-08-26T21:55:37.340Z",
+      "listingValidatedCommit": "ea534fbec7c6598c207f923e6f47f40b2b71e74e",
+      "listingValidatedAt": "2026-10-10T22:07:20.574Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -77345,13 +77345,15 @@
         "pluginIds": [
           "tedwester.legion"
         ],
-        "commit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
-        "checkedAt": "2026-08-26T21:55:37.339Z",
+        "commit": "ea534fbec7c6598c207f923e6f47f40b2b71e74e",
+        "checkedAt": "2026-10-10T22:07:20.574Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "privilege"
+          "privilege",
+          "sudoers-modification",
+          "installer"
         ]
       },
       "plugins": {
@@ -77364,27 +77366,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "tedwester/omalegion",
-        "pluginIds": [
-          "tedwester.legion"
-        ],
-        "commit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-26T21:55:37.339Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-26T08:28:36.603Z",
-        "requestEventId": 30067740341,
-        "requestedAt": "2026-08-26T20:48:38Z",
-        "reviewedAt": "2026-08-26T21:55:37.340Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -77429,8 +77410,74 @@
             "reviewedAt": "2026-08-25T17:50:50.039Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
+          "validatedAt": "2026-08-26T21:55:37.340Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T22:07:20.574Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tedwester/omalegion",
+            "pluginIds": [
+              "tedwester.legion"
+            ],
+            "commit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
+            "checkedAt": "2026-08-26T21:55:37.339Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "tedwester/omalegion",
+            "pluginIds": [
+              "tedwester.legion"
+            ],
+            "commit": "919422136a7f53328e0f6301f1175bf95b3f66ae",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-26T21:55:37.339Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-26T08:28:36.603Z",
+            "requestEventId": 30067740341,
+            "requestedAt": "2026-08-26T20:48:38Z",
+            "reviewedAt": "2026-08-26T21:55:37.340Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tedwester/omalegion",
+        "pluginIds": [
+          "tedwester.legion"
+        ],
+        "commit": "ea534fbec7c6598c207f923e6f47f40b2b71e74e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T22:07:20.574Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T21:40:30.467Z",
+        "requestEventId": 32960323917,
+        "requestedAt": "2026-10-10T22:06:53Z",
+        "reviewedAt": "2026-10-10T22:07:20.574Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/rodrigojacarei/omarchy-pomodoro",
