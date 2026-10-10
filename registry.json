@@ -321762,6 +321762,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/areu01or00/Piphone-plugin-for-Omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T14:23:33.724Z",
+      "listingValidatedCommit": "697ed6d2df7761246722039aff1a6f0831efe289",
+      "listingValidatedAt": "2026-10-10T14:23:33.724Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "areu01or00/piphone-plugin-for-omarchy",
+        "pluginIds": [
+          "areu01or00.piphone"
+        ],
+        "commit": "697ed6d2df7761246722039aff1a6f0831efe289",
+        "checkedAt": "2026-10-10T14:23:33.636Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "areu01or00/piphone-plugin-for-omarchy",
+        "pluginIds": [
+          "areu01or00.piphone"
+        ],
+        "commit": "697ed6d2df7761246722039aff1a6f0831efe289",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T14:23:33.636Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T14:21:27.371Z",
+        "requestEventId": 32944392301,
+        "requestedAt": "2026-10-10T14:23:09Z",
+        "reviewedAt": "2026-10-10T14:23:33.636Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "areu01or00.piphone": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
