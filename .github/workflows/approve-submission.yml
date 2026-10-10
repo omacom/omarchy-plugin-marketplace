@@ -424,15 +424,13 @@ jobs:
               exit 1
             fi
           done
-          if [ "$PUBLICATION_KIND" = listing ]; then
-            has_manual_setup=false
-            if jq -e '.labels | any(.name == "manual-setup")' <<< "$issue" >/dev/null; then
-              has_manual_setup=true
-            fi
-            if [ "$has_manual_setup" != "$EXPECTED_MANUAL_SETUP" ]; then
-              echo "Manual setup approval changed before publication." >&2
-              exit 1
-            fi
+          has_manual_setup=false
+          if jq -e '.labels | any(.name == "manual-setup")' <<< "$issue" >/dev/null; then
+            has_manual_setup=true
+          fi
+          if [ "$has_manual_setup" != "$EXPECTED_MANUAL_SETUP" ]; then
+            echo "Manual setup approval changed before publication." >&2
+            exit 1
           fi
           if ! jq -e --arg title "$APPROVED_ISSUE_TITLE" '.title == $title' <<< "$issue" >/dev/null; then
             echo "Publication issue title changed before publication." >&2

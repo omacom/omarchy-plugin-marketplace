@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { inspectListedPluginSource } from "../scripts/build-catalog.mjs";
+import { communityInstall, inspectListedPluginSource, successfulState } from "../scripts/build-catalog.mjs";
+import { publicPluginUpdateApprovalFailure, recheckPluginUpdateApproval } from "../scripts/approve-plugin-update.mjs";
+import { manualSetupNote } from "../scripts/plugin-installation.mjs";
 import {
   assertPluginUpdateInspection,
   assertPluginUpdateListingArchivable,
@@ -299,6 +301,83 @@ test("verified update promotion preserves prior evidence and atomically replaces
   assert.equal(nextRegistry.sources[0], nextSource);
   assert.deepEqual(nextRegistry.retiredPluginIds, []);
   assert.equal(registry.sources[0], source);
+});
+
+test("update approval applies manual setup to the generated catalog and preserves verification", () => {
+  const source = listedSource();
+  const next = promotePluginUpdateSource(source, updateInspection(), {
+    automatedSecurityBaseline: storedBaseline(updateCommit), promotedAt, manualSetup: true,
+  });
+  const metadata = next.plugins["example.plugin"];
+  assert.deepEqual(metadata.installation, { mode: "manual", note: manualSetupNote });
+  assert.equal(metadata.category, source.plugins["example.plugin"].category);
+  assert.deepEqual(metadata.tags, source.plugins["example.plugin"].tags);
+  assert.equal(source.plugins["example.plugin"].installation, undefined);
+  const catalogPlugin = successfulState({
+    id: "example.plugin",
+    ...communityInstall(next, "manifest.json", metadata),
+  }, next, { commitSha: updateCommit, branch: "main" }, null, promotedAt);
+  assert.equal(catalogPlugin.status, "Manual setup");
+  assert.equal(catalogPlugin.installAvailable, false);
+  assert.equal(catalogPlugin.installCommand, "");
+  assert.equal(catalogPlugin.installNote, manualSetupNote);
+  assert.equal(catalogPlugin.verificationStatus, "verified");
+  assert.equal(catalogPlugin.verificationCommit, updateCommit);
+});
+
+test("update approval retains curated manual notes and removes the override for standard setup", () => {
+  const installation = { mode: "manual", note: "Install the required native bridge." };
+  const source = listedSource({ plugins: {
+    "example.plugin": { category: "System", tags: ["system"], installation },
+  } });
+  for (const manualSetup of [undefined, true, false]) {
+    const next = promotePluginUpdateSource(source, updateInspection(), {
+      automatedSecurityBaseline: storedBaseline(updateCommit), promotedAt, manualSetup,
+    });
+    const metadata = next.plugins["example.plugin"];
+    if (manualSetup === false) {
+      assert.equal(Object.hasOwn(metadata, "installation"), false);
+      const install = communityInstall(next, "manifest.json", metadata);
+      assert.equal(install.installAvailable, true);
+      assert.match(install.installCommand, /omarchy plugin add/);
+    } else {
+      assert.deepEqual(metadata.installation, installation);
+    }
+    assert.equal(source.plugins["example.plugin"].installation, installation);
+    assert.equal(sourceVerification(next).status, "verified");
+  }
+  assert.throws(() => promotePluginUpdateSource(source, updateInspection(), {
+    automatedSecurityBaseline: storedBaseline(updateCommit), promotedAt, manualSetup: "true",
+  }), /manualSetup must be a boolean/);
+  assert.throws(() => promotePluginUpdateSource(source, updateInspection({
+    manifests: [{ path: "plugins/example/manifest.json", id: "example.plugin" }],
+  }), {
+    automatedSecurityBaseline: storedBaseline(updateCommit), promotedAt, manualSetup: true,
+  }), { code: "update-installation-invalid" });
+});
+
+test("update approval rejects added or removed manual setup labels before inspecting upstream", async (t) => {
+  for (const expectedManualSetup of [true, false]) {
+    let calls = 0;
+    t.mock.method(globalThis, "fetch", async () => {
+      calls += 1;
+      assert.equal(calls, 1, "Changed setup must stop before any upstream requests");
+      return new Response(JSON.stringify({
+        state: "open", title: "[Verify]: Example", body: requestBody(),
+        labels: ["plugin-update", "validated", "approved-and-verified",
+          ...(!expectedManualSetup ? ["manual-setup"] : [])],
+      }));
+    });
+    await assert.rejects(recheckPluginUpdateApproval({
+      repositoryName: "example/marketplace", issueNumber: 1, token: "inert",
+      approvedIssueBody: requestBody(), approvedIssueTitle: "[Verify]: Example",
+      approver: "maintainer", expectedManualSetup,
+    }), { code: "update-manual-setup-changed" });
+    assert.equal(publicPluginUpdateApprovalFailure({ code: "update-manual-setup-changed" }).code,
+      "update-manual-setup-changed");
+    assert.equal(calls, 1);
+    t.mock.restoreAll();
+  }
 });
 
 test("plugin update history preserves revoked review evidence and clears it from the active snapshot", () => {

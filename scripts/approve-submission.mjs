@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { inspectSubmission } from "./build-catalog.mjs";
 import { parseGitHubRepository } from "./github-repository.mjs";
+import { manualSetupNote } from "./plugin-installation.mjs";
 import {
   assertRightsConfirmation,
   hasRightsConfirmation,
@@ -35,13 +36,13 @@ export {
   assertRightsConfirmation,
   hasRightsConfirmation,
   isLegacySubmission,
+  manualSetupNote,
   parseSubmissionBody,
   rightsStatement,
 };
 
 export const approvedAndVerifiedLabel = "approved-and-verified";
 export const legacyApprovalLabel = "approved-for-listing";
-export const manualSetupNote = "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.";
 
 export class SubmissionApprovalError extends Error {
   constructor(code, message, context = {}) {

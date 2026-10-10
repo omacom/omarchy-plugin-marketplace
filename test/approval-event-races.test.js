@@ -357,7 +357,7 @@ if (endpoint === issueEndpoint) {
     number: Number(incident.number),
     state: "open", title: incident.title, body: "approved body",
     labels: [
-      "submission", "validated",
+      process.env.PUBLICATION_KIND === "update" ? "plugin-update" : "submission", "validated",
       ...(incident.manualSetup ? ["manual-setup"] : []),
       "approved-and-verified",
     ].map((name) => ({ name })),
@@ -502,6 +502,20 @@ else if (!args.includes("push")) process.exit(93);
       APPROVAL_REQUESTED_AT: productionIssue.requestedAt,
       APPROVAL_TRIGGERED_AT: productionIssue.triggeredAt,
     };
+    for (const publicationKind of ["listing", "update"]) {
+      await assertFinalRejected("production", {
+        ...productionEnvironment, PUBLICATION_KIND: publicationKind,
+        EXPECTED_MANUAL_SETUP: "false",
+      }, /manual setup approval changed before publication/i, 1);
+      await assertFinalRejected("production", {
+        ISSUE_NUMBER: productionIssue4116.number,
+        APPROVED_ISSUE_TITLE: productionIssue4116.title,
+        APPROVAL_EVENT_ID: String(productionIssue4116.eventId),
+        APPROVAL_REQUESTED_AT: productionIssue4116.requestedAt,
+        APPROVAL_TRIGGERED_AT: productionIssue4116.triggeredAt,
+        PUBLICATION_KIND: publicationKind, EXPECTED_MANUAL_SETUP: "true",
+      }, /manual setup approval changed before publication/i, 1);
+    }
     await assertFinalRejected(
       "multiple-issue-documents",
       productionEnvironment,
@@ -557,6 +571,14 @@ else if (!args.includes("push")) process.exit(93);
     assert.equal(production.status, 0, production.stderr);
     assert.match(await readFile(gitCalls, "utf8"), /"push","origin","HEAD:main"/);
     assert.match(await readFile(output, "utf8"), new RegExp(`commit=${"c".repeat(40)}`));
+    calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
+    assert.equal(calls.length, 5);
+
+    await writeFile(ghCalls, "");
+    await writeFile(gitCalls, "");
+    const update = run("production", { ...productionEnvironment, PUBLICATION_KIND: "update" });
+    assert.equal(update.status, 0, update.stderr);
+    assert.match(await readFile(gitCalls, "utf8"), /"push","origin","HEAD:main"/);
     calls = (await readFile(ghCalls, "utf8")).trim().split("\n").map(JSON.parse);
     assert.equal(calls.length, 5);
 

@@ -9,6 +9,7 @@ import {
   githubIssueComments,
   githubIssueEvents,
   latestSecurityBaselineComment,
+  parseManualSetupApproval,
 } from "./approve-submission.mjs";
 import { inspectListedPluginSource } from "./build-catalog.mjs";
 import { parseGitHubRepository } from "./github-repository.mjs";
@@ -73,6 +74,7 @@ export async function recheckPluginUpdateApproval({
   expectedTriggeredAt,
   expectedBaselineCommentId,
   expectedBaselineCommentUpdatedAt,
+  expectedManualSetup,
   allowCurrentCommit = false,
 }) {
   const issue = await githubApi(
@@ -96,6 +98,24 @@ export async function recheckPluginUpdateApproval({
       "The plugin update title changed after approval",
     );
   }
+  const labels = labelNames(issue);
+  if (typeof expectedManualSetup !== "boolean") {
+    throw new TypeError("expectedManualSetup must be a boolean");
+  }
+  if (labels.has("manual-setup") !== expectedManualSetup) {
+    throw new PluginUpdateError(
+      "update-manual-setup-changed",
+      "The manual-setup label changed after update approval started",
+    );
+  }
+  for (const required of ["plugin-update", "validated", "approved-and-verified"]) {
+    if (!labels.has(required)) {
+      throw new PluginUpdateError(
+        "update-label-missing",
+        `Plugin update issue is missing the ${required} label`,
+      );
+    }
+  }
   const root = resolve(import.meta.dirname, "..");
   const registry = JSON.parse(await readFile(resolve(root, "registry.json"), "utf8"));
   const request = canonicalRepositoryRequest(registry, parsePluginUpdateRequest(issue.body));
@@ -114,15 +134,6 @@ export async function recheckPluginUpdateApproval({
       "update-permission-denied",
       `${approver} does not have write permission to approve plugin updates`,
     );
-  }
-  const labels = labelNames(issue);
-  for (const required of ["plugin-update", "validated", "approved-and-verified"]) {
-    if (!labels.has(required)) {
-      throw new PluginUpdateError(
-        "update-label-missing",
-        `Plugin update issue is missing the ${required} label`,
-      );
-    }
   }
   const decision = approvalDecisionForEvents(events, {
     approver,
@@ -168,6 +179,7 @@ async function approvePluginUpdate() {
   const repositoryName = requiredEnvironment("GITHUB_REPOSITORY");
   const approver = requiredEnvironment("APPROVER_LOGIN");
   const approvalTriggeredAt = requiredEnvironment("APPROVAL_TRIGGERED_AT");
+  const manualSetup = parseManualSetupApproval(requiredEnvironment("MANUAL_SETUP"));
   const issueNumber = positiveInteger(requiredEnvironment("ISSUE_NUMBER"), "ISSUE_NUMBER");
   const state = await recheckPluginUpdateApproval({
     repositoryName,
@@ -177,6 +189,7 @@ async function approvePluginUpdate() {
     approvedIssueTitle: process.env.APPROVED_ISSUE_TITLE,
     approver,
     expectedRequestedAt: approvalTriggeredAt,
+    expectedManualSetup: manualSetup,
   });
   const pluginIds = state.subject.pluginIds;
   const recordOptions = {
@@ -212,6 +225,7 @@ async function approvePluginUpdate() {
     automatedSecurityBaseline: evidence.automatedSecurityBaseline,
     maintainerVerificationReview: evidence.maintainerVerificationReview,
     promotedAt,
+    manualSetup,
   });
   const nextRegistry = replacePluginUpdateSource(state.registry, state.source, nextSource);
   const registryPath = resolve(import.meta.dirname, "..", "registry.json");
@@ -255,6 +269,7 @@ async function verifyCurrentPluginUpdate() {
       "BASELINE_COMMENT_ID",
     ),
     expectedBaselineCommentUpdatedAt: requiredEnvironment("BASELINE_COMMENT_UPDATED_AT"),
+    expectedManualSetup: parseManualSetupApproval(requiredEnvironment("MANUAL_SETUP")),
     allowCurrentCommit: true,
   });
   console.log(`Plugin update approval state for issue #${issueNumber} is still current.`);
@@ -270,6 +285,7 @@ export function publicPluginUpdateApprovalFailure(error) {
     "update-issue-closed": "Plugin update approval requires an open issue.",
     "update-permission-denied": "The approval actor no longer has write permission.",
     "update-label-missing": "The plugin update approval labels changed.",
+    "update-manual-setup-changed": "The manual-setup label changed after update approval started. Finalize setup labels before applying approval again.",
     "update-security-baseline-changed": "The bot-authored update baseline changed after approval.",
     "approval-event-invalid": "The approved-and-verified label event is missing, stale, or does not match this workflow request.",
     "approval-security-baseline-missing": "The current bot-authored security baseline report is missing.",

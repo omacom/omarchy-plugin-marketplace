@@ -219683,7 +219683,11 @@
             "workspaces",
             "bar"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Requires running install.py to install the Hyprland bridge. Follow the upstream installation instructions."
+          }
         }
       },
       "listingValidationHistory": [

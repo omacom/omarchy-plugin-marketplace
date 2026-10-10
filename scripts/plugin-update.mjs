@@ -5,6 +5,7 @@ import {
   upstreamUpdateVerificationAction,
 } from "./plugin-verification-request.mjs";
 import { githubRepositoryKey } from "./github-repository.mjs";
+import { manualSetupNote } from "./plugin-installation.mjs";
 import { repositoryEvidenceKeys } from "./repository-identity.mjs";
 import { parseStoredSecurityBaselineRecord } from "./security-baseline-record.mjs";
 import {
@@ -312,7 +313,20 @@ export function promotePluginUpdateSource(source, inspection, {
   automatedSecurityBaseline,
   maintainerVerificationReview = null,
   promotedAt,
+  manualSetup,
 }) {
+  if (manualSetup !== undefined && typeof manualSetup !== "boolean") {
+    throw new TypeError("manualSetup must be a boolean");
+  }
+  if (manualSetup && (
+    inspection?.manifests?.length !== 1
+    || inspection.manifests[0].path !== "manifest.json"
+  )) {
+    throw new PluginUpdateError(
+      "update-installation-invalid",
+      "Manual installation requires a root plugin manifest",
+    );
+  }
   if (!automatedSecurityBaseline || typeof automatedSecurityBaseline !== "object") {
     throw new PluginUpdateError(
       "update-security-baseline-invalid",
@@ -370,6 +384,17 @@ export function promotePluginUpdateSource(source, inspection, {
   } = source;
   const nextSource = {
     ...sourceWithoutReview,
+    ...(manualSetup !== undefined ? {
+      plugins: Object.fromEntries(Object.entries(source.plugins).map(([id, plugin]) => {
+        const { installation, ...metadata } = plugin;
+        return [id, {
+          ...metadata,
+          ...(manualSetup ? {
+            installation: { mode: "manual", note: installation?.note || manualSetupNote },
+          } : {}),
+        }];
+      })),
+    } : {}),
     listingValidatedCommit: promotedCommit,
     listingValidatedAt: promotedAt,
     listingValidatedBranch: inspection.defaultBranch,
@@ -438,6 +463,7 @@ export function publicPluginUpdateFailure(error) {
     "update-listing-invalid": "The current marketplace listing cannot be updated safely.",
     "update-security-baseline-invalid": "The update security baseline is missing, stale, or belongs to another snapshot.",
     "update-verification-invalid": "The update evidence did not produce a valid verified snapshot.",
+    "update-installation-invalid": "Manual setup can only be approved for a root plugin manifest.",
     "security-baseline-unavailable": "The exact update commit could not be scanned completely.",
     "security-baseline-scan-limit": "The exact update commit exceeds a deterministic scan limit.",
   };
