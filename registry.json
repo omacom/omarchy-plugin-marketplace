@@ -320818,6 +320818,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/somethim/omarchy-browser-status",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T07:57:04.782Z",
+      "listingValidatedCommit": "cc19b4693ffa19c18921b5c2dd4dfb72ef506c7c",
+      "listingValidatedAt": "2026-10-10T07:57:04.782Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "somethim/omarchy-browser-status",
+        "pluginIds": [
+          "somethim.browser-status"
+        ],
+        "commit": "cc19b4693ffa19c18921b5c2dd4dfb72ef506c7c",
+        "checkedAt": "2026-10-10T07:57:04.640Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "somethim.browser-status": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
