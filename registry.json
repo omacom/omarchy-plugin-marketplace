@@ -111098,7 +111098,11 @@
             "quickshell",
             "system"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Omaga Sync needs the MEGAcmd engine (mega-cmd-server, an AUR package) and its own monitor command plus two systemd user units, so the standard `omarchy plugin add` command cannot produce a functioning plugin on its own. Run ./install.sh from the repository before enabling the widget; the README documents the full setup."
+          }
         }
       },
       "listingValidationHistory": [
