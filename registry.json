@@ -321430,6 +321430,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ggregoro/Omarchy-Clipboard-Cards",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T12:36:50.838Z",
+      "listingValidatedCommit": "31545354a080dde12a28e9f83f6525a64c745525",
+      "listingValidatedAt": "2026-10-10T12:36:50.838Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ggregoro/omarchy-clipboard-cards",
+        "pluginIds": [
+          "ggregoro.clipboard-cards"
+        ],
+        "commit": "31545354a080dde12a28e9f83f6525a64c745525",
+        "checkedAt": "2026-10-10T12:36:50.730Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ggregoro.clipboard-cards": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
