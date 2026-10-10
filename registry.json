@@ -320246,8 +320246,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T22:12:15.398Z",
-      "listingValidatedCommit": "a14e29e9d9b475a08c2cc3cab74cc7982e4bf958",
-      "listingValidatedAt": "2026-10-09T22:12:15.398Z",
+      "listingValidatedCommit": "2c3b0d1809224c7c3dca98905966ac6dffc377f0",
+      "listingValidatedAt": "2026-10-10T12:20:41.915Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -320256,8 +320256,8 @@
         "pluginIds": [
           "diegohades.apple-music"
         ],
-        "commit": "a14e29e9d9b475a08c2cc3cab74cc7982e4bf958",
-        "checkedAt": "2026-10-09T22:12:15.255Z",
+        "commit": "2c3b0d1809224c7c3dca98905966ac6dffc377f0",
+        "checkedAt": "2026-10-10T12:20:41.915Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -320271,7 +320271,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a14e29e9d9b475a08c2cc3cab74cc7982e4bf958",
+          "validatedAt": "2026-10-09T22:12:15.398Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T12:20:41.915Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "diegoobethbatista/omarchy-apple-music-plugin",
+            "pluginIds": [
+              "diegohades.apple-music"
+            ],
+            "commit": "a14e29e9d9b475a08c2cc3cab74cc7982e4bf958",
+            "checkedAt": "2026-10-09T22:12:15.255Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/AktOn1/omashaders",
