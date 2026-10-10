@@ -37591,8 +37591,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-21",
       "listedAt": "2026-08-21T01:58:44.342Z",
-      "listingValidatedCommit": "813ad652232e5ec526b472cf9585fa1ce9c47bf5",
-      "listingValidatedAt": "2026-10-01T21:49:46.637Z",
+      "listingValidatedCommit": "701878fc3be43d94ea71e2a9801847431d76a1be",
+      "listingValidatedAt": "2026-10-10T15:14:35.958Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -37601,8 +37601,8 @@
         "pluginIds": [
           "omarchy-philips-hue"
         ],
-        "commit": "813ad652232e5ec526b472cf9585fa1ce9c47bf5",
-        "checkedAt": "2026-10-01T21:49:46.637Z",
+        "commit": "701878fc3be43d94ea71e2a9801847431d76a1be",
+        "checkedAt": "2026-10-10T15:14:35.958Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -37914,6 +37914,26 @@
             ],
             "commit": "702e5eac52a7e14b9d01ab74df84c6feb7d326cc",
             "checkedAt": "2026-09-17T13:30:14.752Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "813ad652232e5ec526b472cf9585fa1ce9c47bf5",
+          "validatedAt": "2026-10-01T21:49:46.637Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T15:14:35.958Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sethchev/omarchy-philips-hue",
+            "pluginIds": [
+              "omarchy-philips-hue"
+            ],
+            "commit": "813ad652232e5ec526b472cf9585fa1ce9c47bf5",
+            "checkedAt": "2026-10-01T21:49:46.637Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
