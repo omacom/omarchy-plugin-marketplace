@@ -322346,6 +322346,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CallMeBakugo/VideoStoreBar",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T18:35:27.776Z",
+      "listingValidatedCommit": "2f07dec12c37a7aa737c077ff404fa8d1753c3a2",
+      "listingValidatedAt": "2026-10-10T18:35:27.776Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "callmebakugo/videostorebar",
+        "pluginIds": [
+          "bakugo.videostorebar"
+        ],
+        "commit": "2f07dec12c37a7aa737c077ff404fa8d1753c3a2",
+        "checkedAt": "2026-10-10T18:35:27.629Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bakugo.videostorebar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
