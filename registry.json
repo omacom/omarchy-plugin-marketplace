@@ -107734,8 +107734,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T09:34:00.887Z",
-      "listingValidatedCommit": "8af132291e9b47e3d09e9c0f71deecd318ebf1fe",
-      "listingValidatedAt": "2026-09-10T23:07:11.710Z",
+      "listingValidatedCommit": "f1f3b040d5b4f81cee83492638ca2898415af00d",
+      "listingValidatedAt": "2026-10-10T23:28:46.072Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -107744,8 +107744,8 @@
         "pluginIds": [
           "slowburnaz.omascore"
         ],
-        "commit": "8af132291e9b47e3d09e9c0f71deecd318ebf1fe",
-        "checkedAt": "2026-09-10T23:07:11.710Z",
+        "commit": "f1f3b040d5b4f81cee83492638ca2898415af00d",
+        "checkedAt": "2026-10-10T23:28:46.072Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -107795,6 +107795,26 @@
             ],
             "commit": "2ba16467fb1d0116a308be38c074faf20bd7b601",
             "checkedAt": "2026-08-31T06:19:43.229Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "8af132291e9b47e3d09e9c0f71deecd318ebf1fe",
+          "validatedAt": "2026-09-10T23:07:11.710Z",
+          "branch": "master",
+          "supersededAt": "2026-10-10T23:28:46.072Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "slowburnaz/omascore",
+            "pluginIds": [
+              "slowburnaz.omascore"
+            ],
+            "commit": "8af132291e9b47e3d09e9c0f71deecd318ebf1fe",
+            "checkedAt": "2026-09-10T23:07:11.710Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
