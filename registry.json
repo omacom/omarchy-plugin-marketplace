@@ -320416,6 +320416,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/thevideinfra/omarunner",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T03:12:00.629Z",
+      "listingValidatedCommit": "f65b07681fe17ed8c86543ccf832192e2e15b659",
+      "listingValidatedAt": "2026-10-10T03:12:00.629Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thevideinfra/omarunner",
+        "pluginIds": [
+          "videinfra.omarunner"
+        ],
+        "commit": "f65b07681fe17ed8c86543ccf832192e2e15b659",
+        "checkedAt": "2026-10-10T03:12:00.549Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thevideinfra/omarunner",
+        "pluginIds": [
+          "videinfra.omarunner"
+        ],
+        "commit": "f65b07681fe17ed8c86543ccf832192e2e15b659",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T03:12:00.549Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T03:05:17.906Z",
+        "requestEventId": 32923590476,
+        "requestedAt": "2026-10-10T03:08:07Z",
+        "reviewedAt": "2026-10-10T03:12:00.549Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "videinfra.omarunner": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
