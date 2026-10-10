@@ -321247,6 +321247,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/amagdy46/omarchy-dslr-webcam",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T12:06:58.457Z",
+      "listingValidatedCommit": "fbe8694ef01dc0f6459cb2d0fd7a3b6afbcd3b2d",
+      "listingValidatedAt": "2026-10-10T12:06:58.457Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "amagdy46/omarchy-dslr-webcam",
+        "pluginIds": [
+          "amagdy46.dslr-webcam"
+        ],
+        "commit": "fbe8694ef01dc0f6459cb2d0fd7a3b6afbcd3b2d",
+        "checkedAt": "2026-10-10T12:06:58.319Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "amagdy46/omarchy-dslr-webcam",
+        "pluginIds": [
+          "amagdy46.dslr-webcam"
+        ],
+        "commit": "fbe8694ef01dc0f6459cb2d0fd7a3b6afbcd3b2d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T12:06:58.319Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T12:00:50.809Z",
+        "requestEventId": 32939844790,
+        "requestedAt": "2026-10-10T12:05:03Z",
+        "reviewedAt": "2026-10-10T12:06:58.319Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "amagdy46.dslr-webcam": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
