@@ -321522,6 +321522,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/warpek/omarchy-layout-indicator",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T12:46:28.267Z",
+      "listingValidatedCommit": "2ae546cd910bde3d1957e36f12c30597e96dcdaa",
+      "listingValidatedAt": "2026-10-10T12:46:28.267Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "warpek/omarchy-layout-indicator",
+        "pluginIds": [
+          "io.github.warpek.layout-indicator"
+        ],
+        "commit": "2ae546cd910bde3d1957e36f12c30597e96dcdaa",
+        "checkedAt": "2026-10-10T12:46:28.129Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.warpek.layout-indicator": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
