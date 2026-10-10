@@ -230017,7 +230017,11 @@
             "hyprland",
             "workspaces"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "OmaCards needs the Hyprflip Hyprland plugin, built from source for Hyprland 0.56.2. After installing OmaCards, open Cards in the bar and choose Install Hyprflip; the panel fetches the pinned release, offers to install missing build tools (CMake, Ninja) through Omarchy's package installer, then builds and installs it. Manual steps are in the README."
+          }
         }
       },
       "listingValidationHistory": [
