@@ -322502,6 +322502,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/batusaribay/batusaribay.hackernews",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T19:17:45.843Z",
+      "listingValidatedCommit": "c3750a3e84d2d9941cd8765b35580535b4301517",
+      "listingValidatedAt": "2026-10-10T19:17:45.843Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "batusaribay/batusaribay.hackernews",
+        "pluginIds": [
+          "batusaribay.hackernews"
+        ],
+        "commit": "c3750a3e84d2d9941cd8765b35580535b4301517",
+        "checkedAt": "2026-10-10T19:17:45.712Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "batusaribay.hackernews": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "security",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
