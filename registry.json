@@ -320294,6 +320294,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/latentoperator/omarchy-audible",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T02:25:52.183Z",
+      "listingValidatedCommit": "0fa83c126facab433b16ea50b139f6ad47e84256",
+      "listingValidatedAt": "2026-10-10T02:25:52.183Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "latentoperator/omarchy-audible",
+        "pluginIds": [
+          "latentoperator.audible"
+        ],
+        "commit": "0fa83c126facab433b16ea50b139f6ad47e84256",
+        "checkedAt": "2026-10-10T02:25:52.036Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "latentoperator/omarchy-audible",
+        "pluginIds": [
+          "latentoperator.audible"
+        ],
+        "commit": "0fa83c126facab433b16ea50b139f6ad47e84256",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-10T02:25:52.036Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-10T02:09:03.880Z",
+        "requestEventId": 32922115989,
+        "requestedAt": "2026-10-10T02:25:14Z",
+        "reviewedAt": "2026-10-10T02:25:52.036Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "latentoperator.audible": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
