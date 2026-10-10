@@ -253884,8 +253884,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T13:51:30.915Z",
-      "listingValidatedCommit": "5ec528624e30539775ed793b2aef4c96f72f1c2a",
-      "listingValidatedAt": "2026-09-27T13:51:30.915Z",
+      "listingValidatedCommit": "eb006415fcc4ac4a8120ec5729d2b92e4152f1d3",
+      "listingValidatedAt": "2026-10-10T18:13:44.749Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -253894,8 +253894,8 @@
         "pluginIds": [
           "foamy.menu"
         ],
-        "commit": "5ec528624e30539775ed793b2aef4c96f72f1c2a",
-        "checkedAt": "2026-09-27T13:51:30.813Z",
+        "commit": "eb006415fcc4ac4a8120ec5729d2b92e4152f1d3",
+        "checkedAt": "2026-10-10T18:13:44.749Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -253911,7 +253911,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5ec528624e30539775ed793b2aef4c96f72f1c2a",
+          "validatedAt": "2026-09-27T13:51:30.915Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T18:13:44.749Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-menu",
+            "pluginIds": [
+              "foamy.menu"
+            ],
+            "commit": "5ec528624e30539775ed793b2aef4c96f72f1c2a",
+            "checkedAt": "2026-09-27T13:51:30.813Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/foamrider/foamy-tray",
