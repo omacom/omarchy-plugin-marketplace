@@ -279497,7 +279497,11 @@
           "tags": [
             "hyprland"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Harpoon requires adding its documented Lua binding to ~/.config/hypr/bindings.lua and reloading Hyprland after installation. Follow the upstream installation instructions."
+          }
         }
       }
     },
