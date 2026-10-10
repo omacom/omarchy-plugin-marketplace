@@ -316361,8 +316361,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-08",
       "listedAt": "2026-10-08T19:43:54.463Z",
-      "listingValidatedCommit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
-      "listingValidatedAt": "2026-10-08T23:58:26.131Z",
+      "listingValidatedCommit": "f6fd92d928c0bb2a22965e3e68152543ddcf4626",
+      "listingValidatedAt": "2026-10-10T00:19:05.492Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -316371,8 +316371,8 @@
         "pluginIds": [
           "renanmt.switch-magic"
         ],
-        "commit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
-        "checkedAt": "2026-10-08T23:58:26.131Z",
+        "commit": "f6fd92d928c0bb2a22965e3e68152543ddcf4626",
+        "checkedAt": "2026-10-10T00:19:05.492Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -316438,6 +316438,49 @@
             "reviewedAt": "2026-10-08T19:43:54.351Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
+          "validatedAt": "2026-10-08T23:58:26.131Z",
+          "branch": "main",
+          "supersededAt": "2026-10-10T00:19:05.492Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "renanmt/switch-magic",
+            "pluginIds": [
+              "renanmt.switch-magic"
+            ],
+            "commit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
+            "checkedAt": "2026-10-08T23:58:26.131Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "renanmt/switch-magic",
+            "pluginIds": [
+              "renanmt.switch-magic"
+            ],
+            "commit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-08T23:58:26.131Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-08T23:35:41.832Z",
+            "requestEventId": 32834580451,
+            "requestedAt": "2026-10-08T23:57:56Z",
+            "reviewedAt": "2026-10-08T23:58:26.131Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -316446,19 +316489,19 @@
         "pluginIds": [
           "renanmt.switch-magic"
         ],
-        "commit": "9cc51adf59bd4f3a2bd27e11825a65c55455c320",
+        "commit": "f6fd92d928c0bb2a22965e3e68152543ddcf4626",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-08T23:58:26.131Z",
+        "baselineCheckedAt": "2026-10-10T00:19:05.492Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-08T23:35:41.832Z",
-        "requestEventId": 32834580451,
-        "requestedAt": "2026-10-08T23:57:56Z",
-        "reviewedAt": "2026-10-08T23:58:26.131Z",
+        "reviewedBaselineCheckedAt": "2026-10-09T23:55:37.271Z",
+        "requestEventId": 32917788287,
+        "requestedAt": "2026-10-10T00:18:34Z",
+        "reviewedAt": "2026-10-10T00:19:05.492Z",
         "reviewer": "HANCORE-linux"
       }
     },
