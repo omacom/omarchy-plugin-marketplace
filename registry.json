@@ -322711,6 +322711,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/TaylorBurke/claude-strip",
+      "type": "plugin-source",
+      "addedAt": "2026-10-10",
+      "listedAt": "2026-10-10T20:00:59.098Z",
+      "listingValidatedCommit": "0d395374358cf0095d0bcbbba8010231a31f28e7",
+      "listingValidatedAt": "2026-10-10T20:00:59.098Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "taylorburke/claude-strip",
+        "pluginIds": [
+          "taylorburke.claude-strip"
+        ],
+        "commit": "0d395374358cf0095d0bcbbba8010231a31f28e7",
+        "checkedAt": "2026-10-10T20:00:58.958Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "taylorburke.claude-strip": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
