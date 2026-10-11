@@ -323789,6 +323789,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/angelherman0130-cell/omarchy-cronos-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-10-11",
+      "listedAt": "2026-10-11T01:26:35.132Z",
+      "listingValidatedCommit": "22203ec3c68853ac22868af21978e992561dbf75",
+      "listingValidatedAt": "2026-10-11T01:26:35.132Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "angelherman0130-cell/omarchy-cronos-calendar",
+        "pluginIds": [
+          "angelherman.cronos-calendar"
+        ],
+        "commit": "22203ec3c68853ac22868af21978e992561dbf75",
+        "checkedAt": "2026-10-11T01:26:34.998Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "angelherman0130-cell/omarchy-cronos-calendar",
+        "pluginIds": [
+          "angelherman.cronos-calendar"
+        ],
+        "commit": "22203ec3c68853ac22868af21978e992561dbf75",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-11T01:26:34.998Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-11T01:23:00.535Z",
+        "requestEventId": 32966127927,
+        "requestedAt": "2026-10-11T01:26:06Z",
+        "reviewedAt": "2026-10-11T01:26:34.998Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "angelherman.cronos-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
