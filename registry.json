@@ -49904,8 +49904,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-22",
       "listedAt": "2026-08-22T17:15:08.818Z",
-      "listingValidatedCommit": "8159655ee3bab50ae83fbbeed6e5bb7302909cdb",
-      "listingValidatedAt": "2026-08-22T17:15:08.818Z",
+      "listingValidatedCommit": "86ea5f7d5ca68b5d642bd07817b9aae1269e04fe",
+      "listingValidatedAt": "2026-10-11T01:31:49.911Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -49914,8 +49914,8 @@
         "pluginIds": [
           "jobo.big-cheese"
         ],
-        "commit": "8159655ee3bab50ae83fbbeed6e5bb7302909cdb",
-        "checkedAt": "2026-08-22T17:15:08.796Z",
+        "commit": "86ea5f7d5ca68b5d642bd07817b9aae1269e04fe",
+        "checkedAt": "2026-10-11T01:31:49.911Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -49931,7 +49931,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8159655ee3bab50ae83fbbeed6e5bb7302909cdb",
+          "validatedAt": "2026-08-22T17:15:08.818Z",
+          "branch": "main",
+          "supersededAt": "2026-10-11T01:31:49.911Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "oldjobobo/big-cheese",
+            "pluginIds": [
+              "jobo.big-cheese"
+            ],
+            "commit": "8159655ee3bab50ae83fbbeed6e5bb7302909cdb",
+            "checkedAt": "2026-08-22T17:15:08.796Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rodrix2000/omarchy-photodock",
