@@ -189622,7 +189622,11 @@
             "media",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Manual setup required: install the documented build dependencies, build the native renderer, and have an administrator install a matching independently reviewed marchybar-system package. Then run Device → Set up Touch Bar before enabling the Touch Bar. Follow the upstream README."
+          }
         }
       },
       "maintainerVerificationReview": {
