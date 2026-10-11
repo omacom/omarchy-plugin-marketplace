@@ -323732,6 +323732,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/auggnation/omarchy-auggment-display",
+      "type": "plugin-source",
+      "addedAt": "2026-10-11",
+      "listedAt": "2026-10-11T01:16:29.412Z",
+      "listingValidatedCommit": "d7c882cd1e43075c541fd7bbf4b535f67d05b0eb",
+      "listingValidatedAt": "2026-10-11T01:16:29.412Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "auggnation/omarchy-auggment-display",
+        "pluginIds": [
+          "io.github.auggnation.auggment-display"
+        ],
+        "commit": "d7c882cd1e43075c541fd7bbf4b535f67d05b0eb",
+        "checkedAt": "2026-10-11T01:16:29.316Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "auggnation/omarchy-auggment-display",
+        "pluginIds": [
+          "io.github.auggnation.auggment-display"
+        ],
+        "commit": "d7c882cd1e43075c541fd7bbf4b535f67d05b0eb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-11T01:16:29.316Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-11T01:12:00.939Z",
+        "requestEventId": 32965847094,
+        "requestedAt": "2026-10-11T01:16:01Z",
+        "reviewedAt": "2026-10-11T01:16:29.316Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.auggnation.auggment-display": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
