@@ -315228,8 +315228,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-07",
       "listedAt": "2026-10-07T22:31:11.541Z",
-      "listingValidatedCommit": "bb1d9058971115fa9032a3239d8ac0ac3b62b18f",
-      "listingValidatedAt": "2026-10-07T22:31:11.541Z",
+      "listingValidatedCommit": "1a23c22a7892b867c973d69691701112a964bcfe",
+      "listingValidatedAt": "2026-10-11T01:51:05.484Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -315238,8 +315238,8 @@
         "pluginIds": [
           "pomogo.timer"
         ],
-        "commit": "bb1d9058971115fa9032a3239d8ac0ac3b62b18f",
-        "checkedAt": "2026-10-07T22:31:11.402Z",
+        "commit": "1a23c22a7892b867c973d69691701112a964bcfe",
+        "checkedAt": "2026-10-11T01:51:05.484Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -315258,7 +315258,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "bb1d9058971115fa9032a3239d8ac0ac3b62b18f",
+          "validatedAt": "2026-10-07T22:31:11.541Z",
+          "branch": "main",
+          "supersededAt": "2026-10-11T01:51:05.484Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ibnu-afdel/omarchy-pomogo",
+            "pluginIds": [
+              "pomogo.timer"
+            ],
+            "commit": "bb1d9058971115fa9032a3239d8ac0ac3b62b18f",
+            "checkedAt": "2026-10-07T22:31:11.402Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Tuland/ominous",
