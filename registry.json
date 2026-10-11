@@ -289558,8 +289558,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T21:09:35.120Z",
-      "listingValidatedCommit": "7f74132292416ee9939fa31fd85be2543f683f94",
-      "listingValidatedAt": "2026-10-09T23:46:21.902Z",
+      "listingValidatedCommit": "4ff2afdf1c38ba84d20b47449a1456ad8dda8eeb",
+      "listingValidatedAt": "2026-10-11T01:05:51.661Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -289568,8 +289568,8 @@
         "pluginIds": [
           "seamlesscontrol.control"
         ],
-        "commit": "7f74132292416ee9939fa31fd85be2543f683f94",
-        "checkedAt": "2026-10-09T23:46:21.902Z",
+        "commit": "4ff2afdf1c38ba84d20b47449a1456ad8dda8eeb",
+        "checkedAt": "2026-10-11T01:05:51.661Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -289937,6 +289937,55 @@
             "reviewedAt": "2026-10-08T18:46:25.728Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7f74132292416ee9939fa31fd85be2543f683f94",
+          "validatedAt": "2026-10-09T23:46:21.902Z",
+          "branch": "main",
+          "supersededAt": "2026-10-11T01:05:51.661Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "purodelphi/seamlesscontrol",
+            "pluginIds": [
+              "seamlesscontrol.control"
+            ],
+            "commit": "7f74132292416ee9939fa31fd85be2543f683f94",
+            "checkedAt": "2026-10-09T23:46:21.902Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "purodelphi/seamlesscontrol",
+            "pluginIds": [
+              "seamlesscontrol.control"
+            ],
+            "commit": "7f74132292416ee9939fa31fd85be2543f683f94",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-09T23:46:21.902Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-09T17:36:17.885Z",
+            "requestEventId": 32916613651,
+            "requestedAt": "2026-10-09T23:45:53Z",
+            "reviewedAt": "2026-10-09T23:46:21.902Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -289945,10 +289994,10 @@
         "pluginIds": [
           "seamlesscontrol.control"
         ],
-        "commit": "7f74132292416ee9939fa31fd85be2543f683f94",
+        "commit": "4ff2afdf1c38ba84d20b47449a1456ad8dda8eeb",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-09T23:46:21.902Z",
+        "baselineCheckedAt": "2026-10-11T01:05:51.661Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -289957,10 +290006,10 @@
           "package-manager",
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-09T17:36:17.885Z",
-        "requestEventId": 32916613651,
-        "requestedAt": "2026-10-09T23:45:53Z",
-        "reviewedAt": "2026-10-09T23:46:21.902Z",
+        "reviewedBaselineCheckedAt": "2026-10-11T00:51:42.114Z",
+        "requestEventId": 32965529796,
+        "requestedAt": "2026-10-11T01:05:22Z",
+        "reviewedAt": "2026-10-11T01:05:51.661Z",
         "reviewer": "HANCORE-linux"
       }
     },
