@@ -321340,8 +321340,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T03:18:48.598Z",
-      "listingValidatedCommit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
-      "listingValidatedAt": "2026-10-10T21:38:44.541Z",
+      "listingValidatedCommit": "422bc5a3a6c4626b974d23b097790779a9277ff7",
+      "listingValidatedAt": "2026-10-11T00:44:42.570Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -321350,8 +321350,8 @@
         "pluginIds": [
           "matt-dance.gfn-omarchy"
         ],
-        "commit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
-        "checkedAt": "2026-10-10T21:38:44.541Z",
+        "commit": "422bc5a3a6c4626b974d23b097790779a9277ff7",
+        "checkedAt": "2026-10-11T00:44:42.570Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -321372,28 +321372,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "matt-dance/omarchy-gfn-menu-plugin",
-        "pluginIds": [
-          "matt-dance.gfn-omarchy"
-        ],
-        "commit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-10T21:38:44.541Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-10T21:02:35.807Z",
-        "requestEventId": 32959416687,
-        "requestedAt": "2026-10-10T21:38:20Z",
-        "reviewedAt": "2026-10-10T21:38:44.541Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -321440,8 +321418,75 @@
             "reviewedAt": "2026-10-10T03:18:48.473Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
+          "validatedAt": "2026-10-10T21:38:44.541Z",
+          "branch": "master",
+          "supersededAt": "2026-10-11T00:44:42.570Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "matt-dance/omarchy-gfn-menu-plugin",
+            "pluginIds": [
+              "matt-dance.gfn-omarchy"
+            ],
+            "commit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
+            "checkedAt": "2026-10-10T21:38:44.541Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "matt-dance/omarchy-gfn-menu-plugin",
+            "pluginIds": [
+              "matt-dance.gfn-omarchy"
+            ],
+            "commit": "bf8a9d0add392cca8d1460c45b20dcdd87563000",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-10T21:38:44.541Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-10T21:02:35.807Z",
+            "requestEventId": 32959416687,
+            "requestedAt": "2026-10-10T21:38:20Z",
+            "reviewedAt": "2026-10-10T21:38:44.541Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "matt-dance/omarchy-gfn-menu-plugin",
+        "pluginIds": [
+          "matt-dance.gfn-omarchy"
+        ],
+        "commit": "422bc5a3a6c4626b974d23b097790779a9277ff7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-11T00:44:42.570Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-11T00:26:19.701Z",
+        "requestEventId": 32964922140,
+        "requestedAt": "2026-10-11T00:44:13Z",
+        "reviewedAt": "2026-10-11T00:44:42.570Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/xpader/omarchy-coding-plan-usage",
