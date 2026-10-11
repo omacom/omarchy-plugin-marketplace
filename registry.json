@@ -323923,6 +323923,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nicknow/omarchy-nicknow-omatxtvw",
+      "type": "plugin-source",
+      "addedAt": "2026-10-11",
+      "listedAt": "2026-10-11T01:45:30.629Z",
+      "listingValidatedCommit": "cdee3a6c20b7caa8288f1db6eb208a2c02905cdf",
+      "listingValidatedAt": "2026-10-11T01:45:30.629Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nicknow/omarchy-nicknow-omatxtvw",
+        "pluginIds": [
+          "nicknow.omatxtvw"
+        ],
+        "commit": "cdee3a6c20b7caa8288f1db6eb208a2c02905cdf",
+        "checkedAt": "2026-10-11T01:45:30.503Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nicknow/omarchy-nicknow-omatxtvw",
+        "pluginIds": [
+          "nicknow.omatxtvw"
+        ],
+        "commit": "cdee3a6c20b7caa8288f1db6eb208a2c02905cdf",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-11T01:45:30.503Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-11T01:37:55.798Z",
+        "requestEventId": 32966618373,
+        "requestedAt": "2026-10-11T01:45:04Z",
+        "reviewedAt": "2026-10-11T01:45:30.504Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nicknow.omatxtvw": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
