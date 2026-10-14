@@ -117596,7 +117596,11 @@
             "quickshell",
             "bar"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "OmaFrames requires an ABI-matched HyprPM native host in addition to the Omarchy bar widget. Follow the upstream installation instructions to install both components."
+          }
         }
       }
     },
