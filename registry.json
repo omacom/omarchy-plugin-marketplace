@@ -70773,7 +70773,11 @@
             "system",
             "bar"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Tormarchy needs a one-time root setup after installing, and again after each update: it installs tor, its helper, a polkit rule and firewall rules. Follow the upstream installation instructions."
+          }
         }
       },
       "maintainerVerificationReview": {
