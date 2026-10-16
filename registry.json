@@ -178931,7 +178931,11 @@
             "quickshell",
             "system"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "OMAConnect requires the separately installed kcd-bin backend. Follow the upstream installation instructions before enabling the plugin."
+          }
         }
       },
       "listingValidationHistory": [
