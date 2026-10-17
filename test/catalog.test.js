@@ -13,6 +13,7 @@ import {
   catalogRefreshFailureMessage,
   catalogSourcePlan,
   communityInstall,
+  registryPresentation,
   currentCatalogApiUsage,
   failedSourcePlugins,
   githubApiFailure,
@@ -1398,4 +1399,12 @@ test("SHIBUMI is listed once as a manual shell suite", () => {
   assert.equal(shibumi.installCommand, "");
   assert.match(shibumi.previewImage, /^assets\/img\/plugins\/.*-detail\.webp$/);
   assert.match(shibumi.previewThumbnail, /^assets\/img\/plugins\/.*-card\.webp$/);
+});
+
+test("registry header logos reject foreign paths and remain separate from preview metadata", () => {
+  assert.deepEqual(registryPresentation({ headerLogo: "assets/img/logos/gaugedb.png", previewKind: "logo", previewThumbnail: "ignored" }), { headerLogo: "assets/img/logos/gaugedb.png", previewKind: "logo" });
+  for (const headerLogo of [true, "https://example.com/logo.png", "assets/img/logos/../logo.png", "assets/img/logos/logo.svg"]) {
+    assert.throws(() => registryPresentation({ headerLogo }), /Invalid registry header logo/);
+  }
+  assert.throws(() => registryPresentation({ previewKind: "html" }), /Invalid registry preview kind/);
 });
