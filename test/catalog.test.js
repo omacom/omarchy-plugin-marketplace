@@ -378,65 +378,63 @@ test("stars represent repository stars and are shared by plugins from the same r
 });
 
 test("root plugins default to Quattro while curated exceptions use manual setup", () => {
-  const overview = catalog.plugins.find((plugin) => plugin.id === "omarchy-overview");
-  assert.equal(
-    overview?.installCommand,
-    "omarchy plugin add https://github.com/AyushKr2003/omarchy-overview.git --enable",
-  );
-
-  const nearby = catalog.plugins.find((plugin) => plugin.id === "oma.nearby");
-  assert.equal(nearby?.repositoryLayout, "root-plugin");
-  assert.equal(nearby?.installAvailable, false);
-  assert.equal(nearby?.installCommand, "");
-  assert.equal(nearby?.status, "Manual setup");
-  assert.equal(
-    nearby?.installNote,
-    "Nearby requires a version-matched native helper. Follow the upstream installation instructions to install the plugin and helper together.",
-  );
-
-  const typeFlow = catalog.plugins.find((plugin) => plugin.id === "hypr-type-flow");
-  assert.equal(typeFlow?.repositoryLayout, "root-plugin");
-  assert.equal(typeFlow?.installAvailable, false);
-  assert.equal(typeFlow?.installCommand, "");
-  assert.equal(typeFlow?.status, "Manual setup");
-  assert.equal(
-    typeFlow?.installNote,
-    "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
-  );
-
-  const ytdl = catalog.plugins.find((entry) => entry.id === "bibek.ytdl");
-  assert.equal(ytdl?.repositoryLayout, "root-plugin");
-  assert.equal(ytdl?.installAvailable, false);
-  assert.equal(ytdl?.installCommand, "");
-  assert.equal(ytdl?.status, "Manual setup");
-  assert.equal(ytdl?.installNote, "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.");
-  const ytdlSource = registry.sources.find((source) => source.repo === "https://github.com/BibekBhusal0/omarchy-ytdl");
-  assert.deepEqual(ytdlSource?.plugins?.["bibek.ytdl"]?.installation, {
-    mode: "manual",
-    note: "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+  const fixture = { repo: "https://github.com/example/widget" };
+  assert.deepEqual(communityInstall(fixture, "manifest.json"), {
+    repositoryLayout: "root-plugin",
+    installAvailable: true,
+    installCommand: "omarchy plugin add https://github.com/example/widget.git --enable",
+    installNote: "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+  });
+  assert.deepEqual(communityInstall(fixture, "widgets/clock/manifest.json"), {
+    repositoryLayout: "monorepo",
+    installAvailable: false,
+    installCommand: "",
+    installNote: "Automatic installation is unavailable because this plugin is stored inside a multi-plugin repository without a transactional Omarchy update path.",
   });
 
-  for (const [id, repository] of [
-    ["nille.emeet-pixy", "https://github.com/nille/omarchy-emeet-pixy.git"],
-    ["ky.seerr-requests", "https://github.com/Kyrunner/omarchy-seerr-requests.git"],
-    ["tmn73.calendar", "https://github.com/tmn73/omarchy-calendar.git"],
-  ]) {
-    const plugin = catalog.plugins.find((entry) => entry.id === id);
-    assert.equal(plugin?.repositoryLayout, "root-plugin");
-    assert.equal(plugin?.installAvailable, true);
-    assert.equal(plugin?.installCommand, `omarchy plugin add ${repository} --enable`);
-    assert.equal(plugin?.status, "Available");
+  const sources = new Map();
+  for (const source of registry.sources) {
+    for (const id of Object.keys(source.plugins || {})) sources.set(id, source);
+    if (source.catalog?.id) sources.set(source.catalog.id, source);
   }
-
-  for (const id of ["omni", "quickapps-hud", "cliamp"]) {
-    const plugin = catalog.plugins.find((entry) => entry.id === id);
-    assert.equal(plugin?.repositoryLayout, "monorepo");
-    assert.equal(plugin?.installAvailable, false);
-    assert.equal(plugin?.installCommand, "");
+  let standard = 0;
+  let manual = 0;
+  for (const plugin of catalog.plugins.filter((entry) => !entry.builtIn)) {
+    const source = sources.get(plugin.id);
+    assert.ok(source, `${plugin.id} has a registry source`);
+    const standardCommand = `omarchy plugin add ${source.repo.endsWith(".git") ? source.repo : `${source.repo}.git`} --enable`;
+    assert.ok(["", standardCommand].includes(plugin.installCommand), `${plugin.id} publishes only the standard command`);
+    if (source.type === "suite") {
+      assert.equal(plugin.repositoryLayout, "suite", plugin.id);
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      continue;
+    }
+    const override = source.plugins[plugin.id].installation;
+    if (override) {
+      assert.deepEqual(Object.keys(override).sort(), ["mode", "note"], plugin.id);
+      assert.equal(override.mode, "manual", plugin.id);
+      assert.ok(override.note.trim(), plugin.id);
+      assert.equal(plugin.repositoryLayout, "root-plugin", plugin.id);
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      assert.equal(plugin.installCommand, "", plugin.id);
+      assert.equal(plugin.installNote, override.note, plugin.id);
+      if (plugin.upstreamCheckStatus === "passed") assert.equal(plugin.status, "Manual setup", plugin.id);
+      manual += 1;
+    } else if (plugin.repositoryLayout === "monorepo") {
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      assert.equal(plugin.installCommand, "", plugin.id);
+    } else if (plugin.upstreamCheckStatus === "passed") {
+      assert.equal(plugin.repositoryLayout, "root-plugin", plugin.id);
+      assert.equal(plugin.installAvailable, true, plugin.id);
+      assert.equal(plugin.installCommand, standardCommand, plugin.id);
+      assert.equal(plugin.status, "Available", plugin.id);
+      standard += 1;
+    }
   }
-  const lacuna = catalog.plugins.find((entry) => entry.id === "lacuna.shell-suite");
-  assert.equal(lacuna?.repositoryLayout, "suite");
-  assert.equal(lacuna?.installAvailable, false);
+  const overrides = registry.sources.flatMap((source) => Object.values(source.plugins || {})
+    .filter((plugin) => plugin.installation));
+  assert.equal(manual, overrides.length);
+  assert.ok(standard > 0);
 });
 
 test("install rate ranks by the Wilson lower bound of copies per view", () => {
