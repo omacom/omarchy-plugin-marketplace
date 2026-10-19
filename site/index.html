@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://plugins.omarchy.org/assets/img/omarchy-plugin-marketplace-preview.png">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261002-03">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261019-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -94,7 +94,7 @@
         </div>
       </section>
 
-      <section class="market-catalog" id="catalog" aria-labelledby="catalog-title" tabindex="-1">
+      <section class="market-catalog" id="catalog" aria-labelledby="catalog-title" tabindex="-1" aria-busy="true">
         <div class="catalog-heading">
           <div>
             <span class="page-eyebrow">Registry</span>
@@ -105,7 +105,7 @@
               <button type="button" data-view="cards" aria-pressed="true">Cards</button>
               <button type="button" data-view="split" aria-pressed="false">Split view</button>
             </div>
-            <p><span id="plugin-count">0</span> <span id="plugin-count-label">community plugins</span></p>
+            <p><span id="plugin-count">—</span> <span id="plugin-count-label">community plugins</span></p>
           </div>
         </div>
 
@@ -184,7 +184,7 @@
           <p>Try another search or clear the active filters.</p>
           <button class="button" id="empty-reset" type="button">Clear filters</button>
         </div>
-        <nav id="catalog-pagination" class="catalog-pagination" aria-label="Plugin result pages">
+        <nav id="catalog-pagination" class="catalog-pagination" aria-label="Plugin result pages" hidden>
           <button id="page-previous" class="pagination-button pagination-previous" type="button">
             <span class="pagination-direction"><span aria-hidden="true">←</span> Previous</span>
             <span id="page-previous-label" class="pagination-target">First page</span>
@@ -243,6 +243,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20261002-03"></script>
+    <script type="module" src="assets/js/app.js?v=20261019-01"></script>
   </body>
 </html>
