@@ -817,6 +817,21 @@
       "observedHeadCommit": "fe9cde297e8c6a425f271c14ffd83c370cb0311b",
       "observedBranch": "main",
       "observedAt": "2026-09-30T16:12:28.998Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "ryanrhughes/omapager",
+      "toRepository": "omacom/omapager",
+      "nodeId": "R_kgDOUPAQ-w",
+      "databaseId": 1357910267,
+      "pluginIds": [
+        "njpatel.omapager"
+      ],
+      "listedCommit": "6fe51b5ea84a172bb43a26a6dee67bdd9bef9d87",
+      "previousValidatedCommit": "c389e73516828d18f26e8efec2127c0c3dc3cb97",
+      "observedHeadCommit": "c389e73516828d18f26e8efec2127c0c3dc3cb97",
+      "observedBranch": "main",
+      "observedAt": "2026-10-19T11:28:44.119Z"
     }
   ],
   "sources": [
@@ -169636,13 +169651,14 @@
       }
     },
     {
-      "repo": "https://github.com/ryanrhughes/omapager",
+      "repo": "https://github.com/omacom/omapager",
       "repositoryIdentity": {
         "schemaVersion": 1,
         "nodeId": "R_kgDOUPAQ-w",
         "databaseId": 1357910267,
         "previousRepositories": [
-          "njpatel/omapager"
+          "njpatel/omapager",
+          "ryanrhughes/omapager"
         ]
       },
       "type": "plugin-source",
