@@ -340643,11 +340643,13 @@
         "com.gaugedb.search": {
           "category": "Widgets",
           "tags": [
-            "bar",
             "games",
+            "bar",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "headerLogo": "assets/img/logos/gaugedb.png",
+          "previewKind": "logo"
         }
       },
       "listingValidationHistory": [

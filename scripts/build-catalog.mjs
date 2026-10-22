@@ -45,7 +45,7 @@ export const catalogRefreshGraphqlPointsPerBatchReserve = 10;
 const catalogRefreshGraphqlAttempts = 3;
 const catalogRefreshRestBudgetAttempts = 3;
 export const catalogRefreshRestBudgetReserve = 500;
-export const catalogSourceValidationVersion = 1;
+export const catalogSourceValidationVersion = 3;
 const accents = ["lime", "amber", "coral", "cyan", "violet", "rose"];
 const supportedKinds = new Set(["bar", "bar-widget", "menu", "overlay", "panel", "service"]);
 const supportedPreviewFormats = new Set(["png", "jpeg", "webp", "avif", "heif"]);
@@ -1356,8 +1356,16 @@ function categoryFor(kinds = []) {
   return "Other";
 }
 
-function registryPresentation(overrides = {}) {
-  const allowed = ["category", "tags", "accent", "initials", "kind"];
+export function registryPresentation(overrides = {}) {
+  if (overrides.headerLogo !== undefined
+    && (typeof overrides.headerLogo !== "string"
+      || !/^assets\/img\/logos\/[a-zA-Z0-9_-]+\.png$/.test(overrides.headerLogo))) {
+    throw new Error("Invalid registry header logo: expected a local PNG in assets/img/logos");
+  }
+  if (overrides.previewKind !== undefined && !["logo", "screenshot"].includes(overrides.previewKind)) {
+    throw new Error("Invalid registry preview kind");
+  }
+  const allowed = ["category", "tags", "accent", "initials", "kind", "headerLogo", "previewKind"];
   return Object.fromEntries(
     allowed
       .filter((field) => overrides[field] !== undefined)

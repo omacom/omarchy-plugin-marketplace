@@ -325,3 +325,19 @@ test("built-in plugin author renders as plain text", () => {
   assert.match(html, /<span>by Example Maintainer<\/span>/);
   assert.doesNotMatch(html, /<a href="index\.html\?author=/);
 });
+
+
+test("separate header logo stays independent of screenshot previews with initials fallback", () => {
+  const logo = { headerLogo: "assets/img/logos/gaugedb.png" };
+  const html = render({ ...logo, previewThumbnail: "assets/img/plugins/example-card.webp", previewImage: "assets/img/plugins/example-detail.webp" });
+  assert.match(html, /data-detail-logo src="assets\/img\/logos\/gaugedb\.png" alt=""/);
+  assert.match(html, /class="detail-icon" aria-hidden="true">CP<img/);
+  assert.match(html, /alt="Community Plugin desktop preview"/);
+  assert.match(render({ ...logo, previewImage: "assets/img/plugins/changed-detail.webp" }), /data-detail-logo src="assets\/img\/logos\/gaugedb\.png"/);
+  assert.match(render(logo), /data-detail-logo/);
+  assert.match(render({ ...logo, previewKind: "logo", previewImage: "assets/img/plugins/example-detail.webp" }), /alt="Community Plugin logo"/);
+  for (const headerLogo of ["https://example.com/logo.png", "//example.com/logo.png", "assets/img/logos/../logo.png", "assets/img/logos/logo.svg", "assets/img/logos/logo.png?x=1"]) {
+    assert.doesNotMatch(render({ headerLogo }), /data-detail-logo/);
+  }
+  assert.doesNotMatch(render({ previewThumbnail: "assets/img/plugins/example-card.webp" }), /data-detail-logo/);
+});
