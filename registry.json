@@ -219388,7 +219388,11 @@
             "media",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Needs TDLib, which Arch does not package. After installing the plugin, run ~/.config/omarchy/plugins/reidenxerx.omagram/bin/omagram-build-tdlib once (about ten minutes; needs git, cmake, gperf, clang, openssl and zlib). It builds TDLib 1.8.67 into ~/.local/share/omagram/lib without root. Full steps are in the README."
+          }
         }
       },
       "maintainerVerificationReview": {
