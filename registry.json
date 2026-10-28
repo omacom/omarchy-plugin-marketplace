@@ -387759,6 +387759,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ramoncardena/omaisessions",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:17:28.361Z",
+      "listingValidatedCommit": "54de139f023c9b0502756a4d239533e3a9e128f8",
+      "listingValidatedAt": "2026-10-28T19:17:28.361Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ramoncardena/omaisessions",
+        "pluginIds": [
+          "io.github.ramoncardena.omaisessions"
+        ],
+        "commit": "54de139f023c9b0502756a4d239533e3a9e128f8",
+        "checkedAt": "2026-10-28T19:17:28.197Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ramoncardena.omaisessions": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
