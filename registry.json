@@ -356211,8 +356211,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-15",
       "listedAt": "2026-10-15T20:03:22.355Z",
-      "listingValidatedCommit": "48b5848e5b1728eb51aa0b8831570a90921fb786",
-      "listingValidatedAt": "2026-10-28T14:41:04.427Z",
+      "listingValidatedCommit": "597b9d7f7159c375fc08f06ae66fa1a6b5a9095d",
+      "listingValidatedAt": "2026-10-28T18:02:42.011Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -356221,8 +356221,8 @@
         "pluginIds": [
           "crmne.files"
         ],
-        "commit": "48b5848e5b1728eb51aa0b8831570a90921fb786",
-        "checkedAt": "2026-10-28T14:41:04.427Z",
+        "commit": "597b9d7f7159c375fc08f06ae66fa1a6b5a9095d",
+        "checkedAt": "2026-10-28T18:02:42.011Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -356294,6 +356294,26 @@
             ],
             "commit": "32be4e859c8136c2e1298335f7badfd5156df3aa",
             "checkedAt": "2026-10-21T14:44:33.921Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "48b5848e5b1728eb51aa0b8831570a90921fb786",
+          "validatedAt": "2026-10-28T14:41:04.427Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T18:02:42.011Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crmne/omarchy-files",
+            "pluginIds": [
+              "crmne.files"
+            ],
+            "commit": "48b5848e5b1728eb51aa0b8831570a90921fb786",
+            "checkedAt": "2026-10-28T14:41:04.427Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
