@@ -377724,8 +377724,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-25",
       "listedAt": "2026-10-25T22:18:50.716Z",
-      "listingValidatedCommit": "dd157165fdfb148514c0e8521ef7050246b4c018",
-      "listingValidatedAt": "2026-10-27T23:31:38.739Z",
+      "listingValidatedCommit": "ca5108819e7a7bf62d8eb1626d9bf41d16b518c4",
+      "listingValidatedAt": "2026-10-28T18:12:44.158Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -377734,8 +377734,8 @@
         "pluginIds": [
           "io.github.scharchian.labyterm"
         ],
-        "commit": "dd157165fdfb148514c0e8521ef7050246b4c018",
-        "checkedAt": "2026-10-27T23:31:38.739Z",
+        "commit": "ca5108819e7a7bf62d8eb1626d9bf41d16b518c4",
+        "checkedAt": "2026-10-28T18:12:44.158Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -377757,28 +377757,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "scharchian/omarchy-labyterm",
-        "pluginIds": [
-          "io.github.scharchian.labyterm"
-        ],
-        "commit": "dd157165fdfb148514c0e8521ef7050246b4c018",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-27T23:31:38.739Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T22:06:20.141Z",
-        "requestEventId": 34420673501,
-        "requestedAt": "2026-10-27T22:56:25Z",
-        "reviewedAt": "2026-10-27T23:31:38.739Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -377825,8 +377803,75 @@
             "reviewedAt": "2026-10-25T22:18:50.343Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "dd157165fdfb148514c0e8521ef7050246b4c018",
+          "validatedAt": "2026-10-27T23:31:38.739Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T18:12:44.158Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "scharchian/omarchy-labyterm",
+            "pluginIds": [
+              "io.github.scharchian.labyterm"
+            ],
+            "commit": "dd157165fdfb148514c0e8521ef7050246b4c018",
+            "checkedAt": "2026-10-27T23:31:38.739Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "scharchian/omarchy-labyterm",
+            "pluginIds": [
+              "io.github.scharchian.labyterm"
+            ],
+            "commit": "dd157165fdfb148514c0e8521ef7050246b4c018",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-27T23:31:38.739Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T22:06:20.141Z",
+            "requestEventId": 34420673501,
+            "requestedAt": "2026-10-27T22:56:25Z",
+            "reviewedAt": "2026-10-27T23:31:38.739Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "scharchian/omarchy-labyterm",
+        "pluginIds": [
+          "io.github.scharchian.labyterm"
+        ],
+        "commit": "ca5108819e7a7bf62d8eb1626d9bf41d16b518c4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T18:12:44.158Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T16:33:13.744Z",
+        "requestEventId": 34501262625,
+        "requestedAt": "2026-10-28T17:19:51Z",
+        "reviewedAt": "2026-10-28T18:12:44.158Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/yaeloss/omapgp",
