@@ -315944,8 +315944,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-04",
       "listedAt": "2026-10-04T23:13:50.491Z",
-      "listingValidatedCommit": "ee8d6783eaeca0e4c7c178aac5cadc3e9b58cccc",
-      "listingValidatedAt": "2026-10-11T22:42:27.232Z",
+      "listingValidatedCommit": "16a8c2aba5cdc4bd3ff9199051f00e13b720b863",
+      "listingValidatedAt": "2026-10-28T17:34:00.322Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -315954,8 +315954,8 @@
         "pluginIds": [
           "io.github.qempexe.dev-stats"
         ],
-        "commit": "ee8d6783eaeca0e4c7c178aac5cadc3e9b58cccc",
-        "checkedAt": "2026-10-11T22:42:27.232Z",
+        "commit": "16a8c2aba5cdc4bd3ff9199051f00e13b720b863",
+        "checkedAt": "2026-10-28T17:34:00.321Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -316007,6 +316007,26 @@
             ],
             "commit": "0212c2088efc5e0f59d939be7dd953b8dcb1b699",
             "checkedAt": "2026-10-07T19:54:39.659Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "ee8d6783eaeca0e4c7c178aac5cadc3e9b58cccc",
+          "validatedAt": "2026-10-11T22:42:27.232Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T17:34:00.322Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-dev-stats",
+            "pluginIds": [
+              "io.github.qempexe.dev-stats"
+            ],
+            "commit": "ee8d6783eaeca0e4c7c178aac5cadc3e9b58cccc",
+            "checkedAt": "2026-10-11T22:42:27.232Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
