@@ -387886,6 +387886,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Felipe-martins-s/omarchy-device-battery",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:36:23.046Z",
+      "listingValidatedCommit": "78781e320526f9571d8557a2a4e0945cc5383fa3",
+      "listingValidatedAt": "2026-10-28T19:36:23.046Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "felipe-martins-s/omarchy-device-battery",
+        "pluginIds": [
+          "flpems.device-battery"
+        ],
+        "commit": "78781e320526f9571d8557a2a4e0945cc5383fa3",
+        "checkedAt": "2026-10-28T19:36:22.900Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "felipe-martins-s/omarchy-device-battery",
+        "pluginIds": [
+          "flpems.device-battery"
+        ],
+        "commit": "78781e320526f9571d8557a2a4e0945cc5383fa3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T19:36:22.900Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T16:49:23.757Z",
+        "requestEventId": 34511518499,
+        "requestedAt": "2026-10-28T19:18:31Z",
+        "reviewedAt": "2026-10-28T19:36:22.900Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "flpems.device-battery": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
