@@ -388008,6 +388008,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Robertg761/Omarchy-Dualsense",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:45:57.687Z",
+      "listingValidatedCommit": "0c90e7caf12ee32ddae55a799dc15bd89c36123c",
+      "listingValidatedAt": "2026-10-28T19:45:57.687Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "robertg761/omarchy-dualsense",
+        "pluginIds": [
+          "io.github.robertg761.dualsense"
+        ],
+        "commit": "0c90e7caf12ee32ddae55a799dc15bd89c36123c",
+        "checkedAt": "2026-10-28T19:45:57.503Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "robertg761/omarchy-dualsense",
+        "pluginIds": [
+          "io.github.robertg761.dualsense"
+        ],
+        "commit": "0c90e7caf12ee32ddae55a799dc15bd89c36123c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T19:45:57.503Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T16:53:14.890Z",
+        "requestEventId": 34511610173,
+        "requestedAt": "2026-10-28T19:19:37Z",
+        "reviewedAt": "2026-10-28T19:45:57.503Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.robertg761.dualsense": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "games",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
