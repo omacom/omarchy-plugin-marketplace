@@ -387793,6 +387793,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dakai/omarchy-ai-passport-voice",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:23:19.374Z",
+      "listingValidatedCommit": "7e0c5892fae4e41ed89fb0ca3de9477337350907",
+      "listingValidatedAt": "2026-10-28T19:23:19.374Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dakai/omarchy-ai-passport-voice",
+        "pluginIds": [
+          "manchunx7.ai-passport-voice"
+        ],
+        "commit": "7e0c5892fae4e41ed89fb0ca3de9477337350907",
+        "checkedAt": "2026-10-28T19:23:19.261Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dakai/omarchy-ai-passport-voice",
+        "pluginIds": [
+          "manchunx7.ai-passport-voice"
+        ],
+        "commit": "7e0c5892fae4e41ed89fb0ca3de9477337350907",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T19:23:19.261Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T17:14:26.737Z",
+        "requestEventId": 34511412964,
+        "requestedAt": "2026-10-28T19:17:18Z",
+        "reviewedAt": "2026-10-28T19:23:19.261Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "manchunx7.ai-passport-voice": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
