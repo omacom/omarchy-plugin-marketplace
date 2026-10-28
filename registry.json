@@ -278478,8 +278478,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T18:49:49.700Z",
-      "listingValidatedCommit": "d64a0ced14533370a29c6be31bb940151316cb4c",
-      "listingValidatedAt": "2026-10-26T15:33:10.384Z",
+      "listingValidatedCommit": "df36e0f10d08f08e0025f1ec88949a8ed7fce9b7",
+      "listingValidatedAt": "2026-10-28T16:08:13.752Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -278488,8 +278488,8 @@
         "pluginIds": [
           "ubruckhaus.simple-tile"
         ],
-        "commit": "d64a0ced14533370a29c6be31bb940151316cb4c",
-        "checkedAt": "2026-10-26T15:33:10.384Z",
+        "commit": "df36e0f10d08f08e0025f1ec88949a8ed7fce9b7",
+        "checkedAt": "2026-10-28T16:08:13.752Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -278661,6 +278661,26 @@
             ],
             "commit": "942f2e9d79061ec07425b7772372df431e85a2e5",
             "checkedAt": "2026-10-21T20:42:18.707Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "d64a0ced14533370a29c6be31bb940151316cb4c",
+          "validatedAt": "2026-10-26T15:33:10.384Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T16:08:13.752Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ubruckhaus/omarchy-simple-tile",
+            "pluginIds": [
+              "ubruckhaus.simple-tile"
+            ],
+            "commit": "d64a0ced14533370a29c6be31bb940151316cb4c",
+            "checkedAt": "2026-10-26T15:33:10.384Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
