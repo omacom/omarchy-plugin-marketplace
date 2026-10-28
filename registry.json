@@ -387945,6 +387945,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/conree/Omarchy_Look_and_Feel",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:41:12.422Z",
+      "listingValidatedCommit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+      "listingValidatedAt": "2026-10-28T19:41:12.422Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "conree/omarchy_look_and_feel",
+        "pluginIds": [
+          "si.omarchy-look-and-feel"
+        ],
+        "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+        "checkedAt": "2026-10-28T19:41:12.317Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "conree/omarchy_look_and_feel",
+        "pluginIds": [
+          "si.omarchy-look-and-feel"
+        ],
+        "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T19:41:12.317Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T16:41:42.907Z",
+        "requestEventId": 34511566278,
+        "requestedAt": "2026-10-28T19:19:05Z",
+        "reviewedAt": "2026-10-28T19:41:12.317Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "si.omarchy-look-and-feel": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
