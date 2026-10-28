@@ -387099,6 +387099,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TonciZ/omarchy-agents-budget",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T16:47:59.876Z",
+      "listingValidatedCommit": "685e7b4990338af4e574bcbe54f020c574bac62f",
+      "listingValidatedAt": "2026-10-28T16:47:59.876Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tonciz/omarchy-agents-budget",
+        "pluginIds": [
+          "io.github.tonciz.agents-budget"
+        ],
+        "commit": "685e7b4990338af4e574bcbe54f020c574bac62f",
+        "checkedAt": "2026-10-28T16:47:59.689Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tonciz.agents-budget": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
