@@ -332553,8 +332553,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-08",
       "listedAt": "2026-10-08T10:03:27.501Z",
-      "listingValidatedCommit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
-      "listingValidatedAt": "2026-10-28T00:17:53.285Z",
+      "listingValidatedCommit": "919f6970b6e27aec1e03a342c45a6a633e00795e",
+      "listingValidatedAt": "2026-10-28T17:01:40.652Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -332563,8 +332563,8 @@
         "pluginIds": [
           "meviusisback.ente-auth"
         ],
-        "commit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
-        "checkedAt": "2026-10-28T00:17:53.284Z",
+        "commit": "919f6970b6e27aec1e03a342c45a6a633e00795e",
+        "checkedAt": "2026-10-28T17:01:40.652Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -332673,6 +332673,49 @@
             "reviewedAt": "2026-10-27T18:11:40.193Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
+          "validatedAt": "2026-10-28T00:17:53.285Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T17:01:40.652Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "meviusisback/omarchy-ente-auth-dropdown",
+            "pluginIds": [
+              "meviusisback.ente-auth"
+            ],
+            "commit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
+            "checkedAt": "2026-10-28T00:17:53.284Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "meviusisback/omarchy-ente-auth-dropdown",
+            "pluginIds": [
+              "meviusisback.ente-auth"
+            ],
+            "commit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T00:17:53.284Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T20:22:57.584Z",
+            "requestEventId": 34423789708,
+            "requestedAt": "2026-10-27T23:46:06Z",
+            "reviewedAt": "2026-10-28T00:17:53.285Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -332681,19 +332724,19 @@
         "pluginIds": [
           "meviusisback.ente-auth"
         ],
-        "commit": "c7b070c6307d83688317b3eb64dbba3f5a722ceb",
+        "commit": "919f6970b6e27aec1e03a342c45a6a633e00795e",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T00:17:53.284Z",
+        "baselineCheckedAt": "2026-10-28T17:01:40.652Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-27T20:22:57.584Z",
-        "requestEventId": 34423789708,
-        "requestedAt": "2026-10-27T23:46:06Z",
-        "reviewedAt": "2026-10-28T00:17:53.285Z",
+        "reviewedBaselineCheckedAt": "2026-10-28T14:06:40.917Z",
+        "requestEventId": 34496870500,
+        "requestedAt": "2026-10-28T16:31:51Z",
+        "reviewedAt": "2026-10-28T17:01:40.652Z",
         "reviewer": "HANCORE-linux"
       }
     },
