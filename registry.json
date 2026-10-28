@@ -308055,8 +308055,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-03",
       "listedAt": "2026-10-03T11:49:47.828Z",
-      "listingValidatedCommit": "5d2d1abc8145a90131cecd1d110593393946d524",
-      "listingValidatedAt": "2026-10-03T11:49:47.828Z",
+      "listingValidatedCommit": "a0cee6c86a791c6d8306347507c2e91e097cdb38",
+      "listingValidatedAt": "2026-10-28T20:17:42.054Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -308065,8 +308065,8 @@
         "pluginIds": [
           "io.github.brucolomer.omaclaude"
         ],
-        "commit": "5d2d1abc8145a90131cecd1d110593393946d524",
-        "checkedAt": "2026-10-03T11:49:47.727Z",
+        "commit": "a0cee6c86a791c6d8306347507c2e91e097cdb38",
+        "checkedAt": "2026-10-28T20:17:42.054Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -308074,28 +308074,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "brucolomer/omaclaude",
-        "pluginIds": [
-          "io.github.brucolomer.omaclaude"
-        ],
-        "commit": "5d2d1abc8145a90131cecd1d110593393946d524",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T11:49:47.727Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-03T11:29:24.064Z",
-        "requestEventId": 32395145504,
-        "requestedAt": "2026-10-03T11:46:28Z",
-        "reviewedAt": "2026-10-03T11:49:47.727Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.brucolomer.omaclaude": {
@@ -308110,7 +308088,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brucolomer/omaclaude",
+        "pluginIds": [
+          "io.github.brucolomer.omaclaude"
+        ],
+        "commit": "a0cee6c86a791c6d8306347507c2e91e097cdb38",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T20:17:42.054Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-24T14:46:07.646Z",
+        "requestEventId": 34512929914,
+        "requestedAt": "2026-10-28T19:35:13Z",
+        "reviewedAt": "2026-10-28T20:17:42.054Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5d2d1abc8145a90131cecd1d110593393946d524",
+          "validatedAt": "2026-10-03T11:49:47.828Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:17:42.054Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "brucolomer/omaclaude",
+            "pluginIds": [
+              "io.github.brucolomer.omaclaude"
+            ],
+            "commit": "5d2d1abc8145a90131cecd1d110593393946d524",
+            "checkedAt": "2026-10-03T11:49:47.727Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "brucolomer/omaclaude",
+            "pluginIds": [
+              "io.github.brucolomer.omaclaude"
+            ],
+            "commit": "5d2d1abc8145a90131cecd1d110593393946d524",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-03T11:49:47.727Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-03T11:29:24.064Z",
+            "requestEventId": 32395145504,
+            "requestedAt": "2026-10-03T11:46:28Z",
+            "reviewedAt": "2026-10-03T11:49:47.727Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/powerk1977/omarchy-lms",
