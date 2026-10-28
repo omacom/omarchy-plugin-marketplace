@@ -278027,8 +278027,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T17:00:04.128Z",
-      "listingValidatedCommit": "8a047f3c89360e82bbe33b64e98679719177c984",
-      "listingValidatedAt": "2026-10-17T17:24:24.823Z",
+      "listingValidatedCommit": "7b3a258c190331d26e92f81705b66a92fa7f3761",
+      "listingValidatedAt": "2026-10-28T21:13:17.095Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -278037,8 +278037,8 @@
         "pluginIds": [
           "io.github.mapski.proton-authenticator"
         ],
-        "commit": "8a047f3c89360e82bbe33b64e98679719177c984",
-        "checkedAt": "2026-10-17T17:24:24.823Z",
+        "commit": "7b3a258c190331d26e92f81705b66a92fa7f3761",
+        "checkedAt": "2026-10-28T21:13:17.095Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -278059,28 +278059,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mapski/omarchy.proton.auth.git-plugin",
-        "pluginIds": [
-          "io.github.mapski.proton-authenticator"
-        ],
-        "commit": "8a047f3c89360e82bbe33b64e98679719177c984",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-17T17:24:24.823Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-17T16:33:26.037Z",
-        "requestEventId": 33531670361,
-        "requestedAt": "2026-10-17T17:21:12Z",
-        "reviewedAt": "2026-10-17T17:24:24.823Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -278127,8 +278105,75 @@
             "reviewedAt": "2026-09-28T17:00:04.024Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "8a047f3c89360e82bbe33b64e98679719177c984",
+          "validatedAt": "2026-10-17T17:24:24.823Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T21:13:17.095Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mapski/omarchy.proton.auth.git-plugin",
+            "pluginIds": [
+              "io.github.mapski.proton-authenticator"
+            ],
+            "commit": "8a047f3c89360e82bbe33b64e98679719177c984",
+            "checkedAt": "2026-10-17T17:24:24.823Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mapski/omarchy.proton.auth.git-plugin",
+            "pluginIds": [
+              "io.github.mapski.proton-authenticator"
+            ],
+            "commit": "8a047f3c89360e82bbe33b64e98679719177c984",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-17T17:24:24.823Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-17T16:33:26.037Z",
+            "requestEventId": 33531670361,
+            "requestedAt": "2026-10-17T17:21:12Z",
+            "reviewedAt": "2026-10-17T17:24:24.823Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mapski/omarchy.proton.auth.git-plugin",
+        "pluginIds": [
+          "io.github.mapski.proton-authenticator"
+        ],
+        "commit": "7b3a258c190331d26e92f81705b66a92fa7f3761",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T21:13:17.095Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-24T03:03:03.260Z",
+        "requestEventId": 34515663683,
+        "requestedAt": "2026-10-28T20:08:47Z",
+        "reviewedAt": "2026-10-28T21:13:17.095Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/muslimtify-org/muslimtify-omarchy",
