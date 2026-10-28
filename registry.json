@@ -100487,8 +100487,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-28",
       "listedAt": "2026-08-28T14:54:10.904Z",
-      "listingValidatedCommit": "d26163d6a6c76936223f7c529fa664b92f224405",
-      "listingValidatedAt": "2026-10-14T11:52:30.475Z",
+      "listingValidatedCommit": "e7adb134da74fe753ab1fa3fe59d1bb0cd7eea49",
+      "listingValidatedAt": "2026-10-28T20:49:47.494Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -100497,8 +100497,8 @@
         "pluginIds": [
           "themo.mail-inbox"
         ],
-        "commit": "d26163d6a6c76936223f7c529fa664b92f224405",
-        "checkedAt": "2026-10-14T11:52:30.475Z",
+        "commit": "e7adb134da74fe753ab1fa3fe59d1bb0cd7eea49",
+        "checkedAt": "2026-10-28T20:49:47.494Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -100780,6 +100780,49 @@
             "reviewedAt": "2026-10-06T04:46:29.044Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "d26163d6a6c76936223f7c529fa664b92f224405",
+          "validatedAt": "2026-10-14T11:52:30.475Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:49:47.494Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mario-mohar/omarchy-mail-inbox",
+            "pluginIds": [
+              "themo.mail-inbox"
+            ],
+            "commit": "d26163d6a6c76936223f7c529fa664b92f224405",
+            "checkedAt": "2026-10-14T11:52:30.475Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mario-mohar/omarchy-mail-inbox",
+            "pluginIds": [
+              "themo.mail-inbox"
+            ],
+            "commit": "d26163d6a6c76936223f7c529fa664b92f224405",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-14T11:52:30.475Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-14T09:40:09.859Z",
+            "requestEventId": 33222388238,
+            "requestedAt": "2026-10-14T11:52:00Z",
+            "reviewedAt": "2026-10-14T11:52:30.475Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -100788,19 +100831,19 @@
         "pluginIds": [
           "themo.mail-inbox"
         ],
-        "commit": "d26163d6a6c76936223f7c529fa664b92f224405",
+        "commit": "e7adb134da74fe753ab1fa3fe59d1bb0cd7eea49",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-14T11:52:30.475Z",
+        "baselineCheckedAt": "2026-10-28T20:49:47.494Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-14T09:40:09.859Z",
-        "requestEventId": 33222388238,
-        "requestedAt": "2026-10-14T11:52:00Z",
-        "reviewedAt": "2026-10-14T11:52:30.475Z",
+        "reviewedBaselineCheckedAt": "2026-10-28T18:12:00.121Z",
+        "requestEventId": 34513906054,
+        "requestedAt": "2026-10-28T19:47:10Z",
+        "reviewedAt": "2026-10-28T20:49:47.494Z",
         "reviewer": "HANCORE-linux"
       }
     },
