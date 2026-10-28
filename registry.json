@@ -388359,6 +388359,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dpetrariu/omamich",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T20:33:55.377Z",
+      "listingValidatedCommit": "d8363937d657f53970341353b3c6f51fff616a08",
+      "listingValidatedAt": "2026-10-28T20:33:55.377Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dpetrariu/omamich",
+        "pluginIds": [
+          "dpetrariu.omamich"
+        ],
+        "commit": "d8363937d657f53970341353b3c6f51fff616a08",
+        "checkedAt": "2026-10-28T20:33:55.267Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dpetrariu/omamich",
+        "pluginIds": [
+          "dpetrariu.omamich"
+        ],
+        "commit": "d8363937d657f53970341353b3c6f51fff616a08",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T20:33:55.267Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T19:39:11.549Z",
+        "requestEventId": 34513709428,
+        "requestedAt": "2026-10-28T19:44:48Z",
+        "reviewedAt": "2026-10-28T20:33:55.268Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dpetrariu.omamich": {
+          "category": "Other",
+          "tags": [
+            "media",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
