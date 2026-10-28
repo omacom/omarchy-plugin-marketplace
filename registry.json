@@ -388983,6 +388983,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/broken-branch/omarchy-dvb",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T21:48:42.749Z",
+      "listingValidatedCommit": "8cadbf3bafbc360c271709ffa0b056c574a60bd8",
+      "listingValidatedAt": "2026-10-28T21:48:42.749Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "broken-branch/omarchy-dvb",
+        "pluginIds": [
+          "io.github.broken-branch.dvb"
+        ],
+        "commit": "8cadbf3bafbc360c271709ffa0b056c574a60bd8",
+        "checkedAt": "2026-10-28T21:48:42.563Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "broken-branch/omarchy-dvb",
+        "pluginIds": [
+          "io.github.broken-branch.dvb"
+        ],
+        "commit": "8cadbf3bafbc360c271709ffa0b056c574a60bd8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T21:48:42.563Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-27T23:13:15.857Z",
+        "requestEventId": 34522453946,
+        "requestedAt": "2026-10-28T21:32:53Z",
+        "reviewedAt": "2026-10-28T21:48:42.563Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.broken-branch.dvb": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
