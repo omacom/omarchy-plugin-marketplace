@@ -373334,8 +373334,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-21",
       "listedAt": "2026-10-21T14:16:59.071Z",
-      "listingValidatedCommit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
-      "listingValidatedAt": "2026-10-28T00:26:02.826Z",
+      "listingValidatedCommit": "a2ccca8520b7368241dc71d4d8832da36b7f02d1",
+      "listingValidatedAt": "2026-10-28T17:06:50.913Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -373344,8 +373344,8 @@
         "pluginIds": [
           "meviusisback.bitwarden"
         ],
-        "commit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
-        "checkedAt": "2026-10-28T00:26:02.826Z",
+        "commit": "a2ccca8520b7368241dc71d4d8832da36b7f02d1",
+        "checkedAt": "2026-10-28T17:06:50.913Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -373367,27 +373367,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "meviusisback/omarchy-bitwarden-dropdown",
-        "pluginIds": [
-          "meviusisback.bitwarden"
-        ],
-        "commit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T00:26:02.826Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T20:22:32.371Z",
-        "requestEventId": 34423812174,
-        "requestedAt": "2026-10-27T23:46:26Z",
-        "reviewedAt": "2026-10-28T00:26:02.826Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -373432,8 +373411,72 @@
             "reviewedAt": "2026-10-21T14:16:58.894Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
+          "validatedAt": "2026-10-28T00:26:02.826Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T17:06:50.913Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "meviusisback/omarchy-bitwarden-dropdown",
+            "pluginIds": [
+              "meviusisback.bitwarden"
+            ],
+            "commit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
+            "checkedAt": "2026-10-28T00:26:02.826Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "meviusisback/omarchy-bitwarden-dropdown",
+            "pluginIds": [
+              "meviusisback.bitwarden"
+            ],
+            "commit": "c1b89246d305c0372efe65873ec006ae7ad149ba",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T00:26:02.826Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T20:22:32.371Z",
+            "requestEventId": 34423812174,
+            "requestedAt": "2026-10-27T23:46:26Z",
+            "reviewedAt": "2026-10-28T00:26:02.826Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "meviusisback/omarchy-bitwarden-dropdown",
+        "pluginIds": [
+          "meviusisback.bitwarden"
+        ],
+        "commit": "a2ccca8520b7368241dc71d4d8832da36b7f02d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T17:06:50.913Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T14:06:38.111Z",
+        "requestEventId": 34497114021,
+        "requestedAt": "2026-10-28T16:34:19Z",
+        "reviewedAt": "2026-10-28T17:06:50.913Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/fterenas/omarchy-omasound-airplay",
