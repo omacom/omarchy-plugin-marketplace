@@ -333591,8 +333591,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-08",
       "listedAt": "2026-10-08T12:59:46.421Z",
-      "listingValidatedCommit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
-      "listingValidatedAt": "2026-10-11T07:07:37.944Z",
+      "listingValidatedCommit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+      "listingValidatedAt": "2026-10-28T20:59:31.715Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -333601,8 +333601,8 @@
         "pluginIds": [
           "heast13.downtime"
         ],
-        "commit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
-        "checkedAt": "2026-10-11T07:07:37.944Z",
+        "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+        "checkedAt": "2026-10-28T20:59:31.715Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -333716,6 +333716,51 @@
             "reviewedAt": "2026-10-08T17:46:06.895Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
+          "validatedAt": "2026-10-11T07:07:37.944Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:59:31.715Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "heast13/omarchy-downtime",
+            "pluginIds": [
+              "heast13.downtime"
+            ],
+            "commit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
+            "checkedAt": "2026-10-11T07:07:37.944Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "heast13/omarchy-downtime",
+            "pluginIds": [
+              "heast13.downtime"
+            ],
+            "commit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-11T07:07:37.944Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-11T06:38:49.355Z",
+            "requestEventId": 32975046077,
+            "requestedAt": "2026-10-11T07:07:02Z",
+            "reviewedAt": "2026-10-11T07:07:37.944Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -333724,20 +333769,20 @@
         "pluginIds": [
           "heast13.downtime"
         ],
-        "commit": "a67dad63b9aeec9ecde1dcd2316c6e40344de86e",
+        "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-11T07:07:37.944Z",
+        "baselineCheckedAt": "2026-10-28T20:59:31.715Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management",
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-11T06:38:49.355Z",
-        "requestEventId": 32975046077,
-        "requestedAt": "2026-10-11T07:07:02Z",
-        "reviewedAt": "2026-10-11T07:07:37.944Z",
+        "reviewedBaselineCheckedAt": "2026-10-24T04:08:25.027Z",
+        "requestEventId": 34514571223,
+        "requestedAt": "2026-10-28T19:55:20Z",
+        "reviewedAt": "2026-10-28T20:59:31.715Z",
         "reviewer": "HANCORE-linux"
       }
     },
