@@ -260972,8 +260972,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T15:24:07.917Z",
-      "listingValidatedCommit": "bcc20394e1472c827367da99b460a015f1d39cba",
-      "listingValidatedAt": "2026-10-26T09:42:58.309Z",
+      "listingValidatedCommit": "141afb09e11702b7c124437ccc07d3ba8389ba94",
+      "listingValidatedAt": "2026-10-28T17:56:26.399Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -260982,8 +260982,8 @@
         "pluginIds": [
           "ttt.olook"
         ],
-        "commit": "bcc20394e1472c827367da99b460a015f1d39cba",
-        "checkedAt": "2026-10-26T09:42:58.309Z",
+        "commit": "141afb09e11702b7c124437ccc07d3ba8389ba94",
+        "checkedAt": "2026-10-28T17:56:26.399Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -261001,28 +261001,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "tinitinyterminator/olook",
-        "pluginIds": [
-          "ttt.olook"
-        ],
-        "commit": "bcc20394e1472c827367da99b460a015f1d39cba",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T09:42:58.309Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-22T13:58:51.738Z",
-        "requestEventId": 34243973565,
-        "requestedAt": "2026-10-26T09:38:34Z",
-        "reviewedAt": "2026-10-26T09:42:58.309Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -261069,8 +261047,75 @@
             "reviewedAt": "2026-09-26T15:24:07.823Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "bcc20394e1472c827367da99b460a015f1d39cba",
+          "validatedAt": "2026-10-26T09:42:58.309Z",
+          "branch": "master",
+          "supersededAt": "2026-10-28T17:56:26.399Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tinitinyterminator/olook",
+            "pluginIds": [
+              "ttt.olook"
+            ],
+            "commit": "bcc20394e1472c827367da99b460a015f1d39cba",
+            "checkedAt": "2026-10-26T09:42:58.309Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "tinitinyterminator/olook",
+            "pluginIds": [
+              "ttt.olook"
+            ],
+            "commit": "bcc20394e1472c827367da99b460a015f1d39cba",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T09:42:58.309Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-22T13:58:51.738Z",
+            "requestEventId": 34243973565,
+            "requestedAt": "2026-10-26T09:38:34Z",
+            "reviewedAt": "2026-10-26T09:42:58.309Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tinitinyterminator/olook",
+        "pluginIds": [
+          "ttt.olook"
+        ],
+        "commit": "141afb09e11702b7c124437ccc07d3ba8389ba94",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T17:56:26.399Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T15:12:17.896Z",
+        "requestEventId": 34499979237,
+        "requestedAt": "2026-10-28T17:05:36Z",
+        "reviewedAt": "2026-10-28T17:56:26.399Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/G-Pappas/vid2mp3",
