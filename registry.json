@@ -388071,6 +388071,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/leewynne/omanym",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:50:30.292Z",
+      "listingValidatedCommit": "6408806034401d5e7f4cdbde8d7f42975d432de9",
+      "listingValidatedAt": "2026-10-28T19:50:30.292Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "leewynne/omanym",
+        "pluginIds": [
+          "leewynne.omanym"
+        ],
+        "commit": "6408806034401d5e7f4cdbde8d7f42975d432de9",
+        "checkedAt": "2026-10-28T19:50:30.140Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "leewynne.omanym": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
