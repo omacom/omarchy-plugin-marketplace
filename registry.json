@@ -389101,6 +389101,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/minimap",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:00:54.995Z",
+      "listingValidatedCommit": "7272df7916bceb1a3113495e744f51e3c8926130",
+      "listingValidatedAt": "2026-10-28T22:00:54.995Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/minimap",
+        "pluginIds": [
+          "jgarza.minimap"
+        ],
+        "commit": "7272df7916bceb1a3113495e744f51e3c8926130",
+        "checkedAt": "2026-10-28T22:00:54.828Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jgarza.minimap": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
