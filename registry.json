@@ -147187,8 +147187,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T21:51:00.102Z",
-      "listingValidatedCommit": "d58371f92d5aff15d26eb9711487cdce67500f79",
-      "listingValidatedAt": "2026-10-02T13:37:50.265Z",
+      "listingValidatedCommit": "d1ae3bb45f7242fd05fbddb2d724b8c40510e0a2",
+      "listingValidatedAt": "2026-10-28T21:31:55.210Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -147197,8 +147197,8 @@
         "pluginIds": [
           "io.github.iamfitsum.omarchy-proton-vpn"
         ],
-        "commit": "d58371f92d5aff15d26eb9711487cdce67500f79",
-        "checkedAt": "2026-10-02T13:37:50.265Z",
+        "commit": "d1ae3bb45f7242fd05fbddb2d724b8c40510e0a2",
+        "checkedAt": "2026-10-28T21:31:55.210Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -147303,6 +147303,49 @@
             "reviewedAt": "2026-10-02T10:33:24.957Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "d58371f92d5aff15d26eb9711487cdce67500f79",
+          "validatedAt": "2026-10-02T13:37:50.265Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T21:31:55.210Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "iamfitsum/omarchy-proton-vpn",
+            "pluginIds": [
+              "io.github.iamfitsum.omarchy-proton-vpn"
+            ],
+            "commit": "d58371f92d5aff15d26eb9711487cdce67500f79",
+            "checkedAt": "2026-10-02T13:37:50.265Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "iamfitsum/omarchy-proton-vpn",
+            "pluginIds": [
+              "io.github.iamfitsum.omarchy-proton-vpn"
+            ],
+            "commit": "d58371f92d5aff15d26eb9711487cdce67500f79",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T13:37:50.265Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-02T12:35:37.733Z",
+            "requestEventId": 32335240231,
+            "requestedAt": "2026-10-02T12:59:45Z",
+            "reviewedAt": "2026-10-02T13:37:50.265Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -147311,19 +147354,19 @@
         "pluginIds": [
           "io.github.iamfitsum.omarchy-proton-vpn"
         ],
-        "commit": "d58371f92d5aff15d26eb9711487cdce67500f79",
+        "commit": "d1ae3bb45f7242fd05fbddb2d724b8c40510e0a2",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T13:37:50.265Z",
+        "baselineCheckedAt": "2026-10-28T21:31:55.210Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-02T12:35:37.733Z",
-        "requestEventId": 32335240231,
-        "requestedAt": "2026-10-02T12:59:45Z",
-        "reviewedAt": "2026-10-02T13:37:50.265Z",
+        "reviewedBaselineCheckedAt": "2026-10-28T19:40:55.252Z",
+        "requestEventId": 34517353508,
+        "requestedAt": "2026-10-28T20:28:59Z",
+        "reviewedAt": "2026-10-28T21:31:55.210Z",
         "reviewer": "HANCORE-linux"
       }
     },
