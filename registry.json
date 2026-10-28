@@ -281545,8 +281545,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-29",
       "listedAt": "2026-09-29T09:39:21.546Z",
-      "listingValidatedCommit": "0f3219c0774b100290a2195bf6200c2e364a5488",
-      "listingValidatedAt": "2026-09-29T09:39:21.546Z",
+      "listingValidatedCommit": "eb8d8b7aad23993a83b729934e1ec3986a709f79",
+      "listingValidatedAt": "2026-10-28T20:54:03.577Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -281555,8 +281555,8 @@
         "pluginIds": [
           "io.github.dandiccf.x1-touch"
         ],
-        "commit": "0f3219c0774b100290a2195bf6200c2e364a5488",
-        "checkedAt": "2026-09-29T09:39:21.429Z",
+        "commit": "eb8d8b7aad23993a83b729934e1ec3986a709f79",
+        "checkedAt": "2026-10-28T20:54:03.577Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -281565,29 +281565,6 @@
           "package-manager",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dandiccf/omarchy-x1-touch",
-        "pluginIds": [
-          "io.github.dandiccf.x1-touch"
-        ],
-        "commit": "0f3219c0774b100290a2195bf6200c2e364a5488",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-29T09:39:21.429Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-29T09:24:56.152Z",
-        "requestEventId": 32066978387,
-        "requestedAt": "2026-09-29T09:31:39Z",
-        "reviewedAt": "2026-09-29T09:39:21.429Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.dandiccf.x1-touch": {
@@ -281603,7 +281580,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dandiccf/omarchy-x1-touch",
+        "pluginIds": [
+          "io.github.dandiccf.x1-touch"
+        ],
+        "commit": "eb8d8b7aad23993a83b729934e1ec3986a709f79",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T20:54:03.577Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-25T12:13:18.782Z",
+        "requestEventId": 34514052630,
+        "requestedAt": "2026-10-28T19:48:59Z",
+        "reviewedAt": "2026-10-28T20:54:03.577Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0f3219c0774b100290a2195bf6200c2e364a5488",
+          "validatedAt": "2026-09-29T09:39:21.546Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:54:03.577Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dandiccf/omarchy-x1-touch",
+            "pluginIds": [
+              "io.github.dandiccf.x1-touch"
+            ],
+            "commit": "0f3219c0774b100290a2195bf6200c2e364a5488",
+            "checkedAt": "2026-09-29T09:39:21.429Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dandiccf/omarchy-x1-touch",
+            "pluginIds": [
+              "io.github.dandiccf.x1-touch"
+            ],
+            "commit": "0f3219c0774b100290a2195bf6200c2e364a5488",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-29T09:39:21.429Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-29T09:24:56.152Z",
+            "requestEventId": 32066978387,
+            "requestedAt": "2026-09-29T09:31:39Z",
+            "reviewedAt": "2026-09-29T09:39:21.429Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Andrewx82/omarchy-googletv",
