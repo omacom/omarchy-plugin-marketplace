@@ -366960,8 +366960,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T05:12:58.863Z",
-      "listingValidatedCommit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
-      "listingValidatedAt": "2026-10-19T05:12:58.863Z",
+      "listingValidatedCommit": "394196cbddc4e78c8de1024d2b783523d9cefb7a",
+      "listingValidatedAt": "2026-10-28T21:36:18.415Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -366970,8 +366970,8 @@
         "pluginIds": [
           "io.miilo.bar"
         ],
-        "commit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
-        "checkedAt": "2026-10-19T05:12:58.721Z",
+        "commit": "394196cbddc4e78c8de1024d2b783523d9cefb7a",
+        "checkedAt": "2026-10-28T21:36:18.415Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -366979,28 +366979,6 @@
           "installer",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "miilo-ai/miilo-omarchy-plugin",
-        "pluginIds": [
-          "io.miilo.bar"
-        ],
-        "commit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-19T05:12:58.721Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-19T05:09:59.457Z",
-        "requestEventId": 33612508746,
-        "requestedAt": "2026-10-19T05:12:33Z",
-        "reviewedAt": "2026-10-19T05:12:58.721Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.miilo.bar": {
@@ -367014,7 +366992,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "miilo-ai/miilo-omarchy-plugin",
+        "pluginIds": [
+          "io.miilo.bar"
+        ],
+        "commit": "394196cbddc4e78c8de1024d2b783523d9cefb7a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T21:36:18.415Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-24T22:01:23.328Z",
+        "requestEventId": 34517995605,
+        "requestedAt": "2026-10-28T20:36:56Z",
+        "reviewedAt": "2026-10-28T21:36:18.415Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
+          "validatedAt": "2026-10-19T05:12:58.863Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T21:36:18.415Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "miilo-ai/miilo-omarchy-plugin",
+            "pluginIds": [
+              "io.miilo.bar"
+            ],
+            "commit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
+            "checkedAt": "2026-10-19T05:12:58.721Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "miilo-ai/miilo-omarchy-plugin",
+            "pluginIds": [
+              "io.miilo.bar"
+            ],
+            "commit": "d6f410cbdae4428328d0e2f4bd721b1d2d386118",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-19T05:12:58.721Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-19T05:09:59.457Z",
+            "requestEventId": 33612508746,
+            "requestedAt": "2026-10-19T05:12:33Z",
+            "reviewedAt": "2026-10-19T05:12:58.721Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Dankestrick/OmaJournal",
