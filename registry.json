@@ -386388,8 +386388,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T01:30:07.209Z",
-      "listingValidatedCommit": "f22176b03ccea839e08797facaccd3b21e60cc4f",
-      "listingValidatedAt": "2026-10-28T01:30:07.209Z",
+      "listingValidatedCommit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+      "listingValidatedAt": "2026-10-28T21:23:31.587Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -386398,12 +386398,14 @@
         "pluginIds": [
           "io.github.heast13.kyrr"
         ],
-        "commit": "f22176b03ccea839e08797facaccd3b21e60cc4f",
-        "checkedAt": "2026-10-28T01:30:07.086Z",
-        "outcome": "passed",
+        "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+        "checkedAt": "2026-10-28T21:23:31.587Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "remote-build"
+        ]
       },
       "plugins": {
         "io.github.heast13.kyrr": {
@@ -386419,7 +386421,50 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "heast13/omarchy-kyrr",
+        "pluginIds": [
+          "io.github.heast13.kyrr"
+        ],
+        "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T21:23:31.587Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T19:58:54.964Z",
+        "requestEventId": 34516144069,
+        "requestedAt": "2026-10-28T20:14:37Z",
+        "reviewedAt": "2026-10-28T21:23:31.587Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f22176b03ccea839e08797facaccd3b21e60cc4f",
+          "validatedAt": "2026-10-28T01:30:07.209Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T21:23:31.587Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "heast13/omarchy-kyrr",
+            "pluginIds": [
+              "io.github.heast13.kyrr"
+            ],
+            "commit": "f22176b03ccea839e08797facaccd3b21e60cc4f",
+            "checkedAt": "2026-10-28T01:30:07.086Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jagrat7/omarchy-tts-local",
