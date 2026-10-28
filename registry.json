@@ -385575,8 +385575,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T01:11:40.365Z",
-      "listingValidatedCommit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
-      "listingValidatedAt": "2026-10-28T01:11:40.365Z",
+      "listingValidatedCommit": "7279e7c722472de158e4744808db5ea8e7c538a2",
+      "listingValidatedAt": "2026-10-28T17:45:25.612Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -385585,8 +385585,8 @@
         "pluginIds": [
           "dagelf.vampireslayer"
         ],
-        "commit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
-        "checkedAt": "2026-10-28T01:11:40.276Z",
+        "commit": "7279e7c722472de158e4744808db5ea8e7c538a2",
+        "checkedAt": "2026-10-28T17:45:25.612Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -385596,30 +385596,6 @@
           "package-manager",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dagelf/vampireslayer",
-        "pluginIds": [
-          "dagelf.vampireslayer"
-        ],
-        "commit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T01:11:40.276Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege",
-          "package-manager",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T23:47:51.670Z",
-        "requestEventId": 34426379815,
-        "requestedAt": "2026-10-28T00:30:42Z",
-        "reviewedAt": "2026-10-28T01:11:40.276Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "dagelf.vampireslayer": {
@@ -385631,7 +385607,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dagelf/vampireslayer",
+        "pluginIds": [
+          "dagelf.vampireslayer"
+        ],
+        "commit": "7279e7c722472de158e4744808db5ea8e7c538a2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T17:45:25.612Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T15:04:30.081Z",
+        "requestEventId": 34499644698,
+        "requestedAt": "2026-10-28T17:01:52Z",
+        "reviewedAt": "2026-10-28T17:45:25.612Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
+          "validatedAt": "2026-10-28T01:11:40.365Z",
+          "branch": "master",
+          "supersededAt": "2026-10-28T17:45:25.612Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dagelf/vampireslayer",
+            "pluginIds": [
+              "dagelf.vampireslayer"
+            ],
+            "commit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
+            "checkedAt": "2026-10-28T01:11:40.276Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "package-manager",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dagelf/vampireslayer",
+            "pluginIds": [
+              "dagelf.vampireslayer"
+            ],
+            "commit": "2dc1d0b3fdcf834b79dd22aa2e1e806d497d02a6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T01:11:40.276Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "package-manager",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T23:47:51.670Z",
+            "requestEventId": 34426379815,
+            "requestedAt": "2026-10-28T00:30:42Z",
+            "reviewedAt": "2026-10-28T01:11:40.276Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/bjornramberg/omarchy-power-flow",
