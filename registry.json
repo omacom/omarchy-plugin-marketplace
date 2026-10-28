@@ -387854,6 +387854,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/apuyana/omarchy-companion-display",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T19:29:57.179Z",
+      "listingValidatedCommit": "e273282f89ef8d1a19b6470c71a6000e3c1d79cd",
+      "listingValidatedAt": "2026-10-28T19:29:57.179Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "apuyana/omarchy-companion-display",
+        "pluginIds": [
+          "apuyana.companion-display"
+        ],
+        "commit": "e273282f89ef8d1a19b6470c71a6000e3c1d79cd",
+        "checkedAt": "2026-10-28T19:29:57.033Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "apuyana.companion-display": {
+          "category": "Desktop",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
