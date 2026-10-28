@@ -309181,8 +309181,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-03",
       "listedAt": "2026-10-03T14:39:47.164Z",
-      "listingValidatedCommit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
-      "listingValidatedAt": "2026-10-03T14:39:47.164Z",
+      "listingValidatedCommit": "16b54d2e3c061714d6541b219deb906e112c5c9e",
+      "listingValidatedAt": "2026-10-28T21:05:28.961Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -309191,35 +309191,14 @@
         "pluginIds": [
           "aperture"
         ],
-        "commit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
-        "checkedAt": "2026-10-03T14:39:47.083Z",
+        "commit": "16b54d2e3c061714d6541b219deb906e112c5c9e",
+        "checkedAt": "2026-10-28T21:05:28.961Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "tomismeta/omarchy-aperture",
-        "pluginIds": [
-          "aperture"
-        ],
-        "commit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T14:39:47.083Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-03T14:31:24.888Z",
-        "requestEventId": 32400851943,
-        "requestedAt": "2026-10-03T14:35:54Z",
-        "reviewedAt": "2026-10-03T14:39:47.083Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "aperture": {
@@ -309235,7 +309214,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tomismeta/omarchy-aperture",
+        "pluginIds": [
+          "aperture"
+        ],
+        "commit": "16b54d2e3c061714d6541b219deb906e112c5c9e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T21:05:28.961Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-25T04:14:44.090Z",
+        "requestEventId": 34515210759,
+        "requestedAt": "2026-10-28T20:03:15Z",
+        "reviewedAt": "2026-10-28T21:05:28.961Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
+          "validatedAt": "2026-10-03T14:39:47.164Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T21:05:28.961Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tomismeta/omarchy-aperture",
+            "pluginIds": [
+              "aperture"
+            ],
+            "commit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
+            "checkedAt": "2026-10-03T14:39:47.083Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "tomismeta/omarchy-aperture",
+            "pluginIds": [
+              "aperture"
+            ],
+            "commit": "f0a1aa79a40d1b133c06a15dbe6fb626a8a173e4",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-03T14:39:47.083Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-03T14:31:24.888Z",
+            "requestEventId": 32400851943,
+            "requestedAt": "2026-10-03T14:35:54Z",
+            "reviewedAt": "2026-10-03T14:39:47.083Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Andrewx82/omarchy-rewind",
