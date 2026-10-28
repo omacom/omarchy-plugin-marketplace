@@ -389418,6 +389418,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hes0s/omarchy-headphones",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T23:06:42.936Z",
+      "listingValidatedCommit": "9d39122d875a3f989b47b972c2e6e7f6b4b8b7c4",
+      "listingValidatedAt": "2026-10-28T23:06:42.936Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hes0s/omarchy-headphones",
+        "pluginIds": [
+          "eh0.headphones"
+        ],
+        "commit": "9d39122d875a3f989b47b972c2e6e7f6b4b8b7c4",
+        "checkedAt": "2026-10-28T23:06:42.760Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "eh0.headphones": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
