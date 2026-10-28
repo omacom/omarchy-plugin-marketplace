@@ -389385,6 +389385,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Tsukun3x/omarchy-debt-ledger",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:58:52.394Z",
+      "listingValidatedCommit": "cd9220e0324b49cd21eb81d8e5d4845b50d3c4d0",
+      "listingValidatedAt": "2026-10-28T22:58:52.394Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tsukun3x/omarchy-debt-ledger",
+        "pluginIds": [
+          "bruce.debt-ledger"
+        ],
+        "commit": "cd9220e0324b49cd21eb81d8e5d4845b50d3c4d0",
+        "checkedAt": "2026-10-28T22:58:52.220Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bruce.debt-ledger": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
