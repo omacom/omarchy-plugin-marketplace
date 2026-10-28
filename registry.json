@@ -389256,6 +389256,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/hlsovpp",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:17:26.708Z",
+      "listingValidatedCommit": "f304a137abb40e1b5dd79a92b356c71b525aa003",
+      "listingValidatedAt": "2026-10-28T22:17:26.708Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/hlsovpp",
+        "pluginIds": [
+          "jgarza.hlsovpp"
+        ],
+        "commit": "f304a137abb40e1b5dd79a92b356c71b525aa003",
+        "checkedAt": "2026-10-28T22:17:26.514Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/hlsovpp",
+        "pluginIds": [
+          "jgarza.hlsovpp"
+        ],
+        "commit": "f304a137abb40e1b5dd79a92b356c71b525aa003",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T22:17:26.514Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T21:43:20.636Z",
+        "requestEventId": 34526091593,
+        "requestedAt": "2026-10-28T22:16:56Z",
+        "reviewedAt": "2026-10-28T22:17:26.514Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jgarza.hlsovpp": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
