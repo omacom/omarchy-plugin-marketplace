@@ -389316,6 +389316,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/clinic",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:32:53.071Z",
+      "listingValidatedCommit": "db783e3983affa6cf72535230fac81c1f2b9f4b8",
+      "listingValidatedAt": "2026-10-28T22:32:53.071Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/clinic",
+        "pluginIds": [
+          "jgarza.clinic"
+        ],
+        "commit": "db783e3983affa6cf72535230fac81c1f2b9f4b8",
+        "checkedAt": "2026-10-28T22:32:52.931Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/clinic",
+        "pluginIds": [
+          "jgarza.clinic"
+        ],
+        "commit": "db783e3983affa6cf72535230fac81c1f2b9f4b8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T22:32:52.931Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T22:05:47.215Z",
+        "requestEventId": 34527217093,
+        "requestedAt": "2026-10-28T22:32:17Z",
+        "reviewedAt": "2026-10-28T22:32:52.931Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jgarza.clinic": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
