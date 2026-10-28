@@ -388167,6 +388167,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/borferkic/obs-status-guard",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T20:06:42.631Z",
+      "listingValidatedCommit": "0dbe7310a29a55b2fb60d2a55a531e7025b79313",
+      "listingValidatedAt": "2026-10-28T20:06:42.631Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "borferkic/obs-status-guard",
+        "pluginIds": [
+          "io.github.borferkic.obs-status-guard"
+        ],
+        "commit": "0dbe7310a29a55b2fb60d2a55a531e7025b79313",
+        "checkedAt": "2026-10-28T20:06:42.455Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.borferkic.obs-status-guard": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
