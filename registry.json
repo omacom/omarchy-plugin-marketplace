@@ -352522,8 +352522,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-14",
       "listedAt": "2026-10-14T20:31:03.539Z",
-      "listingValidatedCommit": "f14c14497268087d71ff0a0f49bbf22995f1e61e",
-      "listingValidatedAt": "2026-10-14T20:31:03.539Z",
+      "listingValidatedCommit": "2e6fd5e1747773965d391d0b4a5565bc4cd5c42d",
+      "listingValidatedAt": "2026-10-28T16:32:01.547Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -352532,8 +352532,8 @@
         "pluginIds": [
           "kb.calculator"
         ],
-        "commit": "f14c14497268087d71ff0a0f49bbf22995f1e61e",
-        "checkedAt": "2026-10-14T20:31:03.403Z",
+        "commit": "2e6fd5e1747773965d391d0b4a5565bc4cd5c42d",
+        "checkedAt": "2026-10-28T16:32:01.547Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -352548,7 +352548,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f14c14497268087d71ff0a0f49bbf22995f1e61e",
+          "validatedAt": "2026-10-14T20:31:03.539Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T16:32:01.547Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "adnahl/kb.calculator",
+            "pluginIds": [
+              "kb.calculator"
+            ],
+            "commit": "f14c14497268087d71ff0a0f49bbf22995f1e61e",
+            "checkedAt": "2026-10-14T20:31:03.403Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/renanmt/sokobanchy",
