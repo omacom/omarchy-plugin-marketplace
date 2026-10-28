@@ -105455,8 +105455,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-29",
       "listedAt": "2026-08-29T16:52:11.232Z",
-      "listingValidatedCommit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
-      "listingValidatedAt": "2026-09-11T14:03:38.221Z",
+      "listingValidatedCommit": "e0e4a06dbab09f304e310e37a91e76b19989f774",
+      "listingValidatedAt": "2026-10-28T20:43:43.329Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -105465,8 +105465,8 @@
         "pluginIds": [
           "themo.nfl"
         ],
-        "commit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
-        "checkedAt": "2026-09-11T14:03:38.221Z",
+        "commit": "e0e4a06dbab09f304e310e37a91e76b19989f774",
+        "checkedAt": "2026-10-28T20:43:43.329Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -105613,6 +105613,49 @@
             "reviewedAt": "2026-09-02T00:33:16.567Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
+          "validatedAt": "2026-09-11T14:03:38.221Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:43:43.329Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mario-mohar/omarchy-nfl",
+            "pluginIds": [
+              "themo.nfl"
+            ],
+            "commit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
+            "checkedAt": "2026-09-11T14:03:38.221Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mario-mohar/omarchy-nfl",
+            "pluginIds": [
+              "themo.nfl"
+            ],
+            "commit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-11T14:03:38.221Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-10T09:36:58.803Z",
+            "requestEventId": 30974444383,
+            "requestedAt": "2026-09-11T13:24:51Z",
+            "reviewedAt": "2026-09-11T14:03:38.221Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -105621,19 +105664,19 @@
         "pluginIds": [
           "themo.nfl"
         ],
-        "commit": "6c3d86e92c937da3d6712258824bf936b30e0c31",
+        "commit": "e0e4a06dbab09f304e310e37a91e76b19989f774",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-11T14:03:38.221Z",
+        "baselineCheckedAt": "2026-10-28T20:43:43.329Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-10T09:36:58.803Z",
-        "requestEventId": 30974444383,
-        "requestedAt": "2026-09-11T13:24:51Z",
-        "reviewedAt": "2026-09-11T14:03:38.221Z",
+        "reviewedBaselineCheckedAt": "2026-10-28T18:13:56.832Z",
+        "requestEventId": 34513821584,
+        "requestedAt": "2026-10-28T19:46:08Z",
+        "reviewedAt": "2026-10-28T20:43:43.329Z",
         "reviewer": "HANCORE-linux"
       }
     },
