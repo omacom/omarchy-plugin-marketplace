@@ -29501,8 +29501,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T18:30:35.067Z",
-      "listingValidatedCommit": "e90fe57b8ac87cd9bb95088151fe7b0403ea9b58",
-      "listingValidatedAt": "2026-10-12T04:56:26.818Z",
+      "listingValidatedCommit": "35c5f52cbf4fa517266f89999d8150adc7fc3a4d",
+      "listingValidatedAt": "2026-10-28T20:28:06.588Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -29511,8 +29511,8 @@
         "pluginIds": [
           "tenzin.live-wallpaper"
         ],
-        "commit": "e90fe57b8ac87cd9bb95088151fe7b0403ea9b58",
-        "checkedAt": "2026-10-12T04:56:26.818Z",
+        "commit": "35c5f52cbf4fa517266f89999d8150adc7fc3a4d",
+        "checkedAt": "2026-10-28T20:28:06.588Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -29583,6 +29583,26 @@
             ],
             "commit": "7f7d893c6ce1e31b593e1c1539434bd5073ccd35",
             "checkedAt": "2026-09-03T22:58:34.200Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "e90fe57b8ac87cd9bb95088151fe7b0403ea9b58",
+          "validatedAt": "2026-10-12T04:56:26.818Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T20:28:06.588Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "yesheytenzin/live-wallpaper",
+            "pluginIds": [
+              "tenzin.live-wallpaper"
+            ],
+            "commit": "e90fe57b8ac87cd9bb95088151fe7b0403ea9b58",
+            "checkedAt": "2026-10-12T04:56:26.818Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
