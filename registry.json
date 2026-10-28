@@ -380867,8 +380867,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T07:41:43.236Z",
-      "listingValidatedCommit": "e6eba25c08f9e1ed81a6fe67cd62410f99906721",
-      "listingValidatedAt": "2026-10-26T07:41:43.236Z",
+      "listingValidatedCommit": "7bf25a95f574a32fb598b7ad2bcb3a60bd8667ba",
+      "listingValidatedAt": "2026-10-28T18:07:11.251Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -380877,8 +380877,8 @@
         "pluginIds": [
           "martellj.thermoslop"
         ],
-        "commit": "e6eba25c08f9e1ed81a6fe67cd62410f99906721",
-        "checkedAt": "2026-10-26T07:41:43.146Z",
+        "commit": "7bf25a95f574a32fb598b7ad2bcb3a60bd8667ba",
+        "checkedAt": "2026-10-28T18:07:11.251Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -380897,7 +380897,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e6eba25c08f9e1ed81a6fe67cd62410f99906721",
+          "validatedAt": "2026-10-26T07:41:43.236Z",
+          "branch": "main",
+          "supersededAt": "2026-10-28T18:07:11.251Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "martellj/thermoslop-omarchy",
+            "pluginIds": [
+              "martellj.thermoslop"
+            ],
+            "commit": "e6eba25c08f9e1ed81a6fe67cd62410f99906721",
+            "checkedAt": "2026-10-26T07:41:43.146Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/zaheen4/opencode-usage",
