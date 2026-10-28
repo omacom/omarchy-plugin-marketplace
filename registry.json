@@ -386762,6 +386762,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/tarax28/omarchy-blip",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T16:03:24.963Z",
+      "listingValidatedCommit": "8c462963f5f388715c0664ab8fb18a90b7b19206",
+      "listingValidatedAt": "2026-10-28T16:03:24.963Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tarax28/omarchy-blip",
+        "pluginIds": [
+          "tarax.blip"
+        ],
+        "commit": "8c462963f5f388715c0664ab8fb18a90b7b19206",
+        "checkedAt": "2026-10-28T16:03:24.820Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tarax28/omarchy-blip",
+        "pluginIds": [
+          "tarax.blip"
+        ],
+        "commit": "8c462963f5f388715c0664ab8fb18a90b7b19206",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T16:03:24.820Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T14:48:00.610Z",
+        "requestEventId": 34493527994,
+        "requestedAt": "2026-10-28T15:57:05Z",
+        "reviewedAt": "2026-10-28T16:03:24.820Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tarax.blip": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
