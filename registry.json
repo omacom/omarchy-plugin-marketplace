@@ -389196,6 +389196,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/loadout",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:10:05.454Z",
+      "listingValidatedCommit": "df13a5a92d7183d18c2512a341c0e87484b599f9",
+      "listingValidatedAt": "2026-10-28T22:10:05.454Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/loadout",
+        "pluginIds": [
+          "jgarza.loadout"
+        ],
+        "commit": "df13a5a92d7183d18c2512a341c0e87484b599f9",
+        "checkedAt": "2026-10-28T22:10:05.278Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/loadout",
+        "pluginIds": [
+          "jgarza.loadout"
+        ],
+        "commit": "df13a5a92d7183d18c2512a341c0e87484b599f9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T22:10:05.278Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T21:43:17.881Z",
+        "requestEventId": 34524910415,
+        "requestedAt": "2026-10-28T22:02:55Z",
+        "reviewedAt": "2026-10-28T22:10:05.278Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jgarza.loadout": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
