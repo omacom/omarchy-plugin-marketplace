@@ -388201,6 +388201,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/arbabmujtaba/memdive",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T20:12:20.503Z",
+      "listingValidatedCommit": "61e5a4564e1b5a706f9bd4e3bb72ac29f871e3e9",
+      "listingValidatedAt": "2026-10-28T20:12:20.503Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "arbabmujtaba/memdive",
+        "pluginIds": [
+          "io.github.arbabmujtaba.memdive"
+        ],
+        "commit": "61e5a4564e1b5a706f9bd4e3bb72ac29f871e3e9",
+        "checkedAt": "2026-10-28T20:12:20.328Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "arbabmujtaba/memdive",
+        "pluginIds": [
+          "io.github.arbabmujtaba.memdive"
+        ],
+        "commit": "61e5a4564e1b5a706f9bd4e3bb72ac29f871e3e9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T20:12:20.328Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T18:11:52.303Z",
+        "requestEventId": 34512837000,
+        "requestedAt": "2026-10-28T19:34:06Z",
+        "reviewedAt": "2026-10-28T20:12:20.328Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.arbabmujtaba.memdive": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
