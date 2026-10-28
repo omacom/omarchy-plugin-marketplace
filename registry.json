@@ -389135,6 +389135,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/hyprripple",
+      "type": "plugin-source",
+      "addedAt": "2026-10-28",
+      "listedAt": "2026-10-28T22:05:20.182Z",
+      "listingValidatedCommit": "ac06badee724dad213df4e424fb2fdb05eae987f",
+      "listingValidatedAt": "2026-10-28T22:05:20.182Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/hyprripple",
+        "pluginIds": [
+          "jgarza.hyprripple"
+        ],
+        "commit": "ac06badee724dad213df4e424fb2fdb05eae987f",
+        "checkedAt": "2026-10-28T22:05:20.000Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/hyprripple",
+        "pluginIds": [
+          "jgarza.hyprripple"
+        ],
+        "commit": "ac06badee724dad213df4e424fb2fdb05eae987f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-28T22:05:20.000Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T21:43:29.707Z",
+        "requestEventId": 34524756120,
+        "requestedAt": "2026-10-28T22:01:13Z",
+        "reviewedAt": "2026-10-28T22:05:20.000Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jgarza.hyprripple": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
