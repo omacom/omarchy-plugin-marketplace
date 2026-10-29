@@ -273294,8 +273294,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T01:08:47.937Z",
-      "listingValidatedCommit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
-      "listingValidatedAt": "2026-10-27T23:03:54.858Z",
+      "listingValidatedCommit": "1af49f63d66edc1722809b891887c63e0fafa428",
+      "listingValidatedAt": "2026-10-29T15:11:26.969Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -273304,8 +273304,8 @@
         "pluginIds": [
           "blackcode.power-menu"
         ],
-        "commit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
-        "checkedAt": "2026-10-27T23:03:54.858Z",
+        "commit": "1af49f63d66edc1722809b891887c63e0fafa428",
+        "checkedAt": "2026-10-29T15:11:26.969Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -273453,6 +273453,49 @@
             "reviewedAt": "2026-10-27T17:48:36.100Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
+          "validatedAt": "2026-10-27T23:03:54.858Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T15:11:26.969Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alshareedah22/omarchy-power-menu",
+            "pluginIds": [
+              "blackcode.power-menu"
+            ],
+            "commit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
+            "checkedAt": "2026-10-27T23:03:54.858Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alshareedah22/omarchy-power-menu",
+            "pluginIds": [
+              "blackcode.power-menu"
+            ],
+            "commit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-27T23:03:54.858Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T21:58:55.870Z",
+            "requestEventId": 34419405222,
+            "requestedAt": "2026-10-27T22:36:13Z",
+            "reviewedAt": "2026-10-27T23:03:54.858Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -273461,19 +273504,19 @@
         "pluginIds": [
           "blackcode.power-menu"
         ],
-        "commit": "4439e467cea2cb9b4d827f644dd73d9c7d977dde",
+        "commit": "1af49f63d66edc1722809b891887c63e0fafa428",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-27T23:03:54.858Z",
+        "baselineCheckedAt": "2026-10-29T15:11:26.969Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-27T21:58:55.870Z",
-        "requestEventId": 34419405222,
-        "requestedAt": "2026-10-27T22:36:13Z",
-        "reviewedAt": "2026-10-27T23:03:54.858Z",
+        "reviewedBaselineCheckedAt": "2026-10-29T14:24:45.321Z",
+        "requestEventId": 34596634322,
+        "requestedAt": "2026-10-29T14:35:48Z",
+        "reviewedAt": "2026-10-29T15:11:26.969Z",
         "reviewer": "HANCORE-linux"
       }
     },
