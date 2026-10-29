@@ -391269,6 +391269,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/duarte-gui/homeassistant-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T17:15:50.152Z",
+      "listingValidatedCommit": "e5d25ce37de02a408b829d2211d8b56814c6878e",
+      "listingValidatedAt": "2026-10-29T17:15:50.152Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "duarte-gui/homeassistant-omarchy",
+        "pluginIds": [
+          "io.github.duarte-gui.ha-overview"
+        ],
+        "commit": "e5d25ce37de02a408b829d2211d8b56814c6878e",
+        "checkedAt": "2026-10-29T17:15:50.044Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "duarte-gui/homeassistant-omarchy",
+        "pluginIds": [
+          "io.github.duarte-gui.ha-overview"
+        ],
+        "commit": "e5d25ce37de02a408b829d2211d8b56814c6878e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T17:15:50.044Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T16:31:05.036Z",
+        "requestEventId": 34613149800,
+        "requestedAt": "2026-10-29T17:15:20Z",
+        "reviewedAt": "2026-10-29T17:15:50.044Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.duarte-gui.ha-overview": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
