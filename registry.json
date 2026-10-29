@@ -356004,8 +356004,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-14",
       "listedAt": "2026-10-14T23:42:43.766Z",
-      "listingValidatedCommit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
-      "listingValidatedAt": "2026-10-16T16:39:24.252Z",
+      "listingValidatedCommit": "2fac29344c6c037854c629a25f7146d7228de8e0",
+      "listingValidatedAt": "2026-10-29T19:49:46.577Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -356014,8 +356014,8 @@
         "pluginIds": [
           "io.github.macleodwalker.omalattice"
         ],
-        "commit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
-        "checkedAt": "2026-10-16T16:39:24.251Z",
+        "commit": "2fac29344c6c037854c629a25f7146d7228de8e0",
+        "checkedAt": "2026-10-29T19:49:46.577Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -356125,6 +356125,51 @@
             "reviewedAt": "2026-10-15T21:47:42.661Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
+          "validatedAt": "2026-10-16T16:39:24.252Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T19:49:46.577Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "macleodwalker/omalattice",
+            "pluginIds": [
+              "io.github.macleodwalker.omalattice"
+            ],
+            "commit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
+            "checkedAt": "2026-10-16T16:39:24.251Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "macleodwalker/omalattice",
+            "pluginIds": [
+              "io.github.macleodwalker.omalattice"
+            ],
+            "commit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-16T16:39:24.251Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-16T05:59:09.507Z",
+            "requestEventId": 33463195348,
+            "requestedAt": "2026-10-16T16:23:01Z",
+            "reviewedAt": "2026-10-16T16:39:24.252Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -356133,20 +356178,20 @@
         "pluginIds": [
           "io.github.macleodwalker.omalattice"
         ],
-        "commit": "fda820110ead2af863fd19ea13752b5c69a4e27a",
+        "commit": "2fac29344c6c037854c629a25f7146d7228de8e0",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-16T16:39:24.251Z",
+        "baselineCheckedAt": "2026-10-29T19:49:46.577Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "remote-build",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-16T05:59:09.507Z",
-        "requestEventId": 33463195348,
-        "requestedAt": "2026-10-16T16:23:01Z",
-        "reviewedAt": "2026-10-16T16:39:24.252Z",
+        "reviewedBaselineCheckedAt": "2026-10-29T15:04:48.630Z",
+        "requestEventId": 34625309381,
+        "requestedAt": "2026-10-29T19:35:38Z",
+        "reviewedAt": "2026-10-29T19:49:46.577Z",
         "reviewer": "HANCORE-linux"
       }
     },
