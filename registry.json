@@ -270137,8 +270137,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T19:06:42.756Z",
-      "listingValidatedCommit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
-      "listingValidatedAt": "2026-09-27T19:06:42.756Z",
+      "listingValidatedCommit": "3e64e4d4efc71417770e7032b4362cddaf9b6b02",
+      "listingValidatedAt": "2026-10-29T13:04:15.801Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -270147,35 +270147,14 @@
         "pluginIds": [
           "jgarza.omalens"
         ],
-        "commit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
-        "checkedAt": "2026-09-27T19:06:42.645Z",
+        "commit": "3e64e4d4efc71417770e7032b4362cddaf9b6b02",
+        "checkedAt": "2026-10-29T13:04:15.801Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jgarza9788/omalens",
-        "pluginIds": [
-          "jgarza.omalens"
-        ],
-        "commit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-27T19:06:42.645Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-27T18:55:13.137Z",
-        "requestEventId": 31943144775,
-        "requestedAt": "2026-09-27T18:56:18Z",
-        "reviewedAt": "2026-09-27T19:06:42.645Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jgarza.omalens": {
@@ -270185,7 +270164,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/omalens",
+        "pluginIds": [
+          "jgarza.omalens"
+        ],
+        "commit": "3e64e4d4efc71417770e7032b4362cddaf9b6b02",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T13:04:15.801Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T21:37:19.468Z",
+        "requestEventId": 34585964073,
+        "requestedAt": "2026-10-29T12:52:35Z",
+        "reviewedAt": "2026-10-29T13:04:15.801Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
+          "validatedAt": "2026-09-27T19:06:42.756Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T13:04:15.801Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jgarza9788/omalens",
+            "pluginIds": [
+              "jgarza.omalens"
+            ],
+            "commit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
+            "checkedAt": "2026-09-27T19:06:42.645Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jgarza9788/omalens",
+            "pluginIds": [
+              "jgarza.omalens"
+            ],
+            "commit": "aa5b88746b8da813696a3f07db2deed4f20e425c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-27T19:06:42.645Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-27T18:55:13.137Z",
+            "requestEventId": 31943144775,
+            "requestedAt": "2026-09-27T18:56:18Z",
+            "reviewedAt": "2026-09-27T19:06:42.645Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/vonsensey/omarchy-mullvad-orb",
