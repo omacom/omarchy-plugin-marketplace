@@ -390265,6 +390265,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mattwolfgang/omarchy-plugin-guard",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T14:16:26.040Z",
+      "listingValidatedCommit": "8dab590307503a8bc1f7f90d46cd1b949d13ee45",
+      "listingValidatedAt": "2026-10-29T14:16:26.040Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mattwolfgang/omarchy-plugin-guard",
+        "pluginIds": [
+          "io.github.mattwolfgang.plugin-guard"
+        ],
+        "commit": "8dab590307503a8bc1f7f90d46cd1b949d13ee45",
+        "checkedAt": "2026-10-29T14:16:25.862Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mattwolfgang/omarchy-plugin-guard",
+        "pluginIds": [
+          "io.github.mattwolfgang.plugin-guard"
+        ],
+        "commit": "8dab590307503a8bc1f7f90d46cd1b949d13ee45",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T14:16:25.862Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T13:08:01.149Z",
+        "requestEventId": 34591189557,
+        "requestedAt": "2026-10-29T13:44:03Z",
+        "reviewedAt": "2026-10-29T14:16:25.862Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mattwolfgang.plugin-guard": {
+          "category": "System",
+          "tags": [
+            "security",
+            "ai",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
