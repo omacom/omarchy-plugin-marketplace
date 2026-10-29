@@ -392321,8 +392321,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T18:14:11.340Z",
-      "listingValidatedCommit": "8db537f7d972a1fa88a3b61f7c2c9810881c7ae5",
-      "listingValidatedAt": "2026-10-29T18:14:11.340Z",
+      "listingValidatedCommit": "f0742274ccc21e9faf8d99f34b6b4b61374908bc",
+      "listingValidatedAt": "2026-10-29T23:43:38.573Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -392331,8 +392331,8 @@
         "pluginIds": [
           "io.github.hugorolimf.bluetooth"
         ],
-        "commit": "8db537f7d972a1fa88a3b61f7c2c9810881c7ae5",
-        "checkedAt": "2026-10-29T18:14:11.169Z",
+        "commit": "f0742274ccc21e9faf8d99f34b6b4b61374908bc",
+        "checkedAt": "2026-10-29T23:43:38.572Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -392352,7 +392352,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8db537f7d972a1fa88a3b61f7c2c9810881c7ae5",
+          "validatedAt": "2026-10-29T18:14:11.340Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T23:43:38.573Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-island-bluetooth",
+            "pluginIds": [
+              "io.github.hugorolimf.bluetooth"
+            ],
+            "commit": "8db537f7d972a1fa88a3b61f7c2c9810881c7ae5",
+            "checkedAt": "2026-10-29T18:14:11.169Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/billybonks/omarchy-microsandobx-monitor",
