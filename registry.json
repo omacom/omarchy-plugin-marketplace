@@ -391537,6 +391537,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SteveB98/omarchy-segue",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T18:00:48.898Z",
+      "listingValidatedCommit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
+      "listingValidatedAt": "2026-10-29T18:00:48.898Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "steveb98/omarchy-segue",
+        "pluginIds": [
+          "io.github.steveb98.segue"
+        ],
+        "commit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
+        "checkedAt": "2026-10-29T18:00:48.720Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.steveb98.segue": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
