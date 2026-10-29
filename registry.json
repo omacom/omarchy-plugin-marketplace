@@ -391571,6 +391571,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/duarte-gui/camguard-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T18:05:07.590Z",
+      "listingValidatedCommit": "ae56319b2dc80b5ce789960cb381e88d8b854e5c",
+      "listingValidatedAt": "2026-10-29T18:05:07.590Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "duarte-gui/camguard-omarchy",
+        "pluginIds": [
+          "io.github.duarte-gui.camguard"
+        ],
+        "commit": "ae56319b2dc80b5ce789960cb381e88d8b854e5c",
+        "checkedAt": "2026-10-29T18:05:07.423Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "duarte-gui/camguard-omarchy",
+        "pluginIds": [
+          "io.github.duarte-gui.camguard"
+        ],
+        "commit": "ae56319b2dc80b5ce789960cb381e88d8b854e5c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T18:05:07.423Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T16:09:42.847Z",
+        "requestEventId": 34616740002,
+        "requestedAt": "2026-10-29T17:55:08Z",
+        "reviewedAt": "2026-10-29T18:05:07.423Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.duarte-gui.camguard": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
