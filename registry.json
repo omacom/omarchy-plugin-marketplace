@@ -365570,8 +365570,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-18",
       "listedAt": "2026-10-18T09:51:13.198Z",
-      "listingValidatedCommit": "034da3115572ca75354e24e3c01774c10d8b0e09",
-      "listingValidatedAt": "2026-10-18T09:51:13.198Z",
+      "listingValidatedCommit": "3b190fd3cc94c4ab5aa88b5c099d814949ad26d9",
+      "listingValidatedAt": "2026-10-29T14:28:44.008Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -365580,39 +365580,17 @@
         "pluginIds": [
           "reavann.omamail"
         ],
-        "commit": "034da3115572ca75354e24e3c01774c10d8b0e09",
-        "checkedAt": "2026-10-18T09:51:13.034Z",
+        "commit": "3b190fd3cc94c4ab5aa88b5c099d814949ad26d9",
+        "checkedAt": "2026-10-29T14:28:44.008Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager",
           "service-management",
+          "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "reav4nn/omamail",
-        "pluginIds": [
-          "reavann.omamail"
-        ],
-        "commit": "034da3115572ca75354e24e3c01774c10d8b0e09",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-18T09:51:13.034Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-18T09:44:05.978Z",
-        "requestEventId": 33565458651,
-        "requestedAt": "2026-10-18T09:50:39Z",
-        "reviewedAt": "2026-10-18T09:51:13.034Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "reavann.omamail": {
@@ -365626,7 +365604,80 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "reav4nn/omamail",
+        "pluginIds": [
+          "reavann.omamail"
+        ],
+        "commit": "3b190fd3cc94c4ab5aa88b5c099d814949ad26d9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T14:28:44.008Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T13:28:05.862Z",
+        "requestEventId": 34592370901,
+        "requestedAt": "2026-10-29T13:55:35Z",
+        "reviewedAt": "2026-10-29T14:28:44.008Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "034da3115572ca75354e24e3c01774c10d8b0e09",
+          "validatedAt": "2026-10-18T09:51:13.198Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T14:28:44.008Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reav4nn/omamail",
+            "pluginIds": [
+              "reavann.omamail"
+            ],
+            "commit": "034da3115572ca75354e24e3c01774c10d8b0e09",
+            "checkedAt": "2026-10-18T09:51:13.034Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "reav4nn/omamail",
+            "pluginIds": [
+              "reavann.omamail"
+            ],
+            "commit": "034da3115572ca75354e24e3c01774c10d8b0e09",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-18T09:51:13.034Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-18T09:44:05.978Z",
+            "requestEventId": 33565458651,
+            "requestedAt": "2026-10-18T09:50:39Z",
+            "reviewedAt": "2026-10-18T09:51:13.034Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/TechLuddite/Luddite-Scout",
