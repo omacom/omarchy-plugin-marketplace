@@ -375444,8 +375444,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-21",
       "listedAt": "2026-10-21T15:41:11.579Z",
-      "listingValidatedCommit": "d62ec5a378d861d3e80af7c8d987f1ebacf13e95",
-      "listingValidatedAt": "2026-10-21T15:41:11.579Z",
+      "listingValidatedCommit": "00d801eb7998068e26979343f17d2f7b2f58e44c",
+      "listingValidatedAt": "2026-10-29T19:45:25.850Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -375454,8 +375454,8 @@
         "pluginIds": [
           "nertwork.power"
         ],
-        "commit": "d62ec5a378d861d3e80af7c8d987f1ebacf13e95",
-        "checkedAt": "2026-10-21T15:41:11.421Z",
+        "commit": "00d801eb7998068e26979343f17d2f7b2f58e44c",
+        "checkedAt": "2026-10-29T19:45:25.850Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -375471,7 +375471,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d62ec5a378d861d3e80af7c8d987f1ebacf13e95",
+          "validatedAt": "2026-10-21T15:41:11.579Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T19:45:25.850Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nertwork/omarchy-battery-health",
+            "pluginIds": [
+              "nertwork.power"
+            ],
+            "commit": "d62ec5a378d861d3e80af7c8d987f1ebacf13e95",
+            "checkedAt": "2026-10-21T15:41:11.421Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ombrascarlatta/omarchy-audio-ports",
