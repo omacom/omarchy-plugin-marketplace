@@ -244179,8 +244179,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T18:02:21.337Z",
-      "listingValidatedCommit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
-      "listingValidatedAt": "2026-10-01T04:36:52.368Z",
+      "listingValidatedCommit": "4bbf41d5b3ccda76317ded9a89a87b4c03449552",
+      "listingValidatedAt": "2026-10-29T14:24:51.126Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -244189,8 +244189,8 @@
         "pluginIds": [
           "devmercenario.antigravity"
         ],
-        "commit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
-        "checkedAt": "2026-10-01T04:36:52.368Z",
+        "commit": "4bbf41d5b3ccda76317ded9a89a87b4c03449552",
+        "checkedAt": "2026-10-29T14:24:51.126Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -244208,29 +244208,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "devmercenario/omarchy-antigravity",
-        "pluginIds": [
-          "devmercenario.antigravity"
-        ],
-        "commit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T04:36:52.368Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-23T14:54:48.876Z",
-        "requestEventId": 32222344812,
-        "requestedAt": "2026-10-01T04:36:23Z",
-        "reviewedAt": "2026-10-01T04:36:52.368Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -244279,8 +244256,78 @@
             "reviewedAt": "2026-09-22T18:02:21.238Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
+          "validatedAt": "2026-10-01T04:36:52.368Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T14:24:51.126Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "devmercenario/omarchy-antigravity",
+            "pluginIds": [
+              "devmercenario.antigravity"
+            ],
+            "commit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
+            "checkedAt": "2026-10-01T04:36:52.368Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "devmercenario/omarchy-antigravity",
+            "pluginIds": [
+              "devmercenario.antigravity"
+            ],
+            "commit": "f48a96fb3e65ee5efaa697bafbef057088fde22b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T04:36:52.368Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-23T14:54:48.876Z",
+            "requestEventId": 32222344812,
+            "requestedAt": "2026-10-01T04:36:23Z",
+            "reviewedAt": "2026-10-01T04:36:52.368Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "devmercenario/omarchy-antigravity",
+        "pluginIds": [
+          "devmercenario.antigravity"
+        ],
+        "commit": "4bbf41d5b3ccda76317ded9a89a87b4c03449552",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T14:24:51.126Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T22:43:11.514Z",
+        "requestEventId": 34592280438,
+        "requestedAt": "2026-10-29T13:54:42Z",
+        "reviewedAt": "2026-10-29T14:24:51.126Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/gdeyoung/omarchy-sysmon",
