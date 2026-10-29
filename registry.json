@@ -391045,6 +391045,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Gleasonmt/omarchy-live-wallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T15:46:12.003Z",
+      "listingValidatedCommit": "02301a520f02bbbf4e9d4d773f4f6b35a6c0f30a",
+      "listingValidatedAt": "2026-10-29T15:46:12.003Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gleasonmt/omarchy-live-wallpaper",
+        "pluginIds": [
+          "gleasonmt.live-wallpaper"
+        ],
+        "commit": "02301a520f02bbbf4e9d4d773f4f6b35a6c0f30a",
+        "checkedAt": "2026-10-29T15:46:11.871Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gleasonmt.live-wallpaper": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
