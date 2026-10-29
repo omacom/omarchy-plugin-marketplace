@@ -390879,6 +390879,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/valerkaaa/omarchy-shutdown-timer",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T15:24:58.415Z",
+      "listingValidatedCommit": "daa460637298cdfe1e197612c87f4c6b204fc4ee",
+      "listingValidatedAt": "2026-10-29T15:24:58.415Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "valerkaaa/omarchy-shutdown-timer",
+        "pluginIds": [
+          "honor.shutdown-timer"
+        ],
+        "commit": "daa460637298cdfe1e197612c87f4c6b204fc4ee",
+        "checkedAt": "2026-10-29T15:24:58.311Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "valerkaaa/omarchy-shutdown-timer",
+        "pluginIds": [
+          "honor.shutdown-timer"
+        ],
+        "commit": "daa460637298cdfe1e197612c87f4c6b204fc4ee",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T15:24:58.311Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T13:44:16.476Z",
+        "requestEventId": 34598153871,
+        "requestedAt": "2026-10-29T14:49:37Z",
+        "reviewedAt": "2026-10-29T15:24:58.311Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "honor.shutdown-timer": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
