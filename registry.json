@@ -276755,8 +276755,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T11:42:34.210Z",
-      "listingValidatedCommit": "45285fff8ae078e4b3c5d959217ac9023b49b2d4",
-      "listingValidatedAt": "2026-09-28T11:42:34.210Z",
+      "listingValidatedCommit": "37b36e03b90d2a41c085967ec0a6b3a20a42cc37",
+      "listingValidatedAt": "2026-10-29T20:08:00.605Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -276765,8 +276765,8 @@
         "pluginIds": [
           "blacksheep.calendar"
         ],
-        "commit": "45285fff8ae078e4b3c5d959217ac9023b49b2d4",
-        "checkedAt": "2026-09-28T11:42:34.110Z",
+        "commit": "37b36e03b90d2a41c085967ec0a6b3a20a42cc37",
+        "checkedAt": "2026-10-29T20:08:00.605Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -276781,7 +276781,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "45285fff8ae078e4b3c5d959217ac9023b49b2d4",
+          "validatedAt": "2026-09-28T11:42:34.210Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T20:08:00.605Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jonspinks/omarchy-calendar",
+            "pluginIds": [
+              "blacksheep.calendar"
+            ],
+            "commit": "45285fff8ae078e4b3c5d959217ac9023b49b2d4",
+            "checkedAt": "2026-09-28T11:42:34.110Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/gregmolnar/omarchy-appsignal-plugin",
