@@ -1110,8 +1110,16 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 .example-file:last-child .tree-branch::before { bottom: 50%; }
 .example-file .code-block { margin: 0; border: 0; border-top: 1px solid var(--line); }
 .submit-action { margin-top: 18px !important; }
-.skeleton { height: 15px; margin-bottom: 14px; background: var(--panel-2); }
+.skeleton, .skeleton-line {
+  background: linear-gradient(90deg, var(--line-soft) 0, var(--line) 50%, var(--line-soft) 100%) 0 0 / 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+.skeleton { height: 15px; margin-bottom: 14px; }
 .skeleton.wide { width: 90%; height: 55px; } .skeleton.short { width: 38%; }
+@keyframes skeleton-shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .skeleton, .skeleton-line { animation: none; background: var(--line-soft); }
+}
 
 .mobile-bottom { display: none; }
 .toast {
@@ -1324,6 +1332,23 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 @media (prefers-reduced-motion: reduce) {
   .landed-row { overflow-x: auto; }
 }
+/* Catalog placeholders shown until catalog.json arrives; they reuse the card geometry. */
+.landed-rows.is-loading .landed-row { overflow: hidden; }
+.landed-card.is-loading { --card-accent: var(--line); }
+.landed-card.is-loading .landed-body { gap: 9px; padding-top: 12px; padding-bottom: 13px; }
+.skeleton-line { display: block; height: 10px; }
+.skeleton-line.is-title { width: 62%; height: 13px; }
+.skeleton-line.is-meta { width: 38%; }
+.skeleton-line.is-text { width: 88%; }
+.skeleton-line.is-foot { width: 24%; }
+.skeleton-line.is-tag { width: 58px; height: 28px; }
+.skeleton-line.is-chip { width: 96px; height: 29px; }
+.skeleton-line.is-chip:nth-child(3n + 2) { width: 128px; }
+.skeleton-line.is-chip:nth-child(3n) { width: 72px; }
+.plugin-card.is-loading { --card-accent: var(--line); }
+.plugin-card.is-loading .plugin-preview::after { display: none; }
+.plugin-card.is-loading .plugin-card-body { gap: 10px; }
+.plugin-card.is-loading .plugin-card-bottom { justify-content: flex-start; gap: 5px; }
 .market-catalog {
   position: relative; padding: 74px 0 100px;
 }

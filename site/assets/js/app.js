@@ -37,14 +37,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261019-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-03";
+} from "./engagement.js?v=20261019-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -73,13 +73,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-03";
+} from "./search.js?v=20261019-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-03";
+} from "./taxonomy.js?v=20261019-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -222,6 +222,8 @@ const categoryBar = document.querySelector(".category-bar");
 const clearFilters = document.querySelector("#clear-filters");
 const viewDockStatus = document.querySelector("#catalog-view-dock-status");
 const catalogResultStatus = document.querySelector("#catalog-result-status");
+const catalogSection = document.querySelector("#catalog");
+const recentRows = document.querySelector("#recent-latest");
 let viewScrollFrame = 0;
 let searchCompletions = [];
 let activeSuggestion = -1;
@@ -1088,6 +1090,54 @@ function setupGemsCarousel(grid) {
 // Just landed: the last 24 hours as small cards drifting left to right in two rows (alternating newest first).
 // Each track holds its cards twice for a seamless loop; the copies are hidden from assistive technology and
 // focus. Hover, focus, and the Pause button stop the drift; reduced motion leaves scrollable static rows.
+// Placeholders shown while catalog.json loads. Each later render replaces them through innerHTML.
+const loadingPluginCard = `
+    <article class="plugin-card is-loading" aria-hidden="true">
+      <div class="plugin-preview"></div>
+      <div class="plugin-card-body">
+        <span class="skeleton-line is-title"></span>
+        <span class="skeleton-line is-meta"></span>
+        <span class="skeleton-line is-text"></span>
+        <div class="plugin-card-bottom"><span class="skeleton-line is-tag"></span><span class="skeleton-line is-tag"></span></div>
+      </div>
+    </article>`;
+const loadingLandedCard = `
+    <li><span class="landed-card is-loading">
+      <span class="landed-media"></span>
+      <span class="landed-body"><span class="skeleton-line is-title"></span><span class="skeleton-line is-meta"></span><span class="skeleton-line is-foot"></span></span>
+    </span></li>`;
+
+function renderCatalogLoading() {
+  catalogSection.setAttribute("aria-busy", "true");
+  pagination.hidden = true;
+  grid.innerHTML = loadingPluginCard.repeat(pluginsPerPage);
+  sourcesRoot.innerHTML = '<span class="skeleton-line is-chip" aria-hidden="true"></span>'.repeat(2);
+  categoriesRoot.innerHTML = '<span class="skeleton-line is-chip" aria-hidden="true"></span>'.repeat(10);
+  if (!recentRows) return;
+  recentRows.classList.add("is-loading");
+  recentRows.setAttribute("aria-hidden", "true");
+  recentRows.querySelectorAll("[data-landed-row]").forEach((track) => {
+    track.innerHTML = loadingLandedCard.repeat(8);
+  });
+  recentRows.hidden = false;
+}
+
+function clearCatalogLoading({ failed = false } = {}) {
+  catalogSection.removeAttribute("aria-busy");
+  if (failed) {
+    grid.innerHTML = "";
+    sourcesRoot.innerHTML = "";
+    categoriesRoot.innerHTML = "";
+  }
+  if (!recentRows) return;
+  recentRows.classList.remove("is-loading");
+  recentRows.removeAttribute("aria-hidden");
+  if (failed) {
+    recentRows.hidden = true;
+    recentRows.querySelectorAll("[data-landed-row]").forEach((track) => { track.innerHTML = ""; });
+  }
+}
+
 function renderRecentlyAdded() {
   const section = document.querySelector("#recent-section");
   if (!section) return;
@@ -1808,6 +1858,7 @@ function setupHeroRay() {
 }
 
 async function init() {
+  renderCatalogLoading();
   setupThemeToggle();
   setupCopyButtons();
   setupHeroRay();
@@ -1833,6 +1884,7 @@ async function init() {
       throw new Error("Catalog response is invalid");
     }
     state.plugins = catalog.plugins;
+    clearCatalogLoading();
     state.engagementEnabled = Boolean(engagementApiBaseUrl());
     restoreUrl();
     setCatalogView(readCatalogView());
@@ -1946,6 +1998,7 @@ async function init() {
     }
   } catch (error) {
     console.error(error);
+    clearCatalogLoading({ failed: true });
     grid.hidden = true;
     empty.hidden = false;
     empty.querySelector("h3").textContent = "Catalog unavailable";
