@@ -336386,8 +336386,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T02:22:02.473Z",
-      "listingValidatedCommit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
-      "listingValidatedAt": "2026-10-09T02:22:02.473Z",
+      "listingValidatedCommit": "f72b9dab5c91ec6f359616ead0087b8e29ad0dc3",
+      "listingValidatedAt": "2026-10-29T19:31:28.865Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -336396,8 +336396,8 @@
         "pluginIds": [
           "io.github.jesuslovesyou1013.omaskins"
         ],
-        "commit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
-        "checkedAt": "2026-10-09T02:22:02.328Z",
+        "commit": "f72b9dab5c91ec6f359616ead0087b8e29ad0dc3",
+        "checkedAt": "2026-10-29T19:31:28.865Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -336407,30 +336407,6 @@
           "package-manager",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jesuslovesyou1013/omaskins",
-        "pluginIds": [
-          "io.github.jesuslovesyou1013.omaskins"
-        ],
-        "commit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-09T02:22:02.328Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-09T02:18:16.461Z",
-        "requestEventId": 32840593790,
-        "requestedAt": "2026-10-09T02:21:31Z",
-        "reviewedAt": "2026-10-09T02:22:02.328Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.jesuslovesyou1013.omaskins": {
@@ -336442,7 +336418,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jesuslovesyou1013/omaskins",
+        "pluginIds": [
+          "io.github.jesuslovesyou1013.omaskins"
+        ],
+        "commit": "f72b9dab5c91ec6f359616ead0087b8e29ad0dc3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T19:31:28.865Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T15:19:32.422Z",
+        "requestEventId": 34624910971,
+        "requestedAt": "2026-10-29T19:30:54Z",
+        "reviewedAt": "2026-10-29T19:31:28.865Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
+          "validatedAt": "2026-10-09T02:22:02.473Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T19:31:28.865Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jesuslovesyou1013/omaskins",
+            "pluginIds": [
+              "io.github.jesuslovesyou1013.omaskins"
+            ],
+            "commit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
+            "checkedAt": "2026-10-09T02:22:02.328Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jesuslovesyou1013/omaskins",
+            "pluginIds": [
+              "io.github.jesuslovesyou1013.omaskins"
+            ],
+            "commit": "8206a46eb8fa99a286bcddd531cd21ce4d1191c5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-09T02:22:02.328Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-09T02:18:16.461Z",
+            "requestEventId": 32840593790,
+            "requestedAt": "2026-10-09T02:21:31Z",
+            "reviewedAt": "2026-10-09T02:22:02.328Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nabdalla-prog/Rimuru-timetracker",
