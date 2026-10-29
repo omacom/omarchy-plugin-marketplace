@@ -380377,8 +380377,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-25",
       "listedAt": "2026-10-25T23:07:52.873Z",
-      "listingValidatedCommit": "c4dfb92c4c2edb76eab4981e50207185f39f8a20",
-      "listingValidatedAt": "2026-10-25T23:07:52.873Z",
+      "listingValidatedCommit": "fd3f5fd6876032d461d1ec03a6f52adb07ed8425",
+      "listingValidatedAt": "2026-10-29T23:52:24.883Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -380387,8 +380387,8 @@
         "pluginIds": [
           "goldbarth.tessella"
         ],
-        "commit": "c4dfb92c4c2edb76eab4981e50207185f39f8a20",
-        "checkedAt": "2026-10-25T23:07:52.783Z",
+        "commit": "fd3f5fd6876032d461d1ec03a6f52adb07ed8425",
+        "checkedAt": "2026-10-29T23:52:24.883Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -380404,7 +380404,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c4dfb92c4c2edb76eab4981e50207185f39f8a20",
+          "validatedAt": "2026-10-25T23:07:52.873Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T23:52:24.883Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "goldbarth/omarchy-tessella",
+            "pluginIds": [
+              "goldbarth.tessella"
+            ],
+            "commit": "c4dfb92c4c2edb76eab4981e50207185f39f8a20",
+            "checkedAt": "2026-10-25T23:07:52.783Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/avillagran/omarchy-task-manager",
