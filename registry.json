@@ -281958,8 +281958,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-29",
       "listedAt": "2026-09-29T08:49:59.890Z",
-      "listingValidatedCommit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
-      "listingValidatedAt": "2026-09-29T08:49:59.890Z",
+      "listingValidatedCommit": "caef451a4ccb0558c4fb0773c45d88271e4a84ec",
+      "listingValidatedAt": "2026-10-29T19:54:16.133Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -281968,35 +281968,14 @@
         "pluginIds": [
           "navjottomer.proton-authenticator"
         ],
-        "commit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
-        "checkedAt": "2026-09-29T08:49:59.778Z",
+        "commit": "caef451a4ccb0558c4fb0773c45d88271e4a84ec",
+        "checkedAt": "2026-10-29T19:54:16.133Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "navjottomer/omarchy-proton-authenticator",
-        "pluginIds": [
-          "navjottomer.proton-authenticator"
-        ],
-        "commit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-29T08:49:59.778Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-29T08:41:45.827Z",
-        "requestEventId": 32063940560,
-        "requestedAt": "2026-09-29T08:47:25Z",
-        "reviewedAt": "2026-09-29T08:49:59.778Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "navjottomer.proton-authenticator": {
@@ -282012,7 +281991,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "navjottomer/omarchy-proton-authenticator",
+        "pluginIds": [
+          "navjottomer.proton-authenticator"
+        ],
+        "commit": "caef451a4ccb0558c4fb0773c45d88271e4a84ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T19:54:16.133Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T16:52:38.534Z",
+        "requestEventId": 34625398573,
+        "requestedAt": "2026-10-29T19:36:39Z",
+        "reviewedAt": "2026-10-29T19:54:16.133Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
+          "validatedAt": "2026-09-29T08:49:59.890Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T19:54:16.133Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "navjottomer/omarchy-proton-authenticator",
+            "pluginIds": [
+              "navjottomer.proton-authenticator"
+            ],
+            "commit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
+            "checkedAt": "2026-09-29T08:49:59.778Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "navjottomer/omarchy-proton-authenticator",
+            "pluginIds": [
+              "navjottomer.proton-authenticator"
+            ],
+            "commit": "90ad4d19b4c115d0259e0a072c186972d8d41c47",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-29T08:49:59.778Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-29T08:41:45.827Z",
+            "requestEventId": 32063940560,
+            "requestedAt": "2026-09-29T08:47:25Z",
+            "reviewedAt": "2026-09-29T08:49:59.778Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/navjottomer/omarchy-sysmon",
