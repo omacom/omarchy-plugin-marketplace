@@ -303866,8 +303866,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T19:34:48.465Z",
-      "listingValidatedCommit": "aa35ef535fec4293bc4cb3443556d6bd9702612d",
-      "listingValidatedAt": "2026-10-06T04:42:34.565Z",
+      "listingValidatedCommit": "9bf7f5117ea0b994e87d887d442203947b4dd9ef",
+      "listingValidatedAt": "2026-10-29T15:06:24.420Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -303876,8 +303876,8 @@
         "pluginIds": [
           "robertstevenson.omaovercast"
         ],
-        "commit": "aa35ef535fec4293bc4cb3443556d6bd9702612d",
-        "checkedAt": "2026-10-06T04:42:34.565Z",
+        "commit": "9bf7f5117ea0b994e87d887d442203947b4dd9ef",
+        "checkedAt": "2026-10-29T15:06:24.420Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -303929,6 +303929,26 @@
             ],
             "commit": "6244e11c0f79c8952c2d5f8c474937754f2b09fa",
             "checkedAt": "2026-10-05T14:29:37.589Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "aa35ef535fec4293bc4cb3443556d6bd9702612d",
+          "validatedAt": "2026-10-06T04:42:34.565Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T15:06:24.420Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "robertstevenson/omaovercast",
+            "pluginIds": [
+              "robertstevenson.omaovercast"
+            ],
+            "commit": "aa35ef535fec4293bc4cb3443556d6bd9702612d",
+            "checkedAt": "2026-10-06T04:42:34.565Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
