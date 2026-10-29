@@ -390847,6 +390847,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/anavarre/omarchy-apple-podcast",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T15:20:16.701Z",
+      "listingValidatedCommit": "4bfb47fdf9513784ba306999bf8004b97c3dc7db",
+      "listingValidatedAt": "2026-10-29T15:20:16.701Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anavarre/omarchy-apple-podcast",
+        "pluginIds": [
+          "anavarre.apple-podcasts"
+        ],
+        "commit": "4bfb47fdf9513784ba306999bf8004b97c3dc7db",
+        "checkedAt": "2026-10-29T15:20:16.528Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anavarre.apple-podcasts": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
