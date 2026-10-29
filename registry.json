@@ -390200,6 +390200,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jvlianodorneles/morph",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T14:09:01.007Z",
+      "listingValidatedCommit": "45d75e7f752539e9ca7f92e419abf771dc3de0bb",
+      "listingValidatedAt": "2026-10-29T14:09:01.007Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jvlianodorneles/morph",
+        "pluginIds": [
+          "dorneles.convert-orb"
+        ],
+        "commit": "45d75e7f752539e9ca7f92e419abf771dc3de0bb",
+        "checkedAt": "2026-10-29T14:09:00.836Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jvlianodorneles/morph",
+        "pluginIds": [
+          "dorneles.convert-orb"
+        ],
+        "commit": "45d75e7f752539e9ca7f92e419abf771dc3de0bb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T14:09:00.836Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T13:15:02.550Z",
+        "requestEventId": 34591193987,
+        "requestedAt": "2026-10-29T13:44:05Z",
+        "reviewedAt": "2026-10-29T14:09:00.836Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dorneles.convert-orb": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
