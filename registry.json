@@ -389543,6 +389543,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulsamoluk/omarchy-authenticator",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T00:37:04.500Z",
+      "listingValidatedCommit": "ee5561271699bceee299bb8e169cb36e73853d79",
+      "listingValidatedAt": "2026-10-29T00:37:04.500Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulsamoluk/omarchy-authenticator",
+        "pluginIds": [
+          "psamoluk.totp"
+        ],
+        "commit": "ee5561271699bceee299bb8e169cb36e73853d79",
+        "checkedAt": "2026-10-29T00:37:04.323Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "psamoluk.totp": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
