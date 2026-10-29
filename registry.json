@@ -391632,6 +391632,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-audio",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T18:09:31.842Z",
+      "listingValidatedCommit": "4dee23c4df8980e1ceb9a1f7352a36609ef28024",
+      "listingValidatedAt": "2026-10-29T18:09:31.842Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-audio",
+        "pluginIds": [
+          "io.github.hugorolimf.audio"
+        ],
+        "commit": "4dee23c4df8980e1ceb9a1f7352a36609ef28024",
+        "checkedAt": "2026-10-29T18:09:31.527Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.audio": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
