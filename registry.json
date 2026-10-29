@@ -379357,8 +379357,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-25",
       "listedAt": "2026-10-25T23:11:47.380Z",
-      "listingValidatedCommit": "351f25c9a7b5eac2fc9c6cd3224fd20dacad1a9d",
-      "listingValidatedAt": "2026-10-25T23:11:47.380Z",
+      "listingValidatedCommit": "fea3976f8e1ad3501bd3c0bca062130836cc1178",
+      "listingValidatedAt": "2026-10-29T13:21:08.681Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -379367,8 +379367,8 @@
         "pluginIds": [
           "io.github.avillagran.omarchy-task-manager"
         ],
-        "commit": "351f25c9a7b5eac2fc9c6cd3224fd20dacad1a9d",
-        "checkedAt": "2026-10-25T23:11:47.282Z",
+        "commit": "fea3976f8e1ad3501bd3c0bca062130836cc1178",
+        "checkedAt": "2026-10-29T13:21:08.681Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -379384,7 +379384,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "351f25c9a7b5eac2fc9c6cd3224fd20dacad1a9d",
+          "validatedAt": "2026-10-25T23:11:47.380Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T13:21:08.681Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "avillagran/omarchy-task-manager",
+            "pluginIds": [
+              "io.github.avillagran.omarchy-task-manager"
+            ],
+            "commit": "351f25c9a7b5eac2fc9c6cd3224fd20dacad1a9d",
+            "checkedAt": "2026-10-25T23:11:47.282Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/vaccaroraul-afk/omarchy-chess",
