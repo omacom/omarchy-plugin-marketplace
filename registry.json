@@ -390507,6 +390507,72 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/larrynz/omarchy-backitup",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T14:39:27.503Z",
+      "listingValidatedCommit": "3d4f2faa633cbd9a3dffa57a6b9c3db533120a7f",
+      "listingValidatedAt": "2026-10-29T14:39:27.503Z",
+      "listingValidatedBranch": "modern",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "larrynz/omarchy-backitup",
+        "pluginIds": [
+          "larrynz.backitup"
+        ],
+        "commit": "3d4f2faa633cbd9a3dffa57a6b9c3db533120a7f",
+        "checkedAt": "2026-10-29T14:39:27.347Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "sudoers-modification"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "larrynz/omarchy-backitup",
+        "pluginIds": [
+          "larrynz.backitup"
+        ],
+        "commit": "3d4f2faa633cbd9a3dffa57a6b9c3db533120a7f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T14:39:27.347Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T13:54:36.640Z",
+        "requestEventId": 34592785056,
+        "requestedAt": "2026-10-29T13:59:37Z",
+        "reviewedAt": "2026-10-29T14:39:27.347Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "larrynz.backitup": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
