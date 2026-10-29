@@ -391448,6 +391448,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-kit",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T17:40:36.808Z",
+      "listingValidatedCommit": "b4337497aab49a78196cf23dc5d07a6a33be42f2",
+      "listingValidatedAt": "2026-10-29T17:40:36.808Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-kit",
+        "pluginIds": [
+          "io.github.hugorolimf.kit"
+        ],
+        "commit": "b4337497aab49a78196cf23dc5d07a6a33be42f2",
+        "checkedAt": "2026-10-29T17:40:36.701Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.kit": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
