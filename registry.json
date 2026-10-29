@@ -391710,8 +391710,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T16:13:24.502Z",
-      "listingValidatedCommit": "c841ccbbfa3b56d9351bb7a3011c9e8c4c842696",
-      "listingValidatedAt": "2026-10-29T16:13:24.502Z",
+      "listingValidatedCommit": "c0625d35dd506fff3adda3473bfd56e5b7d25d2c",
+      "listingValidatedAt": "2026-10-29T20:29:30.215Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -391720,8 +391720,8 @@
         "pluginIds": [
           "germanviter.openvpn"
         ],
-        "commit": "c841ccbbfa3b56d9351bb7a3011c9e8c4c842696",
-        "checkedAt": "2026-10-29T16:13:24.392Z",
+        "commit": "c0625d35dd506fff3adda3473bfd56e5b7d25d2c",
+        "checkedAt": "2026-10-29T20:29:30.215Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -391739,7 +391739,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c841ccbbfa3b56d9351bb7a3011c9e8c4c842696",
+          "validatedAt": "2026-10-29T16:13:24.502Z",
+          "branch": "master",
+          "supersededAt": "2026-10-29T20:29:30.215Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "germanviter/omarchy-openvpn",
+            "pluginIds": [
+              "germanviter.openvpn"
+            ],
+            "commit": "c841ccbbfa3b56d9351bb7a3011c9e8c4c842696",
+            "checkedAt": "2026-10-29T16:13:24.392Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nertwork/omarchy-drawer",
