@@ -390991,6 +390991,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T15:37:41.472Z",
+      "listingValidatedCommit": "cd2f6d0755a32262c1fba6138e5728362e5ece68",
+      "listingValidatedAt": "2026-10-29T15:37:41.472Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-dock",
+        "pluginIds": [
+          "io.github.hugorolimf.dock"
+        ],
+        "commit": "cd2f6d0755a32262c1fba6138e5728362e5ece68",
+        "checkedAt": "2026-10-29T15:37:41.350Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.dock": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
