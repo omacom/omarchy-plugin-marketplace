@@ -378494,8 +378494,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-25",
       "listedAt": "2026-10-25T21:15:16.964Z",
-      "listingValidatedCommit": "ee25683c341ded7506642850f5397519e8aaf48f",
-      "listingValidatedAt": "2026-10-25T21:15:16.964Z",
+      "listingValidatedCommit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+      "listingValidatedAt": "2026-10-29T20:24:59.876Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -378504,12 +378504,15 @@
         "pluginIds": [
           "naolselemon.daymark"
         ],
-        "commit": "ee25683c341ded7506642850f5397519e8aaf48f",
-        "checkedAt": "2026-10-25T21:15:16.817Z",
-        "outcome": "passed",
+        "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+        "checkedAt": "2026-10-29T20:24:59.876Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
       },
       "plugins": {
         "naolselemon.daymark": {
@@ -378520,7 +378523,51 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "naolselemon/daymark",
+        "pluginIds": [
+          "naolselemon.daymark"
+        ],
+        "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T20:24:59.876Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T18:19:25.397Z",
+        "requestEventId": 34626492278,
+        "requestedAt": "2026-10-29T19:50:05Z",
+        "reviewedAt": "2026-10-29T20:24:59.876Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ee25683c341ded7506642850f5397519e8aaf48f",
+          "validatedAt": "2026-10-25T21:15:16.964Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T20:24:59.876Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "naolselemon/daymark",
+            "pluginIds": [
+              "naolselemon.daymark"
+            ],
+            "commit": "ee25683c341ded7506642850f5397519e8aaf48f",
+            "checkedAt": "2026-10-25T21:15:16.817Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cesarfilho/omarchy-abyss",
