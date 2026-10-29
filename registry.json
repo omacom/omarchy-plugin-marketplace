@@ -301494,8 +301494,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T07:12:18.184Z",
-      "listingValidatedCommit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
-      "listingValidatedAt": "2026-10-02T07:12:18.184Z",
+      "listingValidatedCommit": "e6d11173b0a3a15c84846ff621aeee049c902542",
+      "listingValidatedAt": "2026-10-29T13:12:30.382Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -301504,35 +301504,14 @@
         "pluginIds": [
           "jgarza.wallsync"
         ],
-        "commit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
-        "checkedAt": "2026-10-02T07:12:18.059Z",
+        "commit": "e6d11173b0a3a15c84846ff621aeee049c902542",
+        "checkedAt": "2026-10-29T13:12:30.382Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "jgarza9788/wallsync",
-        "pluginIds": [
-          "jgarza.wallsync"
-        ],
-        "commit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T07:12:18.059Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-02T06:41:51.405Z",
-        "requestEventId": 32314831284,
-        "requestedAt": "2026-10-02T06:51:36Z",
-        "reviewedAt": "2026-10-02T07:12:18.059Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jgarza.wallsync": {
@@ -301543,7 +301522,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/wallsync",
+        "pluginIds": [
+          "jgarza.wallsync"
+        ],
+        "commit": "e6d11173b0a3a15c84846ff621aeee049c902542",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T13:12:30.382Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T21:36:47.228Z",
+        "requestEventId": 34586042831,
+        "requestedAt": "2026-10-29T12:53:24Z",
+        "reviewedAt": "2026-10-29T13:12:30.382Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
+          "validatedAt": "2026-10-02T07:12:18.184Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T13:12:30.382Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jgarza9788/wallsync",
+            "pluginIds": [
+              "jgarza.wallsync"
+            ],
+            "commit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
+            "checkedAt": "2026-10-02T07:12:18.059Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "jgarza9788/wallsync",
+            "pluginIds": [
+              "jgarza.wallsync"
+            ],
+            "commit": "045b3d0358e7d005393ca577c1ad474a932a51f2",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T07:12:18.059Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-02T06:41:51.405Z",
+            "requestEventId": 32314831284,
+            "requestedAt": "2026-10-02T06:51:36Z",
+            "reviewedAt": "2026-10-02T07:12:18.059Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Azteriisk/omarchy-window-minimize",
