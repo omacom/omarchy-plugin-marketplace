@@ -298701,8 +298701,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T03:09:46.779Z",
-      "listingValidatedCommit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
-      "listingValidatedAt": "2026-10-02T03:09:46.779Z",
+      "listingValidatedCommit": "484272fd63a1bb3bd869efe8ac195f0fbc4f9fc5",
+      "listingValidatedAt": "2026-10-29T20:03:27.766Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -298711,8 +298711,8 @@
         "pluginIds": [
           "io.github.leandrooricchio.vivobook"
         ],
-        "commit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
-        "checkedAt": "2026-10-02T03:09:46.673Z",
+        "commit": "484272fd63a1bb3bd869efe8ac195f0fbc4f9fc5",
+        "checkedAt": "2026-10-29T20:03:27.766Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -298725,32 +298725,6 @@
           "installer"
         ]
       },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "leandrooricchio/omarchy-vivobook",
-        "pluginIds": [
-          "io.github.leandrooricchio.vivobook"
-        ],
-        "commit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T03:09:46.673Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "sudoers-modification",
-          "remote-build",
-          "package-manager",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-02T02:05:31.293Z",
-        "requestEventId": 32304802652,
-        "requestedAt": "2026-10-02T02:39:39Z",
-        "reviewedAt": "2026-10-02T03:09:46.673Z",
-        "reviewer": "HANCORE-linux"
-      },
       "plugins": {
         "io.github.leandrooricchio.vivobook": {
           "category": "Hardware",
@@ -298761,7 +298735,88 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "leandrooricchio/omarchy-vivobook",
+        "pluginIds": [
+          "io.github.leandrooricchio.vivobook"
+        ],
+        "commit": "484272fd63a1bb3bd869efe8ac195f0fbc4f9fc5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T20:03:27.766Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "remote-build",
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-25T01:53:12.020Z",
+        "requestEventId": 34625759170,
+        "requestedAt": "2026-10-29T19:41:06Z",
+        "reviewedAt": "2026-10-29T20:03:27.766Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
+          "validatedAt": "2026-10-02T03:09:46.779Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T20:03:27.766Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "leandrooricchio/omarchy-vivobook",
+            "pluginIds": [
+              "io.github.leandrooricchio.vivobook"
+            ],
+            "commit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
+            "checkedAt": "2026-10-02T03:09:46.673Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "sudoers-modification",
+              "remote-build",
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "leandrooricchio/omarchy-vivobook",
+            "pluginIds": [
+              "io.github.leandrooricchio.vivobook"
+            ],
+            "commit": "cdc6361f2a88df7102e5991caf7402268dab0a53",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T03:09:46.673Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "sudoers-modification",
+              "remote-build",
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-02T02:05:31.293Z",
+            "requestEventId": 32304802652,
+            "requestedAt": "2026-10-02T02:39:39Z",
+            "reviewedAt": "2026-10-02T03:09:46.673Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Roudis/omarchy-pokeget",
