@@ -391481,6 +391481,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sipstack/omarchy-pulse-phone",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T17:55:39.163Z",
+      "listingValidatedCommit": "805eac84d836b124da3f2c137dfb66a830de1eba",
+      "listingValidatedAt": "2026-10-29T17:55:39.163Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sipstack/omarchy-pulse-phone",
+        "pluginIds": [
+          "com.sipstack.pulse-phone"
+        ],
+        "commit": "805eac84d836b124da3f2c137dfb66a830de1eba",
+        "checkedAt": "2026-10-29T17:55:38.987Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sipstack/omarchy-pulse-phone",
+        "pluginIds": [
+          "com.sipstack.pulse-phone"
+        ],
+        "commit": "805eac84d836b124da3f2c137dfb66a830de1eba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T17:55:38.987Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T15:18:26.967Z",
+        "requestEventId": 34616737547,
+        "requestedAt": "2026-10-29T17:55:06Z",
+        "reviewedAt": "2026-10-29T17:55:38.987Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.sipstack.pulse-phone": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
