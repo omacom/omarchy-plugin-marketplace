@@ -392122,8 +392122,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T18:00:48.898Z",
-      "listingValidatedCommit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
-      "listingValidatedAt": "2026-10-29T18:00:48.898Z",
+      "listingValidatedCommit": "7d276fcdd2423657190aaf0391f1a7044b0fa121",
+      "listingValidatedAt": "2026-10-29T23:31:36.812Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -392132,8 +392132,8 @@
         "pluginIds": [
           "io.github.steveb98.segue"
         ],
-        "commit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
-        "checkedAt": "2026-10-29T18:00:48.720Z",
+        "commit": "7d276fcdd2423657190aaf0391f1a7044b0fa121",
+        "checkedAt": "2026-10-29T23:31:36.812Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -392149,7 +392149,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
+          "validatedAt": "2026-10-29T18:00:48.898Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T23:31:36.812Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "steveb98/omarchy-segue",
+            "pluginIds": [
+              "io.github.steveb98.segue"
+            ],
+            "commit": "072c28c1986b59d7ca0a41a1cf95a82c70acba16",
+            "checkedAt": "2026-10-29T18:00:48.720Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/duarte-gui/camguard-omarchy",
