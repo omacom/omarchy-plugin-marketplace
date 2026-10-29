@@ -389509,6 +389509,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/allankayan/omahorn",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T00:19:49.308Z",
+      "listingValidatedCommit": "23814763834e53566071dcfe5b7045c25ad0e840",
+      "listingValidatedAt": "2026-10-29T00:19:49.308Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "allankayan/omahorn",
+        "pluginIds": [
+          "io.github.allankayan.omahorn"
+        ],
+        "commit": "23814763834e53566071dcfe5b7045c25ad0e840",
+        "checkedAt": "2026-10-29T00:19:49.140Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.allankayan.omahorn": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
