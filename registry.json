@@ -388853,8 +388853,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T16:47:59.876Z",
-      "listingValidatedCommit": "685e7b4990338af4e574bcbe54f020c574bac62f",
-      "listingValidatedAt": "2026-10-28T16:47:59.876Z",
+      "listingValidatedCommit": "229248d2f923284dd1e101effd2feed7aed5f02f",
+      "listingValidatedAt": "2026-10-29T14:44:13.942Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -388863,8 +388863,8 @@
         "pluginIds": [
           "io.github.tonciz.agents-budget"
         ],
-        "commit": "685e7b4990338af4e574bcbe54f020c574bac62f",
-        "checkedAt": "2026-10-28T16:47:59.689Z",
+        "commit": "229248d2f923284dd1e101effd2feed7aed5f02f",
+        "checkedAt": "2026-10-29T14:44:13.942Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -388879,7 +388879,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "685e7b4990338af4e574bcbe54f020c574bac62f",
+          "validatedAt": "2026-10-28T16:47:59.876Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T14:44:13.942Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tonciz/omarchy-agents-budget",
+            "pluginIds": [
+              "io.github.tonciz.agents-budget"
+            ],
+            "commit": "685e7b4990338af4e574bcbe54f020c574bac62f",
+            "checkedAt": "2026-10-28T16:47:59.689Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/moonmouse11/omarchy-vpn",
