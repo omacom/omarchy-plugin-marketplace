@@ -372212,8 +372212,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T23:31:16.337Z",
-      "listingValidatedCommit": "1ab72d4d894bbd6127b34de54105b5ef4b2deede",
-      "listingValidatedAt": "2026-10-27T22:59:39.650Z",
+      "listingValidatedCommit": "23154292f70545799867599e4416ccb181ce3e3e",
+      "listingValidatedAt": "2026-10-29T20:11:27.205Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -372222,8 +372222,8 @@
         "pluginIds": [
           "blackcode.omalangy"
         ],
-        "commit": "1ab72d4d894bbd6127b34de54105b5ef4b2deede",
-        "checkedAt": "2026-10-27T22:59:39.650Z",
+        "commit": "23154292f70545799867599e4416ccb181ce3e3e",
+        "checkedAt": "2026-10-29T20:11:27.204Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -372275,6 +372275,26 @@
             ],
             "commit": "b4679d8c07f0e319486a5df058c8472a81de779d",
             "checkedAt": "2026-10-26T20:25:38.996Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "1ab72d4d894bbd6127b34de54105b5ef4b2deede",
+          "validatedAt": "2026-10-27T22:59:39.650Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T20:11:27.205Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alshareedah22/omalangy",
+            "pluginIds": [
+              "blackcode.omalangy"
+            ],
+            "commit": "1ab72d4d894bbd6127b34de54105b5ef4b2deede",
+            "checkedAt": "2026-10-27T22:59:39.650Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
