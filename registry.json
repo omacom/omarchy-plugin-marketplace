@@ -391078,6 +391078,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-10-29",
+      "listedAt": "2026-10-29T15:50:35.902Z",
+      "listingValidatedCommit": "1ed743a227730c040569365e0d3965f9f223d83a",
+      "listingValidatedAt": "2026-10-29T15:50:35.902Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-clock",
+        "pluginIds": [
+          "io.github.hugorolimf.clock"
+        ],
+        "commit": "1ed743a227730c040569365e0d3965f9f223d83a",
+        "checkedAt": "2026-10-29T15:50:35.755Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
