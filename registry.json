@@ -360786,8 +360786,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-16",
       "listedAt": "2026-10-16T21:36:30.718Z",
-      "listingValidatedCommit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
-      "listingValidatedAt": "2026-10-16T21:36:30.718Z",
+      "listingValidatedCommit": "8be142ae9325011801f5eb715cd07f1ce1008b2b",
+      "listingValidatedAt": "2026-10-29T12:51:52.901Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -360796,8 +360796,8 @@
         "pluginIds": [
           "io.github.simonschubert.omalauncher"
         ],
-        "commit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
-        "checkedAt": "2026-10-16T21:36:30.582Z",
+        "commit": "8be142ae9325011801f5eb715cd07f1ce1008b2b",
+        "checkedAt": "2026-10-29T12:51:52.901Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -360806,29 +360806,6 @@
           "privilege",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "simonschubert/omalauncher-omarchy-plugin",
-        "pluginIds": [
-          "io.github.simonschubert.omalauncher"
-        ],
-        "commit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-16T21:36:30.582Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-16T21:34:56.521Z",
-        "requestEventId": 33485566372,
-        "requestedAt": "2026-10-16T21:36:00Z",
-        "reviewedAt": "2026-10-16T21:36:30.582Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.simonschubert.omalauncher": {
@@ -360840,7 +360817,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "simonschubert/omalauncher-omarchy-plugin",
+        "pluginIds": [
+          "io.github.simonschubert.omalauncher"
+        ],
+        "commit": "8be142ae9325011801f5eb715cd07f1ce1008b2b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-29T12:51:52.901Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T12:42:35.840Z",
+        "requestEventId": 34585849468,
+        "requestedAt": "2026-10-29T12:51:23Z",
+        "reviewedAt": "2026-10-29T12:51:52.901Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
+          "validatedAt": "2026-10-16T21:36:30.718Z",
+          "branch": "main",
+          "supersededAt": "2026-10-29T12:51:52.901Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "simonschubert/omalauncher-omarchy-plugin",
+            "pluginIds": [
+              "io.github.simonschubert.omalauncher"
+            ],
+            "commit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
+            "checkedAt": "2026-10-16T21:36:30.582Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "simonschubert/omalauncher-omarchy-plugin",
+            "pluginIds": [
+              "io.github.simonschubert.omalauncher"
+            ],
+            "commit": "970a74fa04738c43efc738c8c8ea276d7d71aacf",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-16T21:36:30.582Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-16T21:34:56.521Z",
+            "requestEventId": 33485566372,
+            "requestedAt": "2026-10-16T21:36:00Z",
+            "reviewedAt": "2026-10-16T21:36:30.582Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Andrewx82/omarchy-crashbar",
