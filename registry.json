@@ -393579,6 +393579,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fldc/omarchy-nuphy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T01:42:33.779Z",
+      "listingValidatedCommit": "0139f71c7d8272d33d6cd44b2a0b17f6b31dd345",
+      "listingValidatedAt": "2026-10-30T01:42:33.779Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fldc/omarchy-nuphy",
+        "pluginIds": [
+          "local.nuphy"
+        ],
+        "commit": "0139f71c7d8272d33d6cd44b2a0b17f6b31dd345",
+        "checkedAt": "2026-10-30T01:42:33.612Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "local.nuphy": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
