@@ -395320,6 +395320,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bunin/omarchy-ddc",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T22:25:27.826Z",
+      "listingValidatedCommit": "614efaf01fb394d0ca3746f16b539ec8b6c56eb1",
+      "listingValidatedAt": "2026-10-30T22:25:27.826Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bunin/omarchy-ddc",
+        "pluginIds": [
+          "bunin.ddc"
+        ],
+        "commit": "614efaf01fb394d0ca3746f16b539ec8b6c56eb1",
+        "checkedAt": "2026-10-30T22:25:27.648Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bunin/omarchy-ddc",
+        "pluginIds": [
+          "bunin.ddc"
+        ],
+        "commit": "614efaf01fb394d0ca3746f16b539ec8b6c56eb1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T22:25:27.648Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T15:02:54.851Z",
+        "requestEventId": 34735260605,
+        "requestedAt": "2026-10-30T21:45:26Z",
+        "reviewedAt": "2026-10-30T22:25:27.648Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bunin.ddc": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
