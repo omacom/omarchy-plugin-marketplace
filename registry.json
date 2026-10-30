@@ -393785,8 +393785,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T00:42:35.907Z",
-      "listingValidatedCommit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
-      "listingValidatedAt": "2026-10-30T00:42:35.907Z",
+      "listingValidatedCommit": "fdcb8e8fd55e85fa91025b054e2a35851797dc7f",
+      "listingValidatedAt": "2026-10-30T22:58:23.560Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -393795,8 +393795,8 @@
         "pluginIds": [
           "io.github.hugorolimf.inbox"
         ],
-        "commit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
-        "checkedAt": "2026-10-30T00:42:35.707Z",
+        "commit": "fdcb8e8fd55e85fa91025b054e2a35851797dc7f",
+        "checkedAt": "2026-10-30T22:58:23.559Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -393816,7 +393816,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
+          "validatedAt": "2026-10-30T00:42:35.907Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T22:58:23.560Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-island-inbox",
+            "pluginIds": [
+              "io.github.hugorolimf.inbox"
+            ],
+            "commit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
+            "checkedAt": "2026-10-30T00:42:35.707Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dangtrungan/rss-plugin",
