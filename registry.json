@@ -334720,8 +334720,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-08",
       "listedAt": "2026-10-08T12:59:46.421Z",
-      "listingValidatedCommit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
-      "listingValidatedAt": "2026-10-28T20:59:31.715Z",
+      "listingValidatedCommit": "0c66bac0ffddd9839f135abee5cd363b5a8c80e2",
+      "listingValidatedAt": "2026-10-30T21:41:08.239Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -334730,14 +334730,13 @@
         "pluginIds": [
           "heast13.downtime"
         ],
-        "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
-        "checkedAt": "2026-10-28T20:59:31.715Z",
+        "commit": "0c66bac0ffddd9839f135abee5cd363b5a8c80e2",
+        "checkedAt": "2026-10-30T21:41:08.239Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "service-management",
-          "package-manager"
+          "service-management"
         ]
       },
       "plugins": {
@@ -334890,6 +334889,51 @@
             "reviewedAt": "2026-10-11T07:07:37.944Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+          "validatedAt": "2026-10-28T20:59:31.715Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T21:41:08.239Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "heast13/omarchy-downtime",
+            "pluginIds": [
+              "heast13.downtime"
+            ],
+            "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+            "checkedAt": "2026-10-28T20:59:31.715Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "heast13/omarchy-downtime",
+            "pluginIds": [
+              "heast13.downtime"
+            ],
+            "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T20:59:31.715Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-24T04:08:25.027Z",
+            "requestEventId": 34514571223,
+            "requestedAt": "2026-10-28T19:55:20Z",
+            "reviewedAt": "2026-10-28T20:59:31.715Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -334898,20 +334942,19 @@
         "pluginIds": [
           "heast13.downtime"
         ],
-        "commit": "92ac100ba2afe3e88a9cf53008ac597fd27c4b44",
+        "commit": "0c66bac0ffddd9839f135abee5cd363b5a8c80e2",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T20:59:31.715Z",
+        "baselineCheckedAt": "2026-10-30T21:41:08.239Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
-          "service-management",
-          "package-manager"
+          "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-24T04:08:25.027Z",
-        "requestEventId": 34514571223,
-        "requestedAt": "2026-10-28T19:55:20Z",
-        "reviewedAt": "2026-10-28T20:59:31.715Z",
+        "reviewedBaselineCheckedAt": "2026-10-30T16:11:45.641Z",
+        "requestEventId": 34731960134,
+        "requestedAt": "2026-10-30T20:56:58Z",
+        "reviewedAt": "2026-10-30T21:41:08.239Z",
         "reviewer": "HANCORE-linux"
       }
     },
