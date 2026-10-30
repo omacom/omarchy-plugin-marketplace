@@ -393306,6 +393306,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-display",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T01:18:16.594Z",
+      "listingValidatedCommit": "fd76d9825a5e24a0528f6fa49ae870656d0e4327",
+      "listingValidatedAt": "2026-10-30T01:18:16.594Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-display",
+        "pluginIds": [
+          "io.github.hugorolimf.monitor"
+        ],
+        "commit": "fd76d9825a5e24a0528f6fa49ae870656d0e4327",
+        "checkedAt": "2026-10-30T01:18:16.413Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.monitor": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
