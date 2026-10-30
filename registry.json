@@ -391311,8 +391311,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T14:16:26.040Z",
-      "listingValidatedCommit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
-      "listingValidatedAt": "2026-10-29T19:35:54.125Z",
+      "listingValidatedCommit": "05769cf840e5f8972fb512f9e9dcf5aa61bb743e",
+      "listingValidatedAt": "2026-10-30T00:26:06.749Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -391321,8 +391321,8 @@
         "pluginIds": [
           "io.github.mattwolfgang.plugin-guard"
         ],
-        "commit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
-        "checkedAt": "2026-10-29T19:35:54.125Z",
+        "commit": "05769cf840e5f8972fb512f9e9dcf5aa61bb743e",
+        "checkedAt": "2026-10-30T00:26:06.749Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -391343,30 +391343,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mattwolfgang/omarchy-plugin-guard",
-        "pluginIds": [
-          "io.github.mattwolfgang.plugin-guard"
-        ],
-        "commit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-29T19:35:54.125Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege",
-          "sudoers-modification",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-29T15:57:45.812Z",
-        "requestEventId": 34625195595,
-        "requestedAt": "2026-10-29T19:34:16Z",
-        "reviewedAt": "2026-10-29T19:35:54.125Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -391417,8 +391393,81 @@
             "reviewedAt": "2026-10-29T14:16:25.862Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
+          "validatedAt": "2026-10-29T19:35:54.125Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T00:26:06.749Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mattwolfgang/omarchy-plugin-guard",
+            "pluginIds": [
+              "io.github.mattwolfgang.plugin-guard"
+            ],
+            "commit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
+            "checkedAt": "2026-10-29T19:35:54.125Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "sudoers-modification",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mattwolfgang/omarchy-plugin-guard",
+            "pluginIds": [
+              "io.github.mattwolfgang.plugin-guard"
+            ],
+            "commit": "7b72bbd5c96c55d2ffd6f5bf60a38ff5f0afec59",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-29T19:35:54.125Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "sudoers-modification",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-29T15:57:45.812Z",
+            "requestEventId": 34625195595,
+            "requestedAt": "2026-10-29T19:34:16Z",
+            "reviewedAt": "2026-10-29T19:35:54.125Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mattwolfgang/omarchy-plugin-guard",
+        "pluginIds": [
+          "io.github.mattwolfgang.plugin-guard"
+        ],
+        "commit": "05769cf840e5f8972fb512f9e9dcf5aa61bb743e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T00:26:06.749Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T23:35:32.271Z",
+        "requestEventId": 34643724705,
+        "requestedAt": "2026-10-29T23:52:36Z",
+        "reviewedAt": "2026-10-30T00:26:06.749Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/AhmadRun/temp-mail",
