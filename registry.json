@@ -393268,6 +393268,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-power",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T01:13:52.999Z",
+      "listingValidatedCommit": "00c448f71913ebbadb2f7212dd3f10a8e33d2331",
+      "listingValidatedAt": "2026-10-30T01:13:52.999Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-power",
+        "pluginIds": [
+          "io.github.hugorolimf.power"
+        ],
+        "commit": "00c448f71913ebbadb2f7212dd3f10a8e33d2331",
+        "checkedAt": "2026-10-30T01:13:52.810Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.power": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
