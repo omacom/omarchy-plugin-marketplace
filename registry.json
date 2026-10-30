@@ -349847,8 +349847,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-12",
       "listedAt": "2026-10-12T18:43:44.523Z",
-      "listingValidatedCommit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
-      "listingValidatedAt": "2026-10-12T18:43:44.523Z",
+      "listingValidatedCommit": "5b22f463f625dac599661bf103c9baecc97d8f7e",
+      "listingValidatedAt": "2026-10-30T23:25:00.285Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -349857,35 +349857,15 @@
         "pluginIds": [
           "akitaonrails.cheatsheets"
         ],
-        "commit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
-        "checkedAt": "2026-10-12T18:43:44.389Z",
+        "commit": "5b22f463f625dac599661bf103c9baecc97d8f7e",
+        "checkedAt": "2026-10-30T23:25:00.285Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "package-manager"
+          "package-manager",
+          "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "akitaonrails/omarchy-cheatsheets",
-        "pluginIds": [
-          "akitaonrails.cheatsheets"
-        ],
-        "commit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-12T18:43:44.389Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-12T18:34:15.564Z",
-        "requestEventId": 33072331890,
-        "requestedAt": "2026-10-12T18:43:14Z",
-        "reviewedAt": "2026-10-12T18:43:44.389Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "akitaonrails.cheatsheets": {
@@ -349901,7 +349881,74 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "akitaonrails/omarchy-cheatsheets",
+        "pluginIds": [
+          "akitaonrails.cheatsheets"
+        ],
+        "commit": "5b22f463f625dac599661bf103c9baecc97d8f7e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T23:25:00.285Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T19:19:54.422Z",
+        "requestEventId": 34738856676,
+        "requestedAt": "2026-10-30T22:47:39Z",
+        "reviewedAt": "2026-10-30T23:25:00.285Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
+          "validatedAt": "2026-10-12T18:43:44.523Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T23:25:00.285Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "akitaonrails/omarchy-cheatsheets",
+            "pluginIds": [
+              "akitaonrails.cheatsheets"
+            ],
+            "commit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
+            "checkedAt": "2026-10-12T18:43:44.389Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "akitaonrails/omarchy-cheatsheets",
+            "pluginIds": [
+              "akitaonrails.cheatsheets"
+            ],
+            "commit": "a94d8b2cf24b245d3b104dd4d3ff6c91938d4a1c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-12T18:43:44.389Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-12T18:34:15.564Z",
+            "requestEventId": 33072331890,
+            "requestedAt": "2026-10-12T18:43:14Z",
+            "reviewedAt": "2026-10-12T18:43:44.389Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/shaggyrs6-netizen/omarchy-scratchview",
