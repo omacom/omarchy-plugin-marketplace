@@ -394872,6 +394872,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gexavi/omarchy-peripheral-battery",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T21:27:16.704Z",
+      "listingValidatedCommit": "799a13ec5c5da4ee536089bc8734831769123718",
+      "listingValidatedAt": "2026-10-30T21:27:16.704Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gexavi/omarchy-peripheral-battery",
+        "pluginIds": [
+          "gexavi.peripheral-battery"
+        ],
+        "commit": "799a13ec5c5da4ee536089bc8734831769123718",
+        "checkedAt": "2026-10-30T21:27:16.515Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gexavi/omarchy-peripheral-battery",
+        "pluginIds": [
+          "gexavi.peripheral-battery"
+        ],
+        "commit": "799a13ec5c5da4ee536089bc8734831769123718",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T21:27:16.515Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T10:00:42.260Z",
+        "requestEventId": 34731388837,
+        "requestedAt": "2026-10-30T20:48:29Z",
+        "reviewedAt": "2026-10-30T21:27:16.515Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gexavi.peripheral-battery": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
