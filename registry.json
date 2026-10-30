@@ -395977,6 +395977,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/shilai-li/omaview",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T23:41:02.316Z",
+      "listingValidatedCommit": "a57eb7c3672bbe74ef099714edeccc7c5e28dd94",
+      "listingValidatedAt": "2026-10-30T23:41:02.316Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shilai-li/omaview",
+        "pluginIds": [
+          "shilai_li.omaview"
+        ],
+        "commit": "a57eb7c3672bbe74ef099714edeccc7c5e28dd94",
+        "checkedAt": "2026-10-30T23:41:02.172Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shilai-li/omaview",
+        "pluginIds": [
+          "shilai_li.omaview"
+        ],
+        "commit": "a57eb7c3672bbe74ef099714edeccc7c5e28dd94",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T23:41:02.172Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T16:49:21.627Z",
+        "requestEventId": 34739723467,
+        "requestedAt": "2026-10-30T23:03:26Z",
+        "reviewedAt": "2026-10-30T23:41:02.172Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shilai_li.omaview": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
