@@ -395922,6 +395922,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/anavarre/omarchy-mma",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T23:37:33.619Z",
+      "listingValidatedCommit": "84a5543cc6c9fad396c3b6ba3ad8ef55593499a7",
+      "listingValidatedAt": "2026-10-30T23:37:33.619Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anavarre/omarchy-mma",
+        "pluginIds": [
+          "anavarre.mma"
+        ],
+        "commit": "84a5543cc6c9fad396c3b6ba3ad8ef55593499a7",
+        "checkedAt": "2026-10-30T23:37:33.509Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "anavarre/omarchy-mma",
+        "pluginIds": [
+          "anavarre.mma"
+        ],
+        "commit": "84a5543cc6c9fad396c3b6ba3ad8ef55593499a7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T23:37:33.509Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T12:21:06.909Z",
+        "requestEventId": 34739499784,
+        "requestedAt": "2026-10-30T22:59:18Z",
+        "reviewedAt": "2026-10-30T23:37:33.509Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "anavarre.mma": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
