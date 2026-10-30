@@ -388845,8 +388845,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T08:22:22.983Z",
-      "listingValidatedCommit": "646d1c7857468a29a610c1c43af6f478b31c60d1",
-      "listingValidatedAt": "2026-10-28T08:22:22.983Z",
+      "listingValidatedCommit": "496ecfd535aabd299717299e0d462d83bf57c2b4",
+      "listingValidatedAt": "2026-10-30T19:34:18.420Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -388855,8 +388855,8 @@
         "pluginIds": [
           "io.github.gabrielforster.big-cursor"
         ],
-        "commit": "646d1c7857468a29a610c1c43af6f478b31c60d1",
-        "checkedAt": "2026-10-28T08:22:22.825Z",
+        "commit": "496ecfd535aabd299717299e0d462d83bf57c2b4",
+        "checkedAt": "2026-10-30T19:34:18.420Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -388872,7 +388872,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "646d1c7857468a29a610c1c43af6f478b31c60d1",
+          "validatedAt": "2026-10-28T08:22:22.983Z",
+          "branch": "master",
+          "supersededAt": "2026-10-30T19:34:18.420Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gabrielforster/omarchy-big-cursor",
+            "pluginIds": [
+              "io.github.gabrielforster.big-cursor"
+            ],
+            "commit": "646d1c7857468a29a610c1c43af6f478b31c60d1",
+            "checkedAt": "2026-10-28T08:22:22.825Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/CIKR-Repos/omarchy-remote-access",
