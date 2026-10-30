@@ -394691,6 +394691,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/evtriest/mouse-in-the-corner",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T21:04:30.699Z",
+      "listingValidatedCommit": "819d8cae705e97d5304b6f1a035c8d76ca9b2f23",
+      "listingValidatedAt": "2026-10-30T21:04:30.699Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "evtriest/mouse-in-the-corner",
+        "pluginIds": [
+          "eep.window-controls"
+        ],
+        "commit": "819d8cae705e97d5304b6f1a035c8d76ca9b2f23",
+        "checkedAt": "2026-10-30T21:04:30.520Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "eep.window-controls": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
