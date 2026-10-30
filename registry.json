@@ -392590,6 +392590,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KirklandGee/omarchy-downloads",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T00:09:19.987Z",
+      "listingValidatedCommit": "3d281fd7bd641e288f0d9c728a713786e909e6ab",
+      "listingValidatedAt": "2026-10-30T00:09:19.987Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kirklandgee/omarchy-downloads",
+        "pluginIds": [
+          "kirklandgee.downloads"
+        ],
+        "commit": "3d281fd7bd641e288f0d9c728a713786e909e6ab",
+        "checkedAt": "2026-10-30T00:09:19.803Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kirklandgee.downloads": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
