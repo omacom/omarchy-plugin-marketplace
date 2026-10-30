@@ -395154,6 +395154,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/crmne/omarchy-hyprmoncfg-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T22:03:34.694Z",
+      "listingValidatedCommit": "683e9cf9224529680b764ffc2d45a1f00ef35129",
+      "listingValidatedAt": "2026-10-30T22:03:34.694Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crmne/omarchy-hyprmoncfg-workspaces",
+        "pluginIds": [
+          "crmne.hyprmoncfg-workspaces"
+        ],
+        "commit": "683e9cf9224529680b764ffc2d45a1f00ef35129",
+        "checkedAt": "2026-10-30T22:03:34.517Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crmne/omarchy-hyprmoncfg-workspaces",
+        "pluginIds": [
+          "crmne.hyprmoncfg-workspaces"
+        ],
+        "commit": "683e9cf9224529680b764ffc2d45a1f00ef35129",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T22:03:34.517Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T18:33:50.614Z",
+        "requestEventId": 34734124198,
+        "requestedAt": "2026-10-30T21:27:41Z",
+        "reviewedAt": "2026-10-30T22:03:34.517Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "crmne.hyprmoncfg-workspaces": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
