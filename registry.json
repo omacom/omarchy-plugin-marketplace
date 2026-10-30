@@ -394088,6 +394088,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rover-001/lumania-shell",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T03:45:40.534Z",
+      "listingValidatedCommit": "0fbf0a68b2b99253a63855eeb0735158874d0299",
+      "listingValidatedAt": "2026-10-30T03:45:40.534Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rover-001/lumania-shell",
+        "pluginIds": [
+          "lumania.island"
+        ],
+        "commit": "0fbf0a68b2b99253a63855eeb0735158874d0299",
+        "checkedAt": "2026-10-30T03:45:40.362Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rover-001/lumania-shell",
+        "pluginIds": [
+          "lumania.island"
+        ],
+        "commit": "0fbf0a68b2b99253a63855eeb0735158874d0299",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T03:45:40.362Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T03:38:42.712Z",
+        "requestEventId": 34655832069,
+        "requestedAt": "2026-10-30T03:45:08Z",
+        "reviewedAt": "2026-10-30T03:45:40.362Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "lumania.island": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
