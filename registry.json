@@ -389299,8 +389299,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T14:28:04.975Z",
-      "listingValidatedCommit": "19e8ba32a227082368342f5e8f498cada70900c8",
-      "listingValidatedAt": "2026-10-28T14:28:04.975Z",
+      "listingValidatedCommit": "96914b3feffcb5ef011990716930796cc273207b",
+      "listingValidatedAt": "2026-10-30T20:23:55.624Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -389309,8 +389309,8 @@
         "pluginIds": [
           "io.github.kaplanhalil.quickdrawer"
         ],
-        "commit": "19e8ba32a227082368342f5e8f498cada70900c8",
-        "checkedAt": "2026-10-28T14:28:04.764Z",
+        "commit": "96914b3feffcb5ef011990716930796cc273207b",
+        "checkedAt": "2026-10-30T20:23:55.624Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -389326,7 +389326,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "19e8ba32a227082368342f5e8f498cada70900c8",
+          "validatedAt": "2026-10-28T14:28:04.975Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T20:23:55.624Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kaplanhalil/omarchy-quick-drawer",
+            "pluginIds": [
+              "io.github.kaplanhalil.quickdrawer"
+            ],
+            "commit": "19e8ba32a227082368342f5e8f498cada70900c8",
+            "checkedAt": "2026-10-28T14:28:04.764Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/markerspoint/omarchy-notch",
