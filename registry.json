@@ -392935,6 +392935,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-inbox",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T00:42:35.907Z",
+      "listingValidatedCommit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
+      "listingValidatedAt": "2026-10-30T00:42:35.907Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-inbox",
+        "pluginIds": [
+          "io.github.hugorolimf.inbox"
+        ],
+        "commit": "b4de500554b9bcfca32e61d72e361c4a425e9762",
+        "checkedAt": "2026-10-30T00:42:35.707Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.inbox": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
