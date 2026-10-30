@@ -393381,6 +393381,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-ai-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T01:26:29.373Z",
+      "listingValidatedCommit": "e1973538ea4546f0c92a873bf699eb4eb0e1d547",
+      "listingValidatedAt": "2026-10-30T01:26:29.373Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-ai-usage",
+        "pluginIds": [
+          "io.github.hugorolimf.agents"
+        ],
+        "commit": "e1973538ea4546f0c92a873bf699eb4eb0e1d547",
+        "checkedAt": "2026-10-30T01:26:29.268Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.agents": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
