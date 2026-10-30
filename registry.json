@@ -395558,6 +395558,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/xvvhang/omarchy-konocontrol-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T23:02:32.836Z",
+      "listingValidatedCommit": "510ee2a76273506242fc1d26b92047736c588ccd",
+      "listingValidatedAt": "2026-10-30T23:02:32.836Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xvvhang/omarchy-konocontrol-plugin",
+        "pluginIds": [
+          "konochi.konocontrol"
+        ],
+        "commit": "510ee2a76273506242fc1d26b92047736c588ccd",
+        "checkedAt": "2026-10-30T23:02:32.725Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "konochi.konocontrol": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
