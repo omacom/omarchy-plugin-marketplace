@@ -393604,8 +393604,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T00:34:01.592Z",
-      "listingValidatedCommit": "ff6ab962919976bbee2852de2f51d87eca388fc4",
-      "listingValidatedAt": "2026-10-30T00:34:01.592Z",
+      "listingValidatedCommit": "0f7bcef1d8be1924015e2bd85c75dce4e787b366",
+      "listingValidatedAt": "2026-10-30T22:34:50.771Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -393614,8 +393614,8 @@
         "pluginIds": [
           "io.github.hugorolimf.island"
         ],
-        "commit": "ff6ab962919976bbee2852de2f51d87eca388fc4",
-        "checkedAt": "2026-10-30T00:34:01.420Z",
+        "commit": "0f7bcef1d8be1924015e2bd85c75dce4e787b366",
+        "checkedAt": "2026-10-30T22:34:50.771Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -393631,7 +393631,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ff6ab962919976bbee2852de2f51d87eca388fc4",
+          "validatedAt": "2026-10-30T00:34:01.592Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T22:34:50.771Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-island-notch",
+            "pluginIds": [
+              "io.github.hugorolimf.island"
+            ],
+            "commit": "ff6ab962919976bbee2852de2f51d87eca388fc4",
+            "checkedAt": "2026-10-30T00:34:01.420Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/qempexe/omarchy-clipscape",
