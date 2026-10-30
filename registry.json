@@ -393911,6 +393911,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-iphone",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T03:18:51.695Z",
+      "listingValidatedCommit": "4f427947f8b7f5b91c1b8b4e167ee034d0f7dfe3",
+      "listingValidatedAt": "2026-10-30T03:18:51.695Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-iphone",
+        "pluginIds": [
+          "io.github.hugorolimf.iphone"
+        ],
+        "commit": "4f427947f8b7f5b91c1b8b4e167ee034d0f7dfe3",
+        "checkedAt": "2026-10-30T03:18:51.571Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hugorolimf/omarchy-island-iphone",
+        "pluginIds": [
+          "io.github.hugorolimf.iphone"
+        ],
+        "commit": "4f427947f8b7f5b91c1b8b4e167ee034d0f7dfe3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T03:18:51.571Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T03:00:35.855Z",
+        "requestEventId": 34654540567,
+        "requestedAt": "2026-10-30T03:18:23Z",
+        "reviewedAt": "2026-10-30T03:18:51.571Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hugorolimf.iphone": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
