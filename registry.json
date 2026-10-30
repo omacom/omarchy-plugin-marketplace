@@ -393518,6 +393518,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yock/omarchy-station",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T01:38:45.830Z",
+      "listingValidatedCommit": "2fb2e3b4f3563974ae9d1b48d497b86f091878d8",
+      "listingValidatedAt": "2026-10-30T01:38:45.830Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yock/omarchy-station",
+        "pluginIds": [
+          "yock.station-readiness"
+        ],
+        "commit": "2fb2e3b4f3563974ae9d1b48d497b86f091878d8",
+        "checkedAt": "2026-10-30T01:38:45.689Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yock/omarchy-station",
+        "pluginIds": [
+          "yock.station-readiness"
+        ],
+        "commit": "2fb2e3b4f3563974ae9d1b48d497b86f091878d8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T01:38:45.689Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T04:42:38.770Z",
+        "requestEventId": 34647836615,
+        "requestedAt": "2026-10-30T01:09:37Z",
+        "reviewedAt": "2026-10-30T01:38:45.689Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yock.station-readiness": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
