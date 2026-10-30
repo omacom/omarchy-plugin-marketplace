@@ -395211,6 +395211,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ShinobiX9X/omarchy-languagetool",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T22:08:05.792Z",
+      "listingValidatedCommit": "24c5c26bdf716f0f5ba732d229247bd6968d26d2",
+      "listingValidatedAt": "2026-10-30T22:08:05.792Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shinobix9x/omarchy-languagetool",
+        "pluginIds": [
+          "io.github.shinobix9x.languagetool"
+        ],
+        "commit": "24c5c26bdf716f0f5ba732d229247bd6968d26d2",
+        "checkedAt": "2026-10-30T22:08:05.605Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.shinobix9x.languagetool": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
