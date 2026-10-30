@@ -385548,8 +385548,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T19:23:08.667Z",
-      "listingValidatedCommit": "578cbb4d755eb207cce4dffd706580a3a6f09831",
-      "listingValidatedAt": "2026-10-27T23:07:44.747Z",
+      "listingValidatedCommit": "6ac566b14e637b45d3bcbf4731d83a234cbea1b7",
+      "listingValidatedAt": "2026-10-30T20:48:10.529Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -385558,8 +385558,8 @@
         "pluginIds": [
           "blackcode.omatableplus"
         ],
-        "commit": "578cbb4d755eb207cce4dffd706580a3a6f09831",
-        "checkedAt": "2026-10-27T23:07:44.747Z",
+        "commit": "6ac566b14e637b45d3bcbf4731d83a234cbea1b7",
+        "checkedAt": "2026-10-30T20:48:10.529Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -385590,6 +385590,26 @@
             ],
             "commit": "55558fb2648ac8bb7079c3a64099864c4ef778c3",
             "checkedAt": "2026-10-26T19:23:08.529Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "578cbb4d755eb207cce4dffd706580a3a6f09831",
+          "validatedAt": "2026-10-27T23:07:44.747Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T20:48:10.529Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alshareedah22/omatableplus",
+            "pluginIds": [
+              "blackcode.omatableplus"
+            ],
+            "commit": "578cbb4d755eb207cce4dffd706580a3a6f09831",
+            "checkedAt": "2026-10-27T23:07:44.747Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
