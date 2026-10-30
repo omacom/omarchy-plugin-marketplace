@@ -393028,6 +393028,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imcmurray/omarchy-tinnitus-notch",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T00:55:41.720Z",
+      "listingValidatedCommit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+      "listingValidatedAt": "2026-10-30T00:55:41.720Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imcmurray/omarchy-tinnitus-notch",
+        "pluginIds": [
+          "ianm.tinnitus"
+        ],
+        "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+        "checkedAt": "2026-10-30T00:55:41.550Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imcmurray/omarchy-tinnitus-notch",
+        "pluginIds": [
+          "ianm.tinnitus"
+        ],
+        "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T00:55:41.550Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T22:19:24.432Z",
+        "requestEventId": 34646761150,
+        "requestedAt": "2026-10-30T00:49:11Z",
+        "reviewedAt": "2026-10-30T00:55:41.550Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ianm.tinnitus": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
