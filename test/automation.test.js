@@ -1550,8 +1550,10 @@ test("entry modules and their shared dependency use one cache key", async () => 
     rightsRequest: await readFile(new URL(".github/ISSUE_TEMPLATE/rights-request.yml", root), "utf8"),
     favicon: await readFile(new URL("site/favicon.svg", root), "utf8"),
   };
+  // Only changed assets get a new cache key. The browse entry module changed
+  // alone, so it is ahead of the coupled modules, which still share one key.
+  assert.equal(files.index.match(/app\.js\?v=([^"']+)/)?.[1], "20261030-01");
   const keys = [
-    files.index.match(/app\.js\?v=([^"']+)/)?.[1],
     files.plugin.match(/plugin\.js\?v=([^"']+)/)?.[1],
     files.publish.match(/publish\.js\?v=([^"']+)/)?.[1],
     files.develop.match(/develop\.js\?v=([^"']+)/)?.[1],
@@ -1577,7 +1579,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261029-01");
+  assert.equal(styleKeys[0], "20261030-01");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -2021,6 +2023,23 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /const requestedSort = params\.get\("sort"\) \|\| sourceDefaultSort\(\);[\s\S]*availableSortOptions\(\)\.some\(\(\[value\]\) => value === requestedSort\)/);
   assert.match(files.app, /const searchTermTypeLabels = \{[\s\S]*fulltext: "TEXT"[\s\S]*kind: "KIND"/);
   assert.match(files.app, /class="search-term-type"/);
+  assert.match(files.app, /class="search-term-edit" type="button" data-search-term-edit[\s\S]*aria-label="Edit \$\{typeName\}/);
+  assert.match(files.app, /class="search-term-remove" type="button" data-search-term-remove[\s\S]*aria-label="Remove \$\{typeName\}/);
+  assert.match(files.app, /function editSearchTerm\(index\) \{[\s\S]*searchTermInputValue\(presentation\.term\)[\s\S]*search\.focus\(\);/);
+  // A pending draft is committed first so an edited phrase term never mixes with other words.
+  assert.match(files.app, /function editSearchTerm\(index\) \{[\s\S]*if \(state\.query\.trim\(\) && !commitSearchDraft\(\) && committedTermsFromDraft\(state\.query\)\.length\) \{\s*state\.terms\.splice\(index, 0, edited\);[\s\S]*state\.query = searchTermInputValue\(presentation\.term\);/);
+  // Focus returns to the same part of the chip, so Enter keeps its meaning after a re-render.
+  assert.match(files.app, /part: active\.matches\("\[data-search-term-remove\]"\) \? "remove" : "edit"/);
+  assert.match(files.app, /\?\.querySelector\(`\[data-search-term-\$\{token\.part\}\]`\)/);
+  assert.match(files.style, /\.search-term-edit:focus-visible, \.search-term-remove:focus-visible \{ outline: 1px solid var\(--accent\); outline-offset: 2px; \}/);
+  assert.doesNotMatch(files.style, /\.search-term-edit, \.search-term-remove \{[^}]*outline: 0/);
+  assert.match(files.index, /<button id="search-help" class="search-help" type="button" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax">\?<\/button>/);
+  assert.match(files.index, /<div id="search-help-panel" class="search-help-panel" role="region" aria-label="Search syntax" hidden>/);
+  assert.match(files.app, /searchHelp\.setAttribute\("aria-expanded", String\(open\)\)/);
+  assert.match(files.app, /searchHelp\.addEventListener\("keydown", \(event\) => \{\s*if \(event\.key !== "Escape" \|\| searchHelpPanel\.hidden\) return;/);
+  // The help opens above the search bar so it never covers the suggestions below.
+  assert.match(files.style, /\.search-help-panel \{\s*position: absolute; z-index: 31; bottom: calc\(100% \+ 8px\);/);
+  assert.match(files.style, /\.search-help-panel\.is-below \{ top: calc\(100% \+ 8px\); bottom: auto; \}/);
   assert.match(files.app, /function commitSearchDraft\(completion\)/);
   assert.match(files.app, /function clearSearchTerms\(\{ focus = true \} = \{\}\)/);
   assert.match(files.app, /function removeSearchTerm\(index\)/);

@@ -214,6 +214,8 @@ const search = document.querySelector("#search-input");
 const searchTerms = document.querySelector("#search-terms");
 const searchClear = document.querySelector("#search-clear");
 const searchShortcut = document.querySelector("#search-shortcut");
+const searchHelp = document.querySelector("#search-help");
+const searchHelpPanel = document.querySelector("#search-help-panel");
 const searchFishPreview = document.querySelector("#search-fish-preview");
 const searchSuggestions = document.querySelector("#search-suggestions");
 const searchSuggestionStatus = document.querySelector("#search-suggestion-status");
@@ -601,6 +603,32 @@ function removeSearchTerm(index) {
   );
 }
 
+/** Move a search term back into the search box as editable draft text. */
+function editSearchTerm(index) {
+  const [edited] = state.terms.splice(index, 1);
+  const presentation = searchTermPresentation(edited);
+  if (!presentation) return;
+  // Commit any pending draft first so the edited term stands alone in the
+  // input; mixed with other words, a phrase term would split on recommit.
+  // Only a draft that cannot fit under the term limit cancels the edit.
+  if (state.query.trim() && !commitSearchDraft() && committedTermsFromDraft(state.query).length) {
+    state.terms.splice(index, 0, edited);
+    return;
+  }
+  state.query = searchTermInputValue(presentation.term);
+  search.value = state.query;
+  state.page = 1;
+  syncSortFromSearch();
+  renderSearchTerms();
+  render();
+  // Focusing the input refreshes the suggestions for the edited term.
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(
+    `Editing ${presentation.term.type} search term ${presentation.value}`,
+  );
+}
+
 function renderSearchTerms() {
   searchTerms.innerHTML = state.terms.map((term, index) => {
     const presentation = searchTermPresentation(term);
@@ -609,18 +637,22 @@ function renderSearchTerms() {
       ? `${presentation.term.type} search term`
       : "search term";
     return `
-      <button class="search-term" type="button" data-search-term="${index}"
-        data-search-term-type="${presentation.term.type}"
-        aria-label="Remove ${typeName} ${escapeHtml(presentation.value)}">
-        ${presentation.typeLabel
-          ? `<span class="search-term-type">${presentation.typeLabel}</span>`
-          : ""}
-        <span class="search-term-value">${escapeHtml(presentation.value)}</span>
-        <span class="search-term-remove" aria-hidden="true">×</span>
-      </button>`;
+      <span class="search-term" data-search-term="${index}" data-search-term-type="${presentation.term.type}">
+        <button class="search-term-edit" type="button" data-search-term-edit
+          aria-label="Edit ${typeName} ${escapeHtml(presentation.value)}">
+          ${presentation.typeLabel
+            ? `<span class="search-term-type">${presentation.typeLabel}</span>`
+            : ""}
+          <span class="search-term-value">${escapeHtml(presentation.value)}</span>
+        </button>
+        <button class="search-term-remove" type="button" data-search-term-remove
+          aria-label="Remove ${typeName} ${escapeHtml(presentation.value)}"><span aria-hidden="true">×</span></button>
+      </span>`;
   }).join("");
-  searchTerms.querySelectorAll("[data-search-term]").forEach((button) => {
-    button.addEventListener("click", () => removeSearchTerm(Number(button.dataset.searchTerm)));
+  searchTerms.querySelectorAll("[data-search-term]").forEach((chip) => {
+    const index = Number(chip.dataset.searchTerm);
+    chip.querySelector("[data-search-term-edit]").addEventListener("click", () => editSearchTerm(index));
+    chip.querySelector("[data-search-term-remove]").addEventListener("click", () => removeSearchTerm(index));
   });
   updateSearchAffordances();
 }
@@ -1660,6 +1692,7 @@ function catalogControlFocusToken(active) {
   return {
     type: "term",
     key: searchTermKey(state.terms[Number(termButton.dataset.searchTerm)]),
+    part: active.matches("[data-search-term-remove]") ? "remove" : "edit",
   };
 }
 
@@ -1675,7 +1708,8 @@ function restoreCatalogControlFocus(token) {
       .find((button) => button.dataset.category === state.category);
   } else if (token?.type === "term") {
     target = [...searchTerms.querySelectorAll("[data-search-term]")]
-      .find((button) => searchTermKey(state.terms[Number(button.dataset.searchTerm)]) === token.key)
+      .find((chip) => searchTermKey(state.terms[Number(chip.dataset.searchTerm)]) === token.key)
+      ?.querySelector(`[data-search-term-${token.part}]`)
       || search;
   }
   target?.focus({ preventScroll: true });
@@ -2289,6 +2323,30 @@ async function init() {
 
   searchClear.addEventListener("click", () => clearSearchTerms());
 
+  // The syntax help stays open while the reader types, so it opens above the
+  // search bar, clear of the suggestions below. It flips below only when the
+  // sticky header leaves too little room above.
+  const placeSearchHelp = () => {
+    searchHelpPanel.classList.remove("is-below");
+    const headerBottom = document.querySelector(".market-header")?.getBoundingClientRect().bottom || 0;
+    if (searchHelpPanel.getBoundingClientRect().top < headerBottom) {
+      searchHelpPanel.classList.add("is-below");
+    }
+  };
+  const setSearchHelp = (open) => {
+    searchHelpPanel.hidden = !open;
+    searchHelp.setAttribute("aria-expanded", String(open));
+    if (open) placeSearchHelp();
+  };
+  searchHelp.addEventListener("click", () => setSearchHelp(searchHelpPanel.hidden));
+  searchHelp.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || searchHelpPanel.hidden) return;
+    event.stopPropagation();
+    setSearchHelp(false);
+  });
+  window.addEventListener("resize", () => {
+    if (!searchHelpPanel.hidden) placeSearchHelp();
+  });
 
   sort.addEventListener("change", () => {
     const shortcut = filterShortcuts.get(sort.value);
