@@ -386220,8 +386220,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-27",
       "listedAt": "2026-10-27T14:40:42.699Z",
-      "listingValidatedCommit": "599712413768b7ddb0bcfe7faee9c11119023024",
-      "listingValidatedAt": "2026-10-27T19:15:02.329Z",
+      "listingValidatedCommit": "ddbe0c4dff51844ebd8c4ef5cd07b788c8d320cb",
+      "listingValidatedAt": "2026-10-30T23:16:14.923Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -386230,8 +386230,8 @@
         "pluginIds": [
           "io.github.88srzh.token-monitor"
         ],
-        "commit": "599712413768b7ddb0bcfe7faee9c11119023024",
-        "checkedAt": "2026-10-27T19:15:02.329Z",
+        "commit": "ddbe0c4dff51844ebd8c4ef5cd07b788c8d320cb",
+        "checkedAt": "2026-10-30T23:16:14.923Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -386253,27 +386253,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "88srzh/omarchy-token-monitor",
-        "pluginIds": [
-          "io.github.88srzh.token-monitor"
-        ],
-        "commit": "599712413768b7ddb0bcfe7faee9c11119023024",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-27T19:15:02.329Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T18:41:09.864Z",
-        "requestEventId": 34402505754,
-        "requestedAt": "2026-10-27T19:06:01Z",
-        "reviewedAt": "2026-10-27T19:15:02.329Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -386318,8 +386297,72 @@
             "reviewedAt": "2026-10-27T14:40:42.551Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "599712413768b7ddb0bcfe7faee9c11119023024",
+          "validatedAt": "2026-10-27T19:15:02.329Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T23:16:14.923Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "88srzh/omarchy-token-monitor",
+            "pluginIds": [
+              "io.github.88srzh.token-monitor"
+            ],
+            "commit": "599712413768b7ddb0bcfe7faee9c11119023024",
+            "checkedAt": "2026-10-27T19:15:02.329Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "88srzh/omarchy-token-monitor",
+            "pluginIds": [
+              "io.github.88srzh.token-monitor"
+            ],
+            "commit": "599712413768b7ddb0bcfe7faee9c11119023024",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-27T19:15:02.329Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T18:41:09.864Z",
+            "requestEventId": 34402505754,
+            "requestedAt": "2026-10-27T19:06:01Z",
+            "reviewedAt": "2026-10-27T19:15:02.329Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "88srzh/omarchy-token-monitor",
+        "pluginIds": [
+          "io.github.88srzh.token-monitor"
+        ],
+        "commit": "ddbe0c4dff51844ebd8c4ef5cd07b788c8d320cb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T23:16:14.923Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-28T05:36:21.546Z",
+        "requestEventId": 34738486907,
+        "requestedAt": "2026-10-30T22:40:36Z",
+        "reviewedAt": "2026-10-30T23:16:14.923Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/pughouselabs/omarchy-maestro",
