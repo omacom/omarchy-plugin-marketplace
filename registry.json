@@ -200318,8 +200318,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T00:28:14.700Z",
-      "listingValidatedCommit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
-      "listingValidatedAt": "2026-10-04T23:40:01.615Z",
+      "listingValidatedCommit": "8dd4551e63f3640afcc20428540627d1e832701f",
+      "listingValidatedAt": "2026-10-30T23:20:33.497Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -200328,8 +200328,8 @@
         "pluginIds": [
           "com.omastorm.radar"
         ],
-        "commit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
-        "checkedAt": "2026-10-04T23:40:01.615Z",
+        "commit": "8dd4551e63f3640afcc20428540627d1e832701f",
+        "checkedAt": "2026-10-30T23:20:33.497Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -200454,6 +200454,49 @@
             "reviewedAt": "2026-10-04T17:57:03.328Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
+          "validatedAt": "2026-10-04T23:40:01.615Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T23:20:33.497Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wesleygrimes/omastorm",
+            "pluginIds": [
+              "com.omastorm.radar"
+            ],
+            "commit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
+            "checkedAt": "2026-10-04T23:40:01.615Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "wesleygrimes/omastorm",
+            "pluginIds": [
+              "com.omastorm.radar"
+            ],
+            "commit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-04T23:40:01.615Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-04T23:26:41.203Z",
+            "requestEventId": 32466542886,
+            "requestedAt": "2026-10-04T23:39:37Z",
+            "reviewedAt": "2026-10-04T23:40:01.615Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -200462,19 +200505,19 @@
         "pluginIds": [
           "com.omastorm.radar"
         ],
-        "commit": "c5e4d533cff1f10e02418c3f7fd26977ddb8d4a3",
+        "commit": "8dd4551e63f3640afcc20428540627d1e832701f",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-04T23:40:01.615Z",
+        "baselineCheckedAt": "2026-10-30T23:20:33.497Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-04T23:26:41.203Z",
-        "requestEventId": 32466542886,
-        "requestedAt": "2026-10-04T23:39:37Z",
-        "reviewedAt": "2026-10-04T23:40:01.615Z",
+        "reviewedBaselineCheckedAt": "2026-10-30T21:16:00.112Z",
+        "requestEventId": 34738578865,
+        "requestedAt": "2026-10-30T22:42:20Z",
+        "reviewedAt": "2026-10-30T23:20:33.497Z",
         "reviewer": "HANCORE-linux"
       }
     },
