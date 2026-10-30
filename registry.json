@@ -395286,6 +395286,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/Omarchy-Video-Scout",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T22:21:27.107Z",
+      "listingValidatedCommit": "44b17d6159ee4797200665698f83c77c6f1369d7",
+      "listingValidatedAt": "2026-10-30T22:21:27.107Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/omarchy-video-scout",
+        "pluginIds": [
+          "kel.omarchy-video-scout"
+        ],
+        "commit": "44b17d6159ee4797200665698f83c77c6f1369d7",
+        "checkedAt": "2026-10-30T22:21:26.991Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kel.omarchy-video-scout": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
