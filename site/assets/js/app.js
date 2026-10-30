@@ -19,10 +19,12 @@ import {
   listingAgeLabel,
   listingTime,
   loadCatalog,
+  matchesMaintenanceStatus,
   matchesVerificationStatus,
   paginationState,
   pluginHeartButton,
   pluginVersionLabel,
+  pluginMaintenanceState,
   pluginVerificationState,
   readCatalogView,
   readCatalogViewState,
@@ -37,14 +39,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261029-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-03";
+} from "./engagement.js?v=20261029-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -57,29 +59,33 @@ import {
   hasFulltextSearchDraft,
   inlineSearchCompletionSuffix,
   matchesDirectSearch,
+  matchesDraftSearchTerm,
   matchesSearchSelection,
+  mergeSearchTerms,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
   parseSearchDraft,
   pluginSearchContext,
+  rankSearchCompletions,
   readSearchState,
   removeSearchTermTypeFromDraft,
   repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
   searchRelevanceTier,
+  searchSortTerm,
   searchTermDisplayValue,
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-03";
+} from "./search.js?v=20261029-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-03";
+} from "./taxonomy.js?v=20261029-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -128,7 +134,25 @@ function cardTaxonomyLabels(plugin) {
 }
 
 const engagementSorts = new Set(["views", "copies", "hearts", "rank", "installRate"]);
-const verificationFilters = new Set(["verified", "unverified"]);
+// Select options that are shortcuts for filter terms rather than a sort order.
+// Every other option writes its own `sort:` term into the search box.
+// Maintained expands into the individual criteria of the maintenance policy in
+// scripts/plugin-maintenance.mjs so readers can see and adjust each threshold.
+const filterShortcuts = new Map([
+  ["maintained", "contributors:1+ age:60d+ committed:180d"],
+  ["verified", "is:verified"],
+  ["unverified", "is:unverified"],
+]);
+// Verification states exclude each other; choosing one replaces the other.
+const verificationStates = new Set(["verified", "unverified"]);
+const maintenanceTermDetails = {
+  contributors: "outside contributors",
+  age: "repository age",
+  committed: "last commit",
+};
+// Date windows offered as suggestions for the time-based sort orders.
+const searchWindowFields = new Map([["added", "added"], ["updated", "updated"]]);
+const searchWindowSuggestions = ["7d", "30d"];
 const taxonomyFilterTags = ["ai", "games", "security"];
 const taxonomyCatalogFilters = [
   ["VPN", matchesVpnTaxonomy],
@@ -146,6 +170,7 @@ const sortOptions = {
     ["rank", "Top ranked"],
     ["installRate", "Install rate"],
     ["name", "A–Z"],
+    ["maintained", "Maintained"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
   ],
@@ -263,7 +288,7 @@ function completionMatches(value) {
   const parsedDraft = parseSearchDraft(normalizedValue);
   const fulltextTerm = parsedDraft.length
     && parsedDraft.every((term) => term.type === "text")
-    && !/(?:^|\s)(?:tag|author|plugin|kind):/i.test(normalizedValue)
+    && !/(?:^|\s)(?:tag|author|plugin|kind|is|sort|added|updated|contributors|age|committed):/i.test(normalizedValue)
     ? createSearchTerm("fulltext", normalizedValue)
     : null;
   const hasDirectPluginMatch = plugins.some((plugin) =>
@@ -343,6 +368,57 @@ function completionMatches(value) {
       count: kindCount,
     });
   });
+  [
+    ["maintained", "outside contributors", (plugin) => matchesMaintenanceStatus(plugin)],
+    ["verified", "listed snapshot", (plugin) => matchesVerificationStatus(plugin, "verified")],
+    ["unverified", "listed snapshot", (plugin) => matchesVerificationStatus(plugin, "unverified")],
+  ].forEach(([status, detail, matches]) => {
+    const statusCount = plugins.filter(matches).length;
+    if (!statusCount) return;
+    addMatch({
+      type: "is",
+      value: status,
+      label: `is:${status}`,
+      insertValue: `is:${status}`,
+      matchValue: status,
+      detail,
+      count: statusCount,
+    });
+  });
+  searchWindowFields.forEach((field) => {
+    searchWindowCompletions(plugins, field).forEach((completion) => addMatch(completion));
+  });
+  parseSearchDraft(filterShortcuts.get("maintained")).forEach((term) => {
+    const termCount = plugins.filter((plugin) => (
+      matchesDraftSearchTerm(term, pluginSearchContext(plugin))
+    )).length;
+    if (!termCount) return;
+    const input = searchTermInputValue(term);
+    addMatch({
+      type: term.type,
+      value: term.value,
+      label: input,
+      insertValue: input,
+      matchValue: term.type,
+      detail: maintenanceTermDetails[term.type],
+      count: termCount,
+    });
+  });
+  availableSortOptions().forEach(([value, label]) => {
+    if (filterShortcuts.has(value)) return;
+    addMatch({
+      type: "sort",
+      value,
+      label: `sort:${value}`,
+      insertValue: `sort:${value}`,
+      matchValue: label,
+      detail: label.toLowerCase(),
+    });
+  });
+  // A typed `sort:` prefix lists every matching order instead of the usual top picks.
+  if (/^sort:/i.test(rawQuery)) {
+    return rankSearchCompletions([...matches.values()].filter((match) => match.type === "sort" && match.prefix));
+  }
   if (fulltextTerm) {
     addMatch({
       type: "fulltext",
@@ -384,6 +460,33 @@ function completionMatches(value) {
     });
   });
   return selectSearchCompletions(matches.values());
+}
+
+/**
+ * Date-window completions such as `added:7d` for one time-based field, with
+ * the number of plugins in scope that each window would keep.
+ */
+function searchWindowCompletions(plugins, field) {
+  return searchWindowSuggestions.map((window) => {
+    const term = createSearchTerm(field, window);
+    const count = plugins.filter((plugin) => (
+      matchesDraftSearchTerm(term, pluginSearchContext(plugin))
+    )).length;
+    return count ? {
+      type: field,
+      value: window,
+      label: `${field}:${window}`,
+      insertValue: `${field}:${window}`,
+      matchValue: window,
+      detail: field === "added" ? "listed recently" : "active recently",
+      count,
+    } : null;
+  }).filter(Boolean);
+}
+
+/** The time-based field behind the current `sort:` term, if any. */
+function activeSortWindowField() {
+  return searchWindowFields.get(searchSortTerm(state.terms, state.query)) || "";
 }
 
 function closeSearchSuggestions() {
@@ -449,6 +552,13 @@ const searchTermTypeLabels = {
   author: "AUTHOR",
   plugin: "PLUGIN",
   kind: "KIND",
+  is: "IS",
+  sort: "SORT",
+  added: "ADDED",
+  updated: "UPDATED",
+  contributors: "CONTRIBUTORS",
+  age: "AGE",
+  committed: "COMMITTED",
 };
 
 function searchTermPresentation(term) {
@@ -474,7 +584,7 @@ function updateSearchAffordances() {
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
     ? "Narrow by another term…"
-    : "Search plugins, tag:media, kind:panel, or @author…";
+    : "Search plugins, tag:media, added:7d, or @author…";
 }
 
 function removeSearchTerm(index) {
@@ -482,6 +592,7 @@ function removeSearchTerm(index) {
   const presentation = searchTermPresentation(removed);
   if (!presentation) return;
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
@@ -516,27 +627,24 @@ function renderSearchTerms() {
 }
 
 function commitSearchDraft(completion) {
-  const draftedTerms = committedTermsFromDraft(search.value, completion);
+  // A completion chosen with no partial token, such as a date window offered
+  // after a sort option, is added to the draft rather than replacing it.
+  const draftedTerms = completion && !currentSearchToken(search.value)
+    ? [...parseSearchDraft(search.value), createSearchTerm(completion.type, completion.value)]
+    : committedTermsFromDraft(search.value, completion);
   if (!draftedTerms.length) return false;
-  const existing = new Set(state.terms.map(searchTermKey));
-  const pending = [];
-  draftedTerms.forEach((draftedTerm) => {
-    const term = createSearchTerm(draftedTerm?.type, draftedTerm?.value);
-    const key = searchTermKey(term);
-    if (!term || !key || existing.has(key)) return;
-    existing.add(key);
-    pending.push(term);
-  });
-  if (state.terms.length + pending.length > maximumSearchTerms) {
+  const merged = mergeSearchTerms(state.terms, draftedTerms);
+  if (merged.terms.length > maximumSearchTerms) {
     closeSearchSuggestions();
     searchSuggestionStatus.textContent = `A maximum of ${maximumSearchTerms} search terms is allowed`;
     return false;
   }
-  state.terms.push(...pending);
-  const added = pending.map((term) => searchTermPresentation(term)?.value || term.value);
+  state.terms = merged.terms;
+  const added = merged.added.map((term) => searchTermPresentation(term)?.value || term.value);
   state.query = "";
   search.value = "";
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
@@ -546,11 +654,112 @@ function commitSearchDraft(completion) {
   return true;
 }
 
+/**
+ * Append each term of a shortcut that is not already among the chips or the
+ * draft. A term of the same type with a different value, such as an edited
+ * `age:90d+`, is kept as the reader's choice. Mutually exclusive states, such
+ * as `is:verified` and `is:unverified`, replace each other instead.
+ */
+function appendShortcutTerms(shortcut) {
+  const shortcutTerms = parseSearchDraft(shortcut);
+  const replacedKeys = new Set(shortcutTerms.flatMap((term) => (
+    term.type === "is" && verificationStates.has(term.value)
+      ? [...verificationStates].filter((value) => value !== term.value)
+        .map((value) => searchTermKey(createSearchTerm("is", value)))
+      : []
+  )));
+  if (replacedKeys.size) {
+    state.terms = state.terms.filter((term) => !replacedKeys.has(searchTermKey(term)));
+    const draftTerms = parseSearchDraft(state.query);
+    const keptDraft = draftTerms.filter((term) => !replacedKeys.has(searchTermKey(term)));
+    if (keptDraft.length !== draftTerms.length) {
+      const draft = keptDraft.map(searchTermInputValue).join(" ");
+      state.query = draft ? `${draft} ` : "";
+    }
+  }
+  const active = [...state.terms, ...parseSearchDraft(state.query)];
+  const activeKeys = new Set(active.map(searchTermKey));
+  const activeTypes = new Set(active.map((term) => term.type).filter((type) => type !== "is"));
+  const missing = shortcutTerms.filter((term) => (
+    !activeKeys.has(searchTermKey(term)) && !activeTypes.has(term.type)
+  ));
+  if (!missing.length) return;
+  const draft = state.query.trim();
+  state.query = `${draft ? `${draft} ` : ""}${missing.map(searchTermInputValue).join(" ")} `;
+}
+
+/**
+ * Write a search shortcut into the search box as editable draft text, so the
+ * reader can refine it with further terms. The current sort order stays.
+ */
+function applySearchShortcut(shortcut) {
+  appendShortcutTerms(shortcut);
+  search.value = state.query;
+  sort.value = state.sort;
+  state.page = 1;
+  closeSearchSuggestions();
+  renderSearchTerms();
+  render({ announce: true });
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(`Searching ${shortcut}`);
+}
+
+/** Remove every `sort:` term from the chips and the draft. */
+function clearSortTerm() {
+  state.terms = state.terms.filter((term) => term.type !== "sort");
+  const draft = removeSearchTermTypeFromDraft(state.query, "sort");
+  state.query = draft ? `${draft} ` : "";
+  search.value = state.query;
+}
+
+/**
+ * Make `value` the active sort order and mirror it as a `sort:` term at the
+ * end of the search draft, replacing any earlier sort term.
+ */
+function writeSortTerm(value) {
+  clearSortTerm();
+  state.sort = value;
+  sort.value = value;
+  state.query = `${state.query}sort:${value} `;
+  search.value = state.query;
+}
+
+/**
+ * Derive the sort order from the last `sort:` term in the chips and draft.
+ * Without a term, or when the requested order is unavailable for the current
+ * source, the default order applies. `prune` also removes such a stale term,
+ * which only programmatic changes do so typing is never interrupted.
+ */
+function syncSortFromSearch({ prune = false } = {}) {
+  const requested = searchSortTerm(state.terms, state.query);
+  if (requested && availableSortOptions().some(([value]) => value === requested)) {
+    state.sort = requested;
+  } else {
+    if (requested && prune) clearSortTerm();
+    state.sort = sourceDefaultSort();
+  }
+  sort.value = state.sort;
+}
+
+/** Apply a sort option from the select and show it in the search box. */
+function applySortTerm(value) {
+  writeSortTerm(value);
+  state.page = 1;
+  closeSearchSuggestions();
+  renderSearchTerms();
+  render({ announce: true });
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(`Searching sort:${value}`);
+}
+
 function clearSearchTerms({ focus = true } = {}) {
   state.terms = [];
   state.query = "";
   search.value = "";
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
@@ -579,11 +788,18 @@ function flushSearchSuggestions() {
 function updateSearchSuggestions() {
   const rawQuery = search.value.trim();
   const token = currentSearchToken(search.value);
-  if (!token.replace(/^@/, "")) {
+  const windowField = token ? "" : activeSortWindowField();
+  if (!token.replace(/^@/, "") && !windowField) {
     closeSearchSuggestions();
     return;
   }
-  searchCompletions = completionMatches(search.value);
+  searchCompletions = windowField
+    ? searchWindowCompletions(searchScopePlugins(), windowField)
+    : completionMatches(search.value);
+  if (!searchCompletions.length && windowField) {
+    closeSearchSuggestions();
+    return;
+  }
   activeSuggestion = -1;
   search.removeAttribute("aria-activedescendant");
   const resultCount = filteredPlugins().length;
@@ -648,10 +864,7 @@ function catalogFilterLabel(filter) {
 }
 
 function searchScopePlugins() {
-  return sourcePlugins().filter((plugin) => (
-    matchesCatalogFilter(plugin)
-    && (!verificationFilters.has(state.sort) || matchesVerificationStatus(plugin, state.sort))
-  ));
+  return sourcePlugins().filter((plugin) => matchesCatalogFilter(plugin));
 }
 
 let engagementVersion = 0;
@@ -669,8 +882,10 @@ function catalogRanks() {
 }
 
 function filteredPlugins() {
+  // Date-window terms compare against the clock, so the cache expires hourly.
   const key = JSON.stringify([
     state.plugins.length, state.source, state.category, state.sort, state.terms, state.query, engagementVersion,
+    Math.floor(Date.now() / 3600000),
   ]);
   if (filteredCache.key === key) return filteredCache.value;
   const value = computeFilteredPlugins();
@@ -820,6 +1035,17 @@ function verificationBadge(plugin) {
   </span>`;
 }
 
+function maintenanceBadge(plugin) {
+  const maintenance = pluginMaintenanceState(plugin);
+  if (!maintenance) return "";
+  return `<span class="card-verification is-maintained">
+    <button class="card-verification-trigger" type="button" data-verification-tooltip aria-expanded="false" aria-label="${escapeHtml(`${maintenance.label}. ${maintenance.explanation}`)}">
+      <span class="card-verification-marker">${escapeHtml(maintenance.label)}</span>
+    </button>
+    <span class="card-verification-tooltip" role="tooltip" aria-hidden="true">${escapeHtml(maintenance.explanation)}</span>
+  </span>`;
+}
+
 function closeVerificationTooltips(except = null) {
   document.querySelectorAll("[data-verification-tooltip]").forEach((button) => {
     if (button === except) return;
@@ -873,8 +1099,9 @@ function pluginCard(plugin, { showNew = false, previewBack = "", gemTimes = null
       ? '<span class="card-activity-state is-new">New</span>'
       : "";
   const verificationState = verificationBadge(plugin);
-  const cardStates = activityState || verificationState
-    ? `<div class="card-status-line">${activityState}${verificationState}</div>`
+  const maintenanceState = maintenanceBadge(plugin);
+  const cardStates = activityState || verificationState || maintenanceState
+    ? `<div class="card-status-line">${activityState}${maintenanceState}${verificationState}</div>`
     : "";
   const previewSource = plugin.previewThumbnail || plugin.previewImage;
   const preview = previewSource
@@ -1467,7 +1694,9 @@ function render({ historyMode = "replace", announce = false } = {}) {
     : visible.slice(pageState.start, pageState.end);
   const categoryPlugins = sourcePlugins().filter((plugin) => matchesCatalogFilter(plugin));
   const hasSearch = state.terms.length > 0 || Boolean(state.query.trim());
-  const hasResultFilter = hasSearch || verificationFilters.has(state.sort);
+  // A lone `sort:` term orders the catalog without narrowing it.
+  const hasResultFilter = [...state.terms, ...parseSearchDraft(state.query)]
+    .some((term) => term.type !== "sort");
   const authorTerm = state.terms.find((term) => term.type === "author");
   catalogTitle.textContent = authorTerm ? `plugins by @${authorTerm.value}` : "browse all plugins";
   count.textContent = hasResultFilter
@@ -1524,12 +1753,12 @@ function renderSourceFilters() {
         search.value = state.query;
       }
       state.category = "all";
-      state.sort = sourceDefaultSort();
       state.page = 1;
       closeSearchSuggestions();
+      renderSortOptions();
+      syncSortFromSearch({ prune: true });
       renderSearchTerms();
       renderSourceFilters();
-      renderSortOptions();
       renderCategories();
       const removedAuthorSearch = removedAuthorTerms.length || removedAuthorDraft;
       render({ announce: !removedAuthorSearch });
@@ -1602,10 +1831,8 @@ function resetFilters() {
   search.value = "";
   closeSearchSuggestions();
   renderSearchTerms();
-  if (verificationFilters.has(state.sort)) {
-    state.sort = sourceDefaultSort();
-    renderSortOptions();
-  }
+  syncSortFromSearch();
+  renderSortOptions();
   renderCategories();
   render({ announce: true });
 }
@@ -1640,10 +1867,16 @@ function restoreUrl() {
   state.showAll = viewState.showAll;
   state.page = viewState.page;
   const requestedSort = params.get("sort") || sourceDefaultSort();
-  state.sort = availableSortOptions().some(([value]) => value === requestedSort)
+  const shortcut = filterShortcuts.get(requestedSort);
+  if (shortcut) appendShortcutTerms(shortcut);
+  const validSort = !shortcut && availableSortOptions().some(([value]) => value === requestedSort)
     ? requestedSort
     : sourceDefaultSort();
+  if (validSort !== sourceDefaultSort() && !searchSortTerm(state.terms, state.query)) {
+    state.query = `${state.query.trim() ? `${state.query.trim()} ` : ""}sort:${validSort} `;
+  }
   search.value = state.query;
+  syncSortFromSearch();
 }
 
 function runVisibleAnimation(element, draw, framesPerSecond = 60) {
@@ -1846,9 +2079,15 @@ async function init() {
       });
     });
     splitTopRank.addEventListener("click", () => {
-      state.sort = state.sort === "rank" ? sourceDefaultSort() : "rank";
+      if (state.sort === "rank") {
+        clearSortTerm();
+        state.sort = sourceDefaultSort();
+      } else {
+        writeSortTerm("rank");
+      }
       state.page = 1;
       renderSortOptions();
+      renderSearchTerms();
       render({ announce: true });
     });
     const jumpToPage = () => {
@@ -1888,9 +2127,10 @@ async function init() {
     renderHiddenGems();
     document.querySelector("#gems-sort-link")?.addEventListener("click", (event) => {
       event.preventDefault();
-      state.sort = "installRate";
+      writeSortTerm("installRate");
       state.page = 1;
       renderSortOptions();
+      renderSearchTerms();
       render({ historyMode: "push", announce: true });
       document.querySelector("#catalog").scrollIntoView({
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
@@ -1935,6 +2175,8 @@ async function init() {
           .find(([value]) => value === previousSort)?.[1] || previousSort;
         renderSortOptions();
         if (state.sort !== previousSort) {
+          syncSortFromSearch({ prune: true });
+          renderSearchTerms();
           state.page = 1;
           render();
           if (!restorePluginCardFocus(focusToken) && focusToken) focusCatalogResult();
@@ -1955,6 +2197,7 @@ async function init() {
   search.addEventListener("input", () => {
     state.query = search.value;
     state.page = 1;
+    syncSortFromSearch();
     updateSearchAffordances();
     render();
     scheduleSearchSuggestions();
@@ -1970,6 +2213,7 @@ async function init() {
         search.value = "";
         state.query = "";
         state.page = 1;
+        syncSortFromSearch();
         updateSearchAffordances();
         render({ announce: true });
         search.blur();
@@ -2038,10 +2282,14 @@ async function init() {
 
   searchClear.addEventListener("click", () => clearSearchTerms());
 
+
   sort.addEventListener("change", () => {
-    state.sort = sort.value;
-    state.page = 1;
-    render({ announce: true });
+    const shortcut = filterShortcuts.get(sort.value);
+    if (shortcut) {
+      applySearchShortcut(shortcut);
+      return;
+    }
+    applySortTerm(sort.value);
   });
 
   const changePage = (offset) => {

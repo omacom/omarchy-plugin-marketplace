@@ -20,6 +20,14 @@ Submit one public GitHub repository containing the required manifest, README, an
 
 Use the single [plugin verification form](https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml) and choose whether to verify the currently listed snapshot or publish a newer upstream commit. A listed-snapshot request accepts only the exact recorded SHA. A newer-commit request keeps the current snapshot unchanged until the target SHA passes compatibility validation, the Automated Security Baseline, explicit maintainer approval, testing, and deployment. The [verification guide](VERIFICATION.md) explains both paths, display states, required values, and limits.
 
+## Search Terms
+
+Every option in the browse page sort menu writes a search term into the search box so readers can see the active selection and refine it. Sort orders become `sort:` terms such as `sort:added`, `sort:updated`, `sort:stars`, or `sort:name`; removing the term restores the default order. **Verified** and **Unverified** write the filter terms `is:verified` and `is:unverified`. **Maintained** writes the individual maintenance criteria as separate terms, `contributors:1+ age:60d+ committed:180d`, so each threshold can be adjusted; `is:maintained` remains available as a single term for the stored signal. The window terms `added:7d` and `updated:30d` (days, or weeks with `w`) keep only listings that were listed or active within that period and are suggested after a time-based sort order. Verification terms describe only the exact listed snapshot and are not a security review.
+
+## Maintained Listings
+
+The `is:maintained` search term, and the **Maintained** option in the browse page sort menu that writes the equivalent criteria terms into the search box, select community listings whose repository shows sustained collaboration: at least one merged pull request from a human account other than the repository owner or, for organization repositories, an organization member (bots, deleted accounts, and accounts created after the repository are ignored), a repository at least 60 days old, and a commit on the listed branch within the last 180 days. The scheduled catalog refresh derives these facts from GitHub repository metadata and inspects only the 20 most recently updated merged pull requests, so an older outside contribution can be missed and the shown pull request counts cover only that window. This is a collaboration and activity signal, not a security review, endorsement, or ranking.
+
 ## Engagement Metrics
 
 The marketplace shows anonymous aggregate detail views, successful command copies, and hearts. These are marketplace interactions—not downloads, installations, unique people, verified votes, rankings, or security signals. Direct clients can inflate them; browser guards, origin checks, and rate limits only raise the cost of abuse.

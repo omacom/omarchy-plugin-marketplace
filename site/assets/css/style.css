@@ -994,6 +994,7 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 }
 .listing-check-status.is-caution { color: var(--updated); }
 .listing-check-status.is-failed { color: var(--accent); }
+.listing-check-status.is-neutral { color: var(--muted); }
 .field-table { margin-top: 20px; border: 1px solid var(--line); }
 .field-row {
   display: grid; min-height: 45px; padding: 0 12px; border-bottom: 1px solid var(--line);
@@ -1622,11 +1623,15 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 }
 .card-verification.is-verified .card-verification-trigger { color: var(--stable); }
 .card-verification.is-unverified .card-verification-trigger { color: var(--accent); }
+.card-verification.is-maintained .card-verification-trigger { color: var(--stable); }
+.card-verification + .card-verification { margin-left: 6px; }
 .card-verification-trigger:hover, .card-verification-trigger:focus-visible { color: var(--text); }
 .card-verification.is-verified .card-verification-trigger:hover,
 .card-verification.is-verified .card-verification-trigger:focus-visible { color: var(--stable); }
 .card-verification.is-unverified .card-verification-trigger:hover,
 .card-verification.is-unverified .card-verification-trigger:focus-visible { color: var(--accent); }
+.card-verification.is-maintained .card-verification-trigger:hover,
+.card-verification.is-maintained .card-verification-trigger:focus-visible { color: var(--stable); }
 .card-verification-tooltip {
   position: absolute; right: 0; bottom: calc(100% + 7px); width: min(300px, calc(100vw - 56px));
 }
@@ -1680,6 +1685,9 @@ svg.social-glyph { display: block; width: 14px; height: 14px; flex: none; fill: 
 .plugin-card-actions:has(.has-control-tooltip:focus-within) { z-index: 5; }
 .plugin-card:has(.has-control-tooltip:hover),
 .plugin-card:has(.has-control-tooltip:focus-within) { z-index: 6; overflow: visible; }
+.plugin-card:has(.card-verification:hover:not(.is-dismissed)),
+.plugin-card:has(.card-verification:focus-within:not(.is-dismissed)),
+.plugin-card:has(.card-verification.is-open) { z-index: 6; overflow: visible; }
 .plugin-card-actions .plugin-engagement { min-height: 25px; gap: 4px; }
 .plugin-card-actions .engagement-metric {
   height: 25px; padding: 0 6px; border: 1px solid var(--line); background: transparent;

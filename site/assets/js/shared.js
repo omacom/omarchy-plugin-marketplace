@@ -468,6 +468,41 @@ export function pluginVerificationState(plugin) {
   };
 }
 
+export function matchesMaintenanceStatus(plugin) {
+  return !plugin?.builtIn && !plugin?.placeholder && plugin?.maintenanceStatus === "maintained";
+}
+
+// The refresh inspects only this many recently updated merged pull requests;
+// it mirrors maintenanceMergedPullRequestSample in scripts/plugin-maintenance.mjs.
+export const maintenancePullRequestSample = 20;
+
+export function maintenanceFactsLabel(plugin) {
+  const contributors = Number(plugin?.externalContributors) || 0;
+  const pulls = Number(plugin?.externalMergedPullRequests) || 0;
+  const merged = Number(plugin?.mergedPullRequests) || 0;
+  const inspected = merged > maintenancePullRequestSample
+    ? `the last ${maintenancePullRequestSample}`
+    : String(merged);
+  const parts = [
+    `${contributors} outside contributor${contributors === 1 ? "" : "s"}`,
+    merged
+      ? `${pulls} of ${inspected} merged pull request${merged === 1 ? "" : "s"} from outside`
+      : "no merged pull requests",
+  ];
+  if (plugin?.repositoryCreatedAt) parts.push(`repository since ${formatDate(plugin.repositoryCreatedAt)}`);
+  if (plugin?.repositoryCommittedAt) parts.push(`last commit ${formatDate(plugin.repositoryCommittedAt)}`);
+  return parts.join(", ");
+}
+
+export function pluginMaintenanceState(plugin) {
+  if (!matchesMaintenanceStatus(plugin)) return null;
+  return {
+    status: "maintained",
+    label: "Maintained",
+    explanation: `${maintenanceFactsLabel(plugin)}. Collaboration and activity signal only; not a security review.`,
+  };
+}
+
 export function pluginVerificationDetailState(plugin) {
   if (plugin?.builtIn || plugin?.repositoryLayout === "suite") return null;
   if (

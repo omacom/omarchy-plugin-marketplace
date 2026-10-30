@@ -673,7 +673,7 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(page, /id="graph-match-count"[\s\S]*id="graph-analysis"[^>]+aria-label="Plugin landscape community filters"[\s\S]*id="community-list"/);
   assert.doesNotMatch(page, /id="landscape-title"|id="community-toggle"|id="anchor-list"/);
   assert.match(script, /const leadingClusters = \[\.\.\.explorer\.clusters\][\s\S]*communityFilters\.map\(\(cluster\) =>[\s\S]*community-name/);
-  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20261002-03"/);
+  assert.match(script, /import \{ matchesBarTaxonomy, matchesVpnTaxonomy \} from "\.\/taxonomy\.js\?v=20261029-01"/);
   assert.match(script, /id: "taxonomy:vpn",\s*label: "VPN",[\s\S]*anchor: "security",\s*matches: matchesVpnTaxonomy,/);
   assert.match(script, /id: "taxonomy:bar",\s*label: "Bar",[\s\S]*anchor: "appearance",\s*matches: matchesBarTaxonomy,/);
   assert.match(script, /const taxonomyFilter = taxonomyCommunityFilters\.find\(\(filter\) => filter\.id === activeCluster\);\s*return taxonomyFilter \? taxonomyFilter\.matches\(node\) : node\.cluster === activeCluster/);
@@ -747,6 +747,11 @@ test("graph search uses catalog matching semantics", () => {
   assert.equal(matchesExplorerSearch("@", publisherNode), false);
   assert.equal(matchesExplorerSearch("@Confined-", publisherNode), true);
   assert.equal(matchesExplorerSearch("floating bar", publisherNode), true);
+  assert.equal(matchesExplorerSearch("sort:name floating bar", publisherNode), true);
+  assert.equal(matchesExplorerSearch("added:7d", publisherNode), false);
+  assert.equal(matchesExplorerSearch("sort:stars", publisherNode), false);
+  assert.equal(matchesExplorerSearch("is:maintained floating bar", publisherNode), true);
+  assert.equal(matchesExplorerSearch("contributors:1+ age:60d+ committed:180d", publisherNode), false);
   assert.equal(matchesExplorerSearch("Expose\u0301", unicodeNode), true);
   assert.equal(matchesExplorerSearch("&", unicodeNode), true);
   assert.equal(matchesExplorerSearch("/", unicodeNode), false);
