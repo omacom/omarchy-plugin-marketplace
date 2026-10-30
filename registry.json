@@ -371759,8 +371759,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T22:42:41.090Z",
-      "listingValidatedCommit": "649fd3a50f41c6b4f171dce2269e6ebfd6e70870",
-      "listingValidatedAt": "2026-10-20T22:42:41.090Z",
+      "listingValidatedCommit": "023dcead77f243c793aad9e46d2616235353feac",
+      "listingValidatedAt": "2026-10-30T20:01:02.298Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -371769,8 +371769,8 @@
         "pluginIds": [
           "konochi.konoports"
         ],
-        "commit": "649fd3a50f41c6b4f171dce2269e6ebfd6e70870",
-        "checkedAt": "2026-10-20T22:42:40.981Z",
+        "commit": "023dcead77f243c793aad9e46d2616235353feac",
+        "checkedAt": "2026-10-30T20:01:02.298Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -371786,7 +371786,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "649fd3a50f41c6b4f171dce2269e6ebfd6e70870",
+          "validatedAt": "2026-10-20T22:42:41.090Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T20:01:02.298Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "xvvhang/omarchy-konoports-plugin",
+            "pluginIds": [
+              "konochi.konoports"
+            ],
+            "commit": "649fd3a50f41c6b4f171dce2269e6ebfd6e70870",
+            "checkedAt": "2026-10-20T22:42:40.981Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/JamesChief/omarchy-plugin-agentbi",
