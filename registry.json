@@ -388427,8 +388427,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T01:30:07.209Z",
-      "listingValidatedCommit": "a869b52b441cffbe6f5153f74320da4de3a75056",
-      "listingValidatedAt": "2026-10-28T21:23:31.587Z",
+      "listingValidatedCommit": "77ff40e08b1dba26d84eda0883243689969d4562",
+      "listingValidatedAt": "2026-10-30T21:45:22.412Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -388437,14 +388437,12 @@
         "pluginIds": [
           "io.github.heast13.kyrr"
         ],
-        "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
-        "checkedAt": "2026-10-28T21:23:31.587Z",
-        "outcome": "review-required",
+        "commit": "77ff40e08b1dba26d84eda0883243689969d4562",
+        "checkedAt": "2026-10-30T21:45:22.412Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "io.github.heast13.kyrr": {
@@ -388460,27 +388458,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "heast13/omarchy-kyrr",
-        "pluginIds": [
-          "io.github.heast13.kyrr"
-        ],
-        "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T21:23:31.587Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-28T19:58:54.964Z",
-        "requestEventId": 34516144069,
-        "requestedAt": "2026-10-28T20:14:37Z",
-        "reviewedAt": "2026-10-28T21:23:31.587Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -388501,6 +388478,49 @@
             "enforcementMode": "selective",
             "findings": [],
             "capabilities": []
+          }
+        },
+        {
+          "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+          "validatedAt": "2026-10-28T21:23:31.587Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T21:45:22.412Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "heast13/omarchy-kyrr",
+            "pluginIds": [
+              "io.github.heast13.kyrr"
+            ],
+            "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+            "checkedAt": "2026-10-28T21:23:31.587Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "heast13/omarchy-kyrr",
+            "pluginIds": [
+              "io.github.heast13.kyrr"
+            ],
+            "commit": "a869b52b441cffbe6f5153f74320da4de3a75056",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T21:23:31.587Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-28T19:58:54.964Z",
+            "requestEventId": 34516144069,
+            "requestedAt": "2026-10-28T20:14:37Z",
+            "reviewedAt": "2026-10-28T21:23:31.587Z",
+            "reviewer": "HANCORE-linux"
           }
         }
       ]
