@@ -392463,8 +392463,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T15:37:41.472Z",
-      "listingValidatedCommit": "a0ca09256d162f93ed05b9b9355ea511777f93f0",
-      "listingValidatedAt": "2026-10-29T23:35:58.984Z",
+      "listingValidatedCommit": "6443c040dea2382c313911eeea132d7d9d799c5d",
+      "listingValidatedAt": "2026-10-30T22:39:11.192Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -392473,8 +392473,8 @@
         "pluginIds": [
           "io.github.hugorolimf.dock"
         ],
-        "commit": "a0ca09256d162f93ed05b9b9355ea511777f93f0",
-        "checkedAt": "2026-10-29T23:35:58.984Z",
+        "commit": "6443c040dea2382c313911eeea132d7d9d799c5d",
+        "checkedAt": "2026-10-30T22:39:11.192Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -392506,6 +392506,26 @@
             ],
             "commit": "cd2f6d0755a32262c1fba6138e5728362e5ece68",
             "checkedAt": "2026-10-29T15:37:41.350Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a0ca09256d162f93ed05b9b9355ea511777f93f0",
+          "validatedAt": "2026-10-29T23:35:58.984Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T22:39:11.192Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-dock",
+            "pluginIds": [
+              "io.github.hugorolimf.dock"
+            ],
+            "commit": "a0ca09256d162f93ed05b9b9355ea511777f93f0",
+            "checkedAt": "2026-10-29T23:35:58.984Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
