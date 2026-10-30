@@ -393143,8 +393143,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T00:55:41.720Z",
-      "listingValidatedCommit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
-      "listingValidatedAt": "2026-10-30T00:55:41.720Z",
+      "listingValidatedCommit": "bad17ea43cc645f4e819214ec655d61981cd3941",
+      "listingValidatedAt": "2026-10-30T19:48:15.575Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -393153,8 +393153,8 @@
         "pluginIds": [
           "ianm.tinnitus"
         ],
-        "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
-        "checkedAt": "2026-10-30T00:55:41.550Z",
+        "commit": "bad17ea43cc645f4e819214ec655d61981cd3941",
+        "checkedAt": "2026-10-30T19:48:15.575Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -393162,28 +393162,6 @@
           "installer",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "imcmurray/omarchy-tinnitus-notch",
-        "pluginIds": [
-          "ianm.tinnitus"
-        ],
-        "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-30T00:55:41.550Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-29T22:19:24.432Z",
-        "requestEventId": 34646761150,
-        "requestedAt": "2026-10-30T00:49:11Z",
-        "reviewedAt": "2026-10-30T00:55:41.550Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "ianm.tinnitus": {
@@ -393194,7 +393172,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imcmurray/omarchy-tinnitus-notch",
+        "pluginIds": [
+          "ianm.tinnitus"
+        ],
+        "commit": "bad17ea43cc645f4e819214ec655d61981cd3941",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T19:48:15.575Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T06:01:19.361Z",
+        "requestEventId": 34727047271,
+        "requestedAt": "2026-10-30T19:46:47Z",
+        "reviewedAt": "2026-10-30T19:48:15.575Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+          "validatedAt": "2026-10-30T00:55:41.720Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T19:48:15.575Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "imcmurray/omarchy-tinnitus-notch",
+            "pluginIds": [
+              "ianm.tinnitus"
+            ],
+            "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+            "checkedAt": "2026-10-30T00:55:41.550Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "imcmurray/omarchy-tinnitus-notch",
+            "pluginIds": [
+              "ianm.tinnitus"
+            ],
+            "commit": "87c497e7e8b38881ab013dfe9cdf43a898e58754",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-30T00:55:41.550Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-29T22:19:24.432Z",
+            "requestEventId": 34646761150,
+            "requestedAt": "2026-10-30T00:49:11Z",
+            "reviewedAt": "2026-10-30T00:55:41.550Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cesarfilho/Omarvel",
