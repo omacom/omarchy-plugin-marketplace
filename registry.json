@@ -381877,8 +381877,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T00:50:45.392Z",
-      "listingValidatedCommit": "89a412aa0bbacabc998972afef5755187c7ed104",
-      "listingValidatedAt": "2026-10-26T00:50:45.392Z",
+      "listingValidatedCommit": "31442d458cdb4051fdcc7044557330a129b11f89",
+      "listingValidatedAt": "2026-10-30T21:18:20.606Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -381887,8 +381887,8 @@
         "pluginIds": [
           "io.github.jeremiahjohnston.tempest"
         ],
-        "commit": "89a412aa0bbacabc998972afef5755187c7ed104",
-        "checkedAt": "2026-10-26T00:50:45.248Z",
+        "commit": "31442d458cdb4051fdcc7044557330a129b11f89",
+        "checkedAt": "2026-10-30T21:18:20.606Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -381903,7 +381903,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "89a412aa0bbacabc998972afef5755187c7ed104",
+          "validatedAt": "2026-10-26T00:50:45.392Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T21:18:20.606Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jeremiahjohnston/omarchy-tempest",
+            "pluginIds": [
+              "io.github.jeremiahjohnston.tempest"
+            ],
+            "commit": "89a412aa0bbacabc998972afef5755187c7ed104",
+            "checkedAt": "2026-10-26T00:50:45.248Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rsd/omarchy-power-watch",
