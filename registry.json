@@ -394759,6 +394759,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/michaelsucks/PastelStats",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T21:13:38.768Z",
+      "listingValidatedCommit": "f7883b8fffedba12289b7eb863f2a60bc18309d2",
+      "listingValidatedAt": "2026-10-30T21:13:38.768Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "michaelsucks/pastelstats",
+        "pluginIds": [
+          "io.github.michaelsucks.pastel-stats"
+        ],
+        "commit": "f7883b8fffedba12289b7eb863f2a60bc18309d2",
+        "checkedAt": "2026-10-30T21:13:38.586Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "michaelsucks/pastelstats",
+        "pluginIds": [
+          "io.github.michaelsucks.pastel-stats"
+        ],
+        "commit": "f7883b8fffedba12289b7eb863f2a60bc18309d2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T21:13:38.586Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T07:47:09.402Z",
+        "requestEventId": 34730737417,
+        "requestedAt": "2026-10-30T20:39:10Z",
+        "reviewedAt": "2026-10-30T21:13:38.586Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.michaelsucks.pastel-stats": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
