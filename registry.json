@@ -393972,6 +393972,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Infinifar/omaclipsync",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T03:23:02.267Z",
+      "listingValidatedCommit": "371294deb092657a67f02a8fcfed1621e9340595",
+      "listingValidatedAt": "2026-10-30T03:23:02.267Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "infinifar/omaclipsync",
+        "pluginIds": [
+          "io.github.infinifar.omaclipsync"
+        ],
+        "commit": "371294deb092657a67f02a8fcfed1621e9340595",
+        "checkedAt": "2026-10-30T03:23:02.087Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "infinifar/omaclipsync",
+        "pluginIds": [
+          "io.github.infinifar.omaclipsync"
+        ],
+        "commit": "371294deb092657a67f02a8fcfed1621e9340595",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T03:23:02.087Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T03:14:11.572Z",
+        "requestEventId": 34654597156,
+        "requestedAt": "2026-10-30T03:19:34Z",
+        "reviewedAt": "2026-10-30T03:23:02.087Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.infinifar.omaclipsync": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
