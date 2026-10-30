@@ -392658,8 +392658,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T00:05:00.530Z",
-      "listingValidatedCommit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
-      "listingValidatedAt": "2026-10-30T00:05:00.530Z",
+      "listingValidatedCommit": "75c6d09ce31f347857968887433c02e95ff5e76c",
+      "listingValidatedAt": "2026-10-30T00:51:28.785Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -392668,8 +392668,8 @@
         "pluginIds": [
           "io.github.lateralcoders.app-focus"
         ],
-        "commit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
-        "checkedAt": "2026-10-30T00:05:00.365Z",
+        "commit": "75c6d09ce31f347857968887433c02e95ff5e76c",
+        "checkedAt": "2026-10-30T00:51:28.785Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -392685,7 +392685,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
+          "validatedAt": "2026-10-30T00:05:00.530Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T00:51:28.785Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "lateralcoders/omarchy-app-focus",
+            "pluginIds": [
+              "io.github.lateralcoders.app-focus"
+            ],
+            "commit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
+            "checkedAt": "2026-10-30T00:05:00.365Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/KirklandGee/omarchy-downloads",
