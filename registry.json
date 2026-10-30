@@ -271004,8 +271004,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T20:58:44.523Z",
-      "listingValidatedCommit": "91066f18201d0c1780dcd4a0738a928f6e512f39",
-      "listingValidatedAt": "2026-09-27T20:58:44.523Z",
+      "listingValidatedCommit": "299dbd037ea50a1194090956d524e24f65c5a4d8",
+      "listingValidatedAt": "2026-10-30T20:43:57.504Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -271014,8 +271014,8 @@
         "pluginIds": [
           "rohirik.agent-monitor"
         ],
-        "commit": "91066f18201d0c1780dcd4a0738a928f6e512f39",
-        "checkedAt": "2026-09-27T20:58:44.399Z",
+        "commit": "299dbd037ea50a1194090956d524e24f65c5a4d8",
+        "checkedAt": "2026-10-30T20:43:57.504Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -271031,7 +271031,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "91066f18201d0c1780dcd4a0738a928f6e512f39",
+          "validatedAt": "2026-09-27T20:58:44.523Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T20:43:57.504Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rohirik/omarchy-agent-monitor",
+            "pluginIds": [
+              "rohirik.agent-monitor"
+            ],
+            "commit": "91066f18201d0c1780dcd4a0738a928f6e512f39",
+            "checkedAt": "2026-09-27T20:58:44.399Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/iluxav/omarchy-omanote",
