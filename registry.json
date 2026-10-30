@@ -392623,6 +392623,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jotenakis2/yassm",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T00:13:29.061Z",
+      "listingValidatedCommit": "3cfbc05468ac2c0023685f1a222707b2b6043ab2",
+      "listingValidatedAt": "2026-10-30T00:13:29.061Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jotenakis2/yassm",
+        "pluginIds": [
+          "io.github.jotenakis2.yassm"
+        ],
+        "commit": "3cfbc05468ac2c0023685f1a222707b2b6043ab2",
+        "checkedAt": "2026-10-30T00:13:28.908Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jotenakis2/yassm",
+        "pluginIds": [
+          "io.github.jotenakis2.yassm"
+        ],
+        "commit": "3cfbc05468ac2c0023685f1a222707b2b6043ab2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T00:13:28.908Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T20:37:16.773Z",
+        "requestEventId": 34643360499,
+        "requestedAt": "2026-10-29T23:45:58Z",
+        "reviewedAt": "2026-10-30T00:13:28.908Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jotenakis2.yassm": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
