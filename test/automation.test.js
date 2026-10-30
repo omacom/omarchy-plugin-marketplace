@@ -72,6 +72,7 @@ import {
   matchesDraftSearchTerm,
   matchesShortSearch,
   matchesSearchSelection,
+  mergeSearchTerms,
   pluginSearchContext,
   compactSearchKey,
   maximumSearchTermLength,
@@ -1184,6 +1185,16 @@ test("sort terms mirror the select without filtering or reaching the URL", () =>
   assert.equal(searchSortTerm([{ type: "sort", value: "stars" }], "tag:bar sort:name"), "name");
   assert.equal(searchSortTerm([{ type: "sort", value: "stars" }], "tag:bar"), "stars");
   assert.equal(searchSortTerm([], "tag:bar"), "");
+  const chips = [{ type: "sort", value: "stars" }, { type: "tag", value: "bar" }, { type: "sort", value: "name" }];
+  const recommitted = mergeSearchTerms(chips, parseSearchDraft("sort:stars"));
+  assert.deepEqual(recommitted.terms, [{ type: "tag", value: "bar" }, { type: "sort", value: "stars" }]);
+  assert.deepEqual(recommitted.added, [{ type: "sort", value: "stars" }]);
+  assert.equal(searchSortTerm(recommitted.terms, ""), "stars");
+  assert.deepEqual(mergeSearchTerms(chips, parseSearchDraft("sort:stars tag:bar sort:updated")).terms, [
+    { type: "tag", value: "bar" },
+    { type: "sort", value: "updated" },
+  ]);
+  assert.deepEqual(mergeSearchTerms(chips, parseSearchDraft("tag:bar")), { terms: chips, added: [] });
   const context = pluginSearchContext({ id: "example.plugin", name: "Example", repo: "https://github.com/example/plugin", tags: ["bar"] });
   const terms = parseSearchDraft("sort:name tag:bar");
   assert.equal(matchesSearchSelection(context, { terms }), true);

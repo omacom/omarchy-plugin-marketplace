@@ -61,6 +61,7 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesSearchSelection,
+  mergeSearchTerms,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
@@ -632,22 +633,14 @@ function commitSearchDraft(completion) {
     ? [...parseSearchDraft(search.value), createSearchTerm(completion.type, completion.value)]
     : committedTermsFromDraft(search.value, completion);
   if (!draftedTerms.length) return false;
-  const existing = new Set(state.terms.map(searchTermKey));
-  const pending = [];
-  draftedTerms.forEach((draftedTerm) => {
-    const term = createSearchTerm(draftedTerm?.type, draftedTerm?.value);
-    const key = searchTermKey(term);
-    if (!term || !key || existing.has(key)) return;
-    existing.add(key);
-    pending.push(term);
-  });
-  if (state.terms.length + pending.length > maximumSearchTerms) {
+  const merged = mergeSearchTerms(state.terms, draftedTerms);
+  if (merged.terms.length > maximumSearchTerms) {
     closeSearchSuggestions();
     searchSuggestionStatus.textContent = `A maximum of ${maximumSearchTerms} search terms is allowed`;
     return false;
   }
-  state.terms.push(...pending);
-  const added = pending.map((term) => searchTermPresentation(term)?.value || term.value);
+  state.terms = merged.terms;
+  const added = merged.added.map((term) => searchTermPresentation(term)?.value || term.value);
   state.query = "";
   search.value = "";
   state.page = 1;
