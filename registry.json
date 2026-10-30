@@ -392556,6 +392556,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lateralcoders/omarchy-app-focus",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T00:05:00.530Z",
+      "listingValidatedCommit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
+      "listingValidatedAt": "2026-10-30T00:05:00.530Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lateralcoders/omarchy-app-focus",
+        "pluginIds": [
+          "io.github.lateralcoders.app-focus"
+        ],
+        "commit": "5f30a9d7ad8f3bdeaad841389aefc147a491d5ed",
+        "checkedAt": "2026-10-30T00:05:00.365Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lateralcoders.app-focus": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
