@@ -8,6 +8,7 @@ import {
   formatDate,
   formatStars,
   hasExactVerificationSnapshot,
+  maintenanceFactsLabel,
   hidePendingEngagement,
   listingCheckState,
   listingCommitComparison,
@@ -21,7 +22,7 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261029-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,8 +30,8 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20261002-03";
-import { repositoryPublisher } from "./search.js?v=20261002-03";
+} from "./engagement.js?v=20261029-01";
+import { repositoryPublisher } from "./search.js?v=20261029-01";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -277,6 +278,9 @@ export function detailTemplate(plugin, engagement, {
   const lastSuccessful = check.lastSuccessfulAt
     ? `<div class="listing-check-row"><dt>Last successful</dt><dd><time datetime="${escapeHtml(check.lastSuccessfulAt)}">${escapeHtml(formatCheckTime(check.lastSuccessfulAt))}</time></dd></div>`
     : "";
+  const maintenanceRow = typeof plugin.maintenanceStatus === "string"
+    ? `<div class="listing-check-row"><dt>Maintenance</dt><dd><span class="listing-check-status ${plugin.maintenanceStatus === "maintained" ? "is-passed" : "is-neutral"}">${plugin.maintenanceStatus === "maintained" ? "Maintained" : "Not established"}</span><small>${escapeHtml(maintenanceFactsLabel(plugin))}</small></dd></div>`
+    : "";
   const repositoryReleaseUrl = safeGitHubWebUrl(plugin.repositoryRelease?.url);
   const repositoryRelease = plugin.repositoryRelease?.tag && repositoryReleaseUrl
     ? `<a href="${escapeHtml(repositoryReleaseUrl)}" target="_blank" rel="noreferrer">${escapeHtml(plugin.repositoryRelease.tag)} <span aria-hidden="true">↗</span></a>`
@@ -288,6 +292,7 @@ export function detailTemplate(plugin, engagement, {
           <div class="listing-check-row"><dt>Compatibility</dt><dd><span class="listing-check-status ${check.statusTone}">${check.statusLabel}</span></dd></div>
           <div class="listing-check-row"><dt>Last checked</dt><dd><time datetime="${escapeHtml(plugin.upstreamCheckedAt || "")}">${escapeHtml(formatCheckTime(plugin.upstreamCheckedAt))}</time></dd></div>
           <div class="listing-check-row"><dt>Last known release</dt><dd>${repositoryRelease}</dd></div>
+          ${maintenanceRow}
           <div class="listing-check-row"><dt>${check.commitLabel}</dt><dd>${commitLink(check.checkedCommit, `View ${check.commitLabel.toLowerCase()}`)}</dd></div>
           ${lastSuccessful}
           ${lastCompatible}

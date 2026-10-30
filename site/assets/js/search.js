@@ -1,3 +1,9 @@
+import {
+  activityTime,
+  listingTime,
+  matchesVerificationStatus,
+} from "./shared.js?v=20261029-01";
+
 export function fuzzyScore(query, candidate) {
   const needle = foldSearchTerm(query);
   const haystack = foldSearchTerm(candidate);
@@ -15,7 +21,10 @@ export function fuzzyScore(query, candidate) {
 }
 
 export function rankSearchCompletions(matches) {
-  const typeOrder = { plugin: 0, kind: 1, author: 2, tag: 3, fulltext: 4 };
+  const typeOrder = {
+    plugin: 0, kind: 1, is: 2, sort: 2, added: 3, updated: 3, contributors: 3, age: 3, committed: 3,
+    author: 4, tag: 5, fulltext: 6,
+  };
   return [...matches].sort((a, b) => (
     Number(Boolean(b.fullPrefix)) - Number(Boolean(a.fullPrefix))
     || Number(Boolean(b.prefix)) - Number(Boolean(a.prefix))
@@ -66,7 +75,22 @@ export function currentSearchToken(value) {
   return String(value || "").match(/(?:^|\s)(\S*)$/)?.[1] || "";
 }
 
-const searchTermTypeList = ["text", "fulltext", "tag", "author", "plugin", "kind"];
+const searchTermTypeList = [
+  "text", "fulltext", "tag", "author", "plugin", "kind", "is", "sort", "added", "updated",
+  "contributors", "age", "committed",
+];
+export const searchStateValues = Object.freeze(["maintained", "verified", "unverified"]);
+// Sort orders the browse page offers; a `sort:` term mirrors the select and never filters.
+export const searchSortValues = Object.freeze([
+  "added", "updated", "stars", "views", "copies", "hearts", "rank", "installRate", "name", "kind",
+]);
+const searchSortKeys = new Map(searchSortValues.map((value) => [value.toLowerCase(), value]));
+const searchWindowPattern = /^(\d{1,4})([dw])$/;
+const searchMinimumAgePattern = /^(\d{1,4})([dw])\+?$/;
+const searchMinimumCountPattern = /^(\d{1,4})\+?$/;
+// Window terms keep plugins whose date is recent; `age` keeps old enough ones.
+const searchWindowTypes = new Set(["added", "updated", "committed"]);
+const dayMs = 24 * 60 * 60 * 1000;
 const searchTermTypes = new Set(searchTermTypeList);
 const searchStateTermTypes = new Map([
   ["q", "text"],
@@ -75,6 +99,12 @@ const searchStateTermTypes = new Map([
   ["author", "author"],
   ["plugin", "plugin"],
   ["kind", "kind"],
+  ["is", "is"],
+  ["added", "added"],
+  ["updated", "updated"],
+  ["contributors", "contributors"],
+  ["age", "age"],
+  ["committed", "committed"],
 ]);
 export const maximumSearchTerms = 24;
 export const maximumSearchTermLength = 160;
@@ -143,9 +173,55 @@ export function createSearchTerm(type, value) {
     if (!validGitHubLogin(normalizedValue)) return null;
   }
   if (normalizedType === "kind") normalizedValue = pluginKindKey(normalizedValue);
+  if (normalizedType === "is") {
+    normalizedValue = normalizedValue.toLowerCase();
+    if (!searchStateValues.includes(normalizedValue)) return null;
+  }
+  if (normalizedType === "sort") {
+    normalizedValue = searchSortKeys.get(normalizedValue.toLowerCase()) || "";
+  }
+  if (searchWindowTypes.has(normalizedType)) {
+    normalizedValue = normalizedValue.toLowerCase();
+    if (!searchWindowMillis(normalizedValue)) return null;
+  }
+  if (normalizedType === "age") {
+    const match = normalizedValue.toLowerCase().match(searchMinimumAgePattern);
+    if (!match || !Number(match[1])) return null;
+    normalizedValue = `${Number(match[1])}${match[2]}+`;
+  }
+  if (normalizedType === "contributors") {
+    const match = normalizedValue.match(searchMinimumCountPattern);
+    if (!match || !Number(match[1])) return null;
+    normalizedValue = `${Number(match[1])}+`;
+  }
   if (normalizedType === "fulltext" && normalizedValue.includes("\"")) return null;
   if (!normalizedValue) return null;
   return { type: normalizedType, value: normalizedValue };
+}
+
+/**
+ * Length of a date window such as `7d` or `2w` in milliseconds, or 0 when
+ * the value is not a supported window.
+ */
+export function searchWindowMillis(value) {
+  const match = String(value || "").toLowerCase().match(searchWindowPattern);
+  if (!match) return 0;
+  const count = Number(match[1]);
+  if (!count) return 0;
+  return count * dayMs * (match[2] === "w" ? 7 : 1);
+}
+
+/** Minimum repository age of an `age:` value such as `60d+`, in milliseconds. */
+function searchMinimumAgeMillis(value) {
+  return searchWindowMillis(String(value || "").replace(/\+$/, ""));
+}
+
+/** The sort order requested by the last `sort:` term among chips and draft. */
+export function searchSortTerm(terms = [], draft = "") {
+  const sortTerms = [...terms, ...parseSearchDraft(draft)]
+    .map((term) => createSearchTerm(term?.type, term?.value))
+    .filter((term) => term?.type === "sort");
+  return sortTerms.at(-1)?.value || "";
 }
 
 export function searchTermKey(term) {
@@ -204,7 +280,7 @@ export function parseSearchDraft(value) {
       ? { type: "fulltext", value: match[1] }
       : { type: "token", value: match[2] });
   const isTypedBoundary = (part) => part.type === "fulltext"
-    || /^(?:tag|author|text|plugin|kind):/i.test(part.value)
+    || /^(?:tag|author|text|plugin|kind|is|sort|added|updated|contributors|age|committed):/i.test(part.value)
     || (part.value.startsWith("@") && validGitHubLogin(part.value.slice(1)));
   const terms = [];
   for (let index = 0; index < parts.length; index += 1) {
@@ -227,7 +303,7 @@ export function parseSearchDraft(value) {
       continue;
     }
     if (/^text:$/i.test(token)) continue;
-    const typed = token.match(/^(tag|author|text|kind):(.+)$/i);
+    const typed = token.match(/^(tag|author|text|kind|is|sort|added|updated|contributors|age|committed):(.+)$/i);
     if (typed) {
       if (typed[1].toLowerCase() === "text" && typed[2].includes("\"")) {
         terms.push(createSearchTerm("text", token));
@@ -248,6 +324,8 @@ export function parseSearchDraft(value) {
 
 export function appendSearchState(params, { terms, draft }) {
   uniqueSearchTerms(terms).forEach((term) => {
+    // The sort order travels in the page's own `sort` parameter.
+    if (term.type === "sort") return;
     const key = term.type === "text" ? "q" : term.type === "fulltext" ? "text" : term.type;
     params.append(key, term.value);
   });
@@ -344,6 +422,19 @@ function buildPluginSearchContext(plugin) {
     pluginName: plugin?.name,
     pluginId: plugin?.id,
     pluginKind: plugin?.kind,
+    maintained: plugin?.maintenanceStatus === "maintained" && !plugin?.builtIn && !plugin?.placeholder,
+    verified: matchesVerificationStatus(plugin, "verified"),
+    unverified: matchesVerificationStatus(plugin, "unverified"),
+    listedTime: plugin?.placeholder ? Number.NaN : listingTime(plugin),
+    activeTime: plugin?.placeholder ? 0 : activityTime(plugin),
+    // Maintenance facts exist only for community listings, like the signal itself.
+    ...(plugin?.builtIn || plugin?.placeholder ? {} : {
+      outsideContributors: Number.isSafeInteger(plugin?.externalContributors)
+        ? plugin.externalContributors
+        : Number.NaN,
+      createdTime: Date.parse(plugin?.repositoryCreatedAt || ""),
+      committedTime: Date.parse(plugin?.repositoryCommittedAt || ""),
+    }),
     rankingKeys: [
       foldSearchTerm(plugin?.name),
       foldSearchTerm(plugin?.id),
@@ -352,10 +443,10 @@ function buildPluginSearchContext(plugin) {
   };
 }
 
-export function matchesSearchSelection(context, { terms = [], draftTerms = [] } = {}) {
+export function matchesSearchSelection(context, { terms = [], draftTerms = [], now = Date.now() } = {}) {
   const matchesTerms = terms.every((term) => (term.type === "text"
     ? matchesDirectSearch(term.value, context)
-    : matchesCommittedSearchTerm(term, context)));
+    : matchesCommittedSearchTerm(term, context, { now })));
   const textDraft = draftTerms
     .filter((term) => term.type === "text")
     .map((term) => term.value)
@@ -363,7 +454,7 @@ export function matchesSearchSelection(context, { terms = [], draftTerms = [] } 
   const matchesTextDraft = !textDraft || matchesDirectSearch(textDraft, context);
   const matchesTypedDraft = draftTerms
     .filter((term) => term.type !== "text")
-    .every((term) => matchesDraftSearchTerm(term, context));
+    .every((term) => matchesDraftSearchTerm(term, context, { now }));
   return matchesTerms && matchesTextDraft && matchesTypedDraft;
 }
 
@@ -413,6 +504,31 @@ export function matchesDirectSearch(value, {
   });
 }
 
+function matchesStateSearchTerm(normalized, context, now) {
+  if (normalized.type === "sort") return true;
+  if (normalized.type === "is") return context[normalized.value] === true;
+  // These three mirror the maintenance policy in scripts/plugin-maintenance.mjs,
+  // including its inclusive boundaries.
+  if (normalized.type === "contributors") {
+    return Number.isFinite(context.outsideContributors)
+      && context.outsideContributors >= Number.parseInt(normalized.value, 10);
+  }
+  if (normalized.type === "age") {
+    return Number.isFinite(context.createdTime)
+      && now - context.createdTime >= searchMinimumAgeMillis(normalized.value);
+  }
+  if (normalized.type === "committed") {
+    return Number.isFinite(context.committedTime)
+      && now - context.committedTime <= searchWindowMillis(normalized.value);
+  }
+  const time = normalized.type === "added" ? context.listedTime : context.activeTime;
+  if (!Number.isFinite(time) || time <= 0) return false;
+  const age = now - time;
+  return age >= 0 && age < searchWindowMillis(normalized.value);
+}
+
+const stateSearchTermTypes = new Set(["is", "sort", "added", "updated", "contributors", "age", "committed"]);
+
 export function matchesCommittedSearchTerm(term, {
   publisher,
   primaryText,
@@ -421,13 +537,15 @@ export function matchesCommittedSearchTerm(term, {
   pluginName,
   pluginId,
   pluginKind,
-}) {
+  ...state
+}, { now = Date.now() } = {}) {
   const normalized = createSearchTerm(term?.type, term?.value);
   if (!normalized) return false;
   const requested = foldSearchTerm(normalized.value);
   if (normalized.type === "fulltext") {
     return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText, pluginId });
   }
+  if (stateSearchTermTypes.has(normalized.type)) return matchesStateSearchTerm(normalized, state, now);
   if (normalized.type === "author") return foldSearchTerm(publisher).startsWith(requested);
   if (normalized.type === "tag") {
     return tags.some((tag) => foldSearchTerm(tag) === requested);
@@ -450,13 +568,15 @@ export function matchesDraftSearchTerm(term, {
   pluginName,
   pluginId,
   pluginKind,
-}) {
+  ...state
+}, { now = Date.now() } = {}) {
   const normalized = createSearchTerm(term?.type, term?.value);
   if (!normalized || normalized.type === "text") return false;
   const requested = foldSearchTerm(normalized.value);
   if (normalized.type === "fulltext") {
     return matchesDirectSearch(normalized.value, { publisher, primaryText, searchText, pluginId });
   }
+  if (stateSearchTermTypes.has(normalized.type)) return matchesStateSearchTerm(normalized, state, now);
   if (normalized.type === "author") return foldSearchTerm(publisher).startsWith(requested);
   if (normalized.type === "tag") {
     return tags.some((tag) => foldSearchTerm(tag).startsWith(requested));

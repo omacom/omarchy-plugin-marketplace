@@ -137,9 +137,11 @@ function graphqlRepository({
     stargazerCount: 12,
     pushedAt: "2026-08-29T08:30:00Z",
     updatedAt: "2026-08-29T08:30:00Z",
+    createdAt: "2026-01-10T00:00:00Z",
+    mergedPullRequests: { totalCount: 0, nodes: [] },
     defaultBranchRef: {
       name: branch,
-      target: { oid: commitSha, tree: { oid: treeSha } },
+      target: { oid: commitSha, committedDate: "2026-08-29T08:30:00Z", tree: { oid: treeSha } },
     },
     configuredRef: null,
   };
@@ -989,7 +991,7 @@ test("a built-in bar widget is listed with the plugin enable command", async () 
         data: {
           r0: {
             ...graphqlRepository({ nameWithOwner: "example/built-in" }),
-            configuredRef: { name: "main", target: { oid: commit, tree: { oid: tree } } },
+            configuredRef: { name: "main", target: { oid: commit, committedDate: "2026-08-29T08:30:00Z", tree: { oid: tree } } },
           },
           rateLimit: graphqlRate(4998),
         },
