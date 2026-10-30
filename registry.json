@@ -394838,6 +394838,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/T3rr0or/omarchy-wireguard-switch",
+      "type": "plugin-source",
+      "addedAt": "2026-10-30",
+      "listedAt": "2026-10-30T21:23:04.883Z",
+      "listingValidatedCommit": "bca25b1959ab9933a1a88334aa69db8682b4fc69",
+      "listingValidatedAt": "2026-10-30T21:23:04.883Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "t3rr0or/omarchy-wireguard-switch",
+        "pluginIds": [
+          "io.github.t3rr0or.wireguard-switch"
+        ],
+        "commit": "bca25b1959ab9933a1a88334aa69db8682b4fc69",
+        "checkedAt": "2026-10-30T21:23:04.703Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.t3rr0or.wireguard-switch": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
