@@ -366230,8 +366230,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-18",
       "listedAt": "2026-10-18T09:51:13.198Z",
-      "listingValidatedCommit": "dcad30c40367572759ca0c343bb049201d563d8b",
-      "listingValidatedAt": "2026-10-29T20:15:44.530Z",
+      "listingValidatedCommit": "b3436718c15c03a409c7bc36721e3dbd70aac845",
+      "listingValidatedAt": "2026-10-30T20:33:09.253Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -366240,15 +366240,14 @@
         "pluginIds": [
           "reavann.omamail"
         ],
-        "commit": "dcad30c40367572759ca0c343bb049201d563d8b",
-        "checkedAt": "2026-10-29T20:15:44.530Z",
+        "commit": "b3436718c15c03a409c7bc36721e3dbd70aac845",
+        "checkedAt": "2026-10-30T20:33:09.253Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager",
           "service-management",
-          "privilege",
           "installer"
         ]
       },
@@ -366361,6 +366360,55 @@
             "reviewedAt": "2026-10-29T14:28:44.008Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "dcad30c40367572759ca0c343bb049201d563d8b",
+          "validatedAt": "2026-10-29T20:15:44.530Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T20:33:09.253Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reav4nn/omamail",
+            "pluginIds": [
+              "reavann.omamail"
+            ],
+            "commit": "dcad30c40367572759ca0c343bb049201d563d8b",
+            "checkedAt": "2026-10-29T20:15:44.530Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "reav4nn/omamail",
+            "pluginIds": [
+              "reavann.omamail"
+            ],
+            "commit": "dcad30c40367572759ca0c343bb049201d563d8b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-29T20:15:44.530Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-29T15:58:31.609Z",
+            "requestEventId": 34625934128,
+            "requestedAt": "2026-10-29T19:43:15Z",
+            "reviewedAt": "2026-10-29T20:15:44.530Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -366369,22 +366417,21 @@
         "pluginIds": [
           "reavann.omamail"
         ],
-        "commit": "dcad30c40367572759ca0c343bb049201d563d8b",
+        "commit": "b3436718c15c03a409c7bc36721e3dbd70aac845",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-29T20:15:44.530Z",
+        "baselineCheckedAt": "2026-10-30T20:33:09.253Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager",
           "service-management",
-          "privilege",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-29T15:58:31.609Z",
-        "requestEventId": 34625934128,
-        "requestedAt": "2026-10-29T19:43:15Z",
-        "reviewedAt": "2026-10-29T20:15:44.530Z",
+        "reviewedBaselineCheckedAt": "2026-10-30T11:20:29.858Z",
+        "requestEventId": 34728229003,
+        "requestedAt": "2026-10-30T20:03:31Z",
+        "reviewedAt": "2026-10-30T20:33:09.253Z",
         "reviewer": "HANCORE-linux"
       }
     },
