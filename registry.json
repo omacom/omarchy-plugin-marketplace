@@ -394247,8 +394247,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T01:34:23.042Z",
-      "listingValidatedCommit": "5997da15867a401948841efb6b27120ad5c5ae87",
-      "listingValidatedAt": "2026-10-30T01:34:23.042Z",
+      "listingValidatedCommit": "20970968f03dbdc3ac0c5f190071d7c156aa69ca",
+      "listingValidatedAt": "2026-10-30T22:29:53.753Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -394257,8 +394257,8 @@
         "pluginIds": [
           "io.github.hugorolimf.bar"
         ],
-        "commit": "5997da15867a401948841efb6b27120ad5c5ae87",
-        "checkedAt": "2026-10-30T01:34:22.904Z",
+        "commit": "20970968f03dbdc3ac0c5f190071d7c156aa69ca",
+        "checkedAt": "2026-10-30T22:29:53.753Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -394273,7 +394273,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "5997da15867a401948841efb6b27120ad5c5ae87",
+          "validatedAt": "2026-10-30T01:34:23.042Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T22:29:53.753Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-bar",
+            "pluginIds": [
+              "io.github.hugorolimf.bar"
+            ],
+            "commit": "5997da15867a401948841efb6b27120ad5c5ae87",
+            "checkedAt": "2026-10-30T01:34:22.904Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/yock/omarchy-station",
