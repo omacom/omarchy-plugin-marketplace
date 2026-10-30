@@ -331520,8 +331520,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-07",
       "listedAt": "2026-10-07T14:23:37.286Z",
-      "listingValidatedCommit": "1722700abf0bc560260acc96e37faabe9d46d980",
-      "listingValidatedAt": "2026-10-09T15:30:13.206Z",
+      "listingValidatedCommit": "ebd86d3537805853a46b58e416a0a863f51fb901",
+      "listingValidatedAt": "2026-10-30T21:37:14.722Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -331530,8 +331530,8 @@
         "pluginIds": [
           "tmn73.obsidian"
         ],
-        "commit": "1722700abf0bc560260acc96e37faabe9d46d980",
-        "checkedAt": "2026-10-09T15:30:13.206Z",
+        "commit": "ebd86d3537805853a46b58e416a0a863f51fb901",
+        "checkedAt": "2026-10-30T21:37:14.722Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -331549,28 +331549,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "tmn73/omarchy-obsidian-shelf",
-        "pluginIds": [
-          "tmn73.obsidian"
-        ],
-        "commit": "1722700abf0bc560260acc96e37faabe9d46d980",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-09T15:30:13.206Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-09T14:33:09.114Z",
-        "requestEventId": 32887926532,
-        "requestedAt": "2026-10-09T15:29:35Z",
-        "reviewedAt": "2026-10-09T15:30:13.206Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -331617,8 +331595,75 @@
             "reviewedAt": "2026-10-07T14:23:37.209Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "1722700abf0bc560260acc96e37faabe9d46d980",
+          "validatedAt": "2026-10-09T15:30:13.206Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T21:37:14.722Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tmn73/omarchy-obsidian-shelf",
+            "pluginIds": [
+              "tmn73.obsidian"
+            ],
+            "commit": "1722700abf0bc560260acc96e37faabe9d46d980",
+            "checkedAt": "2026-10-09T15:30:13.206Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "tmn73/omarchy-obsidian-shelf",
+            "pluginIds": [
+              "tmn73.obsidian"
+            ],
+            "commit": "1722700abf0bc560260acc96e37faabe9d46d980",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-09T15:30:13.206Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-09T14:33:09.114Z",
+            "requestEventId": 32887926532,
+            "requestedAt": "2026-10-09T15:29:35Z",
+            "reviewedAt": "2026-10-09T15:30:13.206Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tmn73/omarchy-obsidian-shelf",
+        "pluginIds": [
+          "tmn73.obsidian"
+        ],
+        "commit": "ebd86d3537805853a46b58e416a0a863f51fb901",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T21:37:14.722Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T16:14:46.870Z",
+        "requestEventId": 34731870268,
+        "requestedAt": "2026-10-30T20:55:37Z",
+        "reviewedAt": "2026-10-30T21:37:14.722Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/nathanmeira/omarchy-ring",
