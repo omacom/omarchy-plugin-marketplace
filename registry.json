@@ -390102,8 +390102,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T19:41:12.422Z",
-      "listingValidatedCommit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
-      "listingValidatedAt": "2026-10-28T19:41:12.422Z",
+      "listingValidatedCommit": "9205117fd9710872a8cf63e9403d46c4cf837f05",
+      "listingValidatedAt": "2026-10-30T00:22:05.974Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -390112,8 +390112,8 @@
         "pluginIds": [
           "si.omarchy-look-and-feel"
         ],
-        "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
-        "checkedAt": "2026-10-28T19:41:12.317Z",
+        "commit": "9205117fd9710872a8cf63e9403d46c4cf837f05",
+        "checkedAt": "2026-10-30T00:22:05.974Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -390121,28 +390121,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "conree/omarchy_look_and_feel",
-        "pluginIds": [
-          "si.omarchy-look-and-feel"
-        ],
-        "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T19:41:12.317Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-28T16:41:42.907Z",
-        "requestEventId": 34511566278,
-        "requestedAt": "2026-10-28T19:19:05Z",
-        "reviewedAt": "2026-10-28T19:41:12.317Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "si.omarchy-look-and-feel": {
@@ -390158,7 +390136,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "conree/omarchy_look_and_feel",
+        "pluginIds": [
+          "si.omarchy-look-and-feel"
+        ],
+        "commit": "9205117fd9710872a8cf63e9403d46c4cf837f05",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-30T00:22:05.974Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T23:30:42.605Z",
+        "requestEventId": 34643426580,
+        "requestedAt": "2026-10-29T23:47:11Z",
+        "reviewedAt": "2026-10-30T00:22:05.974Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+          "validatedAt": "2026-10-28T19:41:12.422Z",
+          "branch": "main",
+          "supersededAt": "2026-10-30T00:22:05.974Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "conree/omarchy_look_and_feel",
+            "pluginIds": [
+              "si.omarchy-look-and-feel"
+            ],
+            "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+            "checkedAt": "2026-10-28T19:41:12.317Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "conree/omarchy_look_and_feel",
+            "pluginIds": [
+              "si.omarchy-look-and-feel"
+            ],
+            "commit": "000e55aaf8191317c9a0f264f97e9c7ef41c488b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T19:41:12.317Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-28T16:41:42.907Z",
+            "requestEventId": 34511566278,
+            "requestedAt": "2026-10-28T19:19:05Z",
+            "reviewedAt": "2026-10-28T19:41:12.317Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Robertg761/Omarchy-Dualsense",
