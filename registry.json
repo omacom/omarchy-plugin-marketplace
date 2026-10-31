@@ -396994,6 +396994,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/tydynrain369/omarchy-qortal-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T06:08:04.386Z",
+      "listingValidatedCommit": "c41fc768748de00072717bca65b563febf238920",
+      "listingValidatedAt": "2026-10-31T06:08:04.386Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tydynrain369/omarchy-qortal-plugin",
+        "pluginIds": [
+          "io.github.tydynrain369.qortal-minting-node-status"
+        ],
+        "commit": "c41fc768748de00072717bca65b563febf238920",
+        "checkedAt": "2026-10-31T06:08:04.233Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tydynrain369/omarchy-qortal-plugin",
+        "pluginIds": [
+          "io.github.tydynrain369.qortal-minting-node-status"
+        ],
+        "commit": "c41fc768748de00072717bca65b563febf238920",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T06:08:04.233Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T05:30:59.597Z",
+        "requestEventId": 34756991423,
+        "requestedAt": "2026-10-31T06:07:34Z",
+        "reviewedAt": "2026-10-31T06:08:04.233Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.tydynrain369.qortal-minting-node-status": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
