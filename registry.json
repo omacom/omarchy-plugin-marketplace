@@ -396622,6 +396622,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/EchoGrav/touchtype-qwertz",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T01:31:50.704Z",
+      "listingValidatedCommit": "7820143abb5591667d8ad9524114f6532fc61607",
+      "listingValidatedAt": "2026-10-31T01:31:50.704Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "echograv/touchtype-qwertz",
+        "pluginIds": [
+          "io.github.echograv.touchtype-qwertz"
+        ],
+        "commit": "7820143abb5591667d8ad9524114f6532fc61607",
+        "checkedAt": "2026-10-31T01:31:50.526Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "echograv/touchtype-qwertz",
+        "pluginIds": [
+          "io.github.echograv.touchtype-qwertz"
+        ],
+        "commit": "7820143abb5591667d8ad9524114f6532fc61607",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T01:31:50.526Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T01:23:38.662Z",
+        "requestEventId": 34746302624,
+        "requestedAt": "2026-10-31T01:28:41Z",
+        "reviewedAt": "2026-10-31T01:31:50.526Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.echograv.touchtype-qwertz": {
+          "category": "Kids",
+          "tags": [
+            "bar",
+            "games",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
