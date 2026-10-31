@@ -396294,6 +396294,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ryan-winkler/omaconnect-kde-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T00:15:31.094Z",
+      "listingValidatedCommit": "b1511bbef7fd7f09b53603695581059dd8f2e02c",
+      "listingValidatedAt": "2026-10-31T00:15:31.094Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ryan-winkler/omaconnect-kde-plus",
+        "pluginIds": [
+          "omaconnect.plus"
+        ],
+        "commit": "b1511bbef7fd7f09b53603695581059dd8f2e02c",
+        "checkedAt": "2026-10-31T00:15:30.925Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ryan-winkler/omaconnect-kde-plus",
+        "pluginIds": [
+          "omaconnect.plus"
+        ],
+        "commit": "b1511bbef7fd7f09b53603695581059dd8f2e02c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T00:15:30.925Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T07:00:02.511Z",
+        "requestEventId": 34743245591,
+        "requestedAt": "2026-10-31T00:15:02Z",
+        "reviewedAt": "2026-10-31T00:15:30.925Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omaconnect.plus": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "vpn"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
