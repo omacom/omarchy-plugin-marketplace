@@ -397126,6 +397126,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/SteveB98/omarchy-upnext",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T07:05:15.015Z",
+      "listingValidatedCommit": "07fbd6a2509a2c3b349d2e0fc73a105a2b5f60e1",
+      "listingValidatedAt": "2026-10-31T07:05:15.015Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "steveb98/omarchy-upnext",
+        "pluginIds": [
+          "io.github.steveb98.upnext"
+        ],
+        "commit": "07fbd6a2509a2c3b349d2e0fc73a105a2b5f60e1",
+        "checkedAt": "2026-10-31T07:05:14.886Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.steveb98.upnext": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
