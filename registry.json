@@ -397978,6 +397978,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/lutzlstein/omabench3d",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T19:41:34.690Z",
+      "listingValidatedCommit": "3bf9e3e76398e8cddea3f0c1b7cb472eefb587b7",
+      "listingValidatedAt": "2026-10-31T19:41:34.690Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lutzlstein/omabench3d",
+        "pluginIds": [
+          "io.github.lutzlstein.omabench3d"
+        ],
+        "commit": "3bf9e3e76398e8cddea3f0c1b7cb472eefb587b7",
+        "checkedAt": "2026-10-31T19:41:34.519Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.lutzlstein.omabench3d": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
