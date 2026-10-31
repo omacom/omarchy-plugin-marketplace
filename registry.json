@@ -398611,6 +398611,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bwilczynski/omarchy-unifictl",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:23:58.267Z",
+      "listingValidatedCommit": "9c312411c59e721eac57cbad3d0d7233d5a6d6fd",
+      "listingValidatedAt": "2026-10-31T21:23:58.267Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bwilczynski/omarchy-unifictl",
+        "pluginIds": [
+          "bwilczynski.unifictl"
+        ],
+        "commit": "9c312411c59e721eac57cbad3d0d7233d5a6d6fd",
+        "checkedAt": "2026-10-31T21:23:58.104Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bwilczynski.unifictl": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
