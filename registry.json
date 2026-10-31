@@ -385153,8 +385153,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T17:16:18.294Z",
-      "listingValidatedCommit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
-      "listingValidatedAt": "2026-10-26T17:16:18.294Z",
+      "listingValidatedCommit": "34a748dc5bc8053e2a33da90008095482bbdd2e1",
+      "listingValidatedAt": "2026-10-31T00:02:31.896Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -385163,35 +385163,14 @@
         "pluginIds": [
           "blackcode.omadbngin"
         ],
-        "commit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
-        "checkedAt": "2026-10-26T17:16:18.138Z",
+        "commit": "34a748dc5bc8053e2a33da90008095482bbdd2e1",
+        "checkedAt": "2026-10-31T00:02:31.896Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alshareedah22/omadbngin",
-        "pluginIds": [
-          "blackcode.omadbngin"
-        ],
-        "commit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T17:16:18.138Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-26T14:01:13.323Z",
-        "requestEventId": 34285545523,
-        "requestedAt": "2026-10-26T17:15:22Z",
-        "reviewedAt": "2026-10-26T17:16:18.138Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "blackcode.omadbngin": {
@@ -385203,7 +385182,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alshareedah22/omadbngin",
+        "pluginIds": [
+          "blackcode.omadbngin"
+        ],
+        "commit": "34a748dc5bc8053e2a33da90008095482bbdd2e1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T00:02:31.896Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-29T15:04:21.682Z",
+        "requestEventId": 34742154191,
+        "requestedAt": "2026-10-30T23:52:19Z",
+        "reviewedAt": "2026-10-31T00:02:31.896Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
+          "validatedAt": "2026-10-26T17:16:18.294Z",
+          "branch": "main",
+          "supersededAt": "2026-10-31T00:02:31.896Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alshareedah22/omadbngin",
+            "pluginIds": [
+              "blackcode.omadbngin"
+            ],
+            "commit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
+            "checkedAt": "2026-10-26T17:16:18.138Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alshareedah22/omadbngin",
+            "pluginIds": [
+              "blackcode.omadbngin"
+            ],
+            "commit": "849b7f5b884d856f314e2b5d33d90431a7a33cac",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T17:16:18.138Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-26T14:01:13.323Z",
+            "requestEventId": 34285545523,
+            "requestedAt": "2026-10-26T17:15:22Z",
+            "reviewedAt": "2026-10-26T17:16:18.138Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/yangkang5303/omarchy-cast",
