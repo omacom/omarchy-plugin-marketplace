@@ -396422,6 +396422,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/phi0x/omarchy-sennheiser-control",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T00:37:12.486Z",
+      "listingValidatedCommit": "e7ff3991df12f7086e84661dac3a7dfd09c728c6",
+      "listingValidatedAt": "2026-10-31T00:37:12.486Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "phi0x/omarchy-sennheiser-control",
+        "pluginIds": [
+          "phi0x.sennheiser"
+        ],
+        "commit": "e7ff3991df12f7086e84661dac3a7dfd09c728c6",
+        "checkedAt": "2026-10-31T00:37:12.329Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "phi0x/omarchy-sennheiser-control",
+        "pluginIds": [
+          "phi0x.sennheiser"
+        ],
+        "commit": "e7ff3991df12f7086e84661dac3a7dfd09c728c6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T00:37:12.329Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T00:31:16.018Z",
+        "requestEventId": 34744202290,
+        "requestedAt": "2026-10-31T00:36:35Z",
+        "reviewedAt": "2026-10-31T00:37:12.329Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "phi0x.sennheiser": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
