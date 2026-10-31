@@ -398648,6 +398648,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/W3asd/omarchy-quicknum",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:28:17.028Z",
+      "listingValidatedCommit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+      "listingValidatedAt": "2026-10-31T21:28:17.028Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "w3asd/omarchy-quicknum",
+        "pluginIds": [
+          "io.github.w3asd.quicknum"
+        ],
+        "commit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+        "checkedAt": "2026-10-31T21:28:16.879Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "w3asd/omarchy-quicknum",
+        "pluginIds": [
+          "io.github.w3asd.quicknum"
+        ],
+        "commit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T21:28:16.879Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T21:12:35.830Z",
+        "requestEventId": 34798744333,
+        "requestedAt": "2026-10-31T21:26:29Z",
+        "reviewedAt": "2026-10-31T21:28:16.879Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.w3asd.quicknum": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
