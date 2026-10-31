@@ -398512,6 +398512,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nasedkinpv/omarchy-numr",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T20:50:59.326Z",
+      "listingValidatedCommit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
+      "listingValidatedAt": "2026-10-31T20:50:59.326Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nasedkinpv/omarchy-numr",
+        "pluginIds": [
+          "io.github.nasedkinpv.numr"
+        ],
+        "commit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
+        "checkedAt": "2026-10-31T20:50:59.145Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.nasedkinpv.numr": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "launcher",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
