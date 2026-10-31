@@ -396746,6 +396746,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rodonguyen/Vinikey",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T01:49:33.438Z",
+      "listingValidatedCommit": "567aa6adf9612feef5102d4752d853e1d8fcf630",
+      "listingValidatedAt": "2026-10-31T01:49:33.438Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rodonguyen/vinikey",
+        "pluginIds": [
+          "rodonguyen.vinikey"
+        ],
+        "commit": "567aa6adf9612feef5102d4752d853e1d8fcf630",
+        "checkedAt": "2026-10-31T01:49:33.264Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rodonguyen/vinikey",
+        "pluginIds": [
+          "rodonguyen.vinikey"
+        ],
+        "commit": "567aa6adf9612feef5102d4752d853e1d8fcf630",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T01:49:33.264Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T01:38:31.858Z",
+        "requestEventId": 34747074106,
+        "requestedAt": "2026-10-31T01:48:55Z",
+        "reviewedAt": "2026-10-31T01:49:33.265Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rodonguyen.vinikey": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
