@@ -398736,6 +398736,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Morfilio/hush",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:39:33.520Z",
+      "listingValidatedCommit": "569b1a5cf0ae2b9490783ebc42f06c60796c8e65",
+      "listingValidatedAt": "2026-10-31T21:39:33.520Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "morfilio/hush",
+        "pluginIds": [
+          "io.github.morfilio.hush"
+        ],
+        "commit": "569b1a5cf0ae2b9490783ebc42f06c60796c8e65",
+        "checkedAt": "2026-10-31T21:39:33.371Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "morfilio/hush",
+        "pluginIds": [
+          "io.github.morfilio.hush"
+        ],
+        "commit": "569b1a5cf0ae2b9490783ebc42f06c60796c8e65",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T21:39:33.371Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T21:19:01.118Z",
+        "requestEventId": 34799230603,
+        "requestedAt": "2026-10-31T21:39:03Z",
+        "reviewedAt": "2026-10-31T21:39:33.371Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.morfilio.hush": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "security",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
