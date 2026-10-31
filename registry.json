@@ -397196,6 +397196,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fbaroni/oma-hevy",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T07:55:16.306Z",
+      "listingValidatedCommit": "578c2624803efad07465990bfcff953687d0cebe",
+      "listingValidatedAt": "2026-10-31T07:55:16.306Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fbaroni/oma-hevy",
+        "pluginIds": [
+          "fbaroni.oma-hevy"
+        ],
+        "commit": "578c2624803efad07465990bfcff953687d0cebe",
+        "checkedAt": "2026-10-31T07:55:16.203Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fbaroni/oma-hevy",
+        "pluginIds": [
+          "fbaroni.oma-hevy"
+        ],
+        "commit": "578c2624803efad07465990bfcff953687d0cebe",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T07:55:16.203Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T07:47:51.263Z",
+        "requestEventId": 34760723178,
+        "requestedAt": "2026-10-31T07:54:50Z",
+        "reviewedAt": "2026-10-31T07:55:16.203Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "fbaroni.oma-hevy": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
