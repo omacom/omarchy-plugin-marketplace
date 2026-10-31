@@ -397159,6 +397159,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Wox-launcher/omarchy-wox",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T07:26:08.431Z",
+      "listingValidatedCommit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
+      "listingValidatedAt": "2026-10-31T07:26:08.431Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wox-launcher/omarchy-wox",
+        "pluginIds": [
+          "io.github.wox-launcher.wox"
+        ],
+        "commit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
+        "checkedAt": "2026-10-31T07:26:08.249Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.wox-launcher.wox": {
+          "category": "Productivity",
+          "tags": [
+            "media",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
