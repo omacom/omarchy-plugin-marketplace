@@ -396874,6 +396874,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/MyRSS",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T02:10:43.723Z",
+      "listingValidatedCommit": "8fc1b5e0a839c69ed24b5d465bd4e6638884af65",
+      "listingValidatedAt": "2026-10-31T02:10:43.723Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/myrss",
+        "pluginIds": [
+          "kel.news-reader"
+        ],
+        "commit": "8fc1b5e0a839c69ed24b5d465bd4e6638884af65",
+        "checkedAt": "2026-10-31T02:10:43.557Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kelmankenberg/myrss",
+        "pluginIds": [
+          "kel.news-reader"
+        ],
+        "commit": "8fc1b5e0a839c69ed24b5d465bd4e6638884af65",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T02:10:43.557Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T01:50:39.902Z",
+        "requestEventId": 34747742516,
+        "requestedAt": "2026-10-31T02:06:36Z",
+        "reviewedAt": "2026-10-31T02:10:43.557Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kel.news-reader": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
