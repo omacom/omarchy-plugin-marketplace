@@ -398868,6 +398868,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rafabertholdo/omarchy-macos",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:51:26.994Z",
+      "listingValidatedCommit": "429b00a367266bd7c85461fae7a90a0ab4b69bdb",
+      "listingValidatedAt": "2026-10-31T21:51:26.994Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rafabertholdo/omarchy-macos",
+        "pluginIds": [
+          "io.github.rafabertholdo.macos-dock"
+        ],
+        "commit": "429b00a367266bd7c85461fae7a90a0ab4b69bdb",
+        "checkedAt": "2026-10-31T21:51:26.817Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rafabertholdo/omarchy-macos",
+        "pluginIds": [
+          "io.github.rafabertholdo.macos-dock"
+        ],
+        "commit": "429b00a367266bd7c85461fae7a90a0ab4b69bdb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T21:51:26.817Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T21:27:44.184Z",
+        "requestEventId": 34799703787,
+        "requestedAt": "2026-10-31T21:50:57Z",
+        "reviewedAt": "2026-10-31T21:51:26.817Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rafabertholdo.macos-dock": {
+          "category": "Desktop",
+          "tags": [
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
