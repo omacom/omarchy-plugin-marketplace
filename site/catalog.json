@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T06:13:49.892Z",
+  "generatedAt": "2026-10-31T06:42:34.938Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -341156,6 +341156,56 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "64dce6ae7cbdfe48abc00e3b7464e823b8ed42e130251f8ba99f95c86545f6ba",
       "status": "Manual setup"
+    },
+    {
+      "id": "leviathan.native-overview",
+      "name": "Native Overview",
+      "description": "Find windows, preview the selected window, focus it or bring it to the current workspace.",
+      "author": "Ömer Eren",
+      "version": "0.1.1",
+      "repo": "https://github.com/Battlelamb/omarchy-native-overview",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "3961a39d818349306201975bc20c9662561df57a",
+      "verificationCheckedAt": "2026-10-31T06:42:33.947Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T06:42:34.128Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/Battlelamb/omarchy-native-overview.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Desktop",
+      "tags": [
+        "hyprland",
+        "launcher",
+        "quickshell"
+      ],
+      "license": "GPL-3.0-only",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-10-31T06:32:59Z",
+      "repositoryRelease": {
+        "tag": "v0.1.1",
+        "url": "https://github.com/Battlelamb/omarchy-native-overview/tree/v0.1.1"
+      },
+      "accent": "rose",
+      "initials": "NO",
+      "kind": "Overlay",
+      "listingValidatedCommit": "3961a39d818349306201975bc20c9662561df57a",
+      "listingValidatedAt": "2026-10-31T06:42:34.128Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "3961a39d818349306201975bc20c9662561df57a",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-10-31T06:42:34.938Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "3961a39d818349306201975bc20c9662561df57a",
+      "upstreamValidatedAt": "2026-10-31T06:42:34.938Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "8a451777d8b1c17b626f2f13227ea3403e70ca546c7a1304a32c09989c13373f",
+      "status": "Available"
     },
     {
       "id": "omarchy.active-window",
