@@ -397519,6 +397519,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Joweb1/omarchy-usb-devices",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T08:18:23.355Z",
+      "listingValidatedCommit": "36240a3fd01ead416a35f00ebf4f81c1190ada62",
+      "listingValidatedAt": "2026-10-31T08:18:23.355Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joweb1/omarchy-usb-devices",
+        "pluginIds": [
+          "jovibe.usb-devices"
+        ],
+        "commit": "36240a3fd01ead416a35f00ebf4f81c1190ada62",
+        "checkedAt": "2026-10-31T08:18:23.162Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joweb1/omarchy-usb-devices",
+        "pluginIds": [
+          "jovibe.usb-devices"
+        ],
+        "commit": "36240a3fd01ead416a35f00ebf4f81c1190ada62",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T08:18:23.162Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T07:55:07.213Z",
+        "requestEventId": 34761385737,
+        "requestedAt": "2026-10-31T08:13:00Z",
+        "reviewedAt": "2026-10-31T08:18:23.162Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jovibe.usb-devices": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
