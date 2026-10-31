@@ -396931,6 +396931,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/yaeloss/omacashu",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T02:30:22.845Z",
+      "listingValidatedCommit": "ffcdc829df31e1ea2f848cf7f0cf9fd80310d107",
+      "listingValidatedAt": "2026-10-31T02:30:22.845Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yaeloss/omacashu",
+        "pluginIds": [
+          "io.github.yaeloss.omacashu"
+        ],
+        "commit": "ffcdc829df31e1ea2f848cf7f0cf9fd80310d107",
+        "checkedAt": "2026-10-31T02:30:22.681Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yaeloss/omacashu",
+        "pluginIds": [
+          "io.github.yaeloss.omacashu"
+        ],
+        "commit": "ffcdc829df31e1ea2f848cf7f0cf9fd80310d107",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T02:30:22.681Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T17:26:50.683Z",
+        "requestEventId": 34748639243,
+        "requestedAt": "2026-10-31T02:29:52Z",
+        "reviewedAt": "2026-10-31T02:30:22.681Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.yaeloss.omacashu": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
