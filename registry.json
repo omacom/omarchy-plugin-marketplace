@@ -370426,8 +370426,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T23:48:56.121Z",
-      "listingValidatedCommit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
-      "listingValidatedAt": "2026-10-26T05:22:10.786Z",
+      "listingValidatedCommit": "ede8038cd86b7b4ea7517ce0131ea5c0ba2993f0",
+      "listingValidatedAt": "2026-10-31T19:37:20.833Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -370436,8 +370436,8 @@
         "pluginIds": [
           "borat.lecoo-rgb"
         ],
-        "commit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
-        "checkedAt": "2026-10-26T05:22:10.786Z",
+        "commit": "ede8038cd86b7b4ea7517ce0131ea5c0ba2993f0",
+        "checkedAt": "2026-10-31T19:37:20.833Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -370460,28 +370460,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "onurbyte/omalecoo",
-        "pluginIds": [
-          "borat.lecoo-rgb"
-        ],
-        "commit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T05:22:10.786Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-25T17:58:45.756Z",
-        "requestEventId": 34226770705,
-        "requestedAt": "2026-10-26T05:21:42Z",
-        "reviewedAt": "2026-10-26T05:22:10.786Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -370530,8 +370508,75 @@
             "reviewedAt": "2026-10-19T23:48:55.993Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
+          "validatedAt": "2026-10-26T05:22:10.786Z",
+          "branch": "main",
+          "supersededAt": "2026-10-31T19:37:20.833Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "onurbyte/omalecoo",
+            "pluginIds": [
+              "borat.lecoo-rgb"
+            ],
+            "commit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
+            "checkedAt": "2026-10-26T05:22:10.786Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "onurbyte/omalecoo",
+            "pluginIds": [
+              "borat.lecoo-rgb"
+            ],
+            "commit": "7a4356bd3ad2d46daa8674bed718dcb2563b8fbb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T05:22:10.786Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-25T17:58:45.756Z",
+            "requestEventId": 34226770705,
+            "requestedAt": "2026-10-26T05:21:42Z",
+            "reviewedAt": "2026-10-26T05:22:10.786Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "onurbyte/omalecoo",
+        "pluginIds": [
+          "borat.lecoo-rgb"
+        ],
+        "commit": "ede8038cd86b7b4ea7517ce0131ea5c0ba2993f0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T19:37:20.833Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T19:20:30.449Z",
+        "requestEventId": 34793905064,
+        "requestedAt": "2026-10-31T19:29:45Z",
+        "reviewedAt": "2026-10-31T19:37:20.833Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/acharya-pratik/omarchy-virtual-keyboard",
