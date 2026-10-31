@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T20:23:48.361Z",
+  "generatedAt": "2026-10-31T20:27:43.041Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -342109,6 +342109,55 @@
       "upstreamValidatedAt": "2026-10-31T20:16:11.796Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "d30beff3b9292b56db3801a40aaa1ff26ce3b8ec744bfbe6d558afcd12e13858",
+      "status": "Available"
+    },
+    {
+      "id": "io.github.git-blah.omatint",
+      "name": "omaTint",
+      "description": "Tint the whole screen or single windows (grayscale, night light).",
+      "author": "priyankar tejwan",
+      "version": "1.0.0",
+      "repo": "https://github.com/git-blah/omaTint",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "8997171776976ef2dfeb12b160af413d05cb070d",
+      "verificationCheckedAt": "2026-10-31T20:27:42.029Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T20:27:42.209Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/git-blah/omaTint.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Appearance",
+      "tags": [
+        "hyprland",
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-10-31T13:11:35Z",
+      "repositoryRelease": {
+        "tag": "v1.0.0",
+        "url": "https://github.com/git-blah/omaTint/tree/v1.0.0"
+      },
+      "accent": "cyan",
+      "initials": "O",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "8997171776976ef2dfeb12b160af413d05cb070d",
+      "listingValidatedAt": "2026-10-31T20:27:42.209Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "8997171776976ef2dfeb12b160af413d05cb070d",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-10-31T20:27:43.041Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "8997171776976ef2dfeb12b160af413d05cb070d",
+      "upstreamValidatedAt": "2026-10-31T20:27:43.041Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "872923b0cc316e91a0850f8d16a6e60b9a8e1d6773803bce9c933853bac05e04",
       "status": "Available"
     },
     {
