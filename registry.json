@@ -396487,6 +396487,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-network",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T00:50:03.918Z",
+      "listingValidatedCommit": "19e0792af165dd45647546608e0ee9772b8aed74",
+      "listingValidatedAt": "2026-10-31T00:50:03.918Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-network",
+        "pluginIds": [
+          "io.github.hugorolimf.network"
+        ],
+        "commit": "19e0792af165dd45647546608e0ee9772b8aed74",
+        "checkedAt": "2026-10-31T00:50:03.739Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.network": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
