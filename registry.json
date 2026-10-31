@@ -397313,6 +397313,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Joweb1/omarchy-notify-center",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T08:03:29.088Z",
+      "listingValidatedCommit": "a0ff3d3db5b536124b535cd89dee056e595f2ad8",
+      "listingValidatedAt": "2026-10-31T08:03:29.088Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joweb1/omarchy-notify-center",
+        "pluginIds": [
+          "jovibe.notify-center"
+        ],
+        "commit": "a0ff3d3db5b536124b535cd89dee056e595f2ad8",
+        "checkedAt": "2026-10-31T08:03:28.965Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joweb1/omarchy-notify-center",
+        "pluginIds": [
+          "jovibe.notify-center"
+        ],
+        "commit": "a0ff3d3db5b536124b535cd89dee056e595f2ad8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T08:03:28.965Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T07:48:35.506Z",
+        "requestEventId": 34760792326,
+        "requestedAt": "2026-10-31T07:56:56Z",
+        "reviewedAt": "2026-10-31T08:03:28.965Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jovibe.notify-center": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
