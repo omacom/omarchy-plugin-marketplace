@@ -396813,6 +396813,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/gsottnick/omatuple",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T02:05:52.114Z",
+      "listingValidatedCommit": "8b3701b871f02835583814ba24a569d5d347777f",
+      "listingValidatedAt": "2026-10-31T02:05:52.114Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gsottnick/omatuple",
+        "pluginIds": [
+          "io.github.gsottnick.omatuple"
+        ],
+        "commit": "8b3701b871f02835583814ba24a569d5d347777f",
+        "checkedAt": "2026-10-31T02:05:51.937Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gsottnick/omatuple",
+        "pluginIds": [
+          "io.github.gsottnick.omatuple"
+        ],
+        "commit": "8b3701b871f02835583814ba24a569d5d347777f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T02:05:51.937Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T01:45:36.920Z",
+        "requestEventId": 34747693525,
+        "requestedAt": "2026-10-31T02:05:23Z",
+        "reviewedAt": "2026-10-31T02:05:51.937Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.gsottnick.omatuple": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
