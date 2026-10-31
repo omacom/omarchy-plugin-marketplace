@@ -396588,6 +396588,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fatihaydost/omarchy-houra",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T01:27:04.428Z",
+      "listingValidatedCommit": "feb69ec6f299fbd922b508fad0a452e13263ddeb",
+      "listingValidatedAt": "2026-10-31T01:27:04.428Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fatihaydost/omarchy-houra",
+        "pluginIds": [
+          "io.github.fatihaydost.houra"
+        ],
+        "commit": "feb69ec6f299fbd922b508fad0a452e13263ddeb",
+        "checkedAt": "2026-10-31T01:27:04.261Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.fatihaydost.houra": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
