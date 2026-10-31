@@ -38,6 +38,7 @@ Choose one to three tags:
 - `ai`
 - `bar`
 - `education`
+- `finance`
 - `games`
 - `hyprland`
 - `kids`
