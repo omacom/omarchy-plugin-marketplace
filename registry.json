@@ -398704,6 +398704,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Veilios/omachess",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:32:12.064Z",
+      "listingValidatedCommit": "a8b3b2143c8a7cd93e534ebad8bcd560e79f235b",
+      "listingValidatedAt": "2026-10-31T21:32:12.064Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "veilios/omachess",
+        "pluginIds": [
+          "veilios.omachess"
+        ],
+        "commit": "a8b3b2143c8a7cd93e534ebad8bcd560e79f235b",
+        "checkedAt": "2026-10-31T21:32:11.888Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "veilios.omachess": {
+          "category": "Productivity",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
