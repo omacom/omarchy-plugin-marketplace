@@ -351933,8 +351933,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-13",
       "listedAt": "2026-10-13T17:01:11.928Z",
-      "listingValidatedCommit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
-      "listingValidatedAt": "2026-10-21T19:08:24.551Z",
+      "listingValidatedCommit": "937bd29d1645ba4a0fa638cefcaaf9bd866dbb6e",
+      "listingValidatedAt": "2026-10-31T20:42:36.801Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -351943,8 +351943,8 @@
         "pluginIds": [
           "sviat.nightlight"
         ],
-        "commit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
-        "checkedAt": "2026-10-21T19:08:24.551Z",
+        "commit": "937bd29d1645ba4a0fa638cefcaaf9bd866dbb6e",
+        "checkedAt": "2026-10-31T20:42:36.801Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -351968,29 +351968,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "devsviat/omarchy-nightlight",
-        "pluginIds": [
-          "sviat.nightlight"
-        ],
-        "commit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-21T19:08:24.551Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-21T16:34:00.486Z",
-        "requestEventId": 33879069763,
-        "requestedAt": "2026-10-21T19:00:21Z",
-        "reviewedAt": "2026-10-21T19:08:24.551Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -352039,8 +352016,78 @@
             "reviewedAt": "2026-10-13T17:01:11.845Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
+          "validatedAt": "2026-10-21T19:08:24.551Z",
+          "branch": "main",
+          "supersededAt": "2026-10-31T20:42:36.801Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "devsviat/omarchy-nightlight",
+            "pluginIds": [
+              "sviat.nightlight"
+            ],
+            "commit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
+            "checkedAt": "2026-10-21T19:08:24.551Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "devsviat/omarchy-nightlight",
+            "pluginIds": [
+              "sviat.nightlight"
+            ],
+            "commit": "cb403e605a466a91a005e2c3974057e5bbca8e63",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-21T19:08:24.551Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-21T16:34:00.486Z",
+            "requestEventId": 33879069763,
+            "requestedAt": "2026-10-21T19:00:21Z",
+            "reviewedAt": "2026-10-21T19:08:24.551Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "devsviat/omarchy-nightlight",
+        "pluginIds": [
+          "sviat.nightlight"
+        ],
+        "commit": "937bd29d1645ba4a0fa638cefcaaf9bd866dbb6e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T20:42:36.801Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T17:27:02.777Z",
+        "requestEventId": 34796390957,
+        "requestedAt": "2026-10-31T20:29:27Z",
+        "reviewedAt": "2026-10-31T20:42:36.801Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/ozdil/quicknews",
