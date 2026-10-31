@@ -398607,6 +398607,131 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bwilczynski/omarchy-unifictl",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:23:58.267Z",
+      "listingValidatedCommit": "9c312411c59e721eac57cbad3d0d7233d5a6d6fd",
+      "listingValidatedAt": "2026-10-31T21:23:58.267Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bwilczynski/omarchy-unifictl",
+        "pluginIds": [
+          "bwilczynski.unifictl"
+        ],
+        "commit": "9c312411c59e721eac57cbad3d0d7233d5a6d6fd",
+        "checkedAt": "2026-10-31T21:23:58.104Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bwilczynski.unifictl": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
+    },
+    {
+      "repo": "https://github.com/W3asd/omarchy-quicknum",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:28:17.028Z",
+      "listingValidatedCommit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+      "listingValidatedAt": "2026-10-31T21:28:17.028Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "w3asd/omarchy-quicknum",
+        "pluginIds": [
+          "io.github.w3asd.quicknum"
+        ],
+        "commit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+        "checkedAt": "2026-10-31T21:28:16.879Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "w3asd/omarchy-quicknum",
+        "pluginIds": [
+          "io.github.w3asd.quicknum"
+        ],
+        "commit": "9e4ddb049490fd32f8be7b5e1f3654291511e228",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T21:28:16.879Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T21:12:35.830Z",
+        "requestEventId": 34798744333,
+        "requestedAt": "2026-10-31T21:26:29Z",
+        "reviewedAt": "2026-10-31T21:28:16.879Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.w3asd.quicknum": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
+    },
+    {
+      "repo": "https://github.com/Veilios/omachess",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T21:32:12.064Z",
+      "listingValidatedCommit": "a8b3b2143c8a7cd93e534ebad8bcd560e79f235b",
+      "listingValidatedAt": "2026-10-31T21:32:12.064Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "veilios/omachess",
+        "pluginIds": [
+          "veilios.omachess"
+        ],
+        "commit": "a8b3b2143c8a7cd93e534ebad8bcd560e79f235b",
+        "checkedAt": "2026-10-31T21:32:11.888Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "veilios.omachess": {
+          "category": "Productivity",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
