@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T19:41:35.528Z",
+  "generatedAt": "2026-10-31T19:45:58.450Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -341940,6 +341940,56 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "73c72fd8d3424e3ca066d52f7502fae30d259eeaa5aece2aef85b3ca26f4a707",
       "status": "Manual setup"
+    },
+    {
+      "id": "seaglenet.power-saver",
+      "name": "Power Saver",
+      "description": "Switches to power-saver at low battery and turns off the desktop effects you choose while power-saver is active.",
+      "author": "seagleNet",
+      "version": "1.0.1",
+      "repo": "https://github.com/seagleNet/omarchy-power-saver",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+      "verificationCheckedAt": "2026-10-31T19:45:57.464Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T19:45:57.648Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/seagleNet/omarchy-power-saver.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "System",
+      "tags": [
+        "power-management",
+        "hyprland"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-10-31T13:24:34Z",
+      "repositoryRelease": {
+        "tag": "v1.0.1",
+        "url": "https://github.com/seagleNet/omarchy-power-saver/releases/tag/v1.0.1",
+        "publishedAt": "2026-10-31T13:24:35Z"
+      },
+      "accent": "rose",
+      "initials": "PS",
+      "kind": "Service",
+      "listingValidatedCommit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+      "listingValidatedAt": "2026-10-31T19:45:57.648Z",
+      "listingValidatedBranch": "master",
+      "upstreamObservedCommit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+      "upstreamObservedBranch": "master",
+      "upstreamCheckedAt": "2026-10-31T19:45:58.450Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+      "upstreamValidatedAt": "2026-10-31T19:45:58.450Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "c2f307e0e3e66475cbd6e539e627f643b7b288f2f2f3bf52673a1590f6bde3a5",
+      "status": "Available"
     },
     {
       "id": "omarchy.active-window",
