@@ -397413,8 +397413,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T06:42:34.128Z",
-      "listingValidatedCommit": "3961a39d818349306201975bc20c9662561df57a",
-      "listingValidatedAt": "2026-10-31T06:42:34.128Z",
+      "listingValidatedCommit": "0ccd31a7ea38bdba72eeeb11f7b88e7e873b013f",
+      "listingValidatedAt": "2026-10-31T20:11:47.554Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -397423,8 +397423,8 @@
         "pluginIds": [
           "leviathan.native-overview"
         ],
-        "commit": "3961a39d818349306201975bc20c9662561df57a",
-        "checkedAt": "2026-10-31T06:42:33.947Z",
+        "commit": "0ccd31a7ea38bdba72eeeb11f7b88e7e873b013f",
+        "checkedAt": "2026-10-31T20:11:47.553Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -397440,7 +397440,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "3961a39d818349306201975bc20c9662561df57a",
+          "validatedAt": "2026-10-31T06:42:34.128Z",
+          "branch": "main",
+          "supersededAt": "2026-10-31T20:11:47.554Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "battlelamb/omarchy-native-overview",
+            "pluginIds": [
+              "leviathan.native-overview"
+            ],
+            "commit": "3961a39d818349306201975bc20c9662561df57a",
+            "checkedAt": "2026-10-31T06:42:33.947Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SteveB98/omarchy-upnext",
