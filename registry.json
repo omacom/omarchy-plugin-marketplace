@@ -397257,8 +397257,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T07:26:08.431Z",
-      "listingValidatedCommit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
-      "listingValidatedAt": "2026-10-31T07:26:08.431Z",
+      "listingValidatedCommit": "8816e262950d052b8191844dfb9af14d311452e8",
+      "listingValidatedAt": "2026-10-31T08:29:53.259Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -397267,8 +397267,8 @@
         "pluginIds": [
           "io.github.wox-launcher.wox"
         ],
-        "commit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
-        "checkedAt": "2026-10-31T07:26:08.249Z",
+        "commit": "8816e262950d052b8191844dfb9af14d311452e8",
+        "checkedAt": "2026-10-31T08:29:53.259Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -397287,7 +397287,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
+          "validatedAt": "2026-10-31T07:26:08.431Z",
+          "branch": "main",
+          "supersededAt": "2026-10-31T08:29:53.259Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wox-launcher/omarchy-wox",
+            "pluginIds": [
+              "io.github.wox-launcher.wox"
+            ],
+            "commit": "cc10cc795d835d6f35ea2e0a78adc2eeafe7998a",
+            "checkedAt": "2026-10-31T07:26:08.249Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/fbaroni/oma-hevy",
