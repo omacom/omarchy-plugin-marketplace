@@ -397786,6 +397786,61 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/paudelsamir/newsdash",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T19:23:48.559Z",
+      "listingValidatedCommit": "f2b877492478e7b751deac2c937bff0e94a4130d",
+      "listingValidatedAt": "2026-10-31T19:23:48.559Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paudelsamir/newsdash",
+        "pluginIds": [
+          "paudelsamir.newsdash"
+        ],
+        "commit": "f2b877492478e7b751deac2c937bff0e94a4130d",
+        "checkedAt": "2026-10-31T19:23:48.379Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "paudelsamir/newsdash",
+        "pluginIds": [
+          "paudelsamir.newsdash"
+        ],
+        "commit": "f2b877492478e7b751deac2c937bff0e94a4130d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T19:23:48.379Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T15:17:59.404Z",
+        "requestEventId": 34793489739,
+        "requestedAt": "2026-10-31T19:20:39Z",
+        "reviewedAt": "2026-10-31T19:23:48.379Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "paudelsamir.newsdash": {
+          "category": "Productivity",
+          "tags": [
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
