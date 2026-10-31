@@ -398926,6 +398926,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AsemHub/OmaAnime",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T22:26:11.254Z",
+      "listingValidatedCommit": "8932287ab1fcb080a21248f0010218307cf93c6d",
+      "listingValidatedAt": "2026-10-31T22:26:11.254Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "asemhub/omaanime",
+        "pluginIds": [
+          "io.github.asemhub.omaanime"
+        ],
+        "commit": "8932287ab1fcb080a21248f0010218307cf93c6d",
+        "checkedAt": "2026-10-31T22:26:11.048Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.asemhub.omaanime": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
