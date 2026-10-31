@@ -397462,6 +397462,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Joweb1/omarchy-screen-mirror",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T08:14:50.540Z",
+      "listingValidatedCommit": "2240aee4a75a55ac6f76bfd269fef626f5601068",
+      "listingValidatedAt": "2026-10-31T08:14:50.540Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joweb1/omarchy-screen-mirror",
+        "pluginIds": [
+          "jovibe.screen-mirror"
+        ],
+        "commit": "2240aee4a75a55ac6f76bfd269fef626f5601068",
+        "checkedAt": "2026-10-31T08:14:50.420Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joweb1/omarchy-screen-mirror",
+        "pluginIds": [
+          "jovibe.screen-mirror"
+        ],
+        "commit": "2240aee4a75a55ac6f76bfd269fef626f5601068",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T08:14:50.420Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T07:55:04.638Z",
+        "requestEventId": 34761332804,
+        "requestedAt": "2026-10-31T08:11:38Z",
+        "reviewedAt": "2026-10-31T08:14:50.420Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jovibe.screen-mirror": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
