@@ -396355,6 +396355,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/KarPage/omaraptor-player",
+      "type": "plugin-source",
+      "addedAt": "2026-10-31",
+      "listedAt": "2026-10-31T00:25:42.065Z",
+      "listingValidatedCommit": "2d83f7c44ceace6806e29d2c8ec5c49cb294a60e",
+      "listingValidatedAt": "2026-10-31T00:25:42.065Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "karpage/omaraptor-player",
+        "pluginIds": [
+          "io.github.karpage.omaraptor"
+        ],
+        "commit": "2d83f7c44ceace6806e29d2c8ec5c49cb294a60e",
+        "checkedAt": "2026-10-31T00:25:41.875Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "karpage/omaraptor-player",
+        "pluginIds": [
+          "io.github.karpage.omaraptor"
+        ],
+        "commit": "2d83f7c44ceace6806e29d2c8ec5c49cb294a60e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-31T00:25:41.875Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T23:27:22.917Z",
+        "requestEventId": 34743687815,
+        "requestedAt": "2026-10-31T00:24:45Z",
+        "reviewedAt": "2026-10-31T00:25:41.876Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.karpage.omaraptor": {
+          "category": "Desktop",
+          "tags": [
+            "media",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
