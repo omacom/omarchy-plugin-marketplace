@@ -372361,8 +372361,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T17:00:43.561Z",
-      "listingValidatedCommit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
-      "listingValidatedAt": "2026-10-20T17:00:43.561Z",
+      "listingValidatedCommit": "9779bf604b01f14662593033c42ccb003253269b",
+      "listingValidatedAt": "2026-11-01T10:30:30.377Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -372371,35 +372371,14 @@
         "pluginIds": [
           "swordfish.workspaces"
         ],
-        "commit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
-        "checkedAt": "2026-10-20T17:00:43.381Z",
+        "commit": "9779bf604b01f14662593033c42ccb003253269b",
+        "checkedAt": "2026-11-01T10:30:30.377Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "artisanv/omarchy-hud-workspaces",
-        "pluginIds": [
-          "swordfish.workspaces"
-        ],
-        "commit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-20T17:00:43.381Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-20T16:51:02.524Z",
-        "requestEventId": 33764858918,
-        "requestedAt": "2026-10-20T16:57:27Z",
-        "reviewedAt": "2026-10-20T17:00:43.381Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "swordfish.workspaces": {
@@ -372411,7 +372390,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "artisanv/omarchy-hud-workspaces",
+        "pluginIds": [
+          "swordfish.workspaces"
+        ],
+        "commit": "9779bf604b01f14662593033c42ccb003253269b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T10:30:30.377Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T08:46:04.772Z",
+        "requestEventId": 34825781634,
+        "requestedAt": "2026-11-01T10:22:38Z",
+        "reviewedAt": "2026-11-01T10:30:30.377Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
+          "validatedAt": "2026-10-20T17:00:43.561Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T10:30:30.377Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "artisanv/omarchy-hud-workspaces",
+            "pluginIds": [
+              "swordfish.workspaces"
+            ],
+            "commit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
+            "checkedAt": "2026-10-20T17:00:43.381Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "artisanv/omarchy-hud-workspaces",
+            "pluginIds": [
+              "swordfish.workspaces"
+            ],
+            "commit": "4ef6a6d6dab35658c22adeec62f15291f61f6112",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-20T17:00:43.381Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-20T16:51:02.524Z",
+            "requestEventId": 33764858918,
+            "requestedAt": "2026-10-20T16:57:27Z",
+            "reviewedAt": "2026-10-20T17:00:43.381Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/H4ad/omarchy-truenas",
