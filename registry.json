@@ -15041,8 +15041,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-17",
       "listedAt": "2026-08-17T02:37:37.397Z",
-      "listingValidatedCommit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
-      "listingValidatedAt": "2026-10-12T11:44:54.193Z",
+      "listingValidatedCommit": "023a7b94cc72280404d185dd66840abe83f22048",
+      "listingValidatedAt": "2026-11-01T20:10:28.630Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -15051,14 +15051,12 @@
         "pluginIds": [
           "farangkao.emojis-nerd"
         ],
-        "commit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
-        "checkedAt": "2026-10-12T11:44:54.193Z",
-        "outcome": "review-required",
+        "commit": "023a7b94cc72280404d185dd66840abe83f22048",
+        "checkedAt": "2026-11-01T20:10:28.630Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "farangkao.emojis-nerd": {
@@ -15110,29 +15108,51 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
+          "validatedAt": "2026-10-12T11:44:54.193Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T20:10:28.630Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "farangkao/omarchy-emojis-nerd",
+            "pluginIds": [
+              "farangkao.emojis-nerd"
+            ],
+            "commit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
+            "checkedAt": "2026-10-12T11:44:54.193Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "farangkao/omarchy-emojis-nerd",
+            "pluginIds": [
+              "farangkao.emojis-nerd"
+            ],
+            "commit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-12T11:44:54.193Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-12T09:34:50.652Z",
+            "requestEventId": 33043555440,
+            "requestedAt": "2026-10-12T11:44:25Z",
+            "reviewedAt": "2026-10-12T11:44:54.193Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ],
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "farangkao/omarchy-emojis-nerd",
-        "pluginIds": [
-          "farangkao.emojis-nerd"
-        ],
-        "commit": "bda347615e3b0ee92d02d1ca2fb0d488709afddb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-12T11:44:54.193Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-12T09:34:50.652Z",
-        "requestEventId": 33043555440,
-        "requestedAt": "2026-10-12T11:44:25Z",
-        "reviewedAt": "2026-10-12T11:44:54.193Z",
-        "reviewer": "HANCORE-linux"
-      }
+      ]
     },
     {
       "repo": "https://github.com/jethrojones/tile-manager",
