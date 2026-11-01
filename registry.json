@@ -399460,8 +399460,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T22:26:11.254Z",
-      "listingValidatedCommit": "8932287ab1fcb080a21248f0010218307cf93c6d",
-      "listingValidatedAt": "2026-10-31T22:26:11.254Z",
+      "listingValidatedCommit": "5335492a94f9583a1190da4986a901aafd2aa9d3",
+      "listingValidatedAt": "2026-11-01T11:49:26.377Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -399470,8 +399470,8 @@
         "pluginIds": [
           "io.github.asemhub.omaanime"
         ],
-        "commit": "8932287ab1fcb080a21248f0010218307cf93c6d",
-        "checkedAt": "2026-10-31T22:26:11.048Z",
+        "commit": "5335492a94f9583a1190da4986a901aafd2aa9d3",
+        "checkedAt": "2026-11-01T11:49:26.377Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -399487,7 +399487,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "8932287ab1fcb080a21248f0010218307cf93c6d",
+          "validatedAt": "2026-10-31T22:26:11.254Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T11:49:26.377Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "asemhub/omaanime",
+            "pluginIds": [
+              "io.github.asemhub.omaanime"
+            ],
+            "commit": "8932287ab1fcb080a21248f0010218307cf93c6d",
+            "checkedAt": "2026-10-31T22:26:11.048Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nulluserid/omarchy-dishy",
