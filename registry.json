@@ -399659,6 +399659,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/denonmaryland/omarchy-tricky-tiles",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T10:45:31.892Z",
+      "listingValidatedCommit": "268a3476b823a82aef38f2d069c2e29d7b509310",
+      "listingValidatedAt": "2026-11-01T10:45:31.892Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "denonmaryland/omarchy-tricky-tiles",
+        "pluginIds": [
+          "io.github.denonmaryland.tricky-tiles"
+        ],
+        "commit": "268a3476b823a82aef38f2d069c2e29d7b509310",
+        "checkedAt": "2026-11-01T10:45:31.726Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.denonmaryland.tricky-tiles": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
