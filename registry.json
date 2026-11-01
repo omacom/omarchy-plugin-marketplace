@@ -399917,8 +399917,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T10:58:34.173Z",
-      "listingValidatedCommit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
-      "listingValidatedAt": "2026-11-01T10:58:34.173Z",
+      "listingValidatedCommit": "0b4467efc05f86df1bea5f663a0d520ec7145096",
+      "listingValidatedAt": "2026-11-01T13:02:56.467Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -399927,8 +399927,8 @@
         "pluginIds": [
           "apach.dropdown"
         ],
-        "commit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
-        "checkedAt": "2026-11-01T10:58:34.016Z",
+        "commit": "0b4467efc05f86df1bea5f663a0d520ec7145096",
+        "checkedAt": "2026-11-01T13:02:56.467Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -399936,28 +399936,6 @@
           "remote-build",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "apachaiz/omarchy-dropdown",
-        "pluginIds": [
-          "apach.dropdown"
-        ],
-        "commit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T10:58:34.016Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-01T10:39:08.415Z",
-        "requestEventId": 34827076221,
-        "requestedAt": "2026-11-01T10:57:13Z",
-        "reviewedAt": "2026-11-01T10:58:34.016Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "apach.dropdown": {
@@ -399969,7 +399947,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "apachaiz/omarchy-dropdown",
+        "pluginIds": [
+          "apach.dropdown"
+        ],
+        "commit": "0b4467efc05f86df1bea5f663a0d520ec7145096",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T13:02:56.467Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T12:35:42.374Z",
+        "requestEventId": 34832147592,
+        "requestedAt": "2026-11-01T13:02:20Z",
+        "reviewedAt": "2026-11-01T13:02:56.467Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
+          "validatedAt": "2026-11-01T10:58:34.173Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T13:02:56.467Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-dropdown",
+            "pluginIds": [
+              "apach.dropdown"
+            ],
+            "commit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
+            "checkedAt": "2026-11-01T10:58:34.016Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "apachaiz/omarchy-dropdown",
+            "pluginIds": [
+              "apach.dropdown"
+            ],
+            "commit": "f54e77d7c423a15d0868b540bde65fb3c3b61943",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T10:58:34.016Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-01T10:39:08.415Z",
+            "requestEventId": 34827076221,
+            "requestedAt": "2026-11-01T10:57:13Z",
+            "reviewedAt": "2026-11-01T10:58:34.016Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ApachaiZ/omarchy-notification-engine",
