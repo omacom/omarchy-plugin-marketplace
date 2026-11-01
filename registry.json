@@ -401354,6 +401354,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/snouhaud/rclone-mounter",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T19:10:10.355Z",
+      "listingValidatedCommit": "ae406b788edd5785628fdf5c6bd03141cfab2602",
+      "listingValidatedAt": "2026-11-01T19:10:10.355Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "snouhaud/rclone-mounter",
+        "pluginIds": [
+          "io.github.snouhaud.rclone-mounter"
+        ],
+        "commit": "ae406b788edd5785628fdf5c6bd03141cfab2602",
+        "checkedAt": "2026-11-01T19:10:10.181Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "snouhaud/rclone-mounter",
+        "pluginIds": [
+          "io.github.snouhaud.rclone-mounter"
+        ],
+        "commit": "ae406b788edd5785628fdf5c6bd03141cfab2602",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T19:10:10.181Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T18:51:45.357Z",
+        "requestEventId": 34848983174,
+        "requestedAt": "2026-11-01T19:08:16Z",
+        "reviewedAt": "2026-11-01T19:10:10.181Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.snouhaud.rclone-mounter": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
