@@ -389170,8 +389170,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T00:55:45.527Z",
-      "listingValidatedCommit": "92286c983d82ca0bf98c712675f1f1594eb49756",
-      "listingValidatedAt": "2026-10-28T00:55:45.527Z",
+      "listingValidatedCommit": "0432a42fa861fef4f7e12ab75a5b2793d28fd584",
+      "listingValidatedAt": "2026-11-01T10:05:54.108Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -389180,8 +389180,8 @@
         "pluginIds": [
           "io.github.apachaiz.quay"
         ],
-        "commit": "92286c983d82ca0bf98c712675f1f1594eb49756",
-        "checkedAt": "2026-10-28T00:55:45.418Z",
+        "commit": "0432a42fa861fef4f7e12ab75a5b2793d28fd584",
+        "checkedAt": "2026-11-01T10:05:54.107Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -389197,7 +389197,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "92286c983d82ca0bf98c712675f1f1594eb49756",
+          "validatedAt": "2026-10-28T00:55:45.527Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T10:05:54.108Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-quay",
+            "pluginIds": [
+              "io.github.apachaiz.quay"
+            ],
+            "commit": "92286c983d82ca0bf98c712675f1f1594eb49756",
+            "checkedAt": "2026-10-28T00:55:45.418Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/iaeluk/omawall",
