@@ -222150,8 +222150,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-19",
       "listedAt": "2026-09-19T23:26:31.331Z",
-      "listingValidatedCommit": "502861c6d244a8faf506c57bf8b89bbaceebcc68",
-      "listingValidatedAt": "2026-10-16T00:38:15.593Z",
+      "listingValidatedCommit": "bd5ca113423c82b6b6e20761264b27d90a46b9a0",
+      "listingValidatedAt": "2026-11-01T09:08:20.923Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -222160,8 +222160,8 @@
         "pluginIds": [
           "reidenxerx.aerial"
         ],
-        "commit": "502861c6d244a8faf506c57bf8b89bbaceebcc68",
-        "checkedAt": "2026-10-16T00:38:15.593Z",
+        "commit": "bd5ca113423c82b6b6e20761264b27d90a46b9a0",
+        "checkedAt": "2026-11-01T09:08:20.923Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -222213,6 +222213,26 @@
             ],
             "commit": "500e9138e12dbcd512b11aba5d4cf0c5ab8fe483",
             "checkedAt": "2026-09-25T21:47:41.024Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "502861c6d244a8faf506c57bf8b89bbaceebcc68",
+          "validatedAt": "2026-10-16T00:38:15.593Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T09:08:20.923Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "reidenxerx/omarchy-aerial",
+            "pluginIds": [
+              "reidenxerx.aerial"
+            ],
+            "commit": "502861c6d244a8faf506c57bf8b89bbaceebcc68",
+            "checkedAt": "2026-10-16T00:38:15.593Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
