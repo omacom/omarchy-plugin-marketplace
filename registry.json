@@ -401415,6 +401415,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/huey-holdings-llc/omarchy-drawer-redux",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T19:14:20.961Z",
+      "listingValidatedCommit": "b197dd6641fcaf3679349638c8c924ff7ab6b196",
+      "listingValidatedAt": "2026-11-01T19:14:20.961Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "huey-holdings-llc/omarchy-drawer-redux",
+        "pluginIds": [
+          "io.github.huey-holdings-llc.omarchy-drawer-redux"
+        ],
+        "commit": "b197dd6641fcaf3679349638c8c924ff7ab6b196",
+        "checkedAt": "2026-11-01T19:14:20.786Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.huey-holdings-llc.omarchy-drawer-redux": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
