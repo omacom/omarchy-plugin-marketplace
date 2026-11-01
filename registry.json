@@ -400164,8 +400164,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T11:12:53.010Z",
-      "listingValidatedCommit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
-      "listingValidatedAt": "2026-11-01T11:12:53.010Z",
+      "listingValidatedCommit": "325796ccc7ff624c41d36f4f4c28879b10461435",
+      "listingValidatedAt": "2026-11-01T15:16:27.634Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -400174,8 +400174,8 @@
         "pluginIds": [
           "apach.notification-engine"
         ],
-        "commit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
-        "checkedAt": "2026-11-01T11:12:52.831Z",
+        "commit": "325796ccc7ff624c41d36f4f4c28879b10461435",
+        "checkedAt": "2026-11-01T15:16:27.634Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -400191,7 +400191,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
+          "validatedAt": "2026-11-01T11:12:53.010Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T15:16:27.634Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-notification-engine",
+            "pluginIds": [
+              "apach.notification-engine"
+            ],
+            "commit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
+            "checkedAt": "2026-11-01T11:12:52.831Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/CodeSieb/omarchy-player",
