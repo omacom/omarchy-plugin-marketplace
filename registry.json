@@ -401735,6 +401735,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/beraterkek121122/omarchy-window-layouts",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T19:56:17.835Z",
+      "listingValidatedCommit": "4a2dced89068fea952fcb366992badd9ee5b20b2",
+      "listingValidatedAt": "2026-11-01T19:56:17.835Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "beraterkek121122/omarchy-window-layouts",
+        "pluginIds": [
+          "berat.window-layouts"
+        ],
+        "commit": "4a2dced89068fea952fcb366992badd9ee5b20b2",
+        "checkedAt": "2026-11-01T19:56:17.723Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "beraterkek121122/omarchy-window-layouts",
+        "pluginIds": [
+          "berat.window-layouts"
+        ],
+        "commit": "4a2dced89068fea952fcb366992badd9ee5b20b2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T19:56:17.723Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T19:50:13.379Z",
+        "requestEventId": 34851063765,
+        "requestedAt": "2026-11-01T19:55:26Z",
+        "reviewedAt": "2026-11-01T19:56:17.723Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "berat.window-layouts": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
