@@ -399532,6 +399532,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/kkolk/fosi-c3",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T10:34:28.882Z",
+      "listingValidatedCommit": "9fbff256c057eb95d545aef3d487fd3325d2b41d",
+      "listingValidatedAt": "2026-11-01T10:34:28.882Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kkolk/fosi-c3",
+        "pluginIds": [
+          "kkolk.fosi-c3"
+        ],
+        "commit": "9fbff256c057eb95d545aef3d487fd3325d2b41d",
+        "checkedAt": "2026-11-01T10:34:28.768Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kkolk/fosi-c3",
+        "pluginIds": [
+          "kkolk.fosi-c3"
+        ],
+        "commit": "9fbff256c057eb95d545aef3d487fd3325d2b41d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T10:34:28.768Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-31T23:33:20.742Z",
+        "requestEventId": 34825819187,
+        "requestedAt": "2026-11-01T10:23:38Z",
+        "reviewedAt": "2026-11-01T10:34:28.768Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kkolk.fosi-c3": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
