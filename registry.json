@@ -400529,6 +400529,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/arbabmujtaba/omaecosystem",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T15:28:46.624Z",
+      "listingValidatedCommit": "bce8db97adefa8d92d9c2ddda1756b4aafe7a8e5",
+      "listingValidatedAt": "2026-11-01T15:28:46.624Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "arbabmujtaba/omaecosystem",
+        "pluginIds": [
+          "io.github.arbabmujtaba.omaecosystem"
+        ],
+        "commit": "bce8db97adefa8d92d9c2ddda1756b4aafe7a8e5",
+        "checkedAt": "2026-11-01T15:28:46.433Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.arbabmujtaba.omaecosystem": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
