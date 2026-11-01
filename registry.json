@@ -401999,6 +401999,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/crisesarmiento/omarchy-mgame-mixer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T21:23:52.885Z",
+      "listingValidatedCommit": "04bc0fa77f39d003ab31c8d0ff20607ec27bbeaa",
+      "listingValidatedAt": "2026-11-01T21:23:52.885Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crisesarmiento/omarchy-mgame-mixer",
+        "pluginIds": [
+          "io.github.crisesarmiento.mgame-mixer"
+        ],
+        "commit": "04bc0fa77f39d003ab31c8d0ff20607ec27bbeaa",
+        "checkedAt": "2026-11-01T21:23:52.704Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crisesarmiento/omarchy-mgame-mixer",
+        "pluginIds": [
+          "io.github.crisesarmiento.mgame-mixer"
+        ],
+        "commit": "04bc0fa77f39d003ab31c8d0ff20607ec27bbeaa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T21:23:52.704Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T20:52:37.774Z",
+        "requestEventId": 34855143578,
+        "requestedAt": "2026-11-01T21:23:22Z",
+        "reviewedAt": "2026-11-01T21:23:52.704Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.crisesarmiento.mgame-mixer": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
