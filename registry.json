@@ -166678,8 +166678,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-08",
       "listedAt": "2026-09-08T12:51:12.937Z",
-      "listingValidatedCommit": "99d1b04761a78e61fcd8889f9145ec931e33485f",
-      "listingValidatedAt": "2026-10-16T02:06:25.196Z",
+      "listingValidatedCommit": "ae01d09363a3c8dbbf7d8c3765354304a44e8ba4",
+      "listingValidatedAt": "2026-11-01T09:44:54.158Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -166688,8 +166688,8 @@
         "pluginIds": [
           "keasbeexd.spanned-background"
         ],
-        "commit": "99d1b04761a78e61fcd8889f9145ec931e33485f",
-        "checkedAt": "2026-10-16T02:06:25.196Z",
+        "commit": "ae01d09363a3c8dbbf7d8c3765354304a44e8ba4",
+        "checkedAt": "2026-11-01T09:44:54.158Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -166801,6 +166801,26 @@
             ],
             "commit": "09a0ddc831cd1b4ccc0782e20008aaa4f1cc1dd9",
             "checkedAt": "2026-10-14T20:42:57.620Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "99d1b04761a78e61fcd8889f9145ec931e33485f",
+          "validatedAt": "2026-10-16T02:06:25.196Z",
+          "branch": "master",
+          "supersededAt": "2026-11-01T09:44:54.158Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "keasbeexd/omarchy-spanned-background",
+            "pluginIds": [
+              "keasbeexd.spanned-background"
+            ],
+            "commit": "99d1b04761a78e61fcd8889f9145ec931e33485f",
+            "checkedAt": "2026-10-16T02:06:25.196Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
