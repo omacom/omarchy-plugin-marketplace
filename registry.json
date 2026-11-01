@@ -401961,6 +401961,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/mtolhuys/ampere",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T21:13:42.912Z",
+      "listingValidatedCommit": "22a61d22457f4de7979ed87b4b4d13e689757588",
+      "listingValidatedAt": "2026-11-01T21:13:42.912Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mtolhuys/ampere",
+        "pluginIds": [
+          "io.github.mtolhuys.ampere"
+        ],
+        "commit": "22a61d22457f4de7979ed87b4b4d13e689757588",
+        "checkedAt": "2026-11-01T21:13:42.802Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mtolhuys.ampere": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
