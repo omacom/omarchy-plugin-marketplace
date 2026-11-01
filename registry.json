@@ -65975,8 +65975,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T21:47:42.808Z",
-      "listingValidatedCommit": "72e7667862101e06bd782f7d07968891811de805",
-      "listingValidatedAt": "2026-08-23T21:47:42.808Z",
+      "listingValidatedCommit": "fd5b3d98152957ae66cf0c82f940863ff643f682",
+      "listingValidatedAt": "2026-11-01T09:18:07.235Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -65985,8 +65985,8 @@
         "pluginIds": [
           "cinco.batteries"
         ],
-        "commit": "72e7667862101e06bd782f7d07968891811de805",
-        "checkedAt": "2026-08-23T21:47:42.775Z",
+        "commit": "fd5b3d98152957ae66cf0c82f940863ff643f682",
+        "checkedAt": "2026-11-01T09:18:07.234Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -66002,7 +66002,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "72e7667862101e06bd782f7d07968891811de805",
+          "validatedAt": "2026-08-23T21:47:42.808Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T09:18:07.235Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cinco/omarchy-batteries",
+            "pluginIds": [
+              "cinco.batteries"
+            ],
+            "commit": "72e7667862101e06bd782f7d07968891811de805",
+            "checkedAt": "2026-08-23T21:47:42.775Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Endijs/omarchy-t2-fan-control",
