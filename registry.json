@@ -399420,6 +399420,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/flaviomartil/omarchy-to-windows",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T10:26:33.849Z",
+      "listingValidatedCommit": "2b8c4687ad92ed8085f1125c077440d8f0d8e6e0",
+      "listingValidatedAt": "2026-11-01T10:26:33.849Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flaviomartil/omarchy-to-windows",
+        "pluginIds": [
+          "io.github.flaviomartil.omarchy-to-windows"
+        ],
+        "commit": "2b8c4687ad92ed8085f1125c077440d8f0d8e6e0",
+        "checkedAt": "2026-11-01T10:26:33.710Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "flaviomartil/omarchy-to-windows",
+        "pluginIds": [
+          "io.github.flaviomartil.omarchy-to-windows"
+        ],
+        "commit": "2b8c4687ad92ed8085f1125c077440d8f0d8e6e0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T10:26:33.710Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T04:45:06.878Z",
+        "requestEventId": 34825778335,
+        "requestedAt": "2026-11-01T10:22:33Z",
+        "reviewedAt": "2026-11-01T10:26:33.710Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.flaviomartil.omarchy-to-windows": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
