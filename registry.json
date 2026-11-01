@@ -399838,6 +399838,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ApachaiZ/omarchy-notification-engine",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T11:12:53.010Z",
+      "listingValidatedCommit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
+      "listingValidatedAt": "2026-11-01T11:12:53.010Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "apachaiz/omarchy-notification-engine",
+        "pluginIds": [
+          "apach.notification-engine"
+        ],
+        "commit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
+        "checkedAt": "2026-11-01T11:12:52.831Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "apach.notification-engine": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "security",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
