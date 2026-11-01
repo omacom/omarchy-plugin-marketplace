@@ -224398,8 +224398,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-20",
       "listedAt": "2026-09-20T10:21:51.678Z",
-      "listingValidatedCommit": "f19f43712b490998ef35eddcff222b371879a4e1",
-      "listingValidatedAt": "2026-10-03T11:56:28.246Z",
+      "listingValidatedCommit": "c6f8ad0609c7379f3c833f77ea87d9e44d7ebcaa",
+      "listingValidatedAt": "2026-11-01T13:38:32.253Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -224408,8 +224408,8 @@
         "pluginIds": [
           "animated.dock"
         ],
-        "commit": "f19f43712b490998ef35eddcff222b371879a4e1",
-        "checkedAt": "2026-10-03T11:56:28.246Z",
+        "commit": "c6f8ad0609c7379f3c833f77ea87d9e44d7ebcaa",
+        "checkedAt": "2026-11-01T13:38:32.252Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -224517,6 +224517,51 @@
             "reviewedAt": "2026-10-01T05:07:56.729Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "f19f43712b490998ef35eddcff222b371879a4e1",
+          "validatedAt": "2026-10-03T11:56:28.246Z",
+          "branch": "master",
+          "supersededAt": "2026-11-01T13:38:32.253Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "davedes83/animated-dock",
+            "pluginIds": [
+              "animated.dock"
+            ],
+            "commit": "f19f43712b490998ef35eddcff222b371879a4e1",
+            "checkedAt": "2026-10-03T11:56:28.246Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "davedes83/animated-dock",
+            "pluginIds": [
+              "animated.dock"
+            ],
+            "commit": "f19f43712b490998ef35eddcff222b371879a4e1",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-03T11:56:28.246Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-03T11:31:46.919Z",
+            "requestEventId": 32395454986,
+            "requestedAt": "2026-10-03T11:55:59Z",
+            "reviewedAt": "2026-10-03T11:56:28.246Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -224525,20 +224570,20 @@
         "pluginIds": [
           "animated.dock"
         ],
-        "commit": "f19f43712b490998ef35eddcff222b371879a4e1",
+        "commit": "c6f8ad0609c7379f3c833f77ea87d9e44d7ebcaa",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T11:56:28.246Z",
+        "baselineCheckedAt": "2026-11-01T13:38:32.252Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "remote-build",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-03T11:31:46.919Z",
-        "requestEventId": 32395454986,
-        "requestedAt": "2026-10-03T11:55:59Z",
-        "reviewedAt": "2026-10-03T11:56:28.246Z",
+        "reviewedBaselineCheckedAt": "2026-11-01T13:16:49.785Z",
+        "requestEventId": 34833645275,
+        "requestedAt": "2026-11-01T13:37:54Z",
+        "reviewedAt": "2026-11-01T13:38:32.253Z",
         "reviewer": "HANCORE-linux"
       }
     },
