@@ -401174,6 +401174,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/l3all/omarchy-modes",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T18:03:57.137Z",
+      "listingValidatedCommit": "345e23d61c421898f4c67109c062ad92d0571814",
+      "listingValidatedAt": "2026-11-01T18:03:57.137Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "l3all/omarchy-modes",
+        "pluginIds": [
+          "l3all.modes"
+        ],
+        "commit": "345e23d61c421898f4c67109c062ad92d0571814",
+        "checkedAt": "2026-11-01T18:03:56.993Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "l3all.modes": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
