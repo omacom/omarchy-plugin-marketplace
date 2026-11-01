@@ -347029,8 +347029,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-11",
       "listedAt": "2026-10-11T18:30:15.786Z",
-      "listingValidatedCommit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
-      "listingValidatedAt": "2026-10-11T21:12:21.592Z",
+      "listingValidatedCommit": "c17e768e22abb973a9070d53dc21233a834cd38e",
+      "listingValidatedAt": "2026-11-01T10:11:21.799Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -347039,13 +347039,12 @@
         "pluginIds": [
           "io.github.mug31.wacom-bamboo"
         ],
-        "commit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
-        "checkedAt": "2026-10-11T21:12:21.592Z",
+        "commit": "c17e768e22abb973a9070d53dc21233a834cd38e",
+        "checkedAt": "2026-11-01T10:11:21.799Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "package-manager",
           "service-management",
           "privilege"
         ]
@@ -347064,29 +347063,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mug31/omarchy-tablet",
-        "pluginIds": [
-          "io.github.mug31.wacom-bamboo"
-        ],
-        "commit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-11T21:12:21.592Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "service-management",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-11T20:40:54.410Z",
-        "requestEventId": 33003882393,
-        "requestedAt": "2026-10-11T21:09:49Z",
-        "reviewedAt": "2026-10-11T21:12:21.592Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -347135,8 +347111,77 @@
             "reviewedAt": "2026-10-11T18:30:15.659Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
+          "validatedAt": "2026-10-11T21:12:21.592Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T10:11:21.799Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mug31/omarchy-tablet",
+            "pluginIds": [
+              "io.github.mug31.wacom-bamboo"
+            ],
+            "commit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
+            "checkedAt": "2026-10-11T21:12:21.592Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mug31/omarchy-tablet",
+            "pluginIds": [
+              "io.github.mug31.wacom-bamboo"
+            ],
+            "commit": "7609b48f5967e1bf64298a6c13a356725a6a9c62",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-11T21:12:21.592Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-11T20:40:54.410Z",
+            "requestEventId": 33003882393,
+            "requestedAt": "2026-10-11T21:09:49Z",
+            "reviewedAt": "2026-10-11T21:12:21.592Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mug31/omarchy-tablet",
+        "pluginIds": [
+          "io.github.mug31.wacom-bamboo"
+        ],
+        "commit": "c17e768e22abb973a9070d53dc21233a834cd38e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T10:11:21.799Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T08:15:37.733Z",
+        "requestEventId": 34825335128,
+        "requestedAt": "2026-11-01T10:10:46Z",
+        "reviewedAt": "2026-11-01T10:11:21.799Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/s3pp3ku/kyber-cursor",
