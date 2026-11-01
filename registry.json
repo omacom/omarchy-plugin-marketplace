@@ -400389,6 +400389,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/cbayschm74/omarchy-garmin-status",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T14:59:07.424Z",
+      "listingValidatedCommit": "e3a71ea756b32836104889888d286a02652db9bd",
+      "listingValidatedAt": "2026-11-01T14:59:07.424Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cbayschm74/omarchy-garmin-status",
+        "pluginIds": [
+          "org.garminlinux.status"
+        ],
+        "commit": "e3a71ea756b32836104889888d286a02652db9bd",
+        "checkedAt": "2026-11-01T14:59:07.293Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "org.garminlinux.status": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
