@@ -379993,8 +379993,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-25",
       "listedAt": "2026-10-25T21:15:16.964Z",
-      "listingValidatedCommit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
-      "listingValidatedAt": "2026-10-29T20:24:59.876Z",
+      "listingValidatedCommit": "b36b3265d5a484b15cb5bcfce7f7e49025b9fd95",
+      "listingValidatedAt": "2026-11-01T12:48:24.692Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -380003,8 +380003,8 @@
         "pluginIds": [
           "naolselemon.daymark"
         ],
-        "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
-        "checkedAt": "2026-10-29T20:24:59.876Z",
+        "commit": "b36b3265d5a484b15cb5bcfce7f7e49025b9fd95",
+        "checkedAt": "2026-11-01T12:48:24.692Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -380022,28 +380022,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "naolselemon/daymark",
-        "pluginIds": [
-          "naolselemon.daymark"
-        ],
-        "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-29T20:24:59.876Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-29T18:19:25.397Z",
-        "requestEventId": 34626492278,
-        "requestedAt": "2026-10-29T19:50:05Z",
-        "reviewedAt": "2026-10-29T20:24:59.876Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -380065,8 +380043,75 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+          "validatedAt": "2026-10-29T20:24:59.876Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T12:48:24.692Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "naolselemon/daymark",
+            "pluginIds": [
+              "naolselemon.daymark"
+            ],
+            "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+            "checkedAt": "2026-10-29T20:24:59.876Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "naolselemon/daymark",
+            "pluginIds": [
+              "naolselemon.daymark"
+            ],
+            "commit": "e0c55c61c6ce952cd252a189822c801cc4e9260c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-29T20:24:59.876Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-29T18:19:25.397Z",
+            "requestEventId": 34626492278,
+            "requestedAt": "2026-10-29T19:50:05Z",
+            "reviewedAt": "2026-10-29T20:24:59.876Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "naolselemon/daymark",
+        "pluginIds": [
+          "naolselemon.daymark"
+        ],
+        "commit": "b36b3265d5a484b15cb5bcfce7f7e49025b9fd95",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T12:48:24.692Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T12:12:29.267Z",
+        "requestEventId": 34831525289,
+        "requestedAt": "2026-11-01T12:47:50Z",
+        "reviewedAt": "2026-11-01T12:48:24.692Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/cesarfilho/omarchy-abyss",
