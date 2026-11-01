@@ -212478,8 +212478,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-17",
       "listedAt": "2026-09-17T15:17:22.595Z",
-      "listingValidatedCommit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
-      "listingValidatedAt": "2026-10-27T00:31:52.943Z",
+      "listingValidatedCommit": "6f0a2c5b737d446a48caba8ce9d2bff24fb0e590",
+      "listingValidatedAt": "2026-11-01T09:03:37.982Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -212488,8 +212488,8 @@
         "pluginIds": [
           "xyzlab.omafile"
         ],
-        "commit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
-        "checkedAt": "2026-10-27T00:31:52.943Z",
+        "commit": "6f0a2c5b737d446a48caba8ce9d2bff24fb0e590",
+        "checkedAt": "2026-11-01T09:03:37.982Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -212718,6 +212718,53 @@
             "reviewedAt": "2026-10-15T10:10:30.351Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
+          "validatedAt": "2026-10-27T00:31:52.943Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T09:03:37.982Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "chr0nzz/omarchy-omafile",
+            "pluginIds": [
+              "xyzlab.omafile"
+            ],
+            "commit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
+            "checkedAt": "2026-10-27T00:31:52.943Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "chr0nzz/omarchy-omafile",
+            "pluginIds": [
+              "xyzlab.omafile"
+            ],
+            "commit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-27T00:31:52.943Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-26T23:09:48.842Z",
+            "requestEventId": 34318472951,
+            "requestedAt": "2026-10-27T00:31:22Z",
+            "reviewedAt": "2026-10-27T00:31:52.943Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -212726,10 +212773,10 @@
         "pluginIds": [
           "xyzlab.omafile"
         ],
-        "commit": "ddea49e5e1d7191cf423172d1ee346c5e4d04c95",
+        "commit": "6f0a2c5b737d446a48caba8ce9d2bff24fb0e590",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-27T00:31:52.943Z",
+        "baselineCheckedAt": "2026-11-01T09:03:37.982Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -212737,10 +212784,10 @@
           "installer",
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-26T23:09:48.842Z",
-        "requestEventId": 34318472951,
-        "requestedAt": "2026-10-27T00:31:22Z",
-        "reviewedAt": "2026-10-27T00:31:52.943Z",
+        "reviewedBaselineCheckedAt": "2026-10-31T20:46:06.523Z",
+        "requestEventId": 34822849058,
+        "requestedAt": "2026-11-01T09:03:07Z",
+        "reviewedAt": "2026-11-01T09:03:37.982Z",
         "reviewer": "HANCORE-linux"
       }
     },
