@@ -361716,8 +361716,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-16",
       "listedAt": "2026-10-16T19:49:06.600Z",
-      "listingValidatedCommit": "e6ed073f79106195e67eb15fc41426bb262b1286",
-      "listingValidatedAt": "2026-10-16T19:49:06.600Z",
+      "listingValidatedCommit": "5bb8aca9d39ec2b9dfd16692bb79be9921dcc3d3",
+      "listingValidatedAt": "2026-11-01T11:03:25.315Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -361726,35 +361726,14 @@
         "pluginIds": [
           "atlastimed.promarchy"
         ],
-        "commit": "e6ed073f79106195e67eb15fc41426bb262b1286",
-        "checkedAt": "2026-10-16T19:49:06.455Z",
+        "commit": "5bb8aca9d39ec2b9dfd16692bb79be9921dcc3d3",
+        "checkedAt": "2026-11-01T11:03:25.315Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "atlastimed/promarchy",
-        "pluginIds": [
-          "atlastimed.promarchy"
-        ],
-        "commit": "e6ed073f79106195e67eb15fc41426bb262b1286",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-16T19:49:06.455Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-16T10:47:55.808Z",
-        "requestEventId": 33477799433,
-        "requestedAt": "2026-10-16T19:44:10Z",
-        "reviewedAt": "2026-10-16T19:49:06.455Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "atlastimed.promarchy": {
@@ -361769,7 +361748,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "atlastimed/promarchy",
+        "pluginIds": [
+          "atlastimed.promarchy"
+        ],
+        "commit": "5bb8aca9d39ec2b9dfd16692bb79be9921dcc3d3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T11:03:25.315Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T10:27:47.378Z",
+        "requestEventId": 34827169682,
+        "requestedAt": "2026-11-01T10:59:38Z",
+        "reviewedAt": "2026-11-01T11:03:25.315Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e6ed073f79106195e67eb15fc41426bb262b1286",
+          "validatedAt": "2026-10-16T19:49:06.600Z",
+          "branch": "main",
+          "supersededAt": "2026-11-01T11:03:25.315Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "atlastimed/promarchy",
+            "pluginIds": [
+              "atlastimed.promarchy"
+            ],
+            "commit": "e6ed073f79106195e67eb15fc41426bb262b1286",
+            "checkedAt": "2026-10-16T19:49:06.455Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "atlastimed/promarchy",
+            "pluginIds": [
+              "atlastimed.promarchy"
+            ],
+            "commit": "e6ed073f79106195e67eb15fc41426bb262b1286",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-16T19:49:06.455Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-16T10:47:55.808Z",
+            "requestEventId": 33477799433,
+            "requestedAt": "2026-10-16T19:44:10Z",
+            "reviewedAt": "2026-10-16T19:49:06.455Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/JeoCrypto/omarchy-snap-layouts",
