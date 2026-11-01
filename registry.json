@@ -400662,6 +400662,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jamesridgway/omarchy-woocommerce-stats",
+      "type": "plugin-source",
+      "addedAt": "2026-11-01",
+      "listedAt": "2026-11-01T15:42:26.839Z",
+      "listingValidatedCommit": "53a960df770b158223b9678ad0c7c1152eb8ad50",
+      "listingValidatedAt": "2026-11-01T15:42:26.839Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jamesridgway/omarchy-woocommerce-stats",
+        "pluginIds": [
+          "jamesridgway.woocommerce"
+        ],
+        "commit": "53a960df770b158223b9678ad0c7c1152eb8ad50",
+        "checkedAt": "2026-11-01T15:42:26.650Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jamesridgway/omarchy-woocommerce-stats",
+        "pluginIds": [
+          "jamesridgway.woocommerce"
+        ],
+        "commit": "53a960df770b158223b9678ad0c7c1152eb8ad50",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-01T15:42:26.650Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-01T13:56:27.296Z",
+        "requestEventId": 34839014946,
+        "requestedAt": "2026-11-01T15:34:16Z",
+        "reviewedAt": "2026-11-01T15:42:26.650Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jamesridgway.woocommerce": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
