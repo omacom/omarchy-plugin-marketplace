@@ -82,6 +82,13 @@ export async function loadCatalog() {
   return response.json();
 }
 
+export function isWidePreview(plugin) {
+  const width = Number(plugin.previewThumbnailWidth || plugin.previewWidth);
+  const height = Number(plugin.previewThumbnailHeight || plugin.previewHeight);
+  return Number.isFinite(width) && Number.isFinite(height)
+    && width > 0 && height > 0 && width / height >= 2;
+}
+
 export function formatDate(value) {
   if (!value) return "Unknown";
   return new Intl.DateTimeFormat("en", {

@@ -15,6 +15,7 @@ import {
   formatStars,
   hidePendingEngagement,
   isRecentlyAdded,
+  isWidePreview,
   isRecentlyUpdated,
   listingAgeLabel,
   listingTime,
@@ -37,14 +38,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261101-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-03";
+} from "./engagement.js?v=20261101-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -73,13 +74,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-03";
+} from "./search.js?v=20261101-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-03";
+} from "./taxonomy.js?v=20261101-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -878,7 +879,7 @@ function pluginCard(plugin, { showNew = false, previewBack = "", gemTimes = null
     : "";
   const previewSource = plugin.previewThumbnail || plugin.previewImage;
   const preview = previewSource
-    ? `<div class="plugin-preview image-preview"><img src="${escapeHtml(previewSource)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy"></div>`
+    ? `<div class="plugin-preview image-preview${isWidePreview(plugin) ? " is-wide" : ""}"><img src="${escapeHtml(previewSource)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy"></div>`
     : `<div class="plugin-preview" aria-hidden="true">
         <span class="plugin-preview-mark">${escapeHtml(plugin.initials)}</span>
       </div>`;
