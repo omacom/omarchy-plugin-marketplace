@@ -197515,8 +197515,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-15",
       "listedAt": "2026-09-15T19:11:52.631Z",
-      "listingValidatedCommit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
-      "listingValidatedAt": "2026-09-15T19:11:52.631Z",
+      "listingValidatedCommit": "ecaa08f9d34bfe1e0160afeb43ab33b76c0f8fb0",
+      "listingValidatedAt": "2026-11-02T21:26:44.985Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -197525,37 +197525,17 @@
         "pluginIds": [
           "community.network"
         ],
-        "commit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
-        "checkedAt": "2026-09-15T19:11:52.548Z",
-        "outcome": "review-required",
+        "commit": "ecaa08f9d34bfe1e0160afeb43ab33b76c0f8fb0",
+        "checkedAt": "2026-11-02T21:26:44.985Z",
+        "outcome": "needs-fixes",
         "enforcementMode": "selective",
-        "findings": [],
+        "findings": [
+          "curl-pipe-shell"
+        ],
         "capabilities": [
-          "remote-build",
-          "privilege"
+          "privilege",
+          "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "guneshbari/omarchy-network",
-        "pluginIds": [
-          "community.network"
-        ],
-        "commit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-15T19:11:52.548Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-15T07:12:43.772Z",
-        "requestEventId": 31197018984,
-        "requestedAt": "2026-09-15T19:01:12Z",
-        "reviewedAt": "2026-09-15T19:11:52.548Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "community.network": {
@@ -197567,7 +197547,78 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "guneshbari/omarchy-network",
+        "pluginIds": [
+          "community.network"
+        ],
+        "commit": "ecaa08f9d34bfe1e0160afeb43ab33b76c0f8fb0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T21:26:44.985Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T15:00:32.164Z",
+        "requestEventId": 34957022268,
+        "requestedAt": "2026-11-02T21:26:08Z",
+        "reviewedAt": "2026-11-02T21:26:44.985Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
+          "validatedAt": "2026-09-15T19:11:52.631Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T21:26:44.985Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "guneshbari/omarchy-network",
+            "pluginIds": [
+              "community.network"
+            ],
+            "commit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
+            "checkedAt": "2026-09-15T19:11:52.548Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "guneshbari/omarchy-network",
+            "pluginIds": [
+              "community.network"
+            ],
+            "commit": "a753c8f9729ff265cd227f13c41befd6273da5fe",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-15T19:11:52.548Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-15T07:12:43.772Z",
+            "requestEventId": 31197018984,
+            "requestedAt": "2026-09-15T19:01:12Z",
+            "reviewedAt": "2026-09-15T19:11:52.548Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tymurbogach/omarchy-sleepwalker",
