@@ -241961,8 +241961,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T12:52:12.009Z",
-      "listingValidatedCommit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
-      "listingValidatedAt": "2026-10-11T04:49:39.589Z",
+      "listingValidatedCommit": "b8a0a7d9cc5f1c9412bf60762d7b8cb171c96fe1",
+      "listingValidatedAt": "2026-11-02T22:52:03.479Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -241971,8 +241971,8 @@
         "pluginIds": [
           "meviusisback.dropdown-terminal"
         ],
-        "commit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
-        "checkedAt": "2026-10-11T04:49:39.589Z",
+        "commit": "b8a0a7d9cc5f1c9412bf60762d7b8cb171c96fe1",
+        "checkedAt": "2026-11-02T22:52:03.479Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -242091,6 +242091,53 @@
             "reviewedAt": "2026-10-06T00:15:06.149Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
+          "validatedAt": "2026-10-11T04:49:39.589Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T22:52:03.479Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "meviusisback/omarchy-dropdown-terminal",
+            "pluginIds": [
+              "meviusisback.dropdown-terminal"
+            ],
+            "commit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
+            "checkedAt": "2026-10-11T04:49:39.589Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "meviusisback/omarchy-dropdown-terminal",
+            "pluginIds": [
+              "meviusisback.dropdown-terminal"
+            ],
+            "commit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-11T04:49:39.589Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-08T11:34:29.941Z",
+            "requestEventId": 32971421915,
+            "requestedAt": "2026-10-11T04:49:11Z",
+            "reviewedAt": "2026-10-11T04:49:39.589Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -242099,10 +242146,10 @@
         "pluginIds": [
           "meviusisback.dropdown-terminal"
         ],
-        "commit": "23e60a6e0fb1262b40dd03a489a14d6a8fbdf194",
+        "commit": "b8a0a7d9cc5f1c9412bf60762d7b8cb171c96fe1",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-11T04:49:39.589Z",
+        "baselineCheckedAt": "2026-11-02T22:52:03.479Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -242110,10 +242157,10 @@
           "service-management",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-08T11:34:29.941Z",
-        "requestEventId": 32971421915,
-        "requestedAt": "2026-10-11T04:49:11Z",
-        "reviewedAt": "2026-10-11T04:49:39.589Z",
+        "reviewedBaselineCheckedAt": "2026-11-02T15:53:03.617Z",
+        "requestEventId": 34963282108,
+        "requestedAt": "2026-11-02T22:47:37Z",
+        "reviewedAt": "2026-11-02T22:52:03.479Z",
         "reviewer": "HANCORE-linux"
       }
     },
