@@ -401705,6 +401705,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/s-gato/omarchy-laligablocking-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T15:11:49.539Z",
+      "listingValidatedCommit": "3a924b8a9577a1c614e3ebe83bcdb5098a7903e3",
+      "listingValidatedAt": "2026-11-02T15:11:49.539Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "s-gato/omarchy-laligablocking-plugin",
+        "pluginIds": [
+          "sergio.laligablocking-plugin"
+        ],
+        "commit": "3a924b8a9577a1c614e3ebe83bcdb5098a7903e3",
+        "checkedAt": "2026-11-02T15:11:49.419Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sergio.laligablocking-plugin": {
+          "category": "Widgets",
+          "tags": [
+            "vpn"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
