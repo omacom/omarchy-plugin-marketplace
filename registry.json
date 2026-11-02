@@ -403157,8 +403157,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T19:22:57.890Z",
-      "listingValidatedCommit": "c159ac08411d227262dc49716547623a174db044",
-      "listingValidatedAt": "2026-11-02T19:22:57.890Z",
+      "listingValidatedCommit": "da2765216901bbfe1eaeaee87365e39dbf2485eb",
+      "listingValidatedAt": "2026-11-02T23:45:08.041Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -403167,8 +403167,8 @@
         "pluginIds": [
           "io.github.stefanoconiglio.screen-rotate"
         ],
-        "commit": "c159ac08411d227262dc49716547623a174db044",
-        "checkedAt": "2026-11-02T19:22:57.732Z",
+        "commit": "da2765216901bbfe1eaeaee87365e39dbf2485eb",
+        "checkedAt": "2026-11-02T23:45:08.041Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -403178,30 +403178,6 @@
           "service-management",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "stefanoconiglio/omarchy-screen-rotate",
-        "pluginIds": [
-          "io.github.stefanoconiglio.screen-rotate"
-        ],
-        "commit": "c159ac08411d227262dc49716547623a174db044",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T19:22:57.732Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "remote-build",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-02T16:45:35.604Z",
-        "requestEventId": 34945862187,
-        "requestedAt": "2026-11-02T19:12:21Z",
-        "reviewedAt": "2026-11-02T19:22:57.732Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.stefanoconiglio.screen-rotate": {
@@ -403216,7 +403192,82 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "stefanoconiglio/omarchy-screen-rotate",
+        "pluginIds": [
+          "io.github.stefanoconiglio.screen-rotate"
+        ],
+        "commit": "da2765216901bbfe1eaeaee87365e39dbf2485eb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T23:45:08.041Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T20:42:39.224Z",
+        "requestEventId": 34966832262,
+        "requestedAt": "2026-11-02T23:40:59Z",
+        "reviewedAt": "2026-11-02T23:45:08.041Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c159ac08411d227262dc49716547623a174db044",
+          "validatedAt": "2026-11-02T19:22:57.890Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T23:45:08.041Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "stefanoconiglio/omarchy-screen-rotate",
+            "pluginIds": [
+              "io.github.stefanoconiglio.screen-rotate"
+            ],
+            "commit": "c159ac08411d227262dc49716547623a174db044",
+            "checkedAt": "2026-11-02T19:22:57.732Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "stefanoconiglio/omarchy-screen-rotate",
+            "pluginIds": [
+              "io.github.stefanoconiglio.screen-rotate"
+            ],
+            "commit": "c159ac08411d227262dc49716547623a174db044",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T19:22:57.732Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T16:45:35.604Z",
+            "requestEventId": 34945862187,
+            "requestedAt": "2026-11-02T19:12:21Z",
+            "reviewedAt": "2026-11-02T19:22:57.732Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/CommanderTurtle/omarsket",
