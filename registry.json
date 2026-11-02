@@ -402031,6 +402031,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rabfulton/traymd-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T16:36:49.194Z",
+      "listingValidatedCommit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+      "listingValidatedAt": "2026-11-02T16:36:49.194Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rabfulton/traymd-omarchy",
+        "pluginIds": [
+          "traymd-omarchy"
+        ],
+        "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+        "checkedAt": "2026-11-02T16:36:49.013Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rabfulton/traymd-omarchy",
+        "pluginIds": [
+          "traymd-omarchy"
+        ],
+        "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T16:36:49.013Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T16:30:25.163Z",
+        "requestEventId": 34931911731,
+        "requestedAt": "2026-11-02T16:36:04Z",
+        "reviewedAt": "2026-11-02T16:36:49.013Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "traymd-omarchy": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
