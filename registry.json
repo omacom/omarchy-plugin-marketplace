@@ -4003,8 +4003,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-12",
       "listedAt": "2026-08-12T04:59:14.958Z",
-      "listingValidatedCommit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
-      "listingValidatedAt": "2026-10-02T14:05:31.465Z",
+      "listingValidatedCommit": "26b804d7ce7777528d763ace6eb12d46034f21a1",
+      "listingValidatedAt": "2026-11-02T08:13:34.969Z",
       "listingValidatedBranch": "master",
       "plugins": {
         "ssandys.galley": {
@@ -4023,8 +4023,8 @@
         "pluginIds": [
           "ssandys.galley"
         ],
-        "commit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
-        "checkedAt": "2026-10-02T14:05:31.465Z",
+        "commit": "26b804d7ce7777528d763ace6eb12d46034f21a1",
+        "checkedAt": "2026-11-02T08:13:34.969Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -4126,6 +4126,53 @@
             "reviewedAt": "2026-08-22T07:54:31.708Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
+          "validatedAt": "2026-10-02T14:05:31.465Z",
+          "branch": "master",
+          "supersededAt": "2026-11-02T08:13:34.969Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ssandys/galley",
+            "pluginIds": [
+              "ssandys.galley"
+            ],
+            "commit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
+            "checkedAt": "2026-10-02T14:05:31.465Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ssandys/galley",
+            "pluginIds": [
+              "ssandys.galley"
+            ],
+            "commit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T14:05:31.465Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-01T15:03:21.440Z",
+            "requestEventId": 32337749770,
+            "requestedAt": "2026-10-02T13:37:38Z",
+            "reviewedAt": "2026-10-02T14:05:31.465Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -4134,10 +4181,10 @@
         "pluginIds": [
           "ssandys.galley"
         ],
-        "commit": "9f3df8d41b9da7eca4c8b1f08bbec2ed2c7a7317",
+        "commit": "26b804d7ce7777528d763ace6eb12d46034f21a1",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T14:05:31.465Z",
+        "baselineCheckedAt": "2026-11-02T08:13:34.969Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -4145,10 +4192,10 @@
           "package-manager",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-01T15:03:21.440Z",
-        "requestEventId": 32337749770,
-        "requestedAt": "2026-10-02T13:37:38Z",
-        "reviewedAt": "2026-10-02T14:05:31.465Z",
+        "reviewedBaselineCheckedAt": "2026-11-01T22:29:27.408Z",
+        "requestEventId": 34887383450,
+        "requestedAt": "2026-11-02T08:07:04Z",
+        "reviewedAt": "2026-11-02T08:13:34.969Z",
         "reviewer": "HANCORE-linux"
       }
     },
