@@ -401569,6 +401569,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/prostratepossum/omarchy-living-clicks",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T10:28:18.798Z",
+      "listingValidatedCommit": "77dff42429c7928f8237a44dfc5fcb3ef90aea0c",
+      "listingValidatedAt": "2026-11-02T10:28:18.798Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "prostratepossum/omarchy-living-clicks",
+        "pluginIds": [
+          "io.github.prostratepossum.living-clicks"
+        ],
+        "commit": "77dff42429c7928f8237a44dfc5fcb3ef90aea0c",
+        "checkedAt": "2026-11-02T10:28:18.620Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "prostratepossum/omarchy-living-clicks",
+        "pluginIds": [
+          "io.github.prostratepossum.living-clicks"
+        ],
+        "commit": "77dff42429c7928f8237a44dfc5fcb3ef90aea0c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T10:28:18.620Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-19T20:19:20.313Z",
+        "requestEventId": 34898794030,
+        "requestedAt": "2026-11-02T10:27:31Z",
+        "reviewedAt": "2026-11-02T10:28:18.620Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.prostratepossum.living-clicks": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
