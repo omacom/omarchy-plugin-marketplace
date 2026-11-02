@@ -401755,8 +401755,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T19:05:39.084Z",
-      "listingValidatedCommit": "af3bd0e168517473eb37e5eca464999de7900cd4",
-      "listingValidatedAt": "2026-11-01T19:44:23.550Z",
+      "listingValidatedCommit": "056c96be3a76f8345768efb4287a1a69e1dabb78",
+      "listingValidatedAt": "2026-11-02T09:32:32.427Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -401765,8 +401765,8 @@
         "pluginIds": [
           "io.github.bravehart911.leaf-control"
         ],
-        "commit": "af3bd0e168517473eb37e5eca464999de7900cd4",
-        "checkedAt": "2026-11-01T19:44:23.550Z",
+        "commit": "056c96be3a76f8345768efb4287a1a69e1dabb78",
+        "checkedAt": "2026-11-02T09:32:32.427Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -401783,28 +401783,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "bravehart911/leaf-omarchy-plugin",
-        "pluginIds": [
-          "io.github.bravehart911.leaf-control"
-        ],
-        "commit": "af3bd0e168517473eb37e5eca464999de7900cd4",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T19:44:23.550Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-01T19:24:31.139Z",
-        "requestEventId": 34850549115,
-        "requestedAt": "2026-11-01T19:43:55Z",
-        "reviewedAt": "2026-11-01T19:44:23.550Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -401851,8 +401829,75 @@
             "reviewedAt": "2026-11-01T19:05:38.914Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "af3bd0e168517473eb37e5eca464999de7900cd4",
+          "validatedAt": "2026-11-01T19:44:23.550Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T09:32:32.427Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bravehart911/leaf-omarchy-plugin",
+            "pluginIds": [
+              "io.github.bravehart911.leaf-control"
+            ],
+            "commit": "af3bd0e168517473eb37e5eca464999de7900cd4",
+            "checkedAt": "2026-11-01T19:44:23.550Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bravehart911/leaf-omarchy-plugin",
+            "pluginIds": [
+              "io.github.bravehart911.leaf-control"
+            ],
+            "commit": "af3bd0e168517473eb37e5eca464999de7900cd4",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T19:44:23.550Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-01T19:24:31.139Z",
+            "requestEventId": 34850549115,
+            "requestedAt": "2026-11-01T19:43:55Z",
+            "reviewedAt": "2026-11-01T19:44:23.550Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bravehart911/leaf-omarchy-plugin",
+        "pluginIds": [
+          "io.github.bravehart911.leaf-control"
+        ],
+        "commit": "056c96be3a76f8345768efb4287a1a69e1dabb78",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T09:32:32.427Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T01:38:03.545Z",
+        "requestEventId": 34894067422,
+        "requestedAt": "2026-11-02T09:31:54Z",
+        "reviewedAt": "2026-11-02T09:32:32.427Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/snouhaud/rclone-mounter",
