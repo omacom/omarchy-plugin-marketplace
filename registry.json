@@ -402097,6 +402097,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/costerou/barracudabattery",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T07:41:48.562Z",
+      "listingValidatedCommit": "4cd404614209fe3d78684a33bb0c6834ef87ee06",
+      "listingValidatedAt": "2026-11-02T07:41:48.562Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "costerou/barracudabattery",
+        "pluginIds": [
+          "cody.barracuda-battery"
+        ],
+        "commit": "4cd404614209fe3d78684a33bb0c6834ef87ee06",
+        "checkedAt": "2026-11-02T07:41:48.374Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "costerou/barracudabattery",
+        "pluginIds": [
+          "cody.barracuda-battery"
+        ],
+        "commit": "4cd404614209fe3d78684a33bb0c6834ef87ee06",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T07:41:48.374Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T00:30:25.879Z",
+        "requestEventId": 34885588066,
+        "requestedAt": "2026-11-02T07:41:15Z",
+        "reviewedAt": "2026-11-02T07:41:48.374Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "cody.barracuda-battery": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
