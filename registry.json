@@ -341339,8 +341339,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T02:25:52.183Z",
-      "listingValidatedCommit": "16563918744daa3218cbc0cca5c74cc25473c567",
-      "listingValidatedAt": "2026-10-14T23:39:50.930Z",
+      "listingValidatedCommit": "231c4fc066e6f17e142430af9a861ca216e1859d",
+      "listingValidatedAt": "2026-11-02T08:56:30.685Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -341349,8 +341349,8 @@
         "pluginIds": [
           "latentoperator.audible"
         ],
-        "commit": "16563918744daa3218cbc0cca5c74cc25473c567",
-        "checkedAt": "2026-10-14T23:39:50.930Z",
+        "commit": "231c4fc066e6f17e142430af9a861ca216e1859d",
+        "checkedAt": "2026-11-02T08:56:30.685Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -341464,6 +341464,51 @@
             "reviewedAt": "2026-10-14T03:56:08.043Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "16563918744daa3218cbc0cca5c74cc25473c567",
+          "validatedAt": "2026-10-14T23:39:50.930Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T08:56:30.685Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "latentoperator/omarchy-audible",
+            "pluginIds": [
+              "latentoperator.audible"
+            ],
+            "commit": "16563918744daa3218cbc0cca5c74cc25473c567",
+            "checkedAt": "2026-10-14T23:39:50.930Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "latentoperator/omarchy-audible",
+            "pluginIds": [
+              "latentoperator.audible"
+            ],
+            "commit": "16563918744daa3218cbc0cca5c74cc25473c567",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-14T23:39:50.930Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-14T23:11:21.897Z",
+            "requestEventId": 33279879767,
+            "requestedAt": "2026-10-14T23:37:20Z",
+            "reviewedAt": "2026-10-14T23:39:50.930Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -341472,20 +341517,20 @@
         "pluginIds": [
           "latentoperator.audible"
         ],
-        "commit": "16563918744daa3218cbc0cca5c74cc25473c567",
+        "commit": "231c4fc066e6f17e142430af9a861ca216e1859d",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-14T23:39:50.930Z",
+        "baselineCheckedAt": "2026-11-02T08:56:30.685Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager",
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-14T23:11:21.897Z",
-        "requestEventId": 33279879767,
-        "requestedAt": "2026-10-14T23:37:20Z",
-        "reviewedAt": "2026-10-14T23:39:50.930Z",
+        "reviewedBaselineCheckedAt": "2026-11-01T21:53:11.355Z",
+        "requestEventId": 34891125955,
+        "requestedAt": "2026-11-02T08:56:01Z",
+        "reviewedAt": "2026-11-02T08:56:30.685Z",
         "reviewer": "HANCORE-linux"
       }
     },
