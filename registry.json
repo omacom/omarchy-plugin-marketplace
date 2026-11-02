@@ -401470,6 +401470,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0w3n-N/openpad",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T12:10:21.214Z",
+      "listingValidatedCommit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+      "listingValidatedAt": "2026-11-02T12:10:21.214Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0w3n-n/openpad",
+        "pluginIds": [
+          "io.github.0w3n-n.openpad"
+        ],
+        "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+        "checkedAt": "2026-11-02T12:10:21.042Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0w3n-n/openpad",
+        "pluginIds": [
+          "io.github.0w3n-n.openpad"
+        ],
+        "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T12:10:21.042Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T12:02:30.837Z",
+        "requestEventId": 34906787468,
+        "requestedAt": "2026-11-02T12:05:17Z",
+        "reviewedAt": "2026-11-02T12:10:21.042Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.0w3n-n.openpad": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
