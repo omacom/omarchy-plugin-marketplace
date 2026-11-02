@@ -5254,8 +5254,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-12",
       "listedAt": "2026-08-12T20:59:10.089Z",
-      "listingValidatedCommit": "23828f5da82deeee14aa2e12a10081e1e5f1c50c",
-      "listingValidatedAt": "2026-10-17T21:32:52.103Z",
+      "listingValidatedCommit": "e7f6df185203d234f3c12a9eafaa40957d9d11c8",
+      "listingValidatedAt": "2026-11-02T23:40:11.746Z",
       "listingValidatedBranch": "main",
       "plugins": {
         "io.github.znow01.veilleuse": {
@@ -5274,8 +5274,8 @@
         "pluginIds": [
           "io.github.znow01.veilleuse"
         ],
-        "commit": "23828f5da82deeee14aa2e12a10081e1e5f1c50c",
-        "checkedAt": "2026-10-17T21:32:52.103Z",
+        "commit": "e7f6df185203d234f3c12a9eafaa40957d9d11c8",
+        "checkedAt": "2026-11-02T23:40:11.746Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -5323,6 +5323,26 @@
             "requestedAt": "2026-08-17T20:43:34Z",
             "reviewedAt": "2026-08-17T20:43:52.654Z",
             "reviewer": "HANCORE-linux"
+          }
+        },
+        {
+          "commit": "23828f5da82deeee14aa2e12a10081e1e5f1c50c",
+          "validatedAt": "2026-10-17T21:32:52.103Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T23:40:11.746Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "znow01/veilleuse",
+            "pluginIds": [
+              "io.github.znow01.veilleuse"
+            ],
+            "commit": "23828f5da82deeee14aa2e12a10081e1e5f1c50c",
+            "checkedAt": "2026-10-17T21:32:52.103Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
           }
         }
       ]
