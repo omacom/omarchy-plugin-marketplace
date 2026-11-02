@@ -402579,6 +402579,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mattwolfgang/omarchy-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T08:51:18.818Z",
+      "listingValidatedCommit": "081ec8e0b48700a9e6b533c7ee5de10b73bbb0ad",
+      "listingValidatedAt": "2026-11-02T08:51:18.818Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mattwolfgang/omarchy-clock",
+        "pluginIds": [
+          "io.github.mattwolfgang.clock"
+        ],
+        "commit": "081ec8e0b48700a9e6b533c7ee5de10b73bbb0ad",
+        "checkedAt": "2026-11-02T08:51:18.630Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mattwolfgang.clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
