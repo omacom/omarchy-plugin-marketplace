@@ -401512,6 +401512,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0gulcandogann/asus-rog-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T14:52:19.715Z",
+      "listingValidatedCommit": "27c3aeded2d784c03a6118228e22569829878134",
+      "listingValidatedAt": "2026-11-02T14:52:19.715Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0gulcandogann/asus-rog-monitor",
+        "pluginIds": [
+          "io.github.0gulcandogann.asus-rog-monitor"
+        ],
+        "commit": "27c3aeded2d784c03a6118228e22569829878134",
+        "checkedAt": "2026-11-02T14:52:19.555Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0gulcandogann/asus-rog-monitor",
+        "pluginIds": [
+          "io.github.0gulcandogann.asus-rog-monitor"
+        ],
+        "commit": "27c3aeded2d784c03a6118228e22569829878134",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T14:52:19.555Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T12:41:04.887Z",
+        "requestEventId": 34921763891,
+        "requestedAt": "2026-11-02T14:51:41Z",
+        "reviewedAt": "2026-11-02T14:52:19.555Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.0gulcandogann.asus-rog-monitor": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
