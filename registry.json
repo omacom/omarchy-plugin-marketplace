@@ -401413,6 +401413,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/lutzlstein/omarchy-paperclip",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T12:05:53.989Z",
+      "listingValidatedCommit": "f92a84261c546f5e4f5e11eeeede5f2156667c78",
+      "listingValidatedAt": "2026-11-02T12:05:53.989Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lutzlstein/omarchy-paperclip",
+        "pluginIds": [
+          "io.github.lutzlstein.paperclip"
+        ],
+        "commit": "f92a84261c546f5e4f5e11eeeede5f2156667c78",
+        "checkedAt": "2026-11-02T12:05:53.839Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lutzlstein/omarchy-paperclip",
+        "pluginIds": [
+          "io.github.lutzlstein.paperclip"
+        ],
+        "commit": "f92a84261c546f5e4f5e11eeeede5f2156667c78",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T12:05:53.839Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T16:18:25.610Z",
+        "requestEventId": 34906789722,
+        "requestedAt": "2026-11-02T12:05:19Z",
+        "reviewedAt": "2026-11-02T12:05:53.839Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.lutzlstein.paperclip": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
