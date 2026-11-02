@@ -402183,6 +402183,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/matheustimbo/omarchy-overview",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T18:51:09.745Z",
+      "listingValidatedCommit": "7a05ba8564ce31f62d8b4f6195f6777d39bf82ab",
+      "listingValidatedAt": "2026-11-02T18:51:09.745Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matheustimbo/omarchy-overview",
+        "pluginIds": [
+          "matheustimbo.overview"
+        ],
+        "commit": "7a05ba8564ce31f62d8b4f6195f6777d39bf82ab",
+        "checkedAt": "2026-11-02T18:51:09.558Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "matheustimbo.overview": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
