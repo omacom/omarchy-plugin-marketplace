@@ -402092,6 +402092,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/zejzl/omarchy-network-speed-lite",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T16:47:12.653Z",
+      "listingValidatedCommit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
+      "listingValidatedAt": "2026-11-02T16:47:12.653Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zejzl/omarchy-network-speed-lite",
+        "pluginIds": [
+          "zejzl.network-speed-lite"
+        ],
+        "commit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
+        "checkedAt": "2026-11-02T16:47:12.503Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "zejzl.network-speed-lite": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
