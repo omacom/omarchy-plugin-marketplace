@@ -403370,6 +403370,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/stefanoconiglio/omarchy-memory",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T23:53:51.617Z",
+      "listingValidatedCommit": "64450177e1e9dac371aa4e57a7700bf75e39ff1f",
+      "listingValidatedAt": "2026-11-02T23:53:51.617Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stefanoconiglio/omarchy-memory",
+        "pluginIds": [
+          "io.github.stefanoconiglio.memory"
+        ],
+        "commit": "64450177e1e9dac371aa4e57a7700bf75e39ff1f",
+        "checkedAt": "2026-11-02T23:53:51.500Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.stefanoconiglio.memory": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
