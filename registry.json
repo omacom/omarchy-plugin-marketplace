@@ -401863,6 +401863,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dragosol/hyprdrive-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T15:35:55.546Z",
+      "listingValidatedCommit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+      "listingValidatedAt": "2026-11-02T15:35:55.546Z",
+      "listingValidatedBranch": "new-release",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dragosol/hyprdrive-omarchy",
+        "pluginIds": [
+          "dragos.hyprdrive"
+        ],
+        "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+        "checkedAt": "2026-11-02T15:35:55.399Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dragosol/hyprdrive-omarchy",
+        "pluginIds": [
+          "dragos.hyprdrive"
+        ],
+        "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T15:35:55.399Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T14:58:49.311Z",
+        "requestEventId": 34926126770,
+        "requestedAt": "2026-11-02T15:35:03Z",
+        "reviewedAt": "2026-11-02T15:35:55.399Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dragos.hyprdrive": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
