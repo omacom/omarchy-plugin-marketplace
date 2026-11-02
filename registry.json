@@ -65492,8 +65492,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T18:12:37.114Z",
-      "listingValidatedCommit": "e10af43ff522807149f445290040ca354ffac5a5",
-      "listingValidatedAt": "2026-10-02T00:42:00.130Z",
+      "listingValidatedCommit": "d5ecc0a5b8f04f663854db449ae5213bc600aaba",
+      "listingValidatedAt": "2026-11-02T20:45:12.973Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -65502,8 +65502,8 @@
         "pluginIds": [
           "io.github.mtolhuys.theme-manager"
         ],
-        "commit": "e10af43ff522807149f445290040ca354ffac5a5",
-        "checkedAt": "2026-10-02T00:42:00.130Z",
+        "commit": "d5ecc0a5b8f04f663854db449ae5213bc600aaba",
+        "checkedAt": "2026-11-02T20:45:12.972Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -65580,6 +65580,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "e10af43ff522807149f445290040ca354ffac5a5",
+          "validatedAt": "2026-10-02T00:42:00.130Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T20:45:12.973Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mtolhuys/omarchy-theme-manager",
+            "pluginIds": [
+              "io.github.mtolhuys.theme-manager"
+            ],
+            "commit": "e10af43ff522807149f445290040ca354ffac5a5",
+            "checkedAt": "2026-10-02T00:42:00.130Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mtolhuys/omarchy-theme-manager",
+            "pluginIds": [
+              "io.github.mtolhuys.theme-manager"
+            ],
+            "commit": "e10af43ff522807149f445290040ca354ffac5a5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T00:42:00.130Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-23T05:42:54.780Z",
+            "requestEventId": 32298853444,
+            "requestedAt": "2026-10-02T00:17:37Z",
+            "reviewedAt": "2026-10-02T00:42:00.130Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -65588,19 +65631,19 @@
         "pluginIds": [
           "io.github.mtolhuys.theme-manager"
         ],
-        "commit": "e10af43ff522807149f445290040ca354ffac5a5",
+        "commit": "d5ecc0a5b8f04f663854db449ae5213bc600aaba",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T00:42:00.130Z",
+        "baselineCheckedAt": "2026-11-02T20:45:12.972Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-23T05:42:54.780Z",
-        "requestEventId": 32298853444,
-        "requestedAt": "2026-10-02T00:17:37Z",
-        "reviewedAt": "2026-10-02T00:42:00.130Z",
+        "reviewedBaselineCheckedAt": "2026-11-02T16:24:57.231Z",
+        "requestEventId": 34953507266,
+        "requestedAt": "2026-11-02T20:44:36Z",
+        "reviewedAt": "2026-11-02T20:45:12.973Z",
         "reviewer": "HANCORE-linux"
       }
     },
