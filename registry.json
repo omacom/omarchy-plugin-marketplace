@@ -264059,8 +264059,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T00:37:44.798Z",
-      "listingValidatedCommit": "45565f0324727ae38121528efe5011add2fcf1b5",
-      "listingValidatedAt": "2026-09-27T13:15:53.078Z",
+      "listingValidatedCommit": "7e3ed836e7eca9c6ce22871bbaa06a3f08269b32",
+      "listingValidatedAt": "2026-11-02T21:55:43.324Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -264069,8 +264069,8 @@
         "pluginIds": [
           "diogocezar.prisma"
         ],
-        "commit": "45565f0324727ae38121528efe5011add2fcf1b5",
-        "checkedAt": "2026-09-27T13:15:53.078Z",
+        "commit": "7e3ed836e7eca9c6ce22871bbaa06a3f08269b32",
+        "checkedAt": "2026-11-02T21:55:43.324Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -264093,29 +264093,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "diogocezar/omarchy-prisma",
-        "pluginIds": [
-          "diogocezar.prisma"
-        ],
-        "commit": "45565f0324727ae38121528efe5011add2fcf1b5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-27T13:15:53.078Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-27T10:22:20.990Z",
-        "requestEventId": 31930470159,
-        "requestedAt": "2026-09-27T12:32:20Z",
-        "reviewedAt": "2026-09-27T13:15:53.078Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -264164,8 +264141,78 @@
             "reviewedAt": "2026-09-27T00:37:44.690Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "45565f0324727ae38121528efe5011add2fcf1b5",
+          "validatedAt": "2026-09-27T13:15:53.078Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T21:55:43.324Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "diogocezar/omarchy-prisma",
+            "pluginIds": [
+              "diogocezar.prisma"
+            ],
+            "commit": "45565f0324727ae38121528efe5011add2fcf1b5",
+            "checkedAt": "2026-09-27T13:15:53.078Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "diogocezar/omarchy-prisma",
+            "pluginIds": [
+              "diogocezar.prisma"
+            ],
+            "commit": "45565f0324727ae38121528efe5011add2fcf1b5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-27T13:15:53.078Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-27T10:22:20.990Z",
+            "requestEventId": 31930470159,
+            "requestedAt": "2026-09-27T12:32:20Z",
+            "reviewedAt": "2026-09-27T13:15:53.078Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "diogocezar/omarchy-prisma",
+        "pluginIds": [
+          "diogocezar.prisma"
+        ],
+        "commit": "7e3ed836e7eca9c6ce22871bbaa06a3f08269b32",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T21:55:43.324Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T10:38:51.571Z",
+        "requestEventId": 34959346848,
+        "requestedAt": "2026-11-02T21:55:03Z",
+        "reviewedAt": "2026-11-02T21:55:43.324Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/devsanbid/omarchy-battery-fresh",
