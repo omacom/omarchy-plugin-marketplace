@@ -4930,8 +4930,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-12",
       "listedAt": "2026-08-12T21:28:09.997Z",
-      "listingValidatedCommit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
-      "listingValidatedAt": "2026-10-01T03:01:15.432Z",
+      "listingValidatedCommit": "858aa78a3f44afca60888b18cabcbd55891462ee",
+      "listingValidatedAt": "2026-11-02T08:05:20.325Z",
       "listingValidatedBranch": "master",
       "plugins": {
         "ssandys.colophon": {
@@ -4950,8 +4950,8 @@
         "pluginIds": [
           "ssandys.colophon"
         ],
-        "commit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
-        "checkedAt": "2026-10-01T03:01:15.432Z",
+        "commit": "858aa78a3f44afca60888b18cabcbd55891462ee",
+        "checkedAt": "2026-11-02T08:05:20.325Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -5104,6 +5104,53 @@
             "reviewedAt": "2026-08-30T09:21:23.214Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
+          "validatedAt": "2026-10-01T03:01:15.432Z",
+          "branch": "master",
+          "supersededAt": "2026-11-02T08:05:20.325Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ssandys/colophon",
+            "pluginIds": [
+              "ssandys.colophon"
+            ],
+            "commit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
+            "checkedAt": "2026-10-01T03:01:15.432Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ssandys/colophon",
+            "pluginIds": [
+              "ssandys.colophon"
+            ],
+            "commit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T03:01:15.432Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-24T15:52:46.919Z",
+            "requestEventId": 32217915979,
+            "requestedAt": "2026-10-01T02:59:33Z",
+            "reviewedAt": "2026-10-01T03:01:15.432Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -5112,10 +5159,10 @@
         "pluginIds": [
           "ssandys.colophon"
         ],
-        "commit": "50f4dc516b756d0dfbbd5ee2ac66fcd736146acb",
+        "commit": "858aa78a3f44afca60888b18cabcbd55891462ee",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T03:01:15.432Z",
+        "baselineCheckedAt": "2026-11-02T08:05:20.325Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -5123,10 +5170,10 @@
           "package-manager",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-09-24T15:52:46.919Z",
-        "requestEventId": 32217915979,
-        "requestedAt": "2026-10-01T02:59:33Z",
-        "reviewedAt": "2026-10-01T03:01:15.432Z",
+        "reviewedBaselineCheckedAt": "2026-11-01T22:30:38.087Z",
+        "requestEventId": 34887024572,
+        "requestedAt": "2026-11-02T08:02:09Z",
+        "reviewedAt": "2026-11-02T08:05:20.325Z",
         "reviewer": "HANCORE-linux"
       }
     },
