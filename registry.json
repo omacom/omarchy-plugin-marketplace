@@ -401930,6 +401930,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/erikrjohansson/omarchy-extended-keybindings-viewer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T16:13:01.213Z",
+      "listingValidatedCommit": "e3945bf1f47e1ef7af9cbccb591a421c125bf993",
+      "listingValidatedAt": "2026-11-02T16:13:01.213Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erikrjohansson/omarchy-extended-keybindings-viewer",
+        "pluginIds": [
+          "io.github.erikrjohansson.extended-keybindings-viewer"
+        ],
+        "commit": "e3945bf1f47e1ef7af9cbccb591a421c125bf993",
+        "checkedAt": "2026-11-02T16:13:01.067Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.erikrjohansson.extended-keybindings-viewer": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
