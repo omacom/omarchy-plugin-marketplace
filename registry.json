@@ -402250,6 +402250,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CaioNazario/island-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T19:17:01.183Z",
+      "listingValidatedCommit": "603d62b291df75ad5c01238e4e99949e92d8aa7d",
+      "listingValidatedAt": "2026-11-02T19:17:01.183Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "caionazario/island-omarchy",
+        "pluginIds": [
+          "caionazario.island"
+        ],
+        "commit": "603d62b291df75ad5c01238e4e99949e92d8aa7d",
+        "checkedAt": "2026-11-02T19:17:01.014Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "caionazario/island-omarchy",
+        "pluginIds": [
+          "caionazario.island"
+        ],
+        "commit": "603d62b291df75ad5c01238e4e99949e92d8aa7d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T19:17:01.014Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T18:40:47.942Z",
+        "requestEventId": 34945801737,
+        "requestedAt": "2026-11-02T19:11:35Z",
+        "reviewedAt": "2026-11-02T19:17:01.014Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "caionazario.island": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
