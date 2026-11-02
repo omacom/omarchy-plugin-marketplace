@@ -402289,6 +402289,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/nuo-yi/omarchy-power-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T08:09:56.979Z",
+      "listingValidatedCommit": "c7e07fa7d73eef08765c68e20476fcc8838cf0b6",
+      "listingValidatedAt": "2026-11-02T08:09:56.979Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nuo-yi/omarchy-power-widget",
+        "pluginIds": [
+          "rasp.power"
+        ],
+        "commit": "c7e07fa7d73eef08765c68e20476fcc8838cf0b6",
+        "checkedAt": "2026-11-02T08:09:56.866Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nuo-yi/omarchy-power-widget",
+        "pluginIds": [
+          "rasp.power"
+        ],
+        "commit": "c7e07fa7d73eef08765c68e20476fcc8838cf0b6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T08:09:56.866Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T03:34:09.906Z",
+        "requestEventId": 34887285600,
+        "requestedAt": "2026-11-02T08:05:49Z",
+        "reviewedAt": "2026-11-02T08:09:56.866Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rasp.power": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
