@@ -30,6 +30,7 @@
     "fsavoia.ai-usagebar",
     "hide.learn",
     "ignotas.mouse-sacrifice",
+    "io.github.0w3n-n.inkcast",
     "io.github.aayush9029.omaai",
     "io.github.aayush9029.omapad",
     "io.github.aayush9029.omasend",
@@ -39,6 +40,7 @@
     "io.github.asdecided.wayfinder",
     "io.github.callmeathul.brand-effects",
     "io.github.ch3w3y.wallpaper-gallery",
+    "io.github.coryblische.paperclip",
     "io.github.cyberbuddhy.omarchy-play",
     "io.github.data-goblin.omgato",
     "io.github.donnishcomau.snote",
@@ -362896,69 +362898,6 @@
       }
     },
     {
-      "repo": "https://github.com/0w3n-N/inkcast",
-      "type": "plugin-source",
-      "addedAt": "2026-10-17",
-      "listedAt": "2026-10-17T06:24:38.416Z",
-      "listingValidatedCommit": "735df0d5b5e1d7ee832e369d241a512d88fe2502",
-      "listingValidatedAt": "2026-10-17T06:24:38.416Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "0w3n-n/inkcast",
-        "pluginIds": [
-          "io.github.0w3n-n.inkcast"
-        ],
-        "commit": "735df0d5b5e1d7ee832e369d241a512d88fe2502",
-        "checkedAt": "2026-10-17T06:24:38.276Z",
-        "outcome": "review-required",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "installer",
-          "package-manager",
-          "privilege"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "0w3n-n/inkcast",
-        "pluginIds": [
-          "io.github.0w3n-n.inkcast"
-        ],
-        "commit": "735df0d5b5e1d7ee832e369d241a512d88fe2502",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-17T06:24:38.276Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "installer",
-          "package-manager",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-17T06:09:24.453Z",
-        "requestEventId": 33506986562,
-        "requestedAt": "2026-10-17T06:24:07Z",
-        "reviewedAt": "2026-10-17T06:24:38.276Z",
-        "reviewer": "HANCORE-linux"
-      },
-      "plugins": {
-        "io.github.0w3n-n.inkcast": {
-          "category": "Productivity",
-          "tags": [
-            "education",
-            "bar",
-            "quickshell"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      }
-    },
-    {
       "repo": "https://github.com/MrUranium1/Omarchy-Tide-Island",
       "type": "plugin-source",
       "addedAt": "2026-10-17",
@@ -377794,63 +377733,6 @@
             "mode": "manual",
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
-        }
-      }
-    },
-    {
-      "repo": "https://github.com/coryblische/omarchy-paperclip",
-      "type": "plugin-source",
-      "addedAt": "2026-10-21",
-      "listedAt": "2026-10-21T21:03:13.347Z",
-      "listingValidatedCommit": "6147b5c6af45eeec02242145b9218115cd8a5997",
-      "listingValidatedAt": "2026-10-21T21:03:13.347Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "coryblische/omarchy-paperclip",
-        "pluginIds": [
-          "io.github.coryblische.paperclip"
-        ],
-        "commit": "6147b5c6af45eeec02242145b9218115cd8a5997",
-        "checkedAt": "2026-10-21T21:03:13.160Z",
-        "outcome": "review-required",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "coryblische/omarchy-paperclip",
-        "pluginIds": [
-          "io.github.coryblische.paperclip"
-        ],
-        "commit": "6147b5c6af45eeec02242145b9218115cd8a5997",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-21T21:03:13.160Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-21T20:38:23.530Z",
-        "requestEventId": 33887922096,
-        "requestedAt": "2026-10-21T20:50:33Z",
-        "reviewedAt": "2026-10-21T21:03:13.160Z",
-        "reviewer": "HANCORE-linux"
-      },
-      "plugins": {
-        "io.github.coryblische.paperclip": {
-          "category": "Developer Tools",
-          "tags": [
-            "ai",
-            "bar",
-            "system"
-          ],
-          "manifestPath": "manifest.json"
         }
       }
     },
