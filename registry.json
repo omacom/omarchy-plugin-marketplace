@@ -402821,6 +402821,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DailenG/Omarchasaurus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T09:37:23.741Z",
+      "listingValidatedCommit": "d5d17c552316936138837c690c7a64903dcb48c3",
+      "listingValidatedAt": "2026-11-02T09:37:23.741Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "daileng/omarchasaurus",
+        "pluginIds": [
+          "dailen.omarchasaurus"
+        ],
+        "commit": "d5d17c552316936138837c690c7a64903dcb48c3",
+        "checkedAt": "2026-11-02T09:37:23.549Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dailen.omarchasaurus": {
+          "category": "Kids",
+          "tags": [
+            "education",
+            "kids",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
