@@ -401737,6 +401737,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Xarrathh/omarchy-hermes-face",
+      "type": "plugin-source",
+      "addedAt": "2026-11-02",
+      "listedAt": "2026-11-02T15:17:55.970Z",
+      "listingValidatedCommit": "e888c084858ba6ee804fcb61196a8ed06cde3dc6",
+      "listingValidatedAt": "2026-11-02T15:17:55.970Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "xarrathh/omarchy-hermes-face",
+        "pluginIds": [
+          "pierregoosen.hermes-face"
+        ],
+        "commit": "e888c084858ba6ee804fcb61196a8ed06cde3dc6",
+        "checkedAt": "2026-11-02T15:17:55.790Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "xarrathh/omarchy-hermes-face",
+        "pluginIds": [
+          "pierregoosen.hermes-face"
+        ],
+        "commit": "e888c084858ba6ee804fcb61196a8ed06cde3dc6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T15:17:55.790Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T15:07:42.938Z",
+        "requestEventId": 34923649140,
+        "requestedAt": "2026-11-02T15:10:29Z",
+        "reviewedAt": "2026-11-02T15:17:55.791Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pierregoosen.hermes-face": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
