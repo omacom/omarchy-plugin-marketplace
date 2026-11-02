@@ -377572,8 +377572,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-21",
       "listedAt": "2026-10-21T20:11:34.560Z",
-      "listingValidatedCommit": "9c284aacb633e398cd78ecc51253776828f4dc02",
-      "listingValidatedAt": "2026-10-21T20:11:34.560Z",
+      "listingValidatedCommit": "06a3db52d5eb50f95f6c57f281138def8a509f81",
+      "listingValidatedAt": "2026-11-02T21:33:11.620Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -377582,8 +377582,8 @@
         "pluginIds": [
           "aditya.workspace-icons"
         ],
-        "commit": "9c284aacb633e398cd78ecc51253776828f4dc02",
-        "checkedAt": "2026-10-21T20:11:34.397Z",
+        "commit": "06a3db52d5eb50f95f6c57f281138def8a509f81",
+        "checkedAt": "2026-11-02T21:33:11.619Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -377598,7 +377598,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9c284aacb633e398cd78ecc51253776828f4dc02",
+          "validatedAt": "2026-10-21T20:11:34.560Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T21:33:11.620Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "adityamiskin/omarchy-workspace-icons",
+            "pluginIds": [
+              "aditya.workspace-icons"
+            ],
+            "commit": "9c284aacb633e398cd78ecc51253776828f4dc02",
+            "checkedAt": "2026-10-21T20:11:34.397Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/AgentRBY/omarchy-speedup-browser-startup",
