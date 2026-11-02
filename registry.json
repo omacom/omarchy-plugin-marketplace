@@ -395850,8 +395850,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T22:03:34.694Z",
-      "listingValidatedCommit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
-      "listingValidatedAt": "2026-11-01T19:23:27.218Z",
+      "listingValidatedCommit": "8daecd9c532bcf42de1dadb2e9a17d9b32bfb822",
+      "listingValidatedAt": "2026-11-02T22:12:44.256Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -395860,8 +395860,8 @@
         "pluginIds": [
           "crmne.hyprmoncfg-workspaces"
         ],
-        "commit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
-        "checkedAt": "2026-11-01T19:23:27.217Z",
+        "commit": "8daecd9c532bcf42de1dadb2e9a17d9b32bfb822",
+        "checkedAt": "2026-11-02T22:12:44.256Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -395879,27 +395879,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "crmne/omarchy-hyprmoncfg-workspaces",
-        "pluginIds": [
-          "crmne.hyprmoncfg-workspaces"
-        ],
-        "commit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T19:23:27.217Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-01T19:03:20.720Z",
-        "requestEventId": 34849441023,
-        "requestedAt": "2026-11-01T19:18:20Z",
-        "reviewedAt": "2026-11-01T19:23:27.218Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -395944,8 +395923,72 @@
             "reviewedAt": "2026-10-30T22:03:34.517Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
+          "validatedAt": "2026-11-01T19:23:27.218Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T22:12:44.256Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crmne/omarchy-hyprmoncfg-workspaces",
+            "pluginIds": [
+              "crmne.hyprmoncfg-workspaces"
+            ],
+            "commit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
+            "checkedAt": "2026-11-01T19:23:27.217Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "crmne/omarchy-hyprmoncfg-workspaces",
+            "pluginIds": [
+              "crmne.hyprmoncfg-workspaces"
+            ],
+            "commit": "d0b8f82515a1e1d9032165460e77ee7db5ae3ce5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T19:23:27.217Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-01T19:03:20.720Z",
+            "requestEventId": 34849441023,
+            "requestedAt": "2026-11-01T19:18:20Z",
+            "reviewedAt": "2026-11-01T19:23:27.218Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crmne/omarchy-hyprmoncfg-workspaces",
+        "pluginIds": [
+          "crmne.hyprmoncfg-workspaces"
+        ],
+        "commit": "8daecd9c532bcf42de1dadb2e9a17d9b32bfb822",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-02T22:12:44.256Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T21:56:44.063Z",
+        "requestEventId": 34960012715,
+        "requestedAt": "2026-11-02T22:03:42Z",
+        "reviewedAt": "2026-11-02T22:12:44.256Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/ShinobiX9X/omarchy-languagetool",
