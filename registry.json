@@ -402809,8 +402809,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T16:47:12.653Z",
-      "listingValidatedCommit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
-      "listingValidatedAt": "2026-11-02T16:47:12.653Z",
+      "listingValidatedCommit": "c83993f9e4f2340a8f96d05867658fb2efac49a7",
+      "listingValidatedAt": "2026-11-02T23:19:18.445Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -402819,8 +402819,8 @@
         "pluginIds": [
           "zejzl.network-speed-lite"
         ],
-        "commit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
-        "checkedAt": "2026-11-02T16:47:12.503Z",
+        "commit": "c83993f9e4f2340a8f96d05867658fb2efac49a7",
+        "checkedAt": "2026-11-02T23:19:18.445Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -402836,7 +402836,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
+          "validatedAt": "2026-11-02T16:47:12.653Z",
+          "branch": "main",
+          "supersededAt": "2026-11-02T23:19:18.445Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "zejzl/omarchy-network-speed-lite",
+            "pluginIds": [
+              "zejzl.network-speed-lite"
+            ],
+            "commit": "c4ab036c24eb33bd67020f6d5272ac0eedece408",
+            "checkedAt": "2026-11-02T16:47:12.503Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/FenrirRhogar/omavst",
