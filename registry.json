@@ -1,5 +1,6 @@
 {
   "retiredPluginIds": [
+    "aaron.substack",
     "aayork.vibeshot",
     "agent-bar.usage",
     "arbi.media-hub",
@@ -43,6 +44,8 @@
     "io.github.donnishcomau.snote",
     "io.github.ef-code.access-profiles",
     "io.github.eithe.oma20-20-20",
+    "io.github.ejuro.omi-the-cat",
+    "io.github.ejuro.phosphor",
     "io.github.ejuro.theme-favorites",
     "io.github.eshayat102.hide-icons",
     "io.github.g-kamil.omarchy-niceboy-connect",
@@ -55,6 +58,7 @@
     "io.github.jkro.miners",
     "io.github.linuxgameruk.ollama-cloud-api",
     "io.github.lubabs770.gamut",
+    "io.github.lukebest.omartwins",
     "io.github.maninthecity.omakiller",
     "io.github.markoalleno.aerials",
     "io.github.minokai69.display-refresh-rate",
@@ -74,10 +78,13 @@
     "io.github.taisau.location",
     "io.github.tonybeal40.fieldknown",
     "io.github.tymurbogach.any-monitor",
+    "io.github.weedwhitesandwine.plug",
     "jfarr.drawer",
+    "kc.omarchy-menubar-manager",
     "keasbeexd.hskmouse",
     "keasbeexd.vigil",
     "keybind-manager",
+    "leewynne.next-ufc",
     "local.omastat",
     "loxone",
     "m4teo.omaspotify",
@@ -98,6 +105,7 @@
     "paisen.omo-anitrack",
     "pick.screenshot",
     "plugin.hider",
+    "pym.display-reserve",
     "quickshell.ytmusic",
     "r4venward.wallpaper-video",
     "raiden-meixelysia.omarchy-pets",
@@ -11295,56 +11303,6 @@
           ]
         }
       }
-    },
-    {
-      "repo": "https://github.com/ejuro/omi-the-cat",
-      "type": "plugin-source",
-      "addedAt": "2026-08-15",
-      "listedAt": "2026-08-15T19:31:18.588Z",
-      "listingValidatedCommit": "429f4de7452102c0dad9d682839d17826c84140f",
-      "listingValidatedAt": "2026-08-21T19:27:37.993Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "ejuro/omi-the-cat",
-        "pluginIds": [
-          "io.github.ejuro.omi-the-cat"
-        ],
-        "commit": "429f4de7452102c0dad9d682839d17826c84140f",
-        "checkedAt": "2026-08-21T19:27:37.993Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "io.github.ejuro.omi-the-cat": {
-          "category": "Widgets",
-          "tags": [
-            "bar",
-            "ai",
-            "quickshell"
-          ]
-        }
-      },
-      "listingValidationHistory": [
-        {
-          "commit": "a3160e9105089e40ce94aff15ffca631e321109e",
-          "validatedAt": "2026-08-15T19:31:18.588Z",
-          "branch": "main",
-          "supersededAt": "2026-08-21T19:27:37.993Z",
-          "automatedSecurityBaseline": {
-            "version": "3",
-            "commit": "a3160e9105089e40ce94aff15ffca631e321109e",
-            "checkedAt": "2026-08-15T17:08:37.504Z",
-            "outcome": "passed",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": []
-          }
-        }
-      ]
     },
     {
       "repo": "https://github.com/tuxmontero/omarchy-gospel-of-the-day",
@@ -37722,39 +37680,6 @@
           "tags": [
             "bar",
             "workspaces"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      }
-    },
-    {
-      "repo": "https://github.com/ejuro/phosphor-crt-overlay",
-      "type": "plugin-source",
-      "addedAt": "2026-08-20",
-      "listedAt": "2026-08-20T20:03:56.619Z",
-      "listingValidatedCommit": "a42c03d4368f22171ffc0a1f7e647eb7c231afac",
-      "listingValidatedAt": "2026-08-20T20:03:56.619Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "ejuro/phosphor-crt-overlay",
-        "pluginIds": [
-          "io.github.ejuro.phosphor"
-        ],
-        "commit": "a42c03d4368f22171ffc0a1f7e647eb7c231afac",
-        "checkedAt": "2026-08-20T18:31:36.322Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "io.github.ejuro.phosphor": {
-          "category": "Appearance",
-          "tags": [
-            "hyprland",
-            "quickshell"
           ],
           "manifestPath": "manifest.json"
         }
@@ -78342,294 +78267,6 @@
       }
     },
     {
-      "repo": "https://github.com/weedwhitesandwine/plug",
-      "type": "plugin-source",
-      "addedAt": "2026-08-25",
-      "listedAt": "2026-08-25T06:18:17.919Z",
-      "listingValidatedCommit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
-      "listingValidatedAt": "2026-09-22T23:14:52.363Z",
-      "listingValidatedBranch": "master",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "weedwhitesandwine/plug",
-        "pluginIds": [
-          "io.github.weedwhitesandwine.plug"
-        ],
-        "commit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
-        "checkedAt": "2026-09-22T23:14:52.363Z",
-        "outcome": "review-required",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "service-management",
-          "package-manager"
-        ]
-      },
-      "plugins": {
-        "io.github.weedwhitesandwine.plug": {
-          "category": "System",
-          "tags": [
-            "ai",
-            "security",
-            "quickshell"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      },
-      "listingValidationHistory": [
-        {
-          "commit": "44c50886e733825a9b1d210c8dc1d6f9de671a42",
-          "validatedAt": "2026-08-25T06:18:17.919Z",
-          "branch": "master",
-          "supersededAt": "2026-08-27T17:20:14.221Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "44c50886e733825a9b1d210c8dc1d6f9de671a42",
-            "checkedAt": "2026-08-25T06:18:17.883Z",
-            "outcome": "review-required",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": [
-              "service-management",
-              "privilege"
-            ]
-          },
-          "maintainerVerificationReview": {
-            "schemaVersion": 1,
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "44c50886e733825a9b1d210c8dc1d6f9de671a42",
-            "baselineVersion": "3",
-            "enforcementMode": "selective",
-            "baselineCheckedAt": "2026-08-25T06:18:17.883Z",
-            "baselineOutcome": "review-required",
-            "findings": [],
-            "capabilities": [
-              "service-management",
-              "privilege"
-            ],
-            "reviewedBaselineCheckedAt": "2026-08-25T05:44:23.624Z",
-            "requestEventId": 29957913991,
-            "requestedAt": "2026-08-25T06:16:42Z",
-            "reviewedAt": "2026-08-25T06:18:17.884Z",
-            "reviewer": "HANCORE-linux"
-          }
-        },
-        {
-          "commit": "09b9de4d04c9cc3da4e2e5c908656a6abfd51c17",
-          "validatedAt": "2026-08-27T17:20:14.221Z",
-          "branch": "master",
-          "supersededAt": "2026-08-30T08:12:37.246Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "09b9de4d04c9cc3da4e2e5c908656a6abfd51c17",
-            "checkedAt": "2026-08-27T17:20:14.221Z",
-            "outcome": "review-required",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": [
-              "service-management",
-              "privilege"
-            ]
-          },
-          "maintainerVerificationReview": {
-            "schemaVersion": 1,
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "09b9de4d04c9cc3da4e2e5c908656a6abfd51c17",
-            "baselineVersion": "3",
-            "enforcementMode": "selective",
-            "baselineCheckedAt": "2026-08-27T17:20:14.221Z",
-            "baselineOutcome": "review-required",
-            "findings": [],
-            "capabilities": [
-              "service-management",
-              "privilege"
-            ],
-            "reviewedBaselineCheckedAt": "2026-08-27T00:05:48.670Z",
-            "requestEventId": 30117390592,
-            "requestedAt": "2026-08-27T16:35:30Z",
-            "reviewedAt": "2026-08-27T17:20:14.221Z",
-            "reviewer": "HANCORE-linux"
-          }
-        },
-        {
-          "commit": "169fa179e5571673eaa899175bcf44fe71c87289",
-          "validatedAt": "2026-08-30T08:12:37.246Z",
-          "branch": "master",
-          "supersededAt": "2026-08-31T13:38:24.359Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "169fa179e5571673eaa899175bcf44fe71c87289",
-            "checkedAt": "2026-08-30T08:12:37.246Z",
-            "outcome": "review-required",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ]
-          },
-          "maintainerVerificationReview": {
-            "schemaVersion": 1,
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "169fa179e5571673eaa899175bcf44fe71c87289",
-            "baselineVersion": "3",
-            "enforcementMode": "selective",
-            "baselineCheckedAt": "2026-08-30T08:12:37.246Z",
-            "baselineOutcome": "review-required",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ],
-            "reviewedBaselineCheckedAt": "2026-08-30T01:36:52.624Z",
-            "requestEventId": 30231159470,
-            "requestedAt": "2026-08-30T08:11:32Z",
-            "reviewedAt": "2026-08-30T08:12:37.246Z",
-            "reviewer": "HANCORE-linux"
-          }
-        },
-        {
-          "commit": "eb4650141bb0770225b3a08c6b58c2f8138ee9ad",
-          "validatedAt": "2026-08-31T13:38:24.359Z",
-          "branch": "master",
-          "supersededAt": "2026-09-03T22:46:19.385Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "eb4650141bb0770225b3a08c6b58c2f8138ee9ad",
-            "checkedAt": "2026-08-31T13:38:24.359Z",
-            "outcome": "review-required",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ]
-          },
-          "maintainerVerificationReview": {
-            "schemaVersion": 1,
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "eb4650141bb0770225b3a08c6b58c2f8138ee9ad",
-            "baselineVersion": "3",
-            "enforcementMode": "selective",
-            "baselineCheckedAt": "2026-08-31T13:38:24.359Z",
-            "baselineOutcome": "review-required",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ],
-            "reviewedBaselineCheckedAt": "2026-08-31T12:04:04.341Z",
-            "requestEventId": 30281240799,
-            "requestedAt": "2026-08-31T13:24:45Z",
-            "reviewedAt": "2026-08-31T13:38:24.359Z",
-            "reviewer": "HANCORE-linux"
-          }
-        },
-        {
-          "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
-          "validatedAt": "2026-09-03T22:46:19.385Z",
-          "branch": "master",
-          "supersededAt": "2026-09-22T23:14:52.363Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
-            "checkedAt": "2026-09-03T22:46:19.384Z",
-            "outcome": "review-required",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ]
-          },
-          "maintainerVerificationReview": {
-            "schemaVersion": 1,
-            "repository": "weedwhitesandwine/plug",
-            "pluginIds": [
-              "io.github.weedwhitesandwine.plug"
-            ],
-            "commit": "0036e0e9102e8b38838bae4093105a8a8c45eb60",
-            "baselineVersion": "3",
-            "enforcementMode": "selective",
-            "baselineCheckedAt": "2026-09-03T22:46:19.384Z",
-            "baselineOutcome": "review-required",
-            "findings": [],
-            "capabilities": [
-              "privilege",
-              "service-management"
-            ],
-            "reviewedBaselineCheckedAt": "2026-09-02T13:56:38.730Z",
-            "requestEventId": 30518164495,
-            "requestedAt": "2026-09-03T21:44:25Z",
-            "reviewedAt": "2026-09-03T22:46:19.385Z",
-            "reviewer": "HANCORE-linux"
-          }
-        }
-      ],
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "weedwhitesandwine/plug",
-        "pluginIds": [
-          "io.github.weedwhitesandwine.plug"
-        ],
-        "commit": "993f7c55b8fc21dab34b446bcf53401dc595edba",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-22T23:14:52.363Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-18T11:56:44.970Z",
-        "requestEventId": 31638084129,
-        "requestedAt": "2026-09-22T23:13:00Z",
-        "reviewedAt": "2026-09-22T23:14:52.363Z",
-        "reviewer": "HANCORE-linux"
-      }
-    },
-    {
       "repo": "https://github.com/kenhara/omarchy-enricherino",
       "type": "plugin-source",
       "addedAt": "2026-08-25",
@@ -119094,39 +118731,6 @@
           }
         }
       ]
-    },
-    {
-      "repo": "https://github.com/0x4A756E65/omarchy-substack",
-      "type": "plugin-source",
-      "addedAt": "2026-08-31",
-      "listedAt": "2026-08-31T00:23:39.915Z",
-      "listingValidatedCommit": "cd3ed0999903837e32e1e1d1e3714c7dcf9e9aa0",
-      "listingValidatedAt": "2026-08-31T00:23:39.915Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "0x4a756e65/omarchy-substack",
-        "pluginIds": [
-          "aaron.substack"
-        ],
-        "commit": "cd3ed0999903837e32e1e1d1e3714c7dcf9e9aa0",
-        "checkedAt": "2026-08-31T00:23:39.877Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "aaron.substack": {
-          "category": "Widgets",
-          "tags": [
-            "bar",
-            "quickshell"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      }
     },
     {
       "repo": "https://github.com/brukberhane/omarchy-zerotier",
@@ -159976,101 +159580,6 @@
             ],
             "commit": "78bec90596520ebd4f7f2ad559d6934a8a926b4e",
             "checkedAt": "2026-09-07T10:45:42.501Z",
-            "outcome": "passed",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": []
-          }
-        }
-      ]
-    },
-    {
-      "repo": "https://github.com/kevclarkco/omarchy-menubar-manager",
-      "type": "plugin-source",
-      "addedAt": "2026-09-07",
-      "listedAt": "2026-09-07T10:48:32.876Z",
-      "listingValidatedCommit": "4ee4d72e4e832a6e7aa0ed09e316174ac0e985d0",
-      "listingValidatedAt": "2026-10-09T13:57:44.303Z",
-      "listingValidatedBranch": "master",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "kevclarkco/omarchy-menubar-manager",
-        "pluginIds": [
-          "kc.omarchy-menubar-manager"
-        ],
-        "commit": "4ee4d72e4e832a6e7aa0ed09e316174ac0e985d0",
-        "checkedAt": "2026-10-09T13:57:44.302Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "kc.omarchy-menubar-manager": {
-          "category": "Appearance",
-          "tags": [
-            "quickshell",
-            "bar"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      },
-      "listingValidationHistory": [
-        {
-          "commit": "7c3207baf55f4b4d6bb84b73c311aaf30691e668",
-          "validatedAt": "2026-09-07T10:48:32.876Z",
-          "branch": "master",
-          "supersededAt": "2026-09-12T00:18:00.919Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "kevclarkco/omarchy-menubar-manager",
-            "pluginIds": [
-              "kc.omarchy-menubar-manager"
-            ],
-            "commit": "7c3207baf55f4b4d6bb84b73c311aaf30691e668",
-            "checkedAt": "2026-09-07T10:48:32.805Z",
-            "outcome": "passed",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": []
-          }
-        },
-        {
-          "commit": "e5dfc0535d1815c7e3b55f97d897ea07e62cc1c6",
-          "validatedAt": "2026-09-12T00:18:00.919Z",
-          "branch": "master",
-          "supersededAt": "2026-10-03T13:08:26.298Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "kevclarkco/omarchy-menubar-manager",
-            "pluginIds": [
-              "kc.omarchy-menubar-manager"
-            ],
-            "commit": "e5dfc0535d1815c7e3b55f97d897ea07e62cc1c6",
-            "checkedAt": "2026-09-12T00:18:00.918Z",
-            "outcome": "passed",
-            "enforcementMode": "selective",
-            "findings": [],
-            "capabilities": []
-          }
-        },
-        {
-          "commit": "b3d0daaab9f59989bf37cb60de85ae00d7c5bce4",
-          "validatedAt": "2026-10-03T13:08:26.298Z",
-          "branch": "master",
-          "supersededAt": "2026-10-09T13:57:44.303Z",
-          "automatedSecurityBaseline": {
-            "schemaVersion": 1,
-            "version": "3",
-            "repository": "kevclarkco/omarchy-menubar-manager",
-            "pluginIds": [
-              "kc.omarchy-menubar-manager"
-            ],
-            "commit": "b3d0daaab9f59989bf37cb60de85ae00d7c5bce4",
-            "checkedAt": "2026-10-03T13:08:26.298Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
@@ -288788,40 +288297,6 @@
       }
     },
     {
-      "repo": "https://github.com/mateuspim/omarchy-display-reserve",
-      "type": "plugin-source",
-      "addedAt": "2026-10-01",
-      "listedAt": "2026-10-01T02:58:20.087Z",
-      "listingValidatedCommit": "70a5c0cf16597b0beabe49c39f5253f6d95260fa",
-      "listingValidatedAt": "2026-10-01T02:58:20.087Z",
-      "listingValidatedBranch": "master",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "mateuspim/omarchy-display-reserve",
-        "pluginIds": [
-          "pym.display-reserve"
-        ],
-        "commit": "70a5c0cf16597b0beabe49c39f5253f6d95260fa",
-        "checkedAt": "2026-10-01T02:58:19.967Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "pym.display-reserve": {
-          "category": "Desktop",
-          "tags": [
-            "hyprland",
-            "quickshell",
-            "bar"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      }
-    },
-    {
       "repo": "https://github.com/derekross/omarchy-bitchat",
       "type": "plugin-source",
       "addedAt": "2026-10-01",
@@ -307533,63 +307008,6 @@
             "mode": "manual",
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
-        }
-      }
-    },
-    {
-      "repo": "https://github.com/lukebest/omartwins",
-      "type": "plugin-source",
-      "addedAt": "2026-10-03",
-      "listedAt": "2026-10-03T00:31:49.649Z",
-      "listingValidatedCommit": "33add9acb21dcd4448f036d0b3ad7b4b1d4ad92c",
-      "listingValidatedAt": "2026-10-03T00:31:49.649Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "lukebest/omartwins",
-        "pluginIds": [
-          "io.github.lukebest.omartwins"
-        ],
-        "commit": "33add9acb21dcd4448f036d0b3ad7b4b1d4ad92c",
-        "checkedAt": "2026-10-03T00:31:49.541Z",
-        "outcome": "review-required",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "lukebest/omartwins",
-        "pluginIds": [
-          "io.github.lukebest.omartwins"
-        ],
-        "commit": "33add9acb21dcd4448f036d0b3ad7b4b1d4ad92c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T00:31:49.541Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-03T00:29:01.155Z",
-        "requestEventId": 32374578447,
-        "requestedAt": "2026-10-03T00:31:20Z",
-        "reviewedAt": "2026-10-03T00:31:49.541Z",
-        "reviewer": "HANCORE-linux"
-      },
-      "plugins": {
-        "io.github.lukebest.omartwins": {
-          "category": "System",
-          "tags": [
-            "ai",
-            "hyprland",
-            "workspaces"
-          ],
-          "manifestPath": "manifest.json"
         }
       }
     },
@@ -383312,38 +382730,6 @@
           "tags": [
             "bar",
             "quickshell"
-          ],
-          "manifestPath": "manifest.json"
-        }
-      }
-    },
-    {
-      "repo": "https://github.com/leewynne/omarchy-next-ufc",
-      "type": "plugin-source",
-      "addedAt": "2026-10-26",
-      "listedAt": "2026-10-26T01:56:05.211Z",
-      "listingValidatedCommit": "880a0a9616d8fac62a99c766724ae1080a785c2e",
-      "listingValidatedAt": "2026-10-26T01:56:05.211Z",
-      "listingValidatedBranch": "main",
-      "automatedSecurityBaseline": {
-        "schemaVersion": 1,
-        "version": "3",
-        "repository": "leewynne/omarchy-next-ufc",
-        "pluginIds": [
-          "leewynne.next-ufc"
-        ],
-        "commit": "880a0a9616d8fac62a99c766724ae1080a785c2e",
-        "checkedAt": "2026-10-26T01:56:05.084Z",
-        "outcome": "passed",
-        "enforcementMode": "selective",
-        "findings": [],
-        "capabilities": []
-      },
-      "plugins": {
-        "leewynne.next-ufc": {
-          "category": "Other",
-          "tags": [
-            "bar"
           ],
           "manifestPath": "manifest.json"
         }
