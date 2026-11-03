@@ -400209,8 +400209,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T20:50:59.326Z",
-      "listingValidatedCommit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
-      "listingValidatedAt": "2026-10-31T20:50:59.326Z",
+      "listingValidatedCommit": "86b558acccabe0ed73f209afdaaae5d1ac5b85d4",
+      "listingValidatedAt": "2026-11-03T21:24:29.289Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -400219,8 +400219,8 @@
         "pluginIds": [
           "io.github.nasedkinpv.numr"
         ],
-        "commit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
-        "checkedAt": "2026-10-31T20:50:59.145Z",
+        "commit": "86b558acccabe0ed73f209afdaaae5d1ac5b85d4",
+        "checkedAt": "2026-11-03T21:24:29.289Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -400240,7 +400240,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
+          "validatedAt": "2026-10-31T20:50:59.326Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T21:24:29.289Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nasedkinpv/omarchy-numr",
+            "pluginIds": [
+              "io.github.nasedkinpv.numr"
+            ],
+            "commit": "61aadb6f69394f1523dd2b85a01b36813d055aa7",
+            "checkedAt": "2026-10-31T20:50:59.145Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/wesleygrimes/omafire",
