@@ -139500,8 +139500,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T13:55:29.371Z",
-      "listingValidatedCommit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
-      "listingValidatedAt": "2026-10-20T15:56:34.712Z",
+      "listingValidatedCommit": "4a9420692cd7f868c0e6cf7b5fc532a1bbe8c639",
+      "listingValidatedAt": "2026-11-03T11:30:48.999Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -139510,8 +139510,8 @@
         "pluginIds": [
           "io.github.17xande.simple-sip"
         ],
-        "commit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
-        "checkedAt": "2026-10-20T15:56:34.712Z",
+        "commit": "4a9420692cd7f868c0e6cf7b5fc532a1bbe8c639",
+        "checkedAt": "2026-11-03T11:30:48.999Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -139629,6 +139629,53 @@
             "reviewedAt": "2026-10-02T17:15:32.161Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
+          "validatedAt": "2026-10-20T15:56:34.712Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T11:30:48.999Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "17xande/omarchy-simple-sip",
+            "pluginIds": [
+              "io.github.17xande.simple-sip"
+            ],
+            "commit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
+            "checkedAt": "2026-10-20T15:56:34.712Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "17xande/omarchy-simple-sip",
+            "pluginIds": [
+              "io.github.17xande.simple-sip"
+            ],
+            "commit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-20T15:56:34.712Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-20T11:52:00.809Z",
+            "requestEventId": 33759328170,
+            "requestedAt": "2026-10-20T15:54:07Z",
+            "reviewedAt": "2026-10-20T15:56:34.712Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -139637,10 +139684,10 @@
         "pluginIds": [
           "io.github.17xande.simple-sip"
         ],
-        "commit": "c20ccca4789d9fbdb4671c9a11aeb4f47cec4ec6",
+        "commit": "4a9420692cd7f868c0e6cf7b5fc532a1bbe8c639",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-20T15:56:34.712Z",
+        "baselineCheckedAt": "2026-11-03T11:30:48.999Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -139648,10 +139695,10 @@
           "service-management",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-20T11:52:00.809Z",
-        "requestEventId": 33759328170,
-        "requestedAt": "2026-10-20T15:54:07Z",
-        "reviewedAt": "2026-10-20T15:56:34.712Z",
+        "reviewedBaselineCheckedAt": "2026-11-03T10:55:11.253Z",
+        "requestEventId": 35012509410,
+        "requestedAt": "2026-11-03T11:30:14Z",
+        "reviewedAt": "2026-11-03T11:30:48.999Z",
         "reviewer": "HANCORE-linux"
       }
     },
