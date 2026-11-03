@@ -8203,8 +8203,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-14",
       "listedAt": "2026-08-14T17:01:35.073Z",
-      "listingValidatedCommit": "9708884de04f4ea8d1e153400328bad083439346",
-      "listingValidatedAt": "2026-10-01T07:46:52.621Z",
+      "listingValidatedCommit": "5b25e95850016365a71c63f2723f781a5a488172",
+      "listingValidatedAt": "2026-11-03T22:29:56.263Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -8213,8 +8213,8 @@
         "pluginIds": [
           "io.github.treramey.raindrop-bookmarks"
         ],
-        "commit": "9708884de04f4ea8d1e153400328bad083439346",
-        "checkedAt": "2026-10-01T07:46:52.621Z",
+        "commit": "5b25e95850016365a71c63f2723f781a5a488172",
+        "checkedAt": "2026-11-03T22:29:56.263Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -8230,27 +8230,6 @@
             "quickshell"
           ]
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "treramey/omarchy-raindrop-bookmarks",
-        "pluginIds": [
-          "io.github.treramey.raindrop-bookmarks"
-        ],
-        "commit": "9708884de04f4ea8d1e153400328bad083439346",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T07:46:52.621Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-25T14:46:39.800Z",
-        "requestEventId": 32231774360,
-        "requestedAt": "2026-10-01T07:43:35Z",
-        "reviewedAt": "2026-10-01T07:46:52.621Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -8269,8 +8248,72 @@
               "package-manager"
             ]
           }
+        },
+        {
+          "commit": "9708884de04f4ea8d1e153400328bad083439346",
+          "validatedAt": "2026-10-01T07:46:52.621Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:29:56.263Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "treramey/omarchy-raindrop-bookmarks",
+            "pluginIds": [
+              "io.github.treramey.raindrop-bookmarks"
+            ],
+            "commit": "9708884de04f4ea8d1e153400328bad083439346",
+            "checkedAt": "2026-10-01T07:46:52.621Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "treramey/omarchy-raindrop-bookmarks",
+            "pluginIds": [
+              "io.github.treramey.raindrop-bookmarks"
+            ],
+            "commit": "9708884de04f4ea8d1e153400328bad083439346",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T07:46:52.621Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-25T14:46:39.800Z",
+            "requestEventId": 32231774360,
+            "requestedAt": "2026-10-01T07:43:35Z",
+            "reviewedAt": "2026-10-01T07:46:52.621Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "treramey/omarchy-raindrop-bookmarks",
+        "pluginIds": [
+          "io.github.treramey.raindrop-bookmarks"
+        ],
+        "commit": "5b25e95850016365a71c63f2723f781a5a488172",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:29:56.263Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T19:22:05.127Z",
+        "requestEventId": 35066704093,
+        "requestedAt": "2026-11-03T21:26:00Z",
+        "reviewedAt": "2026-11-03T22:29:56.263Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/jvlianodorneles/lock-keys",
