@@ -404794,6 +404794,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gasserx/swamp",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T09:05:53.397Z",
+      "listingValidatedCommit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+      "listingValidatedAt": "2026-11-03T09:05:53.397Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gasserx/swamp",
+        "pluginIds": [
+          "gasserx.swamp"
+        ],
+        "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+        "checkedAt": "2026-11-03T09:05:53.215Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gasserx/swamp",
+        "pluginIds": [
+          "gasserx.swamp"
+        ],
+        "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T09:05:53.215Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T08:49:46.464Z",
+        "requestEventId": 34999661134,
+        "requestedAt": "2026-11-03T08:55:55Z",
+        "reviewedAt": "2026-11-03T09:05:53.215Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gasserx.swamp": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
