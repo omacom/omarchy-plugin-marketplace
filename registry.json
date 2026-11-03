@@ -396477,8 +396477,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T03:23:02.267Z",
-      "listingValidatedCommit": "d59ea2974a414316efdaa5323475970bc051b643",
-      "listingValidatedAt": "2026-11-01T12:15:22.682Z",
+      "listingValidatedCommit": "58ba6b1054ed7fdf72b53eff2459ff77ca52c392",
+      "listingValidatedAt": "2026-11-03T11:14:39.316Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -396487,8 +396487,8 @@
         "pluginIds": [
           "io.github.infinifar.omaclipsync"
         ],
-        "commit": "d59ea2974a414316efdaa5323475970bc051b643",
-        "checkedAt": "2026-11-01T12:15:22.682Z",
+        "commit": "58ba6b1054ed7fdf72b53eff2459ff77ca52c392",
+        "checkedAt": "2026-11-03T11:14:39.316Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -396506,27 +396506,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "infinifar/omaclipsync",
-        "pluginIds": [
-          "io.github.infinifar.omaclipsync"
-        ],
-        "commit": "d59ea2974a414316efdaa5323475970bc051b643",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T12:15:22.682Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-01T11:35:47.032Z",
-        "requestEventId": 34830080045,
-        "requestedAt": "2026-11-01T12:14:47Z",
-        "reviewedAt": "2026-11-01T12:15:22.682Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -396571,8 +396550,72 @@
             "reviewedAt": "2026-10-30T03:23:02.087Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "d59ea2974a414316efdaa5323475970bc051b643",
+          "validatedAt": "2026-11-01T12:15:22.682Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T11:14:39.316Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "infinifar/omaclipsync",
+            "pluginIds": [
+              "io.github.infinifar.omaclipsync"
+            ],
+            "commit": "d59ea2974a414316efdaa5323475970bc051b643",
+            "checkedAt": "2026-11-01T12:15:22.682Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "infinifar/omaclipsync",
+            "pluginIds": [
+              "io.github.infinifar.omaclipsync"
+            ],
+            "commit": "d59ea2974a414316efdaa5323475970bc051b643",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T12:15:22.682Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-01T11:35:47.032Z",
+            "requestEventId": 34830080045,
+            "requestedAt": "2026-11-01T12:14:47Z",
+            "reviewedAt": "2026-11-01T12:15:22.682Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "infinifar/omaclipsync",
+        "pluginIds": [
+          "io.github.infinifar.omaclipsync"
+        ],
+        "commit": "58ba6b1054ed7fdf72b53eff2459ff77ca52c392",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T11:14:39.316Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T10:43:36.809Z",
+        "requestEventId": 35011203227,
+        "requestedAt": "2026-11-03T11:14:04Z",
+        "reviewedAt": "2026-11-03T11:14:39.316Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/domingoeloim/Youtube-audio-Eloim",
