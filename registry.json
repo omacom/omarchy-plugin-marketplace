@@ -402537,8 +402537,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T12:10:21.214Z",
-      "listingValidatedCommit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
-      "listingValidatedAt": "2026-11-02T12:10:21.214Z",
+      "listingValidatedCommit": "fe518db3896954dd50b4ac19dccc21a9a62915d7",
+      "listingValidatedAt": "2026-11-03T01:36:48.347Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -402547,8 +402547,8 @@
         "pluginIds": [
           "io.github.0w3n-n.openpad"
         ],
-        "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
-        "checkedAt": "2026-11-02T12:10:21.042Z",
+        "commit": "fe518db3896954dd50b4ac19dccc21a9a62915d7",
+        "checkedAt": "2026-11-03T01:36:48.347Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -402560,31 +402560,6 @@
           "installer"
         ]
       },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "0w3n-n/openpad",
-        "pluginIds": [
-          "io.github.0w3n-n.openpad"
-        ],
-        "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T12:10:21.042Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "remote-build",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-02T12:02:30.837Z",
-        "requestEventId": 34906787468,
-        "requestedAt": "2026-11-02T12:05:17Z",
-        "reviewedAt": "2026-11-02T12:10:21.042Z",
-        "reviewer": "HANCORE-linux"
-      },
       "plugins": {
         "io.github.0w3n-n.openpad": {
           "category": "Productivity",
@@ -402595,7 +402570,85 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0w3n-n/openpad",
+        "pluginIds": [
+          "io.github.0w3n-n.openpad"
+        ],
+        "commit": "fe518db3896954dd50b4ac19dccc21a9a62915d7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T01:36:48.347Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T00:42:17.501Z",
+        "requestEventId": 34973680375,
+        "requestedAt": "2026-11-03T01:31:47Z",
+        "reviewedAt": "2026-11-03T01:36:48.347Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+          "validatedAt": "2026-11-02T12:10:21.214Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T01:36:48.347Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "0w3n-n/openpad",
+            "pluginIds": [
+              "io.github.0w3n-n.openpad"
+            ],
+            "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+            "checkedAt": "2026-11-02T12:10:21.042Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "0w3n-n/openpad",
+            "pluginIds": [
+              "io.github.0w3n-n.openpad"
+            ],
+            "commit": "47c2ff86c0a0c691fc650d8aa56f6f9806b75249",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T12:10:21.042Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "remote-build",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T12:02:30.837Z",
+            "requestEventId": 34906787468,
+            "requestedAt": "2026-11-02T12:05:17Z",
+            "reviewedAt": "2026-11-02T12:10:21.042Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/crsstha/ytm-bar",
