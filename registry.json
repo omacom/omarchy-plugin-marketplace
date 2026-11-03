@@ -390098,8 +390098,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T00:55:45.527Z",
-      "listingValidatedCommit": "83acd9cbddaa29d368ec72656004dc833e65f995",
-      "listingValidatedAt": "2026-11-01T10:54:46.881Z",
+      "listingValidatedCommit": "68945d066680a9c680f356b9446c62399a6cc52b",
+      "listingValidatedAt": "2026-11-03T22:24:55.773Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -390108,8 +390108,8 @@
         "pluginIds": [
           "io.github.apachaiz.quay"
         ],
-        "commit": "83acd9cbddaa29d368ec72656004dc833e65f995",
-        "checkedAt": "2026-11-01T10:54:46.881Z",
+        "commit": "68945d066680a9c680f356b9446c62399a6cc52b",
+        "checkedAt": "2026-11-03T22:24:55.773Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -390161,6 +390161,26 @@
             ],
             "commit": "0432a42fa861fef4f7e12ab75a5b2793d28fd584",
             "checkedAt": "2026-11-01T10:05:54.107Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "83acd9cbddaa29d368ec72656004dc833e65f995",
+          "validatedAt": "2026-11-01T10:54:46.881Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:24:55.773Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-quay",
+            "pluginIds": [
+              "io.github.apachaiz.quay"
+            ],
+            "commit": "83acd9cbddaa29d368ec72656004dc833e65f995",
+            "checkedAt": "2026-11-01T10:54:46.881Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
