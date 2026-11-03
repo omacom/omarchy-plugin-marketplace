@@ -385804,8 +385804,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T17:57:49.272Z",
-      "listingValidatedCommit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
-      "listingValidatedAt": "2026-10-26T17:57:49.272Z",
+      "listingValidatedCommit": "ba35729d318fabe8c0ee19e9ed2929031efbbbaa",
+      "listingValidatedAt": "2026-11-03T01:05:17.147Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -385814,8 +385814,8 @@
         "pluginIds": [
           "rohirik.oma-caffe"
         ],
-        "commit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
-        "checkedAt": "2026-10-26T17:57:49.119Z",
+        "commit": "ba35729d318fabe8c0ee19e9ed2929031efbbbaa",
+        "checkedAt": "2026-11-03T01:05:17.147Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -385825,30 +385825,6 @@
           "package-manager",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "rohirik/oma-caffe",
-        "pluginIds": [
-          "rohirik.oma-caffe"
-        ],
-        "commit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T17:57:49.119Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-26T14:39:20.382Z",
-        "requestEventId": 34288835510,
-        "requestedAt": "2026-10-26T17:52:49Z",
-        "reviewedAt": "2026-10-26T17:57:49.119Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "rohirik.oma-caffe": {
@@ -385860,7 +385836,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rohirik/oma-caffe",
+        "pluginIds": [
+          "rohirik.oma-caffe"
+        ],
+        "commit": "ba35729d318fabe8c0ee19e9ed2929031efbbbaa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T01:05:17.147Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T07:24:55.866Z",
+        "requestEventId": 34970136779,
+        "requestedAt": "2026-11-03T00:35:27Z",
+        "reviewedAt": "2026-11-03T01:05:17.147Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
+          "validatedAt": "2026-10-26T17:57:49.272Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T01:05:17.147Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rohirik/oma-caffe",
+            "pluginIds": [
+              "rohirik.oma-caffe"
+            ],
+            "commit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
+            "checkedAt": "2026-10-26T17:57:49.119Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "rohirik/oma-caffe",
+            "pluginIds": [
+              "rohirik.oma-caffe"
+            ],
+            "commit": "78be2736be8b3f91f4b32e6b2aa7022400e128b5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T17:57:49.119Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-26T14:39:20.382Z",
+            "requestEventId": 34288835510,
+            "requestedAt": "2026-10-26T17:52:49Z",
+            "reviewedAt": "2026-10-26T17:57:49.119Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rover-001/voxel",
