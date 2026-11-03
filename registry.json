@@ -290608,8 +290608,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T15:42:51.126Z",
-      "listingValidatedCommit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
-      "listingValidatedAt": "2026-10-01T15:42:51.126Z",
+      "listingValidatedCommit": "1dc88a4b5c153dcbdf549ab991d30f566fda377e",
+      "listingValidatedAt": "2026-11-03T01:09:43.158Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -290618,8 +290618,8 @@
         "pluginIds": [
           "petealeon.router"
         ],
-        "commit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
-        "checkedAt": "2026-10-01T15:42:51.033Z",
+        "commit": "1dc88a4b5c153dcbdf549ab991d30f566fda377e",
+        "checkedAt": "2026-11-03T01:09:43.158Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -290627,28 +290627,6 @@
           "installer",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "petealeon/audio-router",
-        "pluginIds": [
-          "petealeon.router"
-        ],
-        "commit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T15:42:51.033Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-01T09:11:05.120Z",
-        "requestEventId": 32264877258,
-        "requestedAt": "2026-10-01T15:26:49Z",
-        "reviewedAt": "2026-10-01T15:42:51.033Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "petealeon.router": {
@@ -290660,7 +290638,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "petealeon/audio-router",
+        "pluginIds": [
+          "petealeon.router"
+        ],
+        "commit": "1dc88a4b5c153dcbdf549ab991d30f566fda377e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T01:09:43.158Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T08:59:49.246Z",
+        "requestEventId": 34970349073,
+        "requestedAt": "2026-11-03T00:39:14Z",
+        "reviewedAt": "2026-11-03T01:09:43.158Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
+          "validatedAt": "2026-10-01T15:42:51.126Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T01:09:43.158Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "petealeon/audio-router",
+            "pluginIds": [
+              "petealeon.router"
+            ],
+            "commit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
+            "checkedAt": "2026-10-01T15:42:51.033Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "petealeon/audio-router",
+            "pluginIds": [
+              "petealeon.router"
+            ],
+            "commit": "a84a2f4d5b5e863d2a9bc7d372aaba81f54f5cb4",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T15:42:51.033Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-01T09:11:05.120Z",
+            "requestEventId": 32264877258,
+            "requestedAt": "2026-10-01T15:26:49Z",
+            "reviewedAt": "2026-10-01T15:42:51.033Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/gran-software-solutions/ohlala-omarchy-plugin",
