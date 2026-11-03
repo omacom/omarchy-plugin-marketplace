@@ -386596,8 +386596,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T13:41:10.686Z",
-      "listingValidatedCommit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
-      "listingValidatedAt": "2026-10-26T13:41:10.686Z",
+      "listingValidatedCommit": "8646ed537a36af78399398b900cc2f857a9e7589",
+      "listingValidatedAt": "2026-11-03T23:33:52.554Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -386606,8 +386606,8 @@
         "pluginIds": [
           "juangalt.seafile"
         ],
-        "commit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
-        "checkedAt": "2026-10-26T13:41:10.539Z",
+        "commit": "8646ed537a36af78399398b900cc2f857a9e7589",
+        "checkedAt": "2026-11-03T23:33:52.554Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -386616,29 +386616,6 @@
           "service-management",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "juangalt/omarchy-seafile-plugin",
-        "pluginIds": [
-          "juangalt.seafile"
-        ],
-        "commit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T13:41:10.539Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-26T13:27:45.136Z",
-        "requestEventId": 34263777190,
-        "requestedAt": "2026-10-26T13:37:08Z",
-        "reviewedAt": "2026-10-26T13:41:10.539Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "juangalt.seafile": {
@@ -386650,7 +386627,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "juangalt/omarchy-seafile-plugin",
+        "pluginIds": [
+          "juangalt.seafile"
+        ],
+        "commit": "8646ed537a36af78399398b900cc2f857a9e7589",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T23:33:52.554Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T22:09:01.674Z",
+        "requestEventId": 35073409563,
+        "requestedAt": "2026-11-03T22:55:00Z",
+        "reviewedAt": "2026-11-03T23:33:52.554Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
+          "validatedAt": "2026-10-26T13:41:10.686Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T23:33:52.554Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "juangalt/omarchy-seafile-plugin",
+            "pluginIds": [
+              "juangalt.seafile"
+            ],
+            "commit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
+            "checkedAt": "2026-10-26T13:41:10.539Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "juangalt/omarchy-seafile-plugin",
+            "pluginIds": [
+              "juangalt.seafile"
+            ],
+            "commit": "26e0ecb3b6c691c646eddc2c45072d77229948ca",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T13:41:10.539Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-26T13:27:45.136Z",
+            "requestEventId": 34263777190,
+            "requestedAt": "2026-10-26T13:37:08Z",
+            "reviewedAt": "2026-10-26T13:41:10.539Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/cylon58/omarchy-boot-wake",
