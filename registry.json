@@ -366882,8 +366882,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-18",
       "listedAt": "2026-10-18T11:03:24.815Z",
-      "listingValidatedCommit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
-      "listingValidatedAt": "2026-10-18T11:03:24.815Z",
+      "listingValidatedCommit": "949c34b1d7afc485166708702b16f3da3d0aab05",
+      "listingValidatedAt": "2026-11-03T00:55:51.748Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -366892,8 +366892,8 @@
         "pluginIds": [
           "io.github.techluddite.luddite-scout"
         ],
-        "commit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
-        "checkedAt": "2026-10-18T11:03:24.665Z",
+        "commit": "949c34b1d7afc485166708702b16f3da3d0aab05",
+        "checkedAt": "2026-11-03T00:55:51.748Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -366902,29 +366902,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "techluddite/luddite-scout",
-        "pluginIds": [
-          "io.github.techluddite.luddite-scout"
-        ],
-        "commit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-18T11:03:24.665Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-18T11:01:12.438Z",
-        "requestEventId": 33567896388,
-        "requestedAt": "2026-10-18T11:02:51Z",
-        "reviewedAt": "2026-10-18T11:03:24.666Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.techluddite.luddite-scout": {
@@ -366936,7 +366913,79 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "techluddite/luddite-scout",
+        "pluginIds": [
+          "io.github.techluddite.luddite-scout"
+        ],
+        "commit": "949c34b1d7afc485166708702b16f3da3d0aab05",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T00:55:51.748Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T04:27:05.551Z",
+        "requestEventId": 34970043816,
+        "requestedAt": "2026-11-03T00:33:47Z",
+        "reviewedAt": "2026-11-03T00:55:51.748Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
+          "validatedAt": "2026-10-18T11:03:24.815Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T00:55:51.748Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "techluddite/luddite-scout",
+            "pluginIds": [
+              "io.github.techluddite.luddite-scout"
+            ],
+            "commit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
+            "checkedAt": "2026-10-18T11:03:24.665Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "techluddite/luddite-scout",
+            "pluginIds": [
+              "io.github.techluddite.luddite-scout"
+            ],
+            "commit": "accc9bfb9f89d97bca7de1e0d43f48d2c9c57402",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-18T11:03:24.665Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-18T11:01:12.438Z",
+            "requestEventId": 33567896388,
+            "requestedAt": "2026-10-18T11:02:51Z",
+            "reviewedAt": "2026-10-18T11:03:24.666Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/the0Kanu/omarchy-network-panel-plus-plugin",
