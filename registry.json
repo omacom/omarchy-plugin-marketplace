@@ -400204,8 +400204,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T10:22:12.406Z",
-      "listingValidatedCommit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
-      "listingValidatedAt": "2026-11-01T10:22:12.406Z",
+      "listingValidatedCommit": "5ec05cc02d4ca3cc5839bddd4605209022bfe7d3",
+      "listingValidatedAt": "2026-11-03T09:23:17.227Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -400214,8 +400214,8 @@
         "pluginIds": [
           "io.github.nulluserid.dishy"
         ],
-        "commit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
-        "checkedAt": "2026-11-01T10:22:12.257Z",
+        "commit": "5ec05cc02d4ca3cc5839bddd4605209022bfe7d3",
+        "checkedAt": "2026-11-03T09:23:17.227Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -400224,29 +400224,6 @@
           "service-management",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "nulluserid/omarchy-dishy",
-        "pluginIds": [
-          "io.github.nulluserid.dishy"
-        ],
-        "commit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T10:22:12.257Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-31T22:57:30.114Z",
-        "requestEventId": 34825743846,
-        "requestedAt": "2026-11-01T10:21:38Z",
-        "reviewedAt": "2026-11-01T10:22:12.257Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.nulluserid.dishy": {
@@ -400261,7 +400238,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nulluserid/omarchy-dishy",
+        "pluginIds": [
+          "io.github.nulluserid.dishy"
+        ],
+        "commit": "5ec05cc02d4ca3cc5839bddd4605209022bfe7d3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T09:23:17.227Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T03:57:39.877Z",
+        "requestEventId": 35001415662,
+        "requestedAt": "2026-11-03T09:18:02Z",
+        "reviewedAt": "2026-11-03T09:23:17.227Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
+          "validatedAt": "2026-11-01T10:22:12.406Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T09:23:17.227Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nulluserid/omarchy-dishy",
+            "pluginIds": [
+              "io.github.nulluserid.dishy"
+            ],
+            "commit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
+            "checkedAt": "2026-11-01T10:22:12.257Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "nulluserid/omarchy-dishy",
+            "pluginIds": [
+              "io.github.nulluserid.dishy"
+            ],
+            "commit": "f7bd835df1cad3a9860b086784a165026be1b9ba",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T10:22:12.257Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-31T22:57:30.114Z",
+            "requestEventId": 34825743846,
+            "requestedAt": "2026-11-01T10:21:38Z",
+            "reviewedAt": "2026-11-01T10:22:12.257Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/flaviomartil/omarchy-to-windows",
