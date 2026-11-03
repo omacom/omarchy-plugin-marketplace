@@ -19160,8 +19160,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T00:36:35.468Z",
-      "listingValidatedCommit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
-      "listingValidatedAt": "2026-10-31T20:23:47.770Z",
+      "listingValidatedCommit": "2eea8816bae146ec4bed1894b71bb9b2350b063d",
+      "listingValidatedAt": "2026-11-03T00:10:38.986Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -19170,8 +19170,8 @@
         "pluginIds": [
           "io.github.sirjul1337.lock-explorer"
         ],
-        "commit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
-        "checkedAt": "2026-10-31T20:23:47.770Z",
+        "commit": "2eea8816bae146ec4bed1894b71bb9b2350b063d",
+        "checkedAt": "2026-11-03T00:10:38.986Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -19606,6 +19606,55 @@
             "reviewedAt": "2026-10-28T12:05:30.297Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
+          "validatedAt": "2026-10-31T20:23:47.770Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T00:10:38.986Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sirjul1337/omarchy-lock-explorer",
+            "pluginIds": [
+              "io.github.sirjul1337.lock-explorer"
+            ],
+            "commit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
+            "checkedAt": "2026-10-31T20:23:47.770Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sirjul1337/omarchy-lock-explorer",
+            "pluginIds": [
+              "io.github.sirjul1337.lock-explorer"
+            ],
+            "commit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-31T20:23:47.770Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-31T15:49:34.513Z",
+            "requestEventId": 34795607015,
+            "requestedAt": "2026-10-31T20:09:47Z",
+            "reviewedAt": "2026-10-31T20:23:47.770Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -19614,10 +19663,10 @@
         "pluginIds": [
           "io.github.sirjul1337.lock-explorer"
         ],
-        "commit": "930d955f1ef9ca94b1a208df478ec8c4e25994de",
+        "commit": "2eea8816bae146ec4bed1894b71bb9b2350b063d",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-31T20:23:47.770Z",
+        "baselineCheckedAt": "2026-11-03T00:10:38.986Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -19626,10 +19675,10 @@
           "service-management",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-31T15:49:34.513Z",
-        "requestEventId": 34795607015,
-        "requestedAt": "2026-10-31T20:09:47Z",
-        "reviewedAt": "2026-10-31T20:23:47.770Z",
+        "reviewedBaselineCheckedAt": "2026-11-02T21:47:45.974Z",
+        "requestEventId": 34967853161,
+        "requestedAt": "2026-11-02T23:57:38Z",
+        "reviewedAt": "2026-11-03T00:10:38.986Z",
         "reviewer": "HANCORE-linux"
       }
     },
