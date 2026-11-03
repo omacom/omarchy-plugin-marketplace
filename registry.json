@@ -248286,8 +248286,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-23",
       "listedAt": "2026-09-23T01:22:12.331Z",
-      "listingValidatedCommit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
-      "listingValidatedAt": "2026-10-03T20:59:21.901Z",
+      "listingValidatedCommit": "bb29c1d1e8976f7e6a79a43cad72b3dff6ecec20",
+      "listingValidatedAt": "2026-11-03T09:10:14.492Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -248296,8 +248296,8 @@
         "pluginIds": [
           "vinicgobbi.power"
         ],
-        "commit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
-        "checkedAt": "2026-10-03T20:59:21.901Z",
+        "commit": "bb29c1d1e8976f7e6a79a43cad72b3dff6ecec20",
+        "checkedAt": "2026-11-03T09:10:14.492Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -248313,27 +248313,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "vinicgobbi/omarchy-plugin-power",
-        "pluginIds": [
-          "vinicgobbi.power"
-        ],
-        "commit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-03T20:59:21.901Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-03T19:39:30.078Z",
-        "requestEventId": 32414407063,
-        "requestedAt": "2026-10-03T20:56:49Z",
-        "reviewedAt": "2026-10-03T20:59:21.901Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -248378,8 +248357,72 @@
             "reviewedAt": "2026-09-23T01:22:12.225Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
+          "validatedAt": "2026-10-03T20:59:21.901Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T09:10:14.492Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vinicgobbi/omarchy-plugin-power",
+            "pluginIds": [
+              "vinicgobbi.power"
+            ],
+            "commit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
+            "checkedAt": "2026-10-03T20:59:21.901Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "vinicgobbi/omarchy-plugin-power",
+            "pluginIds": [
+              "vinicgobbi.power"
+            ],
+            "commit": "8f3f8871f557ee62ba0d2f93ea90db5bdd61c6ae",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-03T20:59:21.901Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-03T19:39:30.078Z",
+            "requestEventId": 32414407063,
+            "requestedAt": "2026-10-03T20:56:49Z",
+            "reviewedAt": "2026-10-03T20:59:21.901Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vinicgobbi/omarchy-plugin-power",
+        "pluginIds": [
+          "vinicgobbi.power"
+        ],
+        "commit": "bb29c1d1e8976f7e6a79a43cad72b3dff6ecec20",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T09:10:14.492Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T02:19:18.691Z",
+        "requestEventId": 35000187188,
+        "requestedAt": "2026-11-03T09:02:52Z",
+        "reviewedAt": "2026-11-03T09:10:14.492Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/srlinuxme/omarchy-vpn-plugin",
