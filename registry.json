@@ -389400,8 +389400,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-27",
       "listedAt": "2026-10-27T23:14:15.514Z",
-      "listingValidatedCommit": "0a506b0e51dbc039b3e4a42ac8b9227236f144be",
-      "listingValidatedAt": "2026-10-27T23:14:15.514Z",
+      "listingValidatedCommit": "bf1345b2670878bc6ce053b962ec831e0d7d47d8",
+      "listingValidatedAt": "2026-11-03T23:12:27.492Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -389410,8 +389410,8 @@
         "pluginIds": [
           "io.github.avillagran.omarchy-mailbox"
         ],
-        "commit": "0a506b0e51dbc039b3e4a42ac8b9227236f144be",
-        "checkedAt": "2026-10-27T23:14:15.354Z",
+        "commit": "bf1345b2670878bc6ce053b962ec831e0d7d47d8",
+        "checkedAt": "2026-11-03T23:12:27.492Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -389430,7 +389430,29 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0a506b0e51dbc039b3e4a42ac8b9227236f144be",
+          "validatedAt": "2026-10-27T23:14:15.514Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T23:12:27.492Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "avillagran/omarchy-mailbox",
+            "pluginIds": [
+              "io.github.avillagran.omarchy-mailbox"
+            ],
+            "commit": "0a506b0e51dbc039b3e4a42ac8b9227236f144be",
+            "checkedAt": "2026-10-27T23:14:15.354Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/silentjay/monzo-glance",
