@@ -404679,6 +404679,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/makehasteslowly/omarchy-heliolune",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T08:28:28.118Z",
+      "listingValidatedCommit": "053c5b1541fd4506fb73a3a25945cdaaea902633",
+      "listingValidatedAt": "2026-11-03T08:28:28.118Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "makehasteslowly/omarchy-heliolune",
+        "pluginIds": [
+          "makehasteslowly.heliolune"
+        ],
+        "commit": "053c5b1541fd4506fb73a3a25945cdaaea902633",
+        "checkedAt": "2026-11-03T08:28:27.936Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "makehasteslowly.heliolune": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
