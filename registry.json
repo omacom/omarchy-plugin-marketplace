@@ -277608,8 +277608,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-28",
       "listedAt": "2026-09-28T10:23:47.396Z",
-      "listingValidatedCommit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
-      "listingValidatedAt": "2026-09-28T10:23:47.396Z",
+      "listingValidatedCommit": "da1d991a4ba0d7f448e690bd619c3938612a1ec8",
+      "listingValidatedAt": "2026-11-03T20:17:40.669Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -277618,8 +277618,8 @@
         "pluginIds": [
           "io.github.atoslins.whatsapp"
         ],
-        "commit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
-        "checkedAt": "2026-09-28T10:23:47.279Z",
+        "commit": "da1d991a4ba0d7f448e690bd619c3938612a1ec8",
+        "checkedAt": "2026-11-03T20:17:40.669Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -277627,28 +277627,6 @@
           "service-management",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "atoslins/omarchy-whatsapp-v2",
-        "pluginIds": [
-          "io.github.atoslins.whatsapp"
-        ],
-        "commit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-28T10:23:47.279Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-28T10:18:33.819Z",
-        "requestEventId": 31982931714,
-        "requestedAt": "2026-09-28T10:21:32Z",
-        "reviewedAt": "2026-09-28T10:23:47.279Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.atoslins.whatsapp": {
@@ -277664,7 +277642,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "atoslins/omarchy-whatsapp-v2",
+        "pluginIds": [
+          "io.github.atoslins.whatsapp"
+        ],
+        "commit": "da1d991a4ba0d7f448e690bd619c3938612a1ec8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T20:17:40.669Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T14:57:50.320Z",
+        "requestEventId": 35056280888,
+        "requestedAt": "2026-11-03T19:18:41Z",
+        "reviewedAt": "2026-11-03T20:17:40.669Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
+          "validatedAt": "2026-09-28T10:23:47.396Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T20:17:40.669Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "atoslins/omarchy-whatsapp-v2",
+            "pluginIds": [
+              "io.github.atoslins.whatsapp"
+            ],
+            "commit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
+            "checkedAt": "2026-09-28T10:23:47.279Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "atoslins/omarchy-whatsapp-v2",
+            "pluginIds": [
+              "io.github.atoslins.whatsapp"
+            ],
+            "commit": "a61acbbb05f3e0cadf0774f258e9a10bf562d143",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-28T10:23:47.279Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-28T10:18:33.819Z",
+            "requestEventId": 31982931714,
+            "requestedAt": "2026-09-28T10:21:32Z",
+            "reviewedAt": "2026-09-28T10:23:47.279Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nzkritik/omarchy-matrix-lock",
