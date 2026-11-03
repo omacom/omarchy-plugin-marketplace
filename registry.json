@@ -396655,8 +396655,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T23:02:32.836Z",
-      "listingValidatedCommit": "510ee2a76273506242fc1d26b92047736c588ccd",
-      "listingValidatedAt": "2026-10-30T23:02:32.836Z",
+      "listingValidatedCommit": "51cfcce0337765ab38bb722765cc0b0f6aa270fa",
+      "listingValidatedAt": "2026-11-03T01:00:36.829Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -396665,8 +396665,8 @@
         "pluginIds": [
           "konochi.konocontrol"
         ],
-        "commit": "510ee2a76273506242fc1d26b92047736c588ccd",
-        "checkedAt": "2026-10-30T23:02:32.725Z",
+        "commit": "51cfcce0337765ab38bb722765cc0b0f6aa270fa",
+        "checkedAt": "2026-11-03T01:00:36.829Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -396682,7 +396682,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "510ee2a76273506242fc1d26b92047736c588ccd",
+          "validatedAt": "2026-10-30T23:02:32.836Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T01:00:36.829Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "xvvhang/omarchy-konocontrol-plugin",
+            "pluginIds": [
+              "konochi.konocontrol"
+            ],
+            "commit": "510ee2a76273506242fc1d26b92047736c588ccd",
+            "checkedAt": "2026-10-30T23:02:32.725Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/remigius-labs/omarchy-cve-vulnerability-scanner",
