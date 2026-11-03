@@ -403609,6 +403609,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/typecraft-dev/oma-cast",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T00:20:17.690Z",
+      "listingValidatedCommit": "98bd0bb1cd1adf787afc704ff31f951d3c938708",
+      "listingValidatedAt": "2026-11-03T00:20:17.690Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "typecraft-dev/oma-cast",
+        "pluginIds": [
+          "typecraft.omacast"
+        ],
+        "commit": "98bd0bb1cd1adf787afc704ff31f951d3c938708",
+        "checkedAt": "2026-11-03T00:20:17.501Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "typecraft-dev/oma-cast",
+        "pluginIds": [
+          "typecraft.omacast"
+        ],
+        "commit": "98bd0bb1cd1adf787afc704ff31f951d3c938708",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T00:20:17.501Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T23:43:22.573Z",
+        "requestEventId": 34968617720,
+        "requestedAt": "2026-11-03T00:10:01Z",
+        "reviewedAt": "2026-11-03T00:20:17.501Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "typecraft.omacast": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
