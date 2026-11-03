@@ -385745,8 +385745,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T09:05:30.975Z",
-      "listingValidatedCommit": "56b4bc13320d709e443d38eba62726efde084fb9",
-      "listingValidatedAt": "2026-10-28T09:28:37.003Z",
+      "listingValidatedCommit": "1959e1ff99785df6fabf47a9853ea43950ce711d",
+      "listingValidatedAt": "2026-11-03T22:59:57.876Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -385755,12 +385755,15 @@
         "pluginIds": [
           "hello-lock"
         ],
-        "commit": "56b4bc13320d709e443d38eba62726efde084fb9",
-        "checkedAt": "2026-10-28T09:28:37.003Z",
-        "outcome": "passed",
+        "commit": "1959e1ff99785df6fabf47a9853ea43950ce711d",
+        "checkedAt": "2026-11-03T22:59:57.876Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
       },
       "plugins": {
         "hello-lock": {
@@ -385792,8 +385795,50 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "56b4bc13320d709e443d38eba62726efde084fb9",
+          "validatedAt": "2026-10-28T09:28:37.003Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:59:57.876Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "denonmaryland/hello-lock",
+            "pluginIds": [
+              "hello-lock"
+            ],
+            "commit": "56b4bc13320d709e443d38eba62726efde084fb9",
+            "checkedAt": "2026-10-28T09:28:37.003Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "denonmaryland/hello-lock",
+        "pluginIds": [
+          "hello-lock"
+        ],
+        "commit": "1959e1ff99785df6fabf47a9853ea43950ce711d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:59:57.876Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T20:03:34.271Z",
+        "requestEventId": 35071051721,
+        "requestedAt": "2026-11-03T22:22:30Z",
+        "reviewedAt": "2026-11-03T22:59:57.876Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/thealejandro/omarchy-island",
