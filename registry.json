@@ -403403,6 +403403,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/goldbarth/omarchy-scenula",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T00:01:14.788Z",
+      "listingValidatedCommit": "c043376113b834fda5215862d69af4e81e20c0b9",
+      "listingValidatedAt": "2026-11-03T00:01:14.788Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "goldbarth/omarchy-scenula",
+        "pluginIds": [
+          "goldbarth.scenula"
+        ],
+        "commit": "c043376113b834fda5215862d69af4e81e20c0b9",
+        "checkedAt": "2026-11-03T00:01:14.617Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "goldbarth.scenula": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
