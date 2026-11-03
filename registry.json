@@ -26883,8 +26883,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T21:12:01.006Z",
-      "listingValidatedCommit": "0840aa51234d5894d52487a034830cdd80228ee6",
-      "listingValidatedAt": "2026-08-18T21:12:01.006Z",
+      "listingValidatedCommit": "fa4ee2ede1994c57a71e6bc1a2c2a7e42a97c53d",
+      "listingValidatedAt": "2026-11-03T22:11:41.411Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -26893,12 +26893,14 @@
         "pluginIds": [
           "primo.global-menu"
         ],
-        "commit": "0840aa51234d5894d52487a034830cdd80228ee6",
-        "checkedAt": "2026-08-18T06:35:52.957Z",
-        "outcome": "passed",
+        "commit": "fa4ee2ede1994c57a71e6bc1a2c2a7e42a97c53d",
+        "checkedAt": "2026-11-03T22:11:41.411Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "service-management"
+        ]
       },
       "plugins": {
         "primo.global-menu": {
@@ -26912,7 +26914,50 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "primogamestudio/primo.global-menu",
+        "pluginIds": [
+          "primo.global-menu"
+        ],
+        "commit": "fa4ee2ede1994c57a71e6bc1a2c2a7e42a97c53d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:11:41.411Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T20:44:38.567Z",
+        "requestEventId": 35064804534,
+        "requestedAt": "2026-11-03T21:02:26Z",
+        "reviewedAt": "2026-11-03T22:11:41.411Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0840aa51234d5894d52487a034830cdd80228ee6",
+          "validatedAt": "2026-08-18T21:12:01.006Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:11:41.411Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "primogamestudio/primo.global-menu",
+            "pluginIds": [
+              "primo.global-menu"
+            ],
+            "commit": "0840aa51234d5894d52487a034830cdd80228ee6",
+            "checkedAt": "2026-08-18T06:35:52.957Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ak127a/thermals",
