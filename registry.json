@@ -403690,6 +403690,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/stefanoconiglio/omarchy-power",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T00:32:32.608Z",
+      "listingValidatedCommit": "266326fa7e7aff0fc950cce99c6cf04b5b8c393c",
+      "listingValidatedAt": "2026-11-03T00:32:32.608Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "stefanoconiglio/omarchy-power",
+        "pluginIds": [
+          "coniglio.power"
+        ],
+        "commit": "266326fa7e7aff0fc950cce99c6cf04b5b8c393c",
+        "checkedAt": "2026-11-03T00:32:32.416Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "coniglio.power": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
