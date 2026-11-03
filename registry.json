@@ -403723,6 +403723,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Tiedeyez/omacube",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T00:37:08.933Z",
+      "listingValidatedCommit": "524b9cdc5753a9214b471688fb402a1eb14077f2",
+      "listingValidatedAt": "2026-11-03T00:37:08.933Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiedeyez/omacube",
+        "pluginIds": [
+          "tiedeyez.omacube"
+        ],
+        "commit": "524b9cdc5753a9214b471688fb402a1eb14077f2",
+        "checkedAt": "2026-11-03T00:37:08.750Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tiedeyez.omacube": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
