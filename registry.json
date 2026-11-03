@@ -404477,6 +404477,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/bayrock/omarchy-music-visualizer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T08:07:09.488Z",
+      "listingValidatedCommit": "572d67db61aa697ab349903c8d11f1be0b29e3c5",
+      "listingValidatedAt": "2026-11-03T08:07:09.488Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bayrock/omarchy-music-visualizer",
+        "pluginIds": [
+          "bayrock.music-visualizer"
+        ],
+        "commit": "572d67db61aa697ab349903c8d11f1be0b29e3c5",
+        "checkedAt": "2026-11-03T08:07:09.307Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bayrock/omarchy-music-visualizer",
+        "pluginIds": [
+          "bayrock.music-visualizer"
+        ],
+        "commit": "572d67db61aa697ab349903c8d11f1be0b29e3c5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T08:07:09.307Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T07:57:50.778Z",
+        "requestEventId": 34995771387,
+        "requestedAt": "2026-11-03T08:02:32Z",
+        "reviewedAt": "2026-11-03T08:07:09.307Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bayrock.music-visualizer": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
