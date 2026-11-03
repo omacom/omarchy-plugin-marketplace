@@ -404318,6 +404318,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Rysen-Winters/omarchy-quick-steam",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T07:53:30.693Z",
+      "listingValidatedCommit": "9265d429945051d1abbb5f67f349741dc41ae333",
+      "listingValidatedAt": "2026-11-03T07:53:30.693Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rysen-winters/omarchy-quick-steam",
+        "pluginIds": [
+          "io.github.rysen-winters.quick-steam"
+        ],
+        "commit": "9265d429945051d1abbb5f67f349741dc41ae333",
+        "checkedAt": "2026-11-03T07:53:30.515Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rysen-winters.quick-steam": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
