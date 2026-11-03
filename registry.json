@@ -405614,6 +405614,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lsunol/omarchy-yet-another-power-meter",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T19:14:30.542Z",
+      "listingValidatedCommit": "5bfad88ccf438c894165af73d466d047ccccd8af",
+      "listingValidatedAt": "2026-11-03T19:14:30.542Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lsunol/omarchy-yet-another-power-meter",
+        "pluginIds": [
+          "yet-another-power-meter"
+        ],
+        "commit": "5bfad88ccf438c894165af73d466d047ccccd8af",
+        "checkedAt": "2026-11-03T19:14:30.343Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yet-another-power-meter": {
+          "category": "System",
+          "tags": [
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
