@@ -312564,8 +312564,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-03",
       "listedAt": "2026-10-03T20:07:37.215Z",
-      "listingValidatedCommit": "c6b18df01a0e23ff217e547ee23b9cb9981f12a5",
-      "listingValidatedAt": "2026-10-03T20:07:37.215Z",
+      "listingValidatedCommit": "eb9bbae26878ea308f8519cb0caf6565c65b2c68",
+      "listingValidatedAt": "2026-11-03T08:56:24.340Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -312574,8 +312574,8 @@
         "pluginIds": [
           "vinicgobbi.clipboard"
         ],
-        "commit": "c6b18df01a0e23ff217e547ee23b9cb9981f12a5",
-        "checkedAt": "2026-10-03T20:07:37.087Z",
+        "commit": "eb9bbae26878ea308f8519cb0caf6565c65b2c68",
+        "checkedAt": "2026-11-03T08:56:24.340Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -312589,7 +312589,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c6b18df01a0e23ff217e547ee23b9cb9981f12a5",
+          "validatedAt": "2026-10-03T20:07:37.215Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T08:56:24.340Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vinicgobbi/omarchy-plugin-clipboard",
+            "pluginIds": [
+              "vinicgobbi.clipboard"
+            ],
+            "commit": "c6b18df01a0e23ff217e547ee23b9cb9981f12a5",
+            "checkedAt": "2026-10-03T20:07:37.087Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nchudleigh/omac",
