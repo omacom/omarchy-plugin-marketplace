@@ -403234,8 +403234,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T15:35:55.546Z",
-      "listingValidatedCommit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
-      "listingValidatedAt": "2026-11-02T15:35:55.546Z",
+      "listingValidatedCommit": "f2e9740cc5dbd31ac7ad61af80c8a0533d2de237",
+      "listingValidatedAt": "2026-11-03T02:03:58.889Z",
       "listingValidatedBranch": "new-release",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -403244,8 +403244,8 @@
         "pluginIds": [
           "dragos.hyprdrive"
         ],
-        "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
-        "checkedAt": "2026-11-02T15:35:55.399Z",
+        "commit": "f2e9740cc5dbd31ac7ad61af80c8a0533d2de237",
+        "checkedAt": "2026-11-03T02:03:58.889Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -403255,30 +403255,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dragosol/hyprdrive-omarchy",
-        "pluginIds": [
-          "dragos.hyprdrive"
-        ],
-        "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T15:35:55.399Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "service-management",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-02T14:58:49.311Z",
-        "requestEventId": 34926126770,
-        "requestedAt": "2026-11-02T15:35:03Z",
-        "reviewedAt": "2026-11-02T15:35:55.399Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "dragos.hyprdrive": {
@@ -403294,7 +403270,82 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dragosol/hyprdrive-omarchy",
+        "pluginIds": [
+          "dragos.hyprdrive"
+        ],
+        "commit": "f2e9740cc5dbd31ac7ad61af80c8a0533d2de237",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T02:03:58.889Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T01:32:02.248Z",
+        "requestEventId": 34975624092,
+        "requestedAt": "2026-11-03T02:01:18Z",
+        "reviewedAt": "2026-11-03T02:03:58.889Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+          "validatedAt": "2026-11-02T15:35:55.546Z",
+          "branch": "new-release",
+          "supersededAt": "2026-11-03T02:03:58.889Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dragosol/hyprdrive-omarchy",
+            "pluginIds": [
+              "dragos.hyprdrive"
+            ],
+            "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+            "checkedAt": "2026-11-02T15:35:55.399Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dragosol/hyprdrive-omarchy",
+            "pluginIds": [
+              "dragos.hyprdrive"
+            ],
+            "commit": "d257fef8ffcbe95730fa219080fe667712b30b3b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T15:35:55.399Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T14:58:49.311Z",
+            "requestEventId": 34926126770,
+            "requestedAt": "2026-11-02T15:35:03Z",
+            "reviewedAt": "2026-11-02T15:35:55.399Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/erikrjohansson/omarchy-extended-keybindings-viewer",
