@@ -401900,8 +401900,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T11:12:53.010Z",
-      "listingValidatedCommit": "325796ccc7ff624c41d36f4f4c28879b10461435",
-      "listingValidatedAt": "2026-11-01T15:16:27.634Z",
+      "listingValidatedCommit": "dca2f16e5370d4c377131c43a103cce38b896243",
+      "listingValidatedAt": "2026-11-03T23:46:12.603Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -401910,8 +401910,8 @@
         "pluginIds": [
           "apach.notification-engine"
         ],
-        "commit": "325796ccc7ff624c41d36f4f4c28879b10461435",
-        "checkedAt": "2026-11-01T15:16:27.634Z",
+        "commit": "dca2f16e5370d4c377131c43a103cce38b896243",
+        "checkedAt": "2026-11-03T23:46:12.603Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -401943,6 +401943,26 @@
             ],
             "commit": "a091189fdf2b7d1217841d108dfb4e46831a2ae0",
             "checkedAt": "2026-11-01T11:12:52.831Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "325796ccc7ff624c41d36f4f4c28879b10461435",
+          "validatedAt": "2026-11-01T15:16:27.634Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T23:46:12.603Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-notification-engine",
+            "pluginIds": [
+              "apach.notification-engine"
+            ],
+            "commit": "325796ccc7ff624c41d36f4f4c28879b10461435",
+            "checkedAt": "2026-11-01T15:16:27.634Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
