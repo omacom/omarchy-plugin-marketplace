@@ -371117,8 +371117,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T23:37:04.018Z",
-      "listingValidatedCommit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
-      "listingValidatedAt": "2026-10-19T23:37:04.018Z",
+      "listingValidatedCommit": "be8968d1d5664030f69d01462507bbd596588e81",
+      "listingValidatedAt": "2026-11-03T22:48:51.879Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -371127,8 +371127,8 @@
         "pluginIds": [
           "pym.omadroid"
         ],
-        "commit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
-        "checkedAt": "2026-10-19T23:37:03.902Z",
+        "commit": "be8968d1d5664030f69d01462507bbd596588e81",
+        "checkedAt": "2026-11-03T22:48:51.879Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -371137,29 +371137,6 @@
           "privilege",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mateuspim/omadroid",
-        "pluginIds": [
-          "pym.omadroid"
-        ],
-        "commit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-19T23:37:03.902Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "privilege",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-19T23:19:16.159Z",
-        "requestEventId": 33694833020,
-        "requestedAt": "2026-10-19T23:33:25Z",
-        "reviewedAt": "2026-10-19T23:37:03.902Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "pym.omadroid": {
@@ -371175,7 +371152,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mateuspim/omadroid",
+        "pluginIds": [
+          "pym.omadroid"
+        ],
+        "commit": "be8968d1d5664030f69d01462507bbd596588e81",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:48:51.879Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T21:43:57.939Z",
+        "requestEventId": 35069834817,
+        "requestedAt": "2026-11-03T22:06:26Z",
+        "reviewedAt": "2026-11-03T22:48:51.879Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
+          "validatedAt": "2026-10-19T23:37:04.018Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T22:48:51.879Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mateuspim/omadroid",
+            "pluginIds": [
+              "pym.omadroid"
+            ],
+            "commit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
+            "checkedAt": "2026-10-19T23:37:03.902Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mateuspim/omadroid",
+            "pluginIds": [
+              "pym.omadroid"
+            ],
+            "commit": "db854c1e2dc3df90bf70a6607670332eccfdcee9",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-19T23:37:03.902Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-19T23:19:16.159Z",
+            "requestEventId": 33694833020,
+            "requestedAt": "2026-10-19T23:33:25Z",
+            "reviewedAt": "2026-10-19T23:37:03.902Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kcotugno/omarchy-qmk-rgb",
