@@ -400591,8 +400591,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T19:45:57.648Z",
-      "listingValidatedCommit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
-      "listingValidatedAt": "2026-10-31T19:45:57.648Z",
+      "listingValidatedCommit": "29f1d08e5d14375d549d2f32c02963d2e0346d2b",
+      "listingValidatedAt": "2026-11-03T23:42:32.221Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -400601,8 +400601,8 @@
         "pluginIds": [
           "seaglenet.power-saver"
         ],
-        "commit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
-        "checkedAt": "2026-10-31T19:45:57.464Z",
+        "commit": "29f1d08e5d14375d549d2f32c02963d2e0346d2b",
+        "checkedAt": "2026-11-03T23:42:32.221Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -400617,7 +400617,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+          "validatedAt": "2026-10-31T19:45:57.648Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T23:42:32.221Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "seaglenet/omarchy-power-saver",
+            "pluginIds": [
+              "seaglenet.power-saver"
+            ],
+            "commit": "b0012f0d96cc6e110d580e01e84105ef5aa07ae9",
+            "checkedAt": "2026-10-31T19:45:57.464Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/Aicyraa/omarchy-workspace-gallery",
