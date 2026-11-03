@@ -404610,6 +404610,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jgarza9788/mounts",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T08:23:50.288Z",
+      "listingValidatedCommit": "32b283810893aed9344809621a826349b1078d32",
+      "listingValidatedAt": "2026-11-03T08:23:50.288Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jgarza9788/mounts",
+        "pluginIds": [
+          "jgarza.mounts"
+        ],
+        "commit": "32b283810893aed9344809621a826349b1078d32",
+        "checkedAt": "2026-11-03T08:23:50.106Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jgarza9788/mounts",
+        "pluginIds": [
+          "jgarza.mounts"
+        ],
+        "commit": "32b283810893aed9344809621a826349b1078d32",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T08:23:50.106Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary",
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T08:15:18.333Z",
+        "requestEventId": 34997009077,
+        "requestedAt": "2026-11-03T08:20:01Z",
+        "reviewedAt": "2026-11-03T08:23:50.106Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jgarza.mounts": {
+          "category": "System",
+          "tags": [
+            "system",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
