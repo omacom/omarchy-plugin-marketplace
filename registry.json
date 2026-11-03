@@ -403664,8 +403664,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T16:36:49.194Z",
-      "listingValidatedCommit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
-      "listingValidatedAt": "2026-11-02T16:36:49.194Z",
+      "listingValidatedCommit": "68eec0afe4f7b8df4564b765afa521f5d0cd60d7",
+      "listingValidatedAt": "2026-11-03T09:19:30.452Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -403674,8 +403674,8 @@
         "pluginIds": [
           "traymd-omarchy"
         ],
-        "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
-        "checkedAt": "2026-11-02T16:36:49.013Z",
+        "commit": "68eec0afe4f7b8df4564b765afa521f5d0cd60d7",
+        "checkedAt": "2026-11-03T09:19:30.452Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -403683,28 +403683,6 @@
           "installer",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "rabfulton/traymd-omarchy",
-        "pluginIds": [
-          "traymd-omarchy"
-        ],
-        "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T16:36:49.013Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-02T16:30:25.163Z",
-        "requestEventId": 34931911731,
-        "requestedAt": "2026-11-02T16:36:04Z",
-        "reviewedAt": "2026-11-02T16:36:49.013Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "traymd-omarchy": {
@@ -403718,7 +403696,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rabfulton/traymd-omarchy",
+        "pluginIds": [
+          "traymd-omarchy"
+        ],
+        "commit": "68eec0afe4f7b8df4564b765afa521f5d0cd60d7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T09:19:30.452Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T02:45:32.522Z",
+        "requestEventId": 35000697648,
+        "requestedAt": "2026-11-03T09:09:18Z",
+        "reviewedAt": "2026-11-03T09:19:30.452Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+          "validatedAt": "2026-11-02T16:36:49.194Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T09:19:30.452Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "rabfulton/traymd-omarchy",
+            "pluginIds": [
+              "traymd-omarchy"
+            ],
+            "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+            "checkedAt": "2026-11-02T16:36:49.013Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "rabfulton/traymd-omarchy",
+            "pluginIds": [
+              "traymd-omarchy"
+            ],
+            "commit": "c110f4e497be322f987a2997a85bbd7d81daf6c6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T16:36:49.013Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T16:30:25.163Z",
+            "requestEventId": 34931911731,
+            "requestedAt": "2026-11-02T16:36:04Z",
+            "reviewedAt": "2026-11-02T16:36:49.013Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/zejzl/omarchy-network-speed-lite",
