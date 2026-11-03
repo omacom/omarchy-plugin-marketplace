@@ -405646,6 +405646,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hugorolimf/omarchy-island-arrange",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T19:23:11.401Z",
+      "listingValidatedCommit": "014018f5f6ea271fb4ee38cb7ac57e2db861131c",
+      "listingValidatedAt": "2026-11-03T19:23:11.401Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hugorolimf/omarchy-island-arrange",
+        "pluginIds": [
+          "io.github.hugorolimf.arrange"
+        ],
+        "commit": "014018f5f6ea271fb4ee38cb7ac57e2db861131c",
+        "checkedAt": "2026-11-03T19:23:11.214Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hugorolimf.arrange": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
