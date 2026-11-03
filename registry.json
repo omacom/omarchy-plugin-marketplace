@@ -249490,8 +249490,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-23",
       "listedAt": "2026-09-23T06:50:25.227Z",
-      "listingValidatedCommit": "c8445f980896edc79791518d1e8373d9342e58f5",
-      "listingValidatedAt": "2026-10-04T13:33:11.164Z",
+      "listingValidatedCommit": "b52a4460e9c278be67b621e39bedae14ceec4396",
+      "listingValidatedAt": "2026-11-03T08:51:38.504Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -249500,8 +249500,8 @@
         "pluginIds": [
           "vinicgobbi.battery"
         ],
-        "commit": "c8445f980896edc79791518d1e8373d9342e58f5",
-        "checkedAt": "2026-10-04T13:33:11.164Z",
+        "commit": "b52a4460e9c278be67b621e39bedae14ceec4396",
+        "checkedAt": "2026-11-03T08:51:38.504Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -249531,6 +249531,26 @@
             ],
             "commit": "c164697af7d18e5aff518a77e352227b92c3c0a1",
             "checkedAt": "2026-09-23T06:50:25.112Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "c8445f980896edc79791518d1e8373d9342e58f5",
+          "validatedAt": "2026-10-04T13:33:11.164Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T08:51:38.504Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vinicgobbi/omarchy-plugin-battery",
+            "pluginIds": [
+              "vinicgobbi.battery"
+            ],
+            "commit": "c8445f980896edc79791518d1e8373d9342e58f5",
+            "checkedAt": "2026-10-04T13:33:11.164Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
