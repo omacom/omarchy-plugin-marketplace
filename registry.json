@@ -289003,8 +289003,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T14:15:13.736Z",
-      "listingValidatedCommit": "201f5058c3746a23d58710ecafc285baf58b59aa",
-      "listingValidatedAt": "2026-10-01T14:15:13.736Z",
+      "listingValidatedCommit": "6820a4f893a71729d8f4beab3978046439521ba8",
+      "listingValidatedAt": "2026-11-03T01:59:24.952Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -289013,8 +289013,8 @@
         "pluginIds": [
           "tiedeyez.omatree"
         ],
-        "commit": "201f5058c3746a23d58710ecafc285baf58b59aa",
-        "checkedAt": "2026-10-01T14:15:13.653Z",
+        "commit": "6820a4f893a71729d8f4beab3978046439521ba8",
+        "checkedAt": "2026-11-03T01:59:24.952Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -289030,7 +289030,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "201f5058c3746a23d58710ecafc285baf58b59aa",
+          "validatedAt": "2026-10-01T14:15:13.736Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T01:59:24.952Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tiedeyez/omatree",
+            "pluginIds": [
+              "tiedeyez.omatree"
+            ],
+            "commit": "201f5058c3746a23d58710ecafc285baf58b59aa",
+            "checkedAt": "2026-10-01T14:15:13.653Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/abort-retry-ignore/ff-drive",
