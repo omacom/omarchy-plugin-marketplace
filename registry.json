@@ -218203,8 +218203,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-18",
       "listedAt": "2026-09-18T19:57:06.611Z",
-      "listingValidatedCommit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
-      "listingValidatedAt": "2026-09-18T19:57:06.611Z",
+      "listingValidatedCommit": "a99c4f4c066b29eeb37d1206face429fdf3cf241",
+      "listingValidatedAt": "2026-11-03T22:42:35.701Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -218213,8 +218213,8 @@
         "pluginIds": [
           "io.github.hominluo.launcher"
         ],
-        "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
-        "checkedAt": "2026-09-18T19:57:06.545Z",
+        "commit": "a99c4f4c066b29eeb37d1206face429fdf3cf241",
+        "checkedAt": "2026-11-03T22:42:35.701Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -218224,30 +218224,6 @@
           "service-management",
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "hominluo/omarchy-launcher",
-        "pluginIds": [
-          "io.github.hominluo.launcher"
-        ],
-        "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-18T19:57:06.545Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "remote-build",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-18T08:54:33.273Z",
-        "requestEventId": 31414169510,
-        "requestedAt": "2026-09-18T19:43:22Z",
-        "reviewedAt": "2026-09-18T19:57:06.545Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.hominluo.launcher": {
@@ -218259,7 +218235,82 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hominluo/omarchy-launcher",
+        "pluginIds": [
+          "io.github.hominluo.launcher"
+        ],
+        "commit": "a99c4f4c066b29eeb37d1206face429fdf3cf241",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:42:35.701Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T19:40:14.818Z",
+        "requestEventId": 35069013768,
+        "requestedAt": "2026-11-03T21:55:47Z",
+        "reviewedAt": "2026-11-03T22:42:35.701Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+          "validatedAt": "2026-09-18T19:57:06.611Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:42:35.701Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hominluo/omarchy-launcher",
+            "pluginIds": [
+              "io.github.hominluo.launcher"
+            ],
+            "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+            "checkedAt": "2026-09-18T19:57:06.545Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "hominluo/omarchy-launcher",
+            "pluginIds": [
+              "io.github.hominluo.launcher"
+            ],
+            "commit": "21ff7f0faaa084632d7f0ccd62255b120897c28b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-18T19:57:06.545Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-18T08:54:33.273Z",
+            "requestEventId": 31414169510,
+            "requestedAt": "2026-09-18T19:43:22Z",
+            "reviewedAt": "2026-09-18T19:57:06.545Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/brenoperucchi/omabackup",
