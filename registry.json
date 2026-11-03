@@ -403437,6 +403437,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MatheoAtche/omarchy-aircast",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T00:06:08.148Z",
+      "listingValidatedCommit": "3bd8b5d68776458edf866d452645f7f5b4cfe0d5",
+      "listingValidatedAt": "2026-11-03T00:06:08.148Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matheoatche/omarchy-aircast",
+        "pluginIds": [
+          "matheoatche.aircast"
+        ],
+        "commit": "3bd8b5d68776458edf866d452645f7f5b4cfe0d5",
+        "checkedAt": "2026-11-03T00:06:07.962Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "matheoatche/omarchy-aircast",
+        "pluginIds": [
+          "matheoatche.aircast"
+        ],
+        "commit": "3bd8b5d68776458edf866d452645f7f5b4cfe0d5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T00:06:07.962Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-02T23:46:34.763Z",
+        "requestEventId": 34967538907,
+        "requestedAt": "2026-11-02T23:52:30Z",
+        "reviewedAt": "2026-11-03T00:06:07.962Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "matheoatche.aircast": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
