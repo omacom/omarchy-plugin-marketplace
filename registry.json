@@ -289733,8 +289733,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T14:35:09.977Z",
-      "listingValidatedCommit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
-      "listingValidatedAt": "2026-10-02T11:58:20.315Z",
+      "listingValidatedCommit": "25d16cf2532f8ba0325dea818040fd76687430a0",
+      "listingValidatedAt": "2026-11-03T19:34:43.160Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -289743,8 +289743,8 @@
         "pluginIds": [
           "killie.omafinder"
         ],
-        "commit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
-        "checkedAt": "2026-10-02T11:58:20.314Z",
+        "commit": "25d16cf2532f8ba0325dea818040fd76687430a0",
+        "checkedAt": "2026-11-03T19:34:43.160Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -289763,28 +289763,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "killiivalavan/omafinder",
-        "pluginIds": [
-          "killie.omafinder"
-        ],
-        "commit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T11:58:20.314Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-01T18:00:01.980Z",
-        "requestEventId": 32329010181,
-        "requestedAt": "2026-10-02T11:14:01Z",
-        "reviewedAt": "2026-10-02T11:58:20.315Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -289831,8 +289809,75 @@
             "reviewedAt": "2026-10-01T14:35:09.859Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
+          "validatedAt": "2026-10-02T11:58:20.315Z",
+          "branch": "master",
+          "supersededAt": "2026-11-03T19:34:43.160Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "killiivalavan/omafinder",
+            "pluginIds": [
+              "killie.omafinder"
+            ],
+            "commit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
+            "checkedAt": "2026-10-02T11:58:20.314Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "killiivalavan/omafinder",
+            "pluginIds": [
+              "killie.omafinder"
+            ],
+            "commit": "57c06e4412d94c8349b1a6da0c88694619cf8173",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T11:58:20.314Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-01T18:00:01.980Z",
+            "requestEventId": 32329010181,
+            "requestedAt": "2026-10-02T11:14:01Z",
+            "reviewedAt": "2026-10-02T11:58:20.315Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "killiivalavan/omafinder",
+        "pluginIds": [
+          "killie.omafinder"
+        ],
+        "commit": "25d16cf2532f8ba0325dea818040fd76687430a0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T19:34:43.160Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T13:56:40.193Z",
+        "requestEventId": 35054765696,
+        "requestedAt": "2026-11-03T19:00:15Z",
+        "reviewedAt": "2026-11-03T19:34:43.160Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/aasmpro/hermea-omarchy",
