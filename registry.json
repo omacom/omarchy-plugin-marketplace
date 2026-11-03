@@ -329937,8 +329937,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-07",
       "listedAt": "2026-10-07T04:22:04.087Z",
-      "listingValidatedCommit": "a99077bb712bf3887dae7461e1ec9437721b793b",
-      "listingValidatedAt": "2026-10-07T04:22:04.087Z",
+      "listingValidatedCommit": "b33e5c234c82b2f4d943d7f2f1d61c6afde85cce",
+      "listingValidatedAt": "2026-11-03T09:57:36.853Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -329947,35 +329947,15 @@
         "pluginIds": [
           "vinicgobbi.nowbar"
         ],
-        "commit": "a99077bb712bf3887dae7461e1ec9437721b793b",
-        "checkedAt": "2026-10-07T04:22:03.957Z",
+        "commit": "b33e5c234c82b2f4d943d7f2f1d61c6afde85cce",
+        "checkedAt": "2026-11-03T09:57:36.853Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "privilege"
+          "privilege",
+          "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "vinicgobbi/omarchy-plugin-nowbar",
-        "pluginIds": [
-          "vinicgobbi.nowbar"
-        ],
-        "commit": "a99077bb712bf3887dae7461e1ec9437721b793b",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-07T04:22:03.957Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-06T23:03:01.346Z",
-        "requestEventId": 32656932918,
-        "requestedAt": "2026-10-07T03:46:52Z",
-        "reviewedAt": "2026-10-07T04:22:03.957Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "vinicgobbi.nowbar": {
@@ -329985,7 +329965,74 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vinicgobbi/omarchy-plugin-nowbar",
+        "pluginIds": [
+          "vinicgobbi.nowbar"
+        ],
+        "commit": "b33e5c234c82b2f4d943d7f2f1d61c6afde85cce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T09:57:36.853Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T02:19:06.986Z",
+        "requestEventId": 35004663065,
+        "requestedAt": "2026-11-03T09:57:06Z",
+        "reviewedAt": "2026-11-03T09:57:36.853Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a99077bb712bf3887dae7461e1ec9437721b793b",
+          "validatedAt": "2026-10-07T04:22:04.087Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T09:57:36.853Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "vinicgobbi/omarchy-plugin-nowbar",
+            "pluginIds": [
+              "vinicgobbi.nowbar"
+            ],
+            "commit": "a99077bb712bf3887dae7461e1ec9437721b793b",
+            "checkedAt": "2026-10-07T04:22:03.957Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "vinicgobbi/omarchy-plugin-nowbar",
+            "pluginIds": [
+              "vinicgobbi.nowbar"
+            ],
+            "commit": "a99077bb712bf3887dae7461e1ec9437721b793b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-07T04:22:03.957Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-06T23:03:01.346Z",
+            "requestEventId": 32656932918,
+            "requestedAt": "2026-10-07T03:46:52Z",
+            "reviewedAt": "2026-10-07T04:22:03.957Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SilverStoneSecure/Wpal",
