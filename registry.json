@@ -382768,8 +382768,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-26",
       "listedAt": "2026-10-26T00:50:45.392Z",
-      "listingValidatedCommit": "31442d458cdb4051fdcc7044557330a129b11f89",
-      "listingValidatedAt": "2026-10-30T21:18:20.606Z",
+      "listingValidatedCommit": "24143d04e318ea0847e7944ef8d2d6114458acfa",
+      "listingValidatedAt": "2026-11-03T01:50:30.321Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -382778,8 +382778,8 @@
         "pluginIds": [
           "io.github.jeremiahjohnston.tempest"
         ],
-        "commit": "31442d458cdb4051fdcc7044557330a129b11f89",
-        "checkedAt": "2026-10-30T21:18:20.606Z",
+        "commit": "24143d04e318ea0847e7944ef8d2d6114458acfa",
+        "checkedAt": "2026-11-03T01:50:30.320Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -382810,6 +382810,26 @@
             ],
             "commit": "89a412aa0bbacabc998972afef5755187c7ed104",
             "checkedAt": "2026-10-26T00:50:45.248Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "31442d458cdb4051fdcc7044557330a129b11f89",
+          "validatedAt": "2026-10-30T21:18:20.606Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T01:50:30.321Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jeremiahjohnston/omarchy-tempest",
+            "pluginIds": [
+              "io.github.jeremiahjohnston.tempest"
+            ],
+            "commit": "31442d458cdb4051fdcc7044557330a129b11f89",
+            "checkedAt": "2026-10-30T21:18:20.606Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
