@@ -405996,6 +405996,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Divanyx/omapasskey",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T20:36:07.748Z",
+      "listingValidatedCommit": "90a583bd31bc98d585a19e807330c9a072309c08",
+      "listingValidatedAt": "2026-11-03T20:36:07.748Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "divanyx/omapasskey",
+        "pluginIds": [
+          "omapasskey"
+        ],
+        "commit": "90a583bd31bc98d585a19e807330c9a072309c08",
+        "checkedAt": "2026-11-03T20:36:07.637Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "divanyx/omapasskey",
+        "pluginIds": [
+          "omapasskey"
+        ],
+        "commit": "90a583bd31bc98d585a19e807330c9a072309c08",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T20:36:07.637Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T19:16:28.534Z",
+        "requestEventId": 35056374448,
+        "requestedAt": "2026-11-03T19:19:52Z",
+        "reviewedAt": "2026-11-03T20:36:07.637Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omapasskey": {
+          "category": "System",
+          "tags": [
+            "security",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
