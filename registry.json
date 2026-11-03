@@ -388393,8 +388393,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-27",
       "listedAt": "2026-10-27T22:18:29.905Z",
-      "listingValidatedCommit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
-      "listingValidatedAt": "2026-10-27T22:18:29.905Z",
+      "listingValidatedCommit": "c19c558f64d275fb6d05a9e8e81a920101d72e1c",
+      "listingValidatedAt": "2026-11-03T12:18:46.970Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -388403,8 +388403,8 @@
         "pluginIds": [
           "dinuphan.omaboy"
         ],
-        "commit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
-        "checkedAt": "2026-10-27T22:18:29.729Z",
+        "commit": "c19c558f64d275fb6d05a9e8e81a920101d72e1c",
+        "checkedAt": "2026-11-03T12:18:46.970Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -388413,29 +388413,6 @@
           "package-manager",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dinuphan/omaboy",
-        "pluginIds": [
-          "dinuphan.omaboy"
-        ],
-        "commit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-27T22:18:29.729Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "package-manager",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T22:11:12.286Z",
-        "requestEventId": 34418071105,
-        "requestedAt": "2026-10-27T22:15:54Z",
-        "reviewedAt": "2026-10-27T22:18:29.729Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "dinuphan.omaboy": {
@@ -388451,7 +388428,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dinuphan/omaboy",
+        "pluginIds": [
+          "dinuphan.omaboy"
+        ],
+        "commit": "c19c558f64d275fb6d05a9e8e81a920101d72e1c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T12:18:46.970Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T11:50:44.128Z",
+        "requestEventId": 35015828439,
+        "requestedAt": "2026-11-03T12:09:34Z",
+        "reviewedAt": "2026-11-03T12:18:46.970Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
+          "validatedAt": "2026-10-27T22:18:29.905Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T12:18:46.970Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dinuphan/omaboy",
+            "pluginIds": [
+              "dinuphan.omaboy"
+            ],
+            "commit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
+            "checkedAt": "2026-10-27T22:18:29.729Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dinuphan/omaboy",
+            "pluginIds": [
+              "dinuphan.omaboy"
+            ],
+            "commit": "d0c4fd31eb4da2ef90944e11a0e6f44f3887be19",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-27T22:18:29.729Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T22:11:12.286Z",
+            "requestEventId": 34418071105,
+            "requestedAt": "2026-10-27T22:15:54Z",
+            "reviewedAt": "2026-10-27T22:18:29.729Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/beyondDREADFUL/omarchy-omatrix",
