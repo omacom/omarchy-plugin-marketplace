@@ -405833,8 +405833,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-03",
       "listedAt": "2026-11-03T09:05:53.397Z",
-      "listingValidatedCommit": "67a9507997b76b2da1d39f6971e1d920766b8110",
-      "listingValidatedAt": "2026-11-03T09:05:53.397Z",
+      "listingValidatedCommit": "c17c0baba9bf09cbb8d01c1ff4f64ba8b6b7d582",
+      "listingValidatedAt": "2026-11-03T22:18:24.941Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -405843,8 +405843,8 @@
         "pluginIds": [
           "gasserx.swamp"
         ],
-        "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
-        "checkedAt": "2026-11-03T09:05:53.215Z",
+        "commit": "c17c0baba9bf09cbb8d01c1ff4f64ba8b6b7d582",
+        "checkedAt": "2026-11-03T22:18:24.941Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -405852,28 +405852,6 @@
           "installer",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "gasserx/swamp",
-        "pluginIds": [
-          "gasserx.swamp"
-        ],
-        "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-03T09:05:53.215Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-03T08:49:46.464Z",
-        "requestEventId": 34999661134,
-        "requestedAt": "2026-11-03T08:55:55Z",
-        "reviewedAt": "2026-11-03T09:05:53.215Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "gasserx.swamp": {
@@ -405885,7 +405863,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gasserx/swamp",
+        "pluginIds": [
+          "gasserx.swamp"
+        ],
+        "commit": "c17c0baba9bf09cbb8d01c1ff4f64ba8b6b7d582",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T22:18:24.941Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T19:55:01.314Z",
+        "requestEventId": 35065733852,
+        "requestedAt": "2026-11-03T21:13:40Z",
+        "reviewedAt": "2026-11-03T22:18:24.941Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+          "validatedAt": "2026-11-03T09:05:53.397Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T22:18:24.941Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gasserx/swamp",
+            "pluginIds": [
+              "gasserx.swamp"
+            ],
+            "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+            "checkedAt": "2026-11-03T09:05:53.215Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gasserx/swamp",
+            "pluginIds": [
+              "gasserx.swamp"
+            ],
+            "commit": "67a9507997b76b2da1d39f6971e1d920766b8110",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-03T09:05:53.215Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-03T08:49:46.464Z",
+            "requestEventId": 34999661134,
+            "requestedAt": "2026-11-03T08:55:55Z",
+            "reviewedAt": "2026-11-03T09:05:53.215Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/stevederico/agent-keychain",
