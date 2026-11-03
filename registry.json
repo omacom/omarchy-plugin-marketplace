@@ -403552,8 +403552,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T15:06:15.039Z",
-      "listingValidatedCommit": "34e7f217001449938939c97e9f298248f1952b1b",
-      "listingValidatedAt": "2026-11-02T15:06:15.039Z",
+      "listingValidatedCommit": "e6b56adcfde9a5333ac910b89834b01438f98bdb",
+      "listingValidatedAt": "2026-11-03T11:04:49.643Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -403562,8 +403562,8 @@
         "pluginIds": [
           "io.github.2strange.mactrackpad"
         ],
-        "commit": "34e7f217001449938939c97e9f298248f1952b1b",
-        "checkedAt": "2026-11-02T15:06:14.838Z",
+        "commit": "e6b56adcfde9a5333ac910b89834b01438f98bdb",
+        "checkedAt": "2026-11-03T11:04:49.643Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -403579,7 +403579,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "34e7f217001449938939c97e9f298248f1952b1b",
+          "validatedAt": "2026-11-02T15:06:15.039Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T11:04:49.643Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "2strange/omarchy-mactrackpad",
+            "pluginIds": [
+              "io.github.2strange.mactrackpad"
+            ],
+            "commit": "34e7f217001449938939c97e9f298248f1952b1b",
+            "checkedAt": "2026-11-02T15:06:14.838Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/s-gato/omarchy-laligablocking-plugin",
