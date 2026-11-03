@@ -371582,8 +371582,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T00:49:46.335Z",
-      "listingValidatedCommit": "9eddacf95bfd76caa51e670700e73b8a129ce828",
-      "listingValidatedAt": "2026-10-20T00:49:46.335Z",
+      "listingValidatedCommit": "da5c5562fdfff3ce78bb9e4d64ce3ed90f3aa995",
+      "listingValidatedAt": "2026-11-03T21:52:13.797Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -371592,8 +371592,8 @@
         "pluginIds": [
           "nertwork.network-info"
         ],
-        "commit": "9eddacf95bfd76caa51e670700e73b8a129ce828",
-        "checkedAt": "2026-10-20T00:49:46.196Z",
+        "commit": "da5c5562fdfff3ce78bb9e4d64ce3ed90f3aa995",
+        "checkedAt": "2026-11-03T21:52:13.797Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -371609,7 +371609,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9eddacf95bfd76caa51e670700e73b8a129ce828",
+          "validatedAt": "2026-10-20T00:49:46.335Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T21:52:13.797Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nertwork/omarchy-network-info",
+            "pluginIds": [
+              "nertwork.network-info"
+            ],
+            "commit": "9eddacf95bfd76caa51e670700e73b8a129ce828",
+            "checkedAt": "2026-10-20T00:49:46.196Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/michaelsucks/SteamHide",
