@@ -405826,6 +405826,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/BradalSb/OmaCig",
+      "type": "plugin-source",
+      "addedAt": "2026-11-03",
+      "listedAt": "2026-11-03T19:58:42.821Z",
+      "listingValidatedCommit": "17de670b0330ccbe49c29f896ef500bc0ab0c42b",
+      "listingValidatedAt": "2026-11-03T19:58:42.821Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bradalsb/omacig",
+        "pluginIds": [
+          "io.github.bradalsb.ai-cigarette"
+        ],
+        "commit": "17de670b0330ccbe49c29f896ef500bc0ab0c42b",
+        "checkedAt": "2026-11-03T19:58:42.708Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.bradalsb.ai-cigarette": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
