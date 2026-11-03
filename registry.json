@@ -401473,8 +401473,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T16:05:38.929Z",
-      "listingValidatedCommit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
-      "listingValidatedAt": "2026-11-01T16:05:38.929Z",
+      "listingValidatedCommit": "3f4629d3ec56670d13bf54e25e19f25df46a07af",
+      "listingValidatedAt": "2026-11-03T10:58:44.675Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -401483,41 +401483,17 @@
         "pluginIds": [
           "io.github.2strange.magicmouse"
         ],
-        "commit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
-        "checkedAt": "2026-11-01T16:05:38.752Z",
+        "commit": "3f4629d3ec56670d13bf54e25e19f25df46a07af",
+        "checkedAt": "2026-11-03T10:58:44.675Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management",
           "privilege",
-          "installer",
-          "package-manager"
+          "package-manager",
+          "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "2strange/omarchy-magicmouse",
-        "pluginIds": [
-          "io.github.2strange.magicmouse"
-        ],
-        "commit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-01T16:05:38.752Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "privilege",
-          "installer",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-01T16:02:39.292Z",
-        "requestEventId": 34840446294,
-        "requestedAt": "2026-11-01T16:05:10Z",
-        "reviewedAt": "2026-11-01T16:05:38.752Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.2strange.magicmouse": {
@@ -401533,7 +401509,82 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "2strange/omarchy-magicmouse",
+        "pluginIds": [
+          "io.github.2strange.magicmouse"
+        ],
+        "commit": "3f4629d3ec56670d13bf54e25e19f25df46a07af",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-03T10:58:44.675Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-03T10:39:25.642Z",
+        "requestEventId": 35009881661,
+        "requestedAt": "2026-11-03T10:58:02Z",
+        "reviewedAt": "2026-11-03T10:58:44.675Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
+          "validatedAt": "2026-11-01T16:05:38.929Z",
+          "branch": "main",
+          "supersededAt": "2026-11-03T10:58:44.675Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "2strange/omarchy-magicmouse",
+            "pluginIds": [
+              "io.github.2strange.magicmouse"
+            ],
+            "commit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
+            "checkedAt": "2026-11-01T16:05:38.752Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "installer",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "2strange/omarchy-magicmouse",
+            "pluginIds": [
+              "io.github.2strange.magicmouse"
+            ],
+            "commit": "a6f27e33a2b9df378d588bb0cff395ea8d0742a9",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-01T16:05:38.752Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "installer",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-01T16:02:39.292Z",
+            "requestEventId": 34840446294,
+            "requestedAt": "2026-11-01T16:05:10Z",
+            "reviewedAt": "2026-11-01T16:05:38.752Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/vadim-su/omarchy-tuxedo-control",
