@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:46:13.226Z",
+  "generatedAt": "2026-11-04T00:50:47.509Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -192571,9 +192571,9 @@
       "addedAt": "2026-09-19",
       "listedAt": "2026-09-19T20:28:33.574Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": true,
-      "installCommand": "omarchy plugin add https://github.com/ReidenXerx/omarchy-omagram.git --enable",
-      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "installAvailable": false,
+      "installCommand": "",
+      "installNote": "Needs TDLib, which Arch does not package. After installing the plugin, run ~/.config/omarchy/plugins/reidenxerx.omagram/bin/omagram-build-tdlib once (about ten minutes; needs git, cmake, gperf, clang, openssl and zlib). It builds TDLib 1.8.67 into ~/.local/share/omagram/lib without root. Full steps are in the README.",
       "category": "Productivity",
       "tags": [
         "bar",
@@ -192599,14 +192599,14 @@
       "listingValidatedBranch": "main",
       "upstreamObservedCommit": "43a3973eb4158a65bf562c111bc8e1326b9348cf",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-11-03T11:54:48.762Z",
+      "upstreamCheckedAt": "2026-11-04T00:50:47.509Z",
       "upstreamCheckStatus": "passed",
       "upstreamValidatedCommit": "43a3973eb4158a65bf562c111bc8e1326b9348cf",
-      "upstreamValidatedAt": "2026-10-16T09:00:42.855Z",
+      "upstreamValidatedAt": "2026-11-04T00:50:47.509Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "b656470652ddd4e93de24be4829eef119947a6f1e57d502ca94c72281bbc1d6d",
+      "upstreamSourceFingerprint": "839cec5351f9140553bc86bd2f07217bdf3e3d01c41f6ef3c3af5aad04979f58",
       "versionUpdatedAt": "2026-10-16T09:00:42.855Z",
-      "status": "Available"
+      "status": "Manual setup"
     },
     {
       "id": "io.github.mousefirst.controls",
