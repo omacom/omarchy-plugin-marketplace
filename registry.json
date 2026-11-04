@@ -363707,7 +363707,7 @@
           "emrgim.cycle"
         ],
         "commit": "6497e73018b0a7c05209b3bf2fc4a586566b4ca4",
-        "checkedAt": "2026-10-22T04:37:55.315Z",
+        "checkedAt": "2026-11-04T10:30:07.468Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -363720,11 +363720,7 @@
             "hyprland",
             "bar"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       },
       "listingValidationHistory": [
