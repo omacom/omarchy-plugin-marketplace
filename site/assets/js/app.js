@@ -19,10 +19,12 @@ import {
   listingAgeLabel,
   listingTime,
   loadCatalog,
+  matchesMaintenanceStatus,
   matchesVerificationStatus,
   paginationState,
   pluginHeartButton,
   pluginVersionLabel,
+  pluginMaintenanceState,
   pluginVerificationState,
   readCatalogView,
   readCatalogViewState,
@@ -37,14 +39,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261029-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-03";
+} from "./engagement.js?v=20261029-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -57,29 +59,32 @@ import {
   hasFulltextSearchDraft,
   inlineSearchCompletionSuffix,
   matchesDirectSearch,
+  matchesDraftSearchTerm,
   matchesSearchSelection,
   maximumSearchTerms,
   pluginKindKey,
   normalizeSearchTerm,
   parseSearchDraft,
   pluginSearchContext,
+  rankSearchCompletions,
   readSearchState,
   removeSearchTermTypeFromDraft,
   repositoryPublisher,
   searchKeyAction,
   searchPhraseKey,
   searchRelevanceTier,
+  searchSortTerm,
   searchTermDisplayValue,
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-03";
+} from "./search.js?v=20261029-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-03";
+} from "./taxonomy.js?v=20261029-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -128,7 +133,25 @@ function cardTaxonomyLabels(plugin) {
 }
 
 const engagementSorts = new Set(["views", "copies", "hearts", "rank", "installRate"]);
-const verificationFilters = new Set(["verified", "unverified"]);
+// Select options that are shortcuts for filter terms rather than a sort order.
+// Every other option writes its own `sort:` term into the search box.
+// Maintained expands into the individual criteria of the maintenance policy in
+// scripts/plugin-maintenance.mjs so readers can see and adjust each threshold.
+const filterShortcuts = new Map([
+  ["maintained", "contributors:1+ age:60d+ committed:180d"],
+  ["verified", "is:verified"],
+  ["unverified", "is:unverified"],
+]);
+// Verification states exclude each other; choosing one replaces the other.
+const verificationStates = new Set(["verified", "unverified"]);
+const maintenanceTermDetails = {
+  contributors: "outside contributors",
+  age: "repository age",
+  committed: "last commit",
+};
+// Date windows offered as suggestions for the time-based sort orders.
+const searchWindowFields = new Map([["added", "added"], ["updated", "updated"]]);
+const searchWindowSuggestions = ["7d", "30d"];
 const taxonomyFilterTags = ["ai", "games", "security"];
 const taxonomyCatalogFilters = [
   ["VPN", matchesVpnTaxonomy],
@@ -146,6 +169,7 @@ const sortOptions = {
     ["rank", "Top ranked"],
     ["installRate", "Install rate"],
     ["name", "A–Z"],
+    ["maintained", "Maintained"],
     ["verified", "Verified"],
     ["unverified", "Unverified"]
   ],
@@ -190,6 +214,8 @@ const search = document.querySelector("#search-input");
 const searchTerms = document.querySelector("#search-terms");
 const searchClear = document.querySelector("#search-clear");
 const searchShortcut = document.querySelector("#search-shortcut");
+const searchHelp = document.querySelector("#search-help");
+const searchHelpPanel = document.querySelector("#search-help-panel");
 const searchFishPreview = document.querySelector("#search-fish-preview");
 const searchSuggestions = document.querySelector("#search-suggestions");
 const searchSuggestionStatus = document.querySelector("#search-suggestion-status");
@@ -263,7 +289,7 @@ function completionMatches(value) {
   const parsedDraft = parseSearchDraft(normalizedValue);
   const fulltextTerm = parsedDraft.length
     && parsedDraft.every((term) => term.type === "text")
-    && !/(?:^|\s)(?:tag|author|plugin|kind):/i.test(normalizedValue)
+    && !/(?:^|\s)(?:tag|author|plugin|kind|is|sort|added|updated|contributors|age|committed):/i.test(normalizedValue)
     ? createSearchTerm("fulltext", normalizedValue)
     : null;
   const hasDirectPluginMatch = plugins.some((plugin) =>
@@ -343,6 +369,57 @@ function completionMatches(value) {
       count: kindCount,
     });
   });
+  [
+    ["maintained", "outside contributors", (plugin) => matchesMaintenanceStatus(plugin)],
+    ["verified", "listed snapshot", (plugin) => matchesVerificationStatus(plugin, "verified")],
+    ["unverified", "listed snapshot", (plugin) => matchesVerificationStatus(plugin, "unverified")],
+  ].forEach(([status, detail, matches]) => {
+    const statusCount = plugins.filter(matches).length;
+    if (!statusCount) return;
+    addMatch({
+      type: "is",
+      value: status,
+      label: `is:${status}`,
+      insertValue: `is:${status}`,
+      matchValue: status,
+      detail,
+      count: statusCount,
+    });
+  });
+  searchWindowFields.forEach((field) => {
+    searchWindowCompletions(plugins, field).forEach((completion) => addMatch(completion));
+  });
+  parseSearchDraft(filterShortcuts.get("maintained")).forEach((term) => {
+    const termCount = plugins.filter((plugin) => (
+      matchesDraftSearchTerm(term, pluginSearchContext(plugin))
+    )).length;
+    if (!termCount) return;
+    const input = searchTermInputValue(term);
+    addMatch({
+      type: term.type,
+      value: term.value,
+      label: input,
+      insertValue: input,
+      matchValue: term.type,
+      detail: maintenanceTermDetails[term.type],
+      count: termCount,
+    });
+  });
+  availableSortOptions().forEach(([value, label]) => {
+    if (filterShortcuts.has(value)) return;
+    addMatch({
+      type: "sort",
+      value,
+      label: `sort:${value}`,
+      insertValue: `sort:${value}`,
+      matchValue: label,
+      detail: label.toLowerCase(),
+    });
+  });
+  // A typed `sort:` prefix lists every matching order instead of the usual top picks.
+  if (/^sort:/i.test(rawQuery)) {
+    return rankSearchCompletions([...matches.values()].filter((match) => match.type === "sort" && match.prefix));
+  }
   if (fulltextTerm) {
     addMatch({
       type: "fulltext",
@@ -384,6 +461,33 @@ function completionMatches(value) {
     });
   });
   return selectSearchCompletions(matches.values());
+}
+
+/**
+ * Date-window completions such as `added:7d` for one time-based field, with
+ * the number of plugins in scope that each window would keep.
+ */
+function searchWindowCompletions(plugins, field) {
+  return searchWindowSuggestions.map((window) => {
+    const term = createSearchTerm(field, window);
+    const count = plugins.filter((plugin) => (
+      matchesDraftSearchTerm(term, pluginSearchContext(plugin))
+    )).length;
+    return count ? {
+      type: field,
+      value: window,
+      label: `${field}:${window}`,
+      insertValue: `${field}:${window}`,
+      matchValue: window,
+      detail: field === "added" ? "listed recently" : "active recently",
+      count,
+    } : null;
+  }).filter(Boolean);
+}
+
+/** The time-based field behind the current `sort:` term, if any. */
+function activeSortWindowField() {
+  return searchWindowFields.get(searchSortTerm(state.terms, state.query)) || "";
 }
 
 function closeSearchSuggestions() {
@@ -449,6 +553,13 @@ const searchTermTypeLabels = {
   author: "AUTHOR",
   plugin: "PLUGIN",
   kind: "KIND",
+  is: "IS",
+  sort: "SORT",
+  added: "ADDED",
+  updated: "UPDATED",
+  contributors: "CONTRIBUTORS",
+  age: "AGE",
+  committed: "COMMITTED",
 };
 
 function searchTermPresentation(term) {
@@ -474,7 +585,7 @@ function updateSearchAffordances() {
   searchShortcut.hidden = active;
   search.placeholder = state.terms.length
     ? "Narrow by another term…"
-    : "Search plugins, tag:media, kind:panel, or @author…";
+    : "Search plugins, tag:media, added:7d, or @author…";
 }
 
 function removeSearchTerm(index) {
@@ -482,12 +593,39 @@ function removeSearchTerm(index) {
   const presentation = searchTermPresentation(removed);
   if (!presentation) return;
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
   search.focus();
   searchSuggestionStatus.textContent = searchResultMessage(
     `Removed ${presentation.term.type} search term ${presentation.value}`,
+  );
+}
+
+/** Move a search term back into the search box as editable draft text. */
+function editSearchTerm(index) {
+  const [edited] = state.terms.splice(index, 1);
+  const presentation = searchTermPresentation(edited);
+  if (!presentation) return;
+  // Commit any pending draft first so the edited term stands alone in the
+  // input; mixed with other words, a phrase term would split on recommit.
+  // Only a draft that cannot fit under the term limit cancels the edit.
+  if (state.query.trim() && !commitSearchDraft() && committedTermsFromDraft(state.query).length) {
+    state.terms.splice(index, 0, edited);
+    return;
+  }
+  state.query = searchTermInputValue(presentation.term);
+  search.value = state.query;
+  state.page = 1;
+  syncSortFromSearch();
+  renderSearchTerms();
+  render();
+  // Focusing the input refreshes the suggestions for the edited term.
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(
+    `Editing ${presentation.term.type} search term ${presentation.value}`,
   );
 }
 
@@ -499,24 +637,32 @@ function renderSearchTerms() {
       ? `${presentation.term.type} search term`
       : "search term";
     return `
-      <button class="search-term" type="button" data-search-term="${index}"
-        data-search-term-type="${presentation.term.type}"
-        aria-label="Remove ${typeName} ${escapeHtml(presentation.value)}">
-        ${presentation.typeLabel
-          ? `<span class="search-term-type">${presentation.typeLabel}</span>`
-          : ""}
-        <span class="search-term-value">${escapeHtml(presentation.value)}</span>
-        <span class="search-term-remove" aria-hidden="true">×</span>
-      </button>`;
+      <span class="search-term" data-search-term="${index}" data-search-term-type="${presentation.term.type}">
+        <button class="search-term-edit" type="button" data-search-term-edit
+          aria-label="Edit ${typeName} ${escapeHtml(presentation.value)}">
+          ${presentation.typeLabel
+            ? `<span class="search-term-type">${presentation.typeLabel}</span>`
+            : ""}
+          <span class="search-term-value">${escapeHtml(presentation.value)}</span>
+        </button>
+        <button class="search-term-remove" type="button" data-search-term-remove
+          aria-label="Remove ${typeName} ${escapeHtml(presentation.value)}"><span aria-hidden="true">×</span></button>
+      </span>`;
   }).join("");
-  searchTerms.querySelectorAll("[data-search-term]").forEach((button) => {
-    button.addEventListener("click", () => removeSearchTerm(Number(button.dataset.searchTerm)));
+  searchTerms.querySelectorAll("[data-search-term]").forEach((chip) => {
+    const index = Number(chip.dataset.searchTerm);
+    chip.querySelector("[data-search-term-edit]").addEventListener("click", () => editSearchTerm(index));
+    chip.querySelector("[data-search-term-remove]").addEventListener("click", () => removeSearchTerm(index));
   });
   updateSearchAffordances();
 }
 
 function commitSearchDraft(completion) {
-  const draftedTerms = committedTermsFromDraft(search.value, completion);
+  // A completion chosen with no partial token, such as a date window offered
+  // after a sort option, is added to the draft rather than replacing it.
+  const draftedTerms = completion && !currentSearchToken(search.value)
+    ? [...parseSearchDraft(search.value), createSearchTerm(completion.type, completion.value)]
+    : committedTermsFromDraft(search.value, completion);
   if (!draftedTerms.length) return false;
   const existing = new Set(state.terms.map(searchTermKey));
   const pending = [];
@@ -537,6 +683,7 @@ function commitSearchDraft(completion) {
   state.query = "";
   search.value = "";
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
@@ -546,11 +693,112 @@ function commitSearchDraft(completion) {
   return true;
 }
 
+/**
+ * Append each term of a shortcut that is not already among the chips or the
+ * draft. A term of the same type with a different value, such as an edited
+ * `age:90d+`, is kept as the reader's choice. Mutually exclusive states, such
+ * as `is:verified` and `is:unverified`, replace each other instead.
+ */
+function appendShortcutTerms(shortcut) {
+  const shortcutTerms = parseSearchDraft(shortcut);
+  const replacedKeys = new Set(shortcutTerms.flatMap((term) => (
+    term.type === "is" && verificationStates.has(term.value)
+      ? [...verificationStates].filter((value) => value !== term.value)
+        .map((value) => searchTermKey(createSearchTerm("is", value)))
+      : []
+  )));
+  if (replacedKeys.size) {
+    state.terms = state.terms.filter((term) => !replacedKeys.has(searchTermKey(term)));
+    const draftTerms = parseSearchDraft(state.query);
+    const keptDraft = draftTerms.filter((term) => !replacedKeys.has(searchTermKey(term)));
+    if (keptDraft.length !== draftTerms.length) {
+      const draft = keptDraft.map(searchTermInputValue).join(" ");
+      state.query = draft ? `${draft} ` : "";
+    }
+  }
+  const active = [...state.terms, ...parseSearchDraft(state.query)];
+  const activeKeys = new Set(active.map(searchTermKey));
+  const activeTypes = new Set(active.map((term) => term.type).filter((type) => type !== "is"));
+  const missing = shortcutTerms.filter((term) => (
+    !activeKeys.has(searchTermKey(term)) && !activeTypes.has(term.type)
+  ));
+  if (!missing.length) return;
+  const draft = state.query.trim();
+  state.query = `${draft ? `${draft} ` : ""}${missing.map(searchTermInputValue).join(" ")} `;
+}
+
+/**
+ * Write a search shortcut into the search box as editable draft text, so the
+ * reader can refine it with further terms. The current sort order stays.
+ */
+function applySearchShortcut(shortcut) {
+  appendShortcutTerms(shortcut);
+  search.value = state.query;
+  sort.value = state.sort;
+  state.page = 1;
+  closeSearchSuggestions();
+  renderSearchTerms();
+  render({ announce: true });
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(`Searching ${shortcut}`);
+}
+
+/** Remove every `sort:` term from the chips and the draft. */
+function clearSortTerm() {
+  state.terms = state.terms.filter((term) => term.type !== "sort");
+  const draft = removeSearchTermTypeFromDraft(state.query, "sort");
+  state.query = draft ? `${draft} ` : "";
+  search.value = state.query;
+}
+
+/**
+ * Make `value` the active sort order and mirror it as a `sort:` term at the
+ * end of the search draft, replacing any earlier sort term.
+ */
+function writeSortTerm(value) {
+  clearSortTerm();
+  state.sort = value;
+  sort.value = value;
+  state.query = `${state.query}sort:${value} `;
+  search.value = state.query;
+}
+
+/**
+ * Derive the sort order from the last `sort:` term in the chips and draft.
+ * Without a term, or when the requested order is unavailable for the current
+ * source, the default order applies. `prune` also removes such a stale term,
+ * which only programmatic changes do so typing is never interrupted.
+ */
+function syncSortFromSearch({ prune = false } = {}) {
+  const requested = searchSortTerm(state.terms, state.query);
+  if (requested && availableSortOptions().some(([value]) => value === requested)) {
+    state.sort = requested;
+  } else {
+    if (requested && prune) clearSortTerm();
+    state.sort = sourceDefaultSort();
+  }
+  sort.value = state.sort;
+}
+
+/** Apply a sort option from the select and show it in the search box. */
+function applySortTerm(value) {
+  writeSortTerm(value);
+  state.page = 1;
+  closeSearchSuggestions();
+  renderSearchTerms();
+  render({ announce: true });
+  search.focus();
+  search.setSelectionRange(search.value.length, search.value.length);
+  searchSuggestionStatus.textContent = searchResultMessage(`Searching sort:${value}`);
+}
+
 function clearSearchTerms({ focus = true } = {}) {
   state.terms = [];
   state.query = "";
   search.value = "";
   state.page = 1;
+  syncSortFromSearch();
   closeSearchSuggestions();
   renderSearchTerms();
   render();
@@ -579,11 +827,18 @@ function flushSearchSuggestions() {
 function updateSearchSuggestions() {
   const rawQuery = search.value.trim();
   const token = currentSearchToken(search.value);
-  if (!token.replace(/^@/, "")) {
+  const windowField = token ? "" : activeSortWindowField();
+  if (!token.replace(/^@/, "") && !windowField) {
     closeSearchSuggestions();
     return;
   }
-  searchCompletions = completionMatches(search.value);
+  searchCompletions = windowField
+    ? searchWindowCompletions(searchScopePlugins(), windowField)
+    : completionMatches(search.value);
+  if (!searchCompletions.length && windowField) {
+    closeSearchSuggestions();
+    return;
+  }
   activeSuggestion = -1;
   search.removeAttribute("aria-activedescendant");
   const resultCount = filteredPlugins().length;
@@ -648,10 +903,7 @@ function catalogFilterLabel(filter) {
 }
 
 function searchScopePlugins() {
-  return sourcePlugins().filter((plugin) => (
-    matchesCatalogFilter(plugin)
-    && (!verificationFilters.has(state.sort) || matchesVerificationStatus(plugin, state.sort))
-  ));
+  return sourcePlugins().filter((plugin) => matchesCatalogFilter(plugin));
 }
 
 let engagementVersion = 0;
@@ -669,8 +921,10 @@ function catalogRanks() {
 }
 
 function filteredPlugins() {
+  // Date-window terms compare against the clock, so the cache expires hourly.
   const key = JSON.stringify([
     state.plugins.length, state.source, state.category, state.sort, state.terms, state.query, engagementVersion,
+    Math.floor(Date.now() / 3600000),
   ]);
   if (filteredCache.key === key) return filteredCache.value;
   const value = computeFilteredPlugins();
@@ -820,6 +1074,17 @@ function verificationBadge(plugin) {
   </span>`;
 }
 
+function maintenanceBadge(plugin) {
+  const maintenance = pluginMaintenanceState(plugin);
+  if (!maintenance) return "";
+  return `<span class="card-verification is-maintained">
+    <button class="card-verification-trigger" type="button" data-verification-tooltip aria-expanded="false" aria-label="${escapeHtml(`${maintenance.label}. ${maintenance.explanation}`)}">
+      <span class="card-verification-marker">${escapeHtml(maintenance.label)}</span>
+    </button>
+    <span class="card-verification-tooltip" role="tooltip" aria-hidden="true">${escapeHtml(maintenance.explanation)}</span>
+  </span>`;
+}
+
 function closeVerificationTooltips(except = null) {
   document.querySelectorAll("[data-verification-tooltip]").forEach((button) => {
     if (button === except) return;
@@ -873,8 +1138,9 @@ function pluginCard(plugin, { showNew = false, previewBack = "", gemTimes = null
       ? '<span class="card-activity-state is-new">New</span>'
       : "";
   const verificationState = verificationBadge(plugin);
-  const cardStates = activityState || verificationState
-    ? `<div class="card-status-line">${activityState}${verificationState}</div>`
+  const maintenanceState = maintenanceBadge(plugin);
+  const cardStates = activityState || verificationState || maintenanceState
+    ? `<div class="card-status-line">${activityState}${maintenanceState}${verificationState}</div>`
     : "";
   const previewSource = plugin.previewThumbnail || plugin.previewImage;
   const preview = previewSource
@@ -1426,6 +1692,7 @@ function catalogControlFocusToken(active) {
   return {
     type: "term",
     key: searchTermKey(state.terms[Number(termButton.dataset.searchTerm)]),
+    part: active.matches("[data-search-term-remove]") ? "remove" : "edit",
   };
 }
 
@@ -1441,7 +1708,8 @@ function restoreCatalogControlFocus(token) {
       .find((button) => button.dataset.category === state.category);
   } else if (token?.type === "term") {
     target = [...searchTerms.querySelectorAll("[data-search-term]")]
-      .find((button) => searchTermKey(state.terms[Number(button.dataset.searchTerm)]) === token.key)
+      .find((chip) => searchTermKey(state.terms[Number(chip.dataset.searchTerm)]) === token.key)
+      ?.querySelector(`[data-search-term-${token.part}]`)
       || search;
   }
   target?.focus({ preventScroll: true });
@@ -1467,7 +1735,9 @@ function render({ historyMode = "replace", announce = false } = {}) {
     : visible.slice(pageState.start, pageState.end);
   const categoryPlugins = sourcePlugins().filter((plugin) => matchesCatalogFilter(plugin));
   const hasSearch = state.terms.length > 0 || Boolean(state.query.trim());
-  const hasResultFilter = hasSearch || verificationFilters.has(state.sort);
+  // A lone `sort:` term orders the catalog without narrowing it.
+  const hasResultFilter = [...state.terms, ...parseSearchDraft(state.query)]
+    .some((term) => term.type !== "sort");
   const authorTerm = state.terms.find((term) => term.type === "author");
   catalogTitle.textContent = authorTerm ? `plugins by @${authorTerm.value}` : "browse all plugins";
   count.textContent = hasResultFilter
@@ -1524,12 +1794,12 @@ function renderSourceFilters() {
         search.value = state.query;
       }
       state.category = "all";
-      state.sort = sourceDefaultSort();
       state.page = 1;
       closeSearchSuggestions();
+      renderSortOptions();
+      syncSortFromSearch({ prune: true });
       renderSearchTerms();
       renderSourceFilters();
-      renderSortOptions();
       renderCategories();
       const removedAuthorSearch = removedAuthorTerms.length || removedAuthorDraft;
       render({ announce: !removedAuthorSearch });
@@ -1602,10 +1872,8 @@ function resetFilters() {
   search.value = "";
   closeSearchSuggestions();
   renderSearchTerms();
-  if (verificationFilters.has(state.sort)) {
-    state.sort = sourceDefaultSort();
-    renderSortOptions();
-  }
+  syncSortFromSearch();
+  renderSortOptions();
   renderCategories();
   render({ announce: true });
 }
@@ -1640,10 +1908,16 @@ function restoreUrl() {
   state.showAll = viewState.showAll;
   state.page = viewState.page;
   const requestedSort = params.get("sort") || sourceDefaultSort();
-  state.sort = availableSortOptions().some(([value]) => value === requestedSort)
+  const shortcut = filterShortcuts.get(requestedSort);
+  if (shortcut) appendShortcutTerms(shortcut);
+  const validSort = !shortcut && availableSortOptions().some(([value]) => value === requestedSort)
     ? requestedSort
     : sourceDefaultSort();
+  if (validSort !== sourceDefaultSort() && !searchSortTerm(state.terms, state.query)) {
+    state.query = `${state.query.trim() ? `${state.query.trim()} ` : ""}sort:${validSort} `;
+  }
   search.value = state.query;
+  syncSortFromSearch();
 }
 
 function runVisibleAnimation(element, draw, framesPerSecond = 60) {
@@ -1846,9 +2120,15 @@ async function init() {
       });
     });
     splitTopRank.addEventListener("click", () => {
-      state.sort = state.sort === "rank" ? sourceDefaultSort() : "rank";
+      if (state.sort === "rank") {
+        clearSortTerm();
+        state.sort = sourceDefaultSort();
+      } else {
+        writeSortTerm("rank");
+      }
       state.page = 1;
       renderSortOptions();
+      renderSearchTerms();
       render({ announce: true });
     });
     const jumpToPage = () => {
@@ -1888,9 +2168,10 @@ async function init() {
     renderHiddenGems();
     document.querySelector("#gems-sort-link")?.addEventListener("click", (event) => {
       event.preventDefault();
-      state.sort = "installRate";
+      writeSortTerm("installRate");
       state.page = 1;
       renderSortOptions();
+      renderSearchTerms();
       render({ historyMode: "push", announce: true });
       document.querySelector("#catalog").scrollIntoView({
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
@@ -1935,6 +2216,8 @@ async function init() {
           .find(([value]) => value === previousSort)?.[1] || previousSort;
         renderSortOptions();
         if (state.sort !== previousSort) {
+          syncSortFromSearch({ prune: true });
+          renderSearchTerms();
           state.page = 1;
           render();
           if (!restorePluginCardFocus(focusToken) && focusToken) focusCatalogResult();
@@ -1955,6 +2238,7 @@ async function init() {
   search.addEventListener("input", () => {
     state.query = search.value;
     state.page = 1;
+    syncSortFromSearch();
     updateSearchAffordances();
     render();
     scheduleSearchSuggestions();
@@ -1970,6 +2254,7 @@ async function init() {
         search.value = "";
         state.query = "";
         state.page = 1;
+        syncSortFromSearch();
         updateSearchAffordances();
         render({ announce: true });
         search.blur();
@@ -2038,10 +2323,38 @@ async function init() {
 
   searchClear.addEventListener("click", () => clearSearchTerms());
 
+  // The syntax help stays open while the reader types, so it opens above the
+  // search bar, clear of the suggestions below. It flips below only when the
+  // sticky header leaves too little room above.
+  const placeSearchHelp = () => {
+    searchHelpPanel.classList.remove("is-below");
+    const headerBottom = document.querySelector(".market-header")?.getBoundingClientRect().bottom || 0;
+    if (searchHelpPanel.getBoundingClientRect().top < headerBottom) {
+      searchHelpPanel.classList.add("is-below");
+    }
+  };
+  const setSearchHelp = (open) => {
+    searchHelpPanel.hidden = !open;
+    searchHelp.setAttribute("aria-expanded", String(open));
+    if (open) placeSearchHelp();
+  };
+  searchHelp.addEventListener("click", () => setSearchHelp(searchHelpPanel.hidden));
+  searchHelp.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || searchHelpPanel.hidden) return;
+    event.stopPropagation();
+    setSearchHelp(false);
+  });
+  window.addEventListener("resize", () => {
+    if (!searchHelpPanel.hidden) placeSearchHelp();
+  });
+
   sort.addEventListener("change", () => {
-    state.sort = sort.value;
-    state.page = 1;
-    render({ announce: true });
+    const shortcut = filterShortcuts.get(sort.value);
+    if (shortcut) {
+      applySearchShortcut(shortcut);
+      return;
+    }
+    applySortTerm(sort.value);
   });
 
   const changePage = (offset) => {

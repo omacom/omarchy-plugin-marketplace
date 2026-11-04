@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://plugins.omarchy.org/assets/img/omarchy-plugin-marketplace-preview.png">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261002-03">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261030-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -117,11 +117,39 @@
               <div id="search-terms" class="search-terms" aria-label="Active search terms"></div>
               <div class="search-input-wrap">
                 <label class="sr-only" for="search-input">Search plugins, tags, text, or authors</label>
-                <input id="search-input" name="plugin-search" type="search" role="combobox" placeholder="Search plugins, tag:media, kind:panel, or @author…" maxlength="160" autocomplete="off" spellcheck="false" aria-autocomplete="both" aria-controls="search-suggestions" aria-expanded="false">
+                <input id="search-input" name="plugin-search" type="search" role="combobox" placeholder="Search plugins, tag:media, added:7d, or @author…" maxlength="160" autocomplete="off" spellcheck="false" aria-autocomplete="both" aria-controls="search-suggestions" aria-expanded="false">
                 <span id="search-fish-preview" class="search-fish-preview" aria-hidden="true" hidden><span></span><b></b></span>
               </div>
             </div>
             <kbd id="search-shortcut">Ctrl K</kbd>
+            <button id="search-help" class="search-help" type="button" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax">?</button>
+            <div id="search-help-panel" class="search-help-panel" role="region" aria-label="Search syntax" hidden>
+              <p>
+                <span><code>word</code>name, description, tags, author</span>
+                <span><code>text:"…"</code>exact phrase</span>
+                <span><code>@author</code>GitHub publisher</span>
+                <span><code>tag:media</code>exact tag</span>
+                <span><code>plugin:name</code>exact name or ID</span>
+                <span><code>kind:bar-widget</code>plugin kind</span>
+              </p>
+              <p>
+                <span><code>is:verified</code>verified snapshot</span>
+                <span><code>is:unverified</code>not verified</span>
+                <span><code>is:maintained</code>maintenance signal</span>
+              </p>
+              <p>
+                <span><code>added:7d</code>listed within, d (day) or w (week)</span>
+                <span><code>updated:2w</code>active within</span>
+                <span><code>committed:180d</code>last commit within</span>
+                <span><code>age:60d+</code>repository age at least</span>
+                <span><code>contributors:1+</code>outside contributors at least</span>
+              </p>
+              <p>
+                <span><code>sort:stars</code>also views, copies, hearts</span>
+                <span><code>sort:rank</code>also installRate, name, kind</span>
+              </p>
+              <p>Terms combine with AND.</p>
+            </div>
             <div id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Search suggestions" hidden></div>
             <span id="search-suggestion-status" class="sr-only" aria-live="polite"></span>
           </div>
@@ -137,6 +165,7 @@
               <option value="rank">Top ranked</option>
               <option value="installRate">Install rate</option>
               <option value="name">A–Z</option>
+              <option value="maintained">Maintained</option>
               <option value="verified">Verified</option>
               <option value="unverified">Unverified</option>
             </select>
@@ -243,6 +272,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20261002-03"></script>
+    <script type="module" src="assets/js/app.js?v=20261030-01"></script>
   </body>
 </html>

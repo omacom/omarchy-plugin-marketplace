@@ -20,6 +20,15 @@ import {
 } from "./catalog-verification.mjs";
 import { parseGitHubRepository } from "./github-repository.mjs";
 import {
+  MaintenanceFactsError,
+  carriedMaintenance,
+  hasMaintenanceProjection,
+  maintenanceFactsFromGraphql,
+  maintenanceMergedPullRequestSample,
+  projectMaintenance,
+  stripMaintenance,
+} from "./plugin-maintenance.mjs";
+import {
   assertObservedRepositoryIdentity,
   sourceRepositoryPluginIds,
   validateRegistryRepositoryMigrations,
@@ -418,7 +427,7 @@ export function catalogRefreshIdentityQuery(sources) {
       source,
     });
   });
-  const query = `query CatalogRefreshIdentities(${declarations.join(",")}){${fields.join(" ")} rateLimit{cost limit remaining resetAt}} fragment CatalogRefreshRepository on Repository{id databaseId nameWithOwner isArchived isDisabled isPrivate stargazerCount pushedAt updatedAt defaultBranchRef{name target{...CatalogRefreshCommit}}} fragment CatalogRefreshCommit on Commit{oid tree{oid}}`;
+  const query = `query CatalogRefreshIdentities(${declarations.join(",")}){${fields.join(" ")} rateLimit{cost limit remaining resetAt}} fragment CatalogRefreshRepository on Repository{id databaseId nameWithOwner isArchived isDisabled isPrivate stargazerCount pushedAt updatedAt createdAt defaultBranchRef{name target{...CatalogRefreshCommit}} mergedPullRequests:pullRequests(states:MERGED,first:${maintenanceMergedPullRequestSample},orderBy:{field:UPDATED_AT,direction:DESC}){totalCount nodes{mergedAt authorAssociation author{__typename login ... on User{createdAt}}}}} fragment CatalogRefreshCommit on Commit{oid committedDate tree{oid}}`;
   return Object.freeze({ query, variables: Object.freeze(variables), entries: Object.freeze(entries) });
 }
 
@@ -434,6 +443,8 @@ function assertGraphqlRepositoryRef(value, label) {
     || typeof value.target !== "object"
     || Array.isArray(value.target)
     || !/^[a-f0-9]{40}$/i.test(value.target.oid || "")
+    || typeof value.target.committedDate !== "string"
+    || !Number.isFinite(Date.parse(value.target.committedDate))
     || !value.target.tree
     || typeof value.target.tree !== "object"
     || Array.isArray(value.target.tree)
@@ -501,6 +512,19 @@ function graphqlSourceIdentity(entry, value) {
   const branch = selectedRef.name;
   const commitSha = selectedRef.target.oid;
   const treeSha = selectedRef.target.tree.oid;
+  let maintenance;
+  try {
+    maintenance = maintenanceFactsFromGraphql(value, {
+      ownerLogin: value.nameWithOwner.split("/")[0],
+      committedDate: selectedRef.target.committedDate,
+    });
+  } catch (error) {
+    if (!(error instanceof MaintenanceFactsError)) throw error;
+    throw new CatalogBuildError(
+      "github-graphql-invalid",
+      `GitHub GraphQL returned invalid repository maintenance fields: ${error.message}`,
+    );
+  }
   return Object.freeze({
     repository: entry.repository,
     metadata: Object.freeze({
@@ -514,6 +538,7 @@ function graphqlSourceIdentity(entry, value) {
       pushed_at: value.pushedAt,
       stargazers_count: value.stargazerCount,
       updated_at: value.updatedAt,
+      maintenance,
     }),
     branch,
     commitSha: commitSha.toLowerCase(),
@@ -1286,6 +1311,9 @@ function repositoryMetadata(metadata) {
   return {
     stars: metadata.stargazers_count || 0,
     repositoryUpdatedAt: metadata.pushed_at || metadata.updated_at,
+    // Only full refreshes carry GraphQL maintenance facts; REST snapshot
+    // builds leave the fields for successfulState to carry from the prior entry.
+    ...(metadata.maintenance ? projectMaintenance(metadata.maintenance) : {}),
   };
 }
 
@@ -1436,6 +1464,7 @@ export function successfulState(plugin, source, context, previous, checkedAt) {
         ? { versionUpdatedAt: prior.versionUpdatedAt }
         : {}),
     status: plugin.installAvailable ? "Available" : "Manual setup",
+    ...(hasMaintenanceProjection(plugin) ? {} : carriedMaintenance(prior)),
   };
   return projectPluginVerification(next, source);
 }
@@ -1597,7 +1626,12 @@ export function failedSourcePlugins(source, previousPlugins, context, checkedAt,
     };
     if (repositoryRelease) next.repositoryRelease = repositoryRelease;
     else delete next.repositoryRelease;
-    return projectPluginVerification(next, source);
+    // A refresh that reached the repository recomputes the signal; one that
+    // did not must not keep publishing a stale "maintained" state.
+    const refreshed = context?.metadata?.maintenance
+      ? { ...stripMaintenance(next), ...projectMaintenance(context.metadata.maintenance) }
+      : stripMaintenance(next);
+    return projectPluginVerification(refreshed, source);
   });
 }
 
