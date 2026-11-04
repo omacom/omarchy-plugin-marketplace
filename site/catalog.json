@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:46:13.226Z",
+  "generatedAt": "2026-11-04T08:36:23.102Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -340482,14 +340482,14 @@
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
       "verificationCommit": "a20f418f234b5202eced7bea9172f1d6f6de1d5e",
-      "verificationCheckedAt": "2026-11-01T12:19:03.497Z",
+      "verificationCheckedAt": "2026-11-04T08:36:23.102Z",
       "manifestPath": "manifest.json",
       "addedAt": "2026-10-31",
       "listedAt": "2026-10-31T21:44:20.853Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": false,
-      "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/OnurByte/OmaMonero.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
       "category": "System",
       "tags": [
         "bar",
@@ -340527,7 +340527,7 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "b48c609d3f7f80c6d7d1cb3beebf7a4b583f03e768504caa70ff4b368f8686ec",
       "versionUpdatedAt": "2026-11-01T09:40:42.903Z",
-      "status": "Manual setup"
+      "status": "Available"
     },
     {
       "id": "io.github.rafabertholdo.macos-dock",

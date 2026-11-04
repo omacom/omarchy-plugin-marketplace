@@ -401134,7 +401134,7 @@
           "io.github.onurbyte.omamonero"
         ],
         "commit": "a20f418f234b5202eced7bea9172f1d6f6de1d5e",
-        "checkedAt": "2026-11-01T12:19:03.497Z",
+        "checkedAt": "2026-11-04T08:36:23.102Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -401148,11 +401148,7 @@
             "quickshell",
             "security"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       },
       "listingValidationHistory": [
