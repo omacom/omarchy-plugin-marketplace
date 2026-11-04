@@ -50,6 +50,7 @@ It must never mean that a plugin is certified, guaranteed safe, endorsed, or cov
 - Manifest identity, repository URLs, categories, curated tags, preview assets, and catalog invariants are validated automatically.
 - Preview images are bounded, validated, and converted to optimized local assets.
 - New and updated states are derived from listing and manifest timestamps rather than manual ranking.
+- A maintenance signal marks community listings with an outside contributor, an established repository, and recent commits. It is a collaboration and activity signal only. Known limit: the refresh inspects only the 20 most recently updated merged pull requests, so an outside contribution older than that window is missed and the listing can show as not established.
 - Community submissions use a structured GitHub Issue form and require an explicit `approved-and-verified` maintainer decision before initial listing.
 
 ### Engagement

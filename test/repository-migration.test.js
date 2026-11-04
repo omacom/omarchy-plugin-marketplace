@@ -157,9 +157,11 @@ function graphqlRepository(overrides = {}) {
     stargazerCount: 1,
     pushedAt: checkedAt,
     updatedAt: checkedAt,
+    createdAt: "2026-01-10T00:00:00Z",
+    mergedPullRequests: { totalCount: 0, nodes: [] },
     defaultBranchRef: {
       name: "main",
-      target: { oid: headCommit, tree: { oid: treeSha } },
+      target: { oid: headCommit, committedDate: "2026-08-29T08:30:00Z", tree: { oid: treeSha } },
     },
     configuredRef: null,
     ...overrides,

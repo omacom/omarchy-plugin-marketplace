@@ -920,9 +920,11 @@ test("full catalog builds reserve GitHub API requests for exact snapshot checks"
             stargazerCount: 7,
             pushedAt: "2026-08-15T09:30:00.000Z",
             updatedAt: "2026-08-15T09:30:00.000Z",
+            createdAt: "2026-01-10T00:00:00Z",
+            mergedPullRequests: { totalCount: 0, nodes: [] },
             defaultBranchRef: {
               name: "main",
-              target: { oid: targetCommit, tree: { oid: treeSha } },
+              target: { oid: targetCommit, committedDate: "2026-08-15T09:30:00.000Z", tree: { oid: treeSha } },
             },
             configuredRef: null,
           },
