@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:46:13.226Z",
+  "generatedAt": "2026-11-04T00:53:47.433Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -293913,8 +293913,8 @@
       "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
       "category": "Widgets",
       "tags": [
-        "bar",
         "games",
+        "bar",
         "quickshell"
       ],
       "license": "MIT",
@@ -293941,14 +293941,16 @@
       "listingValidatedBranch": "main",
       "upstreamObservedCommit": "176ba87dd1867451331a77ef21fe3e899d030a08",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-11-03T11:54:48.762Z",
+      "upstreamCheckedAt": "2026-11-04T00:53:47.433Z",
       "upstreamCheckStatus": "passed",
       "upstreamValidatedCommit": "176ba87dd1867451331a77ef21fe3e899d030a08",
-      "upstreamValidatedAt": "2026-10-22T05:58:19.767Z",
-      "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "d9c7ddfddb3102757079b97c1ccdaee8bc1d0708b4defc068eb07a41a942104c",
+      "upstreamValidatedAt": "2026-11-04T00:53:47.433Z",
+      "upstreamValidationVersion": 3,
+      "upstreamSourceFingerprint": "c2caa7b6bbae6b16f60be2e8f1767c8765f26549d05c3e5fbb0df9fc8b25577d",
       "versionUpdatedAt": "2026-10-22T05:58:19.767Z",
-      "status": "Available"
+      "status": "Available",
+      "headerLogo": "assets/img/logos/gaugedb.png",
+      "previewKind": "logo"
     },
     {
       "id": "ubruckhaus.my-plugins",

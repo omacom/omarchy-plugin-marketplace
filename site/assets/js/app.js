@@ -37,14 +37,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261002-03";
+} from "./shared.js?v=20261013-02";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261002-03";
+} from "./engagement.js?v=20261013-02";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -73,13 +73,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261002-03";
+} from "./search.js?v=20261013-02";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261002-03";
+} from "./taxonomy.js?v=20261013-02";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
