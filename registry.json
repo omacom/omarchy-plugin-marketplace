@@ -408275,6 +408275,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TasosK7/omarchy-limusic",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:19:46.659Z",
+      "listingValidatedCommit": "b24a944679a9dc4cec16325aa8a51a1e651ea276",
+      "listingValidatedAt": "2026-11-05T22:19:46.659Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tasosk7/omarchy-limusic",
+        "pluginIds": [
+          "io.github.tasosk7.limusic"
+        ],
+        "commit": "b24a944679a9dc4cec16325aa8a51a1e651ea276",
+        "checkedAt": "2026-11-05T22:19:46.474Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tasosk7.limusic": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
