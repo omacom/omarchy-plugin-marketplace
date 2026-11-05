@@ -47,6 +47,7 @@ import {
   recentListings,
   recentUpdates,
   updatedListings,
+  versionUpdateTime,
 } from "../site/assets/js/shared.js";
 
 const catalog = JSON.parse(await readFile(new URL("../site/catalog.json", import.meta.url), "utf8"));
@@ -556,6 +557,36 @@ test("updated listings keep real version changes inside the window", () => {
   );
   assert.deepEqual(updatedListings(plugins, now, 24).map(({ id }) => id), ["fresh", "listed-long-ago"]);
   assert.deepEqual(updatedListings(null, now, 24), []);
+});
+
+test("version update time is the earlier of detection and last push", () => {
+  const detected = "2026-11-05T12:00:00Z";
+  assert.equal(versionUpdateTime({ versionUpdatedAt: detected, repositoryUpdatedAt: "2026-11-05T05:00:00Z" }), Date.parse("2026-11-05T05:00:00Z"));
+  assert.equal(versionUpdateTime({ versionUpdatedAt: detected, repositoryUpdatedAt: "2026-11-05T15:00:00Z" }), Date.parse(detected));
+  assert.equal(versionUpdateTime({ versionUpdatedAt: detected }), Date.parse(detected));
+  assert.equal(versionUpdateTime({ versionUpdatedAt: detected, repositoryUpdatedAt: "not-a-date" }), Date.parse(detected));
+  assert.ok(Number.isNaN(versionUpdateTime({ repositoryUpdatedAt: "2026-11-05T05:00:00Z" })));
+});
+
+test("updated listings and their order use the real update time", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  const plugin = (id, versionUpdatedAt, repositoryUpdatedAt) => ({
+    id,
+    name: id,
+    repo: `https://github.com/${id}/plugin`,
+    sourceType: "community",
+    listedAt: "2026-09-01T00:00:00Z",
+    versionUpdatedAt,
+    repositoryUpdatedAt,
+  });
+  const plugins = [
+    plugin("pushed-last-month", "2026-11-05T11:00:00Z", "2026-10-05T00:00:00Z"),
+    plugin("pushed-yesterday", "2026-11-05T11:00:00Z", "2026-11-04T06:00:00Z"),
+    plugin("earlier-batch-newer-push", "2026-11-05T01:00:00Z", "2026-11-05T00:00:00Z"),
+    plugin("pushed-after-detection", "2026-11-04T23:00:00Z", "2026-11-05T11:30:00Z"),
+  ];
+  assert.deepEqual(updatedListings(plugins, now, 24).map(({ id }) => id), ["earlier-batch-newer-push", "pushed-after-detection"]);
+  assert.deepEqual(recentUpdates(plugins, now).map(({ id }) => id), ["earlier-batch-newer-push", "pushed-after-detection", "pushed-yesterday"]);
 });
 
 test("recent updates are newest first with one plugin per publisher and a cap", () => {
