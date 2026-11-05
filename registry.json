@@ -407609,6 +407609,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MOHIT-IITP/app-workspace",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:06:12.625Z",
+      "listingValidatedCommit": "17edfd07690499fee4307aea29c1f08035d5f53f",
+      "listingValidatedAt": "2026-11-05T21:06:12.625Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mohit-iitp/app-workspace",
+        "pluginIds": [
+          "mohiitp.app-workspaces"
+        ],
+        "commit": "17edfd07690499fee4307aea29c1f08035d5f53f",
+        "checkedAt": "2026-11-05T21:06:12.501Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mohiitp.app-workspaces": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
