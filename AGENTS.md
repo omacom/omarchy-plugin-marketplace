@@ -212,6 +212,8 @@ A push to `main` triggers the GitHub Pages build, tests, and production deployme
 
 A failed Pages deployment usually cannot be retried on the same commit, because the deployment ID is the commit SHA. Publish it with a new commit.
 
+A merge while a catalog refresh or plugin approval is publishing makes that publish fail. Merge only when `check:catalog-write-admission` reports queue depth 0.
+
 ## Definition of done
 
 A change is complete when:
