@@ -407969,6 +407969,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/oidium/omarchy-pocket-extended",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:42:32.669Z",
+      "listingValidatedCommit": "b11eb493b2f8369f2f7c8aa4a917100225c79a77",
+      "listingValidatedAt": "2026-11-05T21:42:32.669Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "oidium/omarchy-pocket-extended",
+        "pluginIds": [
+          "io.github.oidium.pocket-extended"
+        ],
+        "commit": "b11eb493b2f8369f2f7c8aa4a917100225c79a77",
+        "checkedAt": "2026-11-05T21:42:32.495Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "oidium/omarchy-pocket-extended",
+        "pluginIds": [
+          "io.github.oidium.pocket-extended"
+        ],
+        "commit": "b11eb493b2f8369f2f7c8aa4a917100225c79a77",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T21:42:32.495Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T21:00:02.933Z",
+        "requestEventId": 35287385231,
+        "requestedAt": "2026-11-05T21:12:04Z",
+        "reviewedAt": "2026-11-05T21:42:32.495Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.oidium.pocket-extended": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
