@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T19:20:46.642Z",
+  "generatedAt": "2026-11-05T19:45:09.604Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -346350,6 +346350,54 @@
       "upstreamValidatedAt": "2026-11-05T19:20:46.642Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "0dda8c231b91f39142747f56720f9cf54819e4488adb340be3953f2fc0c8d3a4",
+      "status": "Available"
+    },
+    {
+      "id": "com.ennsautomations.wifi-settings",
+      "name": "Wi-Fi Settings",
+      "description": "Omarchy network widget with saved Wi-Fi settings: auto-connect, priority, show or copy the password, forget, and switching to a higher-priority network in range.",
+      "author": "Enns Automations",
+      "version": "0.1.3",
+      "repo": "https://github.com/Enns-Automations/omarchy-wifi-settings",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+      "verificationCheckedAt": "2026-11-05T19:45:08.836Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T19:45:08.972Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/Enns-Automations/omarchy-wifi-settings.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "System",
+      "tags": [
+        "bar"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-11-04T04:56:36Z",
+      "repositoryRelease": {
+        "tag": "v0.1.3",
+        "url": "https://github.com/Enns-Automations/omarchy-wifi-settings/tree/v0.1.3"
+      },
+      "accent": "lime",
+      "initials": "WF",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+      "listingValidatedAt": "2026-11-05T19:45:08.972Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-05T19:45:09.604Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+      "upstreamValidatedAt": "2026-11-05T19:45:09.604Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "18178df0c54d8dd16768024b49f5ca410fc030f32bf6009b16e1e77340f22db4",
       "status": "Available"
     },
     {

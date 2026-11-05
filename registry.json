@@ -407173,6 +407173,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Enns-Automations/omarchy-wifi-settings",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T19:45:08.972Z",
+      "listingValidatedCommit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+      "listingValidatedAt": "2026-11-05T19:45:08.972Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "enns-automations/omarchy-wifi-settings",
+        "pluginIds": [
+          "com.ennsautomations.wifi-settings"
+        ],
+        "commit": "f921aa9e3f63f63e71d1c1a4b1861b516fa739fb",
+        "checkedAt": "2026-11-05T19:45:08.836Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.ennsautomations.wifi-settings": {
+          "category": "System",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
