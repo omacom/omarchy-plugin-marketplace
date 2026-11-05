@@ -1,9 +1,11 @@
 import {
-  activityTime,
   accentColor,
+  ageLabel,
   appendCatalogViewState,
+  catalogAuthorCount,
   catalogViewControls,
   comparePluginEngagement,
+  compareRecentlyUpdated,
   comparePluginInstallRate,
   copyText,
   displayTaxonomyTag,
@@ -29,22 +31,24 @@ import {
   selectHiddenGems,
   medianInstallRate,
   recentListings,
+  recentUpdates,
   setupControlTooltips,
   setupCopyButtons,
   setupThemeToggle,
   showToast,
   splitViewPageSize,
+  updatedListings,
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261105-02";
+} from "./shared.js?v=20261105-03";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261105-02";
+} from "./engagement.js?v=20261105-03";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -73,13 +77,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261105-02";
+} from "./search.js?v=20261105-03";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261105-02";
+} from "./taxonomy.js?v=20261105-03";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -138,7 +142,7 @@ const taxonomyCatalogFilterNames = new Set(taxonomyCatalogFilters.map(([value]) 
 const sortOptions = {
   community: [
     ["added", "Recently added"],
-    ["updated", "Recent activity"],
+    ["updated", "Recently updated"],
     ["stars", "Most starred"],
     ["views", "Most viewed"],
     ["copies", "Most copied"],
@@ -183,6 +187,8 @@ const grid = document.querySelector("#plugin-grid");
 const catalogTitle = document.querySelector("#catalog-title");
 const count = document.querySelector("#plugin-count");
 const countLabel = document.querySelector("#plugin-count-label");
+const pluginAuthors = document.querySelector("#plugin-authors");
+const pluginAuthorCount = document.querySelector("#plugin-author-count");
 const empty = document.querySelector("#empty-state");
 const sourcesRoot = document.querySelector("#source-filters");
 const categoriesRoot = document.querySelector("#category-filters");
@@ -687,7 +693,7 @@ function computeFilteredPlugins() {
   const ranks = state.sort === "rank" ? catalogRanks() : new Map();
   const sorters = {
     added: (a, b) => listingTime(b) - listingTime(a) || a.name.localeCompare(b.name),
-    updated: (a, b) => activityTime(b) - activityTime(a) || a.name.localeCompare(b.name),
+    updated: compareRecentlyUpdated,
     stars: (a, b) => (b.stars || 0) - (a.stars || 0) || a.name.localeCompare(b.name),
     views: (a, b) => comparePluginEngagement(a, b, state.engagement, "views"),
     copies: (a, b) => comparePluginEngagement(a, b, state.engagement, "copies"),
@@ -985,9 +991,9 @@ function bindCardActions(root) {
   });
 }
 
-// Small Just landed card: image, name, author, landing time, and the overall rank once engagement loads.
+// Small Just landed and Just updated card: image, name, author, age, and the overall rank once engagement loads.
 // Duplicates close the endless loop and are on screen when it starts, so they stay clickable; only screen readers and the tab order skip them.
-function landedCard(plugin, now, duplicate = false) {
+function landedCard(plugin, now, duplicate = false, updated = false) {
   const publisher = publisherLogin(plugin);
   const byline = publisher ? `@${publisher}` : plugin.author || "Unknown";
   const image = plugin.previewThumbnail || plugin.previewImage;
@@ -1002,7 +1008,7 @@ function landedCard(plugin, now, duplicate = false) {
         <span class="landed-name">${escapeHtml(plugin.name)}</span>
         <span class="landed-author">${escapeHtml(byline)}</span>
         <span class="landed-foot">
-          <time datetime="${escapeHtml(new Date(listingTime(plugin)).toISOString())}">${escapeHtml(listingAgeLabel(plugin, now))}</time>
+          <time datetime="${escapeHtml(new Date(updated ? Date.parse(plugin.versionUpdatedAt) : listingTime(plugin)).toISOString())}">${escapeHtml(updated ? ageLabel(Date.parse(plugin.versionUpdatedAt), now) : listingAgeLabel(plugin, now))}</time>
           <span class="landed-rank" data-card-rank="${escapeHtml(plugin.id)}"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>
         </span>
       </span>
@@ -1126,6 +1132,7 @@ function renderCatalogLoading() {
 function clearCatalogLoading({ failed = false } = {}) {
   catalogSection.removeAttribute("aria-busy");
   if (failed) {
+    document.querySelector("#recent-section").hidden = true;
     grid.innerHTML = "";
     sourcesRoot.innerHTML = "";
     categoriesRoot.innerHTML = "";
@@ -1149,27 +1156,50 @@ function renderRecentlyAdded() {
   const now = Date.now();
   const lastDay = recentListings(state.plugins, now, 24);
   const lastWeek = recentListings(state.plugins, now, 7 * 24);
-  section.hidden = lastDay.length === 0;
-  if (summary) summary.innerHTML = `<b>${lastDay.length.toLocaleString("en-US")}</b> new in 24h · <b>${lastWeek.length.toLocaleString("en-US")}</b> in 7 days`;
+  const latestUpdates = recentUpdates(state.plugins, now);
+  section.hidden = lastDay.length === 0 && latestUpdates.length === 0;
+  if (!state.recentFeed) state.recentFeed = lastDay.length ? "landed" : "updated";
+  const showUpdates = state.recentFeed === "updated";
+  document.querySelector("#recent-title").setAttribute("aria-label", showUpdates ? "Just updated" : "Just landed");
+  document.querySelectorAll("[data-recent-feed]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.recentFeed === state.recentFeed));
+    if (button.dataset.ready) return;
+    button.dataset.ready = "true";
+    button.addEventListener("click", () => {
+      state.recentFeed = button.dataset.recentFeed;
+      renderRecentlyAdded();
+    });
+  });
+  const viewAll = document.querySelector("#recent-view-all");
+  if (viewAll) viewAll.href = showUpdates ? "?sort=updated#catalog" : "#catalog";
+  if (summary) {
+    summary.innerHTML = showUpdates
+      ? `<b>${updatedListings(state.plugins, now, 24).length.toLocaleString("en-US")}</b> updated in 24h · <b>${updatedListings(state.plugins, now, 7 * 24).length.toLocaleString("en-US")}</b> in 7 days`
+      : `<b>${lastDay.length.toLocaleString("en-US")}</b> new in 24h · <b>${lastWeek.length.toLocaleString("en-US")}</b> in 7 days`;
+  }
   if (!rows || !toggle) return;
 
-  const items = lastDay.slice(0, 48);
+  const items = showUpdates ? latestUpdates : lastDay.slice(0, 48);
   const animated = items.length > 6 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   rows.hidden = items.length === 0;
   rows.classList.toggle("is-animated", animated);
   rows.querySelectorAll("[data-landed-row]").forEach((track, row) => {
     const rowItems = items.filter((_, index) => index % 2 === row);
+    track.closest(".landed-row").hidden = rowItems.length === 0;
+    track.setAttribute("aria-label", `${showUpdates ? "Recently updated" : "Newest"} plugins, ${row === 0 ? "first" : "second"} row`);
     track.style.setProperty("--landed-duration", `${Math.max(30, rowItems.length * 5)}s`);
-    track.innerHTML = rowItems.map((plugin) => landedCard(plugin, now)).join("")
-      + (animated ? rowItems.map((plugin) => landedCard(plugin, now, true)).join("") : "");
+    track.innerHTML = rowItems.map((plugin) => landedCard(plugin, now, false, showUpdates)).join("")
+      + (animated ? rowItems.map((plugin) => landedCard(plugin, now, true, showUpdates)).join("") : "");
   });
-  toggle.hidden = !animated;
+  toggle.hidden = false;
+  toggle.style.visibility = animated ? "" : "hidden";
+  toggle.setAttribute("aria-label", `${rows.classList.contains("is-paused") ? "Play" : "Pause"} the ${showUpdates ? "Just updated" : "Just landed"} feed`);
   if (!toggle.dataset.ready) {
     toggle.dataset.ready = "true";
     toggle.addEventListener("click", () => {
       const paused = rows.classList.toggle("is-paused");
       toggle.textContent = paused ? "Play" : "Pause";
-      toggle.setAttribute("aria-label", `${paused ? "Play" : "Pause"} the Just landed feed`);
+      toggle.setAttribute("aria-label", `${paused ? "Play" : "Pause"} the ${state.recentFeed === "updated" ? "Just updated" : "Just landed"} feed`);
     });
   }
 }
@@ -1525,6 +1555,11 @@ function render({ historyMode = "replace", announce = false } = {}) {
   count.textContent = hasResultFilter
     ? `${visible.length} of ${categoryPlugins.length}`
     : String(categoryPlugins.length);
+  const showAuthors = state.source === "community" && state.category === "all" && !hasResultFilter;
+  pluginAuthors.hidden = !showAuthors;
+  if (showAuthors) {
+    pluginAuthorCount.textContent = String(catalogAuthorCount(categoryPlugins));
+  }
   countLabel.textContent = state.category === "all"
     ? (state.source === "builtin" ? "built-in plugins" : "community plugins")
     : `${state.source === "builtin" ? "built-in plugins" : "plugins"} in ${catalogFilterLabel(state.category)}`;

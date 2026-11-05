@@ -1465,15 +1465,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261105-02");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-02");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-02");
+  assert.equal(keys[0], "20261105-03");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-03");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-03");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261105-02");
+  assert.equal(styleKeys[0], "20261105-03");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1544,7 +1544,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.favicon, /Cable icon geometry from Lucide[\s\S]*Copyright \(c\) 2026 Lucide Icons and Contributors[\s\S]*Permission to use, copy, modify, and\/or distribute[\s\S]*THE SOFTWARE IS PROVIDED "AS IS"/);
   assert.match(files.index, />Search plugins, tags, text, or authors<\/label>/);
   assert.match(files.index, /placeholder="Search plugins, tag:media, kind:panel, or @author…"/);
-  assert.match(files.index, /<option value="updated">Recent activity<\/option>/);
+  assert.match(files.index, /<option value="updated">Recently updated<\/option>/);
   assert.match(files.index, /<option value="stars">Most starred<\/option>[\s\S]*<option value="views">Most viewed<\/option>[\s\S]*<option value="copies">Most copied<\/option>[\s\S]*<option value="hearts">Most hearts<\/option>/);
   assert.match(files.index, /<span class="sr-only">Sort or filter plugins<\/span>[\s\S]*<select id="sort-select">[\s\S]*<option value="name">A–Z<\/option>[\s\S]*<option value="verified">Verified<\/option>[\s\S]*<option value="unverified">Unverified<\/option>/);
   assert.doesNotMatch(files.index, /verification-bar|verification-select/);
@@ -1773,11 +1773,20 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.develop, /omarchy plugin validate/);
   assert.match(files.develop, /qs log -p/);
   assert.doesNotMatch(files.develop, /<script[^>]+src=["']https?:/);
-  assert.match(files.index, /<h2 id="recent-title">JUST LANDED<\/h2>/);
+  assert.match(files.index, /<h2 id="recent-title"><button id="recent-tab-landed"[^>]*data-recent-feed="landed" aria-pressed="true">JUST LANDED<\/button><\/h2>\s*<button id="recent-tab-updated"[^>]*data-recent-feed="updated" aria-pressed="false">JUST UPDATED<\/button>/);
   assert.doesNotMatch(files.index, /RECENTLY ADDED|recent-latest-title/);
   assert.match(files.index, /id="gems-section"[\s\S]*id="recent-section"/);
   assert.match(files.index, /id="recent-summary" class="recent-summary"[\s\S]*id="recent-feed-toggle" class="recent-feed-toggle" type="button"[\s\S]*<div id="recent-latest" class="landed-rows" hidden>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>/);
-  assert.match(files.app, /function landedCard\(plugin, now, duplicate = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
+  assert.match(files.app, /function landedCard\(plugin, now, duplicate = false, updated = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
+  const appSharedImports = files.app.match(/import \{([\s\S]*?)\} from "\.\/shared\.js/)?.[1] || "";
+  for (const name of ["ageLabel", "catalogAuthorCount", "compareRecentlyUpdated", "recentUpdates", "updatedListings"]) {
+    assert.match(appSharedImports, new RegExp(`\\b${name}\\b`), name);
+    assert.match(files.app.slice(files.app.indexOf("const pluginsPerPage")), new RegExp(`\\b${name}\\b`), name);
+  }
+  assert.match(files.app, /const showAuthors = state\.source === "community" && state\.category === "all" && !hasResultFilter;\s*pluginAuthors\.hidden = !showAuthors;/);
+  assert.match(files.app, /showUpdates\s*\? `<b>\$\{updatedListings\(state\.plugins, now, 24\)\.length[^`]*updated in 24h · <b>\$\{updatedListings\(state\.plugins, now, 7 \* 24\)/);
+  assert.match(files.app, /querySelector\("#recent-title"\)\.setAttribute\("aria-label", showUpdates \? "Just updated" : "Just landed"\)/);
+  assert.match(files.app, /track\.setAttribute\("aria-label", `\$\{showUpdates \? "Recently updated" : "Newest"\} plugins/);
   assert.match(files.app, /const animated = items\.length > 6 && !window\.matchMedia\("\(prefers-reduced-motion: reduce\)"\)\.matches;/);
   assert.match(files.index, /<section class="market-catalog" id="catalog"[^>]*aria-busy="true">[\s\S]*<span id="plugin-count">—<\/span>[\s\S]*<nav id="catalog-pagination"[^>]*hidden>/);
   assert.match(files.app, /async function init\(\) \{\s*renderCatalogLoading\(\);[\s\S]*await loadCatalog\(\);[\s\S]*clearCatalogLoading\(\);[\s\S]*catch \(error\) \{\s*console\.error\(error\);\s*clearCatalogLoading\(\{ failed: true \}\);/);
@@ -1836,8 +1845,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /"ORIGINAL"[\s\S]*"COCOON"[\s\S]*"STORM"[\s\S]*"RAY"[\s\S]*"BIRD"[\s\S]*"WING"/);
   assert.match(files.app, /runVisibleAnimation\(frame, draw, 30\)/);
   assert.match(files.app, /const pluginsPerPage = 9/);
-  assert.match(files.app, /\["updated", "Recent activity"\]/);
-  assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
+  assert.match(files.app, /\["updated", "Recently updated"\]/);
+  assert.doesNotMatch(files.index, /Recent activity/);
+  assert.match(files.app, /updated: compareRecentlyUpdated,/);
   assert.match(files.app, /function publisherLogin\(plugin\)/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
   assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);

@@ -6,6 +6,7 @@ import {
   themeById,
   themePreviewPath,
 } from "./themes.js?v=20260920-05";
+import { repositoryPublisher } from "./search.js?v=20261105-03";
 
 const accentColors = {
   lime: "#b7ef51",
@@ -358,14 +359,6 @@ export function listingTime(plugin) {
   return Number.NaN;
 }
 
-export function activityTime(plugin) {
-  const timestamps = [
-    Date.parse(plugin?.versionUpdatedAt || ""),
-    Date.parse(plugin?.repositoryUpdatedAt || ""),
-  ].filter(Number.isFinite);
-  return timestamps.length ? Math.max(...timestamps) : 0;
-}
-
 export function currentHashId() {
   const raw = location.hash.slice(1);
   try {
@@ -403,8 +396,46 @@ export function recentListings(plugins, now = Date.now(), windowHours = 24) {
     .sort((a, b) => listingTime(b) - listingTime(a) || String(a.name).localeCompare(String(b.name)));
 }
 
+export function compareRecentlyUpdated(a, b) {
+  return (Date.parse(b.versionUpdatedAt) || 0) - (Date.parse(a.versionUpdatedAt) || 0)
+    || (Date.parse(b.repositoryUpdatedAt) || 0) - (Date.parse(a.repositoryUpdatedAt) || 0)
+    || a.name.localeCompare(b.name);
+}
+
+export function recentUpdates(plugins, now) {
+  const publishers = new Set();
+  return updatedListings(plugins, now, 7 * 24)
+    .sort(compareRecentlyUpdated)
+    .filter((plugin) => {
+      const publisher = repositoryPublisher(plugin.repo).toLowerCase();
+      if (!publisher) return true;
+      if (publishers.has(publisher)) return false;
+      publishers.add(publisher);
+      return true;
+    })
+    .slice(0, 48);
+}
+
+export function updatedListings(plugins, now, windowHours) {
+  return (plugins || []).filter((plugin) => {
+    if (!plugin || plugin.builtIn || plugin.placeholder || (plugin.sourceType || "community") !== "community") return false;
+    const updatedAt = Date.parse(plugin.versionUpdatedAt);
+    if (!Number.isFinite(updatedAt) || updatedAt - listingTime(plugin) < 24 * hourMs) return false;
+    const age = now - updatedAt;
+    return age >= 0 && age < windowHours * hourMs;
+  });
+}
+
+export function catalogAuthorCount(plugins) {
+  return new Set((plugins || []).map((plugin) => repositoryPublisher(plugin?.repo).toLowerCase()).filter(Boolean)).size;
+}
+
 export function listingAgeLabel(plugin, now = Date.now()) {
-  const age = now - listingTime(plugin);
+  return ageLabel(listingTime(plugin), now);
+}
+
+export function ageLabel(time, now = Date.now()) {
+  const age = now - time;
   if (!Number.isFinite(age) || age < 0) return "";
   const minutes = Math.floor(age / 60000);
   if (minutes < 1) return "just now";
