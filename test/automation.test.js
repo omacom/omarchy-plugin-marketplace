@@ -1465,15 +1465,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261105-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-01");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-01");
+  assert.equal(keys[0], "20261105-02");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-02");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-02");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261105-01");
+  assert.equal(styleKeys[0], "20261105-02");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1496,6 +1496,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.doesNotMatch(files.develop, />Draft<|status(?:-label)? is-caution[^>]*>Stable/);
   assert.match(files.publish, /class="sidebar-link active" href="publish\.html" aria-current="page">Publishing guide<\/a>/);
   assert.match(files.index, /id="catalog-pagination"[\s\S]*id="page-previous"[\s\S]*id="page-input"[\s\S]*id="page-total"[\s\S]*id="page-next"/);
+  assert.match(files.style, /\.page-input \{\s*width: 28px;/);
   assert.match(files.index, /<\/nav>\s*<div id="catalog-view-toggle" class="catalog-view-toggle" hidden>\s*<button id="catalog-view-button" class="catalog-view-button" type="button" aria-controls="plugin-grid" aria-expanded="false">[\s\S]*id="catalog-view-label">Browse all plugins<[\s\S]*<span id="catalog-result-status" class="sr-only" role="status" aria-live="polite"><\/span>/);
   assert.doesNotMatch(files.index, /id="plugin-grid"[^>]*aria-live|id="page-announcement"|id="catalog-view-announcement"/);
   assert.match(files.index, /<div id="catalog-view-dock" class="catalog-view-dock" hidden>\s*<button id="catalog-view-dock-button" type="button">\s*<span id="catalog-view-dock-status">Showing all plugins<\/span>\s*<span class="catalog-view-dock-action">Show 9 per page/);
