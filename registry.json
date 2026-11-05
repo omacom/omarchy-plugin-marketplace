@@ -407417,6 +407417,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/2strange/omarchy-mackeyboard",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T20:45:15.889Z",
+      "listingValidatedCommit": "a86c1af1d76325aed088f9ec38f818f7ba64f055",
+      "listingValidatedAt": "2026-11-05T20:45:15.889Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "2strange/omarchy-mackeyboard",
+        "pluginIds": [
+          "io.github.2strange.mackeyboard"
+        ],
+        "commit": "a86c1af1d76325aed088f9ec38f818f7ba64f055",
+        "checkedAt": "2026-11-05T20:45:15.697Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "2strange/omarchy-mackeyboard",
+        "pluginIds": [
+          "io.github.2strange.mackeyboard"
+        ],
+        "commit": "a86c1af1d76325aed088f9ec38f818f7ba64f055",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T20:45:15.697Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "sudoers-modification",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T19:49:09.412Z",
+        "requestEventId": 35284724795,
+        "requestedAt": "2026-11-05T20:40:00Z",
+        "reviewedAt": "2026-11-05T20:45:15.697Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.2strange.mackeyboard": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
