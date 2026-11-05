@@ -408633,6 +408633,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Harold15000/eyemarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:51:14.817Z",
+      "listingValidatedCommit": "4c30a3b21ab3279c0a0d3b0636321101b279626c",
+      "listingValidatedAt": "2026-11-05T22:51:14.817Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "harold15000/eyemarchy",
+        "pluginIds": [
+          "io.github.harold15000.eyemarchy"
+        ],
+        "commit": "4c30a3b21ab3279c0a0d3b0636321101b279626c",
+        "checkedAt": "2026-11-05T22:51:14.667Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.harold15000.eyemarchy": {
+          "category": "Desktop",
+          "tags": [
+            "ai",
+            "system",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
