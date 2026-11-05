@@ -351,6 +351,7 @@ export function approvalDecisionForEvents(events, {
   expectedEventId,
   expectedRequestedAt,
   expectedTriggeredAt,
+  label = approvedAndVerifiedLabel,
 } = {}) {
   const requestedAt = approvalTimestamp(expectedRequestedAt);
   const triggeredAt = approvalTimestamp(
@@ -365,6 +366,7 @@ export function approvalDecisionForEvents(events, {
   if (
     !Array.isArray(events)
     || typeof approver !== "string" || !approver
+    || typeof label !== "string" || !label
     || requestedAt === null
     || triggeredAt === null
     || (expectedEventId !== undefined && (!Number.isSafeInteger(expectedEventId) || expectedEventId < 1))
@@ -376,7 +378,7 @@ export function approvalDecisionForEvents(events, {
     if (!event || typeof event !== "object" || typeof event.event !== "string") invalid();
     if (!["labeled", "unlabeled"].includes(event.event)) continue;
     if (typeof event.label?.name !== "string") invalid();
-    if (event.label.name !== approvedAndVerifiedLabel) continue;
+    if (event.label.name !== label) continue;
     if (
       !Number.isSafeInteger(event.id) || event.id < 1 || ids.has(event.id)
       || approvalTimestamp(event.created_at) === null
@@ -412,7 +414,7 @@ export function approvalDecisionForEvents(events, {
   ) {
     throw new SubmissionApprovalError(
       "approval-event-invalid",
-      "The approved-and-verified label event does not match this workflow request",
+      `The ${label} label event does not match this workflow request`,
     );
   }
   return Object.freeze({

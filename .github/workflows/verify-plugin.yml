@@ -75,6 +75,7 @@ jobs:
       installation_changed: ${{ steps.verification.outputs.installation_changed }}
       maintainer_review_event_id: ${{ steps.review-authorization.outputs.event_id }}
       standard_installation_approval_event_id: ${{ steps.standard-installation-authorization.outputs.event_id }}
+      standard_installation_approval_event_time: ${{ steps.standard-installation-authorization.outputs.event_time }}
       revocation_event_id: ${{ steps.revocation-authorization.outputs.event_id }}
       revocation_event_time: ${{ steps.revocation-authorization.outputs.event_time }}
       revocation_review_event_id: ${{ steps.revocation-authorization.outputs.review_event_id }}
@@ -127,21 +128,15 @@ jobs:
         run: |
           set -euo pipefail
           events="$(gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events?per_page=100")"
-          transition="$(jq -r --arg requested_at "$APPROVAL_REQUESTED_AT" --arg reviewer "$REVIEWER" '
-            [.[][] | select(.event == "labeled" and .label.name == "standard-installation-approved" and .actor.login == $reviewer and .created_at == $requested_at)]
-            | sort_by(.created_at, .id)
-            | [.[] | .id] | @tsv
-          ' <<< "$events")"
-          if [[ ! $transition =~ ^[1-9][0-9]*$ ]]; then
-            echo "Standard installation approval label event does not match the workflow trigger." >&2
-            exit 1
-          fi
+          transition="$(printf '%s' "$events" | node scripts/standard-installation-event.mjs "$REVIEWER" "$APPROVAL_REQUESTED_AT")"
+          IFS=$'\t' read -r event_id event_time <<< "$transition"
           permission="$(gh api "repos/${GITHUB_REPOSITORY}/collaborators/${REVIEWER}/permission" --jq '.permission')"
           case "$permission" in
             admin|maintain|write) ;;
             *) echo "${REVIEWER} does not have write permission for standard installation approval." >&2; exit 1 ;;
           esac
-          echo "event_id=${transition}" >> "$GITHUB_OUTPUT"
+          echo "event_id=${event_id}" >> "$GITHUB_OUTPUT"
+          echo "event_time=${event_time}" >> "$GITHUB_OUTPUT"
 
       - name: Authorize maintainer verification revocation
         id: revocation-authorization
@@ -285,7 +280,7 @@ jobs:
           STANDARD_INSTALLATION_APPROVAL_REQUESTED: ${{ github.event.action == 'labeled' && github.event.label.name == 'standard-installation-approved' }}
           STANDARD_INSTALLATION_APPROVAL_REVIEWER: ${{ github.actor }}
           STANDARD_INSTALLATION_APPROVAL_EVENT_ID: ${{ steps.standard-installation-authorization.outputs.event_id }}
-          STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT: ${{ github.event.issue.updated_at }}
+          STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT: ${{ steps.standard-installation-authorization.outputs.event_time }}
           REVOCATION_REQUESTED: ${{ github.event.action == 'unlabeled' && github.event.label.name == 'maintainer-verified' }}
           REVOCATION_REVIEWER: ${{ github.actor }}
           REVOCATION_EVENT_ID: ${{ steps.revocation-authorization.outputs.event_id }}
@@ -379,6 +374,7 @@ jobs:
           MAINTAINER_REVIEW_REQUESTED_AT: ${{ github.event.issue.updated_at }}
           STANDARD_INSTALLATION_APPROVAL_REQUESTED: ${{ github.event.action == 'labeled' && github.event.label.name == 'standard-installation-approved' }}
           STANDARD_INSTALLATION_APPROVAL_EVENT_ID: ${{ steps.standard-installation-authorization.outputs.event_id }}
+          STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT: ${{ steps.standard-installation-authorization.outputs.event_time }}
           REVOCATION_REQUESTED: ${{ github.event.action == 'unlabeled' && github.event.label.name == 'maintainer-verified' }}
           REVOCATION_EVENT_ID: ${{ steps.revocation-authorization.outputs.event_id }}
           REVOCATION_REQUESTED_AT: ${{ steps.revocation-authorization.outputs.event_time }}
@@ -410,7 +406,7 @@ jobs:
                 "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events?per_page=100" \
                 | jq -r '[.[][] | select(.event == "labeled" and .label.name == "standard-installation-approved")] | sort_by(.created_at, .id) | last | [.id, .event, .actor.login, .created_at] | @tsv'
             )"
-            expected_installation_transition="$(printf '%s\tlabeled\t%s\t%s' "$STANDARD_INSTALLATION_APPROVAL_EVENT_ID" "$MAINTAINER_REVIEWER" "$MAINTAINER_REVIEW_REQUESTED_AT")"
+            expected_installation_transition="$(printf '%s\tlabeled\t%s\t%s' "$STANDARD_INSTALLATION_APPROVAL_EVENT_ID" "$MAINTAINER_REVIEWER" "$STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT")"
             test "$latest_installation_transition" = "$expected_installation_transition"
             permission="$(gh api "repos/${GITHUB_REPOSITORY}/collaborators/${MAINTAINER_REVIEWER}/permission" --jq '.permission')"
             case "$permission" in
@@ -526,6 +522,7 @@ jobs:
           MAINTAINER_REVIEW_REQUESTED_AT: ${{ github.event.issue.updated_at }}
           STANDARD_INSTALLATION_APPROVAL_REQUESTED: ${{ github.event.action == 'labeled' && github.event.label.name == 'standard-installation-approved' }}
           STANDARD_INSTALLATION_APPROVAL_EVENT_ID: ${{ needs.analyze.outputs.standard_installation_approval_event_id }}
+          STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT: ${{ needs.analyze.outputs.standard_installation_approval_event_time }}
           REVOCATION_REQUESTED: ${{ github.event.action == 'unlabeled' && github.event.label.name == 'maintainer-verified' }}
           REVOCATION_EVENT_ID: ${{ needs.analyze.outputs.revocation_event_id }}
           REVOCATION_REQUESTED_AT: ${{ needs.analyze.outputs.revocation_event_time }}
@@ -584,6 +581,7 @@ jobs:
           MAINTAINER_REVIEW_REQUESTED_AT: ${{ github.event.issue.updated_at }}
           STANDARD_INSTALLATION_APPROVAL_REQUESTED: ${{ github.event.action == 'labeled' && github.event.label.name == 'standard-installation-approved' }}
           STANDARD_INSTALLATION_APPROVAL_EVENT_ID: ${{ needs.analyze.outputs.standard_installation_approval_event_id }}
+          STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT: ${{ needs.analyze.outputs.standard_installation_approval_event_time }}
           REVOCATION_REQUESTED: ${{ github.event.action == 'unlabeled' && github.event.label.name == 'maintainer-verified' }}
           REVOCATION_EVENT_ID: ${{ needs.analyze.outputs.revocation_event_id }}
           REVOCATION_REQUESTED_AT: ${{ needs.analyze.outputs.revocation_event_time }}
@@ -630,7 +628,7 @@ jobs:
                 "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/events?per_page=100" \
                 | jq -r '[.[][] | select(.event == "labeled" and .label.name == "standard-installation-approved")] | sort_by(.created_at, .id) | last | [.id, .event, .actor.login, .created_at] | @tsv'
             )"
-            expected_installation_transition="$(printf '%s\tlabeled\t%s\t%s' "$STANDARD_INSTALLATION_APPROVAL_EVENT_ID" "$MAINTAINER_REVIEWER" "$MAINTAINER_REVIEW_REQUESTED_AT")"
+            expected_installation_transition="$(printf '%s\tlabeled\t%s\t%s' "$STANDARD_INSTALLATION_APPROVAL_EVENT_ID" "$MAINTAINER_REVIEWER" "$STANDARD_INSTALLATION_APPROVAL_REQUESTED_AT")"
             test "$latest_installation_transition" = "$expected_installation_transition"
             permission="$(gh api "repos/${GITHUB_REPOSITORY}/collaborators/${MAINTAINER_REVIEWER}/permission" --jq '.permission')"
             case "$permission" in
