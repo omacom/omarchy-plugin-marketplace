@@ -408891,6 +408891,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/marselnenaj/omarchy-yubikey-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:30:38.973Z",
+      "listingValidatedCommit": "19e54eea96e192ae095b15b3ce9c761e4a35adb6",
+      "listingValidatedAt": "2026-11-05T23:30:38.973Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marselnenaj/omarchy-yubikey-lock",
+        "pluginIds": [
+          "yubikey.lock"
+        ],
+        "commit": "19e54eea96e192ae095b15b3ce9c761e4a35adb6",
+        "checkedAt": "2026-11-05T23:30:38.848Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "yubikey.lock": {
+          "category": "System",
+          "tags": [
+            "security",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
