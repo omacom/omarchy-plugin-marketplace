@@ -407205,6 +407205,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jonathangeller/omail",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T20:24:47.388Z",
+      "listingValidatedCommit": "e3efb5827a2569c98562ecb4480dd9f17a9d9b96",
+      "listingValidatedAt": "2026-11-05T20:24:47.388Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jonathangeller/omail",
+        "pluginIds": [
+          "omail"
+        ],
+        "commit": "e3efb5827a2569c98562ecb4480dd9f17a9d9b96",
+        "checkedAt": "2026-11-05T20:24:47.211Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "installer",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jonathangeller/omail",
+        "pluginIds": [
+          "omail"
+        ],
+        "commit": "e3efb5827a2569c98562ecb4480dd9f17a9d9b96",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T20:24:47.211Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "installer",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T19:30:05.517Z",
+        "requestEventId": 35283411629,
+        "requestedAt": "2026-11-05T20:24:07Z",
+        "reviewedAt": "2026-11-05T20:24:47.211Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omail": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
