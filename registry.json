@@ -406994,6 +406994,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/masegraye/OmaLeviathan",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T08:29:39.068Z",
+      "listingValidatedCommit": "4d665d3d153f2e680c81086772579a187a286f8b",
+      "listingValidatedAt": "2026-11-05T08:29:39.068Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "masegraye/omaleviathan",
+        "pluginIds": [
+          "io.github.masegraye.omaleviathan"
+        ],
+        "commit": "4d665d3d153f2e680c81086772579a187a286f8b",
+        "checkedAt": "2026-11-05T08:29:38.887Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "masegraye/omaleviathan",
+        "pluginIds": [
+          "io.github.masegraye.omaleviathan"
+        ],
+        "commit": "4d665d3d153f2e680c81086772579a187a286f8b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T08:29:38.887Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T08:24:04.172Z",
+        "requestEventId": 35219253279,
+        "requestedAt": "2026-11-05T08:29:08Z",
+        "reviewedAt": "2026-11-05T08:29:38.887Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.masegraye.omaleviathan": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
