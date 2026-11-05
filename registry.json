@@ -407575,6 +407575,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/basar-yilmaz/omarchy-omaquota",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:01:46.757Z",
+      "listingValidatedCommit": "ddaaad8713f755b174c246b189b97187425c7bf4",
+      "listingValidatedAt": "2026-11-05T21:01:46.757Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "basar-yilmaz/omarchy-omaquota",
+        "pluginIds": [
+          "io.github.basar-yilmaz.omaquota"
+        ],
+        "commit": "ddaaad8713f755b174c246b189b97187425c7bf4",
+        "checkedAt": "2026-11-05T21:01:46.553Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.basar-yilmaz.omaquota": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
