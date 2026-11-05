@@ -407882,6 +407882,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RichardBronosky/omarchy-mdview",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:33:45.382Z",
+      "listingValidatedCommit": "c2a627fb1904e04da813b81c8286e595b4ffc437",
+      "listingValidatedAt": "2026-11-05T21:33:45.382Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "richardbronosky/omarchy-mdview",
+        "pluginIds": [
+          "io.github.richardbronosky.mdview"
+        ],
+        "commit": "c2a627fb1904e04da813b81c8286e595b4ffc437",
+        "checkedAt": "2026-11-05T21:33:45.225Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "richardbronosky/omarchy-mdview",
+        "pluginIds": [
+          "io.github.richardbronosky.mdview"
+        ],
+        "commit": "c2a627fb1904e04da813b81c8286e595b4ffc437",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T21:33:45.225Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T20:52:05.845Z",
+        "requestEventId": 35286786610,
+        "requestedAt": "2026-11-05T21:04:56Z",
+        "reviewedAt": "2026-11-05T21:33:45.225Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.richardbronosky.mdview": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
