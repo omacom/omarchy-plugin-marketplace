@@ -6,7 +6,7 @@ import {
   themeById,
   themePreviewPath,
 } from "./themes.js?v=20260920-05";
-import { repositoryPublisher } from "./search.js?v=20261105-04";
+import { repositoryPublisher } from "./search.js?v=20261105-05";
 
 const accentColors = {
   lime: "#b7ef51",
@@ -396,8 +396,14 @@ export function recentListings(plugins, now = Date.now(), windowHours = 24) {
     .sort((a, b) => listingTime(b) - listingTime(a) || String(a.name).localeCompare(String(b.name)));
 }
 
+export function versionUpdateTime(plugin) {
+  const detectedAt = Date.parse(plugin?.versionUpdatedAt);
+  const pushedAt = Date.parse(plugin?.repositoryUpdatedAt);
+  return Number.isFinite(pushedAt) ? Math.min(detectedAt, pushedAt) : detectedAt;
+}
+
 export function compareRecentlyUpdated(a, b) {
-  return (Date.parse(b.versionUpdatedAt) || 0) - (Date.parse(a.versionUpdatedAt) || 0)
+  return (versionUpdateTime(b) || 0) - (versionUpdateTime(a) || 0)
     || (Date.parse(b.repositoryUpdatedAt) || 0) - (Date.parse(a.repositoryUpdatedAt) || 0)
     || a.name.localeCompare(b.name);
 }
@@ -421,7 +427,7 @@ export function updatedListings(plugins, now, windowHours) {
     if (!plugin || plugin.builtIn || plugin.placeholder || (plugin.sourceType || "community") !== "community") return false;
     const updatedAt = Date.parse(plugin.versionUpdatedAt);
     if (!Number.isFinite(updatedAt) || updatedAt - listingTime(plugin) < 24 * hourMs) return false;
-    const age = now - updatedAt;
+    const age = now - versionUpdateTime(plugin);
     return age >= 0 && age < windowHours * hourMs;
   });
 }

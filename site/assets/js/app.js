@@ -38,17 +38,18 @@ import {
   showToast,
   splitViewPageSize,
   updatedListings,
+  versionUpdateTime,
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261105-04";
+} from "./shared.js?v=20261105-05";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261105-04";
+} from "./engagement.js?v=20261105-05";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -77,13 +78,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261105-04";
+} from "./search.js?v=20261105-05";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261105-04";
+} from "./taxonomy.js?v=20261105-05";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -1008,7 +1009,7 @@ function landedCard(plugin, now, duplicate = false, updated = false) {
         <span class="landed-name">${escapeHtml(plugin.name)}</span>
         <span class="landed-author">${escapeHtml(byline)}</span>
         <span class="landed-foot">
-          <time datetime="${escapeHtml(new Date(updated ? Date.parse(plugin.versionUpdatedAt) : listingTime(plugin)).toISOString())}">${escapeHtml(updated ? ageLabel(Date.parse(plugin.versionUpdatedAt), now) : listingAgeLabel(plugin, now))}</time>
+          <time datetime="${escapeHtml(new Date(updated ? versionUpdateTime(plugin) : listingTime(plugin)).toISOString())}">${escapeHtml(updated ? ageLabel(versionUpdateTime(plugin), now) : listingAgeLabel(plugin, now))}</time>
           <span class="landed-rank" data-card-rank="${escapeHtml(plugin.id)}"${rank ? "" : " hidden"}>${escapeHtml(rank)}</span>
         </span>
       </span>
