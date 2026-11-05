@@ -13,13 +13,14 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # A full refresh currently takes about 50 minutes across 1,300+ sources.
+    # Initial policy migrations may inspect every tree; unchanged sources use batched identity checks.
     timeout-minutes: 90
     permissions:
       contents: read
     outputs:
       base_commit: ${{ steps.base.outputs.commit }}
       catalog_sha: ${{ steps.bundle.outputs.catalog_sha }}
+      explorer_sha: ${{ steps.bundle.outputs.explorer_sha }}
       publication_sha: ${{ steps.bundle.outputs.publication_sha }}
       publication_artifact_name: ${{ steps.artifacts.outputs.publication_name }}
       pages_artifact_name: ${{ steps.artifacts.outputs.pages_name }}
@@ -29,7 +30,9 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: main
+          fetch-depth: 0
           persist-credentials: false
+          filter: blob:none
 
       - name: Record build base commit
         id: base
@@ -47,6 +50,26 @@ jobs:
         run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report newly failing catalog sources
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          git show HEAD:site/catalog.json > "$RUNNER_TEMP/previous-catalog.json"
+          jq -r --slurpfile previous "$RUNNER_TEMP/previous-catalog.json" '
+            (reduce ($previous[0].plugins[] | select(.upstreamCheckStatus == "passed") | (.repo // empty)) as $repo ({}; .[$repo] = true)) as $passed
+            | [.plugins[]
+                | select(.upstreamCheckStatus == "failed" and $passed[.repo // ""] == true)
+                | "\(.repo | sub("^https://github\\.com/"; "") | gsub("[^A-Za-z0-9_./-]"; "-")) [\(.upstreamCheckError // "unknown" | gsub("[^a-z-]"; "-"))]"]
+            | unique[]
+          ' site/catalog.json > "$RUNNER_TEMP/newly-failing-sources.txt"
+          if [[ -s "$RUNNER_TEMP/newly-failing-sources.txt" ]]; then
+            printf '## Newly failing catalog sources\n\n' >> "$GITHUB_STEP_SUMMARY"
+            while IFS= read -r source; do
+              echo "::warning title=Catalog source newly failing::${source}"
+              printf -- '- `%s`\n' "$source" >> "$GITHUB_STEP_SUMMARY"
+            done < "$RUNNER_TEMP/newly-failing-sources.txt"
+          fi
 
       - name: Record immutable artifact identities
         id: artifacts
@@ -68,16 +91,19 @@ jobs:
           bundle="$RUNNER_TEMP/refreshed-publication"
           mkdir -p "$bundle/site/assets/img"
           cp site/catalog.json "$bundle/site/catalog.json"
+          cp site/explorer-data.json "$bundle/site/explorer-data.json"
           cp -a site/assets/img/plugins "$bundle/site/assets/img/plugins"
           (
             cd "$bundle"
-            find site -type f -print0 \
+            find site/catalog.json site/explorer-data.json site/assets/img/plugins -type f -print0 \
               | sort -z \
               | xargs -0 sha256sum > SHA256SUMS
           )
           read -r catalog_sha _ < <(sha256sum site/catalog.json)
+          read -r explorer_sha _ < <(sha256sum site/explorer-data.json)
           read -r publication_sha _ < <(sha256sum "$bundle/SHA256SUMS")
           echo "catalog_sha=${catalog_sha}" >> "$GITHUB_OUTPUT"
+          echo "explorer_sha=${explorer_sha}" >> "$GITHUB_OUTPUT"
           echo "publication_sha=${publication_sha}" >> "$GITHUB_OUTPUT"
 
       - name: Upload tested catalog files
@@ -119,6 +145,7 @@ jobs:
       - name: Verify and apply tested catalog files
         env:
           EXPECTED_CATALOG_SHA: ${{ needs.refresh.outputs.catalog_sha }}
+          EXPECTED_EXPLORER_SHA: ${{ needs.refresh.outputs.explorer_sha }}
           EXPECTED_PUBLICATION_SHA: ${{ needs.refresh.outputs.publication_sha }}
         run: |
           set -euo pipefail
@@ -127,9 +154,36 @@ jobs:
             echo "Artifact contains an unexpected symbolic link." >&2
             exit 1
           fi
+          if [ -n "$(find "$bundle" -mindepth 1 ! -type d ! -type f ! -type l -print -quit)" ]; then
+            echo "Artifact contains an unsupported file type." >&2
+            exit 1
+          fi
+          actual_files="$(cd "$bundle" && find . -type f -printf '%P\n' | sort)"
+          expected_files="$(
+            cd "$bundle"
+            {
+              printf '%s\n' SHA256SUMS site/catalog.json site/explorer-data.json
+              find site/assets/img/plugins -type f -print
+            } | sort
+          )"
+          if [ "$actual_files" != "$expected_files" ]; then
+            echo "Artifact contains files outside the publication bundle." >&2
+            exit 1
+          fi
           read -r artifact_publication_sha _ < <(sha256sum "$bundle/SHA256SUMS")
           if [ "$artifact_publication_sha" != "$EXPECTED_PUBLICATION_SHA" ]; then
             echo "Publication manifest checksum does not match the tested refresh." >&2
+            exit 1
+          fi
+          verified_manifest="$RUNNER_TEMP/refreshed-publication.SHA256SUMS"
+          (
+            cd "$bundle"
+            find site/catalog.json site/explorer-data.json site/assets/img/plugins -type f -print0 \
+              | sort -z \
+              | xargs -0 sha256sum > "$verified_manifest"
+          )
+          if ! cmp -s "$bundle/SHA256SUMS" "$verified_manifest"; then
+            echo "Artifact file set does not match the tested publication manifest." >&2
             exit 1
           fi
           (cd "$bundle" && sha256sum --check SHA256SUMS)
@@ -138,7 +192,13 @@ jobs:
             echo "Catalog artifact checksum does not match the tested refresh." >&2
             exit 1
           fi
+          read -r artifact_explorer_sha _ < <(sha256sum "$bundle/site/explorer-data.json")
+          if [ "$artifact_explorer_sha" != "$EXPECTED_EXPLORER_SHA" ]; then
+            echo "Explorer artifact checksum does not match the tested refresh." >&2
+            exit 1
+          fi
           cp "$bundle/site/catalog.json" site/catalog.json
+          cp "$bundle/site/explorer-data.json" site/explorer-data.json
           rm -rf site/assets/img/plugins
           cp -a "$bundle/site/assets/img/plugins" site/assets/img/plugins
 
@@ -151,7 +211,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/catalog.json site/assets/img/plugins/
+          git add site/catalog.json site/explorer-data.json site/assets/img/plugins/
           if ! git diff --cached --quiet; then
             git commit -m "Refresh plugin catalog"
           fi
@@ -209,26 +269,34 @@ jobs:
           artifact_name: ${{ needs.refresh.outputs.pages_artifact_name }}
           timeout: 300000
 
-      - name: Confirm deployed catalog after Pages timeout
+      - name: Confirm deployed catalog and Explorer data after Pages timeout
         if: steps.deployment.outcome == 'failure'
         env:
           EXPECTED_CATALOG_SHA: ${{ needs.refresh.outputs.catalog_sha }}
+          EXPECTED_EXPLORER_SHA: ${{ needs.refresh.outputs.explorer_sha }}
           EXPECTED_DEPLOYMENT_ID: ${{ needs.refresh.outputs.deployment_id }}
         run: |
           set -euo pipefail
           live_catalog="$RUNNER_TEMP/live-catalog.json"
+          live_explorer="$RUNNER_TEMP/live-explorer-data.json"
           live_deployment_id="$RUNNER_TEMP/live-deployment-id.txt"
           for (( attempt = 1; attempt <= 12; attempt++ )); do
             check_url="https://omarchyplugins.com/catalog.json?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
+            explorer_url="https://omarchyplugins.com/explorer-data.json?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
             marker_url="https://omarchyplugins.com/deployment-id.txt?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
             if curl --fail --silent --show-error --location --max-time 10 \
               --output "$live_deployment_id" "$marker_url" \
               && curl --fail --silent --show-error --location --max-time 10 \
-                --output "$live_catalog" "$check_url"; then
-              read -r live_sha _ < <(sha256sum "$live_catalog")
+                --output "$live_catalog" "$check_url" \
+              && curl --fail --silent --show-error --location --max-time 10 \
+                --output "$live_explorer" "$explorer_url"; then
+              read -r live_catalog_sha _ < <(sha256sum "$live_catalog")
+              read -r live_explorer_sha _ < <(sha256sum "$live_explorer")
               live_id="$(tr -d '\r\n' < "$live_deployment_id")"
-              if [[ $live_id == "$EXPECTED_DEPLOYMENT_ID" && $live_sha == "$EXPECTED_CATALOG_SHA" ]]; then
-                echo "The expected catalog is live despite the Pages action timeout."
+              if [[ $live_id == "$EXPECTED_DEPLOYMENT_ID" \
+                && $live_catalog_sha == "$EXPECTED_CATALOG_SHA" \
+                && $live_explorer_sha == "$EXPECTED_EXPLORER_SHA" ]]; then
+                echo "The expected catalog and Explorer data are live despite the Pages action timeout."
                 exit 0
               fi
             fi
@@ -237,5 +305,81 @@ jobs:
             fi
           done
 
-          echo "::error::Pages deployment failed and the expected catalog did not become live."
+          echo "::error::Pages deployment failed and the expected catalog and Explorer data did not become live."
           exit 1
+
+  alert:
+    if: always()
+    needs: [refresh, publish, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      issues: write
+    steps:
+      - name: Reconcile catalog refresh failure alert
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REFRESH_RESULT: ${{ needs.refresh.result }}
+          PUBLISH_RESULT: ${{ needs.publish.result }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+          TRIGGER_EVENT: ${{ github.event_name }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          title="Marketplace catalog refresh failure"
+          for result in "$REFRESH_RESULT" "$PUBLISH_RESULT" "$DEPLOY_RESULT"; do
+            case "$result" in success|failure|cancelled|skipped) ;;
+              *) echo "Unexpected refresh job result." >&2; exit 1 ;;
+            esac
+          done
+          case "$TRIGGER_EVENT" in schedule|workflow_dispatch) ;;
+            *) echo "Unexpected refresh trigger." >&2; exit 1 ;;
+          esac
+
+          alert_state=active
+          if [ "$REFRESH_RESULT" = success ] && \
+             [ "$PUBLISH_RESULT" = success ] && \
+             [ "$DEPLOY_RESULT" = success ]; then
+            alert_state=resolved
+          fi
+          body_file="$RUNNER_TEMP/catalog-refresh-alert.md"
+          printf '## Marketplace catalog refresh failure\n\nState: **%s**\n\n- Refresh: `%s`\n- Publish: `%s`\n- Deploy: `%s`\n- Trigger: `%s`\n- Workflow: %s\n\nThis operational alert does not change plugin trust labels.\n' \
+            "$alert_state" "$REFRESH_RESULT" "$PUBLISH_RESULT" "$DEPLOY_RESULT" \
+            "$TRIGGER_EVENT" "$RUN_URL" > "$body_file"
+
+          issue_ids="$(
+            gh api --paginate "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100" \
+              --jq ".[] | select((.pull_request | not) and .title == \"${title}\" and .user.login == \"github-actions[bot]\") | .number"
+          )"
+          count=0
+          issue_number=""
+          while IFS= read -r candidate; do
+            [ -z "$candidate" ] && continue
+            [[ $candidate =~ ^[1-9][0-9]*$ ]]
+            count=$((count + 1))
+            issue_number="$candidate"
+          done <<< "$issue_ids"
+          if [ "$count" -gt 1 ]; then
+            echo "Multiple open catalog refresh alerts exist; refusing an ambiguous update." >&2
+            exit 1
+          fi
+
+          jq -Rs --arg title "$title" '{title: $title, body: ., labels: []}' "$body_file" \
+            > "$RUNNER_TEMP/catalog-refresh-alert.json"
+          if [ "$alert_state" = active ]; then
+            if [ "$count" -eq 1 ]; then
+              jq -Rs '{body: ., labels: []}' "$body_file" > "$RUNNER_TEMP/catalog-refresh-alert-update.json"
+              gh api --method PATCH \
+                "repos/${GITHUB_REPOSITORY}/issues/${issue_number}" \
+                --input "$RUNNER_TEMP/catalog-refresh-alert-update.json"
+            else
+              gh api --method POST "repos/${GITHUB_REPOSITORY}/issues" \
+                --input "$RUNNER_TEMP/catalog-refresh-alert.json"
+            fi
+          elif [ "$count" -eq 1 ]; then
+            jq -Rs '{body: ., labels: [], state: "closed", state_reason: "completed"}' "$body_file" \
+              > "$RUNNER_TEMP/catalog-refresh-alert-resolved.json"
+            gh api --method PATCH \
+              "repos/${GITHUB_REPOSITORY}/issues/${issue_number}" \
+              --input "$RUNNER_TEMP/catalog-refresh-alert-resolved.json"
+          fi

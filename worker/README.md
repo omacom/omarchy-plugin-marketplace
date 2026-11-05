@@ -16,7 +16,9 @@ The application does not persist accounts, cookies, browser identifiers, IP addr
 user-agent strings, command text, repository URLs, or plugin metadata in D1 or application
 tables. Event bodies contain only a catalog plugin ID and the fixed action type. D1 stores
 anonymous plugin-level aggregates only. Cloudflare processes normal request metadata and
-uses the request IP only for ephemeral abuse controls under the account's configuration.
+uses the request address only for ephemeral abuse controls: edge burst limits and
+Cache-API sliding windows keyed on IPv4 or the IPv6 /64 and /56 prefixes. Quota cache keys
+are hashes, not addresses. The Worker never writes request-derived limit keys to D1.
 
 The public API contains no credentials. D1 is available only through the Worker binding.
 Keep the real `wrangler.jsonc`, `.dev.vars`, local Wrangler state, and all credentials out
@@ -31,8 +33,10 @@ positive JSON integer. Apply all migrations before starting the Worker on
 `127.0.0.1:8787`.
 
 The production custom-domain route is intentionally commented out in the template.
-Verify a workers.dev deployment before adding `api.omarchyplugins.com` to the local
-configuration.
+Verify the stats endpoint of a workers.dev deployment before adding
+`api.omarchyplugins.com` to the local configuration. The Cache API has no effect on
+`*.workers.dev`, so the Worker accepts events only on its custom domain and returns 404
+for `/v1/events` on workers.dev.
 
 ## API
 
@@ -42,12 +46,26 @@ configuration.
   `{ "pluginId": "...", "type": "heart" }` from an allowed marketplace origin.
 
 The Worker validates plugin IDs against the published marketplace catalog and applies
-best-effort abuse controls before accepting an event. It never writes request-derived
-limit keys to D1. Public stats are cached at the edge for up to five minutes, while browser
-storage is disabled and successful event responses return authoritative fresh counts for
-immediate UI feedback.
+best-effort abuse controls before accepting an event. Origin allowlisting is a browser
+CORS control, not authentication; clients can send an allowed Origin header. Browser
+storage only suppresses repeats in that browser. Per-plugin daily and minute ceilings
+bound a listing's totals, not a person.
 
-Anonymous public counters remain inherently susceptible to slow or distributed
-manipulation. Browser guards and rate limits are best-effort controls that can be cleared,
+Address windows add a longer-lived per-address cost on top of the 60-second edge burst
+limits. An address counts at most 1 heart and 1 copy per plugin per 24 hours and 1 view
+per plugin per hour. IPv4 addresses count individually, IPv6 addresses in the same /64
+share a quota, and an IPv6 /56 counts at most 4 hearts and 4 copies per plugin per 24
+hours. Repeats return `{ "recorded": false, "reason": "repeat" }`. Missing or unusable
+`CF-Connecting-IP` values are rejected. Operations from the same network are serialized
+within a Worker isolate, and a window counts an event only after D1 records it. The
+windows live in the edge cache, can be evicted or split across isolates or locations,
+and are not unique identity.
+
+Public stats are cached at the edge for up to five minutes, while browser storage is
+disabled and successful event responses return authoritative fresh counts for immediate
+UI feedback.
+
+Anonymous public counters remain inflatable by repeating requests or rotating network
+addresses. Browser guards and rate limits are best-effort controls that can be cleared,
 distributed, or bypassed. Hearts must be presented as anonymous reactions, never as
 unique or verified votes, trust, or quality rankings.

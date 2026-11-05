@@ -24,7 +24,7 @@ jobs:
           gh label create security-needs-fixes --color b60205 --description "Automated security baseline found a pattern requiring fixes" --force
           gh label create security-review-required --color fbca04 --description "Security evidence requires maintainer attention" --force
           gh label create maintainer-verified --color 2da44e --description "Accept review-required capabilities for exact-commit verification" --force
-          gh label create standard-installation-approved --color 2da44e --description "Approve a passing exact-snapshot standard-installation change" --force
+          gh label create standard-installation-approved --color 2da44e --description "Approve an eligible exact-snapshot standard-installation change" --force
           gh label create approved-and-verified --color 2da44e --description "Approve and verify an exact marketplace snapshot" --force
           gh label create approved-for-listing --color bf4b55 --description "Legacy listing approval; no longer publishes new submissions" --force
           gh label create manual-setup --color fbca04 --description "Standard install cannot produce a functioning plugin" --force

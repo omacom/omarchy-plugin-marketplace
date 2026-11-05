@@ -13,6 +13,7 @@ jobs:
       contents: read
     outputs:
       catalog_sha: ${{ steps.catalog.outputs.sha256 }}
+      explorer_sha: ${{ steps.catalog.outputs.explorer_sha }}
       commit: ${{ steps.identity.outputs.commit }}
       pages_artifact_name: ${{ steps.identity.outputs.pages_name }}
       deployment_id: ${{ steps.identity.outputs.deployment_id }}
@@ -45,12 +46,14 @@ jobs:
       - name: Test committed marketplace
         run: npm test
 
-      - name: Record committed catalog checksum
+      - name: Record committed catalog and Explorer checksums
         id: catalog
         run: |
           set -euo pipefail
           read -r catalog_sha _ < <(sha256sum site/catalog.json)
+          read -r explorer_sha _ < <(sha256sum site/explorer-data.json)
           echo "sha256=${catalog_sha}" >> "$GITHUB_OUTPUT"
+          echo "explorer_sha=${explorer_sha}" >> "$GITHUB_OUTPUT"
 
       - name: Upload tested Pages artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
@@ -98,26 +101,34 @@ jobs:
           artifact_name: ${{ needs.prepare.outputs.pages_artifact_name }}
           timeout: 300000
 
-      - name: Confirm deployed catalog after Pages timeout
+      - name: Confirm deployed catalog and Explorer data after Pages timeout
         if: steps.deployment.outcome == 'failure'
         env:
           EXPECTED_CATALOG_SHA: ${{ needs.prepare.outputs.catalog_sha }}
+          EXPECTED_EXPLORER_SHA: ${{ needs.prepare.outputs.explorer_sha }}
           EXPECTED_DEPLOYMENT_ID: ${{ needs.prepare.outputs.deployment_id }}
         run: |
           set -euo pipefail
           live_catalog="$RUNNER_TEMP/live-catalog.json"
+          live_explorer="$RUNNER_TEMP/live-explorer-data.json"
           live_deployment_id="$RUNNER_TEMP/live-deployment-id.txt"
           for (( attempt = 1; attempt <= 12; attempt++ )); do
             check_url="https://omarchyplugins.com/catalog.json?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
+            explorer_url="https://omarchyplugins.com/explorer-data.json?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
             marker_url="https://omarchyplugins.com/deployment-id.txt?deployment-check=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-${attempt}"
             if curl --fail --silent --show-error --location --max-time 10 \
               --output "$live_deployment_id" "$marker_url" \
               && curl --fail --silent --show-error --location --max-time 10 \
-                --output "$live_catalog" "$check_url"; then
-              read -r live_sha _ < <(sha256sum "$live_catalog")
+                --output "$live_catalog" "$check_url" \
+              && curl --fail --silent --show-error --location --max-time 10 \
+                --output "$live_explorer" "$explorer_url"; then
+              read -r live_catalog_sha _ < <(sha256sum "$live_catalog")
+              read -r live_explorer_sha _ < <(sha256sum "$live_explorer")
               live_id="$(tr -d '\r\n' < "$live_deployment_id")"
-              if [[ $live_id == "$EXPECTED_DEPLOYMENT_ID" && $live_sha == "$EXPECTED_CATALOG_SHA" ]]; then
-                echo "The expected catalog is live despite the Pages action timeout."
+              if [[ $live_id == "$EXPECTED_DEPLOYMENT_ID" \
+                && $live_catalog_sha == "$EXPECTED_CATALOG_SHA" \
+                && $live_explorer_sha == "$EXPECTED_EXPLORER_SHA" ]]; then
+                echo "The expected catalog and Explorer data are live despite the Pages action timeout."
                 exit 0
               fi
             fi
@@ -126,5 +137,5 @@ jobs:
             fi
           done
 
-          echo "::error::Pages deployment failed and the expected catalog did not become live."
+          echo "::error::Pages deployment failed and the expected catalog and Explorer data did not become live."
           exit 1

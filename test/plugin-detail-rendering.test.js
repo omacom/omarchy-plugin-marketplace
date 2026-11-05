@@ -55,6 +55,9 @@ test("installable unverified plugin details render exact snapshot and mutable-in
   assert.match(html, /Contributor action:<\/strong> Submit the exact listed commit/);
   assert.match(html, /This Omarchy command clones the repository’s current HEAD\./);
   assert.doesNotMatch(html, /Manual installation follows the upstream project’s instructions\./);
+  assert.match(html, /href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace\/issues\/new\?template=verify-plugin\.yml"/);
+  assert.match(html, /href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace\/security\/advisories\/new"/);
+  assert.doesNotMatch(html, /github\.com\/HANCORE-linux\/omarchy-plugin-marketplace/);
   assert.match(html, /<section class="detail-section security-notice-section" id="security" aria-labelledby="security-notice-title">[\s\S]*<strong id="security-notice-title">Security Notice<\/strong>/);
 });
 
@@ -302,4 +305,23 @@ test("suite listings do not offer the unsupported verification workflow", () => 
 
   assert.match(html, /Verification unavailable:<\/strong> Suite listings are outside the plugin verification workflow\./);
   assert.doesNotMatch(html, /Snapshot verified:|Snapshot unverified:|Update unverified:|Contributor action:|plugin verification form|detail-verification/);
+});
+
+test("community plugin author links to the marketplace author filter", () => {
+  const html = render();
+
+  assert.match(html, /<span>by <a href="index\.html\?author=example" aria-label="Show all plugins by @example">Example Maintainer<\/a><\/span>/);
+});
+
+test("built-in plugin author renders as plain text", () => {
+  const html = render({
+    builtIn: true,
+    repo: "https://github.com/basecamp/omarchy",
+    sourceType: "builtin",
+    officialCommand: "omarchy plugin enable example.community-plugin",
+    officialCommandLabel: "Enable plugin",
+  });
+
+  assert.match(html, /<span>by Example Maintainer<\/span>/);
+  assert.doesNotMatch(html, /<a href="index\.html\?author=/);
 });

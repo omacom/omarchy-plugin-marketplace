@@ -21,7 +21,7 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20260827-01";
+} from "./shared.js?v=20261105-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,7 +29,8 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20260827-01";
+} from "./engagement.js?v=20261105-01";
+import { repositoryPublisher } from "./search.js?v=20261105-01";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -45,6 +46,12 @@ function safeGitHubWebUrl(value) {
   } catch {
     return "";
   }
+}
+
+function authorLink(plugin) {
+  const login = repositoryPublisher(plugin.repo);
+  if (!login || plugin.builtIn) return escapeHtml(plugin.author);
+  return `<a href="index.html?${new URLSearchParams({ author: login })}" aria-label="Show all plugins by @${escapeHtml(login)}">${escapeHtml(plugin.author)}</a>`;
 }
 
 function marketplaceInstallAvailable(plugin) {
@@ -151,8 +158,8 @@ export function detailTemplate(plugin, engagement, {
   hearted = false,
   pendingEngagement = false,
 } = {}) {
-  const securityReportUrl = "https://github.com/HANCORE-linux/omarchy-plugin-marketplace/security/advisories/new";
-  const verificationRequestUrl = "https://github.com/HANCORE-linux/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml";
+  const securityReportUrl = "https://github.com/omacom/omarchy-plugin-marketplace/security/advisories/new";
+  const verificationRequestUrl = "https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml";
   const tags = (plugin.tags || []).map((tag) => `<span class="tag">${escapeHtml(displayTaxonomyTag(tag))}</span>`).join("");
   const preview = plugin.previewImage
     ? `<button class="detail-preview" type="button" data-preview-open data-full-src="${escapeHtml(plugin.previewImage)}" aria-label="${escapeHtml(`Open ${plugin.name} preview`)}"><img src="${escapeHtml(plugin.previewImage)}" alt="${escapeHtml(plugin.name)} desktop preview" width="${Number(plugin.previewWidth) || 1600}" height="${Number(plugin.previewHeight) || 900}"></button>`
@@ -300,7 +307,7 @@ export function detailTemplate(plugin, engagement, {
     <article class="plugin-detail-article" style="--card-accent:${accentColor(plugin.accent)}">
       <header class="page-header" id="overview"><div class="page-eyebrow">${escapeHtml(plugin.category)}</div>
         <div class="detail-title"><span class="detail-icon">${escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
-        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${escapeHtml(plugin.author)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
+        <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${authorLink(plugin)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
         ${engagementEnabled ? `<div class="detail-engagement-cluster">
           ${engagementSummary(plugin, engagement, { detail: true, pending: pendingEngagement })}
           ${pluginHeartButton(plugin, engagement, { detail: true, hearted, pending: pendingEngagement })}
@@ -424,7 +431,7 @@ async function init() {
       ? versionLabel.replace(/^manifest\s+/, "")
       : "—";
     document.querySelector("#aside-license").textContent = plugin.license || "Unknown";
-    document.querySelector("#aside-owner").textContent = plugin.author;
+    document.querySelector("#aside-owner").innerHTML = authorLink(plugin);
     if (plugin.builtIn || plugin.placeholder || !marketplaceInstallAvailable(plugin)) {
       const navigationLabel = plugin.builtIn ? plugin.officialCommandLabel : "Availability";
       document.querySelector("#aside-install-link").textContent = navigationLabel;
@@ -461,7 +468,8 @@ async function init() {
       delete heartButton.dataset.heartSubmitting;
       heartButton.removeAttribute("aria-busy");
       if (!result?.recorded) {
-        showToast("Heart could not be sent. Try again.");
+        if (result?.reason === "repeat") showToast("Heart already counted from your network today.");
+        else showToast("Heart could not be sent. Try again.");
         return;
       }
       applyAuthoritativeEngagement(result);

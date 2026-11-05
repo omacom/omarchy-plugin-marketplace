@@ -29,11 +29,15 @@ Every new submission must be published through the explicit `approved-and-verifi
 
 The workflow requires a current bot-authored baseline report to predate the label event, checks the actor's current write permission, verifies the exact issue and repository state, and performs a fresh static scan of the exact validated commit. A fresh `passed` result is stored as automatic verification. Under selective policy, a fresh `review-required` disposition for capabilities or non-selectively-blocking findings must match the complete report identity and evidence sets the maintainer accepted; the workflow then stores a canonical `maintainerVerificationReview`. Selectively blocking findings, incomplete scans, stale reports, changed commits, changed evidence sets, or event mismatches block initial publication.
 
+For initial listings and plugin updates, finalize the issue and all setup labels before setting `approved-and-verified` last. The initial check resolves the triggering webhook's immutable `issue.updated_at` to exactly one approval-label transition and requires it to remain the latest transition by the triggering actor. GitHub may record that timeline event in the same UTC second or exactly one second before `issue.updated_at`; only initial resolution accepts those two timestamps. Every `approved-and-verified` transition in those two seconds counts toward ambiguity. Missing matches, multiple transitions, events after the webhook timestamp, and events at least two seconds earlier fail closed. Subsequent checks preserve the resolved event ID, actor, and actual event timestamp exactly, without tolerance, and require that event to remain the sole transition in the original two-second compatibility window. If a request is ambiguous, review the current evidence and create a separate approval event in a later second; do not rerun the old workflow.
+
+Failed publication runs append historical reports without clearing approval labels or overwriting newer reports. A retained label is not proof of publication. Only after reviewing current evidence and resolving blockers should a maintainer remove any remaining approval label and set it last again. Deployment and finalization failures require recovery of the reported phase, not a new approval.
+
 Listing, canonical verification evidence, catalog projection, testing, publication, and Pages deployment are one guarded workflow. A successfully published new community plugin therefore starts with a verified snapshot. This remains an exact-commit statement, not a security audit or guarantee.
 
 ## Promoting a plugin update
 
-Use the [**Plugin verification** issue form](https://github.com/HANCORE-linux/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml), select **Verify and publish a newer upstream commit**, and provide the existing plugin ID, repository root URL, and full 40-character SHA of the current repository HEAD. Multi-plugin repositories are updated source-wide and must retain the exact configured plugin ID set. Shell-suite listings are not supported by this workflow.
+Use the [**Plugin verification** issue form](https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml), select **Verify and publish a newer upstream commit**, and provide the existing plugin ID, repository root URL, and full 40-character SHA of the current repository HEAD. Multi-plugin repositories are updated source-wide and must retain the exact configured plugin ID set. Shell-suite listings are not supported by this workflow.
 
 Opening or editing the issue runs compatibility validation and the Automated Security Baseline against that exact update commit without executing community code. The existing marketplace snapshot remains unchanged while the update is pending or blocked.
 
@@ -47,7 +51,7 @@ An eligible update atomically replaces `listingValidatedCommit`, its canonical b
 
 ## Requesting verification of the recorded snapshot
 
-Use the [**Plugin verification** issue form](https://github.com/HANCORE-linux/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml), select **Verify the currently listed snapshot**, and provide:
+Use the [**Plugin verification** issue form](https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml), select **Verify the currently listed snapshot**, and provide:
 
 - the exact existing plugin ID,
 - the existing repository root URL, and
@@ -81,7 +85,7 @@ Marketplace verification and Omarchy installation are separate trust boundaries.
 
 The marketplace can verify and promote exact update commits without Omarchy changes, but it cannot guarantee that `omarchy plugin add` or `omarchy plugin update` installs that commit. Users must inspect the installed commit before enabling it. Commit-bound installation remains unavailable until Omarchy provides an exact-SHA installation and update interface.
 
-The verification form also provides a guarded standard-installation action for one listed root plugin that currently has an explicit manual-installation override. It requires an exact listed commit, the standard-installation acknowledgment, a passing automated baseline, and an authenticated `standard-installation-approved` label event applied by a maintainer with write permission; a maintainer review cannot override this requirement. Publication removes only that plugin's manual override and atomically projects the normal mutable `omarchy plugin add ... --enable` command into the catalog. This changes installation presentation and availability, not the verification boundary or the mutable upstream behavior.
+The verification form also provides a guarded standard-installation action for one listed root plugin that currently has an explicit manual-installation override. It requires an exact listed commit, the standard-installation acknowledgment, a passing automated baseline or an existing valid installer-only maintainer review with matching fresh scan evidence, and an authenticated `standard-installation-approved` label event applied by a maintainer with write permission. The existing review must predate the installation approval and bind the same repository, plugin set, commit, current policy, and evidence. Reviews from either `maintainer-verified` or `approved-and-verified` qualify; revoked reviews, findings, additional capabilities, mismatches, and scan failures do not. The original attestation and baseline remain intact after the matching rescan. Publication removes only that plugin's manual override and atomically projects the normal mutable `omarchy plugin add ... --enable` command into the catalog. This changes installation presentation and availability, not the verification boundary or the mutable upstream behavior.
 
 ## Display text
 

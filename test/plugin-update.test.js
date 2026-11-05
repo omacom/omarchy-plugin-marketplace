@@ -4,6 +4,7 @@ import test from "node:test";
 import { inspectListedPluginSource } from "../scripts/build-catalog.mjs";
 import {
   assertPluginUpdateInspection,
+  assertPluginUpdateListingArchivable,
   buildPluginUpdateValidationReport,
   listingValidationHistoryEntry,
   parsePluginUpdateRequest,
@@ -67,6 +68,27 @@ function storedBaseline(commit = oldCommit, overrides = {}) {
   };
 }
 
+function maintainerReview(overrides = {}) {
+  return {
+    schemaVersion: 1,
+    repository: "example/plugin",
+    pluginIds: ["example.plugin"],
+    commit: oldCommit,
+    baselineVersion: securityBaselineVersion,
+    enforcementMode: securityBaselineEnforcementMode,
+    baselineCheckedAt: oldCheckedAt,
+    baselineOutcome: "review-required",
+    findings: [],
+    capabilities: ["privilege"],
+    reviewedBaselineCheckedAt: "2026-08-18T08:00:00.000Z",
+    requestEventId: 44001,
+    requestedAt: "2026-08-18T09:00:00.000Z",
+    reviewedAt: "2026-08-18T11:00:00.000Z",
+    reviewer: "hancore",
+    ...overrides,
+  };
+}
+
 function listedSource(overrides = {}) {
   return {
     repo: "https://github.com/example/plugin",
@@ -82,6 +104,12 @@ function listedSource(overrides = {}) {
     },
     ...overrides,
   };
+}
+
+function baselineLessListedSource(overrides = {}) {
+  const source = listedSource(overrides);
+  delete source.automatedSecurityBaseline;
+  return source;
 }
 
 function updateInspection(overrides = {}) {
@@ -156,12 +184,94 @@ test("plugin updates bind repository HEAD and the complete configured plugin set
   );
   assert.throws(
     () => resolvePluginUpdate(
-      { sources: [listedSource({ listingValidatedCommit: updateCommit })] },
+      { sources: [listedSource({
+        listingValidatedCommit: updateCommit,
+        automatedSecurityBaseline: storedBaseline(updateCommit),
+      })] },
       request,
       updateInspection(),
     ),
     (error) => error.code === "update-already-current",
   );
+});
+
+test("baseline-less legacy listings validate and promote without invented history evidence", () => {
+  const source = baselineLessListedSource();
+  const request = parsePluginUpdateRequest(requestBody());
+  const subject = resolvePluginUpdate({ sources: [source] }, request, updateInspection());
+  assert.equal(subject.source, source);
+  assert.equal(sourceVerification(source).status, "unverified");
+
+  const historyEntry = listingValidationHistoryEntry(source, promotedAt);
+  assert.deepEqual(historyEntry, {
+    commit: oldCommit,
+    validatedAt: oldCheckedAt,
+    branch: "main",
+    supersededAt: promotedAt,
+  });
+  assert.equal(Object.hasOwn(historyEntry, "automatedSecurityBaseline"), false);
+
+  const nextSource = promotePluginUpdateSource(source, updateInspection(), {
+    automatedSecurityBaseline: storedBaseline(updateCommit),
+    promotedAt,
+  });
+  assert.deepEqual(nextSource.listingValidationHistory, [historyEntry]);
+  assert.equal(nextSource.automatedSecurityBaseline.commit, updateCommit);
+  assert.equal(sourceVerification(nextSource).status, "verified");
+  assert.equal(Object.hasOwn(source, "automatedSecurityBaseline"), false);
+});
+
+test("legacy archival rejects malformed or orphaned trust evidence", () => {
+  const request = parsePluginUpdateRequest(requestBody());
+  const malformedSources = [
+    listedSource({ automatedSecurityBaseline: null }),
+    listedSource({ automatedSecurityBaseline: {} }),
+    listedSource({
+      automatedSecurityBaseline: { ...storedBaseline(), commit: updateCommit },
+    }),
+    baselineLessListedSource({ maintainerVerificationReview: maintainerReview() }),
+    baselineLessListedSource({ maintainerVerificationRevocation: {} }),
+    baselineLessListedSource({ maintainerVerificationReviewHistory: [{}] }),
+  ];
+  for (const source of malformedSources) {
+    assert.throws(
+      () => resolvePluginUpdate({ sources: [source] }, request, updateInspection()),
+      (error) => error.code === "update-listing-invalid",
+    );
+    assert.throws(
+      () => listingValidationHistoryEntry(source, promotedAt),
+      (error) => error.code === "update-listing-invalid",
+    );
+  }
+});
+
+test("legacy archival requires complete existing listing provenance before validation", () => {
+  for (const source of [
+    baselineLessListedSource({ listingValidatedCommit: "abc" }),
+    baselineLessListedSource({ listingValidatedAt: "not-a-date" }),
+    baselineLessListedSource({ listingValidatedBranch: "" }),
+    baselineLessListedSource({ plugins: {} }),
+  ]) {
+    assert.throws(
+      () => assertPluginUpdateListingArchivable(source),
+      (error) => error.code === "update-listing-invalid",
+    );
+  }
+});
+
+test("current baseline-less legacy sources are archivable as unverified provenance", async () => {
+  const registry = JSON.parse(await readFile(new URL("../registry.json", import.meta.url), "utf8"));
+  const sources = registry.sources.filter((source) => (
+    source.type === "plugin-source"
+    && !Object.hasOwn(source, "automatedSecurityBaseline")
+  ));
+  for (const source of sources) {
+    assert.doesNotThrow(() => assertPluginUpdateListingArchivable(source), source.repo);
+    const entry = listingValidationHistoryEntry(source, promotedAt);
+    assert.equal(Object.hasOwn(entry, "automatedSecurityBaseline"), false, source.repo);
+    assert.equal(Object.hasOwn(entry, "maintainerVerificationReview"), false, source.repo);
+    assert.equal(Object.hasOwn(entry, "maintainerVerificationRevocation"), false, source.repo);
+  }
 });
 
 test("verified update promotion preserves prior evidence and atomically replaces the snapshot", () => {
@@ -192,23 +302,7 @@ test("verified update promotion preserves prior evidence and atomically replaces
 });
 
 test("plugin update history preserves revoked review evidence and clears it from the active snapshot", () => {
-  const review = {
-    schemaVersion: 1,
-    repository: "example/plugin",
-    pluginIds: ["example.plugin"],
-    commit: oldCommit,
-    baselineVersion: securityBaselineVersion,
-    enforcementMode: securityBaselineEnforcementMode,
-    baselineCheckedAt: oldCheckedAt,
-    baselineOutcome: "review-required",
-    findings: [],
-    capabilities: ["privilege"],
-    reviewedBaselineCheckedAt: "2026-08-18T08:00:00.000Z",
-    requestEventId: 44001,
-    requestedAt: "2026-08-18T09:00:00.000Z",
-    reviewedAt: "2026-08-18T11:00:00.000Z",
-    reviewer: "hancore",
-  };
+  const review = maintainerReview();
   const revocation = {
     schemaVersion: 1,
     repository: review.repository,
@@ -417,22 +511,32 @@ test("plugin update workflows preserve read-only analysis and atomic publication
   assert.match(validation, /analyze:[\s\S]*if: needs\.route\.outputs\.action == 'update'[\s\S]*needs: route/);
   assert.doesNotMatch(validation, /^concurrency:/m);
   assert.match(validation, /analyze:[\s\S]*group: issue-validation-\$\{\{ github\.event\.issue\.number \}\}[\s\S]*queue: max/);
-  assert.match(validation, /publish:[\s\S]*group: plugin-catalog-writes[\s\S]*queue: max/);
+  assert.match(validation, /publish:[\s\S]*needs\.mutation-route\.outputs\.group == format\('issue-validation-\{0\}'[\s\S]*queue: max/);
+  assert.match(validation, /publish-fallback:[\s\S]*group: plugin-catalog-writes[\s\S]*steps: \*update-mutation-steps/);
   assert.doesNotMatch(validation, /\n  report-failure:\n/);
   assert.match(validation, /permissions:\s+contents: read\s+issues: read/);
   assert.match(validation, /npm ci[\s\S]*validate-plugin-update\.mjs[\s\S]*security-baseline\.mjs/);
+  assert.ok(
+    validationScript.indexOf("const source = sourceForPluginUpdate(registry, request);")
+      < validationScript.indexOf("inspection = await inspectListedPluginSource(source);"),
+    "legacy listing archival must be prechecked before upstream inspection",
+  );
   assert.match(validation, /actions\/upload-artifact@[a-f0-9]{40}/);
   assert.match(validation, /actions\/download-artifact@[a-f0-9]{40}/);
-  assert.equal((validation.match(/GH_REPO: \$\{\{ github\.repository \}\}/g) || []).length, 1);
+  assert.equal((validation.match(/GH_REPO: \$\{\{ github\.repository \}\}/g) || []).length, 2);
   assert.match(validation, /sha256sum --check SHA256SUMS/);
-  assert.match(validation, /remove_label approved-and-verified/);
-  assert.match(validation, /remove_label maintainer-verified/);
+  assert.match(validation, /remove_issue_label approved-and-verified/);
+  assert.match(validation, /remove_issue_label maintainer-verified/);
   assert.match(validation, /Confirm failed run still matches the issue[\s\S]*skipping stale failure mutations/);
-  const publishJob = validation.slice(validation.indexOf("\n  publish:\n"));
-  assert.equal((publishJob.match(/needs\.route\.result == 'failure'/g) || []).length, 4);
-  assert.equal((publishJob.match(/needs\.analyze\.result == 'failure'/g) || []).length, 4);
+  const publishJob = validation.slice(
+    validation.indexOf("\n  publish:\n"),
+    validation.indexOf("\n  publish-fallback:\n"),
+  );
+  assert.match(publishJob, /guard-issue-mutation[\s\S]*approved-and-verified/);
+  assert.match(publishJob, /requires_global_fallback/);
+  assert.match(publishJob, /env\.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes'/);
   assert.doesNotMatch(publishJob, /result == 'cancelled'/);
-  assert.ok((validation.match(/\.title == \$title and \.body == \$body/g) || []).length >= 5);
+  assert.match(validation, /\.title == \$title[\s\S]*\(\.body \/\/ ""\) == \$body/);
   assert.match(validation, /\.verifiedPublicationDisposition/);
   assert.doesNotMatch(validation, /contents: write|push origin/);
 

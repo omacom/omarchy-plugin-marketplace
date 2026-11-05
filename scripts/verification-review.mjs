@@ -131,6 +131,8 @@ export function parseMaintainerVerificationReviewPair(review, revocation, baseli
 
 export function parseMaintainerVerificationReviewHistory(history, {
   expectedRepository = "",
+  allowedRepositories,
+  allowLegacyRepositoryFallback = true,
   pluginIds,
 } = {}) {
   if (!Array.isArray(history)) return null;
@@ -151,6 +153,8 @@ export function parseMaintainerVerificationReviewHistory(history, {
     };
     const parsedBaseline = parseStoredSecurityBaselineRecord(baseline, {
       expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback,
       pluginIds,
     });
     const pair = parseMaintainerVerificationReviewPair(
@@ -166,9 +170,20 @@ export function parseMaintainerVerificationReviewHistory(history, {
 
 export function parseListingValidationHistory(history, {
   expectedRepository = "",
+  allowedRepositories,
+  allowLegacyRepositoryFallback = true,
   pluginIds,
 } = {}) {
   if (!Array.isArray(history)) return null;
+  const repositoryValues = allowedRepositories === undefined
+    ? [expectedRepository].filter(Boolean)
+    : allowedRepositories;
+  if (
+    !Array.isArray(repositoryValues)
+    || repositoryValues.some((repository) => typeof repository !== "string" || !repository)
+  ) return null;
+  const repositoryKeys = new Set(repositoryValues.map((repository) => repository.toLowerCase()));
+  if (expectedRepository && !repositoryKeys.has(expectedRepository.toLowerCase())) return null;
   for (const entry of history) {
     if (
       !entry
@@ -190,7 +205,7 @@ export function parseListingValidationHistory(history, {
       hasBaseline
       && (
         historicalCommit !== String(entry.commit).toLowerCase()
-        || (historicalRepository && expectedRepository && historicalRepository !== expectedRepository.toLowerCase())
+        || (historicalRepository && repositoryKeys.size && !repositoryKeys.has(historicalRepository))
         || !validTimestamp(historicalBaseline?.checkedAt)
       )
     ) return null;
@@ -198,6 +213,8 @@ export function parseListingValidationHistory(history, {
     const baseline = hasBaseline
       ? parseStoredSecurityBaselineRecord(historicalBaseline, {
         expectedRepository,
+        allowedRepositories: repositoryValues,
+        allowLegacyRepositoryFallback,
         expectedCommit: entry.commit,
         pluginIds,
       })
@@ -207,6 +224,7 @@ export function parseListingValidationHistory(history, {
     const legacyBaseline = hasBaseline
       && historicalBaseline?.version === "2"
       && historicalBaseline?.enforcementMode === "review-only"
+      && (allowLegacyRepositoryFallback || Boolean(historicalRepository))
       && Boolean(findings)
       && Boolean(capabilities)
       && isConsistentSecurityBaselineSummary({
@@ -230,6 +248,8 @@ export function parseListingValidationHistory(history, {
       Object.hasOwn(entry, "maintainerVerificationReviewHistory")
       && !parseMaintainerVerificationReviewHistory(entry.maintainerVerificationReviewHistory, {
         expectedRepository,
+        allowedRepositories: repositoryValues,
+        allowLegacyRepositoryFallback,
         pluginIds,
       })
     ) return null;

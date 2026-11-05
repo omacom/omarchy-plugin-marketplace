@@ -27,6 +27,7 @@ body:
         - Desktop
         - Developer Tools
         - Hardware
+        - Kids
         - Productivity
         - System
         - Widgets
@@ -43,14 +44,17 @@ body:
       options:
         - AI
         - Bar
+        - Education
         - Games
         - Hyprland
+        - Kids
         - Launcher
         - Media
         - Power management
         - Quickshell
         - Security
         - System
+        - VPN
         - Workspaces
     validations:
       required: true

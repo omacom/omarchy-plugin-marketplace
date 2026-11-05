@@ -24,6 +24,7 @@ import {
   securityBaselineEligibleForVerifiedListing,
   securityBaselineErrorMarker,
   securityBaselineMarkerPrefix,
+  securityBaselineScanLimitExitCode,
   securityAssetProbeFileLimit,
   verifiedPublicationDisposition,
   securitySnapshotByteLimit,
@@ -1612,6 +1613,7 @@ test("baseline failures are fail-closed but still actionable", () => {
   assert.match(report, /dist\/runtime\.js/);
   assert.match(report, /No approval is possible/);
   assert.match(report, /not a security audit, certification, warranty, or endorsement/);
+  assert.equal(securityBaselineScanLimitExitCode, 3);
 });
 
 test("reports are actionable, commit-bound, and carry the required disclaimer", () => {

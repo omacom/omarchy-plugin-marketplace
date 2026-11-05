@@ -5,6 +5,7 @@ import {
   upstreamUpdateVerificationAction,
 } from "./plugin-verification-request.mjs";
 import { githubRepositoryKey } from "./github-repository.mjs";
+import { repositoryEvidenceKeys } from "./repository-identity.mjs";
 import { parseStoredSecurityBaselineRecord } from "./security-baseline-record.mjs";
 import {
   isConsistentSecurityBaselineSummary,
@@ -67,12 +68,15 @@ function mappedSubjectCode(code) {
 }
 
 export function sourceForPluginUpdate(registry, request) {
+  let source;
   try {
-    return resolveConfiguredSource(registry, request);
+    source = resolveConfiguredSource(registry, request);
   } catch (error) {
     if (!(error instanceof VerificationSubjectError)) throw error;
     throw new PluginUpdateError(mappedSubjectCode(error.code), error.message, error.context);
   }
+  assertPluginUpdateListingArchivable(source);
+  return source;
 }
 
 function sortedPluginIds(value) {
@@ -115,19 +119,31 @@ function legacyBaselineValid(source) {
 
 function sourceEvidenceValid(source) {
   let expectedRepository;
+  let allowedRepositories;
+  let migrated = false;
   try {
     expectedRepository = githubRepositoryKey(source?.repo);
+    allowedRepositories = repositoryEvidenceKeys(source);
+    migrated = source?.repositoryIdentity !== undefined;
   } catch {
     return false;
   }
-  const baseline = parseStoredSecurityBaselineRecord(source?.automatedSecurityBaseline, {
-    expectedRepository,
-    expectedCommit: source?.listingValidatedCommit,
-    pluginIds: sourcePluginIds(source),
-  }) || legacyBaselineValid(source);
-  if (!baseline) return false;
+  // A missing baseline denotes a legacy unverified snapshot. Once the field is
+  // present, it is trust evidence and must remain exact and fully parseable.
+  const hasBaseline = Object.hasOwn(source || {}, "automatedSecurityBaseline");
+  const baseline = hasBaseline
+    ? parseStoredSecurityBaselineRecord(source.automatedSecurityBaseline, {
+      expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback: !migrated,
+      expectedCommit: source?.listingValidatedCommit,
+      pluginIds: sourcePluginIds(source),
+    }) || (!migrated ? legacyBaselineValid(source) : null)
+    : null;
+  if (hasBaseline && !baseline) return false;
   const hasReview = Object.hasOwn(source || {}, "maintainerVerificationReview");
   const hasRevocation = Object.hasOwn(source || {}, "maintainerVerificationRevocation");
+  if ((hasReview || hasRevocation) && !baseline) return false;
   if (hasRevocation && !hasReview) return false;
   if (hasReview && !parseMaintainerVerificationReview(source.maintainerVerificationReview, baseline)) return false;
   if (
@@ -141,15 +157,44 @@ function sourceEvidenceValid(source) {
   if (
     Object.hasOwn(source || {}, "maintainerVerificationReviewHistory")
     && !parseMaintainerVerificationReviewHistory(source.maintainerVerificationReviewHistory, {
-      expectedRepository: baseline?.repository,
+      expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback: !migrated,
       pluginIds: sourcePluginIds(source),
     })
   ) return false;
   return !Object.hasOwn(source || {}, "listingValidationHistory")
     || parseListingValidationHistory(source.listingValidationHistory, {
-      expectedRepository: baseline?.repository,
+      expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback: !migrated,
       pluginIds: sourcePluginIds(source),
     });
+}
+
+export function assertPluginUpdateListingArchivable(source) {
+  if (
+    source?.type !== "plugin-source"
+    || !sourcePluginIds(source).length
+    || !sourceEvidenceValid(source)
+  ) {
+    throw new PluginUpdateError(
+      "update-listing-invalid",
+      "The current listing evidence cannot be archived safely",
+    );
+  }
+  if (
+    !fullCommitPattern.test(source.listingValidatedCommit || "")
+    || !Number.isFinite(Date.parse(source.listingValidatedAt || ""))
+    || typeof source.listingValidatedBranch !== "string"
+    || !source.listingValidatedBranch
+  ) {
+    throw new PluginUpdateError(
+      "update-listing-invalid",
+      "The current listing provenance cannot be archived safely",
+    );
+  }
+  return source;
 }
 
 export function assertPluginUpdateInspection(request, source, inspection, {
@@ -201,12 +246,9 @@ export function resolvePluginUpdate(registry, request, inspection, options = {})
 }
 
 export function listingValidationHistoryEntry(source, supersededAt) {
-  if (!sourceEvidenceValid(source)) {
-    throw new PluginUpdateError(
-      "update-listing-invalid",
-      "The current listing evidence cannot be archived safely",
-    );
-  }
+  assertPluginUpdateListingArchivable(source);
+  const expectedRepository = githubRepositoryKey(source.repo);
+  const allowedRepositories = repositoryEvidenceKeys(source);
   if (Object.hasOwn(source || {}, "maintainerVerificationRevocation")) {
     if (!parseMaintainerVerificationReviewPair(
       source?.maintainerVerificationReview,
@@ -222,7 +264,9 @@ export function listingValidationHistoryEntry(source, supersededAt) {
   if (
     Object.hasOwn(source || {}, "maintainerVerificationReviewHistory")
     && !parseMaintainerVerificationReviewHistory(source.maintainerVerificationReviewHistory, {
-      expectedRepository: source?.automatedSecurityBaseline?.repository,
+      expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback: source.repositoryIdentity === undefined,
       pluginIds: sourcePluginIds(source),
     })
   ) {
@@ -295,9 +339,22 @@ export function promotePluginUpdateSource(source, inspection, {
       "Listing validation history is invalid",
     );
   }
+  let expectedRepository;
+  let allowedRepositories;
+  try {
+    expectedRepository = githubRepositoryKey(source.repo);
+    allowedRepositories = repositoryEvidenceKeys(source);
+  } catch {
+    throw new PluginUpdateError(
+      "update-history-invalid",
+      "Repository migration history evidence is invalid",
+    );
+  }
   if (
     !parseListingValidationHistory(source.listingValidationHistory || [], {
-      expectedRepository: source.automatedSecurityBaseline?.repository,
+      expectedRepository,
+      allowedRepositories,
+      allowLegacyRepositoryFallback: source.repositoryIdentity === undefined,
       pluginIds: sourcePluginIds(source),
     })
   ) {

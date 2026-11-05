@@ -6,4 +6,4 @@ Marketplace listings may link to third-party repositories and cache optimized co
 
 The Omarchy name and wordmark are used only to identify compatibility. All trademarks and logos remain the property of their respective owners.
 
-If you believe a listing or asset infringes your rights, submit a [rights or asset removal request](https://github.com/HANCORE-linux/omarchy-plugin-marketplace/issues/new?template=rights-request.yml) identifying the material and the basis for your request so it can be reviewed or removed.
+If you believe a listing or asset infringes your rights, submit a [rights or asset removal request](https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=rights-request.yml) identifying the material and the basis for your request so it can be reviewed or removed.

@@ -24,6 +24,8 @@ function requiredArgument(name) {
   return value;
 }
 
+export const securityBaselineScanLimitExitCode = 3;
+
 let reportContext = "submission";
 
 async function main() {
@@ -71,6 +73,6 @@ if (isMain) {
     const code = error?.code || "security-baseline-unavailable";
     process.stdout.write(buildSecurityBaselineFailureReport(error, { context: reportContext }));
     console.error(`Automated security baseline failed [${code}]`);
-    process.exitCode = 2;
+    process.exitCode = code === "security-baseline-scan-limit" ? securityBaselineScanLimitExitCode : 2;
   });
 }

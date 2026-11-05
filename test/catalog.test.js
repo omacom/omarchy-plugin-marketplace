@@ -13,6 +13,7 @@ import {
   catalogRefreshFailureMessage,
   catalogSourcePlan,
   communityInstall,
+  currentCatalogApiUsage,
   failedSourcePlugins,
   githubApiFailure,
   parseGitHubRepository,
@@ -30,12 +31,18 @@ import {
 import { catalogVerificationFields } from "../scripts/catalog-verification.mjs";
 import {
   activityTime,
+  comparePluginInstallRate,
+  installRateScore,
+  selectHiddenGems,
+  medianInstallRate,
   isRecentlyAdded,
   isRecentlyUpdated,
+  listingAgeLabel,
   listingCheckState,
   listingTime,
   paginationState,
   pluginVersionLabel,
+  recentListings,
 } from "../site/assets/js/shared.js";
 
 const catalog = JSON.parse(await readFile(new URL("../site/catalog.json", import.meta.url), "utf8"));
@@ -321,13 +328,15 @@ test("manual installation overrides are explicit and restricted to root plugins"
     () => communityInstall(source, "manifest.json", {
       installation: { mode: "script", note },
     }),
-    /invalid manual installation override/,
+    (error) => !(error instanceof CatalogCheckError)
+      && /invalid manual installation override/.test(error.message),
   );
   assert.throws(
     () => communityInstall(source, "nested/manifest.json", {
       installation: { mode: "manual", note },
     }),
-    /invalid manual installation override/,
+    (error) => error instanceof CatalogCheckError
+      && error.code === "unsupported-repository-layout",
   );
 });
 
@@ -341,7 +350,8 @@ test("built-in plugins are separated from installable community plugins", () => 
     assert.ok(["Add to bar", "Enable plugin"].includes(plugin.officialCommandLabel));
     assert.equal(plugin.addedAt, undefined);
     assert.match(plugin.id, /^omarchy\./);
-    assert.match(plugin.sourceUrl, /^https:\/\/github\.com\/basecamp\/omarchy\/tree\/[a-f0-9]{40}\//);
+    assert.equal(plugin.repo, "https://github.com/omacom/omarchy");
+    assert.match(plugin.sourceUrl, /^https:\/\/github\.com\/omacom\/omarchy\/tree\/[a-f0-9]{40}\//);
   }
   assert.ok(catalog.plugins.find((plugin) => plugin.id === "omarchy.agents")?.tags.includes("ai"));
   assert.ok(catalog.plugins.find((plugin) => plugin.id === "omarchy.polkit")?.tags.includes("security"));
@@ -368,65 +378,130 @@ test("stars represent repository stars and are shared by plugins from the same r
 });
 
 test("root plugins default to Quattro while curated exceptions use manual setup", () => {
-  const overview = catalog.plugins.find((plugin) => plugin.id === "omarchy-overview");
-  assert.equal(
-    overview?.installCommand,
-    "omarchy plugin add https://github.com/AyushKr2003/omarchy-overview.git --enable",
-  );
-
-  const nearby = catalog.plugins.find((plugin) => plugin.id === "oma.nearby");
-  assert.equal(nearby?.repositoryLayout, "root-plugin");
-  assert.equal(nearby?.installAvailable, false);
-  assert.equal(nearby?.installCommand, "");
-  assert.equal(nearby?.status, "Manual setup");
-  assert.equal(
-    nearby?.installNote,
-    "Nearby requires a version-matched native helper. Follow the upstream installation instructions to install the plugin and helper together.",
-  );
-
-  const typeFlow = catalog.plugins.find((plugin) => plugin.id === "hypr-type-flow");
-  assert.equal(typeFlow?.repositoryLayout, "root-plugin");
-  assert.equal(typeFlow?.installAvailable, false);
-  assert.equal(typeFlow?.installCommand, "");
-  assert.equal(typeFlow?.status, "Manual setup");
-  assert.equal(
-    typeFlow?.installNote,
-    "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
-  );
-
-  const ytdl = catalog.plugins.find((entry) => entry.id === "bibek.ytdl");
-  assert.equal(ytdl?.repositoryLayout, "root-plugin");
-  assert.equal(ytdl?.installAvailable, false);
-  assert.equal(ytdl?.installCommand, "");
-  assert.equal(ytdl?.status, "Manual setup");
-  assert.equal(ytdl?.installNote, "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.");
-  const ytdlSource = registry.sources.find((source) => source.repo === "https://github.com/BibekBhusal0/omarchy-ytdl");
-  assert.deepEqual(ytdlSource?.plugins?.["bibek.ytdl"]?.installation, {
-    mode: "manual",
-    note: "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+  const fixture = { repo: "https://github.com/example/widget" };
+  assert.deepEqual(communityInstall(fixture, "manifest.json"), {
+    repositoryLayout: "root-plugin",
+    installAvailable: true,
+    installCommand: "omarchy plugin add https://github.com/example/widget.git --enable",
+    installNote: "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+  });
+  assert.deepEqual(communityInstall(fixture, "widgets/clock/manifest.json"), {
+    repositoryLayout: "monorepo",
+    installAvailable: false,
+    installCommand: "",
+    installNote: "Automatic installation is unavailable because this plugin is stored inside a multi-plugin repository without a transactional Omarchy update path.",
   });
 
-  for (const [id, repository] of [
-    ["nille.emeet-pixy", "https://github.com/nille/omarchy-emeet-pixy.git"],
-    ["ky.seerr-requests", "https://github.com/Kyrunner/omarchy-seerr-requests.git"],
-    ["tmn73.calendar", "https://github.com/tmn73/omarchy-calendar.git"],
-  ]) {
-    const plugin = catalog.plugins.find((entry) => entry.id === id);
-    assert.equal(plugin?.repositoryLayout, "root-plugin");
-    assert.equal(plugin?.installAvailable, true);
-    assert.equal(plugin?.installCommand, `omarchy plugin add ${repository} --enable`);
-    assert.equal(plugin?.status, "Available");
+  const sources = new Map();
+  for (const source of registry.sources) {
+    for (const id of Object.keys(source.plugins || {})) sources.set(id, source);
+    if (source.catalog?.id) sources.set(source.catalog.id, source);
   }
+  let standard = 0;
+  let manual = 0;
+  for (const plugin of catalog.plugins.filter((entry) => !entry.builtIn)) {
+    const source = sources.get(plugin.id);
+    assert.ok(source, `${plugin.id} has a registry source`);
+    const standardCommand = `omarchy plugin add ${source.repo.endsWith(".git") ? source.repo : `${source.repo}.git`} --enable`;
+    assert.ok(["", standardCommand].includes(plugin.installCommand), `${plugin.id} publishes only the standard command`);
+    if (source.type === "suite") {
+      assert.equal(plugin.repositoryLayout, "suite", plugin.id);
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      continue;
+    }
+    const override = source.plugins[plugin.id].installation;
+    if (override) {
+      assert.deepEqual(Object.keys(override).sort(), ["mode", "note"], plugin.id);
+      assert.equal(override.mode, "manual", plugin.id);
+      assert.ok(override.note.trim(), plugin.id);
+      assert.equal(plugin.repositoryLayout, "root-plugin", plugin.id);
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      assert.equal(plugin.installCommand, "", plugin.id);
+      assert.equal(plugin.installNote, override.note, plugin.id);
+      if (plugin.upstreamCheckStatus === "passed") assert.equal(plugin.status, "Manual setup", plugin.id);
+      manual += 1;
+    } else if (plugin.repositoryLayout === "monorepo") {
+      assert.equal(plugin.installAvailable, false, plugin.id);
+      assert.equal(plugin.installCommand, "", plugin.id);
+    } else if (plugin.upstreamCheckStatus === "passed") {
+      assert.equal(plugin.repositoryLayout, "root-plugin", plugin.id);
+      assert.equal(plugin.installAvailable, true, plugin.id);
+      assert.equal(plugin.installCommand, standardCommand, plugin.id);
+      assert.equal(plugin.status, "Available", plugin.id);
+      standard += 1;
+    }
+  }
+  const overrides = registry.sources.flatMap((source) => Object.values(source.plugins || {})
+    .filter((plugin) => plugin.installation));
+  assert.equal(manual, overrides.length);
+  assert.ok(standard > 0);
+});
 
-  for (const id of ["omni", "quickapps-hud", "cliamp"]) {
-    const plugin = catalog.plugins.find((entry) => entry.id === id);
-    assert.equal(plugin?.repositoryLayout, "monorepo");
-    assert.equal(plugin?.installAvailable, false);
-    assert.equal(plugin?.installCommand, "");
-  }
-  const lacuna = catalog.plugins.find((entry) => entry.id === "lacuna.shell-suite");
-  assert.equal(lacuna?.repositoryLayout, "suite");
-  assert.equal(lacuna?.installAvailable, false);
+test("install rate ranks by the Wilson lower bound of copies per view", () => {
+  const plugin = (id, extra = {}) => ({ id, name: id, installCommand: `omarchy plugin add ${id}`, ...extra });
+  const wilson = (copies, views) => {
+    const rate = copies / views;
+    const z = 1.96;
+    return (rate + z * z / (2 * views) - z * Math.sqrt((rate * (1 - rate) + z * z / (4 * views)) / views)) / (1 + z * z / views);
+  };
+  assert.ok(Math.abs(installRateScore(plugin("a"), { views: 297, copies: 161 }) - wilson(161, 297)) < 1e-12);
+  assert.ok(Math.abs(wilson(161, 297) - 0.4852) < 0.001);
+  assert.equal(installRateScore(plugin("few"), { views: 19, copies: 19 }), -1);
+  assert.equal(installRateScore(plugin("manual", { installCommand: "" }), { views: 500, copies: 0 }), -1);
+  // Zero copies is a rated 0, never a rounding error below 0 that reads as unrated (e.g. 480 views).
+  for (let views = 20; views <= 2000; views += 1) assert.equal(installRateScore(plugin("unused"), { views, copies: 0 }), 0);
+  assert.equal(installRateScore(plugin("capped"), { views: 40, copies: 55 }), installRateScore(plugin("full"), { views: 40, copies: 40 }));
+  const plugins = [plugin("lucky"), plugin("solid"), plugin("popular"), plugin("unrated"), plugin("manual", { installCommand: "" })];
+  const stats = {
+    lucky: { views: 20, copies: 10 },
+    solid: { views: 297, copies: 161 },
+    popular: { views: 21177, copies: 8281 },
+    unrated: { views: 5, copies: 5 },
+    manual: { views: 900, copies: 0 },
+  };
+  assert.deepEqual([...plugins].sort((a, b) => comparePluginInstallRate(a, b, stats)).map((entry) => entry.id), ["solid", "popular", "lucky", "manual", "unrated"]);
+});
+
+test("hidden gems are verified, less-seen plugins with a screenshot, ordered by install rate", () => {
+  const gem = (id, extra = {}) => ({ id, name: id, installCommand: `omarchy plugin add ${id}`, verificationStatus: "verified", previewThumbnail: `assets/img/plugins/${id}-card.webp`, ...extra });
+  const plugins = [gem("popular"), gem("strong"), gem("good"), gem("unverified", { verificationStatus: "unverified" }), gem("no-shot", { previewThumbnail: "" }), gem("quiet"), gem("built-in", { builtIn: true })];
+  const stats = {
+    popular: { views: 9000, copies: 5000 },
+    strong: { views: 240, copies: 130 },
+    good: { views: 200, copies: 90 },
+    unverified: { views: 250, copies: 200 },
+    "no-shot": { views: 250, copies: 200 },
+    quiet: { views: 10, copies: 10 },
+    "built-in": { views: 100, copies: 90 },
+  };
+  assert.deepEqual(selectHiddenGems(plugins, stats).map((plugin) => plugin.id), ["strong", "good"]);
+  // Rated: good .45, strong .542, popular .556, unverified .8, no-shot .8 → median .556 (5000/9000).
+  assert.equal(medianInstallRate(plugins, stats), 5000 / 9000);
+  assert.equal(medianInstallRate([], stats), null);
+  // A plugin with views but no copies counts as a rated 0.
+  assert.equal(medianInstallRate([plugins[0], { ...plugins[0], id: "zero" }], { ...stats, zero: { views: 480, copies: 0 } }), (5000 / 9000) / 2);
+  assert.equal(selectHiddenGems([], stats).length, 0);
+});
+
+test("recent listings are newest first and age labels are compact", () => {
+  const now = Date.parse("2026-09-23T12:00:00Z");
+  const listing = (id, hoursAgo, extra = {}) => ({ id, name: id, listedAt: new Date(now - hoursAgo * 60 * 60 * 1000).toISOString(), ...extra });
+  const plugins = [
+    listing("fresh", 1),
+    listing("older", 20),
+    listing("same-time-b", 5),
+    listing("same-time-a", 5),
+    listing("too-old", 30),
+    listing("built-in", 2, { builtIn: true }),
+    listing("placeholder", 2, { placeholder: true }),
+    listing("official", 2, { sourceType: "builtin" }),
+  ];
+  assert.deepEqual(recentListings(plugins, now, 24).map((plugin) => plugin.id), ["fresh", "same-time-a", "same-time-b", "older"]);
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T11:59:40Z" }, now), "just now");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T11:15:00Z" }, now), "45m ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T07:00:00Z" }, now), "5h ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-21T11:00:00Z" }, now), "2d ago");
+  assert.equal(listingAgeLabel({ listedAt: "2026-09-23T13:00:00Z" }, now), "");
 });
 
 test("recently added badges use a 12-hour listing window", () => {
@@ -519,6 +594,32 @@ test("catalog refresh failures identify the safe repository slug and error code"
       { builtIn: true },
     ),
     "Built-in catalog refresh failed for omacom-io/omarchy [manifest-invalid].",
+  );
+  assert.equal(
+    catalogRefreshFailureMessage(
+      "https://github.com/example/weather",
+      new Error("token and upstream detail stay private"),
+      { fatal: true },
+    ),
+    "Catalog source refresh aborted for example/weather [internal-error: Error].",
+  );
+  assert.equal(
+    catalogRefreshFailureMessage(
+      "https://github.com/example/weather",
+      new CatalogBuildError("rate-limit-exhausted", "private detail"),
+      { fatal: true },
+    ),
+    "Catalog source refresh aborted for example/weather [rate-limit-exhausted].",
+  );
+  const disguised = new TypeError("private detail");
+  disguised.name = "Type\n::warning::Error";
+  assert.equal(
+    catalogRefreshFailureMessage(
+      "https://github.com/omacom-io/omarchy",
+      disguised,
+      { builtIn: true, fatal: true },
+    ),
+    "Built-in catalog refresh aborted for omacom-io/omarchy [internal-error: Type---warning--Error].",
   );
 });
 
@@ -791,23 +892,47 @@ test("full catalog builds reserve GitHub API requests for exact snapshot checks"
     placeholders: [],
   }, null, 2)}\n`);
   await writeFile(catalogPath, `${JSON.stringify(previous, null, 2)}\n`);
-  globalThis.fetch = async (input) => {
+  globalThis.fetch = async (input, init = {}) => {
     const url = String(input);
     requestUrls.push(url);
-    if (url === "https://api.github.com/repos/example/target") {
+    if (url === "https://api.github.com/graphql") {
+      const request = JSON.parse(init.body);
+      if (request.query.includes("CatalogRefreshBudget")) {
+        return new Response(JSON.stringify({
+          data: { rateLimit: { cost: 1, limit: 5000, remaining: 4999, resetAt: "2026-08-15T11:00:00Z" } },
+        }), { status: 200 });
+      }
+      assert.match(request.query, /CatalogRefreshIdentities/);
+      assert.deepEqual(request.variables, {
+        owner0: "example",
+        name0: "target",
+        ref0: "refs/heads/__marketplace_default_branch_not_configured__",
+      });
       return new Response(JSON.stringify({
-        private: false,
-        disabled: false,
-        archived: false,
-        default_branch: "main",
-        stargazers_count: 7,
-        pushed_at: "2026-08-15T09:30:00.000Z",
+        data: {
+          r0: {
+            id: "R_kgDOExample",
+            databaseId: 123456789,
+            nameWithOwner: "example/target",
+            isArchived: false,
+            isDisabled: false,
+            isPrivate: false,
+            stargazerCount: 7,
+            pushedAt: "2026-08-15T09:30:00.000Z",
+            updatedAt: "2026-08-15T09:30:00.000Z",
+            defaultBranchRef: {
+              name: "main",
+              target: { oid: targetCommit, tree: { oid: treeSha } },
+            },
+            configuredRef: null,
+          },
+          rateLimit: { cost: 1, limit: 5000, remaining: 4998, resetAt: "2026-08-15T11:00:00Z" },
+        },
       }), { status: 200 });
     }
-    if (url === "https://api.github.com/repos/example/target/commits/main") {
+    if (url === "https://api.github.com/rate_limit") {
       return new Response(JSON.stringify({
-        sha: targetCommit,
-        commit: { tree: { sha: treeSha } },
+        resources: { core: { limit: 5000, remaining: 4998, reset: 1786788000 } },
       }), { status: 200 });
     }
     if (url === `https://api.github.com/repos/example/target/git/trees/${treeSha}?recursive=1`) {
@@ -841,11 +966,20 @@ test("full catalog builds reserve GitHub API requests for exact snapshot checks"
     assert.deepEqual(
       requestUrls.filter((url) => url.startsWith("https://api.github.com/")),
       [
-        "https://api.github.com/repos/example/target",
-        "https://api.github.com/repos/example/target/commits/main",
+        "https://api.github.com/graphql",
+        "https://api.github.com/graphql",
+        "https://api.github.com/rate_limit",
         `https://api.github.com/repos/example/target/git/trees/${treeSha}?recursive=1`,
       ],
     );
+    assert.deepEqual(currentCatalogApiUsage(), {
+      graphqlRequests: 2,
+      graphqlPoints: 2,
+      rawRequests: 1,
+      restOtherRequests: 0,
+      restRateLimitRequests: 1,
+      restTreeRequests: 1,
+    });
   } finally {
     globalThis.fetch = originalFetch;
     await rm(directory, { recursive: true, force: true });

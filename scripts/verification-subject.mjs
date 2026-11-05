@@ -1,5 +1,6 @@
 import { isCommunityCatalogEntry } from "./catalog-verification.mjs";
 import { githubRepositoryKey } from "./github-repository.mjs";
+import { parseRepositoryIdentity } from "./repository-identity.mjs";
 
 const fullCommitPattern = /^[a-f0-9]{40}$/i;
 
@@ -14,6 +15,28 @@ export class VerificationSubjectError extends Error {
 
 function sourceContainsPlugin(source, pluginId) {
   return Object.hasOwn(source?.plugins || {}, pluginId) || source?.catalog?.id === pluginId;
+}
+
+export function canonicalRepositoryRequest(registry, request) {
+  const matches = (registry?.sources || []).filter((source) => (
+    sourceContainsPlugin(source, request?.pluginId)
+  ));
+  if (matches.length !== 1) return request;
+  const [source] = matches;
+  let canonicalRepository;
+  let identity;
+  try {
+    canonicalRepository = githubRepositoryKey(source.repo);
+    identity = parseRepositoryIdentity(source.repositoryIdentity);
+  } catch {
+    return request;
+  }
+  if (!identity || request.repository === canonicalRepository) return request;
+  const formerRepositories = new Set(identity.previousRepositories.map((repository) => (
+    repository.toLowerCase()
+  )));
+  if (!formerRepositories.has(request.repository)) return request;
+  return Object.freeze({ ...request, repository: canonicalRepository, repoUrl: source.repo });
 }
 
 export function resolveConfiguredSource(registry, request) {

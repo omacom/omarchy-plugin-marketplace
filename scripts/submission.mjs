@@ -19,6 +19,7 @@ export const allowedCategories = Object.freeze([
   "Desktop",
   "Developer Tools",
   "Hardware",
+  "Kids",
   "Productivity",
   "System",
   "Widgets",
@@ -28,14 +29,17 @@ export const allowedCategories = Object.freeze([
 export const allowedTags = Object.freeze([
   "ai",
   "bar",
+  "education",
   "games",
   "hyprland",
+  "kids",
   "launcher",
   "media",
   "power-management",
   "quickshell",
   "security",
   "system",
+  "vpn",
   "workspaces",
 ]);
 
@@ -347,6 +351,6 @@ export function classifySubmission({ title, body, hasSubmissionLabel = false }) 
     return { shouldValidate: true, shouldLabel: true };
   } catch {
     const submissionCandidate = /^\[Plugin\]:/.test(String(title || ""));
-    return { shouldValidate: submissionCandidate, shouldLabel: false };
+    return { shouldValidate: submissionCandidate, shouldLabel: submissionCandidate };
   }
 }

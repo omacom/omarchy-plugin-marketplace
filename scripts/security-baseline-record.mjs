@@ -34,6 +34,23 @@ function normalizedPluginIds(pluginIds) {
   return [...pluginIds].sort();
 }
 
+function normalizedRepositories(repositories, expectedRepository) {
+  const expected = String(expectedRepository || "").toLowerCase();
+  if (repositories === undefined) return expected ? [expected] : [];
+  if (
+    !Array.isArray(repositories)
+    || repositories.some((repository) => (
+      typeof repository !== "string"
+      || !repository
+      || repository !== repository.trim()
+    ))
+  ) return null;
+  const normalized = repositories.map((repository) => repository.toLowerCase());
+  if (new Set(normalized).size !== normalized.length) return null;
+  if (expected && !normalized.includes(expected)) return null;
+  return normalized;
+}
+
 function normalizedResultSummary(result) {
   const findings = securityBaselineFindingIds(result);
   const capabilities = securityBaselineCapabilityIds(result);
@@ -91,6 +108,8 @@ export function toStoredSecurityBaselineRecord(result, {
 
 export function parseStoredSecurityBaselineRecord(record, {
   expectedRepository = "",
+  allowedRepositories,
+  allowLegacyRepositoryFallback = true,
   expectedCommit = "",
   pluginIds,
 } = {}) {
@@ -105,20 +124,26 @@ export function parseStoredSecurityBaselineRecord(record, {
   };
   const repository = String(record?.repository || "").toLowerCase();
   const expectedRepositoryKey = String(expectedRepository || "").toLowerCase();
+  const allowedRepositoryKeys = normalizedRepositories(allowedRepositories, expectedRepositoryKey);
   const currentSchema = record?.schemaVersion === securityBaselineRecordSchemaVersion;
   const legacySchema = record?.schemaVersion === undefined;
   if (
     !record
     || ![undefined, securityBaselineRecordSchemaVersion].includes(record.schemaVersion)
     || (currentSchema && (!repository || !storedIds?.length))
-    || (legacySchema && (!expectedRepositoryKey || !normalizedIds?.length))
+    || (legacySchema && (
+      !allowLegacyRepositoryFallback
+      || !expectedRepositoryKey
+      || !normalizedIds?.length
+    ))
     || record.version !== securityBaselineVersion
     || record.enforcementMode !== securityBaselineEnforcementMode
     || !commit
     || !Number.isFinite(Date.parse(record.checkedAt || ""))
     || !isConsistentSecurityBaselineSummary(summary)
     || (expectedCommit && commit !== fullCommit(expectedCommit))
-    || (expectedRepositoryKey && repository && repository !== expectedRepositoryKey)
+    || allowedRepositoryKeys === null
+    || (repository && allowedRepositoryKeys.length && !allowedRepositoryKeys.includes(repository))
     || normalizedIds === null
     || storedIds === null
     || (normalizedIds && storedIds && JSON.stringify(normalizedIds) !== JSON.stringify(storedIds))

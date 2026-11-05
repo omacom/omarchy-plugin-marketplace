@@ -18,6 +18,7 @@ import {
   legacyApprovalLabel,
   manualSetupNote,
   parseApprovableSubmission,
+  parseApprovedSubmissionSnapshot,
   parseManualSetupApproval,
   parseSubmissionBody,
   rightsStatement,
@@ -61,6 +62,7 @@ import {
   committedTermsFromDraft,
   createSearchTerm,
   currentSearchToken,
+  foldSearchTerm,
   fuzzyScore,
   handleSearchEscape,
   hasFulltextSearchDraft,
@@ -69,6 +71,9 @@ import {
   matchesDirectSearch,
   matchesDraftSearchTerm,
   matchesShortSearch,
+  matchesSearchSelection,
+  pluginSearchContext,
+  compactSearchKey,
   maximumSearchTermLength,
   parseSearchDraft,
   pluginKindKey,
@@ -76,6 +81,7 @@ import {
   readSearchState,
   removeSearchTermTypeFromDraft,
   searchKeyAction,
+  searchRelevanceTier,
   searchTermKey,
   searchTokens,
   selectSearchCompletions,
@@ -90,8 +96,26 @@ import {
   pluginVerificationState,
   readCatalogViewState,
   showCopiedState,
+  engagementRanks,
+  splitViewPageSize,
+  readCatalogView,
   writeClipboard,
 } from "../site/assets/js/shared.js";
+import {
+  applyTheme,
+  defaultThemeId,
+  isThemeId,
+  pickerLayout,
+  readStoredTheme,
+  siteThemes,
+  themePreviewPath,
+} from "../site/assets/js/themes.js";
+import {
+  catalogCategoryTotals,
+  matchesKidsTaxonomy,
+  matchesBarTaxonomy,
+  matchesVpnTaxonomy,
+} from "../site/assets/js/taxonomy.js";
 
 function contrastRatio(first, second) {
   const luminance = (hex) => {
@@ -165,6 +189,16 @@ function registryPluginEntries(registry) {
     ]),
     ...registry.placeholders.map((plugin) => [plugin?.id, plugin]),
   ];
+}
+
+function assertRetiredPluginIdsAreInactive(registry) {
+  const activeIds = new Set(registryPluginEntries(registry).map(([pluginId]) => pluginId));
+  assert.equal(new Set(registry.retiredPluginIds).size, registry.retiredPluginIds.length);
+  assert.ok(
+    registry.retiredPluginIds.every((pluginId) => !activeIds.has(pluginId)),
+    "retired plugin IDs must not remain active registry entries",
+  );
+  return activeIds;
 }
 
 function taggedPluginIds(entries, tag, origin) {
@@ -297,7 +331,7 @@ test("kind and full-text completions remain available beside catalog suggestions
 
 test("search tokens support multi-word matching and current-token completion", () => {
   assert.deepEqual(searchTokens("  AirVPN   system "), ["airvpn", "system"]);
-  assert.deepEqual(searchTokens("  Expose\u0301   System "), ["exposé", "system"]);
+  assert.deepEqual(searchTokens("  Expose\u0301   System "), ["expose", "system"]);
   assert.equal(currentSearchToken("airvpn sys"), "sys");
   assert.equal(currentSearchToken("airvpn "), "");
   assert.equal(fuzzyScore("Expose\u0301", "Exposé"), 0);
@@ -384,6 +418,68 @@ test("short searches find terms within plugin names and tags", () => {
   ), false);
 });
 
+test("dotted searches match complete plugin IDs beyond the host namespace", () => {
+  const fanMonitor = pluginSearchContext({
+    id: "io.github.elynch303.fan-monitor",
+    name: "Fan Monitor",
+    description: "Fan speed in the bar.",
+    repo: "https://github.com/elynch303/fan-monitor",
+    tags: ["system"],
+  });
+  for (const query of [
+    "io.github.elynch303.fan-monitor",
+    "IO.GitHub.elynch303.Fan-Monitor",
+    "io.github.elynch303",
+    "github.elynch303.fan",
+  ]) {
+    assert.equal(matchesSearchSelection(fanMonitor, { draftTerms: parseSearchDraft(query) }), true, query);
+  }
+  for (const query of ["io.github", "io.", "github.io", "io.github.other.fan-monitor"]) {
+    assert.equal(matchesSearchSelection(fanMonitor, { draftTerms: parseSearchDraft(query) }), false, query);
+  }
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("fulltext", "io.github.elynch303"), fanMonitor), true);
+});
+
+test("search ignores diacritics on both sides of the comparison", () => {
+  const context = pluginSearchContext({
+    id: "robertlindomar.omarchy-ptbr.clock",
+    name: "Relógio",
+    description: "Notificações e café für Müller",
+    tags: ["system"],
+  });
+  for (const query of ["relogio", "Relógio", "notificacoes", "cafe", "café", "muller", "MÜLLER", "fur"]) {
+    assert.equal(matchesSearchSelection(context, { draftTerms: parseSearchDraft(query) }), true, query);
+  }
+  assert.equal(foldSearchTerm("İstanbul Ünlü"), "istanbul unlu");
+  assert.equal(foldSearchTerm("調べ"), "調べ");
+  assert.equal(foldSearchTerm("  Fan  Monitor "), "fan monitor");
+});
+
+test("short searches with symbols match literally instead of as a letter prefix", () => {
+  const cppDaily = { primaryText: "C++ Daily cpp-daily education", searchText: "C++ Daily Practice C++ every day education" };
+  const clock = { primaryText: "Clock clock system", searchText: "Clock A calm clock for the bar system" };
+  assert.equal(matchesDirectSearch("c++", cppDaily), true);
+  assert.equal(matchesDirectSearch("c++", clock), false);
+  assert.equal(matchesDirectSearch("c#", clock), false);
+  assert.equal(matchesDirectSearch("cl,", clock), true);
+  assert.equal(matchesShortSearch("+", "Media Controls + Album Art", "Media Controls + Album Art"), true);
+});
+
+test("search relevance ranks exact names and IDs before prefixes and other matches", () => {
+  const context = (name, id) => pluginSearchContext({ name, id, tags: [] });
+  const archy = context("Archy", "io.github.example.archy");
+  const archyBar = context("Archy Bar", "example.archy-bar");
+  const omarchyClock = context("Omarchy Clock", "example.clock");
+  const unrelatedName = context("Weather", "example.weather");
+  assert.equal(searchRelevanceTier(archy, "archy"), 0);
+  assert.equal(searchRelevanceTier(archy, "io.github.example.archy"), 0);
+  assert.equal(searchRelevanceTier(archyBar, "archy"), 1);
+  assert.equal(searchRelevanceTier(omarchyClock, "archy"), 2);
+  assert.equal(searchRelevanceTier(unrelatedName, "archy"), 3);
+  assert.equal(searchRelevanceTier(archy, ""), 0);
+  assert.equal(searchRelevanceTier(context("Müller Notes", "example.notes"), "muller notes"), 0);
+});
+
 test("inline completion accepts genuine plugin, tag, and author prefixes", () => {
   assert.equal(inlineSearchCompletionSuffix(
     { type: "plugin", value: "AirVPN" },
@@ -407,6 +503,58 @@ test("inline completion accepts genuine plugin, tag, and author prefixes", () =>
   ), "");
 });
 
+test("committed text terms match hyphenated and joined spellings", () => {
+  const codexBar = {
+    primaryText: "CodexBar codexbar ai",
+    searchText: "CodexBar Every AI coding limit in one Omarchy panel ai",
+  };
+  const nightLight = {
+    primaryText: "Night Light nightlight system",
+    searchText: "Night Light Owns the hyprsunset night light temperature system",
+  };
+  assert.equal(matchesDirectSearch("codex-bar", codexBar), true);
+  assert.equal(matchesDirectSearch("codexbar", codexBar), true);
+  assert.equal(matchesDirectSearch("codex bar", codexBar), true);
+  assert.equal(matchesDirectSearch("nightlight", nightLight), true);
+  assert.equal(matchesDirectSearch("night-light", nightLight), true);
+  assert.equal(matchesDirectSearch("night+light", nightLight), false);
+  assert.equal(matchesDirectSearch("codex-cli", codexBar), false);
+  assert.equal(matchesDirectSearch("C. elegans Pet", {
+    primaryText: "C. elegans Pet pet games",
+    searchText: "C. elegans Pet A wandering worm for the bar games",
+  }), true);
+  assert.equal(matchesDirectSearch("git", {
+    primaryText: "Nova Lock lock system",
+    searchText: "Nova Lock Quickshell session lock dkgamer02ai dkgamer02ai.lock system",
+  }), false);
+  assert.equal(compactSearchKey("Codex-Bar  v2"), "codexbarv2");
+});
+
+test("search selection narrows with every committed and drafted term", () => {
+  const securityGame = pluginSearchContext({
+    id: "io.github.example.arcade", name: "Arcade Guard", repo: "https://github.com/example/arcade",
+    description: "A guarded arcade.", category: "Other", kind: "Bar widget", tags: ["security", "games"],
+  });
+  const securityOnly = pluginSearchContext({
+    id: "io.github.example.vault", name: "Vault", repo: "https://github.com/example/vault",
+    description: "Secrets in the bar.", category: "System", kind: "Bar widget", tags: ["security"],
+  });
+  const both = parseSearchDraft("tag:security tag:games");
+  assert.equal(matchesSearchSelection(securityGame, { draftTerms: both }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: both }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]], draftTerms: [both[1]] }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: [both[0]] }), true);
+  assert.equal(matchesSearchSelection(securityOnly, {}), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @example") }), true);
+  assert.equal(matchesSearchSelection(securityOnly, { terms: parseSearchDraft("vault @other") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("git") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("io.github") }), false);
+  assert.equal(matchesSearchSelection(securityOnly, { draftTerms: parseSearchDraft("example.vault") }), true);
+  assert.equal(securityOnly.primaryText, "Vault vault security");
+  assert.equal(securityOnly.publisher, "example");
+});
+
 test("typed committed chips use exact field-specific matching", () => {
   const plugin = {
     publisher: "spaceXrace",
@@ -421,7 +569,8 @@ test("typed committed chips use exact field-specific matching", () => {
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "bar"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("tag", "widget"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "@spaceXrace"), plugin), true);
-  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), false);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "space"), plugin), true);
+  assert.equal(matchesCommittedSearchTerm(createSearchTerm("author", "xrace"), plugin), false);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "Power Profiles"), plugin), true);
   assert.equal(matchesCommittedSearchTerm(createSearchTerm("plugin", "dizziee.power-profiles"), plugin), true);
   assert.equal(matchesDirectSearch("dark mode", {
@@ -554,7 +703,7 @@ test("typed terms normalize, parse, and deduplicate by type and value", () => {
   });
   assert.equal(createSearchTerm("kind", "---"), null);
   assert.equal(createSearchTerm("kind", "x".repeat(maximumSearchTermLength + 1)), null);
-  assert.equal(pluginKindKey("Bär + Panel"), "bär-panel");
+  assert.equal(pluginKindKey("Bär + Panel"), "bar-panel");
   assert.equal(hasFulltextSearchDraft("vpn text:panel"), true);
   assert.equal(hasFulltextSearchDraft("vpn panel"), false);
   assert.deepEqual(parseSearchDraft("tag: author: @bad_login @foo- @foo--bar"), [
@@ -1128,6 +1277,147 @@ test("clipboard fallback reports the actual copy result", async () => {
   }), true);
 });
 
+test("Kids catalog filtering uses only the exact controlled taxonomy", () => {
+  for (const plugin of [
+    { category: "Kids", tags: ["games"] },
+    { category: "Other", tags: ["kids", "kids"] },
+    { category: "Productivity", tags: ["education"] },
+  ]) {
+    assert.equal(matchesKidsTaxonomy(plugin), true);
+  }
+  for (const plugin of [
+    undefined,
+    {},
+    { category: "Productivity" },
+    { category: "kids", tags: ["quickshell"] },
+    { category: "Kids ", tags: ["quickshell"] },
+    { category: "Productivity", tags: ["Kids", "EDUCATION"] },
+    { category: "Productivity", tags: "education", description: "Kids education reference" },
+    { category: "Productivity", tags: ["quickshell"], description: "Kids education reference" },
+  ]) {
+    assert.equal(matchesKidsTaxonomy(plugin), false);
+  }
+
+  const totals = catalogCategoryTotals([
+    { category: "Kids", tags: ["games"] },
+    { category: "Kids", tags: ["education"] },
+    { category: "Other", tags: ["education"] },
+    { category: "Productivity", tags: ["quickshell"] },
+  ]);
+  assert.equal([...totals.keys()].filter((category) => category === "Kids").length, 1);
+  assert.equal(totals.get("Kids"), 3);
+  assert.equal(totals.get("Other"), 1);
+  assert.equal(totals.get("Productivity"), 1);
+  assert.equal(catalogCategoryTotals([{ category: "Other", tags: [] }]).has("Kids"), false);
+});
+
+test("Bar catalog filtering covers bar replacements and bar modifiers, not bar widgets", () => {
+  for (const plugin of [
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "example.custom", name: "Custom", category: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "Bar", tags: [] },
+    { id: "example.glass", name: "Glass", category: "Widgets", kind: "  BAR ", tags: [] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["hyprland", "bar"] },
+    { id: "henri.hide-bar-on-fullscreen", name: "Hide Bar on Video Fullscreen", category: "Desktop", kind: "Service", tags: ["bar"] },
+    { id: "fixlixpender.bar-color", name: "Bar Color", category: "Appearance", kind: "Bar widget", tags: ["hyprland"] },
+    { id: "floating-waybar", name: "Floating Waybar", category: "Appearance", kind: "Bar", tags: ["quickshell"] },
+    { id: "kc.omarchy-menubar-manager", name: "Omarchy Menubar Manager", category: "Appearance", kind: "Bar widget", tags: ["bar"] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), true, plugin.name);
+  }
+  for (const plugin of [
+    undefined,
+    null,
+    {},
+    "Bar",
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+    { id: "gennaro.hwmon", name: "HW Monitor", category: "Widgets", kind: "Bar widget", tags: ["bar", "quickshell"], description: "Sparkline panel for the Omarchy bar." },
+    { id: "io.github.austindixson.touchbar", name: "Touch Bar", category: "Hardware", kind: "Service", tags: ["hyprland"] },
+    { id: "gurvindersingh-web.system-stats", name: "System Stats (Waybar Style)", category: "Hardware", kind: "Bar widget", tags: ["bar"] },
+    { id: "sportsbar", name: "Sportsbar", category: "Widgets", kind: "Bar widget", tags: ["bar", "media"] },
+    { id: "io.github.rizmi.services", name: "Services Manager", category: "Widgets", kind: "Service", tags: ["system"] },
+    { id: "example.bar", name: "Bar Tools", category: "Productivity", kind: "Bar widget", tags: ["bar"] },
+    { id: "example.bar", name: "Bar", category: "bars", kind: "bar widget", tags: [] },
+    { id: 7, name: 8, category: 9, kind: 10, tags: 11 },
+    { id: { toString: null }, name: ["Bar"], kind: { value: "Bar" }, tags: [] },
+  ]) {
+    assert.equal(matchesBarTaxonomy(plugin), false, JSON.stringify(plugin));
+  }
+
+  const totals = catalogCategoryTotals([
+    { id: "omarchy.bar", name: "Bar", category: "Bars", kind: "Bar", tags: ["bar"] },
+    { id: "ericvrp.bar-autohide", name: "Bar Autohide", category: "Appearance", kind: "Service", tags: ["bar"] },
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["ai", "bar"] },
+  ]);
+  assert.equal(totals.get("Bar"), 2);
+  assert.equal(totals.get("Bars"), 1);
+  assert.equal(totals.get("Appearance"), 1);
+  assert.equal(totals.get("Widgets"), 1);
+  assert.equal(catalogCategoryTotals([
+    { id: "felixzsh.codexbar", name: "CodexBar", category: "Widgets", kind: "Bar widget", tags: ["bar"] },
+  ]).has("Bar"), false);
+});
+
+test("VPN catalog filtering requires exact category, VPN identity, or security-scoped description evidence", () => {
+  for (const plugin of [
+    { id: "example.client", name: "Client", category: "VPN", tags: [] },
+    { id: "example.airvpn", name: "AirVPN", tags: [] },
+    { id: "example.wireguard", name: "Tunnel", tags: [] },
+    { id: "antesmd.amneziawg", name: "Omazia", tags: ["system", "bar"], description: "Manage AmneziaWG tunnels." },
+    { id: "io.github.feilian", name: "飞连", tags: ["bar", "quickshell"], description: "Feilian VPN connection toggle." },
+    { id: "jwhall.omanodes", name: "Omanodes", tags: ["system"], description: "Manage ZeroTier networks." },
+    { id: "example.client", name: "Mullvad", tags: [] },
+    { id: "example.client", name: "Tailscale", tags: [] },
+    { id: "example.client", name: "ZeroTier", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["vpn"] },
+    { id: "local.warp", name: "Cloudflare WARP", tags: ["security"] },
+    { id: "io.github.justspica.omaguard", name: "Omaguard", tags: ["bar", "quickshell", "security"], description: "Mullvad VPN state, connection, and server switching." },
+    { id: "ecylmz.omarchy-tunnel", name: "Omarchy Tunnel", tags: ["bar", "quickshell", "security"], description: "A WireGuard VPN manager with connect controls and tunnel status." },
+    { id: "jaabell.sshuttledeck", name: "SSHuttleDeck", tags: ["bar", "security", "quickshell"], description: "An SSH VPN tunnel launcher." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), true);
+  }
+  for (const plugin of [
+    undefined,
+    {},
+    { id: "example.network", name: "Network Monitor", category: "vpn", tags: [] },
+    { id: "example.client", name: "Client", category: "VPN ", repo: "https://github.com/example/tailscale", tags: [] },
+    { id: "example.companion", name: "Companion", tags: [], description: "Connects over a Tailscale VPN." },
+    { id: "example.warp", name: "Warp terminal", tags: [] },
+    { id: "io.github.wireguard.clock", name: "Clock", tags: [] },
+    { id: "vpnvendor.notes", name: "Notes", tags: [] },
+    { id: "example.notvpn", name: "Client", tags: [] },
+    { id: "example.client", name: "NotVPN", tags: [] },
+    { id: "example.client", name: "Private connection", tags: ["VPN"] },
+    { id: "example.client", name: "Client", tags: ["security"], description: "A notavpn helper." },
+    { id: "io.github.shirak-semonian.myip", name: "MyIP", tags: ["bar", "security", "system"], description: "Public IP history with a VPN-leak alert." },
+    { id: { toString: null }, name: ["VPN"], tags: [], description: { value: "VPN connection" } },
+    { id: 7, name: 8, tags: [], description: 9 },
+    { id: "example.tunnel", name: "Tunnel", tags: "security", description: "VPN connection control." },
+    { id: "example.tunnel", name: "Tunnel", tags: ["Security"], description: "WireGuard connection control." },
+  ]) {
+    assert.equal(matchesVpnTaxonomy(plugin), false);
+  }
+
+  assert.doesNotThrow(() => catalogCategoryTotals([
+    { id: { toString: null }, name: ["VPN"], category: "Other", tags: [] },
+  ]));
+
+  const totals = catalogCategoryTotals([
+    { id: "example.vpn", category: "System", tags: [] },
+    { id: "example.wireguard", category: "System", tags: ["security"], description: "VPN control." },
+    { id: "example.tunnel", category: "Other", tags: ["security"], description: "WireGuard control." },
+    { id: "example.network", category: "Other", tags: [] },
+  ]);
+  assert.equal([...totals.keys()].filter((category) => category === "VPN").length, 1);
+  assert.equal(totals.get("VPN"), 3);
+  assert.equal(totals.get("System"), 2);
+  assert.equal(totals.get("Other"), 2);
+  assert.equal(catalogCategoryTotals([{ id: "example.network", category: "Other", tags: [] }]).has("VPN"), false);
+});
+
 test("entry modules and their shared dependency use one cache key", async () => {
   const root = new URL("../", import.meta.url);
   const files = {
@@ -1135,6 +1425,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
     plugin: await readFile(new URL("site/plugin.html", root), "utf8"),
     publish: await readFile(new URL("site/publish.html", root), "utf8"),
     develop: await readFile(new URL("site/develop.html", root), "utf8"),
+    explore: await readFile(new URL("site/explore.html", root), "utf8"),
     app: await readFile(new URL("site/assets/js/app.js", root), "utf8"),
     style: await readFile(new URL("site/assets/css/style.css", root), "utf8"),
     engagementFont: await readFile(new URL("site/assets/fonts/engagement-icons.woff2", root)),
@@ -1142,9 +1433,12 @@ test("entry modules and their shared dependency use one cache key", async () => 
     engagementJs: await readFile(new URL("site/assets/js/engagement.js", root), "utf8"),
     sharedJs: await readFile(new URL("site/assets/js/shared.js", root), "utf8"),
     searchJs: await readFile(new URL("site/assets/js/search.js", root), "utf8"),
+    taxonomyJs: await readFile(new URL("site/assets/js/taxonomy.js", root), "utf8"),
     pluginJs: await readFile(new URL("site/assets/js/plugin.js", root), "utf8"),
     publishJs: await readFile(new URL("site/assets/js/publish.js", root), "utf8"),
     developJs: await readFile(new URL("site/assets/js/develop.js", root), "utf8"),
+    exploreJs: await readFile(new URL("site/assets/js/explore.js", root), "utf8"),
+    exploreSearchJs: await readFile(new URL("site/assets/js/explore-search.js", root), "utf8"),
     readme: await readFile(new URL("README.md", root), "utf8"),
     security: await readFile(new URL("SECURITY.md", root), "utf8"),
     license: await readFile(new URL("LICENSE", root), "utf8"),
@@ -1161,37 +1455,51 @@ test("entry modules and their shared dependency use one cache key", async () => 
     files.app.match(/shared\.js\?v=([^"']+)/)?.[1],
     files.app.match(/engagement\.js\?v=([^"']+)/)?.[1],
     files.app.match(/search\.js\?v=([^"']+)/)?.[1],
+    files.app.match(/taxonomy\.js\?v=([^"']+)/)?.[1],
     files.pluginJs.match(/shared\.js\?v=([^"']+)/)?.[1],
     files.pluginJs.match(/engagement\.js\?v=([^"']+)/)?.[1],
     files.publishJs.match(/shared\.js\?v=([^"']+)/)?.[1],
     files.developJs.match(/shared\.js\?v=([^"']+)/)?.[1],
+    files.exploreJs.match(/shared\.js\?v=([^"']+)/)?.[1],
+    files.exploreSearchJs.match(/search\.js\?v=([^"']+)/)?.[1],
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20260827-01");
-  const styleKeys = [files.index, files.plugin, files.publish, files.develop]
+  assert.equal(keys[0], "20261105-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-01");
+  assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
+  const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20260820-21");
-  const faviconKeys = [files.index, files.plugin, files.publish, files.develop]
+  assert.equal(styleKeys[0], "20261105-01");
+  assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
+  const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
   assert.ok(faviconKeys.every(Boolean));
   assert.equal(new Set(faviconKeys).size, 1);
   assert.match(files.index, /<title>Browse Plugins \| Omarchy Plugins<\/title>/);
-  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/github\.com\/basecamp\/omarchy\/tree\/quattro"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.plugin, files.publish, files.develop, files.explore]) {
+    assert.doesNotMatch(page, /omarchy-brand-(?:action|logo)/);
+  }
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
   assert.equal((files.index.match(/href="develop\.html"/g) || []).length, 2);
-  assert.match(files.index, /class="market-nav"[\s\S]*href="#catalog" aria-label="Browse plugins" aria-current="page">Browse[\s\S]*href="develop\.html" aria-label="Develop a plugin">Develop[\s\S]*aria-label="Contribute a plugin">Contribute[\s\S]*href="publish\.html" aria-label="Publish a plugin">Publish/);
+  assert.equal((files.index.match(/href="explore\.html"/g) || []).length, 2);
+  assert.match(files.index, /class="market-hero-actions"[\s\S]*Browse plugins[\s\S]*href="develop\.html">Develop a plugin[\s\S]*Publish a plugin/);
+  assert.match(files.index, /class="mobile-bottom"[\s\S]*>Home<[\s\S]*>Browse<[\s\S]*href="explore\.html"[\s\S]*>Explore<[\s\S]*>Publish</);
+  for (const page of [files.plugin, files.develop, files.publish]) assert.match(page, /class="sidebar-link" href="explore\.html">Explore plugins<\/a>/);
+  assert.match(files.index, /class="market-nav"[\s\S]*href="#catalog" aria-label="Browse plugins" aria-current="page">Browse[\s\S]*href="explore\.html">Explore[\s\S]*href="develop\.html" aria-label="Develop a plugin">Develop[\s\S]*aria-label="Contribute a plugin">Contribute[\s\S]*href="publish\.html" aria-label="Publish a plugin">Publish/);
   assert.match(files.develop, /class="sidebar-link active" href="develop\.html" aria-current="page">Development guide<\/a>/);
   assert.match(files.develop, /<span class="status"><i class="status-dot" aria-hidden="true"><\/i>Stable<\/span>/);
   assert.match(files.develop, /<dt>Status<\/dt><dd><span class="status-label">Stable<\/span><\/dd>/);
   assert.doesNotMatch(files.develop, />Draft<|status(?:-label)? is-caution[^>]*>Stable/);
   assert.match(files.publish, /class="sidebar-link active" href="publish\.html" aria-current="page">Publishing guide<\/a>/);
-  assert.match(files.index, /id="catalog-pagination"[\s\S]*id="page-previous"[\s\S]*id="page-summary"[\s\S]*id="page-next"/);
+  assert.match(files.index, /id="catalog-pagination"[\s\S]*id="page-previous"[\s\S]*id="page-input"[\s\S]*id="page-total"[\s\S]*id="page-next"/);
   assert.match(files.index, /<\/nav>\s*<div id="catalog-view-toggle" class="catalog-view-toggle" hidden>\s*<button id="catalog-view-button" class="catalog-view-button" type="button" aria-controls="plugin-grid" aria-expanded="false">[\s\S]*id="catalog-view-label">Browse all plugins<[\s\S]*<span id="catalog-result-status" class="sr-only" role="status" aria-live="polite"><\/span>/);
   assert.doesNotMatch(files.index, /id="plugin-grid"[^>]*aria-live|id="page-announcement"|id="catalog-view-announcement"/);
   assert.match(files.index, /<div id="catalog-view-dock" class="catalog-view-dock" hidden>\s*<button id="catalog-view-dock-button" type="button">\s*<span id="catalog-view-dock-status">Showing all plugins<\/span>\s*<span class="catalog-view-dock-action">Show 9 per page/);
-  assert.match(files.index, /class="footer-status-link footer-maintainer"[\s\S]*<div class="footer-resource-links">[\s\S]*class="footer-status-link" href="https:\/\/github\.com\/HANCORE-linux\/omarchy-plugin-marketplace\/blob\/main\/LICENSE"[\s\S]*MIT LICENSE[\s\S]*class="footer-status-link" href="https:\/\/github\.com\/HANCORE-linux\/omarchy-plugin-marketplace"[\s\S]*GITHUB/);
+  assert.match(files.index, /class="footer-status-link footer-maintainer"[\s\S]*<div class="footer-resource-links">[\s\S]*class="footer-status-link" href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace\/blob\/main\/LICENSE"[\s\S]*MIT LICENSE[\s\S]*class="footer-status-link" href="https:\/\/github\.com\/omacom\/omarchy-plugin-marketplace"[\s\S]*GITHUB/);
   assert.match(files.readme, /## License\s+\[MIT License\]\(LICENSE\) · \[Marketplace and third-party rights notice\]\(NOTICE\.md\)\s*$/);
   assert.match(files.notice, /The \[MIT License\]\(LICENSE\) applies only to original source code and associated documentation authored for this marketplace/);
   assert.match(files.notice, /does not grant rights to plugin code, repositories, names, trademarks, logos, screenshots, previews, or other third-party content/);
@@ -1218,6 +1526,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.pluginJs, /catch\(\(reason\) => \{[\s\S]*if \(!engagementLoaded\) \{[\s\S]*hidePendingEngagement\(document\)/);
   assert.match(files.pluginJs, /recordPluginHeart\(plugin\.id\)[\s\S]*showToast\("Heart could not be sent\. Try again\."\)[\s\S]*showToast\("Heart sent\."\)/);
   assert.match(files.app, /recordPluginHeart\(pluginId\)[\s\S]*showToast\("Heart could not be sent\. Try again\."\)[\s\S]*showToast\("Heart sent\."\)/);
+  for (const source of [files.pluginJs, files.app]) {
+    assert.match(source, /if \(result\?\.reason === "repeat"\) showToast\("Heart already counted from your network today\."\);\s*else showToast\("Heart could not be sent\. Try again\."\);/);
+  }
   assert.match(files.sharedJs, /aria-disabled="true"[\s\S]*button\.disabled = false/);
   assert.doesNotMatch(files.sharedJs, /hearted \? " disabled"/);
   assert.match(files.rightsRequest, /name: Rights or asset removal request[\s\S]*id: material[\s\S]*id: basis[\s\S]*id: action[\s\S]*made in good faith/);
@@ -1231,18 +1542,21 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.thirdPartyNotices, /Lucide[\s\S]*ISC License[\s\S]*Copyright \(c\) 2026 Lucide Icons and Contributors[\s\S]*Permission to use, copy, modify, and\/or distribute/);
   assert.match(files.favicon, /Cable icon geometry from Lucide[\s\S]*Copyright \(c\) 2026 Lucide Icons and Contributors[\s\S]*Permission to use, copy, modify, and\/or distribute[\s\S]*THE SOFTWARE IS PROVIDED "AS IS"/);
   assert.match(files.index, />Search plugins, tags, text, or authors<\/label>/);
-  assert.match(files.index, /placeholder="Search plugins, tag:panel, text:bar, or @author…"/);
+  assert.match(files.index, /placeholder="Search plugins, tag:media, kind:panel, or @author…"/);
   assert.match(files.index, /<option value="updated">Recent activity<\/option>/);
   assert.match(files.index, /<option value="stars">Most starred<\/option>[\s\S]*<option value="views">Most viewed<\/option>[\s\S]*<option value="copies">Most copied<\/option>[\s\S]*<option value="hearts">Most hearts<\/option>/);
   assert.match(files.index, /<span class="sr-only">Sort or filter plugins<\/span>[\s\S]*<select id="sort-select">[\s\S]*<option value="name">A–Z<\/option>[\s\S]*<option value="verified">Verified<\/option>[\s\S]*<option value="unverified">Unverified<\/option>/);
   assert.doesNotMatch(files.index, /verification-bar|verification-select/);
-  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts"\]\)/);
+  assert.match(files.app, /const engagementSorts = new Set\(\["views", "copies", "hearts", "rank", "installRate"\]\)/);
+  assert.match(files.index, /<option value="hearts">Most hearts<\/option>\s*<option value="rank">Top ranked<\/option>\s*<option value="installRate">Install rate<\/option>/);
+  assert.match(files.app, /installRate: \(a, b\) => comparePluginInstallRate\(a, b, state\.engagement\)/);
+  assert.match(files.app, /rank: \(a, b\) => \(ranks\.get\(a\.id\)\?\.overall \|\| Infinity\) - \(ranks\.get\(b\.id\)\?\.overall \|\| Infinity\)/);
   assert.match(files.app, /views: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "views"\)/);
   assert.match(files.app, /copies: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "copies"\)/);
   assert.match(files.app, /hearts: \(a, b\) => comparePluginEngagement\(a, b, state\.engagement, "hearts"\)/);
   assert.match(files.app, /state\.engagementEnabled = false;[\s\S]*renderSortOptions\(\);[\s\S]*state\.sort !== previousSort/);
   assert.match(files.app, /data-card-plugin="\$\{escapeHtml\(plugin\.id\)\}"/);
-  assert.match(files.app, /state\.sort === sortMetric[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)/);
+  assert.match(files.app, /state\.sort === sortMetric \|\| state\.sort === "rank"[\s\S]*render\(\);[\s\S]*restorePluginCardFocus\(focusToken\)[\s\S]*\} else if \(splitView\(\)\) \{\s*refreshSplitRanks\(\);/);
   assert.match(files.app, /Engagement loaded\. Sorted plugins by/);
   assert.match(files.app, /is unavailable because engagement stats could not be loaded/);
   assert.match(files.index, /id="search-input"[^>]*role="combobox"[^>]*aria-autocomplete="both"/);
@@ -1251,7 +1565,10 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.index, /id="search-terms"[^>]*aria-label="Active search terms"/);
   assert.match(files.index, /id="search-suggestions"[\s\S]*role="listbox"/);
   assert.match(files.index, /id="search-fish-preview"/);
-  const securityReportUrl = "https://github.com/HANCORE-linux/omarchy-plugin-marketplace/security/advisories/new";
+  const securityReportUrl = "https://github.com/omacom/omarchy-plugin-marketplace/security/advisories/new";
+  const verificationRequestUrl = "https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=verify-plugin.yml";
+  assert.ok(files.pluginJs.includes(`const securityReportUrl = "${securityReportUrl}";`));
+  assert.ok(files.pluginJs.includes(`const verificationRequestUrl = "${verificationRequestUrl}";`));
   const longSecurityNoticeStart = "Community plugins are developed and maintained by independent third parties.";
   const expectedSecurityNotice = [
     "Community plugins are developed and maintained by independent third parties. They execute as unsandboxed code and may access or modify files, settings, credentials, network resources, or other parts of your system according to their implementation and permissions.",
@@ -1260,14 +1577,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
     "Nothing in this notice excludes or limits liability where exclusion or limitation is prohibited by applicable law.",
   ].join(" ");
   const securityNoticeStart = files.readme.indexOf("## Security Notice");
-  const disclaimerStart = files.readme.indexOf("## Disclaimer");
-  assert.ok(securityNoticeStart >= 0 && disclaimerStart > securityNoticeStart);
+  const creditsStart = files.readme.indexOf("## Credits");
+  assert.ok(securityNoticeStart >= 0 && creditsStart > securityNoticeStart);
   const securityNotice = files.readme
-    .slice(securityNoticeStart + "## Security Notice".length, disclaimerStart)
+    .slice(securityNoticeStart + "## Security Notice".length, creditsStart)
     .replace(/^>\s?/gm, "")
     .replace(/\s+/g, " ")
     .trim();
   assert.equal(securityNotice, expectedSecurityNotice);
+  assert.doesNotMatch(files.readme, /^## Disclaimer$|Omarchy Plugins is an independent community project and is not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./m);
   assert.doesNotMatch(files.readme, /report suspicious plugins ASAP/);
   assert.match(files.security, /private vulnerability reporting form[\s\S]*security\/advisories\/new[\s\S]*Do not disclose credentials, exploit details, personal information, or other sensitive material in a public issue[\s\S]*may suspend or remove a listing/);
   assert.match(files.plugin, /<title>Plugin Details \| Omarchy Plugins<\/title>/);
@@ -1454,7 +1772,52 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.develop, /omarchy plugin validate/);
   assert.match(files.develop, /qs log -p/);
   assert.doesNotMatch(files.develop, /<script[^>]+src=["']https?:/);
-  assert.match(files.index, /<h2 id="recent-title">RECENTLY ADDED<\/h2>/);
+  assert.match(files.index, /<h2 id="recent-title">JUST LANDED<\/h2>/);
+  assert.doesNotMatch(files.index, /RECENTLY ADDED|recent-latest-title/);
+  assert.match(files.index, /id="gems-section"[\s\S]*id="recent-section"/);
+  assert.match(files.index, /id="recent-summary" class="recent-summary"[\s\S]*id="recent-feed-toggle" class="recent-feed-toggle" type="button"[\s\S]*<div id="recent-latest" class="landed-rows" hidden>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>/);
+  assert.match(files.app, /function landedCard\(plugin, now, duplicate = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
+  assert.match(files.app, /const animated = items\.length > 6 && !window\.matchMedia\("\(prefers-reduced-motion: reduce\)"\)\.matches;/);
+  assert.match(files.index, /<section class="market-catalog" id="catalog"[^>]*aria-busy="true">[\s\S]*<span id="plugin-count">—<\/span>[\s\S]*<nav id="catalog-pagination"[^>]*hidden>/);
+  assert.match(files.app, /async function init\(\) \{\s*renderCatalogLoading\(\);[\s\S]*await loadCatalog\(\);[\s\S]*clearCatalogLoading\(\);[\s\S]*catch \(error\) \{\s*console\.error\(error\);\s*clearCatalogLoading\(\{ failed: true \}\);/);
+  assert.match(files.app, /function renderCatalogLoading\(\) \{[\s\S]*pagination\.hidden = true;\s*grid\.innerHTML = loadingPluginCard\.repeat\(pluginsPerPage\);/);
+  assert.match(files.app, /const loadingPluginCard = `\s*<article class="plugin-card is-loading" aria-hidden="true">/);
+  assert.match(files.style, /@media \(prefers-reduced-motion: reduce\) \{\s*\.skeleton, \.skeleton-line \{ animation: none;/);
+  assert.match(files.style, /@keyframes landed-drift \{ from \{ transform: translateX\(-50%\); \} to \{ transform: translateX\(0\); \} \}/);
+  assert.match(files.style, /\.landed-rows:hover \.landed-track,\s*\.landed-rows:focus-within \.landed-track,\s*\.landed-rows\.is-paused \.landed-track \{ animation-play-state: paused; \}/);
+  assert.doesNotMatch(files.app, /createRecentFeed|layoutPreview/);
+  assert.match(files.style, /\.recent-summary b \{ color: var\(--accent\);/);
+  assert.doesNotMatch(files.app, /recent-row-badges/);
+  assert.doesNotMatch(files.index, /id="recent-grid"/);
+  assert.doesNotMatch(files.app, /selectRecentHighlights/);
+  assert.match(files.index, /<section class="gems-section" id="gems-section" aria-labelledby="gems-title" hidden>[\s\S]*id="gems-sort-link" href="\?sort=installRate#catalog"[\s\S]*<div class="gems-nav" role="group" aria-label="Browse hidden gems" hidden>[\s\S]*data-gems-step="-1"[\s\S]*data-gems-step="1"[\s\S]*<div id="gems-grid" class="recent-grid gems-track" aria-label="Hidden gems"><\/div>/);
+  assert.match(files.app, /selectHiddenGems\(state\.plugins, state\.engagement, \{ limit: 9 \}\)[\s\S]*\.sort\(\(a, b\) => b\.rate - a\.rate\)[\s\S]*setupGemsCarousel\(grid\);/);
+  assert.match(files.style, /\.recent-grid\.gems-track \{\s*display: flex; overflow-x: auto;[^}]*scroll-snap-type: x mandatory;/);
+  assert.doesNotMatch(files.style, /\.recent-grid \.plugin-card:nth-child\(n\+3\)/);
+  assert.match(files.app, /grid\.innerHTML = gems\.map\([\s\S]*\}\)\.join\(""\);\s*bindCardActions\(grid\);\s*setupPreviewFlip\(grid\);/);
+  assert.match(files.app, /function cardPreviewBack\(plugin\)[\s\S]*pluginVersionLabel\(plugin\)[\s\S]*plugin\.license \|\| "Unknown", plugin\.author[\s\S]*class="plugin-preview-back" aria-hidden="true"/);
+  assert.match(files.app, /const previewFace = previewBack \? `<div class="plugin-preview-flip">\$\{preview\}\$\{previewBack\}<\/div>` : preview;/);
+  assert.match(files.app, /<span class="card-gem-since">Listed since \$\{escapeHtml\(formatDate\(plugin\.listedAt \|\| plugin\.addedAt\)\)\}<\/span>[\s\S]*<strong>\$\{gemTimes\}×<\/strong><span><span>as many install copies per view<\/span> <span>as most plugins<\/span><\/span>/);
+  assert.doesNotMatch(files.app, /aria-hidden="true" inert|likely to be installed/);
+  assert.match(files.style, /\.landed-rows:not\(\.is-animated\) \.landed-row \{ overflow-x: auto;/);
+  assert.match(files.style, /\.gems-section \.recent-summary \{ white-space: normal; \}/);
+  assert.match(files.style, /\.gems-track > \.plugin-card \{[^}]*min-width: 0;/);
+  assert.match(files.style, /\.plugin-card-bottom \.plugin-tags \{ min-width: 0; height: 28px; overflow: hidden; flex-wrap: wrap; row-gap: 8px; \}/);
+  assert.match(files.style, /@media \(max-width: 360px\) \{\s*\.plugin-card-bottom \.tag \{\s*display: block; min-width: 0; padding: 0 6px; overflow: hidden; flex: 0 1 auto; line-height: 26px; text-overflow: ellipsis;/);
+  assert.match(files.style, /\.market-section-head a \{ color: var\(--accent\); \}\n\.market-section-head a:hover \{ color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\); \}/);
+  assert.match(files.app, /const times = median \? rate \/ median : 0;[\s\S]*gemTimes: times >= 1\.1 \? times\.toFixed\(1\) : ""/);
+  assert.match(files.index, /<span id="gems-note" class="recent-summary">often copied · not among the most viewed<\/span>/);
+  assert.doesNotMatch(files.app, /installModule|gemCounts/);
+  assert.doesNotMatch(files.style, /card-install-rate/);
+  assert.match(files.style, /\.landed-rows::after \{\s*position: absolute; z-index: 2; top: 0; bottom: 0; width: 12px;/);
+  assert.match(files.style, /\.landed-rows::before \{\s*left: 0; border-left: 1px solid var\(--line-strong\);[\s\S]*light-dark\(rgb\(0 0 0 \/ \.14\), rgb\(0 0 0 \/ \.7\)\)/);
+  assert.doesNotMatch(files.style, /\.landed-row::/);
+  assert.doesNotMatch(files.style, /is-install-rate|card-install-meter/);
+  assert.match(files.app, /event\?\.pointerType === "mouse"/);
+  assert.match(files.app, /grid\.innerHTML = pagePlugins\.map\(\(plugin\) => pluginCard\(plugin, \{ showNew: true, previewBack: cardPreviewBack\(plugin\) \}\)\)\.join\(""\);\s*bindCardActions\(grid\);\s*setupPreviewFlip\(grid\);/);
+  assert.match(files.app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);/);
+  assert.match(files.style, /\.button\.publish-primary:hover \{\s*border-color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\);/);
+  assert.doesNotMatch(files.style, /#ff795b/);
   assert.match(files.publish, /<span>3 min read<\/span>/);
   assert.equal((files.publish.match(/class="docs-section"/g) || []).length, 3);
   assert.match(files.publish, /<details class="manifest-reference">/);
@@ -1476,19 +1839,29 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /updated: \(a, b\) => activityTime\(b\) - activityTime\(a\)/);
   assert.match(files.app, /function publisherLogin\(plugin\)/);
   assert.doesNotMatch(files.app, /function exactPublisher\(value\)|state\.author/);
-  assert.match(files.app, /function pluginSearchContext\(plugin\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\)/);
-  assert.match(files.app, /matchesDirectSearch\(term\.value, matchContext\)/);
+  assert.match(files.searchJs, /matchesDirectSearch\(term\.value, context\)/);
   assert.match(files.app, /const verificationFilters = new Set\(\["verified", "unverified"\]\)/);
   assert.match(files.app, /function searchScopePlugins\(\) \{[\s\S]*matchesCatalogFilter\(plugin\)[\s\S]*!verificationFilters\.has\(state\.sort\) \|\| matchesVerificationStatus\(plugin, state\.sort\)/);
   assert.match(files.app, /function completionMatches\(value\) \{[\s\S]*const query = foldSearchTerm\([\s\S]*const plugins = searchScopePlugins\(\)/);
   assert.match(files.app, /type: "kind",[\s\S]*label: `kind:\$\{key\}`,[\s\S]*matchValue: label,[\s\S]*detail: label/);
   assert.match(files.app, /type: "fulltext",[\s\S]*insertValue: searchTermInputValue\(fulltextTerm\),[\s\S]*detail: "broad search"/);
   assert.match(files.app, /completion\.type === "fulltext" \? "text" : completion\.type/);
-  assert.match(files.app, /"Search plugins, tag:panel, text:bar, or @author…"/);
+  assert.match(files.app, /"Search plugins, tag:media, kind:panel, or @author…"/);
   assert.match(files.app, /function filteredPlugins\(\) \{[\s\S]*searchScopePlugins\(\)\.filter\(\(plugin\) => pluginMatchesActiveSearch\(plugin\)\)/);
   assert.match(files.app, /const taxonomyFilterTags = \["ai", "games", "security"\]/);
-  assert.match(files.app, /value: `tag:\$\{tag\}`/);
+  assert.match(files.app, /const taxonomyCatalogFilters = \[\s*\["VPN", matchesVpnTaxonomy\],\s*\["Bar", matchesBarTaxonomy\],\s*\]/);
+  assert.match(files.app, /if \(filter === "Kids"\) return matchesKidsTaxonomy\(plugin\)/);
+  assert.match(files.app, /for \(const \[value, matches\] of taxonomyCatalogFilters\) \{\s*if \(filter === value\) return matches\(plugin\);/);
+  assert.match(files.app, /const categoryTotals = catalogCategoryTotals\(plugins\)[\s\S]*\.filter\(\(\[value\]\) => !taxonomyCatalogFilterNames\.has\(value\)\)/);
+  assert.match(files.app, /const taxonomyFilters = taxonomyCatalogFilters[\s\S]*total: plugins\.filter\(matches\)\.length[\s\S]*\.\.\.tagFilters,\s*\.\.\.taxonomyFilters,/);
+  assert.match(files.taxonomyJs, /export function matchesVpnTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /export function matchesBarTaxonomy\(plugin\)/);
+  assert.match(files.taxonomyJs, /tags\.includes\("vpn"\)/);
+  assert.match(files.taxonomyJs, /export function catalogCategoryTotals\(plugins\)/);
+  assert.match(files.sharedJs, /vpn: "VPN"/);
+  assert.doesNotMatch(files.app, /taxonomyFilterTags = \[[^\]]*"kids"/);
   assert.match(files.app, /return labels\.length \? labels : \[category \|\| "System"\]/);
   assert.match(files.sharedJs, /function matchesVerificationStatus\(plugin, status\) \{[\s\S]*!plugin\?\.builtIn[\s\S]*plugin\?\.repositoryLayout !== "suite"[\s\S]*plugin\?\.verificationStatus === status/);
   assert.match(files.searchJs, /function fuzzyScore\(query, candidate\)/);
@@ -1520,9 +1893,13 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.app, /tabindex="-1" aria-selected="false"/);
   assert.match(files.app, /\$\{visible\.length\} of \$\{categoryPlugins\.length\}/);
   assert.match(files.app, /const hasResultFilter = hasSearch \|\| verificationFilters\.has\(state\.sort\);[\s\S]*count\.textContent = hasResultFilter/);
-  assert.match(files.app, /state\.terms\.some\(\(term\) =>[\s\S]*matchesCommittedSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /typedDraftTerms\.some\(\(term\) =>[\s\S]*matchesDraftSearchTerm\(term, matchContext\)/);
-  assert.match(files.app, /return matchesTerm \|\| matchesTextDraft \|\| matchesTypedDraft/);
+  assert.match(files.app, /function pluginMatchesActiveSearch\(plugin\) \{\s*return matchesSearchSelection\(pluginSearchContext\(plugin\), \{\s*terms: state\.terms,\s*draftTerms: parseSearchDraft\(state\.query\),/);
+  assert.match(files.app, /function publisherLogin\(plugin\) \{\s*return repositoryPublisher\(plugin\?\.repo\);/);
+  assert.doesNotMatch(files.app, /state\.terms\.some\(|function pluginSearchText\(|function searchablePluginId\(/);
+  assert.match(files.exploreSearchJs, /return \(node\) => matchesSearchSelection\(pluginSearchContext\(node\), \{ draftTerms \}\)/);
+  assert.doesNotMatch(files.exploreSearchJs, /\.some\(|\|\| matchesTypedDraft/);
+  assert.match(files.searchJs, /export function matchesSearchSelection\(context, \{ terms = \[\], draftTerms = \[\] \} = \{\}\)/);
+  assert.match(files.searchJs, /export function pluginSearchContext\(plugin\)/);
   assert.match(files.app, /const action = searchKeyAction\(\{/);
   assert.doesNotMatch(files.app, /\["Tab", "Enter", "ArrowRight"\]/);
   assert.match(files.app, /data-author=/);
@@ -1585,7 +1962,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(sharedJs, /link\.dataset\.sectionIds[\s\S]*sectionIds\.includes\(id\)/);
   assert.match(sharedJs, /window\.scrollY \+ Math\.min\(markerMax, window\.innerHeight \* markerRatio\)/);
   assert.match(sharedJs, /section\.getBoundingClientRect\(\)\.top \+ window\.scrollY/);
-  assert.match(sharedJs, /\$\{current\} theme active; switch to \$\{next\} theme/);
+  assert.match(sharedJs, /`Choose color theme; current \$\{current\.name\}`/);
+  assert.match(sharedJs, /applyTheme\(readStoredTheme\(\), \{ persist: false \}\)/);
   assert.match(sharedJs, /Copy failed\. Select and copy manually\./);
   assert.match(files.pluginJs, /title: "Catalog unavailable"/);
   assert.match(files.pluginJs, /title: "Plugin not found"/);
@@ -1671,6 +2049,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(sharedJs, /plugin-heart\$\{detail \? " detail-heart" : " has-control-tooltip"\}[\s\S]*data-heart-tooltip/);
   assert.match(sharedJs, /button\.querySelector\("\[data-heart-tooltip\]"\)/);
   assert.match(sharedJs, /export function positionTooltip\(host, tooltip\)[\s\S]*documentElement\.clientWidth[\s\S]*const centered = \(hostRect\.width - tooltipWidth\) \/ 2[\s\S]*Math\.round/);
+  assert.match(sharedJs, /function tooltipBounds\(host, tooltipWidth, viewportWidth\)[\s\S]*overflowX !== "auto" && overflowX !== "scroll"[\s\S]*bounds\.right - bounds\.left >= tooltipWidth \? bounds : viewport;/);
+  assert.match(sharedJs, /const minimum = bounds\.left - originLeft;\s*const maximum = bounds\.right - originLeft - tooltipWidth;/);
   assert.match(sharedJs, /tooltip\.textContent = action;\s*positionControlTooltip\(button\);/);
   assert.match(sharedJs, /event\.key !== "Escape"[\s\S]*classList\.add\("is-tooltip-dismissed"\)/);
   assert.match(sharedJs, /defaultView\?\.addEventListener\("resize"[\s\S]*forEach\(positionControlTooltip\)/);
@@ -1721,7 +2101,8 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.pagination-direction \{[\s\S]*color: var\(--muted\)/);
   assert.match(styles, /\.catalog-view-toggle \{ display: flex; margin-top: 16px; justify-content: center; \}/);
   assert.match(styles, /\.catalog-view-button \{[\s\S]*min-height: 44px;[\s\S]*font-family: var\(--mono\);[\s\S]*text-transform: uppercase/);
-  assert.match(styles, /\.catalog-view-button:hover, \.catalog-view-button:focus-visible \{ color: var\(--accent\); \}/);
+  assert.match(styles, /\.catalog-view-button \{[^}]*color: var\(--accent\);/);
+  assert.match(styles, /\.catalog-view-button:hover, \.catalog-view-button:focus-visible \{ color: color-mix\(in srgb, var\(--accent\) 82%, var\(--text\)\); \}/);
   assert.match(styles, /\.catalog-view-dock \{[\s\S]*position: fixed; z-index: 55;[\s\S]*bottom: calc\(20px \+ env\(safe-area-inset-bottom\)\)/);
   assert.match(styles, /\.catalog-view-dock button \{[\s\S]*min-height: 48px;[\s\S]*background: var\(--panel-2\);[\s\S]*text-transform: uppercase/);
   assert.match(styles, /\.catalog-show-all \.toast \{ bottom: calc\(88px \+ env\(safe-area-inset-bottom\)\); \}/);
@@ -1754,10 +2135,206 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(styles, /\.plugin-author button \{[\s\S]*z-index: 3/);
   assert.match(styles, /\.plugin-author button \{[\s\S]*min-height: 24px/);
   assert.match(styles, /\.plugin-author button:hover, \.plugin-author button:focus-visible \{ color: var\(--accent\); \}/);
-  assert.match(files.index, /class="footer-status"/);
-  assert.match(files.index, /HANCORE[\s\S]*OMARCHY PLUGIN MARKETPLACE[\s\S]*Independent community project\.[\s\S]*Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\.[\s\S]*GITHUB/);
+  assert.match(files.index, /Browse community-built plugins for <a href="https:\/\/omarchy\.org\/"[^>]*>Omarchy Quattro<\/a>/);
+  for (const page of [files.index, files.explore]) {
+    assert.match(page, /class="footer-status"/);
+    assert.match(page, /HANCORE[\s\S]*<a class="footer-wordmark-link" href="https:\/\/omarchy\.org\/"[^>]*aria-label="Visit Omarchy">[\s\S]*<img src="assets\/img\/omarchy-wordmark\.png" alt="" width="656" height="192">\s*<\/a>[\s\S]*GITHUB/);
+    assert.doesNotMatch(page, /omarchy-footer(?:-still)?\.svg/);
+    assert.equal((page.match(/<span>PLUGIN MARKETPLACE<\/span>/g) || []).length, 1);
+  }
+  assert.doesNotMatch(styles, /omarchy-brand-(?:action|logo)/);
+  assert.match(styles, /\.footer-wordmark-link \{ display: block; border: 0; background: transparent; line-height: 0; \}/);
+  assert.match(styles, /\.footer-wordmark-link img \{[\s\S]*width: 82px; height: 24px;[\s\S]*image-rendering: pixelated;/);
+  assert.match(styles, /\.footer-wordmark-link:hover img \{ filter: brightness\(1\.15\); \}/);
+  assert.doesNotMatch(styles, /\.footer-wordmark-link[^}]*padding|\.footer-wordmark-link:hover[^}]*background/);
+  assert.doesNotMatch(`${files.app}${files.exploreJs}${styles}`, /FooterWordmarkDecrypt|footer-wordmark-decrypt|is-decrypting/);
+  assert.match(styles, /\.footer-status::before \{[\s\S]*background: linear-gradient/);
+  assert.match(styles, /\.footer-status::after \{[\s\S]*background: var\(--accent\); content: "";/);
+  assert.doesNotMatch(files.index, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
+  assert.doesNotMatch(files.explore, /Independent community project\. Not affiliated with, sponsored by, or endorsed by Omarchy or 37signals\./);
   assert.doesNotMatch(files.index, /footer-tech-canvas|footer-project-canvas/);
   assert.doesNotMatch(files.app, /setupHancoreAsciiHover|setupFooterAsciiField/);
+});
+
+test("site themes stay consistent between the theme list, stylesheet, previews, and boot script", async () => {
+  const root = new URL("../", import.meta.url);
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const ids = siteThemes.map((theme) => theme.id);
+  assert.deepEqual(ids.slice(0, 2), ["dark", "light"]);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.equal(siteThemes.filter((theme) => theme.light).length, 6);
+  for (const theme of siteThemes) {
+    assert.match(theme.id, /^[a-z0-9-]{1,32}$/);
+    assert.match(theme.bg, /^#[0-9a-f]{6}$/);
+    assert.match(theme.accent, /^#[0-9a-f]{6}$/);
+    if (theme.builtin) {
+      assert.equal(themePreviewPath(theme), "");
+      continue;
+    }
+    const block = styles.match(new RegExp(`:root\\[data-theme="${theme.id}"\\] \\{([\\s\\S]*?)\\n\\}`))?.[1];
+    assert.ok(block, theme.id);
+    assert.match(block, new RegExp(`color-scheme: ${theme.light ? "light" : "dark"};`));
+    assert.match(block, new RegExp(`--bg: ${theme.bg};`));
+    assert.match(block, new RegExp(`--accent: ${theme.accent};`));
+    assert.match(block, /--heading: #[0-9a-f]{6};/);
+    await readFile(new URL(`site/${themePreviewPath(theme)}`, root));
+  }
+  assert.equal(isThemeId("nord"), true);
+  assert.equal(isThemeId("light"), true);
+  assert.equal(isThemeId("Nord"), false);
+  assert.equal(isThemeId(""), false);
+  assert.equal(readStoredTheme({ getItem: () => "gruvbox" }), "gruvbox");
+  assert.equal(readStoredTheme({ getItem: () => "bogus" }), defaultThemeId);
+  assert.equal(readStoredTheme({ getItem: () => { throw new Error("blocked"); } }), defaultThemeId);
+  const root2 = { dataset: {}, ownerDocument: { querySelector: () => null } };
+  const stored = new Map();
+  const storage = { setItem: (key, value) => stored.set(key, value), getItem: (key) => stored.get(key) };
+  assert.equal(applyTheme("kanagawa", { root: root2, storage }).id, "kanagawa");
+  assert.equal(root2.dataset.theme, "kanagawa");
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  assert.equal(applyTheme("unknown", { root: root2, storage, persist: false }).id, defaultThemeId);
+  assert.equal(stored.get("omarchy-theme"), "kanagawa");
+  for (const page of ["index", "explore", "plugin", "develop", "publish"]) {
+    const html = await readFile(new URL(`site/${page}.html`, root), "utf8");
+    assert.match(html, /\/\^\[a-z0-9-\]\{1,32\}\$\/\.test\(t\|\|""\)\?t:"dark"/);
+    assert.match(html, /class="square-action theme-toggle" type="button" aria-label="Choose color theme"[\s\S]*class="theme-toggle-label">Theme</);
+    assert.doesNotMatch(html, /sun-icon|moon-icon/);
+  }
+  assert.match(styles, /\.theme-picker \{[\s\S]*position: fixed;[\s\S]*width: min\(1104px, calc\(100% - 40px\)\)/);
+  assert.doesNotMatch(styles, /\.sun-icon|\.moon-icon|#424247|#09090b|color: #eee;|color: #efeff0;|color: #f0f0f1;/);
+});
+
+test("theme picker layout expands the selected slice and stacks the rest", () => {
+  const layout = pickerLayout(24, 5, 1000);
+  assert.equal(layout.items.length, 24);
+  assert.equal(layout.height, Math.round(220 * 0.62));
+  const selected = layout.items[5];
+  assert.equal(selected.width, 220);
+  assert.equal(selected.top, 0);
+  assert.equal(selected.zIndex, 100);
+  assert.ok(layout.items[4].width < selected.width);
+  assert.ok(layout.items[4].left < selected.left);
+  assert.ok(layout.items[6].left > selected.left);
+  assert.ok(layout.items[6].left < selected.left + selected.width);
+  assert.ok(layout.items.every((item, index) => index === 5 || item.zIndex < 100));
+  assert.equal(layout.items.filter((item) => item.hidden).length, 0);
+  assert.equal(pickerLayout(60, 0, 1000).items.filter((item) => item.hidden).length, 39);
+});
+
+test("engagement ranks combine hearts, copies, and views into one standing", () => {
+  const plugins = [{ id: "a", stars: 40 }, { id: "b", stars: 5 }, { id: "c", stars: 40 }, { id: "d" }, { id: "e", stars: 2 }];
+  const stats = {
+    a: { hearts: 10, copies: 5, views: 100 },
+    b: { hearts: 10, copies: 50, views: 10 },
+    c: { hearts: 1, copies: 1, views: 1000 },
+  };
+  const ranks = engagementRanks(plugins, stats);
+  assert.deepEqual(ranks.get("a"), { total: 4, hearts: 1, copies: 2, views: 2, stars: 1, overall: 1 });
+  assert.deepEqual(ranks.get("b"), { total: 4, hearts: 1, copies: 1, views: 3, stars: 3, overall: 2 });
+  assert.deepEqual(ranks.get("c"), { total: 4, hearts: 3, copies: 3, views: 1, stars: 1, overall: 2 });
+  assert.deepEqual(ranks.get("d"), { total: 4, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(ranks.get("e"), { total: 4, hearts: 4, copies: 4, views: 4, stars: 4, overall: 4 });
+  assert.equal(engagementRanks([], {}).size, 0);
+  assert.deepEqual(engagementRanks([{ id: "x" }], {}).get("x"), { total: 0, hearts: null, copies: null, views: null, stars: null, overall: null });
+  assert.deepEqual(engagementRanks([{ id: "x" }, { id: "y" }], { y: { views: 1 } }).get("y"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
+  assert.deepEqual(engagementRanks([{ id: "x", stars: "12" }], {}).get("x"), { total: 1, hearts: 1, copies: 1, views: 1, stars: 1, overall: 1 });
+  assert.equal(splitViewPageSize(734), 15);
+  assert.equal(splitViewPageSize(500), 9);
+  assert.equal(splitViewPageSize(100), 3);
+  assert.equal(splitViewPageSize(0), 15);
+  assert.equal(readCatalogView({ getItem: () => "split" }), "split");
+  assert.equal(readCatalogView({ getItem: () => "other" }), "cards");
+  assert.equal(readCatalogView({ getItem: () => { throw new Error("blocked"); } }), "cards");
+});
+
+test("split view keeps the original card and adds tiles with an overall rank", async () => {
+  const root = new URL("../", import.meta.url);
+  const html = await readFile(new URL("site/index.html", root), "utf8");
+  const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
+  const styles = await readFile(new URL("site/assets/css/style.css", root), "utf8");
+  const searchJs = await readFile(new URL("site/assets/js/search.js", root), "utf8");
+  assert.match(html, /class="catalog-heading-side">\s*<div id="catalog-view-mode"[\s\S]*data-view="cards" aria-pressed="true"[\s\S]*data-view="split" aria-pressed="false"[\s\S]*id="plugin-count"/);
+  assert.match(html, /<div class="catalog-controls">\s*<div class="market-search">/);
+  assert.doesNotMatch(html.slice(html.indexOf('class="catalog-controls"'), html.indexOf('class="source-bar"')), /catalog-view-mode/);
+  assert.match(html, /id="split-filters"[\s\S]*id="split-grid"[\s\S]*class="split-pager">\s*<span class="split-pager-start">\s*<button id="split-page-previous"[\s\S]*id="split-page-summary"><label class="split-page-jump">Page <input id="split-page-input" type="number" inputmode="numeric" min="1" value="1" aria-label="Go to page"><\/label> <span id="split-page-total"><\/span><\/b>[\s\S]*id="split-page-next"/);
+  assert.match(app, /splitPageInput\.value = String\(pageState\.page\);\s*splitPageInput\.max = String\(pageState\.totalPages\);\s*splitPageTotal\.textContent = `of \$\{pageState\.totalPages\} · \$\{pageSize\(\)\} per page`;/);
+  assert.match(app, /const jumpToPage = \(\) => \{[\s\S]*Math\.min\(totalPages, Math\.max\(1, requested\)\)[\s\S]*splitFocusPending = true;\s*render\(\{ historyMode: "push", announce: true \}\);/);
+  assert.match(app, /splitPageInput\.addEventListener\("change", jumpToPage\)/);
+  assert.match(app, /const rankLine = state\.engagementEnabled && !plugin\.builtIn\s*\? `<span class="card-rank" data-card-rank="\$\{escapeHtml\(plugin\.id\)\}"/);
+  assert.match(app, /function cardRankLabel\(plugin\) \{[\s\S]*return rank\?\.overall \? `#\$\{rank\.overall\}` : "";/);
+  assert.match(app, /function refreshCardRanks\(root = document\) \{[\s\S]*element\.hidden = !label;/);
+  assert.match(app, /const social = stars \|\| heart \|\| rankLine \? `<div class="card-social">\$\{stars\}\$\{heart\}\$\{rankLine\}<\/div>` : "";/);
+  assert.match(styles, /\.card-rank \{\s*flex-basis: 100%; color: var\(--faint\);/);
+  assert.doesNotMatch(styles, /\.market-plugin-grid \.card-rank/);
+  assert.match(app, /if \(event\.key === " "\) \{\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option"/);
+  assert.doesNotMatch(app, /has-control-tooltip\$\{selected|split-tile[^\n]*title="|setupControlTooltips\(splitGrid\)/);
+  assert.match(html, /<span class="split-pager-start">\s*<button id="split-page-previous" type="button">← Previous<\/button>\s*<span class="split-hint" aria-hidden="true">Ctrl\+Enter or<br>Ctrl\+click: new tab<\/span>\s*<\/span>/);
+  assert.match(styles, /\.split-hint \{ position: absolute; top: 50%; left: 100%; margin-left: 14px;[^}]*opacity: 0;/);
+  assert.match(styles, /\.split-panel:has\(\.split-tile:hover\) \.split-hint, \.split-panel:has\(\.split-tile:focus-visible\) \.split-hint \{ opacity: 1; \}/);
+  assert.match(styles, /@media \(max-width: 760px\) \{ \.split-hint \{ display: none; \} \}/);
+  assert.match(app, /if \(splitView\(\)\) splitFilters\.append\(categoriesRoot\);\s*else categoryBar\.insertBefore\(categoriesRoot, clearFilters\)/);
+  assert.match(app, /pagination\.hidden = controls\.paginationHidden \|\| splitView\(\)/);
+  assert.match(app, /splitPagePrevious\.addEventListener\("click", \(\) => previousPage\.click\(\)\)/);
+  assert.match(styles, /\.catalog-controls \{ display: grid; border: 1px solid var\(--line\); grid-template-columns: minmax\(0, 1fr\) 180px; \}/);
+  assert.match(styles, /\.catalog-split-view \.category-bar \{ display: none; \}/);
+  assert.match(html, /id="catalog-split" class="catalog-split" hidden>[\s\S]*id="split-grid"[\s\S]*id="split-card" class="plugin-grid market-plugin-grid split-card"[\s\S]*id="split-stats-body"/);
+  assert.match(app, /function pageSize\(\) \{\s*return splitView\(\) \? splitViewPageSize\(splitGrid\.clientWidth, \{ rows: splitViewRows \}\) : pluginsPerPage;/);
+  assert.match(app, /const pageState = paginationState\(visible\.length, state\.page, pageSize\(\)\)/);
+  assert.match(app, /splitCard\.innerHTML = pluginCard\(plugin, \{ showNew: true \}\);\s*bindCardActions\(splitCard\)/);
+  assert.match(app, /function rankedPlugins\(\) \{\s*return state\.plugins\.filter\(\(plugin\) => \(plugin\.sourceType \|\| "community"\) === "community"\);/);
+  assert.match(app, /function catalogRanks\(\) \{\s*const key = `\$\{state\.plugins\.length\}:\$\{engagementVersion\}`;[\s\S]*engagementRanks\(rankedPlugins\(\), state\.engagement\)/);
+  assert.doesNotMatch(app, /engagementRanks\(state\.plugins|engagementRanks\(sourcePlugins/);
+  assert.match(app, /splitStatsTotal\.textContent = `of \$\{rankedPlugins\(\)\.length\} community plugins`/);
+  assert.match(styles, /\.split-grid::after \{[\s\S]*mask: url\("\.\.\/img\/omarchy-wordmark\.svg"\) center \/ 80% auto no-repeat/);
+  assert.match(styles, /\.split-grid \{[\s\S]*gap: 1px;[\s\S]*overflow: hidden; background: var\(--panel\);/);
+  assert.doesNotMatch(styles, /\.split-grid \{[^}]*margin-right: -1px/);
+  assert.match(styles, /\.split-tile \{[^}]*box-shadow: 1px 1px 0 0 var\(--line\);/);
+  await readFile(new URL("site/assets/img/omarchy-wordmark.svg", root));
+  assert.match(styles, /\.split-tile \{\s*position: relative; z-index: 1;/);
+  assert.match(app, /Built-in plugins are not ranked\./);
+  assert.match(app, /const ranks = catalogRanks\(\);/);
+  assert.match(app, /function filteredPlugins\(\) \{\s*const key = JSON\.stringify\(\[[\s\S]*engagementVersion,\s*\]\);\s*if \(filteredCache\.key === key\) return filteredCache\.value;/);
+  assert.match(app, /render\(\);\s*scheduleSearchSuggestions\(\);\s*\}\);/);
+  assert.match(app, /if \(event\.isComposing\) return;\s*if \(\["Enter", "ArrowDown", "ArrowUp", "ArrowRight", "Tab", "Escape"\]\.includes\(event\.key\)\) flushSearchSuggestions\(\);/);
+  assert.match(app, /splitGrid\.classList\.toggle\("is-full", pagePlugins\.length >= pageSize\(\)\)/);
+  assert.match(styles, /\.split-grid\.is-full::after \{ display: none; \}/);
+  assert.doesNotMatch(styles, /nth-child\(15\)/);
+  assert.match(app, /if \(!card \|\| !\(grid\.contains\(card\) \|\| splitCard\.contains\(card\)\)\) return null;/);
+  assert.match(app, /\[\.\.\.grid\.querySelectorAll\("\[data-card-plugin\]"\), \.\.\.splitCard\.querySelectorAll\("\[data-card-plugin\]"\)\]/);
+  assert.match(app, /function refreshSplitRanks\(\) \{[\s\S]*label\.textContent = rank\?\.overall \? `#\$\{rank\.overall\}` : "—";[\s\S]*renderSplitStats\(plugin\)/);
+  assert.match(searchJs, /const contextCache = new WeakMap\(\);/);
+  assert.doesNotMatch(app, /engagementRanks\(sourcePlugins\(\)/);
+  assert.match(app, /const rankLabel = rank\?\.overall \? `#\$\{rank\.overall\}` : "—"/);
+  assert.match(app, /Loading engagement statistics…/);
+  assert.match(app, /<div class="split-stat-rank">Unranked<small>\$\{total \? `of \$\{total\}` : "no activity yet"\}<\/small><\/div>/);
+  assert.match(app, /hidePendingEngagement\(document\);\s*if \(splitView\(\)\) render\(\{ historyMode: "none" \}\);/);
+  assert.match(app, /selectTile\(tiles\[Math\.max\(0, Math\.min\(tiles\.length - 1, index\)\)\], \{ focus: true, force: true \}\)/);
+  assert.match(app, /\["hearts", "hearts", '<span class="social-glyph heart-glyph"[\s\S]*\["copies", "install copies", '<span class="copy-icon engagement-copy-icon"[\s\S]*\["views", "views", '<span class="engagement-glyph"[\s\S]*\["stars", "repository stars", '<svg class="social-glyph star-glyph"/);
+  assert.match(app, /metric === "stars" \? plugin\.stars \|\| 0 : stats\[metric\]/);
+  assert.match(app, /viewToggle\.hidden = controls\.browseAllHidden \|\| splitView\(\)/);
+  assert.match(app, /splitGrid\.onkeydown = \(event\) => \{[\s\S]*ArrowRight: index \+ 1,[\s\S]*ArrowDown: index \+ columns,[\s\S]*Home: 0,[\s\S]*End: tiles\.length - 1,[\s\S]*event\.key === "PageDown" \|\| event\.key === "PageUp"[\s\S]*selectTile\(next, \{ focus: true \}\)/);
+  assert.match(app, /other\.tabIndex = active \? 0 : -1;/);
+  assert.match(app, /if \(document\.activeElement !== splitGrid\) return;[\s\S]*selectTile\(tiles\[index\], \{ focus: true \}\)/);
+  assert.match(app, /splitFocusPending = splitView\(\);\s*render\(\{ announce: true \}\)/);
+  assert.match(app, /if \(target > tiles\.length - 1 && !nextPage\.disabled && event\.key !== "End"\) \{\s*splitFocusIndex = event\.key === "ArrowDown" \? index % columns : 0;\s*nextPage\.click\(\)/);
+  assert.match(app, /if \(target < 0 && !previousPage\.disabled && event\.key !== "Home"\) \{\s*splitFocusIndex = event\.key === "ArrowUp" \? -columns \+ \(index % columns\) : -1;\s*previousPage\.click\(\)/);
+  assert.match(app, /const index = splitFocusIndex < 0 \? tiles\.length \+ splitFocusIndex : splitFocusIndex;/);
+  assert.match(app, /if \(!splitView\(\) \|\| splitRoot\.hidden \|\| event\.altKey[\s\S]*\["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"\]\.includes\(event\.key\)[\s\S]*CSS\.escape\(state\.selected\)[\s\S]*tile\.focus\(\{ preventScroll: true \}\)/);
+  assert.doesNotMatch(styles, /\.catalog-view-mode button\[aria-pressed="true"\] \{ border-left-color/);
+  assert.match(html, /role="listbox" aria-label="Select a plugin\. Arrow keys move the selection, Page Up and Page Down change the page, Control Enter opens the plugin page in a background tab"/);
+  assert.match(app, /<a class="split-tile\$\{selected \? " is-selected" : ""\}" role="option" aria-selected="\$\{selected\}" data-split-plugin="\$\{escapeHtml\(plugin\.id\)\}" href="plugin\.html\?id=\$\{encodeURIComponent\(plugin\.id\)\}" target="_blank" rel="noopener"/);
+  assert.match(app, /if \(event\.key === "Enter"\) \{[\s\S]*if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey\) return;\s*event\.preventDefault\(\);\s*selectTile\(tiles\[index\], \{ focus: true \}\);\s*return;/);
+  assert.match(app, /if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey \|\| event\.button !== 0\) \{\s*selectTile\(tile\);\s*return;\s*\}\s*event\.preventDefault\(\);\s*selectTile\(tile, \{ focus: true \}\);/);
+  assert.doesNotMatch(app, /window\.open\(|openPluginDetail/);
+  assert.match(app, /setCatalogView\(readCatalogView\(\)\)/);
+  assert.match(html, /<button id="split-top-rank" class="split-top-rank" type="button" aria-pressed="false" hidden>Top rank<\/button>/);
+  assert.match(app, /splitTopRank\.hidden = !state\.engagementEnabled;\s*splitTopRank\.setAttribute\("aria-pressed", String\(state\.sort === "rank"\)\)/);
+  assert.match(app, /state\.sort = state\.sort === "rank" \? sourceDefaultSort\(\) : "rank";/);
+  assert.match(app, /if \(splitView\(\) && !engagementSorts\.has\(state\.sort\)\) render\(\{ historyMode: "none" \}\)/);
+  assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);
+  assert.match(styles, /\.split-grid \{[^}]*minmax\(140px, 1fr\)/);
+  assert.match(styles, /@media \(max-width: 1100px\) \{\s*\.catalog-split \{ grid-template-columns: minmax\(0, 1fr\); \}/);
 });
 
 test("theme text and accent surfaces meet WCAG AA contrast", async () => {
@@ -1768,7 +2345,11 @@ test("theme text and accent surfaces meet WCAG AA contrast", async () => {
   const darkBlock = styles.match(/^:root \{([\s\S]*?)\n\}/)?.[1] || "";
   const lightBlock = styles.match(/:root\[data-theme="light"\] \{([\s\S]*?)\n\}/)?.[1] || "";
   const value = (block, name) => block.match(new RegExp(`--${name}:\\s*(#[a-f0-9]+);`, "i"))?.[1];
-  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock]]) {
+  const omarchyBlocks = [...styles.matchAll(/:root\[data-theme="([a-z0-9-]+)"\] \{([\s\S]*?)\n\}/g)]
+    .filter(([, id]) => id !== "light")
+    .map(([, id, block]) => [id, block]);
+  assert.equal(omarchyBlocks.length, siteThemes.length - 2);
+  for (const [theme, block] of [["dark", darkBlock], ["light", lightBlock], ...omarchyBlocks]) {
     const themeValue = (name) => value(block, name);
     const background = themeValue("bg");
     const panel = themeValue("panel");
@@ -1900,6 +2481,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.equal((approve.match(/MANUAL_SETUP:/g) || []).length, 3);
   assert.match(approvalScript, /submission_repository=\$\{inspection\.repository\}/);
   assert.match(approvalScript, /approved_commit=\$\{inspection\.commitSha\}/);
+  assert.match(approvalScript, /approval_triggered_at=\$\{approvalTriggeredAt\}/);
+  assert.match(approve, /approval_triggered_at: \$\{\{ steps\.approval\.outputs\.approval_triggered_at \}\}/);
 
   assert.match(
     approve,
@@ -1924,6 +2507,7 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
     assert.match(workflow, /name: \$\{\{ needs\.(?:approve|refresh)\.outputs\.publication_artifact_name \}\}/);
     assert.match(workflow, /artifact_name: \$\{\{ needs\.(?:approve|refresh)\.outputs\.pages_artifact_name \}\}/);
     assert.match(workflow, /retention-days: 7/);
+    assert.match(workflow, /fetch-depth: 0/);
     assert.match(workflow, /persist-credentials: false/);
   }
   for (const workflow of [approve, refresh, deploy]) {
@@ -1939,11 +2523,24 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
     const end = nextName ? workflow.indexOf(`\n  ${nextName}:\n`, start + 1) : -1;
     return end > start ? workflow.slice(start, end) : workflow.slice(start);
   };
+  const stepSource = (job, name, nextName = "") => {
+    const start = job.indexOf(`\n      - name: ${name}\n`);
+    assert.ok(start > 0, `${name} step must exist`);
+    const end = nextName ? job.indexOf(`\n      - name: ${nextName}\n`, start + 1) : -1;
+    return end > start ? job.slice(start, end) : job.slice(start);
+  };
   const approveJob = jobSource(approve, "approve", "publish");
   const approvalPublishJob = jobSource(approve, "publish", "deploy");
+  const approvalFinalPushStep = stepSource(
+    approvalPublishJob,
+    "Recheck mutable approval state and push tested plugin publication",
+    "Record publication failure",
+  );
   const approvalDeployJob = jobSource(approve, "deploy", "finalize");
-  const validationAnalyzeJob = jobSource(validate, "validate", "publish");
-  const validationPublishJob = jobSource(validate, "publish");
+  const validationAnalyzeJob = jobSource(validate, "validate", "mutation-route");
+  const validationMutationRouteJob = jobSource(validate, "mutation-route", "publish");
+  const validationPublishJob = jobSource(validate, "publish", "publish-fallback");
+  const validationFallbackJob = jobSource(validate, "publish-fallback");
   assert.match(approveJob, /permissions:\s+contents: read\s+issues: read/);
   assert.doesNotMatch(approveJob, /contents: write|pages: write|id-token: write/);
   assert.doesNotMatch(approveJob, /APPROVAL_REQUESTED_AT: \$\{\{ github\.event\.issue\.updated_at \}\}/);
@@ -1951,13 +2548,20 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.ok(approveJob.indexOf("run: npm test") < approveJob.indexOf("actions/upload-pages-artifact@"));
   assert.ok(approveJob.indexOf("actions/upload-pages-artifact@") < approveJob.indexOf("name: Recheck approval"));
   assert.match(approvalPublishJob, /permissions:\s+contents: write\s+issues: read/);
-  assert.match(approvalPublishJob, /name: Recheck mutable approval state before push/);
-  assert.match(approvalPublishJob, /gh api "repos\/\$\{GITHUB_REPOSITORY\}\/issues\/\$\{ISSUE_NUMBER\}"/);
-  assert.match(approvalPublishJob, /blocking_label in needs-fixes security-needs-fixes/);
-  assert.match(approvalPublishJob, /approved-and-verified[\s\S]*APPROVAL_EVENT_ID/);
-  assert.match(approvalPublishJob, /BASELINE_COMMENT_ID:[\s\S]*marketplace-security-baseline:v\[0-9\]/);
-  assert.match(approvalPublishJob, /collaborators\/\$\{APPROVER_LOGIN\}\/permission/);
-  assert.match(approvalPublishJob, /commits\/HEAD[\s\S]*APPROVED_COMMIT/);
+  assert.ok(
+    approvalPublishJob.indexOf("name: Prepare tested plugin publication")
+      < approvalPublishJob.indexOf("name: Recheck mutable approval state and push tested plugin publication"),
+  );
+  assert.match(approvalFinalPushStep, /gh api "repos\/\$\{GITHUB_REPOSITORY\}\/issues\/\$\{ISSUE_NUMBER\}"/);
+  assert.match(approvalFinalPushStep, /blocking_label in needs-fixes security-needs-fixes/);
+  assert.match(approvalFinalPushStep, /approved-and-verified[\s\S]*APPROVAL_EVENT_ID/);
+  assert.match(approvalFinalPushStep, /APPROVAL_TRIGGERED_AT:[\s\S]*expected_approval_window/);
+  assert.match(approvalFinalPushStep, /fromdateiso8601[\s\S]*initial approval event window became missing or ambiguous/);
+  assert.match(approvalFinalPushStep, /BASELINE_COMMENT_ID:[\s\S]*marketplace-security-baseline:v\[0-9\]/);
+  assert.match(approvalFinalPushStep, /collaborators\/\$\{APPROVER_LOGIN\}\/permission/);
+  assert.match(approvalFinalPushStep, /commits\/HEAD[\s\S]*APPROVED_COMMIT/);
+  assert.match(approvalFinalPushStep, /commits\/HEAD[\s\S]*push origin HEAD:main/);
+  assert.doesNotMatch(approvalFinalPushStep, /git add|git commit|git fetch/);
   assert.doesNotMatch(approvalPublishJob, /npm ci|npm run build|npm test|setup-node/);
   assert.match(approvalPublishJob, /git fetch origin main[\s\S]*remote_main[\s\S]*EXPECTED_BASE_COMMIT/);
   assert.match(validationAnalyzeJob, /permissions:\s+contents: read\s+issues: read/);
@@ -1969,8 +2573,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.doesNotMatch(validationAnalyzeJob, /group: plugin-catalog-writes/);
   assert.match(
     validationPublishJob,
-    /concurrency:\s+group: plugin-catalog-writes\s+cancel-in-progress: false\s+queue: max/,
+    /concurrency:\s+group: \$\{\{ needs\.mutation-route\.outputs\.group == format\('issue-validation-\{0\}'[\s\S]*'plugin-catalog-writes' \}\}\s+cancel-in-progress: false\s+queue: max/,
   );
+  assert.match(validationMutationRouteJob, /permissions:\s+issues: read/);
+  assert.match(validationMutationRouteJob, /group=issue-validation-\$\{ISSUE_NUMBER\}/);
+  assert.match(validationFallbackJob, /group: plugin-catalog-writes[\s\S]*steps: \*submission-mutation-steps/);
   assert.match(validationAnalyzeJob, /startsWith\(github\.event\.issue\.title, '\[Plugin\]:'\)[\s\S]*contains\(github\.event\.issue\.labels\.\*\.name, 'submission'\)/);
   assert.match(validationAnalyzeJob, /npm ci[\s\S]*scripts\/validate-submission\.mjs[\s\S]*scripts\/security-baseline\.mjs/);
   assert.doesNotMatch(validationAnalyzeJob, /issues: write|gh issue edit|gh issue comment|--method PATCH/);
@@ -1982,10 +2589,9 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validationPublishJob, /symbolic link[\s\S]*expected_files[\s\S]*sha256sum --check SHA256SUMS/);
   assert.doesNotMatch(validationPublishJob, /actions\/checkout|setup-node|npm ci|npm run|node scripts\//);
   assert.match(validationPublishJob, /Confirm failed run still matches the submission[\s\S]*skipping stale failure mutations/);
-  assert.equal(
-    (validationPublishJob.match(/needs\.validate\.result == 'failure' \|\| failure\(\)/g) || []).length,
-    3,
-  );
+  assert.match(validationPublishJob, /guard-issue-mutation/);
+  assert.match(validationPublishJob, /requires_global_fallback/);
+  assert.match(validationPublishJob, /env\.MUTATION_CONCURRENCY_GROUP == 'plugin-catalog-writes'/);
   assert.doesNotMatch(validationPublishJob, /result == 'cancelled'/);
   assert.match(approvalPublishJob, /push origin HEAD:main/);
   assert.match(approvalDeployJob, /needs: \[approve, publish\]/);
@@ -1995,12 +2601,17 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
 
   const refreshJob = jobSource(refresh, "refresh", "publish");
   const refreshPublishJob = jobSource(refresh, "publish", "deploy");
-  const refreshDeployJob = jobSource(refresh, "deploy");
+  const refreshDeployJob = jobSource(refresh, "deploy", "alert");
+  const refreshAlertJob = jobSource(refresh, "alert");
   assert.match(refreshJob, /^    timeout-minutes:[ \t]+90[ \t]*$/m);
   assert.match(refreshJob, /permissions:\s+contents: read/);
   assert.ok(refreshJob.indexOf("run: npm run build") < refreshJob.indexOf("run: npm test"));
   assert.doesNotMatch(refreshPublishJob, /npm ci|npm run build|npm test|setup-node/);
   assert.doesNotMatch(refreshDeployJob, /actions\/checkout|npm ci|npm run build|npm test|upload-pages-artifact/);
+  assert.match(refreshAlertJob, /if: always\(\)[\s\S]*permissions:\s+issues: write/);
+  assert.match(refreshAlertJob, /Marketplace catalog refresh failure/);
+  assert.match(refreshAlertJob, /github-actions\[bot\]/);
+  assert.doesNotMatch(refreshAlertJob, /--add-label|--remove-label|labels\//);
 
   const pushPrepareJob = jobSource(deploy, "prepare", "deploy");
   const pushDeployJob = jobSource(deploy, "deploy");
@@ -2020,7 +2631,7 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
     assert.match(deployJob, /timeout-minutes: 20/);
     assert.match(deployJob, /continue-on-error: true/);
     assert.match(deployJob, /timeout: 300000/);
-    assert.match(deployJob, /Confirm deployed catalog after Pages timeout/);
+    assert.match(deployJob, /Confirm deployed catalog and Explorer data after Pages timeout/);
     assert.match(deployJob, /EXPECTED_DEPLOYMENT_ID:/);
     assert.match(deployJob, /deployment-id\.txt/);
     assert.match(deployJob, /live_id == "\$EXPECTED_DEPLOYMENT_ID"/);
@@ -2037,11 +2648,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(approve, /<!-- marketplace-publication-status -->/);
   assert.match(approve, /<!-- marketplace-publication -->/);
   assert.match(approve, /contains\("<!-- marketplace-publication -->"\)[\s\S]*issues\/comments\/\$\{comment_id\}/);
-  assert.match(approve, /name: Clear stale publication failure status[\s\S]*contains\("<!-- marketplace-publication-status -->"\)[\s\S]*--method DELETE/);
+  assert.doesNotMatch(approve, /Clear stale publication failure status|CLEAR_STATUS_OUTCOME|--method DELETE/);
   assert.match(approve, /state=lookup-failed[\s\S]*state=stale/);
   assert.match(approve, /CURRENT_STATE: \$\{\{ steps\.current\.outputs\.state \}\}/);
   assert.match(approve, /Do not reapply \\`approved-and-verified\\`/);
-  assert.equal((approve.match(/labels\/approved-and-verified/g) || []).length, 2);
+  assert.equal((approve.match(/labels\/approved-and-verified/g) || []).length, 0);
   assert.equal((approve.match(/approved-for-listing/g) || []).length, 0);
 
   assert.match(
@@ -2067,7 +2678,11 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /\(\.pull_request \| not\)/);
   assert.match(validate, /any\(\.name == "listed"\)/);
   assert.match(validate, /name: Record validation workflow failure\s+id: failure\s+if: failure\(\)/);
-  assert.match(validate, /name: Record validation publication failure\s+id: failure\s+if: failure\(\)/);
+  assert.match(
+    validate,
+    /name: Record validation publication failure\s+id: failure\s+if: >-[\s\S]*steps\.initialize\.outcome == 'failure'/,
+  );
+  assert.match(validate, /steps\.failure\.outcome == 'success'/);
   assert.match(validate, /name: Report validation workflow failure/);
   assert.match(validate, /always\(\)[\s\S]*needs\.validate\.result == 'failure'[\s\S]*needs\.validate\.result == 'success'/);
   assert.match(validate, /status=\$\?[\s\S]*"\$status" -eq 1[\s\S]*exit "\$status"/);
@@ -2081,8 +2696,8 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /disposition="\$\(jq -r '\.verifiedPublicationDisposition' security-baseline\.json\)"/);
   assert.match(validate, /marketplace-security-baseline:v\[0-9\]\+/);
   assert.match(validate, /marketplace-security-baseline-error:v\[0-9\]\+/);
-  assert.match(validate, /--add-label security-needs-fixes/);
-  assert.match(validate, /--add-label security-review-required/);
+  assert.match(validate, /add_label security-needs-fixes/);
+  assert.match(validate, /add_label security-review-required/);
   assert.match(validate, /verifiedPublicationDisposition/);
   assert.match(validate, /clear\|review-required\|needs-fixes/);
   assert.match(validate, /BASELINE_DISPOSITION: \$\{\{ needs\.validate\.outputs\.baseline_disposition \}\}/);
@@ -2094,7 +2709,7 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
   assert.match(validate, /name: Clear stale approval state after workflow failure/);
   assert.match(validate, /steps\.failure-current\.outputs\.matches == 'true'/);
   assert.match(validate, /labels\/\$\{label\}/);
-  assert.match(validate, /remove_label approved-and-verified[\s\S]*remove_label approved-for-listing/);
+  assert.match(validate, /remove_issue_label approved-and-verified[\s\S]*remove_issue_label approved-for-listing/);
   assert.match(approvalScript, /findLatestSecurityBaseline\(\[latest\]\)/);
   assert.match(approvalScript, /assertApprovalAllowed\(issue, baselineComment\.baseline, inspection, repoUrl\)/);
   assert.match(approvalScript, /runSecurityBaseline[\s\S]*listedPlugins: inspection\.manifests\.map[\s\S]*pluginId: manifest\.id[\s\S]*manifestPathHint: manifest\.path[\s\S]*createApprovedVerificationEvidence/);
@@ -2170,10 +2785,32 @@ test("submission tags use the curated vocabulary across web and CLI formats", ()
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({
-      tags: "Games, Media",
+      tags: "Games, Media, VPN",
       includeSuggestedTag: false,
     })).tags,
-    ["games", "media"],
+    ["games", "media", "vpn"],
+  );
+  assert.deepEqual(
+    parseSubmissionBody(submissionBody({
+      category: "Kids",
+      tags: "Education, Games, Kids",
+    })),
+    {
+      repo: "https://github.com/example/omarchy-plugin",
+      category: "Kids",
+      tags: ["education", "games", "kids"],
+    },
+  );
+  assert.throws(
+    () => parseSubmissionBody(submissionBody({
+      category: "kids",
+      tags: "education, kids",
+    })),
+    /Unsupported submission category "kids"/,
+  );
+  assert.throws(
+    () => parseSubmissionBody(submissionBody({ tags: "education, child" })),
+    /Unsupported submission tags: child/,
   );
   assert.throws(
     () => parseSubmissionBody(submissionBody({
@@ -2216,7 +2853,11 @@ test("CLI submissions require the complete issue-form structure", () => {
       title: "[Plugin]: Example",
       body: submissionBody({ checked: submissionChecklist.slice(0, -1) }),
     }),
-    { shouldValidate: true, shouldLabel: false },
+    { shouldValidate: true, shouldLabel: true },
+  );
+  assert.deepEqual(
+    classifySubmission({ title: "General question", body: "missing fields" }),
+    { shouldValidate: false, shouldLabel: false },
   );
   assert.deepEqual(
     classifySubmission({
@@ -2235,7 +2876,7 @@ test("CLI submissions require the complete issue-form structure", () => {
   );
   assert.deepEqual(
     classifySubmission({ title: "[Plugin]:", body }),
-    { shouldValidate: true, shouldLabel: false },
+    { shouldValidate: true, shouldLabel: true },
   );
 });
 
@@ -2414,7 +3055,7 @@ test("CLI checklist confirmation is limited to the checklist section", () => {
   const body = submissionBody({ notes: checkedInNotes, checked: [] });
   assert.deepEqual(
     classifySubmission({ title: "[Plugin]: Example", body }),
-    { shouldValidate: true, shouldLabel: false },
+    { shouldValidate: true, shouldLabel: true },
   );
   assert.equal(
     hasRightsConfirmation({ user: { login: "plugin-author" }, body }),
@@ -2456,6 +3097,13 @@ test("shared submission rules stay aligned with the public issue form", async ()
     assert.ok(form.includes(`- label: ${statement}`));
   }
   assert.equal((form.match(/required: true/g) || []).length, 8);
+  const categoryField = form.match(
+    /- type: dropdown\s+id: category([\s\S]*?)\n  - type: dropdown\s+id: tags/,
+  )?.[1];
+  assert.ok(categoryField);
+  const formCategories = [...categoryField.matchAll(/^\s+- ([A-Za-z][A-Za-z ]+)$/gm)]
+    .map((match) => match[1]);
+  assert.deepEqual(formCategories, allowedCategories);
   const tagField = form.match(
     /- type: dropdown\s+id: tags([\s\S]*?)\n  - type: input\s+id: suggested-tag/,
   )?.[1];
@@ -2477,6 +3125,20 @@ test("shared submission rules stay aligned with the public issue form", async ()
   );
 
   const guide = await readFile(new URL("../SUBMISSION.md", import.meta.url), "utf8");
+  const guideCategoryList = guide.match(
+    /Choose one category:\n\n([\s\S]*?)\n\nChoose one to three tags:/,
+  )?.[1];
+  assert.ok(guideCategoryList);
+  const guideCategories = [...guideCategoryList.matchAll(/^- `([^`]+)`$/gm)]
+    .map((match) => match[1]);
+  assert.deepEqual(guideCategories, allowedCategories);
+  const guideTagList = guide.match(
+    /Choose one to three tags:\n\n([\s\S]*?)\n\nCopy category and tag values/,
+  )?.[1];
+  assert.ok(guideTagList);
+  const guideTags = [...guideTagList.matchAll(/^- `([^`]+)`$/gm)]
+    .map((match) => match[1]);
+  assert.deepEqual(guideTags, allowedTags);
   const template = guide.match(
     /cat > \/tmp\/omarchy-plugin-submission\.md <<'EOF'\n([\s\S]*?)\nEOF/,
   )?.[1];
@@ -2496,18 +3158,13 @@ test("shared submission rules stay aligned with the public issue form", async ()
       tags: ["quickshell", "bar"],
     },
   );
-  for (const category of allowedCategories) {
-    assert.ok(guide.includes(`- \`${category}\``));
-  }
-  for (const tag of allowedTags) {
-    assert.ok(guide.includes(`- \`${tag}\``));
-  }
   assert.match(guide, /unique across all repositories/);
   assert.match(guide, /retired or renamed listings remain unavailable/);
   assert.match(guide, /io\.github\.yourname\.plugin-name/);
   assert.match(guide, /## Respond to validation and publication feedback/);
   assert.match(guide, /failed status includes a concise reason and the next action/);
-  assert.match(guide, /rerunning the old failed workflow does not restore the event/);
+  assert.match(guide, /Rerunning the old failed workflow does not create a new request/);
+  assert.match(guide, /failure handler leaves `approved-and-verified` unchanged/);
   assert.match(guide, /\[security policy and baseline\]\(SECURITY\.md#automated-security-baseline\)/i);
 
   const baselineGuide = await readFile(new URL("../SECURITY.md", import.meta.url), "utf8");
@@ -2591,6 +3248,63 @@ test("approval processes exactly the issue body seen when the label was applied"
   assert.throws(
     () => assertApprovedIssueBody(approved, undefined),
     /APPROVED_ISSUE_BODY is required/,
+  );
+});
+
+test("approval cannot mix transient first-fetch metadata with the approved snapshot", async () => {
+  const approvedBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "System",
+    tags: "Launcher",
+  });
+  const transientBody = submissionBody({
+    repo: "https://github.com/example/same-plugin",
+    category: "Desktop",
+    tags: "Workspaces",
+  });
+  const approvedTitle = "[Plugin]: Approved snapshot";
+  const issue = { created_at: "2026-08-07T00:00:00Z" };
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: transientBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: "[Plugin]: Transient title", body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.throws(
+    () => parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      undefined,
+    ),
+    { code: "approval-body-changed" },
+  );
+  assert.deepEqual(
+    parseApprovedSubmissionSnapshot(
+      { ...issue, title: approvedTitle, body: approvedBody },
+      approvedBody,
+      approvedTitle,
+    ),
+    {
+      repo: "https://github.com/example/same-plugin",
+      category: "System",
+      tags: ["launcher"],
+    },
+  );
+
+  const source = await readFile(new URL("../scripts/approve-submission.mjs", import.meta.url), "utf8");
+  assert.match(
+    source,
+    /const submission = parseApprovedSubmissionSnapshot\([\s\S]*initialIssue,[\s\S]*approvedIssueBody,[\s\S]*approvedIssueTitle,[\s\S]*\)[\s\S]*createRegistrySource\(\{\s*submission,/,
   );
 });
 
@@ -2783,6 +3497,7 @@ test("approved submissions become registry sources without duplicates", () => {
     },
   ], {
     approver: "maintainer",
+    expectedRequestedAt: "2026-07-28T12:00:00.000Z",
   });
   assert.deepEqual(approvalDecision, {
     eventId: 44001,
@@ -2818,6 +3533,7 @@ test("approved submissions become registry sources without duplicates", () => {
       },
     ], {
       approver: "maintainer",
+      expectedRequestedAt: "2026-07-28T12:00:00.000Z",
     }),
     (error) => error.code === "approval-event-invalid",
   );
@@ -2832,6 +3548,7 @@ test("approved submissions become registry sources without duplicates", () => {
       approver: "maintainer",
       expectedEventId: 44001,
       expectedRequestedAt: "2026-07-28T12:00:01.000Z",
+      expectedTriggeredAt: "2026-07-28T12:00:01.000Z",
     }),
     (error) => error.code === "approval-event-invalid",
   );
@@ -3123,7 +3840,7 @@ test("registry plugin IDs are an explicit publication allowlist", async () => {
   const registry = JSON.parse(
     await readFile(new URL("../registry.json", import.meta.url), "utf8"),
   );
-  assert.deepEqual(registry.retiredPluginIds, [
+  const establishedRetiredPluginIds = [
     "agent-bar.usage",
     "io.github.percius04.omafiles",
     "mathew.breathe",
@@ -3132,11 +3849,27 @@ test("registry plugin IDs are an explicit publication allowlist", async () => {
     "tenzin.animechy",
     "tenzin.omamovie",
     "ucmz851.omatorrent",
-  ]);
-  const activeIds = new Set(
-    registry.sources.flatMap((entry) => Object.keys(entry.plugins || {})),
-  );
-  assert.ok(registry.retiredPluginIds.every((pluginId) => !activeIds.has(pluginId)));
+  ];
+  assert.ok(establishedRetiredPluginIds.every((pluginId) => registry.retiredPluginIds.includes(pluginId)));
+  assert.ok(registry.retiredPluginIds.every((pluginId) => (
+    typeof pluginId === "string"
+      && pluginId.length <= manifestFieldLimits.id
+      && /^[a-z0-9][a-z0-9._-]*$/.test(pluginId)
+      && !pluginId.includes("..")
+  )));
+  const activeIds = assertRetiredPluginIdsAreInactive(registry);
+  assert.ok(activeIds.has("lacuna.shell-suite"));
+  assert.ok(registry.placeholders.every(({ id }) => activeIds.has(id)));
+  assert.throws(() => assertRetiredPluginIdsAreInactive({
+    sources: [{ catalog: { id: "example.retired-suite" } }],
+    placeholders: [],
+    retiredPluginIds: ["example.retired-suite"],
+  }), /must not remain active/);
+  assert.throws(() => assertRetiredPluginIdsAreInactive({
+    sources: [],
+    placeholders: [{ id: "example.retired-placeholder" }],
+    retiredPluginIds: ["example.retired-placeholder"],
+  }), /must not remain active/);
   assert.equal(
     registry.sources.some((entry) => entry.repo.toLowerCase() === "https://github.com/percius04/omafiles".toLowerCase()),
     false,

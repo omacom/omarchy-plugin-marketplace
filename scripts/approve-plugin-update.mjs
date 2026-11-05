@@ -23,6 +23,7 @@ import {
 } from "./plugin-update.mjs";
 import { assertApprovalAllowed } from "./security-baseline-approval.mjs";
 import { runSecurityBaseline } from "./security-baseline-scanner.mjs";
+import { canonicalRepositoryRequest } from "./verification-subject.mjs";
 
 function requiredEnvironment(name) {
   const value = process.env[name]?.trim();
@@ -69,6 +70,7 @@ export async function recheckPluginUpdateApproval({
   approver,
   expectedEventId,
   expectedRequestedAt,
+  expectedTriggeredAt,
   expectedBaselineCommentId,
   expectedBaselineCommentUpdatedAt,
   allowCurrentCommit = false,
@@ -94,9 +96,9 @@ export async function recheckPluginUpdateApproval({
       "The plugin update title changed after approval",
     );
   }
-  const request = parsePluginUpdateRequest(issue.body);
   const root = resolve(import.meta.dirname, "..");
   const registry = JSON.parse(await readFile(resolve(root, "registry.json"), "utf8"));
+  const request = canonicalRepositoryRequest(registry, parsePluginUpdateRequest(issue.body));
   const source = sourceForPluginUpdate(registry, request);
   const [inspection, comments, events, permission] = await Promise.all([
     inspectListedPluginSource(source),
@@ -126,6 +128,7 @@ export async function recheckPluginUpdateApproval({
     approver,
     expectedEventId,
     expectedRequestedAt,
+    expectedTriggeredAt,
   });
   const baselineComment = latestSecurityBaselineComment(comments);
   if (Date.parse(baselineComment.updatedAt) >= Date.parse(decision.requestedAt)) {
@@ -164,6 +167,7 @@ async function approvePluginUpdate() {
   const token = requiredEnvironment("GITHUB_TOKEN");
   const repositoryName = requiredEnvironment("GITHUB_REPOSITORY");
   const approver = requiredEnvironment("APPROVER_LOGIN");
+  const approvalTriggeredAt = requiredEnvironment("APPROVAL_TRIGGERED_AT");
   const issueNumber = positiveInteger(requiredEnvironment("ISSUE_NUMBER"), "ISSUE_NUMBER");
   const state = await recheckPluginUpdateApproval({
     repositoryName,
@@ -172,6 +176,7 @@ async function approvePluginUpdate() {
     approvedIssueBody: process.env.APPROVED_ISSUE_BODY,
     approvedIssueTitle: process.env.APPROVED_ISSUE_TITLE,
     approver,
+    expectedRequestedAt: approvalTriggeredAt,
   });
   const pluginIds = state.subject.pluginIds;
   const recordOptions = {
@@ -221,7 +226,7 @@ async function approvePluginUpdate() {
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(
       process.env.GITHUB_OUTPUT,
-      `publication_kind=update\nplugin_id=${plugin.id}\nplugin_name=${safeName}\nplugin_name_markdown=${safeMarkdownText(safeName)}\nsubmission_repo_url=${state.request.repoUrl}\nsubmission_repository=${state.inspection.repository}\napproved_commit=${state.inspection.commitSha}\nverification_method=${evidence.verificationMethod}\napproval_event_id=${state.decision.eventId}\napproval_requested_at=${state.decision.requestedAt}\nbaseline_comment_id=${state.baselineComment.commentId}\nbaseline_comment_updated_at=${state.baselineComment.updatedAt}\n`,
+      `publication_kind=update\nplugin_id=${plugin.id}\nplugin_name=${safeName}\nplugin_name_markdown=${safeMarkdownText(safeName)}\nsubmission_repo_url=${state.request.repoUrl}\nsubmission_repository=${state.inspection.repository}\napproved_commit=${state.inspection.commitSha}\nverification_method=${evidence.verificationMethod}\napproval_event_id=${state.decision.eventId}\napproval_requested_at=${state.decision.requestedAt}\napproval_triggered_at=${approvalTriggeredAt}\nbaseline_comment_id=${state.baselineComment.commentId}\nbaseline_comment_updated_at=${state.baselineComment.updatedAt}\n`,
     );
   }
   console.log(
@@ -233,6 +238,7 @@ async function verifyCurrentPluginUpdate() {
   const token = requiredEnvironment("GITHUB_TOKEN");
   const repositoryName = requiredEnvironment("GITHUB_REPOSITORY");
   const approver = requiredEnvironment("APPROVER_LOGIN");
+  const approvalTriggeredAt = requiredEnvironment("APPROVAL_TRIGGERED_AT");
   const issueNumber = positiveInteger(requiredEnvironment("ISSUE_NUMBER"), "ISSUE_NUMBER");
   await recheckPluginUpdateApproval({
     repositoryName,
@@ -243,6 +249,7 @@ async function verifyCurrentPluginUpdate() {
     approver,
     expectedEventId: positiveInteger(requiredEnvironment("APPROVAL_EVENT_ID"), "APPROVAL_EVENT_ID"),
     expectedRequestedAt: requiredEnvironment("APPROVAL_REQUESTED_AT"),
+    expectedTriggeredAt: approvalTriggeredAt,
     expectedBaselineCommentId: positiveInteger(
       requiredEnvironment("BASELINE_COMMENT_ID"),
       "BASELINE_COMMENT_ID",

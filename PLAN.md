@@ -44,6 +44,7 @@ It must never mean that a plugin is certified, guaranteed safe, endorsed, or cov
 
 - The marketplace is a responsive static site built with vanilla HTML, CSS, and JavaScript.
 - Search, typed filters, deterministic sorting, pagination, plugin details, installation commands, and copy feedback are implemented.
+- Explore maps related community plugins with local TF-IDF similarity and charts daily catalog growth from Git snapshots.
 - The curated registry is the persistent source of listing facts.
 - The generated catalog preserves last-known-good state for recoverable source failures.
 - Manifest identity, repository URLs, categories, curated tags, preview assets, and catalog invariants are validated automatically.
@@ -55,7 +56,8 @@ It must never mean that a plugin is certified, guaranteed safe, endorsed, or cov
 
 - Public stars, hearts, views, and copy counts are displayed without accounts or credentials.
 - Event bodies contain only the catalog plugin ID and a fixed action type.
-- The existing Cloudflare service applies origin restrictions, input validation, transactional counters, caching, and best-effort rate limits.
+- The existing Cloudflare service applies origin restrictions, input validation, transactional counters, caching, 60-second burst limits, and ephemeral sliding-window per-address quotas (IPv4, or IPv6 /64 and /56) without storing request-derived keys in D1.
+- Those counters remain gameable with enough addresses; they are not unique people, votes, or trust signals.
 - Verification does not read or modify engagement state.
 
 ### Automated Security Baseline V3
