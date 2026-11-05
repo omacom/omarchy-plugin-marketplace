@@ -1465,15 +1465,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261105-03");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-03");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-03");
+  assert.equal(keys[0], "20261105-04");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261105-04");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-04");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261105-03");
+  assert.equal(styleKeys[0], "20261105-04");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1778,6 +1778,9 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.index, /id="gems-section"[\s\S]*id="recent-section"/);
   assert.match(files.index, /id="recent-summary" class="recent-summary"[\s\S]*id="recent-feed-toggle" class="recent-feed-toggle" type="button"[\s\S]*<div id="recent-latest" class="landed-rows" hidden>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>/);
   assert.match(files.app, /function landedCard\(plugin, now, duplicate = false, updated = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
+  const landedCardSource = files.app.slice(files.app.indexOf("function landedCard("), files.app.indexOf("class=\"landed-mark\""));
+  assert.ok(landedCardSource.includes("<img"));
+  assert.doesNotMatch(landedCardSource, /loading="lazy"/);
   const appSharedImports = files.app.match(/import \{([\s\S]*?)\} from "\.\/shared\.js/)?.[1] || "";
   for (const name of ["ageLabel", "catalogAuthorCount", "compareRecentlyUpdated", "recentUpdates", "updatedListings"]) {
     assert.match(appSharedImports, new RegExp(`\\b${name}\\b`), name);

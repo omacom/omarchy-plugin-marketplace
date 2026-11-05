@@ -41,14 +41,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261105-03";
+} from "./shared.js?v=20261105-04";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261105-03";
+} from "./engagement.js?v=20261105-04";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -77,13 +77,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261105-03";
+} from "./search.js?v=20261105-04";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261105-03";
+} from "./taxonomy.js?v=20261105-04";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -998,7 +998,7 @@ function landedCard(plugin, now, duplicate = false, updated = false) {
   const byline = publisher ? `@${publisher}` : plugin.author || "Unknown";
   const image = plugin.previewThumbnail || plugin.previewImage;
   const media = image
-    ? `<img src="${escapeHtml(image)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" loading="lazy" decoding="async">`
+    ? `<img src="${escapeHtml(image)}" alt="" width="${Number(plugin.previewThumbnailWidth || plugin.previewWidth) || 720}" height="${Number(plugin.previewThumbnailHeight || plugin.previewHeight) || 405}" decoding="async">`
     : `<span class="landed-mark" aria-hidden="true">${escapeHtml(plugin.initials)}</span>`;
   const rank = cardRankLabel(plugin);
   return `
