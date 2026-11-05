@@ -409055,6 +409055,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chrisdavila7/omarchy-bloom",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:55:23.788Z",
+      "listingValidatedCommit": "53ba395e98f234d12c52d1e8a25fff8ab338adea",
+      "listingValidatedAt": "2026-11-05T23:55:23.788Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chrisdavila7/omarchy-bloom",
+        "pluginIds": [
+          "io.github.chrisdavila7.bloom"
+        ],
+        "commit": "53ba395e98f234d12c52d1e8a25fff8ab338adea",
+        "checkedAt": "2026-11-05T23:55:23.632Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.chrisdavila7.bloom": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
