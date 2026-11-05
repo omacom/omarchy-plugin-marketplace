@@ -210,6 +210,8 @@ The scheduled catalog workflow can add commits to `main` at any time. Before eve
 
 A push to `main` triggers the GitHub Pages build, tests, and production deployment. Treat the push as a production change and report the final commit hash.
 
+A failed Pages deployment usually cannot be retried on the same commit, because the deployment ID is the commit SHA. Publish it with a new commit.
+
 ## Definition of done
 
 A change is complete when:
