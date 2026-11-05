@@ -407358,6 +407358,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hudrucan/omarchy-gridnet",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T20:40:20.597Z",
+      "listingValidatedCommit": "5aa408809c2382735117efcc7f2e1c893db2e4b6",
+      "listingValidatedAt": "2026-11-05T20:40:20.597Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hudrucan/omarchy-gridnet",
+        "pluginIds": [
+          "omasnap.window-snap"
+        ],
+        "commit": "5aa408809c2382735117efcc7f2e1c893db2e4b6",
+        "checkedAt": "2026-11-05T20:40:20.417Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hudrucan/omarchy-gridnet",
+        "pluginIds": [
+          "omasnap.window-snap"
+        ],
+        "commit": "5aa408809c2382735117efcc7f2e1c893db2e4b6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T20:40:20.417Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T20:34:31.178Z",
+        "requestEventId": 35284711566,
+        "requestedAt": "2026-11-05T20:39:50Z",
+        "reviewedAt": "2026-11-05T20:40:20.417Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omasnap.window-snap": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
