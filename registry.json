@@ -408761,6 +408761,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Frestina/omaupdateimpact",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:08:12.166Z",
+      "listingValidatedCommit": "d0920462bf737cb56d73f694dfd29488c961eb2b",
+      "listingValidatedAt": "2026-11-05T23:08:12.166Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frestina/omaupdateimpact",
+        "pluginIds": [
+          "io.github.frestina.omaupdateimpact"
+        ],
+        "commit": "d0920462bf737cb56d73f694dfd29488c961eb2b",
+        "checkedAt": "2026-11-05T23:08:11.986Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "frestina/omaupdateimpact",
+        "pluginIds": [
+          "io.github.frestina.omaupdateimpact"
+        ],
+        "commit": "d0920462bf737cb56d73f694dfd29488c961eb2b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T23:08:11.986Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:26:23.125Z",
+        "requestEventId": 35293633515,
+        "requestedAt": "2026-11-05T22:32:09Z",
+        "reviewedAt": "2026-11-05T23:08:11.986Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.frestina.omaupdateimpact": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
