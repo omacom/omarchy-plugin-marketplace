@@ -1465,15 +1465,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261002-03");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261002-03");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261002-03");
+  assert.equal(keys[0], "20261019-01");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261019-01");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261019-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261002-03");
+  assert.equal(styleKeys[0], "20261019-01");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -1778,6 +1778,11 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.match(files.index, /id="recent-summary" class="recent-summary"[\s\S]*id="recent-feed-toggle" class="recent-feed-toggle" type="button"[\s\S]*<div id="recent-latest" class="landed-rows" hidden>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>\s*<div class="landed-row"><ul class="landed-track" data-landed-row[^>]*><\/ul><\/div>/);
   assert.match(files.app, /function landedCard\(plugin, now, duplicate = false\)[\s\S]*aria-hidden="true"[\s\S]*\$\{duplicate \? ' tabindex="-1"' : ""\}[\s\S]*class="landed-name"[\s\S]*class="landed-author"[\s\S]*listingAgeLabel\(plugin, now\)[\s\S]*data-card-rank/);
   assert.match(files.app, /const animated = items\.length > 6 && !window\.matchMedia\("\(prefers-reduced-motion: reduce\)"\)\.matches;/);
+  assert.match(files.index, /<section class="market-catalog" id="catalog"[^>]*aria-busy="true">[\s\S]*<span id="plugin-count">—<\/span>[\s\S]*<nav id="catalog-pagination"[^>]*hidden>/);
+  assert.match(files.app, /async function init\(\) \{\s*renderCatalogLoading\(\);[\s\S]*await loadCatalog\(\);[\s\S]*clearCatalogLoading\(\);[\s\S]*catch \(error\) \{\s*console\.error\(error\);\s*clearCatalogLoading\(\{ failed: true \}\);/);
+  assert.match(files.app, /function renderCatalogLoading\(\) \{[\s\S]*pagination\.hidden = true;\s*grid\.innerHTML = loadingPluginCard\.repeat\(pluginsPerPage\);/);
+  assert.match(files.app, /const loadingPluginCard = `\s*<article class="plugin-card is-loading" aria-hidden="true">/);
+  assert.match(files.style, /@media \(prefers-reduced-motion: reduce\) \{\s*\.skeleton, \.skeleton-line \{ animation: none;/);
   assert.match(files.style, /@keyframes landed-drift \{ from \{ transform: translateX\(-50%\); \} to \{ transform: translateX\(0\); \} \}/);
   assert.match(files.style, /\.landed-rows:hover \.landed-track,\s*\.landed-rows:focus-within \.landed-track,\s*\.landed-rows\.is-paused \.landed-track \{ animation-play-state: paused; \}/);
   assert.doesNotMatch(files.app, /createRecentFeed|layoutPreview/);
