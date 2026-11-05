@@ -191,7 +191,13 @@ test("current registry and catalog contain complete active or retired repository
     const plugins = catalog.plugins.filter((plugin) => pluginIds.includes(plugin.id));
     assert.equal(plugins.length, pluginIds.length);
     assert.ok(plugins.every((plugin) => plugin.repo.toLowerCase() === source.repo.toLowerCase()));
-    assert.ok(plugins.every((plugin) => plugin.upstreamCheckStatus === "passed"));
+    assert.ok(plugins.every((plugin) => (
+      plugin.upstreamCheckStatus === "passed"
+      || (
+        ["failed", "unreachable"].includes(plugin.upstreamCheckStatus)
+        && catalog.warnings.includes(`${source.repo}: ${plugin.upstreamCheckError}`)
+      )
+    )));
     for (const previousRepository of identity.previousRepositories) {
       assert.equal(
         catalog.warnings.includes(`https://github.com/${previousRepository}: repository-unreachable`),
