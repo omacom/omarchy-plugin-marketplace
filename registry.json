@@ -407116,6 +407116,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/macd2/OmarchyAgentOrbStatus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T19:20:45.842Z",
+      "listingValidatedCommit": "da83908d9479fae95e8a22c53a960cbb959debb1",
+      "listingValidatedAt": "2026-11-05T19:20:45.842Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "macd2/omarchyagentorbstatus",
+        "pluginIds": [
+          "io.github.macd2.agent-pulse"
+        ],
+        "commit": "da83908d9479fae95e8a22c53a960cbb959debb1",
+        "checkedAt": "2026-11-05T19:20:45.648Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "macd2/omarchyagentorbstatus",
+        "pluginIds": [
+          "io.github.macd2.agent-pulse"
+        ],
+        "commit": "da83908d9479fae95e8a22c53a960cbb959debb1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T19:20:45.648Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T18:30:41.906Z",
+        "requestEventId": 35277947466,
+        "requestedAt": "2026-11-05T19:20:12Z",
+        "reviewedAt": "2026-11-05T19:20:45.648Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.macd2.agent-pulse": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
