@@ -408667,6 +408667,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nikitashutnik/omarchy-audio-visualizer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:55:29.451Z",
+      "listingValidatedCommit": "5b8d83b45007a533b68fd168e534972cd5b54f60",
+      "listingValidatedAt": "2026-11-05T22:55:29.451Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nikitashutnik/omarchy-audio-visualizer",
+        "pluginIds": [
+          "shutnik.audio-visualizer"
+        ],
+        "commit": "5b8d83b45007a533b68fd168e534972cd5b54f60",
+        "checkedAt": "2026-11-05T22:55:29.303Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nikitashutnik/omarchy-audio-visualizer",
+        "pluginIds": [
+          "shutnik.audio-visualizer"
+        ],
+        "commit": "5b8d83b45007a533b68fd168e534972cd5b54f60",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T22:55:29.303Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:24:49.953Z",
+        "requestEventId": 35293531537,
+        "requestedAt": "2026-11-05T22:30:50Z",
+        "reviewedAt": "2026-11-05T22:55:29.303Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shutnik.audio-visualizer": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
