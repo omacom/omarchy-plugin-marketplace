@@ -408309,6 +408309,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hominluo/omarchy-airpods",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:24:26.924Z",
+      "listingValidatedCommit": "ee7eec4349bdc0c4fa4e1d57ae372461beebcfe6",
+      "listingValidatedAt": "2026-11-05T22:24:26.924Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hominluo/omarchy-airpods",
+        "pluginIds": [
+          "io.github.hominluo.airpods"
+        ],
+        "commit": "ee7eec4349bdc0c4fa4e1d57ae372461beebcfe6",
+        "checkedAt": "2026-11-05T22:24:26.804Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hominluo/omarchy-airpods",
+        "pluginIds": [
+          "io.github.hominluo.airpods"
+        ],
+        "commit": "ee7eec4349bdc0c4fa4e1d57ae372461beebcfe6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T22:24:26.804Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T21:34:42.594Z",
+        "requestEventId": 35289710821,
+        "requestedAt": "2026-11-05T21:40:32Z",
+        "reviewedAt": "2026-11-05T22:24:26.804Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hominluo.airpods": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
