@@ -408824,6 +408824,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Tiedeyez/tidal",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:13:07.497Z",
+      "listingValidatedCommit": "efc4e576ba33647ebcab68e8daad2db574427bfc",
+      "listingValidatedAt": "2026-11-05T23:13:07.497Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiedeyez/tidal",
+        "pluginIds": [
+          "tiedeyez.tidal"
+        ],
+        "commit": "efc4e576ba33647ebcab68e8daad2db574427bfc",
+        "checkedAt": "2026-11-05T23:13:07.314Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tiedeyez.tidal": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
