@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T23:35:00.405Z",
+  "generatedAt": "2026-11-05T23:40:56.536Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -348453,6 +348453,55 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "c095140ff4f266b2ab4ee3b464ae34dacc0aabf7fdd5b25917f8391da4bca1c8",
       "status": "Available"
+    },
+    {
+      "id": "swald.klc-light",
+      "name": "KLC Light",
+      "description": "Per-key keyboard lighting for MSI laptops (SteelSeries KLC), from KLC Light",
+      "author": "swald",
+      "version": "1.1.0",
+      "repo": "https://github.com/swald54000/omarchy-klc-light",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+      "verificationCheckedAt": "2026-11-05T23:40:55.554Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:40:55.742Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": false,
+      "installCommand": "",
+      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "category": "Hardware",
+      "tags": [
+        "bar",
+        "quickshell"
+      ],
+      "license": "See repository",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-11-04T16:50:43Z",
+      "repositoryRelease": {
+        "tag": "v1.1.0",
+        "url": "https://github.com/swald54000/omarchy-klc-light/tree/v1.1.0"
+      },
+      "accent": "violet",
+      "initials": "KL",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+      "listingValidatedAt": "2026-11-05T23:40:55.742Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-05T23:40:56.536Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+      "upstreamValidatedAt": "2026-11-05T23:40:56.536Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "7a6e7498d3c71b51186b9e99f93b8f2c77f6079d8e467c2dff1862d0af2d36ee",
+      "status": "Manual setup"
     },
     {
       "id": "omarchy.active-window",

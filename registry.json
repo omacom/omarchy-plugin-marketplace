@@ -408959,6 +408959,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/swald54000/omarchy-klc-light",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:40:55.742Z",
+      "listingValidatedCommit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+      "listingValidatedAt": "2026-11-05T23:40:55.742Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "swald54000/omarchy-klc-light",
+        "pluginIds": [
+          "swald.klc-light"
+        ],
+        "commit": "69fd185dd71a572dacf5900f16c5ca0f749d884f",
+        "checkedAt": "2026-11-05T23:40:55.554Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "swald.klc-light": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
