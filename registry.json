@@ -408149,6 +408149,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/dpsk/omarchy-museum-wallpapers",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:05:32.213Z",
+      "listingValidatedCommit": "189d62026ecb9c79e0b4d3437f13f3ce03a8b321",
+      "listingValidatedAt": "2026-11-05T22:05:32.213Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dpsk/omarchy-museum-wallpapers",
+        "pluginIds": [
+          "io.github.dpsk.museum-wallpapers"
+        ],
+        "commit": "189d62026ecb9c79e0b4d3437f13f3ce03a8b321",
+        "checkedAt": "2026-11-05T22:05:32.061Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dpsk.museum-wallpapers": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
