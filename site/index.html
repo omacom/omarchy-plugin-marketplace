@@ -19,7 +19,7 @@
     <meta name="twitter:image:alt" content="discover omarchy plugins">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261019-01">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261105-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -191,8 +191,8 @@
             <span class="pagination-direction"><span aria-hidden="true">←</span> Previous</span>
             <span id="page-previous-label" class="pagination-target">First page</span>
           </button>
-          <span class="pagination-summary" aria-hidden="true">
-            <span>Page</span><strong id="page-summary">1 / 1</strong>
+          <span class="pagination-summary">
+            <span>Page</span><strong><input id="page-input" class="page-input" type="text" inputmode="numeric" pattern="[0-9]*" aria-label="Go to page" title="Type a page number" value="1"> / <span id="page-total">1</span></strong>
           </span>
           <button id="page-next" class="pagination-button pagination-next" type="button">
             <span class="pagination-direction">Next <span aria-hidden="true">→</span></span>
@@ -245,6 +245,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20261019-01"></script>
+    <script type="module" src="assets/js/app.js?v=20261105-01"></script>
   </body>
 </html>
