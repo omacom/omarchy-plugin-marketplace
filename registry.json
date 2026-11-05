@@ -407675,6 +407675,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vornashev/omarchy-hostdeck",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:14:28.198Z",
+      "listingValidatedCommit": "4e41a4f30d9f7b0a8053fd6119cddcaaf649d64e",
+      "listingValidatedAt": "2026-11-05T21:14:28.198Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vornashev/omarchy-hostdeck",
+        "pluginIds": [
+          "vornashev.hostdeck"
+        ],
+        "commit": "4e41a4f30d9f7b0a8053fd6119cddcaaf649d64e",
+        "checkedAt": "2026-11-05T21:14:28.020Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vornashev/omarchy-hostdeck",
+        "pluginIds": [
+          "vornashev.hostdeck"
+        ],
+        "commit": "4e41a4f30d9f7b0a8053fd6119cddcaaf649d64e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T21:14:28.020Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T20:44:43.273Z",
+        "requestEventId": 35285493298,
+        "requestedAt": "2026-11-05T20:49:13Z",
+        "reviewedAt": "2026-11-05T21:14:28.020Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vornashev.hostdeck": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
