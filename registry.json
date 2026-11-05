@@ -407793,6 +407793,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/noobyco/keycount",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T21:23:07.703Z",
+      "listingValidatedCommit": "b8e11792add16dda6944c30633e6740b1136a42c",
+      "listingValidatedAt": "2026-11-05T21:23:07.703Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "noobyco/keycount",
+        "pluginIds": [
+          "io.github.noobyco.keycount"
+        ],
+        "commit": "b8e11792add16dda6944c30633e6740b1136a42c",
+        "checkedAt": "2026-11-05T21:23:07.587Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "noobyco/keycount",
+        "pluginIds": [
+          "io.github.noobyco.keycount"
+        ],
+        "commit": "b8e11792add16dda6944c30633e6740b1136a42c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T21:23:07.587Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T20:45:02.707Z",
+        "requestEventId": 35285549020,
+        "requestedAt": "2026-11-05T20:49:53Z",
+        "reviewedAt": "2026-11-05T21:23:07.587Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.noobyco.keycount": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
