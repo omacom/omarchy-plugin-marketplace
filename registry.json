@@ -408478,6 +408478,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kpanuragh/omarchy-hypr-screen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T22:38:23.465Z",
+      "listingValidatedCommit": "87785c6e3bebf804822c48175bfbdbd28db04442",
+      "listingValidatedAt": "2026-11-05T22:38:23.465Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kpanuragh/omarchy-hypr-screen",
+        "pluginIds": [
+          "kpanuragh.hypr-screen"
+        ],
+        "commit": "87785c6e3bebf804822c48175bfbdbd28db04442",
+        "checkedAt": "2026-11-05T22:38:23.305Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kpanuragh/omarchy-hypr-screen",
+        "pluginIds": [
+          "kpanuragh.hypr-screen"
+        ],
+        "commit": "87785c6e3bebf804822c48175bfbdbd28db04442",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T22:38:23.305Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T21:57:20.517Z",
+        "requestEventId": 35292844595,
+        "requestedAt": "2026-11-05T22:21:30Z",
+        "reviewedAt": "2026-11-05T22:38:23.305Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kpanuragh.hypr-screen": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
