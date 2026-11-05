@@ -19,7 +19,7 @@
     <meta name="twitter:image:alt" content="discover omarchy plugins">
     <title>Browse Plugins | Omarchy Plugins</title>
     <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261105-02">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261105-03">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body class="marketplace-page">
@@ -83,10 +83,13 @@
 
       <section class="recent-section" id="recent-section" aria-labelledby="recent-title">
         <div class="market-section-head">
-          <h2 id="recent-title">JUST LANDED</h2>
+          <div class="recent-feed-head">
+            <h2 id="recent-title"><button id="recent-tab-landed" class="recent-feed-tab" type="button" data-recent-feed="landed" aria-pressed="true">JUST LANDED</button></h2>
+            <button id="recent-tab-updated" class="recent-feed-tab" type="button" data-recent-feed="updated" aria-pressed="false">JUST UPDATED</button>
+          </div>
           <div class="recent-head-meta">
             <span id="recent-summary" class="recent-summary"></span>
-            <a href="#catalog">view all →</a>
+            <a id="recent-view-all" href="#catalog">view all →</a>
             <button id="recent-feed-toggle" class="recent-feed-toggle" type="button" aria-controls="recent-latest" aria-label="Pause the Just landed feed" hidden>Pause</button>
           </div>
         </div>
@@ -107,7 +110,7 @@
               <button type="button" data-view="cards" aria-pressed="true">Cards</button>
               <button type="button" data-view="split" aria-pressed="false">Split view</button>
             </div>
-            <p><span id="plugin-count">—</span> <span id="plugin-count-label">community plugins</span></p>
+            <p><span id="plugin-count">—</span> <span id="plugin-count-label">community plugins</span><span id="plugin-authors" hidden> · <span id="plugin-author-count"></span> authors</span></p>
           </div>
         </div>
 
@@ -131,7 +134,7 @@
             <span class="sr-only">Sort or filter plugins</span>
             <select id="sort-select">
               <option value="added">Recently added</option>
-              <option value="updated">Recent activity</option>
+              <option value="updated">Recently updated</option>
               <option value="stars">Most starred</option>
               <option value="views">Most viewed</option>
               <option value="copies">Most copied</option>
@@ -245,6 +248,6 @@
       <a href="publish.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg>Publish</a>
     </nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Command copied</div>
-    <script type="module" src="assets/js/app.js?v=20261105-02"></script>
+    <script type="module" src="assets/js/app.js?v=20261105-03"></script>
   </body>
 </html>

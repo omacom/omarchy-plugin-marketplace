@@ -30,8 +30,10 @@ import {
 } from "../scripts/security-baseline-policy.mjs";
 import { catalogVerificationFields } from "../scripts/catalog-verification.mjs";
 import {
-  activityTime,
+  ageLabel,
+  catalogAuthorCount,
   comparePluginInstallRate,
+  compareRecentlyUpdated,
   installRateScore,
   selectHiddenGems,
   medianInstallRate,
@@ -43,6 +45,8 @@ import {
   paginationState,
   pluginVersionLabel,
   recentListings,
+  recentUpdates,
+  updatedListings,
 } from "../site/assets/js/shared.js";
 
 const catalog = JSON.parse(await readFile(new URL("../site/catalog.json", import.meta.url), "utf8"));
@@ -522,22 +526,97 @@ test("recently added ordering uses the exact listing time", () => {
   assert.deepEqual(plugins.map((plugin) => plugin.name), ["Zulu", "Alpha"]);
 });
 
-test("recent activity uses the newest valid plugin timestamp", () => {
-  assert.equal(
-    activityTime({
-      versionUpdatedAt: "2026-07-29T15:17:29.377Z",
-      repositoryUpdatedAt: "2026-07-29T16:00:00.000Z",
-    }),
-    Date.parse("2026-07-29T16:00:00.000Z"),
+test("updated listings keep real version changes inside the window", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  const plugin = (id, versionUpdatedAt, extra = {}) => ({
+    id,
+    name: id,
+    repo: `https://github.com/${id}/plugin`,
+    sourceType: "community",
+    listedAt: "2026-09-01T00:00:00Z",
+    versionUpdatedAt,
+    ...extra,
+  });
+  const plugins = [
+    plugin("fresh", "2026-11-05T11:00:00Z"),
+    plugin("edge-in", "2026-10-29T12:00:01Z"),
+    plugin("edge-out", "2026-10-29T12:00:00Z"),
+    plugin("future", "2026-11-05T13:00:00Z"),
+    plugin("never", undefined),
+    plugin("invalid", "not-a-date"),
+    plugin("just-listed", "2026-11-05T11:00:00Z", { listedAt: "2026-11-05T10:00:00Z" }),
+    plugin("listed-long-ago", "2026-11-05T11:00:00Z", { listedAt: "2026-11-04T10:59:59Z" }),
+    plugin("builtin", "2026-11-05T11:00:00Z", { builtIn: true }),
+    plugin("official", "2026-11-05T11:00:00Z", { sourceType: "builtin" }),
+    plugin("placeholder", "2026-11-05T11:00:00Z", { placeholder: true }),
+  ];
+  assert.deepEqual(
+    updatedListings(plugins, now, 7 * 24).map(({ id }) => id),
+    ["fresh", "edge-in", "listed-long-ago"],
   );
-  assert.equal(
-    activityTime({ versionUpdatedAt: "2026-07-29T15:17:29.377Z" }),
-    Date.parse("2026-07-29T15:17:29.377Z"),
+  assert.deepEqual(updatedListings(plugins, now, 24).map(({ id }) => id), ["fresh", "listed-long-ago"]);
+  assert.deepEqual(updatedListings(null, now, 24), []);
+});
+
+test("recent updates are newest first with one plugin per publisher and a cap", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  const plugin = (name, owner, versionUpdatedAt, repositoryUpdatedAt) => ({
+    id: name,
+    name,
+    repo: `https://github.com/${owner}/${name}`,
+    sourceType: "community",
+    listedAt: "2026-09-01T00:00:00Z",
+    versionUpdatedAt,
+    repositoryUpdatedAt,
+  });
+  const updates = recentUpdates([
+    plugin("old", "a", "2026-11-03T00:00:00Z"),
+    plugin("over-a-week", "z", "2026-10-29T11:59:59Z"),
+    plugin("same-owner", "OWNER", "2026-11-05T01:00:00Z"),
+    plugin("newest", "owner", "2026-11-05T02:00:00Z"),
+    plugin("tie-pushed-later", "b", "2026-11-04T00:00:00Z", "2026-11-04T09:00:00Z"),
+    plugin("tie-pushed-earlier", "c", "2026-11-04T00:00:00Z", "2026-11-04T08:00:00Z"),
+    plugin("tie-name-a", "d", "2026-11-02T00:00:00Z"),
+    plugin("tie-name-b", "e", "2026-11-02T00:00:00Z"),
+    { ...plugin("no-publisher-1", "x", "2026-11-01T00:00:00Z"), repo: "https://example.com/one" },
+    { ...plugin("no-publisher-2", "x", "2026-11-01T00:00:00Z"), repo: "https://example.com/two" },
+  ], now);
+  assert.deepEqual(updates.map(({ name }) => name), [
+    "newest",
+    "tie-pushed-later",
+    "tie-pushed-earlier",
+    "old",
+    "tie-name-a",
+    "tie-name-b",
+    "no-publisher-1",
+    "no-publisher-2",
+  ]);
+  const many = Array.from({ length: 60 }, (_, index) => plugin(`p${index}`, `owner${index}`, "2026-11-05T00:00:00Z"));
+  assert.equal(recentUpdates(many, now).length, 48);
+  assert.deepEqual(
+    [plugin("none", "a"), plugin("some", "b", "2026-11-05T00:00:00Z")].sort(compareRecentlyUpdated).map(({ name }) => name),
+    ["some", "none"],
   );
-  assert.equal(
-    activityTime({ versionUpdatedAt: "invalid", repositoryUpdatedAt: "also-invalid" }),
-    0,
-  );
+});
+
+test("the author count uses unique GitHub owners", () => {
+  assert.equal(catalogAuthorCount([
+    { repo: "https://github.com/Owner/one" },
+    { repo: "https://github.com/owner/two" },
+    { repo: "https://github.com/other/three" },
+    { repo: "https://example.com/owner/four" },
+    { repo: "not a url" },
+    {},
+    null,
+  ]), 2);
+  assert.equal(catalogAuthorCount(undefined), 0);
+});
+
+test("the age label formats any timestamp", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  assert.equal(ageLabel(Date.parse("2026-11-04T12:00:00Z"), now), "1d ago");
+  assert.equal(ageLabel(Date.parse("2026-11-05T13:00:00Z"), now), "");
+  assert.equal(ageLabel(Number.NaN, now), "");
 });
 
 test("manifest version changes create a 12-hour updated state", () => {

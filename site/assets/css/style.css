@@ -1249,6 +1249,14 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 .market-section-head a:hover { color: color-mix(in srgb, var(--accent) 82%, var(--text)); }
 .recent-section { padding-bottom: 90px; }
 .recent-section .market-section-head { flex-wrap: wrap; gap: 8px 24px; }
+.recent-feed-head { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 18px; }
+.recent-feed-tab {
+  width: auto; min-height: 0; padding: 0; border: 0; background: transparent; color: var(--faint); cursor: pointer;
+  font: inherit; letter-spacing: inherit; text-transform: inherit;
+}
+.recent-feed-tab[aria-pressed="true"], #gems-title { color: var(--text); }
+.recent-feed-tab:hover { color: var(--text); }
+.recent-feed-tab:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
 .recent-head-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 18px; }
 .recent-head-meta a { white-space: nowrap; }
 .recent-summary { color: var(--faint); font-weight: 400; letter-spacing: .08em; white-space: nowrap; }
@@ -1328,6 +1336,7 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
   display: flex; margin-top: 3px; align-items: center; justify-content: space-between; gap: 8px;
   color: var(--faint); font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
 }
+.landed-foot time { color: var(--accent); }
 .landed-rank { color: var(--muted); font-weight: 600; letter-spacing: .02em; }
 @media (prefers-reduced-motion: reduce) {
   .landed-row { overflow-x: auto; }
@@ -1367,7 +1376,7 @@ html:has(.preview-lightbox[open]) { overflow: hidden; scrollbar-gutter: stable; 
 }
 [data-theme="light"] .catalog-heading h2 { color: var(--text); }
 .catalog-heading p { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 11px; }
-.catalog-heading p #plugin-count { color: var(--text); }
+.catalog-heading p #plugin-count, .catalog-heading p #plugin-author-count { color: var(--accent); }
 .catalog-controls { display: grid; border: 1px solid var(--line); grid-template-columns: minmax(0, 1fr) 180px; }
 .market-search { position: relative; display: flex; min-height: 44px; align-items: stretch; }
 .market-search > svg {
