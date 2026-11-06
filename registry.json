@@ -409372,6 +409372,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-lock-designs",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T00:33:38.597Z",
+      "listingValidatedCommit": "ae5e4d59d30ace762ef9016992aa9d5c1d058d8c",
+      "listingValidatedAt": "2026-11-06T00:33:38.597Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-lock-designs",
+        "pluginIds": [
+          "kamradsmeshnyavy.lock"
+        ],
+        "commit": "ae5e4d59d30ace762ef9016992aa9d5c1d058d8c",
+        "checkedAt": "2026-11-06T00:33:38.417Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.lock": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
