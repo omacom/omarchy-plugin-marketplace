@@ -222708,7 +222708,7 @@
           "widget.torrents"
         ],
         "commit": "a121e321df17f3f4a0d68a0495974688e5a4518e",
-        "checkedAt": "2026-10-26T14:17:13.051Z",
+        "checkedAt": "2026-11-06T21:14:59.697Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -222720,11 +222720,7 @@
           "tags": [
             "bar"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       },
       "listingValidationHistory": [
