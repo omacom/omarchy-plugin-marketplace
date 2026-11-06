@@ -412225,6 +412225,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vasko0z/omarchy-burnin-guard",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T23:05:55.558Z",
+      "listingValidatedCommit": "b95396bd0ef9fd6c6bd50f19739f8c1415f89105",
+      "listingValidatedAt": "2026-11-06T23:05:55.558Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vasko0z/omarchy-burnin-guard",
+        "pluginIds": [
+          "vasko.burnin-guard"
+        ],
+        "commit": "b95396bd0ef9fd6c6bd50f19739f8c1415f89105",
+        "checkedAt": "2026-11-06T23:05:55.338Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vasko0z/omarchy-burnin-guard",
+        "pluginIds": [
+          "vasko.burnin-guard"
+        ],
+        "commit": "b95396bd0ef9fd6c6bd50f19739f8c1415f89105",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T23:05:55.338Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T10:04:48.812Z",
+        "requestEventId": 35398176621,
+        "requestedAt": "2026-11-06T23:03:00Z",
+        "reviewedAt": "2026-11-06T23:05:55.338Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vasko.burnin-guard": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
