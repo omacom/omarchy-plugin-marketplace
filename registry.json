@@ -410743,6 +410743,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nomanur/omarchy-dotsync",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:34:02.585Z",
+      "listingValidatedCommit": "ae67d9217d27f371037bce77a9ea928580ac96c1",
+      "listingValidatedAt": "2026-11-06T04:34:02.585Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nomanur/omarchy-dotsync",
+        "pluginIds": [
+          "io.github.nomanur.dotsync"
+        ],
+        "commit": "ae67d9217d27f371037bce77a9ea928580ac96c1",
+        "checkedAt": "2026-11-06T04:34:02.440Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.nomanur.dotsync": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
