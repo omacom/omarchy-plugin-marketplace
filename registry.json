@@ -409089,6 +409089,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KirkShader/omarchy-snake",
+      "type": "plugin-source",
+      "addedAt": "2026-11-05",
+      "listedAt": "2026-11-05T23:59:56.348Z",
+      "listingValidatedCommit": "75bce62f6378f043083485c728b2f89a036234bb",
+      "listingValidatedAt": "2026-11-05T23:59:56.348Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kirkshader/omarchy-snake",
+        "pluginIds": [
+          "io.github.kirkshader.omarchy-snake"
+        ],
+        "commit": "75bce62f6378f043083485c728b2f89a036234bb",
+        "checkedAt": "2026-11-05T23:59:56.192Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kirkshader/omarchy-snake",
+        "pluginIds": [
+          "io.github.kirkshader.omarchy-snake"
+        ],
+        "commit": "75bce62f6378f043083485c728b2f89a036234bb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-05T23:59:56.192Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-04T23:13:55.827Z",
+        "requestEventId": 35297856605,
+        "requestedAt": "2026-11-05T23:37:27Z",
+        "reviewedAt": "2026-11-05T23:59:56.192Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kirkshader.omarchy-snake": {
+          "category": "Other",
+          "tags": [
+            "games",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
