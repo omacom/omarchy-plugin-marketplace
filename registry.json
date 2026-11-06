@@ -410520,6 +410520,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/YassineSawahi/omarchy-vnc",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:03:45.717Z",
+      "listingValidatedCommit": "495d76489b97167d750a41b2dbab1cafe44cb392",
+      "listingValidatedAt": "2026-11-06T04:03:45.717Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yassinesawahi/omarchy-vnc",
+        "pluginIds": [
+          "io.github.yassinesawahi.vnc"
+        ],
+        "commit": "495d76489b97167d750a41b2dbab1cafe44cb392",
+        "checkedAt": "2026-11-06T04:03:45.562Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yassinesawahi/omarchy-vnc",
+        "pluginIds": [
+          "io.github.yassinesawahi.vnc"
+        ],
+        "commit": "495d76489b97167d750a41b2dbab1cafe44cb392",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T04:03:45.562Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T08:12:05.988Z",
+        "requestEventId": 35312986894,
+        "requestedAt": "2026-11-06T04:01:43Z",
+        "reviewedAt": "2026-11-06T04:03:45.563Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.yassinesawahi.vnc": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
