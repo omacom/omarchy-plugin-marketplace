@@ -409405,6 +409405,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-wallpaper-fx",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T00:40:04.993Z",
+      "listingValidatedCommit": "f4c6946dba13456d95e0ed1d8c74312ca09df70d",
+      "listingValidatedAt": "2026-11-06T00:40:04.993Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-wallpaper-fx",
+        "pluginIds": [
+          "kamradsmeshnyavy.background"
+        ],
+        "commit": "f4c6946dba13456d95e0ed1d8c74312ca09df70d",
+        "checkedAt": "2026-11-06T00:40:04.797Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.background": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
