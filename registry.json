@@ -410031,6 +410031,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/marselnenaj/omarchy-portrait-background",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:44:45.255Z",
+      "listingValidatedCommit": "36912d031d36e9a223709843446617a3b1400bcd",
+      "listingValidatedAt": "2026-11-06T01:44:45.255Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "marselnenaj/omarchy-portrait-background",
+        "pluginIds": [
+          "bogen.portrait-background"
+        ],
+        "commit": "36912d031d36e9a223709843446617a3b1400bcd",
+        "checkedAt": "2026-11-06T01:44:45.100Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "marselnenaj/omarchy-portrait-background",
+        "pluginIds": [
+          "bogen.portrait-background"
+        ],
+        "commit": "36912d031d36e9a223709843446617a3b1400bcd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T01:44:45.100Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:04:22.966Z",
+        "requestEventId": 35303496475,
+        "requestedAt": "2026-11-06T01:09:46Z",
+        "reviewedAt": "2026-11-06T01:44:45.100Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bogen.portrait-background": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
