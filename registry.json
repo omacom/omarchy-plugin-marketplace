@@ -411547,6 +411547,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Roddygithub/gamebuddy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T17:21:27.169Z",
+      "listingValidatedCommit": "ba3f32034aef6ed8e197091bf85c3d9fbf41b4b4",
+      "listingValidatedAt": "2026-11-06T17:21:27.169Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "roddygithub/gamebuddy",
+        "pluginIds": [
+          "io.github.roddygithub.gamebuddy"
+        ],
+        "commit": "ba3f32034aef6ed8e197091bf85c3d9fbf41b4b4",
+        "checkedAt": "2026-11-06T17:21:26.988Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "roddygithub/gamebuddy",
+        "pluginIds": [
+          "io.github.roddygithub.gamebuddy"
+        ],
+        "commit": "ba3f32034aef6ed8e197091bf85c3d9fbf41b4b4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T17:21:26.988Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T17:07:40.746Z",
+        "requestEventId": 35372494434,
+        "requestedAt": "2026-11-06T17:20:55Z",
+        "reviewedAt": "2026-11-06T17:21:26.988Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.roddygithub.gamebuddy": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "games",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
