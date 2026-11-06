@@ -410844,6 +410844,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/herunan/simple-magic-trackpad",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:46:10.604Z",
+      "listingValidatedCommit": "3bb5cf21125140f15f9025cb144269c4dcde81ec",
+      "listingValidatedAt": "2026-11-06T04:46:10.604Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "herunan/simple-magic-trackpad",
+        "pluginIds": [
+          "io.github.herunan.simple-magic-trackpad"
+        ],
+        "commit": "3bb5cf21125140f15f9025cb144269c4dcde81ec",
+        "checkedAt": "2026-11-06T04:46:10.454Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "herunan/simple-magic-trackpad",
+        "pluginIds": [
+          "io.github.herunan.simple-magic-trackpad"
+        ],
+        "commit": "3bb5cf21125140f15f9025cb144269c4dcde81ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T04:46:10.454Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T13:22:53.744Z",
+        "requestEventId": 35314487759,
+        "requestedAt": "2026-11-06T04:30:18Z",
+        "reviewedAt": "2026-11-06T04:46:10.454Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.herunan.simple-magic-trackpad": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
