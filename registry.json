@@ -395739,8 +395739,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T18:09:31.842Z",
-      "listingValidatedCommit": "913ddb96946ff7302ecbcaa7bbe516f856bf44ea",
-      "listingValidatedAt": "2026-10-29T23:39:57.345Z",
+      "listingValidatedCommit": "daa010688575283628e2e9b1d026966cdca4c431",
+      "listingValidatedAt": "2026-11-06T22:36:25.919Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -395749,8 +395749,8 @@
         "pluginIds": [
           "io.github.hugorolimf.audio"
         ],
-        "commit": "913ddb96946ff7302ecbcaa7bbe516f856bf44ea",
-        "checkedAt": "2026-10-29T23:39:57.345Z",
+        "commit": "daa010688575283628e2e9b1d026966cdca4c431",
+        "checkedAt": "2026-11-06T22:36:25.919Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -395786,6 +395786,26 @@
             ],
             "commit": "4dee23c4df8980e1ceb9a1f7352a36609ef28024",
             "checkedAt": "2026-10-29T18:09:31.527Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "913ddb96946ff7302ecbcaa7bbe516f856bf44ea",
+          "validatedAt": "2026-10-29T23:39:57.345Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T22:36:25.919Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hugorolimf/omarchy-island-audio",
+            "pluginIds": [
+              "io.github.hugorolimf.audio"
+            ],
+            "commit": "913ddb96946ff7302ecbcaa7bbe516f856bf44ea",
+            "checkedAt": "2026-10-29T23:39:57.345Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
