@@ -396655,8 +396655,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T01:00:00.232Z",
-      "listingValidatedCommit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
-      "listingValidatedAt": "2026-10-30T01:00:00.232Z",
+      "listingValidatedCommit": "bca44734f8bfcc75ae67305c28b2360fb924c5f1",
+      "listingValidatedAt": "2026-11-06T23:22:01.583Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -396665,8 +396665,8 @@
         "pluginIds": [
           "io.github.cesarfilho.kbd-backlight"
         ],
-        "commit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
-        "checkedAt": "2026-10-30T01:00:00.058Z",
+        "commit": "bca44734f8bfcc75ae67305c28b2360fb924c5f1",
+        "checkedAt": "2026-11-06T23:22:01.583Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -396674,28 +396674,6 @@
           "privilege",
           "package-manager"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "cesarfilho/omarvel",
-        "pluginIds": [
-          "io.github.cesarfilho.kbd-backlight"
-        ],
-        "commit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-30T01:00:00.058Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-29T18:45:08.037Z",
-        "requestEventId": 34646879587,
-        "requestedAt": "2026-10-30T00:51:24Z",
-        "reviewedAt": "2026-10-30T01:00:00.058Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.cesarfilho.kbd-backlight": {
@@ -396710,7 +396688,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cesarfilho/omarvel",
+        "pluginIds": [
+          "io.github.cesarfilho.kbd-backlight"
+        ],
+        "commit": "bca44734f8bfcc75ae67305c28b2360fb924c5f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T23:22:01.583Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T13:30:14.196Z",
+        "requestEventId": 35399277966,
+        "requestedAt": "2026-11-06T23:21:22Z",
+        "reviewedAt": "2026-11-06T23:22:01.583Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
+          "validatedAt": "2026-10-30T01:00:00.232Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T23:22:01.583Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "cesarfilho/omarvel",
+            "pluginIds": [
+              "io.github.cesarfilho.kbd-backlight"
+            ],
+            "commit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
+            "checkedAt": "2026-10-30T01:00:00.058Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "cesarfilho/omarvel",
+            "pluginIds": [
+              "io.github.cesarfilho.kbd-backlight"
+            ],
+            "commit": "98eaa47811b6221b45dfb3f15c2431eaeeebd28c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-30T01:00:00.058Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-29T18:45:08.037Z",
+            "requestEventId": 34646879587,
+            "requestedAt": "2026-10-30T00:51:24Z",
+            "reviewedAt": "2026-10-30T01:00:00.058Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/azeemkafridi/omarchy-bulkpublish",
