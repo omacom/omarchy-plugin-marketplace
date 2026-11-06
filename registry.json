@@ -410331,6 +410331,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alvmarrod/omarchy-kanji-of-the-day",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T02:37:58.918Z",
+      "listingValidatedCommit": "c7c80d96e532b07b24a7c606ed6aa5a623c69307",
+      "listingValidatedAt": "2026-11-06T02:37:58.918Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alvmarrod/omarchy-kanji-of-the-day",
+        "pluginIds": [
+          "io.github.alvmarrod.kanji-of-the-day"
+        ],
+        "commit": "c7c80d96e532b07b24a7c606ed6aa5a623c69307",
+        "checkedAt": "2026-11-06T02:37:58.732Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.alvmarrod.kanji-of-the-day": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
