@@ -410810,6 +410810,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TasosK7/omarchy-sonora",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:42:10.651Z",
+      "listingValidatedCommit": "e0bd3abe3db87722039946666e5419ae3f77107c",
+      "listingValidatedAt": "2026-11-06T04:42:10.651Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tasosk7/omarchy-sonora",
+        "pluginIds": [
+          "io.github.tasosk7.sonora"
+        ],
+        "commit": "e0bd3abe3db87722039946666e5419ae3f77107c",
+        "checkedAt": "2026-11-06T04:42:10.537Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tasosk7.sonora": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
