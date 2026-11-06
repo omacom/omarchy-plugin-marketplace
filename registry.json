@@ -411232,6 +411232,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/schmittcn/omarchy-strata-control",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T07:28:01.630Z",
+      "listingValidatedCommit": "d2169bd1ddd5b9ba1fe9a2f348ad02b9e4edd412",
+      "listingValidatedAt": "2026-11-06T07:28:01.630Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "schmittcn/omarchy-strata-control",
+        "pluginIds": [
+          "io.github.schmittcn.strata-control"
+        ],
+        "commit": "d2169bd1ddd5b9ba1fe9a2f348ad02b9e4edd412",
+        "checkedAt": "2026-11-06T07:28:01.508Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.schmittcn.strata-control": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
