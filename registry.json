@@ -410092,6 +410092,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/tom-jagus/legacy-workspace-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:49:41.525Z",
+      "listingValidatedCommit": "d1873466a955415694b72013705a18a598b77eb4",
+      "listingValidatedAt": "2026-11-06T01:49:41.525Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tom-jagus/legacy-workspace-plus",
+        "pluginIds": [
+          "tomjagus.legacy-workspace-plus"
+        ],
+        "commit": "d1873466a955415694b72013705a18a598b77eb4",
+        "checkedAt": "2026-11-06T01:49:41.401Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tom-jagus/legacy-workspace-plus",
+        "pluginIds": [
+          "tomjagus.legacy-workspace-plus"
+        ],
+        "commit": "d1873466a955415694b72013705a18a598b77eb4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T01:49:41.401Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:05:20.012Z",
+        "requestEventId": 35303774758,
+        "requestedAt": "2026-11-06T01:14:39Z",
+        "reviewedAt": "2026-11-06T01:49:41.401Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tomjagus.legacy-workspace-plus": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "workspaces",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
