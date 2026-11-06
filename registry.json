@@ -410365,6 +410365,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tyku8/omarchy-shortcut-coach",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T02:42:17.327Z",
+      "listingValidatedCommit": "ae5e37ad77ea92d8172c187f50b0d3896da00cc1",
+      "listingValidatedAt": "2026-11-06T02:42:17.327Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tyku8/omarchy-shortcut-coach",
+        "pluginIds": [
+          "tyku8.shortcut-coach"
+        ],
+        "commit": "ae5e37ad77ea92d8172c187f50b0d3896da00cc1",
+        "checkedAt": "2026-11-06T02:42:17.141Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tyku8/omarchy-shortcut-coach",
+        "pluginIds": [
+          "tyku8.shortcut-coach"
+        ],
+        "commit": "ae5e37ad77ea92d8172c187f50b0d3896da00cc1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T02:42:17.141Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T14:10:44.633Z",
+        "requestEventId": 35308612235,
+        "requestedAt": "2026-11-06T02:39:47Z",
+        "reviewedAt": "2026-11-06T02:42:17.141Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tyku8.shortcut-coach": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "education"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
