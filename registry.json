@@ -411744,6 +411744,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/eprompc/omarchy-gmail-notifier",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T21:29:28.535Z",
+      "listingValidatedCommit": "1c6132641f323280dccda47797560b9c42e6760f",
+      "listingValidatedAt": "2026-11-06T21:29:28.535Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eprompc/omarchy-gmail-notifier",
+        "pluginIds": [
+          "eprom.gmail-notifier"
+        ],
+        "commit": "1c6132641f323280dccda47797560b9c42e6760f",
+        "checkedAt": "2026-11-06T21:29:28.344Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "eprom.gmail-notifier": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
