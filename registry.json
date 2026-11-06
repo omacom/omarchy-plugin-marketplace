@@ -114301,8 +114301,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T11:23:01.096Z",
-      "listingValidatedCommit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
-      "listingValidatedAt": "2026-09-04T10:02:32.194Z",
+      "listingValidatedCommit": "6cdd63f4ece7f86d6f22adc14c084cbb3da35ed4",
+      "listingValidatedAt": "2026-11-06T21:38:19.585Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -114311,8 +114311,8 @@
         "pluginIds": [
           "my.quicknote"
         ],
-        "commit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
-        "checkedAt": "2026-09-04T10:02:32.194Z",
+        "commit": "6cdd63f4ece7f86d6f22adc14c084cbb3da35ed4",
+        "checkedAt": "2026-11-06T21:38:19.585Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -114333,28 +114333,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "pilpup/quick-note",
-        "pluginIds": [
-          "my.quicknote"
-        ],
-        "commit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-04T10:02:32.194Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-04T06:14:20.125Z",
-        "requestEventId": 30538372505,
-        "requestedAt": "2026-09-04T07:17:59Z",
-        "reviewedAt": "2026-09-04T10:02:32.194Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -114401,8 +114379,75 @@
             "reviewedAt": "2026-08-30T11:23:01.044Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
+          "validatedAt": "2026-09-04T10:02:32.194Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T21:38:19.585Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "pilpup/quick-note",
+            "pluginIds": [
+              "my.quicknote"
+            ],
+            "commit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
+            "checkedAt": "2026-09-04T10:02:32.194Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "pilpup/quick-note",
+            "pluginIds": [
+              "my.quicknote"
+            ],
+            "commit": "bd9d39cb34f874be33cf38b75521e7b9be300a60",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-04T10:02:32.194Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-04T06:14:20.125Z",
+            "requestEventId": 30538372505,
+            "requestedAt": "2026-09-04T07:17:59Z",
+            "reviewedAt": "2026-09-04T10:02:32.194Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pilpup/quick-note",
+        "pluginIds": [
+          "my.quicknote"
+        ],
+        "commit": "6cdd63f4ece7f86d6f22adc14c084cbb3da35ed4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T21:38:19.585Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T17:16:50.761Z",
+        "requestEventId": 35392574699,
+        "requestedAt": "2026-11-06T21:37:51Z",
+        "reviewedAt": "2026-11-06T21:38:19.585Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/jeremylongshore/omarchy-loose-ends-entry",
