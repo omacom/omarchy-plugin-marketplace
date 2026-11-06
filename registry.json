@@ -93323,8 +93323,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-27",
       "listedAt": "2026-08-27T14:59:27.062Z",
-      "listingValidatedCommit": "f12a25e9fc4beca54298e9db509405325faa968d",
-      "listingValidatedAt": "2026-10-05T23:33:41.658Z",
+      "listingValidatedCommit": "3f640fd9bd6a946811c5178da6c9cacda34a9a16",
+      "listingValidatedAt": "2026-11-06T17:07:22.900Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -93333,8 +93333,8 @@
         "pluginIds": [
           "oliwier.opencode-configs"
         ],
-        "commit": "f12a25e9fc4beca54298e9db509405325faa968d",
-        "checkedAt": "2026-10-05T23:33:41.658Z",
+        "commit": "3f640fd9bd6a946811c5178da6c9cacda34a9a16",
+        "checkedAt": "2026-11-06T17:07:22.900Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -93426,6 +93426,26 @@
             ],
             "commit": "238d07d01c0285c518bb85660f06cd8a80158223",
             "checkedAt": "2026-09-04T07:53:32.803Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "f12a25e9fc4beca54298e9db509405325faa968d",
+          "validatedAt": "2026-10-05T23:33:41.658Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T17:07:22.900Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "oliwier-xiao/opencode-config-manager",
+            "pluginIds": [
+              "oliwier.opencode-configs"
+            ],
+            "commit": "f12a25e9fc4beca54298e9db509405325faa968d",
+            "checkedAt": "2026-10-05T23:33:41.658Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
