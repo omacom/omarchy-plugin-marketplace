@@ -409781,6 +409781,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AeonArcHQ/omarchy-gaomon-s620",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:22:13.143Z",
+      "listingValidatedCommit": "099c78f1c8e741d8337ed2c4f4b08e5cd69daa2d",
+      "listingValidatedAt": "2026-11-06T01:22:13.143Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aeonarchq/omarchy-gaomon-s620",
+        "pluginIds": [
+          "com.aeonarc.gaomon-s620"
+        ],
+        "commit": "099c78f1c8e741d8337ed2c4f4b08e5cd69daa2d",
+        "checkedAt": "2026-11-06T01:22:12.990Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aeonarchq/omarchy-gaomon-s620",
+        "pluginIds": [
+          "com.aeonarc.gaomon-s620"
+        ],
+        "commit": "099c78f1c8e741d8337ed2c4f4b08e5cd69daa2d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T01:22:12.990Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T20:40:26.444Z",
+        "requestEventId": 35302740584,
+        "requestedAt": "2026-11-06T00:56:53Z",
+        "reviewedAt": "2026-11-06T01:22:12.990Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.aeonarc.gaomon-s620": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
