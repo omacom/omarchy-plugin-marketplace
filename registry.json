@@ -409207,6 +409207,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Tarik-Lotfy/omarchy-liquid-media",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T00:08:42.675Z",
+      "listingValidatedCommit": "af1f97082f50d98d4d6d0394152f0c392214fc26",
+      "listingValidatedAt": "2026-11-06T00:08:42.675Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tarik-lotfy/omarchy-liquid-media",
+        "pluginIds": [
+          "io.github.tarik-lotfy.liquid-media"
+        ],
+        "commit": "af1f97082f50d98d4d6d0394152f0c392214fc26",
+        "checkedAt": "2026-11-06T00:08:42.512Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tarik-lotfy.liquid-media": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
