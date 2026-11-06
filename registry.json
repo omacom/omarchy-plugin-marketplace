@@ -356103,8 +356103,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-14",
       "listedAt": "2026-10-14T21:19:01.464Z",
-      "listingValidatedCommit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
-      "listingValidatedAt": "2026-10-14T21:19:01.464Z",
+      "listingValidatedCommit": "fd4cf30b14d1b803d80e858292bd21a2c837bdb2",
+      "listingValidatedAt": "2026-11-06T21:05:23.139Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -356113,39 +356113,14 @@
         "pluginIds": [
           "jovibe.net-usage"
         ],
-        "commit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
-        "checkedAt": "2026-10-14T21:19:01.324Z",
+        "commit": "fd4cf30b14d1b803d80e858292bd21a2c837bdb2",
+        "checkedAt": "2026-11-06T21:05:23.139Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "remote-build",
-          "service-management",
-          "installer"
+          "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "joweb1/omarchy-net-usage",
-        "pluginIds": [
-          "jovibe.net-usage"
-        ],
-        "commit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-14T21:19:01.324Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "service-management",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-14T12:10:53.153Z",
-        "requestEventId": 33269814974,
-        "requestedAt": "2026-10-14T21:09:22Z",
-        "reviewedAt": "2026-10-14T21:19:01.324Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "jovibe.net-usage": {
@@ -356160,7 +356135,77 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joweb1/omarchy-net-usage",
+        "pluginIds": [
+          "jovibe.net-usage"
+        ],
+        "commit": "fd4cf30b14d1b803d80e858292bd21a2c837bdb2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T21:05:23.139Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-30T21:16:05.468Z",
+        "requestEventId": 35390166371,
+        "requestedAt": "2026-11-06T21:04:51Z",
+        "reviewedAt": "2026-11-06T21:05:23.139Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
+          "validatedAt": "2026-10-14T21:19:01.464Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T21:05:23.139Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "joweb1/omarchy-net-usage",
+            "pluginIds": [
+              "jovibe.net-usage"
+            ],
+            "commit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
+            "checkedAt": "2026-10-14T21:19:01.324Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "joweb1/omarchy-net-usage",
+            "pluginIds": [
+              "jovibe.net-usage"
+            ],
+            "commit": "261268b7d0be2fbbf0edb0486d7d8d298b87f371",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-14T21:19:01.324Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-14T12:10:53.153Z",
+            "requestEventId": 33269814974,
+            "requestedAt": "2026-10-14T21:09:22Z",
+            "reviewedAt": "2026-10-14T21:19:01.324Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nickp73/OmaNibble",
