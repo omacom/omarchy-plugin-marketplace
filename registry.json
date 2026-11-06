@@ -410149,6 +410149,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jram0421/omarchy-retile",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:54:06.477Z",
+      "listingValidatedCommit": "4ba52c8c7d6fc8388b384526b268af92b29c7ea1",
+      "listingValidatedAt": "2026-11-06T01:54:06.477Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jram0421/omarchy-retile",
+        "pluginIds": [
+          "jram0421.retile"
+        ],
+        "commit": "4ba52c8c7d6fc8388b384526b268af92b29c7ea1",
+        "checkedAt": "2026-11-06T01:54:06.298Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jram0421.retile": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
