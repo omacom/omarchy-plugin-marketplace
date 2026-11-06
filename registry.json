@@ -411270,6 +411270,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/aywuyan/omarchy-github-release-updater",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T07:32:46.044Z",
+      "listingValidatedCommit": "f834f56f7d807284db97a816ac3c5d2b4bf2952b",
+      "listingValidatedAt": "2026-11-06T07:32:46.044Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aywuyan/omarchy-github-release-updater",
+        "pluginIds": [
+          "com.aywuyan.github-release-updater"
+        ],
+        "commit": "f834f56f7d807284db97a816ac3c5d2b4bf2952b",
+        "checkedAt": "2026-11-06T07:32:45.859Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aywuyan/omarchy-github-release-updater",
+        "pluginIds": [
+          "com.aywuyan.github-release-updater"
+        ],
+        "commit": "f834f56f7d807284db97a816ac3c5d2b4bf2952b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T07:32:45.859Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:28:22.506Z",
+        "requestEventId": 35325033643,
+        "requestedAt": "2026-11-06T07:32:12Z",
+        "reviewedAt": "2026-11-06T07:32:45.859Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.aywuyan.github-release-updater": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
