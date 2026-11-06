@@ -411448,6 +411448,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/TinyWorkshopDesign/omarchy-livewall",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T08:12:01.881Z",
+      "listingValidatedCommit": "4cd199d34dba18bf8fc570ad172f131721829901",
+      "listingValidatedAt": "2026-11-06T08:12:01.881Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tinyworkshopdesign/omarchy-livewall",
+        "pluginIds": [
+          "tinyworkshop.livewall"
+        ],
+        "commit": "4cd199d34dba18bf8fc570ad172f131721829901",
+        "checkedAt": "2026-11-06T08:12:01.763Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tinyworkshop.livewall": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
