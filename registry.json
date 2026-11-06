@@ -411385,6 +411385,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0PeterAdel/omarchy-extintion",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T07:48:08.275Z",
+      "listingValidatedCommit": "e3ea2442a07e9e686478a7bbe4c118cbcc76ed63",
+      "listingValidatedAt": "2026-11-06T07:48:08.275Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0peteradel/omarchy-extintion",
+        "pluginIds": [
+          "com.extintion.mirror"
+        ],
+        "commit": "e3ea2442a07e9e686478a7bbe4c118cbcc76ed63",
+        "checkedAt": "2026-11-06T07:48:08.119Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0peteradel/omarchy-extintion",
+        "pluginIds": [
+          "com.extintion.mirror"
+        ],
+        "commit": "e3ea2442a07e9e686478a7bbe4c118cbcc76ed63",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T07:48:08.119Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T22:46:29.729Z",
+        "requestEventId": 35325880484,
+        "requestedAt": "2026-11-06T07:45:26Z",
+        "reviewedAt": "2026-11-06T07:48:08.119Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.extintion.mirror": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
