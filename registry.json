@@ -410183,6 +410183,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/krozgrov/omarchy-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:59:39.852Z",
+      "listingValidatedCommit": "54ef0cb30668d75da4832d9a5977932af5e1677f",
+      "listingValidatedAt": "2026-11-06T01:59:39.852Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "krozgrov/omarchy-workspaces",
+        "pluginIds": [
+          "krozgrov.workspaces"
+        ],
+        "commit": "54ef0cb30668d75da4832d9a5977932af5e1677f",
+        "checkedAt": "2026-11-06T01:59:39.658Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "krozgrov.workspaces": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
