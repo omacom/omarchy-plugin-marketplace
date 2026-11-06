@@ -411038,6 +411038,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LorandMarton/jabra-evolve75-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T05:03:13.295Z",
+      "listingValidatedCommit": "f70172484260d21520e9d534517ea16126514bf7",
+      "listingValidatedAt": "2026-11-06T05:03:13.295Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lorandmarton/jabra-evolve75-omarchy",
+        "pluginIds": [
+          "io.github.lorandmarton.jabra-evolve75"
+        ],
+        "commit": "f70172484260d21520e9d534517ea16126514bf7",
+        "checkedAt": "2026-11-06T05:03:13.086Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lorandmarton/jabra-evolve75-omarchy",
+        "pluginIds": [
+          "io.github.lorandmarton.jabra-evolve75"
+        ],
+        "commit": "f70172484260d21520e9d534517ea16126514bf7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T05:03:13.086Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T17:20:15.588Z",
+        "requestEventId": 35315229100,
+        "requestedAt": "2026-11-06T04:44:39Z",
+        "reviewedAt": "2026-11-06T05:03:13.086Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.lorandmarton.jabra-evolve75": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
