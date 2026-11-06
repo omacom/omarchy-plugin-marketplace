@@ -402525,7 +402525,7 @@
           "apach.switcher"
         ],
         "commit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
-        "checkedAt": "2026-11-03T00:28:27.296Z",
+        "checkedAt": "2026-11-06T21:51:06.249Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -402539,11 +402539,7 @@
             "hyprland",
             "launcher"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       },
       "listingValidationHistory": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T21:46:16.079Z",
+  "generatedAt": "2026-11-06T21:51:06.249Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -341569,14 +341569,14 @@
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
       "verificationCommit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
-      "verificationCheckedAt": "2026-11-03T00:28:27.296Z",
+      "verificationCheckedAt": "2026-11-06T21:51:06.249Z",
       "manifestPath": "manifest.json",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T15:33:14.635Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": false,
-      "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/ApachaiZ/omarchy-switcher.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
       "category": "Desktop",
       "tags": [
         "quickshell",
@@ -341614,7 +341614,7 @@
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "aede4fb324c74ebcaec067c7f2220ebe55b2ce5f345ec085b94ac4666a06ccb4",
       "versionUpdatedAt": "2026-11-02T12:21:58.692Z",
-      "status": "Manual setup"
+      "status": "Available"
     },
     {
       "id": "io.github.killerc0w554.lofi-radio",
