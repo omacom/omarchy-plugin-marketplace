@@ -410675,6 +410675,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-dotmatrix-audio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:24:04.942Z",
+      "listingValidatedCommit": "0e23e81bcacf47e946c675e58ee103c72484fe3c",
+      "listingValidatedAt": "2026-11-06T04:24:04.942Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-dotmatrix-audio",
+        "pluginIds": [
+          "kamradsmeshnyavy.audio"
+        ],
+        "commit": "0e23e81bcacf47e946c675e58ee103c72484fe3c",
+        "checkedAt": "2026-11-06T04:24:04.746Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.audio": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
