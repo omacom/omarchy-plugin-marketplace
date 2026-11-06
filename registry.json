@@ -412085,6 +412085,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/crueber/omarchy-plugin-grok-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T22:50:28.367Z",
+      "listingValidatedCommit": "4f015051cfa92beadb3b97fd6925647d5ec0b9f1",
+      "listingValidatedAt": "2026-11-06T22:50:28.367Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "crueber/omarchy-plugin-grok-usage",
+        "pluginIds": [
+          "crueber.grok-usage"
+        ],
+        "commit": "4f015051cfa92beadb3b97fd6925647d5ec0b9f1",
+        "checkedAt": "2026-11-06T22:50:28.194Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "crueber/omarchy-plugin-grok-usage",
+        "pluginIds": [
+          "crueber.grok-usage"
+        ],
+        "commit": "4f015051cfa92beadb3b97fd6925647d5ec0b9f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T22:50:28.194Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T20:00:44.429Z",
+        "requestEventId": 35397198436,
+        "requestedAt": "2026-11-06T22:46:44Z",
+        "reviewedAt": "2026-11-06T22:50:28.194Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "crueber.grok-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
