@@ -410276,6 +410276,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sette7blo/omaxbar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T02:18:35.323Z",
+      "listingValidatedCommit": "186a2424f1e4522814264c0f2012050cc859feaa",
+      "listingValidatedAt": "2026-11-06T02:18:35.323Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sette7blo/omaxbar",
+        "pluginIds": [
+          "io.github.sette7blo.omaxbar"
+        ],
+        "commit": "186a2424f1e4522814264c0f2012050cc859feaa",
+        "checkedAt": "2026-11-06T02:18:35.172Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sette7blo/omaxbar",
+        "pluginIds": [
+          "io.github.sette7blo.omaxbar"
+        ],
+        "commit": "186a2424f1e4522814264c0f2012050cc859feaa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T02:18:35.172Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T01:49:06.140Z",
+        "requestEventId": 35307446269,
+        "requestedAt": "2026-11-06T02:18:07Z",
+        "reviewedAt": "2026-11-06T02:18:35.172Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sette7blo.omaxbar": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
