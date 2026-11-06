@@ -409968,6 +409968,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/k61n/omarchy-kraken",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:40:39.921Z",
+      "listingValidatedCommit": "577fa4731c0e8e4a072a121f7c433e653600ee47",
+      "listingValidatedAt": "2026-11-06T01:40:39.921Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "k61n/omarchy-kraken",
+        "pluginIds": [
+          "k61n.kraken"
+        ],
+        "commit": "577fa4731c0e8e4a072a121f7c433e653600ee47",
+        "checkedAt": "2026-11-06T01:40:39.796Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "k61n/omarchy-kraken",
+        "pluginIds": [
+          "k61n.kraken"
+        ],
+        "commit": "577fa4731c0e8e4a072a121f7c433e653600ee47",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T01:40:39.796Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-05T21:27:31.925Z",
+        "requestEventId": 35303306947,
+        "requestedAt": "2026-11-06T01:06:38Z",
+        "reviewedAt": "2026-11-06T01:40:39.796Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "k61n.kraken": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
