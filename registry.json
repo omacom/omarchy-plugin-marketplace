@@ -410980,6 +410980,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/thestandardissue/omarchy-fbdl",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:58:03.448Z",
+      "listingValidatedCommit": "3cbb3fb4e6226363a2be9656ee0262a2bb499dce",
+      "listingValidatedAt": "2026-11-06T04:58:03.448Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thestandardissue/omarchy-fbdl",
+        "pluginIds": [
+          "io.github.thestandardissue.fbdl"
+        ],
+        "commit": "3cbb3fb4e6226363a2be9656ee0262a2bb499dce",
+        "checkedAt": "2026-11-06T04:58:03.259Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thestandardissue/omarchy-fbdl",
+        "pluginIds": [
+          "io.github.thestandardissue.fbdl"
+        ],
+        "commit": "3cbb3fb4e6226363a2be9656ee0262a2bb499dce",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-06T04:58:03.259Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T04:38:33.823Z",
+        "requestEventId": 35315114557,
+        "requestedAt": "2026-11-06T04:42:31Z",
+        "reviewedAt": "2026-11-06T04:58:03.259Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.thestandardissue.fbdl": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
