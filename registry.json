@@ -409747,6 +409747,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/isHeSatoshi/omarchy-tokenbar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:17:44.576Z",
+      "listingValidatedCommit": "f6447cf536dbcaffc3074c3b138f2549fba9dccf",
+      "listingValidatedAt": "2026-11-06T01:17:44.576Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ishesatoshi/omarchy-tokenbar",
+        "pluginIds": [
+          "io.github.ishesatoshi.tokenbar"
+        ],
+        "commit": "f6447cf536dbcaffc3074c3b138f2549fba9dccf",
+        "checkedAt": "2026-11-06T01:17:44.402Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ishesatoshi.tokenbar": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
