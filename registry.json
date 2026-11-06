@@ -208187,8 +208187,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T18:40:23.226Z",
-      "listingValidatedCommit": "15307db5b566ca35ce35e06b6b4509052a46e4c1",
-      "listingValidatedAt": "2026-09-16T18:40:23.226Z",
+      "listingValidatedCommit": "6833c70a4f703f8538f2569d32d87e695c8d1a3a",
+      "listingValidatedAt": "2026-11-06T20:53:20.243Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -208197,8 +208197,8 @@
         "pluginIds": [
           "sunny0826.dim"
         ],
-        "commit": "15307db5b566ca35ce35e06b6b4509052a46e4c1",
-        "checkedAt": "2026-09-16T18:40:23.145Z",
+        "commit": "6833c70a4f703f8538f2569d32d87e695c8d1a3a",
+        "checkedAt": "2026-11-06T20:53:20.243Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -208214,7 +208214,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "15307db5b566ca35ce35e06b6b4509052a46e4c1",
+          "validatedAt": "2026-09-16T18:40:23.226Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T20:53:20.243Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sunny0826/omarchy-dim",
+            "pluginIds": [
+              "sunny0826.dim"
+            ],
+            "commit": "15307db5b566ca35ce35e06b6b4509052a46e4c1",
+            "checkedAt": "2026-09-16T18:40:23.145Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kt3v/omarchy-herdr-hud-native",
