@@ -410942,6 +410942,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/felipecpaiva/omagnet",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:54:33.428Z",
+      "listingValidatedCommit": "c3e25984c18f4edb7bab9dfc1ddf6ce336e3f8d9",
+      "listingValidatedAt": "2026-11-06T04:54:33.428Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "felipecpaiva/omagnet",
+        "pluginIds": [
+          "io.github.felipecpaiva.omagnet"
+        ],
+        "commit": "c3e25984c18f4edb7bab9dfc1ddf6ce336e3f8d9",
+        "checkedAt": "2026-11-06T04:54:33.324Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.felipecpaiva.omagnet": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
