@@ -409900,6 +409900,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AeonArcHQ/omarchy-obsbot-meet-se",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T01:31:16.863Z",
+      "listingValidatedCommit": "2a2c1f7507ae849de5f9c4924c4d0b5dcf3dcae7",
+      "listingValidatedAt": "2026-11-06T01:31:16.863Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aeonarchq/omarchy-obsbot-meet-se",
+        "pluginIds": [
+          "com.aeonarc.obsbot-meet-se"
+        ],
+        "commit": "2a2c1f7507ae849de5f9c4924c4d0b5dcf3dcae7",
+        "checkedAt": "2026-11-06T01:31:16.687Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.aeonarc.obsbot-meet-se": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
