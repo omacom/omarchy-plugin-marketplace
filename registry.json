@@ -409339,6 +409339,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-bar-skins",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T00:29:57.617Z",
+      "listingValidatedCommit": "f2cf6a529eca15e4d8bcc0fc27437c873e0b2340",
+      "listingValidatedAt": "2026-11-06T00:29:57.617Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-bar-skins",
+        "pluginIds": [
+          "kamradsmeshnyavy.bar"
+        ],
+        "commit": "f2cf6a529eca15e4d8bcc0fc27437c873e0b2340",
+        "checkedAt": "2026-11-06T00:29:57.502Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.bar": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
