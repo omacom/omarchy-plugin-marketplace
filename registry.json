@@ -410709,6 +410709,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-dotmatrix-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-06",
+      "listedAt": "2026-11-06T04:28:52.967Z",
+      "listingValidatedCommit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
+      "listingValidatedAt": "2026-11-06T04:28:52.967Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-dotmatrix-monitor",
+        "pluginIds": [
+          "kamradsmeshnyavy.monitor"
+        ],
+        "commit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
+        "checkedAt": "2026-11-06T04:28:52.762Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.monitor": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
