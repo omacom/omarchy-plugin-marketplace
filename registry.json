@@ -345281,8 +345281,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T21:01:04.958Z",
-      "listingValidatedCommit": "de7d761aae9d7e2f1c891c4362d6077bdfa8b06d",
-      "listingValidatedAt": "2026-10-20T00:56:50.107Z",
+      "listingValidatedCommit": "ac59a551b272b610b7f3a21b185655aa5243bc42",
+      "listingValidatedAt": "2026-11-06T22:10:29.554Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -345291,8 +345291,8 @@
         "pluginIds": [
           "mani4.instant-snippets"
         ],
-        "commit": "de7d761aae9d7e2f1c891c4362d6077bdfa8b06d",
-        "checkedAt": "2026-10-20T00:56:50.107Z",
+        "commit": "ac59a551b272b610b7f3a21b185655aa5243bc42",
+        "checkedAt": "2026-11-06T22:10:29.554Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -345344,6 +345344,26 @@
             ],
             "commit": "bbe3a71432270db61c4064a07615db77f5c643b5",
             "checkedAt": "2026-10-13T23:45:17.261Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "de7d761aae9d7e2f1c891c4362d6077bdfa8b06d",
+          "validatedAt": "2026-10-20T00:56:50.107Z",
+          "branch": "main",
+          "supersededAt": "2026-11-06T22:10:29.554Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mani4/omarchy-instant-snippets",
+            "pluginIds": [
+              "mani4.instant-snippets"
+            ],
+            "commit": "de7d761aae9d7e2f1c891c4362d6077bdfa8b06d",
+            "checkedAt": "2026-10-20T00:56:50.107Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
