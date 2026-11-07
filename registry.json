@@ -413366,6 +413366,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/allenguarnes/omasizer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T10:37:38.647Z",
+      "listingValidatedCommit": "c2fb3403c49bdc2ed9842bce2c6b84d8dc6bafcf",
+      "listingValidatedAt": "2026-11-07T10:37:38.647Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "allenguarnes/omasizer",
+        "pluginIds": [
+          "omasizer"
+        ],
+        "commit": "c2fb3403c49bdc2ed9842bce2c6b84d8dc6bafcf",
+        "checkedAt": "2026-11-07T10:37:38.467Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omasizer": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
