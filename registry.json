@@ -411907,8 +411907,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-06",
       "listedAt": "2026-11-06T04:37:51.813Z",
-      "listingValidatedCommit": "ca647a6b6a50375865e8d2b7a30f2f398494387f",
-      "listingValidatedAt": "2026-11-06T04:37:51.813Z",
+      "listingValidatedCommit": "38583bed8e05581dd698ff58453606a1cc13bdba",
+      "listingValidatedAt": "2026-11-07T12:35:09.799Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -411917,8 +411917,8 @@
         "pluginIds": [
           "io.github.alvmarrod.stocks"
         ],
-        "commit": "ca647a6b6a50375865e8d2b7a30f2f398494387f",
-        "checkedAt": "2026-11-06T04:37:51.640Z",
+        "commit": "38583bed8e05581dd698ff58453606a1cc13bdba",
+        "checkedAt": "2026-11-07T12:35:09.799Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -411933,7 +411933,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ca647a6b6a50375865e8d2b7a30f2f398494387f",
+          "validatedAt": "2026-11-06T04:37:51.813Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T12:35:09.799Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alvmarrod/omarchy-stocks",
+            "pluginIds": [
+              "io.github.alvmarrod.stocks"
+            ],
+            "commit": "ca647a6b6a50375865e8d2b7a30f2f398494387f",
+            "checkedAt": "2026-11-06T04:37:51.640Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/TasosK7/omarchy-sonora",
