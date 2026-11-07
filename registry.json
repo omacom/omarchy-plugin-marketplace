@@ -391831,8 +391831,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T01:15:16.564Z",
-      "listingValidatedCommit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
-      "listingValidatedAt": "2026-10-28T01:15:16.564Z",
+      "listingValidatedCommit": "b250bf639400d7f3fd416785783259580abb99d4",
+      "listingValidatedAt": "2026-11-07T16:58:39.091Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -391841,35 +391841,14 @@
         "pluginIds": [
           "io.github.bjornramberg.omarchy-power-flow"
         ],
-        "commit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
-        "checkedAt": "2026-10-28T01:15:16.413Z",
+        "commit": "b250bf639400d7f3fd416785783259580abb99d4",
+        "checkedAt": "2026-11-07T16:58:39.091Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "bundled-executable-binary"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "bjornramberg/omarchy-power-flow",
-        "pluginIds": [
-          "io.github.bjornramberg.omarchy-power-flow"
-        ],
-        "commit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-28T01:15:16.413Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "bundled-executable-binary"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-27T21:36:59.689Z",
-        "requestEventId": 34426728851,
-        "requestedAt": "2026-10-28T00:37:08Z",
-        "reviewedAt": "2026-10-28T01:15:16.413Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.bjornramberg.omarchy-power-flow": {
@@ -391881,7 +391860,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bjornramberg/omarchy-power-flow",
+        "pluginIds": [
+          "io.github.bjornramberg.omarchy-power-flow"
+        ],
+        "commit": "b250bf639400d7f3fd416785783259580abb99d4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T16:58:39.091Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T16:23:37.820Z",
+        "requestEventId": 35445736168,
+        "requestedAt": "2026-11-07T16:57:56Z",
+        "reviewedAt": "2026-11-07T16:58:39.091Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
+          "validatedAt": "2026-10-28T01:15:16.564Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T16:58:39.091Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bjornramberg/omarchy-power-flow",
+            "pluginIds": [
+              "io.github.bjornramberg.omarchy-power-flow"
+            ],
+            "commit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
+            "checkedAt": "2026-10-28T01:15:16.413Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bjornramberg/omarchy-power-flow",
+            "pluginIds": [
+              "io.github.bjornramberg.omarchy-power-flow"
+            ],
+            "commit": "84ed9fba3e26384a21f04e31c6e443a4cdfe3645",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-28T01:15:16.413Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-27T21:36:59.689Z",
+            "requestEventId": 34426728851,
+            "requestedAt": "2026-10-28T00:37:08Z",
+            "reviewedAt": "2026-10-28T01:15:16.413Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/heast13/omarchy-kyrr",
