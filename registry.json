@@ -411396,8 +411396,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-06",
       "listedAt": "2026-11-06T03:59:06.342Z",
-      "listingValidatedCommit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
-      "listingValidatedAt": "2026-11-06T03:59:06.342Z",
+      "listingValidatedCommit": "5d31b4cba8123b47222a4d3c96eccab4e34bdfe8",
+      "listingValidatedAt": "2026-11-07T10:00:20.874Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -411406,35 +411406,14 @@
         "pluginIds": [
           "io.github.yassinesawahi.peripheral-battery"
         ],
-        "commit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
-        "checkedAt": "2026-11-06T03:59:06.210Z",
+        "commit": "5d31b4cba8123b47222a4d3c96eccab4e34bdfe8",
+        "checkedAt": "2026-11-07T10:00:20.874Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "yassinesawahi/omarchy-peripheral-battery",
-        "pluginIds": [
-          "io.github.yassinesawahi.peripheral-battery"
-        ],
-        "commit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-06T03:59:06.210Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-05T08:12:02.797Z",
-        "requestEventId": 35312823752,
-        "requestedAt": "2026-11-06T03:58:36Z",
-        "reviewedAt": "2026-11-06T03:59:06.210Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.yassinesawahi.peripheral-battery": {
@@ -411449,7 +411428,73 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yassinesawahi/omarchy-peripheral-battery",
+        "pluginIds": [
+          "io.github.yassinesawahi.peripheral-battery"
+        ],
+        "commit": "5d31b4cba8123b47222a4d3c96eccab4e34bdfe8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T10:00:20.874Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T15:57:10.428Z",
+        "requestEventId": 35425925478,
+        "requestedAt": "2026-11-07T09:57:49Z",
+        "reviewedAt": "2026-11-07T10:00:20.874Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
+          "validatedAt": "2026-11-06T03:59:06.342Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T10:00:20.874Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "yassinesawahi/omarchy-peripheral-battery",
+            "pluginIds": [
+              "io.github.yassinesawahi.peripheral-battery"
+            ],
+            "commit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
+            "checkedAt": "2026-11-06T03:59:06.210Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "yassinesawahi/omarchy-peripheral-battery",
+            "pluginIds": [
+              "io.github.yassinesawahi.peripheral-battery"
+            ],
+            "commit": "0dc2a47638a87630a71be6dde595490d7d7ef1ba",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-06T03:59:06.210Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-05T08:12:02.797Z",
+            "requestEventId": 35312823752,
+            "requestedAt": "2026-11-06T03:58:36Z",
+            "reviewedAt": "2026-11-06T03:59:06.210Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/YassineSawahi/omarchy-vnc",
