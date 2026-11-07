@@ -413925,6 +413925,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimmerioles/omarchy-cadence",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T13:44:30.443Z",
+      "listingValidatedCommit": "a0dab9b3813d8d1777f89b0f05d74a5a4888f86f",
+      "listingValidatedAt": "2026-11-07T13:44:30.443Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimmerioles/omarchy-cadence",
+        "pluginIds": [
+          "jimmerioles.cadence"
+        ],
+        "commit": "a0dab9b3813d8d1777f89b0f05d74a5a4888f86f",
+        "checkedAt": "2026-11-07T13:44:30.245Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jimmerioles.cadence": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
