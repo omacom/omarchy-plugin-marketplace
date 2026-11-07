@@ -412627,6 +412627,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/whitecliffs/omarchy-aiusage",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T01:40:08.810Z",
+      "listingValidatedCommit": "cd8acf0700627ef7d569604d8c5ff7e6ba4ef68a",
+      "listingValidatedAt": "2026-11-07T01:40:08.810Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "whitecliffs/omarchy-aiusage",
+        "pluginIds": [
+          "jim.aiusage"
+        ],
+        "commit": "cd8acf0700627ef7d569604d8c5ff7e6ba4ef68a",
+        "checkedAt": "2026-11-07T01:40:08.657Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jim.aiusage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
