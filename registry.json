@@ -413002,6 +413002,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wojciech-ratajczak/omarchy-pixel-wave",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T09:17:38.475Z",
+      "listingValidatedCommit": "b8811daf9344ee48f46f982ceaab5bb93c24af6c",
+      "listingValidatedAt": "2026-11-07T09:17:38.475Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wojciech-ratajczak/omarchy-pixel-wave",
+        "pluginIds": [
+          "io.github.wojciech-ratajczak.pixel-wave"
+        ],
+        "commit": "b8811daf9344ee48f46f982ceaab5bb93c24af6c",
+        "checkedAt": "2026-11-07T09:17:38.284Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.wojciech-ratajczak.pixel-wave": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
