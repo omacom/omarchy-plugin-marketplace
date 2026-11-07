@@ -264866,8 +264866,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T16:33:24.520Z",
-      "listingValidatedCommit": "cdefb25664d6698f4be4c8a6e61e8c646ef23769",
-      "listingValidatedAt": "2026-10-20T14:59:13.571Z",
+      "listingValidatedCommit": "f32d2487db663c3fb2251d2b0eabf9c630a3ba72",
+      "listingValidatedAt": "2026-11-07T17:40:34.326Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -264876,8 +264876,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.lock-sound"
         ],
-        "commit": "cdefb25664d6698f4be4c8a6e61e8c646ef23769",
-        "checkedAt": "2026-10-20T14:59:13.571Z",
+        "commit": "f32d2487db663c3fb2251d2b0eabf9c630a3ba72",
+        "checkedAt": "2026-11-07T17:40:34.326Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -264972,6 +264972,26 @@
             ],
             "commit": "bb9b1746075eb90eea4c08245debaf5527571649",
             "checkedAt": "2026-10-14T09:00:02.882Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "cdefb25664d6698f4be4c8a6e61e8c646ef23769",
+          "validatedAt": "2026-10-20T14:59:13.571Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T17:40:34.326Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/omarchy-lock-sound",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.lock-sound"
+            ],
+            "commit": "cdefb25664d6698f4be4c8a6e61e8c646ef23769",
+            "checkedAt": "2026-10-20T14:59:13.571Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
