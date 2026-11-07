@@ -414186,8 +414186,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-07",
       "listedAt": "2026-11-07T12:59:48.285Z",
-      "listingValidatedCommit": "b6ca53445a03bc97f8319de670e76273391b6070",
-      "listingValidatedAt": "2026-11-07T12:59:48.285Z",
+      "listingValidatedCommit": "89afe12e0e26c92e8d3e79ab100586099fba96e7",
+      "listingValidatedAt": "2026-11-07T18:57:07.571Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -414196,35 +414196,12 @@
         "pluginIds": [
           "akshar.omoji"
         ],
-        "commit": "b6ca53445a03bc97f8319de670e76273391b6070",
-        "checkedAt": "2026-11-07T12:59:48.173Z",
-        "outcome": "review-required",
+        "commit": "89afe12e0e26c92e8d3e79ab100586099fba96e7",
+        "checkedAt": "2026-11-07T18:57:07.571Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "aksharp5/omoji",
-        "pluginIds": [
-          "akshar.omoji"
-        ],
-        "commit": "b6ca53445a03bc97f8319de670e76273391b6070",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-07T12:59:48.173Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-07T12:32:33.884Z",
-        "requestEventId": 35433738443,
-        "requestedAt": "2026-11-07T12:59:22Z",
-        "reviewedAt": "2026-11-07T12:59:48.173Z",
-        "reviewer": "HANCORE-linux"
+        "capabilities": []
       },
       "plugins": {
         "akshar.omoji": {
@@ -414235,7 +414212,52 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b6ca53445a03bc97f8319de670e76273391b6070",
+          "validatedAt": "2026-11-07T12:59:48.285Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T18:57:07.571Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "aksharp5/omoji",
+            "pluginIds": [
+              "akshar.omoji"
+            ],
+            "commit": "b6ca53445a03bc97f8319de670e76273391b6070",
+            "checkedAt": "2026-11-07T12:59:48.173Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "aksharp5/omoji",
+            "pluginIds": [
+              "akshar.omoji"
+            ],
+            "commit": "b6ca53445a03bc97f8319de670e76273391b6070",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-07T12:59:48.173Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-07T12:32:33.884Z",
+            "requestEventId": 35433738443,
+            "requestedAt": "2026-11-07T12:59:22Z",
+            "reviewedAt": "2026-11-07T12:59:48.173Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/MetcalfSolutions/frost",
