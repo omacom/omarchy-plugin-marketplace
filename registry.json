@@ -267821,8 +267821,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T13:46:36.537Z",
-      "listingValidatedCommit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
-      "listingValidatedAt": "2026-09-27T13:46:36.537Z",
+      "listingValidatedCommit": "c8244d73d1aade5f61f372c49824389ca836011f",
+      "listingValidatedAt": "2026-11-07T16:01:28.848Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -267831,35 +267831,14 @@
         "pluginIds": [
           "foamy.idle-suspend"
         ],
-        "commit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
-        "checkedAt": "2026-09-27T13:46:36.426Z",
+        "commit": "c8244d73d1aade5f61f372c49824389ca836011f",
+        "checkedAt": "2026-11-07T16:01:28.848Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "foamrider/foamy-idle-suspend",
-        "pluginIds": [
-          "foamy.idle-suspend"
-        ],
-        "commit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-27T13:46:36.426Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-27T12:50:14.521Z",
-        "requestEventId": 31931406485,
-        "requestedAt": "2026-09-27T12:59:44Z",
-        "reviewedAt": "2026-09-27T13:46:36.426Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "foamy.idle-suspend": {
@@ -267870,7 +267849,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "foamrider/foamy-idle-suspend",
+        "pluginIds": [
+          "foamy.idle-suspend"
+        ],
+        "commit": "c8244d73d1aade5f61f372c49824389ca836011f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T16:01:28.848Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T14:41:47.829Z",
+        "requestEventId": 35442432732,
+        "requestedAt": "2026-11-07T15:59:28Z",
+        "reviewedAt": "2026-11-07T16:01:28.848Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
+          "validatedAt": "2026-09-27T13:46:36.537Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T16:01:28.848Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-idle-suspend",
+            "pluginIds": [
+              "foamy.idle-suspend"
+            ],
+            "commit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
+            "checkedAt": "2026-09-27T13:46:36.426Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "foamrider/foamy-idle-suspend",
+            "pluginIds": [
+              "foamy.idle-suspend"
+            ],
+            "commit": "1976564536930a5b0e1d8dea5c7ef2389e176156",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-27T13:46:36.426Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-27T12:50:14.521Z",
+            "requestEventId": 31931406485,
+            "requestedAt": "2026-09-27T12:59:44Z",
+            "reviewedAt": "2026-09-27T13:46:36.426Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/foamrider/foamy-menu",
