@@ -262352,8 +262352,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T07:38:12.184Z",
-      "listingValidatedCommit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
-      "listingValidatedAt": "2026-10-01T11:34:38.815Z",
+      "listingValidatedCommit": "14633af573d565fecdb690263208dcce7a41bb23",
+      "listingValidatedAt": "2026-11-07T20:58:17.652Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -262362,8 +262362,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.omaobs"
         ],
-        "commit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
-        "checkedAt": "2026-10-01T11:34:38.815Z",
+        "commit": "14633af573d565fecdb690263208dcce7a41bb23",
+        "checkedAt": "2026-11-07T20:58:17.652Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -262386,29 +262386,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alxwolfenstein97/omaobs",
-        "pluginIds": [
-          "io.github.alxwolfenstein97.omaobs"
-        ],
-        "commit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T11:34:38.815Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "installer",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-28T06:35:24.313Z",
-        "requestEventId": 32245607189,
-        "requestedAt": "2026-10-01T11:15:32Z",
-        "reviewedAt": "2026-10-01T11:34:38.815Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -262457,8 +262434,78 @@
             "reviewedAt": "2026-09-26T07:38:12.070Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
+          "validatedAt": "2026-10-01T11:34:38.815Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T20:58:17.652Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/omaobs",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omaobs"
+            ],
+            "commit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
+            "checkedAt": "2026-10-01T11:34:38.815Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "installer",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alxwolfenstein97/omaobs",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omaobs"
+            ],
+            "commit": "225f486ac113c0a5129bb9e386dc9c6bea30e8ad",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T11:34:38.815Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "installer",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-28T06:35:24.313Z",
+            "requestEventId": 32245607189,
+            "requestedAt": "2026-10-01T11:15:32Z",
+            "reviewedAt": "2026-10-01T11:34:38.815Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omaobs",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaobs"
+        ],
+        "commit": "14633af573d565fecdb690263208dcce7a41bb23",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T20:58:17.652Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T19:50:49.019Z",
+        "requestEventId": 35459462690,
+        "requestedAt": "2026-11-07T20:57:49Z",
+        "reviewedAt": "2026-11-07T20:58:17.652Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/AlxWolfenstein97/omavt",
