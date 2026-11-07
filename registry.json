@@ -413998,6 +413998,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tonyfarson/omadjinn",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T14:06:45.683Z",
+      "listingValidatedCommit": "e402dd20f2bfed0f1cb6c0cf5b1bc68f405e3c5e",
+      "listingValidatedAt": "2026-11-07T14:06:45.683Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tonyfarson/omadjinn",
+        "pluginIds": [
+          "io.github.tonyfarson.omadjinn"
+        ],
+        "commit": "e402dd20f2bfed0f1cb6c0cf5b1bc68f405e3c5e",
+        "checkedAt": "2026-11-07T14:06:45.542Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tonyfarson.omadjinn": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
