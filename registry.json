@@ -32538,8 +32538,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T00:05:33.752Z",
-      "listingValidatedCommit": "b0de0f78296c53816ee085e4b34af12fe03961e9",
-      "listingValidatedAt": "2026-08-20T00:05:33.752Z",
+      "listingValidatedCommit": "0c8a1f090922c464b58cff1257570166d57c4d0b",
+      "listingValidatedAt": "2026-11-07T10:49:02.781Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -32548,12 +32548,14 @@
         "pluginIds": [
           "ragnacron.workspaces-per-monitor"
         ],
-        "commit": "b0de0f78296c53816ee085e4b34af12fe03961e9",
-        "checkedAt": "2026-08-19T22:53:00.185Z",
-        "outcome": "passed",
+        "commit": "0c8a1f090922c464b58cff1257570166d57c4d0b",
+        "checkedAt": "2026-11-07T10:49:02.781Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "remote-build"
+        ]
       },
       "plugins": {
         "ragnacron.workspaces-per-monitor": {
@@ -32564,7 +32566,50 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ragnacron/omarchy-workspaces-per-monitor",
+        "pluginIds": [
+          "ragnacron.workspaces-per-monitor"
+        ],
+        "commit": "0c8a1f090922c464b58cff1257570166d57c4d0b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T10:49:02.781Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T11:30:31.497Z",
+        "requestEventId": 35427466063,
+        "requestedAt": "2026-11-07T10:38:18Z",
+        "reviewedAt": "2026-11-07T10:49:02.781Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b0de0f78296c53816ee085e4b34af12fe03961e9",
+          "validatedAt": "2026-08-20T00:05:33.752Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T10:49:02.781Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ragnacron/omarchy-workspaces-per-monitor",
+            "pluginIds": [
+              "ragnacron.workspaces-per-monitor"
+            ],
+            "commit": "b0de0f78296c53816ee085e4b34af12fe03961e9",
+            "checkedAt": "2026-08-19T22:53:00.185Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/jason-watts/omarchy-rclone-onedrive",
