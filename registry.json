@@ -399160,8 +399160,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T23:37:33.619Z",
-      "listingValidatedCommit": "db461c47d33d111c3564720e039839d77bc464be",
-      "listingValidatedAt": "2026-11-02T23:35:47.309Z",
+      "listingValidatedCommit": "8aa1f7fc6d560a475145c9abcbc44ebd92b74bc4",
+      "listingValidatedAt": "2026-11-07T09:03:01.786Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -399170,14 +399170,12 @@
         "pluginIds": [
           "anavarre.mma"
         ],
-        "commit": "db461c47d33d111c3564720e039839d77bc464be",
-        "checkedAt": "2026-11-02T23:35:47.309Z",
-        "outcome": "review-required",
+        "commit": "8aa1f7fc6d560a475145c9abcbc44ebd92b74bc4",
+        "checkedAt": "2026-11-07T09:03:01.786Z",
+        "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": [
-          "remote-build"
-        ]
+        "capabilities": []
       },
       "plugins": {
         "anavarre.mma": {
@@ -399187,27 +399185,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "anavarre/omarchy-mma",
-        "pluginIds": [
-          "anavarre.mma"
-        ],
-        "commit": "db461c47d33d111c3564720e039839d77bc464be",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T23:35:47.309Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-02T18:46:00.197Z",
-        "requestEventId": 34965831018,
-        "requestedAt": "2026-11-02T23:25:02Z",
-        "reviewedAt": "2026-11-02T23:35:47.309Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -399250,6 +399227,49 @@
             "requestEventId": 34739499784,
             "requestedAt": "2026-10-30T22:59:18Z",
             "reviewedAt": "2026-10-30T23:37:33.509Z",
+            "reviewer": "HANCORE-linux"
+          }
+        },
+        {
+          "commit": "db461c47d33d111c3564720e039839d77bc464be",
+          "validatedAt": "2026-11-02T23:35:47.309Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T09:03:01.786Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "anavarre/omarchy-mma",
+            "pluginIds": [
+              "anavarre.mma"
+            ],
+            "commit": "db461c47d33d111c3564720e039839d77bc464be",
+            "checkedAt": "2026-11-02T23:35:47.309Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "anavarre/omarchy-mma",
+            "pluginIds": [
+              "anavarre.mma"
+            ],
+            "commit": "db461c47d33d111c3564720e039839d77bc464be",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T23:35:47.309Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T18:46:00.197Z",
+            "requestEventId": 34965831018,
+            "requestedAt": "2026-11-02T23:25:02Z",
+            "reviewedAt": "2026-11-02T23:35:47.309Z",
             "reviewer": "HANCORE-linux"
           }
         }
