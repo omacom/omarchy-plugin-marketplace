@@ -414525,6 +414525,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RuffBudda/omarchy-sticky-notes",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T17:12:39.814Z",
+      "listingValidatedCommit": "f330510a8417aa6601b893b5a6d6a161168f3688",
+      "listingValidatedAt": "2026-11-07T17:12:39.814Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ruffbudda/omarchy-sticky-notes",
+        "pluginIds": [
+          "io.github.ruffbudda.sticky-notes"
+        ],
+        "commit": "f330510a8417aa6601b893b5a6d6a161168f3688",
+        "checkedAt": "2026-11-07T17:12:39.663Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ruffbudda.sticky-notes": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
