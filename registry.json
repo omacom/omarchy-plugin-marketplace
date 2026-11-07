@@ -262512,8 +262512,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T07:42:16.703Z",
-      "listingValidatedCommit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
-      "listingValidatedAt": "2026-10-01T11:37:54.042Z",
+      "listingValidatedCommit": "930603342f924745c6e9c4e0a7299b3295f56d8e",
+      "listingValidatedAt": "2026-11-07T21:14:36.913Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -262522,8 +262522,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.omavt"
         ],
-        "commit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
-        "checkedAt": "2026-10-01T11:37:54.042Z",
+        "commit": "930603342f924745c6e9c4e0a7299b3295f56d8e",
+        "checkedAt": "2026-11-07T21:14:36.913Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -262546,29 +262546,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alxwolfenstein97/omavt",
-        "pluginIds": [
-          "io.github.alxwolfenstein97.omavt"
-        ],
-        "commit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T11:37:54.042Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-28T06:35:31.081Z",
-        "requestEventId": 32245689988,
-        "requestedAt": "2026-10-01T11:16:53Z",
-        "reviewedAt": "2026-10-01T11:37:54.042Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -262617,8 +262594,78 @@
             "reviewedAt": "2026-09-26T07:42:16.592Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
+          "validatedAt": "2026-10-01T11:37:54.042Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T21:14:36.913Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/omavt",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omavt"
+            ],
+            "commit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
+            "checkedAt": "2026-10-01T11:37:54.042Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alxwolfenstein97/omavt",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omavt"
+            ],
+            "commit": "d9ea3e71b4f3969d0ebb7344b65beb9f42002c77",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T11:37:54.042Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-28T06:35:31.081Z",
+            "requestEventId": 32245689988,
+            "requestedAt": "2026-10-01T11:16:53Z",
+            "reviewedAt": "2026-10-01T11:37:54.042Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omavt",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omavt"
+        ],
+        "commit": "930603342f924745c6e9c4e0a7299b3295f56d8e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T21:14:36.913Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T19:50:55.320Z",
+        "requestEventId": 35460162272,
+        "requestedAt": "2026-11-07T21:14:02Z",
+        "reviewedAt": "2026-11-07T21:14:36.913Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/derekross/omarchy-calendar",
