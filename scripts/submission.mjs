@@ -30,6 +30,7 @@ export const allowedTags = Object.freeze([
   "ai",
   "bar",
   "education",
+  "finance",
   "games",
   "hyprland",
   "kids",

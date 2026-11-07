@@ -2809,6 +2809,13 @@ test("submission tags use the curated vocabulary across web and CLI formats", ()
   );
   assert.deepEqual(
     parseSubmissionBody(submissionBody({
+      tags: "Bar, Finance, Quickshell",
+      includeSuggestedTag: false,
+    })).tags,
+    ["bar", "finance", "quickshell"],
+  );
+  assert.deepEqual(
+    parseSubmissionBody(submissionBody({
       category: "Kids",
       tags: "Education, Games, Kids",
     })),
