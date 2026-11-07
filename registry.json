@@ -413070,6 +413070,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zoltanf/omarchy-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T09:29:51.736Z",
+      "listingValidatedCommit": "f43f2305e60c3415afb447881632a5262dfa53ad",
+      "listingValidatedAt": "2026-11-07T09:29:51.736Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zoltanf/omarchy-workspaces",
+        "pluginIds": [
+          "zoltanf.workspaces"
+        ],
+        "commit": "f43f2305e60c3415afb447881632a5262dfa53ad",
+        "checkedAt": "2026-11-07T09:29:51.549Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "zoltanf.workspaces": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
