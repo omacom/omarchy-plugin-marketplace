@@ -272153,8 +272153,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T18:46:24.176Z",
-      "listingValidatedCommit": "f559b4c5a877d23ce2743414a833fe2f1c30797e",
-      "listingValidatedAt": "2026-10-30T21:00:18.728Z",
+      "listingValidatedCommit": "b92a53480e1b325963ad4fb705c794701c1e3920",
+      "listingValidatedAt": "2026-11-07T08:58:19.659Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -272163,8 +272163,8 @@
         "pluginIds": [
           "anavarre.miniflux"
         ],
-        "commit": "f559b4c5a877d23ce2743414a833fe2f1c30797e",
-        "checkedAt": "2026-10-30T21:00:18.728Z",
+        "commit": "b92a53480e1b325963ad4fb705c794701c1e3920",
+        "checkedAt": "2026-11-07T08:58:19.659Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -272294,6 +272294,26 @@
             ],
             "commit": "29825b204441a91be7c4bcd7e496b5c0bfcedf26",
             "checkedAt": "2026-10-09T13:37:20.598Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "f559b4c5a877d23ce2743414a833fe2f1c30797e",
+          "validatedAt": "2026-10-30T21:00:18.728Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T08:58:19.659Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "anavarre/omarchy-miniflux",
+            "pluginIds": [
+              "anavarre.miniflux"
+            ],
+            "commit": "f559b4c5a877d23ce2743414a833fe2f1c30797e",
+            "checkedAt": "2026-10-30T21:00:18.728Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
