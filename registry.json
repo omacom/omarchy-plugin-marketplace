@@ -414260,6 +414260,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tomydng/omarchy-wg-quick",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T15:56:26.183Z",
+      "listingValidatedCommit": "b34abd744121de1b381402d219bfc2a980dc8d91",
+      "listingValidatedAt": "2026-11-07T15:56:26.183Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tomydng/omarchy-wg-quick",
+        "pluginIds": [
+          "tomydng.wireguard"
+        ],
+        "commit": "b34abd744121de1b381402d219bfc2a980dc8d91",
+        "checkedAt": "2026-11-07T15:56:25.983Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tomydng/omarchy-wg-quick",
+        "pluginIds": [
+          "tomydng.wireguard"
+        ],
+        "commit": "b34abd744121de1b381402d219bfc2a980dc8d91",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T15:56:25.983Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T15:40:50.797Z",
+        "requestEventId": 35441702450,
+        "requestedAt": "2026-11-07T15:44:41Z",
+        "reviewedAt": "2026-11-07T15:56:25.983Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tomydng.wireguard": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "vpn",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
