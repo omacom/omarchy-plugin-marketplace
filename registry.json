@@ -191078,8 +191078,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T13:52:40.354Z",
-      "listingValidatedCommit": "daaf471d161da8401379e61baafddcabaecaa3bb",
-      "listingValidatedAt": "2026-10-11T07:54:25.570Z",
+      "listingValidatedCommit": "ba0883564fb6225c3cc8e1daa9906f9277a6c1d3",
+      "listingValidatedAt": "2026-11-07T16:26:52.673Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -191088,8 +191088,8 @@
         "pluginIds": [
           "io.github.siygle.omarchy-rss-client"
         ],
-        "commit": "daaf471d161da8401379e61baafddcabaecaa3bb",
-        "checkedAt": "2026-10-11T07:54:25.570Z",
+        "commit": "ba0883564fb6225c3cc8e1daa9906f9277a6c1d3",
+        "checkedAt": "2026-11-07T16:26:52.673Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -191120,6 +191120,26 @@
             ],
             "commit": "2fe59fdf1d722edf8f238b06f3899b21f4e1e763",
             "checkedAt": "2026-09-13T13:52:40.296Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "daaf471d161da8401379e61baafddcabaecaa3bb",
+          "validatedAt": "2026-10-11T07:54:25.570Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T16:26:52.673Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "siygle/omarchy-rss-client",
+            "pluginIds": [
+              "io.github.siygle.omarchy-rss-client"
+            ],
+            "commit": "daaf471d161da8401379e61baafddcabaecaa3bb",
+            "checkedAt": "2026-10-11T07:54:25.570Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
