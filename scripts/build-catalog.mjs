@@ -833,7 +833,7 @@ export function validateManifest(manifest, manifestPath, { community = false } =
   return manifest;
 }
 
-function validateManifestFiles(manifest, manifestPath, context, { community = false } = {}) {
+export function validateManifestFiles(manifest, manifestPath, context, { community = false } = {}) {
   validateManifest(manifest, manifestPath, { community });
   const pluginRoot = manifestPath.includes("/") ? dirname(manifestPath) : "";
   const prefix = pluginRoot ? `${pluginRoot}/` : "";
@@ -856,7 +856,7 @@ function looksLikePluginManifest(manifest) {
   );
 }
 
-function validateRepositoryDocs(context) {
+export function validateRepositoryDocs(context) {
   const rootFiles = context.tree.filter((entry) => !entry.path.includes("/") && isBlob(entry));
   if (!rootFiles.some((entry) => /^readme(?:\.[^/]+)?$/i.test(entry.path))) {
     checkError("readme-missing", `${context.repository.slug}: a root README is required`);
