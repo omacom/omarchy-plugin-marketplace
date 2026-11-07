@@ -413784,6 +413784,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MetcalfSolutions/frost",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T13:14:19.384Z",
+      "listingValidatedCommit": "d2f7c0d806a73c2f8c526ebb272ccdb78d15d099",
+      "listingValidatedAt": "2026-11-07T13:14:19.384Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "metcalfsolutions/frost",
+        "pluginIds": [
+          "frost.panel"
+        ],
+        "commit": "d2f7c0d806a73c2f8c526ebb272ccdb78d15d099",
+        "checkedAt": "2026-11-07T13:14:19.178Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "metcalfsolutions/frost",
+        "pluginIds": [
+          "frost.panel"
+        ],
+        "commit": "d2f7c0d806a73c2f8c526ebb272ccdb78d15d099",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T13:14:19.178Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T01:21:47.399Z",
+        "requestEventId": 35434382422,
+        "requestedAt": "2026-11-07T13:13:46Z",
+        "reviewedAt": "2026-11-07T13:14:19.178Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "frost.panel": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
