@@ -414558,6 +414558,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kongzong/omarchy-hourly-chime",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T17:19:14.918Z",
+      "listingValidatedCommit": "1350bffcb718a7e18765fa34e687d61babfab702",
+      "listingValidatedAt": "2026-11-07T17:19:14.918Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kongzong/omarchy-hourly-chime",
+        "pluginIds": [
+          "com.github.kongzong.hourly-chime"
+        ],
+        "commit": "1350bffcb718a7e18765fa34e687d61babfab702",
+        "checkedAt": "2026-11-07T17:19:14.723Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "com.github.kongzong.hourly-chime": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
