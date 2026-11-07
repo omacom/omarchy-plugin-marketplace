@@ -413634,6 +413634,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/felipecpaiva/omahop",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T12:09:04.913Z",
+      "listingValidatedCommit": "ef6f3a4a2390f788afe3c2f31bc365d3fae9a282",
+      "listingValidatedAt": "2026-11-07T12:09:04.913Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "felipecpaiva/omahop",
+        "pluginIds": [
+          "io.github.felipecpaiva.omahop"
+        ],
+        "commit": "ef6f3a4a2390f788afe3c2f31bc365d3fae9a282",
+        "checkedAt": "2026-11-07T12:09:04.797Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.felipecpaiva.omahop": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
