@@ -413444,6 +413444,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/scottwater/omakeeb",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T10:53:34.681Z",
+      "listingValidatedCommit": "0c16764760182e6ccc718a0c30653bb38f5dedf0",
+      "listingValidatedAt": "2026-11-07T10:53:34.681Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "scottwater/omakeeb",
+        "pluginIds": [
+          "io.github.scottwater.omakeeb"
+        ],
+        "commit": "0c16764760182e6ccc718a0c30653bb38f5dedf0",
+        "checkedAt": "2026-11-07T10:53:34.567Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "scottwater/omakeeb",
+        "pluginIds": [
+          "io.github.scottwater.omakeeb"
+        ],
+        "commit": "0c16764760182e6ccc718a0c30653bb38f5dedf0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T10:53:34.567Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T21:35:28.572Z",
+        "requestEventId": 35428082496,
+        "requestedAt": "2026-11-07T10:52:52Z",
+        "reviewedAt": "2026-11-07T10:53:34.567Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.scottwater.omakeeb": {
+          "category": "System",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
