@@ -414143,6 +414143,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0xakadev/omarchy-redmi-neo",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T14:51:40.931Z",
+      "listingValidatedCommit": "d912af4c0cd668244793bd10e876a4d0cb6f0574",
+      "listingValidatedAt": "2026-11-07T14:51:40.931Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0xakadev/omarchy-redmi-neo",
+        "pluginIds": [
+          "0xakadev.redmi-neo"
+        ],
+        "commit": "d912af4c0cd668244793bd10e876a4d0cb6f0574",
+        "checkedAt": "2026-11-07T14:51:40.772Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "0xakadev.redmi-neo": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
