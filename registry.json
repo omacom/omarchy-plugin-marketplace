@@ -202047,8 +202047,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T00:51:23.207Z",
-      "listingValidatedCommit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
-      "listingValidatedAt": "2026-11-07T00:40:03.800Z",
+      "listingValidatedCommit": "74912c67bfb6a795b98c832b6d64c2426a98e3b9",
+      "listingValidatedAt": "2026-11-07T15:45:10.382Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -202057,8 +202057,8 @@
         "pluginIds": [
           "oneplus-buds.control"
         ],
-        "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
-        "checkedAt": "2026-11-07T00:40:03.800Z",
+        "commit": "74912c67bfb6a795b98c832b6d64c2426a98e3b9",
+        "checkedAt": "2026-11-07T15:45:10.382Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -202168,6 +202168,51 @@
             "reviewedAt": "2026-09-30T20:38:31.984Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+          "validatedAt": "2026-11-07T00:40:03.800Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T15:45:10.382Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gazzasaurusrex/oneplus-buds-omarchy",
+            "pluginIds": [
+              "oneplus-buds.control"
+            ],
+            "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+            "checkedAt": "2026-11-07T00:40:03.800Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gazzasaurusrex/oneplus-buds-omarchy",
+            "pluginIds": [
+              "oneplus-buds.control"
+            ],
+            "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-07T00:40:03.800Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-06T21:18:11.237Z",
+            "requestEventId": 35403815774,
+            "requestedAt": "2026-11-07T00:39:33Z",
+            "reviewedAt": "2026-11-07T00:40:03.800Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -202176,20 +202221,20 @@
         "pluginIds": [
           "oneplus-buds.control"
         ],
-        "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+        "commit": "74912c67bfb6a795b98c832b6d64c2426a98e3b9",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-07T00:40:03.800Z",
+        "baselineCheckedAt": "2026-11-07T15:45:10.382Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management",
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-06T21:18:11.237Z",
-        "requestEventId": 35403815774,
-        "requestedAt": "2026-11-07T00:39:33Z",
-        "reviewedAt": "2026-11-07T00:40:03.800Z",
+        "reviewedBaselineCheckedAt": "2026-11-07T15:08:51.343Z",
+        "requestEventId": 35441671993,
+        "requestedAt": "2026-11-07T15:44:05Z",
+        "reviewedAt": "2026-11-07T15:45:10.382Z",
         "reviewer": "HANCORE-linux"
       }
     },
