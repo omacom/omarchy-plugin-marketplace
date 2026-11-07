@@ -228393,8 +228393,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T04:22:44.627Z",
-      "listingValidatedCommit": "5bd4b62a20542ee7270be41cd955c521608e6065",
-      "listingValidatedAt": "2026-09-27T08:43:16.528Z",
+      "listingValidatedCommit": "248f633c3c5d815dc603c21a93fbc2dee688e50f",
+      "listingValidatedAt": "2026-11-07T01:17:00.388Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -228403,8 +228403,8 @@
         "pluginIds": [
           "io.github.gsusgit.kenburnswallpaper"
         ],
-        "commit": "5bd4b62a20542ee7270be41cd955c521608e6065",
-        "checkedAt": "2026-09-27T08:43:16.527Z",
+        "commit": "248f633c3c5d815dc603c21a93fbc2dee688e50f",
+        "checkedAt": "2026-11-07T01:17:00.388Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -228434,6 +228434,26 @@
             ],
             "commit": "e9c6b3872a63f38f9db26a28c088e711de70c4b0",
             "checkedAt": "2026-09-21T04:22:44.533Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "5bd4b62a20542ee7270be41cd955c521608e6065",
+          "validatedAt": "2026-09-27T08:43:16.528Z",
+          "branch": "master",
+          "supersededAt": "2026-11-07T01:17:00.388Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gsusgit/omarchy-kenburns-wallpaper",
+            "pluginIds": [
+              "io.github.gsusgit.kenburnswallpaper"
+            ],
+            "commit": "5bd4b62a20542ee7270be41cd955c521608e6065",
+            "checkedAt": "2026-09-27T08:43:16.527Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
