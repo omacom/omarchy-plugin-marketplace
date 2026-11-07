@@ -412895,6 +412895,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/Obsidian-Companion",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T08:51:44.851Z",
+      "listingValidatedCommit": "f87af45af529a2d5c2a21e97283ebe280247734b",
+      "listingValidatedAt": "2026-11-07T08:51:44.851Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/obsidian-companion",
+        "pluginIds": [
+          "kel.obsidian-companion"
+        ],
+        "commit": "f87af45af529a2d5c2a21e97283ebe280247734b",
+        "checkedAt": "2026-11-07T08:51:44.685Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kel.obsidian-companion": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
