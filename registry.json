@@ -376549,8 +376549,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-21",
       "listedAt": "2026-10-21T03:04:16.324Z",
-      "listingValidatedCommit": "f49511b4cf71301a6d48476df2db71e7215303cf",
-      "listingValidatedAt": "2026-10-21T03:04:16.324Z",
+      "listingValidatedCommit": "c8c53401b36617f3e0b24a30446e92b074a19a88",
+      "listingValidatedAt": "2026-11-07T23:21:12.763Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -376559,8 +376559,8 @@
         "pluginIds": [
           "taylorburke.widget-drawer"
         ],
-        "commit": "f49511b4cf71301a6d48476df2db71e7215303cf",
-        "checkedAt": "2026-10-21T03:04:16.140Z",
+        "commit": "c8c53401b36617f3e0b24a30446e92b074a19a88",
+        "checkedAt": "2026-11-07T23:21:12.763Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -376576,7 +376576,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f49511b4cf71301a6d48476df2db71e7215303cf",
+          "validatedAt": "2026-10-21T03:04:16.324Z",
+          "branch": "master",
+          "supersededAt": "2026-11-07T23:21:12.763Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "taylorburke/widget-drawer",
+            "pluginIds": [
+              "taylorburke.widget-drawer"
+            ],
+            "commit": "f49511b4cf71301a6d48476df2db71e7215303cf",
+            "checkedAt": "2026-10-21T03:04:16.140Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/OrzSabaku/omarchy-notification-countdown",
