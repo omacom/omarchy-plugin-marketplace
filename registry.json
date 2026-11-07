@@ -413581,6 +413581,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/qnlbnsl/omaview",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T11:47:11.502Z",
+      "listingValidatedCommit": "5a3d557a617e9f51e29849e4d1d47ee9cb67cfd5",
+      "listingValidatedAt": "2026-11-07T11:47:11.502Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "qnlbnsl/omaview",
+        "pluginIds": [
+          "io.github.qnlbnsl.omaview"
+        ],
+        "commit": "5a3d557a617e9f51e29849e4d1d47ee9cb67cfd5",
+        "checkedAt": "2026-11-07T11:47:11.350Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.qnlbnsl.omaview": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
