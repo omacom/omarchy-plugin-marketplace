@@ -201743,8 +201743,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T00:51:23.207Z",
-      "listingValidatedCommit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
-      "listingValidatedAt": "2026-09-30T20:38:31.984Z",
+      "listingValidatedCommit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+      "listingValidatedAt": "2026-11-07T00:40:03.800Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -201753,8 +201753,8 @@
         "pluginIds": [
           "oneplus-buds.control"
         ],
-        "commit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
-        "checkedAt": "2026-09-30T20:38:31.984Z",
+        "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+        "checkedAt": "2026-11-07T00:40:03.800Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -201773,28 +201773,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "gazzasaurusrex/oneplus-buds-omarchy",
-        "pluginIds": [
-          "oneplus-buds.control"
-        ],
-        "commit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-09-30T20:38:31.984Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-16T19:01:05.407Z",
-        "requestEventId": 32199206996,
-        "requestedAt": "2026-09-30T20:34:12Z",
-        "reviewedAt": "2026-09-30T20:38:31.984Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -201841,8 +201819,75 @@
             "reviewedAt": "2026-09-16T00:51:23.144Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
+          "validatedAt": "2026-09-30T20:38:31.984Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T00:40:03.800Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gazzasaurusrex/oneplus-buds-omarchy",
+            "pluginIds": [
+              "oneplus-buds.control"
+            ],
+            "commit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
+            "checkedAt": "2026-09-30T20:38:31.984Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gazzasaurusrex/oneplus-buds-omarchy",
+            "pluginIds": [
+              "oneplus-buds.control"
+            ],
+            "commit": "abe70f4b6e8f55cc8f6a4888c04ddead8a087e33",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-09-30T20:38:31.984Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-16T19:01:05.407Z",
+            "requestEventId": 32199206996,
+            "requestedAt": "2026-09-30T20:34:12Z",
+            "reviewedAt": "2026-09-30T20:38:31.984Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gazzasaurusrex/oneplus-buds-omarchy",
+        "pluginIds": [
+          "oneplus-buds.control"
+        ],
+        "commit": "fae86d2ee447469b8fba6039c822861ee9a00c21",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T00:40:03.800Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T21:18:11.237Z",
+        "requestEventId": 35403815774,
+        "requestedAt": "2026-11-07T00:39:33Z",
+        "reviewedAt": "2026-11-07T00:40:03.800Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/CJKaufman/omarchy-runescape",
