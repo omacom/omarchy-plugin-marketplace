@@ -413847,6 +413847,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/HeyitsTayters/tokengauge-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T13:27:00.498Z",
+      "listingValidatedCommit": "ae6cccc1960e1900261e9443baaef70494dd2542",
+      "listingValidatedAt": "2026-11-07T13:27:00.498Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "heyitstayters/tokengauge-omarchy",
+        "pluginIds": [
+          "dev.tayters.tokengauge"
+        ],
+        "commit": "ae6cccc1960e1900261e9443baaef70494dd2542",
+        "checkedAt": "2026-11-07T13:27:00.346Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dev.tayters.tokengauge": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
