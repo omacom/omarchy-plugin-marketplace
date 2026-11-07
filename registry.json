@@ -408415,8 +408415,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-05",
       "listedAt": "2026-11-05T20:29:34.428Z",
-      "listingValidatedCommit": "ea493cc0054f1e2c5b88d5c4d6086b1917922073",
-      "listingValidatedAt": "2026-11-05T20:29:34.428Z",
+      "listingValidatedCommit": "6d4c3df47ff9c517925dac8e75ca2fdca7144a8f",
+      "listingValidatedAt": "2026-11-07T14:30:06.324Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -408425,8 +408425,8 @@
         "pluginIds": [
           "tbrn.oc-plugin"
         ],
-        "commit": "ea493cc0054f1e2c5b88d5c4d6086b1917922073",
-        "checkedAt": "2026-11-05T20:29:34.274Z",
+        "commit": "6d4c3df47ff9c517925dac8e75ca2fdca7144a8f",
+        "checkedAt": "2026-11-07T14:30:06.323Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -408440,7 +408440,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "ea493cc0054f1e2c5b88d5c4d6086b1917922073",
+          "validatedAt": "2026-11-05T20:29:34.428Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T14:30:06.324Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tbrnsb/tbrn-oc-plugin",
+            "pluginIds": [
+              "tbrn.oc-plugin"
+            ],
+            "commit": "ea493cc0054f1e2c5b88d5c4d6086b1917922073",
+            "checkedAt": "2026-11-05T20:29:34.274Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/ianzano/omarchy-ddev",
