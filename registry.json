@@ -265263,8 +265263,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T00:25:18.999Z",
-      "listingValidatedCommit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
-      "listingValidatedAt": "2026-10-19T22:34:49.930Z",
+      "listingValidatedCommit": "698510e378a6146df4fbb3eaeb8061f62f1f52e8",
+      "listingValidatedAt": "2026-11-07T08:38:36.914Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -265273,8 +265273,8 @@
         "pluginIds": [
           "diky.reading-highlighter"
         ],
-        "commit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
-        "checkedAt": "2026-10-19T22:34:49.930Z",
+        "commit": "698510e378a6146df4fbb3eaeb8061f62f1f52e8",
+        "checkedAt": "2026-11-07T08:38:36.914Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -265333,6 +265333,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
+          "validatedAt": "2026-10-19T22:34:49.930Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T08:38:36.914Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "techguy-top/omarchy-reading-highlighter",
+            "pluginIds": [
+              "diky.reading-highlighter"
+            ],
+            "commit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
+            "checkedAt": "2026-10-19T22:34:49.930Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "techguy-top/omarchy-reading-highlighter",
+            "pluginIds": [
+              "diky.reading-highlighter"
+            ],
+            "commit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-19T22:34:49.930Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-17T06:19:56.313Z",
+            "requestEventId": 33690268794,
+            "requestedAt": "2026-10-19T22:13:59Z",
+            "reviewedAt": "2026-10-19T22:34:49.930Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -265341,19 +265384,19 @@
         "pluginIds": [
           "diky.reading-highlighter"
         ],
-        "commit": "a9856efb23373a2bbdbdf19412e8d8d7be3605b4",
+        "commit": "698510e378a6146df4fbb3eaeb8061f62f1f52e8",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-19T22:34:49.930Z",
+        "baselineCheckedAt": "2026-11-07T08:38:36.914Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-17T06:19:56.313Z",
-        "requestEventId": 33690268794,
-        "requestedAt": "2026-10-19T22:13:59Z",
-        "reviewedAt": "2026-10-19T22:34:49.930Z",
+        "reviewedBaselineCheckedAt": "2026-11-07T01:45:09.102Z",
+        "requestEventId": 35422533297,
+        "requestedAt": "2026-11-07T08:30:38Z",
+        "reviewedAt": "2026-11-07T08:38:36.914Z",
         "reviewer": "HANCORE-linux"
       }
     },
