@@ -412724,6 +412724,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vaibhavgupta5/Omalight",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T08:33:53.757Z",
+      "listingValidatedCommit": "b4af3343609d8296d4e43583aaaf3b0bce801d57",
+      "listingValidatedAt": "2026-11-07T08:33:53.757Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vaibhavgupta5/omalight",
+        "pluginIds": [
+          "io.github.vaibhavgupta5.omalight"
+        ],
+        "commit": "b4af3343609d8296d4e43583aaaf3b0bce801d57",
+        "checkedAt": "2026-11-07T08:33:53.574Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vaibhavgupta5/omalight",
+        "pluginIds": [
+          "io.github.vaibhavgupta5.omalight"
+        ],
+        "commit": "b4af3343609d8296d4e43583aaaf3b0bce801d57",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T08:33:53.574Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-06T09:48:40.138Z",
+        "requestEventId": 35422530217,
+        "requestedAt": "2026-11-07T08:30:33Z",
+        "reviewedAt": "2026-11-07T08:33:53.574Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.vaibhavgupta5.omalight": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
