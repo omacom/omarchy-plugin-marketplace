@@ -414678,6 +414678,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Okumai/OkumaDock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T17:58:37.287Z",
+      "listingValidatedCommit": "baf49ea1813ade8bfcf309f1ff634219ead241e6",
+      "listingValidatedAt": "2026-11-07T17:58:37.287Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "okumai/okumadock",
+        "pluginIds": [
+          "okuma.dev_dock4omarchy"
+        ],
+        "commit": "baf49ea1813ade8bfcf309f1ff634219ead241e6",
+        "checkedAt": "2026-11-07T17:58:37.108Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "okuma.dev_dock4omarchy": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
