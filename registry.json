@@ -412183,8 +412183,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-06",
       "listedAt": "2026-11-06T04:28:52.967Z",
-      "listingValidatedCommit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
-      "listingValidatedAt": "2026-11-06T04:28:52.967Z",
+      "listingValidatedCommit": "e0f94b2873028e22a58ed4986c67da6a4c999860",
+      "listingValidatedAt": "2026-11-07T17:35:52.875Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -412193,8 +412193,8 @@
         "pluginIds": [
           "kamradsmeshnyavy.monitor"
         ],
-        "commit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
-        "checkedAt": "2026-11-06T04:28:52.762Z",
+        "commit": "e0f94b2873028e22a58ed4986c67da6a4c999860",
+        "checkedAt": "2026-11-07T17:35:52.875Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -412210,7 +412210,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
+          "validatedAt": "2026-11-06T04:28:52.967Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T17:35:52.875Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kamradsmeshnyavy/omarchy-dotmatrix-monitor",
+            "pluginIds": [
+              "kamradsmeshnyavy.monitor"
+            ],
+            "commit": "c9bc6457ad446e74a3b155872b5138b2abbce484",
+            "checkedAt": "2026-11-06T04:28:52.762Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/nomanur/omarchy-dotsync",
