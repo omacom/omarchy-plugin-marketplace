@@ -26388,8 +26388,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-18",
       "listedAt": "2026-08-18T20:53:57.426Z",
-      "listingValidatedCommit": "a993df89d5772bd1ce594f64f6125e20bf6ce4c2",
-      "listingValidatedAt": "2026-08-18T20:53:57.426Z",
+      "listingValidatedCommit": "6915d01dc36be0fd95fe4c6b9032d33bf5749200",
+      "listingValidatedAt": "2026-11-07T00:34:36.725Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -26398,8 +26398,8 @@
         "pluginIds": [
           "srozen.ufw"
         ],
-        "commit": "a993df89d5772bd1ce594f64f6125e20bf6ce4c2",
-        "checkedAt": "2026-08-17T21:46:24.408Z",
+        "commit": "6915d01dc36be0fd95fe4c6b9032d33bf5749200",
+        "checkedAt": "2026-11-07T00:34:36.725Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -26417,7 +26417,54 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "srozen/omarchy-ufw",
+        "pluginIds": [
+          "srozen.ufw"
+        ],
+        "commit": "6915d01dc36be0fd95fe4c6b9032d33bf5749200",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-07T00:34:36.725Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-26T17:12:55.675Z",
+        "requestEventId": 35403544853,
+        "requestedAt": "2026-11-07T00:34:05Z",
+        "reviewedAt": "2026-11-07T00:34:36.725Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a993df89d5772bd1ce594f64f6125e20bf6ce4c2",
+          "validatedAt": "2026-08-18T20:53:57.426Z",
+          "branch": "master",
+          "supersededAt": "2026-11-07T00:34:36.725Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "srozen/omarchy-ufw",
+            "pluginIds": [
+              "srozen.ufw"
+            ],
+            "commit": "a993df89d5772bd1ce594f64f6125e20bf6ce4c2",
+            "checkedAt": "2026-08-17T21:46:24.408Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager"
+            ]
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/yordanbuilds/snooze",
