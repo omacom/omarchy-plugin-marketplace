@@ -414870,6 +414870,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SanchoKusika/omarchy-workspace-styler",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T19:00:50.958Z",
+      "listingValidatedCommit": "1c9e4bca2968006437ae8788e400335fc11b09b8",
+      "listingValidatedAt": "2026-11-07T19:00:50.958Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sanchokusika/omarchy-workspace-styler",
+        "pluginIds": [
+          "io.github.sanchokusika.workspace-styler"
+        ],
+        "commit": "1c9e4bca2968006437ae8788e400335fc11b09b8",
+        "checkedAt": "2026-11-07T19:00:50.772Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.sanchokusika.workspace-styler": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
