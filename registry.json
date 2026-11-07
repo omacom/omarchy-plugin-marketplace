@@ -158479,8 +158479,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-06",
       "listedAt": "2026-09-06T19:01:18.585Z",
-      "listingValidatedCommit": "5013a7e65ea5f7189d865975795c039301d3a737",
-      "listingValidatedAt": "2026-10-26T11:23:13.768Z",
+      "listingValidatedCommit": "2ca32ed7ad64e0305f229598209163bcd7872d60",
+      "listingValidatedAt": "2026-11-07T00:59:57.952Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -158489,8 +158489,8 @@
         "pluginIds": [
           "meviusisback.hw-monitor"
         ],
-        "commit": "5013a7e65ea5f7189d865975795c039301d3a737",
-        "checkedAt": "2026-10-26T11:23:13.768Z",
+        "commit": "2ca32ed7ad64e0305f229598209163bcd7872d60",
+        "checkedAt": "2026-11-07T00:59:57.952Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -158582,6 +158582,26 @@
             ],
             "commit": "c217fdbc1e52a52b965f8d996f826613b6d1d9cd",
             "checkedAt": "2026-10-16T13:28:01.614Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "5013a7e65ea5f7189d865975795c039301d3a737",
+          "validatedAt": "2026-10-26T11:23:13.768Z",
+          "branch": "main",
+          "supersededAt": "2026-11-07T00:59:57.952Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "meviusisback/omarchy-hw-monitor",
+            "pluginIds": [
+              "meviusisback.hw-monitor"
+            ],
+            "commit": "5013a7e65ea5f7189d865975795c039301d3a737",
+            "checkedAt": "2026-10-26T11:23:13.768Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
