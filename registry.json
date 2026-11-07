@@ -413160,6 +413160,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MaNi4/omarchy-browser-tab-search",
+      "type": "plugin-source",
+      "addedAt": "2026-11-07",
+      "listedAt": "2026-11-07T09:52:13.604Z",
+      "listingValidatedCommit": "98e3f2f17ddfb1e2389396905120152afaaea455",
+      "listingValidatedAt": "2026-11-07T09:52:13.604Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mani4/omarchy-browser-tab-search",
+        "pluginIds": [
+          "mani4.browser-tab-search"
+        ],
+        "commit": "98e3f2f17ddfb1e2389396905120152afaaea455",
+        "checkedAt": "2026-11-07T09:52:13.453Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mani4.browser-tab-search": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
