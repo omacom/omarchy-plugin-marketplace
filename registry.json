@@ -259287,8 +259287,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-25",
       "listedAt": "2026-09-25T09:42:48.609Z",
-      "listingValidatedCommit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
-      "listingValidatedAt": "2026-10-16T23:39:33.286Z",
+      "listingValidatedCommit": "e582b34bd7bf102269ca3b03a0addec8bbe1e694",
+      "listingValidatedAt": "2026-11-08T23:43:15.621Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -259297,8 +259297,8 @@
         "pluginIds": [
           "gregl83.plancks"
         ],
-        "commit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
-        "checkedAt": "2026-10-16T23:39:33.286Z",
+        "commit": "e582b34bd7bf102269ca3b03a0addec8bbe1e694",
+        "checkedAt": "2026-11-08T23:43:15.621Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -259617,6 +259617,49 @@
             "reviewedAt": "2026-10-15T19:10:17.115Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
+          "validatedAt": "2026-10-16T23:39:33.286Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T23:43:15.621Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "gregl83/omarchy-plancks",
+            "pluginIds": [
+              "gregl83.plancks"
+            ],
+            "commit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
+            "checkedAt": "2026-10-16T23:39:33.286Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "gregl83/omarchy-plancks",
+            "pluginIds": [
+              "gregl83.plancks"
+            ],
+            "commit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-16T23:39:33.286Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-16T21:29:21.538Z",
+            "requestEventId": 33491916663,
+            "requestedAt": "2026-10-16T23:39:01Z",
+            "reviewedAt": "2026-10-16T23:39:33.286Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -259625,19 +259668,19 @@
         "pluginIds": [
           "gregl83.plancks"
         ],
-        "commit": "45fd58042cf0cf75d6a33be097b1cd82f894c2e7",
+        "commit": "e582b34bd7bf102269ca3b03a0addec8bbe1e694",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-16T23:39:33.286Z",
+        "baselineCheckedAt": "2026-11-08T23:43:15.621Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-16T21:29:21.538Z",
-        "requestEventId": 33491916663,
-        "requestedAt": "2026-10-16T23:39:01Z",
-        "reviewedAt": "2026-10-16T23:39:33.286Z",
+        "reviewedBaselineCheckedAt": "2026-11-06T23:20:50.282Z",
+        "requestEventId": 35520338033,
+        "requestedAt": "2026-11-08T23:42:40Z",
+        "reviewedAt": "2026-11-08T23:43:15.621Z",
         "reviewer": "HANCORE-linux"
       }
     },
