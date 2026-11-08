@@ -413475,8 +413475,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-06",
       "listedAt": "2026-11-06T04:50:26.346Z",
-      "listingValidatedCommit": "c6edb90e82e1f4498e86d530483231cc28c4cc83",
-      "listingValidatedAt": "2026-11-06T04:50:26.346Z",
+      "listingValidatedCommit": "2fbbd4cfcf7145141d0596b7bddba73a5b09b400",
+      "listingValidatedAt": "2026-11-08T22:06:29.573Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -413485,8 +413485,8 @@
         "pluginIds": [
           "abdelhakim.salat"
         ],
-        "commit": "c6edb90e82e1f4498e86d530483231cc28c4cc83",
-        "checkedAt": "2026-11-06T04:50:26.194Z",
+        "commit": "2fbbd4cfcf7145141d0596b7bddba73a5b09b400",
+        "checkedAt": "2026-11-08T22:06:29.573Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -413501,7 +413501,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c6edb90e82e1f4498e86d530483231cc28c4cc83",
+          "validatedAt": "2026-11-06T04:50:26.346Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T22:06:29.573Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "abdelhakim-baalla/omarchy-salat-times",
+            "pluginIds": [
+              "abdelhakim.salat"
+            ],
+            "commit": "c6edb90e82e1f4498e86d530483231cc28c4cc83",
+            "checkedAt": "2026-11-06T04:50:26.194Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/felipecpaiva/omagnet",
