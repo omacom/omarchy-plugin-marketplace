@@ -416285,6 +416285,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jordi-adame/omarchy-idle-timer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T14:35:07.372Z",
+      "listingValidatedCommit": "d9e1f68eb44da778910e9111f65a97db2bd06fab",
+      "listingValidatedAt": "2026-11-08T14:35:07.372Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jordi-adame/omarchy-idle-timer",
+        "pluginIds": [
+          "io.github.jordi-adame.idle-timer"
+        ],
+        "commit": "d9e1f68eb44da778910e9111f65a97db2bd06fab",
+        "checkedAt": "2026-11-08T14:35:07.198Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jordi-adame.idle-timer": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
