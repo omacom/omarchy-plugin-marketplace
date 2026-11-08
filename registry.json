@@ -416182,6 +416182,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TibeDev/Omadice",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T12:15:18.756Z",
+      "listingValidatedCommit": "34d50cdc63d0a0be59309abd1a38fb16dca6cc97",
+      "listingValidatedAt": "2026-11-08T12:15:18.756Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tibedev/omadice",
+        "pluginIds": [
+          "tibevdb.dice"
+        ],
+        "commit": "34d50cdc63d0a0be59309abd1a38fb16dca6cc97",
+        "checkedAt": "2026-11-08T12:15:18.575Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tibevdb.dice": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "kids"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
