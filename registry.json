@@ -372591,8 +372591,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T23:28:32.507Z",
-      "listingValidatedCommit": "18d7bab3c3cba846b3ff674cd47c91b5d9d76324",
-      "listingValidatedAt": "2026-10-28T00:47:07.631Z",
+      "listingValidatedCommit": "aa6a4943f72d172801635cac8f6d11f3f401bb20",
+      "listingValidatedAt": "2026-11-08T02:02:48.995Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -372601,8 +372601,8 @@
         "pluginIds": [
           "io.github.qempexe.vitrine"
         ],
-        "commit": "18d7bab3c3cba846b3ff674cd47c91b5d9d76324",
-        "checkedAt": "2026-10-28T00:47:07.631Z",
+        "commit": "aa6a4943f72d172801635cac8f6d11f3f401bb20",
+        "checkedAt": "2026-11-08T02:02:48.995Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -372633,6 +372633,26 @@
             ],
             "commit": "3afa3cc09681e773014ed4c673b5d36b1905a7c6",
             "checkedAt": "2026-10-19T23:28:32.330Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "18d7bab3c3cba846b3ff674cd47c91b5d9d76324",
+          "validatedAt": "2026-10-28T00:47:07.631Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T02:02:48.995Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-vitrine",
+            "pluginIds": [
+              "io.github.qempexe.vitrine"
+            ],
+            "commit": "18d7bab3c3cba846b3ff674cd47c91b5d9d76324",
+            "checkedAt": "2026-10-28T00:47:07.631Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
