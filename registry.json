@@ -306612,8 +306612,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-02",
       "listedAt": "2026-10-02T16:41:38.799Z",
-      "listingValidatedCommit": "0a9e5a0183c3ad9cafc098c8f3857fa8a294fef2",
-      "listingValidatedAt": "2026-10-14T04:13:34.851Z",
+      "listingValidatedCommit": "93897ed1606e455cebc083e21e59a078e8c9a09b",
+      "listingValidatedAt": "2026-11-08T19:12:37.029Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -306622,8 +306622,8 @@
         "pluginIds": [
           "io.github.qempexe.window-dust"
         ],
-        "commit": "0a9e5a0183c3ad9cafc098c8f3857fa8a294fef2",
-        "checkedAt": "2026-10-14T04:13:34.851Z",
+        "commit": "93897ed1606e455cebc083e21e59a078e8c9a09b",
+        "checkedAt": "2026-11-08T19:12:37.029Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -306695,6 +306695,26 @@
             ],
             "commit": "0aa148806664b05c972bf14b47bb6502fdb2b96c",
             "checkedAt": "2026-10-06T03:26:53.645Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "0a9e5a0183c3ad9cafc098c8f3857fa8a294fef2",
+          "validatedAt": "2026-10-14T04:13:34.851Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T19:12:37.029Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-window-dust",
+            "pluginIds": [
+              "io.github.qempexe.window-dust"
+            ],
+            "commit": "0a9e5a0183c3ad9cafc098c8f3857fa8a294fef2",
+            "checkedAt": "2026-10-14T04:13:34.851Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
