@@ -370671,8 +370671,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T01:05:43.212Z",
-      "listingValidatedCommit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
-      "listingValidatedAt": "2026-10-26T17:08:48.831Z",
+      "listingValidatedCommit": "5dc7dc4e76fc68e58408a2880c8a259ad62cf04e",
+      "listingValidatedAt": "2026-11-08T21:32:03.820Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -370681,8 +370681,8 @@
         "pluginIds": [
           "omarcraft.productivity"
         ],
-        "commit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
-        "checkedAt": "2026-10-26T17:08:48.831Z",
+        "commit": "5dc7dc4e76fc68e58408a2880c8a259ad62cf04e",
+        "checkedAt": "2026-11-08T21:32:03.820Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -370699,27 +370699,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "dreamsgarage/omarcraft",
-        "pluginIds": [
-          "omarcraft.productivity"
-        ],
-        "commit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T17:08:48.831Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-24T11:26:47.603Z",
-        "requestEventId": 34284918784,
-        "requestedAt": "2026-10-26T17:08:19Z",
-        "reviewedAt": "2026-10-26T17:08:48.831Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -370764,8 +370743,72 @@
             "reviewedAt": "2026-10-19T01:05:43.073Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
+          "validatedAt": "2026-10-26T17:08:48.831Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T21:32:03.820Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dreamsgarage/omarcraft",
+            "pluginIds": [
+              "omarcraft.productivity"
+            ],
+            "commit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
+            "checkedAt": "2026-10-26T17:08:48.831Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dreamsgarage/omarcraft",
+            "pluginIds": [
+              "omarcraft.productivity"
+            ],
+            "commit": "9ab072a617f5d59c106f2b6c94a8c91e7e5980ee",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T17:08:48.831Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-24T11:26:47.603Z",
+            "requestEventId": 34284918784,
+            "requestedAt": "2026-10-26T17:08:19Z",
+            "reviewedAt": "2026-10-26T17:08:48.831Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dreamsgarage/omarcraft",
+        "pluginIds": [
+          "omarcraft.productivity"
+        ],
+        "commit": "5dc7dc4e76fc68e58408a2880c8a259ad62cf04e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T21:32:03.820Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T20:48:57.743Z",
+        "requestEventId": 35514602893,
+        "requestedAt": "2026-11-08T21:31:30Z",
+        "reviewedAt": "2026-11-08T21:32:03.820Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/Linus342010/firefox-keep-awake",
