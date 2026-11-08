@@ -415167,8 +415167,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-07",
       "listedAt": "2026-11-07T14:37:54.526Z",
-      "listingValidatedCommit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
-      "listingValidatedAt": "2026-11-07T14:37:54.526Z",
+      "listingValidatedCommit": "3ebb3840564216f33b51321135b672d93bb2bb90",
+      "listingValidatedAt": "2026-11-08T06:06:12.892Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -415177,35 +415177,14 @@
         "pluginIds": [
           "io.github.wfongcn.touchtype"
         ],
-        "commit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
-        "checkedAt": "2026-11-07T14:37:54.383Z",
+        "commit": "3ebb3840564216f33b51321135b672d93bb2bb90",
+        "checkedAt": "2026-11-08T06:06:12.892Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "wfongcn/touchtype",
-        "pluginIds": [
-          "io.github.wfongcn.touchtype"
-        ],
-        "commit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-07T14:37:54.383Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-07T14:31:15.104Z",
-        "requestEventId": 35438167002,
-        "requestedAt": "2026-11-07T14:37:28Z",
-        "reviewedAt": "2026-11-07T14:37:54.383Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.wfongcn.touchtype": {
@@ -415217,7 +415196,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wfongcn/touchtype",
+        "pluginIds": [
+          "io.github.wfongcn.touchtype"
+        ],
+        "commit": "3ebb3840564216f33b51321135b672d93bb2bb90",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T06:06:12.892Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T05:25:10.326Z",
+        "requestEventId": 35478851159,
+        "requestedAt": "2026-11-08T06:05:38Z",
+        "reviewedAt": "2026-11-08T06:06:12.892Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
+          "validatedAt": "2026-11-07T14:37:54.526Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T06:06:12.892Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "wfongcn/touchtype",
+            "pluginIds": [
+              "io.github.wfongcn.touchtype"
+            ],
+            "commit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
+            "checkedAt": "2026-11-07T14:37:54.383Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "wfongcn/touchtype",
+            "pluginIds": [
+              "io.github.wfongcn.touchtype"
+            ],
+            "commit": "a607064c4a12428e176425e7d96eee81b1a4ab1f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-07T14:37:54.383Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-07T14:31:15.104Z",
+            "requestEventId": 35438167002,
+            "requestedAt": "2026-11-07T14:37:28Z",
+            "reviewedAt": "2026-11-07T14:37:54.383Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/0xakadev/omarchy-redmi-neo",
