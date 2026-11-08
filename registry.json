@@ -416353,6 +416353,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/seth-reee/OmaWallSwitcher",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T16:23:36.260Z",
+      "listingValidatedCommit": "a55a56a6a0486de3c6f9c49cad1d2e792bf704ac",
+      "listingValidatedAt": "2026-11-08T16:23:36.260Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "seth-reee/omawallswitcher",
+        "pluginIds": [
+          "seth.wallpaper-slideshow"
+        ],
+        "commit": "a55a56a6a0486de3c6f9c49cad1d2e792bf704ac",
+        "checkedAt": "2026-11-08T16:23:35.907Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "seth.wallpaper-slideshow": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
