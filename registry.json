@@ -416821,6 +416821,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/THouet/omarchy-cheaperinference-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T21:43:35.532Z",
+      "listingValidatedCommit": "b8319c27f92842d51cf37d070e79ef50ec8c166a",
+      "listingValidatedAt": "2026-11-08T21:43:35.532Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thouet/omarchy-cheaperinference-usage",
+        "pluginIds": [
+          "thouet.cheaperinference-usage"
+        ],
+        "commit": "b8319c27f92842d51cf37d070e79ef50ec8c166a",
+        "checkedAt": "2026-11-08T21:43:35.332Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "thouet.cheaperinference-usage": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
