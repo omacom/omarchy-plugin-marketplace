@@ -340986,8 +340986,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-09",
       "listedAt": "2026-10-09T12:26:14.411Z",
-      "listingValidatedCommit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
-      "listingValidatedAt": "2026-10-10T01:00:22.177Z",
+      "listingValidatedCommit": "516c383c97907cff19ec899588c835d93a4d59b7",
+      "listingValidatedAt": "2026-11-08T21:54:09.348Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -340996,8 +340996,8 @@
         "pluginIds": [
           "io.github.samjage.background-umami"
         ],
-        "commit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
-        "checkedAt": "2026-10-10T01:00:22.177Z",
+        "commit": "516c383c97907cff19ec899588c835d93a4d59b7",
+        "checkedAt": "2026-11-08T21:54:09.348Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -341014,28 +341014,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "samjage/omarchy-background-umami",
-        "pluginIds": [
-          "io.github.samjage.background-umami"
-        ],
-        "commit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-10T01:00:22.177Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-10T00:28:25.928Z",
-        "requestEventId": 32919249782,
-        "requestedAt": "2026-10-10T00:59:51Z",
-        "reviewedAt": "2026-10-10T01:00:22.177Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -341082,8 +341060,75 @@
             "reviewedAt": "2026-10-09T12:26:14.275Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+          "validatedAt": "2026-10-10T01:00:22.177Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T21:54:09.348Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "samjage/omarchy-background-umami",
+            "pluginIds": [
+              "io.github.samjage.background-umami"
+            ],
+            "commit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+            "checkedAt": "2026-10-10T01:00:22.177Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "samjage/omarchy-background-umami",
+            "pluginIds": [
+              "io.github.samjage.background-umami"
+            ],
+            "commit": "c9cc4fde84feed9650feb0a97820d7ddd639993c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-10T01:00:22.177Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-10T00:28:25.928Z",
+            "requestEventId": 32919249782,
+            "requestedAt": "2026-10-10T00:59:51Z",
+            "reviewedAt": "2026-10-10T01:00:22.177Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "samjage/omarchy-background-umami",
+        "pluginIds": [
+          "io.github.samjage.background-umami"
+        ],
+        "commit": "516c383c97907cff19ec899588c835d93a4d59b7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T21:54:09.348Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T20:38:56.008Z",
+        "requestEventId": 35515533718,
+        "requestedAt": "2026-11-08T21:53:36Z",
+        "reviewedAt": "2026-11-08T21:54:09.348Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/danielfuentespl/omarchy-homepage",
