@@ -363573,8 +363573,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-16",
       "listedAt": "2026-10-16T19:41:37.480Z",
-      "listingValidatedCommit": "41fd6ae2a1115e94af5d93889f2cae40c1feaa1a",
-      "listingValidatedAt": "2026-10-16T19:41:37.480Z",
+      "listingValidatedCommit": "3c1eec44b34b14a79fa919373ee109528fb19e9b",
+      "listingValidatedAt": "2026-11-08T00:53:21.816Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -363583,12 +363583,14 @@
         "pluginIds": [
           "oma-space-launch"
         ],
-        "commit": "41fd6ae2a1115e94af5d93889f2cae40c1feaa1a",
-        "checkedAt": "2026-10-16T19:41:37.366Z",
-        "outcome": "passed",
+        "commit": "3c1eec44b34b14a79fa919373ee109528fb19e9b",
+        "checkedAt": "2026-11-08T00:53:21.816Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "installer"
+        ]
       },
       "plugins": {
         "oma-space-launch": {
@@ -363599,7 +363601,50 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "johnviklund/oma-space-launch",
+        "pluginIds": [
+          "oma-space-launch"
+        ],
+        "commit": "3c1eec44b34b14a79fa919373ee109528fb19e9b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T00:53:21.816Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T00:38:57.354Z",
+        "requestEventId": 35468539738,
+        "requestedAt": "2026-11-08T00:52:43Z",
+        "reviewedAt": "2026-11-08T00:53:21.816Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "41fd6ae2a1115e94af5d93889f2cae40c1feaa1a",
+          "validatedAt": "2026-10-16T19:41:37.480Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T00:53:21.816Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "johnviklund/oma-space-launch",
+            "pluginIds": [
+              "oma-space-launch"
+            ],
+            "commit": "41fd6ae2a1115e94af5d93889f2cae40c1feaa1a",
+            "checkedAt": "2026-10-16T19:41:37.366Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/devfrp/omarchy-dev-ports",
