@@ -415652,6 +415652,61 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Okumai/OkumaTouchpad",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T01:45:28.057Z",
+      "listingValidatedCommit": "c1a86cc439414d6cb84f72935b4d6356dbd043d1",
+      "listingValidatedAt": "2026-11-08T01:45:28.057Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "okumai/okumatouchpad",
+        "pluginIds": [
+          "okuma.dev_touchpad4omarchy"
+        ],
+        "commit": "c1a86cc439414d6cb84f72935b4d6356dbd043d1",
+        "checkedAt": "2026-11-08T01:45:27.866Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "okumai/okumatouchpad",
+        "pluginIds": [
+          "okuma.dev_touchpad4omarchy"
+        ],
+        "commit": "c1a86cc439414d6cb84f72935b4d6356dbd043d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T01:45:27.866Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T01:29:29.267Z",
+        "requestEventId": 35470377227,
+        "requestedAt": "2026-11-08T01:44:55Z",
+        "reviewedAt": "2026-11-08T01:45:27.866Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "okuma.dev_touchpad4omarchy": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
