@@ -416096,6 +416096,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tanishenigma/omarchy-pill-workspaces",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T10:33:25.221Z",
+      "listingValidatedCommit": "c858f6841774b979340411f08eccf6fbe78d7c8a",
+      "listingValidatedAt": "2026-11-08T10:33:25.221Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tanishenigma/omarchy-pill-workspaces",
+        "pluginIds": [
+          "tanishenigma.pill-workspaces"
+        ],
+        "commit": "c858f6841774b979340411f08eccf6fbe78d7c8a",
+        "checkedAt": "2026-11-08T10:33:25.035Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tanishenigma.pill-workspaces": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
