@@ -416453,6 +416453,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RobbieUK1/My-Themes-for-Omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T17:59:36.173Z",
+      "listingValidatedCommit": "d117e2cb7fdb44969303f62e1a59eabd30dcfae1",
+      "listingValidatedAt": "2026-11-08T17:59:36.173Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "robbieuk1/my-themes-for-omarchy",
+        "pluginIds": [
+          "io.github.robbieuk1.my-themes"
+        ],
+        "commit": "d117e2cb7fdb44969303f62e1a59eabd30dcfae1",
+        "checkedAt": "2026-11-08T17:59:35.999Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "robbieuk1/my-themes-for-omarchy",
+        "pluginIds": [
+          "io.github.robbieuk1.my-themes"
+        ],
+        "commit": "d117e2cb7fdb44969303f62e1a59eabd30dcfae1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T17:59:35.999Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T20:36:11.320Z",
+        "requestEventId": 35505511048,
+        "requestedAt": "2026-11-08T17:59:06Z",
+        "reviewedAt": "2026-11-08T17:59:35.999Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.robbieuk1.my-themes": {
+          "category": "Appearance",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
