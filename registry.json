@@ -90757,8 +90757,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-26",
       "listedAt": "2026-08-26T21:54:30.188Z",
-      "listingValidatedCommit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
-      "listingValidatedAt": "2026-08-30T13:58:29.011Z",
+      "listingValidatedCommit": "93db140134f21c51567d55bd59b8ccb076437f5f",
+      "listingValidatedAt": "2026-11-08T06:15:35.177Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -90767,8 +90767,8 @@
         "pluginIds": [
           "henri.timed-shutdown"
         ],
-        "commit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
-        "checkedAt": "2026-08-30T13:58:29.011Z",
+        "commit": "93db140134f21c51567d55bd59b8ccb076437f5f",
+        "checkedAt": "2026-11-08T06:15:35.177Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -90786,27 +90786,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "henri1130/omarchy-timed-shutdown",
-        "pluginIds": [
-          "henri.timed-shutdown"
-        ],
-        "commit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T13:58:29.011Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T13:34:16.133Z",
-        "requestEventId": 30237601885,
-        "requestedAt": "2026-08-30T13:57:56Z",
-        "reviewedAt": "2026-08-30T13:58:29.011Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -90851,8 +90830,72 @@
             "reviewedAt": "2026-08-26T21:54:30.150Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
+          "validatedAt": "2026-08-30T13:58:29.011Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T06:15:35.177Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "henri1130/omarchy-timed-shutdown",
+            "pluginIds": [
+              "henri.timed-shutdown"
+            ],
+            "commit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
+            "checkedAt": "2026-08-30T13:58:29.011Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "henri1130/omarchy-timed-shutdown",
+            "pluginIds": [
+              "henri.timed-shutdown"
+            ],
+            "commit": "e7a419e2db9ae3b1007254f530a86ead6be4fee4",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T13:58:29.011Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T13:34:16.133Z",
+            "requestEventId": 30237601885,
+            "requestedAt": "2026-08-30T13:57:56Z",
+            "reviewedAt": "2026-08-30T13:58:29.011Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "henri1130/omarchy-timed-shutdown",
+        "pluginIds": [
+          "henri.timed-shutdown"
+        ],
+        "commit": "93db140134f21c51567d55bd59b8ccb076437f5f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T06:15:35.177Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-07T23:34:34.764Z",
+        "requestEventId": 35479138679,
+        "requestedAt": "2026-11-08T06:15:07Z",
+        "reviewedAt": "2026-11-08T06:15:35.177Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/saidrmdhani/omarchy-dogbark",
