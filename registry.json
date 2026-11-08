@@ -415500,6 +415500,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Roddygithub/omautocliker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T01:10:02.701Z",
+      "listingValidatedCommit": "91e9fb85ee3263715fd6efaf06226a4a2b2cd4d1",
+      "listingValidatedAt": "2026-11-08T01:10:02.701Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "roddygithub/omautocliker",
+        "pluginIds": [
+          "roddy.omautocliker"
+        ],
+        "commit": "91e9fb85ee3263715fd6efaf06226a4a2b2cd4d1",
+        "checkedAt": "2026-11-08T01:10:02.541Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "roddygithub/omautocliker",
+        "pluginIds": [
+          "roddy.omautocliker"
+        ],
+        "commit": "91e9fb85ee3263715fd6efaf06226a4a2b2cd4d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T01:10:02.541Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T01:02:38.617Z",
+        "requestEventId": 35469170512,
+        "requestedAt": "2026-11-08T01:09:33Z",
+        "reviewedAt": "2026-11-08T01:10:02.542Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "roddy.omautocliker": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
