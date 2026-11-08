@@ -348888,8 +348888,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-11",
       "listedAt": "2026-10-11T18:24:48.916Z",
-      "listingValidatedCommit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
-      "listingValidatedAt": "2026-11-06T22:45:49.853Z",
+      "listingValidatedCommit": "da2983ab101fe7f45c1f03e8accbd7ad617c3a29",
+      "listingValidatedAt": "2026-11-08T04:53:12.746Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -348898,8 +348898,8 @@
         "pluginIds": [
           "janitorhead.quotatank"
         ],
-        "commit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
-        "checkedAt": "2026-11-06T22:45:49.853Z",
+        "commit": "da2983ab101fe7f45c1f03e8accbd7ad617c3a29",
+        "checkedAt": "2026-11-08T04:53:12.746Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -349107,6 +349107,51 @@
             "reviewedAt": "2026-10-26T17:43:33.989Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
+          "validatedAt": "2026-11-06T22:45:49.853Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T04:53:12.746Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "janitorhead/omarchy-quotatank",
+            "pluginIds": [
+              "janitorhead.quotatank"
+            ],
+            "commit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
+            "checkedAt": "2026-11-06T22:45:49.853Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "janitorhead/omarchy-quotatank",
+            "pluginIds": [
+              "janitorhead.quotatank"
+            ],
+            "commit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-06T22:45:49.853Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-05T01:19:03.984Z",
+            "requestEventId": 35396911285,
+            "requestedAt": "2026-11-06T22:42:05Z",
+            "reviewedAt": "2026-11-06T22:45:49.853Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -349115,20 +349160,20 @@
         "pluginIds": [
           "janitorhead.quotatank"
         ],
-        "commit": "09862e4514a5fcdeda3948d8f31a6fe1a886db8b",
+        "commit": "da2983ab101fe7f45c1f03e8accbd7ad617c3a29",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-06T22:45:49.853Z",
+        "baselineCheckedAt": "2026-11-08T04:53:12.746Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "privilege",
           "service-management"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-05T01:19:03.984Z",
-        "requestEventId": 35396911285,
-        "requestedAt": "2026-11-06T22:42:05Z",
-        "reviewedAt": "2026-11-06T22:45:49.853Z",
+        "reviewedBaselineCheckedAt": "2026-11-07T11:57:53.108Z",
+        "requestEventId": 35476667295,
+        "requestedAt": "2026-11-08T04:52:33Z",
+        "reviewedAt": "2026-11-08T04:53:12.746Z",
         "reviewer": "HANCORE-linux"
       }
     },
