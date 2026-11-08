@@ -416419,6 +416419,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/charbelsarkis/omarchy-bastion",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T17:48:51.039Z",
+      "listingValidatedCommit": "302bc90dce3ded599e279ddd3a200283ea86ea98",
+      "listingValidatedAt": "2026-11-08T17:48:51.039Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "charbelsarkis/omarchy-bastion",
+        "pluginIds": [
+          "charbel.bastion"
+        ],
+        "commit": "302bc90dce3ded599e279ddd3a200283ea86ea98",
+        "checkedAt": "2026-11-08T17:48:50.886Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "charbel.bastion": {
+          "category": "Widgets",
+          "tags": [
+            "security",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
