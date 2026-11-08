@@ -416387,6 +416387,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/erasmus/omarchy-birdseye",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T17:38:17.973Z",
+      "listingValidatedCommit": "71b1637b4ce0375ba54427f68b8121b7666489f6",
+      "listingValidatedAt": "2026-11-08T17:38:17.973Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erasmus/omarchy-birdseye",
+        "pluginIds": [
+          "erasmus.birdseye"
+        ],
+        "commit": "71b1637b4ce0375ba54427f68b8121b7666489f6",
+        "checkedAt": "2026-11-08T17:38:17.788Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "erasmus.birdseye": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
