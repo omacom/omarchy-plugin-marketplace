@@ -416253,6 +416253,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/culcat/CursorFinder",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T14:28:20.976Z",
+      "listingValidatedCommit": "dd562886874787bddc04de0bc8f19e2fc2748c25",
+      "listingValidatedAt": "2026-11-08T14:28:20.976Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "culcat/cursorfinder",
+        "pluginIds": [
+          "culcat.cursor-finder"
+        ],
+        "commit": "dd562886874787bddc04de0bc8f19e2fc2748c25",
+        "checkedAt": "2026-11-08T14:28:20.796Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "culcat.cursor-finder": {
+          "category": "System",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
