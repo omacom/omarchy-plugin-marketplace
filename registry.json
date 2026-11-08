@@ -407442,8 +407442,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T19:17:01.183Z",
-      "listingValidatedCommit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
-      "listingValidatedAt": "2026-11-07T01:23:08.916Z",
+      "listingValidatedCommit": "c9ffe5f173882991517036c32adefe406c5ac450",
+      "listingValidatedAt": "2026-11-08T07:28:11.164Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -407452,8 +407452,8 @@
         "pluginIds": [
           "caionazario.island"
         ],
-        "commit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
-        "checkedAt": "2026-11-07T01:23:08.916Z",
+        "commit": "c9ffe5f173882991517036c32adefe406c5ac450",
+        "checkedAt": "2026-11-08T07:28:11.163Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -407476,28 +407476,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "caionazario/island-omarchy",
-        "pluginIds": [
-          "caionazario.island"
-        ],
-        "commit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-07T01:23:08.916Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-07T00:18:02.590Z",
-        "requestEventId": 35405971934,
-        "requestedAt": "2026-11-07T01:22:33Z",
-        "reviewedAt": "2026-11-07T01:23:08.916Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -407544,8 +407522,75 @@
             "reviewedAt": "2026-11-02T19:17:01.014Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
+          "validatedAt": "2026-11-07T01:23:08.916Z",
+          "branch": "main",
+          "supersededAt": "2026-11-08T07:28:11.164Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "caionazario/island-omarchy",
+            "pluginIds": [
+              "caionazario.island"
+            ],
+            "commit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
+            "checkedAt": "2026-11-07T01:23:08.916Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "caionazario/island-omarchy",
+            "pluginIds": [
+              "caionazario.island"
+            ],
+            "commit": "89efcf36178b017a7ff79c6c2cb86b55423ec69e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-07T01:23:08.916Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-07T00:18:02.590Z",
+            "requestEventId": 35405971934,
+            "requestedAt": "2026-11-07T01:22:33Z",
+            "reviewedAt": "2026-11-07T01:23:08.916Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "caionazario/island-omarchy",
+        "pluginIds": [
+          "caionazario.island"
+        ],
+        "commit": "c9ffe5f173882991517036c32adefe406c5ac450",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T07:28:11.163Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T05:02:20.722Z",
+        "requestEventId": 35481336294,
+        "requestedAt": "2026-11-08T07:27:42Z",
+        "reviewedAt": "2026-11-08T07:28:11.164Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/stefanoconiglio/omarchy-screen-rotate",
