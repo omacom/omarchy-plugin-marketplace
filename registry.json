@@ -290822,8 +290822,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T14:15:13.736Z",
-      "listingValidatedCommit": "6820a4f893a71729d8f4beab3978046439521ba8",
-      "listingValidatedAt": "2026-11-03T01:59:24.952Z",
+      "listingValidatedCommit": "072657c74eaa70db5a23b71eba05add9fd1c2c9b",
+      "listingValidatedAt": "2026-11-08T03:29:33.044Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -290832,8 +290832,8 @@
         "pluginIds": [
           "tiedeyez.omatree"
         ],
-        "commit": "6820a4f893a71729d8f4beab3978046439521ba8",
-        "checkedAt": "2026-11-03T01:59:24.952Z",
+        "commit": "072657c74eaa70db5a23b71eba05add9fd1c2c9b",
+        "checkedAt": "2026-11-08T03:29:33.044Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -290865,6 +290865,26 @@
             ],
             "commit": "201f5058c3746a23d58710ecafc285baf58b59aa",
             "checkedAt": "2026-10-01T14:15:13.653Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "6820a4f893a71729d8f4beab3978046439521ba8",
+          "validatedAt": "2026-11-03T01:59:24.952Z",
+          "branch": "master",
+          "supersededAt": "2026-11-08T03:29:33.044Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "tiedeyez/omatree",
+            "pluginIds": [
+              "tiedeyez.omatree"
+            ],
+            "commit": "6820a4f893a71729d8f4beab3978046439521ba8",
+            "checkedAt": "2026-11-03T01:59:24.952Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
