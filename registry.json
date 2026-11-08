@@ -416220,6 +416220,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ianhorne73/omarchy-servicem8-jobs",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T13:11:05.576Z",
+      "listingValidatedCommit": "0d75c95dcc111a976881c713e658c584aad8762c",
+      "listingValidatedAt": "2026-11-08T13:11:05.576Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ianhorne73/omarchy-servicem8-jobs",
+        "pluginIds": [
+          "servicem8.jobs"
+        ],
+        "commit": "0d75c95dcc111a976881c713e658c584aad8762c",
+        "checkedAt": "2026-11-08T13:11:05.393Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "servicem8.jobs": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
