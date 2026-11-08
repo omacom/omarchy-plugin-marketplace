@@ -415587,6 +415587,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/cylon58/omarchy-lighting",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T01:34:13.573Z",
+      "listingValidatedCommit": "27fdd6a4bec783b783ad9a27d75dded1ab3d36e4",
+      "listingValidatedAt": "2026-11-08T01:34:13.573Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cylon58/omarchy-lighting",
+        "pluginIds": [
+          "cylon58.lighting"
+        ],
+        "commit": "27fdd6a4bec783b783ad9a27d75dded1ab3d36e4",
+        "checkedAt": "2026-11-08T01:34:13.455Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cylon58/omarchy-lighting",
+        "pluginIds": [
+          "cylon58.lighting"
+        ],
+        "commit": "27fdd6a4bec783b783ad9a27d75dded1ab3d36e4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-08T01:34:13.455Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-08T01:10:33.061Z",
+        "requestEventId": 35469992720,
+        "requestedAt": "2026-11-08T01:33:39Z",
+        "reviewedAt": "2026-11-08T01:34:13.455Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "cylon58.lighting": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
