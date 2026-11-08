@@ -111,7 +111,6 @@
     "quickshell.ytmusic",
     "r4venward.wallpaper-video",
     "raiden-meixelysia.omarchy-pets",
-    "realme-buds.control",
     "rlimberger.grokbar-omarchy",
     "roonakyadav.network-persona",
     "roonakyadav.trash-guard",
@@ -1774,6 +1773,21 @@
       "observedHeadCommit": "45077204d0f807c35a4e7a435a664d0b9c697a1e",
       "observedBranch": "main",
       "observedAt": "2026-11-02T10:49:08.655Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "Alenbosh/Realme-Buds",
+      "toRepository": "manish0467/Realme-Buds",
+      "nodeId": "R_kgDOVXPkXA",
+      "databaseId": 1433658460,
+      "pluginIds": [
+        "realme-buds.control"
+      ],
+      "listedCommit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+      "previousValidatedCommit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+      "observedHeadCommit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+      "observedBranch": "main",
+      "observedAt": "2026-11-07T14:40:00.000Z"
     }
   ],
   "sources": [
@@ -416145,6 +416159,71 @@
           "tags": [
             "bar",
             "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
+    },
+    {
+      "repo": "https://github.com/manish0467/Realme-Buds",
+      "repositoryIdentity": {
+        "schemaVersion": 1,
+        "nodeId": "R_kgDOVXPkXA",
+        "databaseId": 1433658460,
+        "previousRepositories": [
+          "Alenbosh/Realme-Buds"
+        ]
+      },
+      "type": "plugin-source",
+      "addedAt": "2026-10-17",
+      "listedAt": "2026-10-17T23:34:33.690Z",
+      "listingValidatedCommit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+      "listingValidatedAt": "2026-10-17T23:34:33.690Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alenbosh/realme-buds",
+        "pluginIds": [
+          "realme-buds.control"
+        ],
+        "commit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+        "checkedAt": "2026-10-17T23:34:33.603Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alenbosh/realme-buds",
+        "pluginIds": [
+          "realme-buds.control"
+        ],
+        "commit": "6dcf237c59dd25c58e8c6675cd58e7135eefce23",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-10-17T23:34:33.603Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-10-17T16:24:40.703Z",
+        "requestEventId": 33545530720,
+        "requestedAt": "2026-10-17T23:14:33Z",
+        "reviewedAt": "2026-10-17T23:34:33.603Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "realme-buds.control": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
           ],
           "manifestPath": "manifest.json"
         }
