@@ -416670,6 +416670,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/smetak13/omarchy-lightnav",
+      "type": "plugin-source",
+      "addedAt": "2026-11-08",
+      "listedAt": "2026-11-08T20:11:08.426Z",
+      "listingValidatedCommit": "2761321f72e77dc03d9d44b0f3a9095bb1844332",
+      "listingValidatedAt": "2026-11-08T20:11:08.426Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smetak13/omarchy-lightnav",
+        "pluginIds": [
+          "smetak13.lightnav"
+        ],
+        "commit": "2761321f72e77dc03d9d44b0f3a9095bb1844332",
+        "checkedAt": "2026-11-08T20:11:08.234Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "smetak13.lightnav": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
