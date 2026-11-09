@@ -64236,8 +64236,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-23",
       "listedAt": "2026-08-23T16:03:37.105Z",
-      "listingValidatedCommit": "9db58874d66f8573af1b448511213b4997e5b16c",
-      "listingValidatedAt": "2026-11-07T01:29:02.805Z",
+      "listingValidatedCommit": "5f3d76d629eeeb717023ba169116995c0366511c",
+      "listingValidatedAt": "2026-11-09T23:12:58.811Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -64246,8 +64246,8 @@
         "pluginIds": [
           "expose.window-overview"
         ],
-        "commit": "9db58874d66f8573af1b448511213b4997e5b16c",
-        "checkedAt": "2026-11-07T01:29:02.805Z",
+        "commit": "5f3d76d629eeeb717023ba169116995c0366511c",
+        "checkedAt": "2026-11-09T23:12:58.811Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -64419,6 +64419,26 @@
             ],
             "commit": "805adb947e634ff4d0c3924cbbe993beae9e3319",
             "checkedAt": "2026-10-01T06:13:56.446Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "9db58874d66f8573af1b448511213b4997e5b16c",
+          "validatedAt": "2026-11-07T01:29:02.805Z",
+          "branch": "main",
+          "supersededAt": "2026-11-09T23:12:58.811Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "kristofferr/omarchy-expose",
+            "pluginIds": [
+              "expose.window-overview"
+            ],
+            "commit": "9db58874d66f8573af1b448511213b4997e5b16c",
+            "checkedAt": "2026-11-07T01:29:02.805Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
