@@ -417086,6 +417086,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/simoncrypta/omarchy-kagi",
+      "type": "plugin-source",
+      "addedAt": "2026-11-09",
+      "listedAt": "2026-11-09T23:23:16.971Z",
+      "listingValidatedCommit": "02b9a63e8192b6d5573f8fa8f64d612b9909161e",
+      "listingValidatedAt": "2026-11-09T23:23:16.971Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simoncrypta/omarchy-kagi",
+        "pluginIds": [
+          "kagi-search"
+        ],
+        "commit": "02b9a63e8192b6d5573f8fa8f64d612b9909161e",
+        "checkedAt": "2026-11-09T23:23:16.812Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kagi-search": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
