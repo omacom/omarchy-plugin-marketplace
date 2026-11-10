@@ -418199,6 +418199,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/swald54000/omarchy-msi-fans",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T11:27:23.379Z",
+      "listingValidatedCommit": "e6fb40038ed12b98a8eab6151d87247f1350eded",
+      "listingValidatedAt": "2026-11-10T11:27:23.379Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "swald54000/omarchy-msi-fans",
+        "pluginIds": [
+          "swald.fans"
+        ],
+        "commit": "e6fb40038ed12b98a8eab6151d87247f1350eded",
+        "checkedAt": "2026-11-10T11:27:23.265Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "swald.fans": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
