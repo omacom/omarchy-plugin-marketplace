@@ -418822,6 +418822,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kryst-0/omarchy-treni-italia",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T16:29:23.282Z",
+      "listingValidatedCommit": "d06ff984fb98bd9929188f21e14fd8c6d70d412e",
+      "listingValidatedAt": "2026-11-10T16:29:23.282Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kryst-0/omarchy-treni-italia",
+        "pluginIds": [
+          "krysto.treni"
+        ],
+        "commit": "d06ff984fb98bd9929188f21e14fd8c6d70d412e",
+        "checkedAt": "2026-11-10T16:29:23.091Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "krysto.treni": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
