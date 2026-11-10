@@ -419977,6 +419977,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/h45sh/omarchy-webstat",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T23:24:18.705Z",
+      "listingValidatedCommit": "f61d90fe840de3bc36c6ecfe33579baec3bdaaa1",
+      "listingValidatedAt": "2026-11-10T23:24:18.705Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "h45sh/omarchy-webstat",
+        "pluginIds": [
+          "h45sh.webstat"
+        ],
+        "commit": "f61d90fe840de3bc36c6ecfe33579baec3bdaaa1",
+        "checkedAt": "2026-11-10T23:24:18.517Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "h45sh/omarchy-webstat",
+        "pluginIds": [
+          "h45sh.webstat"
+        ],
+        "commit": "f61d90fe840de3bc36c6ecfe33579baec3bdaaa1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T23:24:18.517Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T23:20:42.591Z",
+        "requestEventId": 35741123931,
+        "requestedAt": "2026-11-10T23:23:41Z",
+        "reviewedAt": "2026-11-10T23:24:18.517Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "h45sh.webstat": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
