@@ -417598,6 +417598,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/All-Things-Omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T05:50:54.247Z",
+      "listingValidatedCommit": "37518004e3cab54dec127b18502098fca57fe8e9",
+      "listingValidatedAt": "2026-11-10T05:50:54.247Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/all-things-omarchy",
+        "pluginIds": [
+          "kel.all-things-omarchy"
+        ],
+        "commit": "37518004e3cab54dec127b18502098fca57fe8e9",
+        "checkedAt": "2026-11-10T05:50:54.042Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kel.all-things-omarchy": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
