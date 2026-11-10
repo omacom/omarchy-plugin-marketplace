@@ -374821,8 +374821,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T15:29:57.274Z",
-      "listingValidatedCommit": "a53c540858a582d55fff478b217ec812f0891393",
-      "listingValidatedAt": "2026-10-20T15:29:57.274Z",
+      "listingValidatedCommit": "77fbcf8e9f478eb84154b777c3d7a4fec37d9f43",
+      "listingValidatedAt": "2026-11-10T16:42:37.341Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -374831,8 +374831,8 @@
         "pluginIds": [
           "io.github.mechanicsunlocked.winplug"
         ],
-        "commit": "a53c540858a582d55fff478b217ec812f0891393",
-        "checkedAt": "2026-10-20T15:29:57.150Z",
+        "commit": "77fbcf8e9f478eb84154b777c3d7a4fec37d9f43",
+        "checkedAt": "2026-11-10T16:42:37.341Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -374842,30 +374842,6 @@
           "package-manager",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "mechanicsunlocked/winplug",
-        "pluginIds": [
-          "io.github.mechanicsunlocked.winplug"
-        ],
-        "commit": "a53c540858a582d55fff478b217ec812f0891393",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-20T15:29:57.150Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "installer",
-          "package-manager",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-20T09:32:45.471Z",
-        "requestEventId": 33756128121,
-        "requestedAt": "2026-10-20T15:20:04Z",
-        "reviewedAt": "2026-10-20T15:29:57.150Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.mechanicsunlocked.winplug": {
@@ -374880,7 +374856,82 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mechanicsunlocked/winplug",
+        "pluginIds": [
+          "io.github.mechanicsunlocked.winplug"
+        ],
+        "commit": "77fbcf8e9f478eb84154b777c3d7a4fec37d9f43",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T16:42:37.341Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T16:31:29.065Z",
+        "requestEventId": 35704872198,
+        "requestedAt": "2026-11-10T16:41:57Z",
+        "reviewedAt": "2026-11-10T16:42:37.341Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a53c540858a582d55fff478b217ec812f0891393",
+          "validatedAt": "2026-10-20T15:29:57.274Z",
+          "branch": "master",
+          "supersededAt": "2026-11-10T16:42:37.341Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mechanicsunlocked/winplug",
+            "pluginIds": [
+              "io.github.mechanicsunlocked.winplug"
+            ],
+            "commit": "a53c540858a582d55fff478b217ec812f0891393",
+            "checkedAt": "2026-10-20T15:29:57.150Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "package-manager",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mechanicsunlocked/winplug",
+            "pluginIds": [
+              "io.github.mechanicsunlocked.winplug"
+            ],
+            "commit": "a53c540858a582d55fff478b217ec812f0891393",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-20T15:29:57.150Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "installer",
+              "package-manager",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-20T09:32:45.471Z",
+            "requestEventId": 33756128121,
+            "requestedAt": "2026-10-20T15:20:04Z",
+            "reviewedAt": "2026-10-20T15:29:57.150Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/guruthechosen/omarchywritingtool",
