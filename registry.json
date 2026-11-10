@@ -418269,6 +418269,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Aprabin98/omarchy-vice-city-radial",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T12:43:29.156Z",
+      "listingValidatedCommit": "9f6c8efa25bd8683a65846e3ddd58bae1852b2bd",
+      "listingValidatedAt": "2026-11-10T12:43:29.156Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aprabin98/omarchy-vice-city-radial",
+        "pluginIds": [
+          "aprabin98.vice-city-radial"
+        ],
+        "commit": "9f6c8efa25bd8683a65846e3ddd58bae1852b2bd",
+        "checkedAt": "2026-11-10T12:43:28.969Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aprabin98.vice-city-radial": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
