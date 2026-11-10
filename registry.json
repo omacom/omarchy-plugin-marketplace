@@ -419539,6 +419539,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cichowlasp/omarchy-monka-g995w",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T19:54:00.578Z",
+      "listingValidatedCommit": "0ca0923ce8287c75a19198ea2d46396722b0adcc",
+      "listingValidatedAt": "2026-11-10T19:54:00.578Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cichowlasp/omarchy-monka-g995w",
+        "pluginIds": [
+          "io.github.cichowlasp.monka-g995w"
+        ],
+        "commit": "0ca0923ce8287c75a19198ea2d46396722b0adcc",
+        "checkedAt": "2026-11-10T19:54:00.461Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cichowlasp/omarchy-monka-g995w",
+        "pluginIds": [
+          "io.github.cichowlasp.monka-g995w"
+        ],
+        "commit": "0ca0923ce8287c75a19198ea2d46396722b0adcc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T19:54:00.461Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T19:48:49.465Z",
+        "requestEventId": 35723204029,
+        "requestedAt": "2026-11-10T19:53:29Z",
+        "reviewedAt": "2026-11-10T19:54:00.461Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cichowlasp.monka-g995w": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
