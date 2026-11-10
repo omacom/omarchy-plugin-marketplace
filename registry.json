@@ -419827,6 +419827,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rocanrolpsycho/glasslock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T22:12:55.191Z",
+      "listingValidatedCommit": "65f74d185a6c0defb9720c087cddb46956fa699e",
+      "listingValidatedAt": "2026-11-10T22:12:55.191Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rocanrolpsycho/glasslock",
+        "pluginIds": [
+          "io.github.rocanrolpsycho.glasslock"
+        ],
+        "commit": "65f74d185a6c0defb9720c087cddb46956fa699e",
+        "checkedAt": "2026-11-10T22:12:55.034Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rocanrolpsycho.glasslock": {
+          "category": "Appearance",
+          "tags": [
+            "security",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
