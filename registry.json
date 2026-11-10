@@ -418166,6 +418166,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/washburnello/omatab",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T11:14:12.271Z",
+      "listingValidatedCommit": "370aa64544f335f85c7521e8abf7f580101b490a",
+      "listingValidatedAt": "2026-11-10T11:14:12.271Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "washburnello/omatab",
+        "pluginIds": [
+          "washburnello.omatab"
+        ],
+        "commit": "370aa64544f335f85c7521e8abf7f580101b490a",
+        "checkedAt": "2026-11-10T11:14:12.115Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "washburnello.omatab": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
