@@ -417163,6 +417163,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/KamradSmeshnyavy/omarchy-dotmatrix-network",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T03:05:32.516Z",
+      "listingValidatedCommit": "3cfaa142f872aba9d261c1e01c5cf379fbcf8fc1",
+      "listingValidatedAt": "2026-11-10T03:05:32.516Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kamradsmeshnyavy/omarchy-dotmatrix-network",
+        "pluginIds": [
+          "kamradsmeshnyavy.network"
+        ],
+        "commit": "3cfaa142f872aba9d261c1e01c5cf379fbcf8fc1",
+        "checkedAt": "2026-11-10T03:05:32.318Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kamradsmeshnyavy.network": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
