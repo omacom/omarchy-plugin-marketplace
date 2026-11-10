@@ -417530,6 +417530,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/casey-cantcode/app-binder",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T05:33:51.985Z",
+      "listingValidatedCommit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
+      "listingValidatedAt": "2026-11-10T05:33:51.985Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "casey-cantcode/app-binder",
+        "pluginIds": [
+          "cantcode.app-binder"
+        ],
+        "commit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
+        "checkedAt": "2026-11-10T05:33:51.831Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "cantcode.app-binder": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
