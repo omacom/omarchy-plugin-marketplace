@@ -418939,6 +418939,42 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/gurvindersingh-web/oamlens",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T16:58:16.304Z",
+      "listingValidatedCommit": "77aa5273ec7d7d1c73558406db405793bd370beb",
+      "listingValidatedAt": "2026-11-10T16:58:16.304Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gurvindersingh-web/oamlens",
+        "pluginIds": [
+          "zoom-lens.magnifier"
+        ],
+        "commit": "77aa5273ec7d7d1c73558406db405793bd370beb",
+        "checkedAt": "2026-11-10T16:58:16.117Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "zoom-lens.magnifier": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
