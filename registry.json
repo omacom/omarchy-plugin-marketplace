@@ -417564,6 +417564,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/timsonner/nitty-griddy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T05:41:48.672Z",
+      "listingValidatedCommit": "bb6cf68ce5cb72e8b88f1addb2bbaff02bad32b0",
+      "listingValidatedAt": "2026-11-10T05:41:48.672Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "timsonner/nitty-griddy",
+        "pluginIds": [
+          "timsonner.nitty-griddy"
+        ],
+        "commit": "bb6cf68ce5cb72e8b88f1addb2bbaff02bad32b0",
+        "checkedAt": "2026-11-10T05:41:48.520Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "timsonner.nitty-griddy": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
