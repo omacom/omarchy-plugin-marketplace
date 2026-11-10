@@ -418081,6 +418081,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hunterseeker101/omarchy-alienfx",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T10:09:19.534Z",
+      "listingValidatedCommit": "839693ab04e544779b35b0f89f60bd43c270e2f3",
+      "listingValidatedAt": "2026-11-10T10:09:19.534Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hunterseeker101/omarchy-alienfx",
+        "pluginIds": [
+          "io.github.hunterseeker101.alienfx"
+        ],
+        "commit": "839693ab04e544779b35b0f89f60bd43c270e2f3",
+        "checkedAt": "2026-11-10T10:09:19.342Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hunterseeker101/omarchy-alienfx",
+        "pluginIds": [
+          "io.github.hunterseeker101.alienfx"
+        ],
+        "commit": "839693ab04e544779b35b0f89f60bd43c270e2f3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T10:09:19.342Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T09:54:55.107Z",
+        "requestEventId": 35667854911,
+        "requestedAt": "2026-11-10T10:05:58Z",
+        "reviewedAt": "2026-11-10T10:09:19.342Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hunterseeker101.alienfx": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
