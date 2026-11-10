@@ -392722,8 +392722,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T00:06:55.124Z",
-      "listingValidatedCommit": "b5fe9b874d42f6f65c88f26f3a1624710aff27cb",
-      "listingValidatedAt": "2026-10-28T00:06:55.124Z",
+      "listingValidatedCommit": "84aaaef7b32c4714668bdd8a6d0949cfb52ba6de",
+      "listingValidatedAt": "2026-11-10T23:55:46.309Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -392732,8 +392732,8 @@
         "pluginIds": [
           "clouddown.fast-lid"
         ],
-        "commit": "b5fe9b874d42f6f65c88f26f3a1624710aff27cb",
-        "checkedAt": "2026-10-28T00:06:54.974Z",
+        "commit": "84aaaef7b32c4714668bdd8a6d0949cfb52ba6de",
+        "checkedAt": "2026-11-10T23:55:46.309Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -392749,7 +392749,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "b5fe9b874d42f6f65c88f26f3a1624710aff27cb",
+          "validatedAt": "2026-10-28T00:06:55.124Z",
+          "branch": "main",
+          "supersededAt": "2026-11-10T23:55:46.309Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "clouddown/fast-lid",
+            "pluginIds": [
+              "clouddown.fast-lid"
+            ],
+            "commit": "b5fe9b874d42f6f65c88f26f3a1624710aff27cb",
+            "checkedAt": "2026-10-28T00:06:54.974Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/lbssousa/omapin",
