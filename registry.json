@@ -418646,6 +418646,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/manish0467/omarchy-arch-updates",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T15:09:45.363Z",
+      "listingValidatedCommit": "893a21e4c65676cd074d3531e1fe3acef447b6a7",
+      "listingValidatedAt": "2026-11-10T15:09:45.363Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "manish0467/omarchy-arch-updates",
+        "pluginIds": [
+          "io.github.manish0467.arch-updates"
+        ],
+        "commit": "893a21e4c65676cd074d3531e1fe3acef447b6a7",
+        "checkedAt": "2026-11-10T15:09:45.233Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "manish0467/omarchy-arch-updates",
+        "pluginIds": [
+          "io.github.manish0467.arch-updates"
+        ],
+        "commit": "893a21e4c65676cd074d3531e1fe3acef447b6a7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T15:09:45.233Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T15:02:45.037Z",
+        "requestEventId": 35694912520,
+        "requestedAt": "2026-11-10T15:05:11Z",
+        "reviewedAt": "2026-11-10T15:09:45.233Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.manish0467.arch-updates": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
