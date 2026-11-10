@@ -418481,6 +418481,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/artu-ole/omarchy-window-stash",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T14:12:43.996Z",
+      "listingValidatedCommit": "8205acda5c380d444437c164809e0078948a9d3f",
+      "listingValidatedAt": "2026-11-10T14:12:43.996Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "artu-ole/omarchy-window-stash",
+        "pluginIds": [
+          "community.window-stash"
+        ],
+        "commit": "8205acda5c380d444437c164809e0078948a9d3f",
+        "checkedAt": "2026-11-10T14:12:43.820Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "community.window-stash": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
