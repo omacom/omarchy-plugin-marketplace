@@ -418427,6 +418427,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kambiz-aghaiepour/omarchy-workspaces-pager",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T13:33:42.200Z",
+      "listingValidatedCommit": "2da3b4cc12287ff46eefe22a32f7720c3c27758e",
+      "listingValidatedAt": "2026-11-10T13:33:42.200Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kambiz-aghaiepour/omarchy-workspaces-pager",
+        "pluginIds": [
+          "io.github.kambiz.workspaces-pager"
+        ],
+        "commit": "2da3b4cc12287ff46eefe22a32f7720c3c27758e",
+        "checkedAt": "2026-11-10T13:33:42.007Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kambiz.workspaces-pager": {
+          "category": "Desktop",
+          "tags": [
+            "workspaces",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
