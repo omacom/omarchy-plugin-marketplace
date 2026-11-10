@@ -363879,8 +363879,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-16",
       "listedAt": "2026-10-16T18:30:33.338Z",
-      "listingValidatedCommit": "c16a9b4a5bfdaf51579d6ea33f1fb5677c8272a7",
-      "listingValidatedAt": "2026-10-16T18:30:33.338Z",
+      "listingValidatedCommit": "9158b9227b5a435388d19357075aa7d425664d17",
+      "listingValidatedAt": "2026-11-10T19:06:30.978Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -363889,8 +363889,8 @@
         "pluginIds": [
           "nathker.dreamspell"
         ],
-        "commit": "c16a9b4a5bfdaf51579d6ea33f1fb5677c8272a7",
-        "checkedAt": "2026-10-16T18:30:33.182Z",
+        "commit": "9158b9227b5a435388d19357075aa7d425664d17",
+        "checkedAt": "2026-11-10T19:06:30.977Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -363904,7 +363904,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "c16a9b4a5bfdaf51579d6ea33f1fb5677c8272a7",
+          "validatedAt": "2026-10-16T18:30:33.338Z",
+          "branch": "main",
+          "supersededAt": "2026-11-10T19:06:30.978Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "na7hk3r/omarchy-dreamspell",
+            "pluginIds": [
+              "nathker.dreamspell"
+            ],
+            "commit": "c16a9b4a5bfdaf51579d6ea33f1fb5677c8272a7",
+            "checkedAt": "2026-10-16T18:30:33.182Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chillboy0101/omarchy-hotspot",
