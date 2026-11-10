@@ -419793,6 +419793,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DerJungeHerr/omarchy-window-zones",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T21:33:56.877Z",
+      "listingValidatedCommit": "23e9d2363c905c6a06a2052544b8bd1d0b41de08",
+      "listingValidatedAt": "2026-11-10T21:33:56.877Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "derjungeherr/omarchy-window-zones",
+        "pluginIds": [
+          "io.github.derjungeherr.window-zones"
+        ],
+        "commit": "23e9d2363c905c6a06a2052544b8bd1d0b41de08",
+        "checkedAt": "2026-11-10T21:33:56.696Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.derjungeherr.window-zones": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
