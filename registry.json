@@ -419661,6 +419661,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/luisalgomez111/omarchy-mimusica",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T20:49:15.588Z",
+      "listingValidatedCommit": "a5337c09c2a0985e1cd8408eef15d7eae9fb7a08",
+      "listingValidatedAt": "2026-11-10T20:49:15.588Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "luisalgomez111/omarchy-mimusica",
+        "pluginIds": [
+          "io.github.luisalgomez111.mimusica"
+        ],
+        "commit": "a5337c09c2a0985e1cd8408eef15d7eae9fb7a08",
+        "checkedAt": "2026-11-10T20:49:15.399Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "luisalgomez111/omarchy-mimusica",
+        "pluginIds": [
+          "io.github.luisalgomez111.mimusica"
+        ],
+        "commit": "a5337c09c2a0985e1cd8408eef15d7eae9fb7a08",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T20:49:15.399Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T20:45:09.163Z",
+        "requestEventId": 35728120002,
+        "requestedAt": "2026-11-10T20:48:43Z",
+        "reviewedAt": "2026-11-10T20:49:15.399Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.luisalgomez111.mimusica": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
