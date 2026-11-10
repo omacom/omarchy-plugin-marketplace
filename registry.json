@@ -417689,6 +417689,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/eusener/omarchy-scroll",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T06:17:07.938Z",
+      "listingValidatedCommit": "9baec9d83867f6b3e4b1290e44cc560774ff26e3",
+      "listingValidatedAt": "2026-11-10T06:17:07.938Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eusener/omarchy-scroll",
+        "pluginIds": [
+          "eusener.scroll"
+        ],
+        "commit": "9baec9d83867f6b3e4b1290e44cc560774ff26e3",
+        "checkedAt": "2026-11-10T06:17:07.744Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "eusener.scroll": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
