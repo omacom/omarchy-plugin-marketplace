@@ -418236,6 +418236,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/5d0tal1gat0r/omarchy-fieldbook",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T12:03:40.836Z",
+      "listingValidatedCommit": "342f74d086299926e15baa7ee13378b96828dfc3",
+      "listingValidatedAt": "2026-11-10T12:03:40.836Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "5d0tal1gat0r/omarchy-fieldbook",
+        "pluginIds": [
+          "io.github.5d0tal1gat0r.fieldbook"
+        ],
+        "commit": "342f74d086299926e15baa7ee13378b96828dfc3",
+        "checkedAt": "2026-11-10T12:03:40.662Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.5d0tal1gat0r.fieldbook": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
