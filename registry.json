@@ -320716,8 +320716,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-04",
       "listedAt": "2026-10-04T23:45:53.971Z",
-      "listingValidatedCommit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
-      "listingValidatedAt": "2026-10-05T15:25:31.007Z",
+      "listingValidatedCommit": "c18a015d0b162322b9b53efe68a079743f3d2eeb",
+      "listingValidatedAt": "2026-11-10T14:46:01.831Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -320726,13 +320726,12 @@
         "pluginIds": [
           "io.github.serverbauer.taskmanager"
         ],
-        "commit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
-        "checkedAt": "2026-10-05T15:25:31.007Z",
+        "commit": "c18a015d0b162322b9b53efe68a079743f3d2eeb",
+        "checkedAt": "2026-11-10T14:46:01.831Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
-          "remote-build",
           "installer"
         ]
       },
@@ -320750,28 +320749,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "serverbauer/omarchy-taskmanager",
-        "pluginIds": [
-          "io.github.serverbauer.taskmanager"
-        ],
-        "commit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-05T15:25:31.007Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-05T15:07:03.705Z",
-        "requestEventId": 32521315174,
-        "requestedAt": "2026-10-05T15:17:11Z",
-        "reviewedAt": "2026-10-05T15:25:31.007Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -320818,8 +320795,74 @@
             "reviewedAt": "2026-10-04T23:45:53.851Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
+          "validatedAt": "2026-10-05T15:25:31.007Z",
+          "branch": "main",
+          "supersededAt": "2026-11-10T14:46:01.831Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "serverbauer/omarchy-taskmanager",
+            "pluginIds": [
+              "io.github.serverbauer.taskmanager"
+            ],
+            "commit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
+            "checkedAt": "2026-10-05T15:25:31.007Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "serverbauer/omarchy-taskmanager",
+            "pluginIds": [
+              "io.github.serverbauer.taskmanager"
+            ],
+            "commit": "5d7a2f574535f914ff5af9138a36840399c7c9f5",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-05T15:25:31.007Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-05T15:07:03.705Z",
+            "requestEventId": 32521315174,
+            "requestedAt": "2026-10-05T15:17:11Z",
+            "reviewedAt": "2026-10-05T15:25:31.007Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "serverbauer/omarchy-taskmanager",
+        "pluginIds": [
+          "io.github.serverbauer.taskmanager"
+        ],
+        "commit": "c18a015d0b162322b9b53efe68a079743f3d2eeb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T14:46:01.831Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T14:30:28.245Z",
+        "requestEventId": 35692764281,
+        "requestedAt": "2026-11-10T14:45:23Z",
+        "reviewedAt": "2026-11-10T14:46:01.831Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/Paulie420/omarchy-runcat",
