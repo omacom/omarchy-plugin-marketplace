@@ -417255,6 +417255,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vleeuwenmenno/omarchy-networks",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T03:52:46.202Z",
+      "listingValidatedCommit": "b5cfce95a91c2873c08d25aabaf360caab272de7",
+      "listingValidatedAt": "2026-11-10T03:52:46.202Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vleeuwenmenno/omarchy-networks",
+        "pluginIds": [
+          "io.github.vleeuwenmenno.networks"
+        ],
+        "commit": "b5cfce95a91c2873c08d25aabaf360caab272de7",
+        "checkedAt": "2026-11-10T03:52:46.033Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vleeuwenmenno/omarchy-networks",
+        "pluginIds": [
+          "io.github.vleeuwenmenno.networks"
+        ],
+        "commit": "b5cfce95a91c2873c08d25aabaf360caab272de7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T03:52:46.033Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-09T15:53:00.447Z",
+        "requestEventId": 35642323059,
+        "requestedAt": "2026-11-10T03:52:16Z",
+        "reviewedAt": "2026-11-10T03:52:46.033Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.vleeuwenmenno.networks": {
+          "category": "System",
+          "tags": [
+            "vpn",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
