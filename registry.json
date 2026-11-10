@@ -417196,6 +417196,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CheeseGrinder231/diurna",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T03:32:17.366Z",
+      "listingValidatedCommit": "904fdbd00df48b9d3cc976b68984900a62caa493",
+      "listingValidatedAt": "2026-11-10T03:32:17.366Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cheesegrinder231/diurna",
+        "pluginIds": [
+          "diurna.activity"
+        ],
+        "commit": "904fdbd00df48b9d3cc976b68984900a62caa493",
+        "checkedAt": "2026-11-10T03:32:17.180Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cheesegrinder231/diurna",
+        "pluginIds": [
+          "diurna.activity"
+        ],
+        "commit": "904fdbd00df48b9d3cc976b68984900a62caa493",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T03:32:17.180Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T03:26:16.205Z",
+        "requestEventId": 35641124890,
+        "requestedAt": "2026-11-10T03:31:46Z",
+        "reviewedAt": "2026-11-10T03:32:17.180Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "diurna.activity": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
