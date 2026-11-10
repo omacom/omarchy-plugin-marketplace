@@ -196373,8 +196373,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-14",
       "listedAt": "2026-09-14T23:27:40.731Z",
-      "listingValidatedCommit": "79d2a78105c506307a492b625f6fed605d76cc0c",
-      "listingValidatedAt": "2026-10-15T01:52:55.896Z",
+      "listingValidatedCommit": "065846d7fca1c8b08a0f468acf47bfdf75a4519f",
+      "listingValidatedAt": "2026-11-10T13:12:05.261Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -196383,8 +196383,8 @@
         "pluginIds": [
           "ekollof.osk"
         ],
-        "commit": "79d2a78105c506307a492b625f6fed605d76cc0c",
-        "checkedAt": "2026-10-15T01:52:55.896Z",
+        "commit": "065846d7fca1c8b08a0f468acf47bfdf75a4519f",
+        "checkedAt": "2026-11-10T13:12:05.261Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -196496,6 +196496,51 @@
             "reviewedAt": "2026-10-06T16:02:35.730Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "79d2a78105c506307a492b625f6fed605d76cc0c",
+          "validatedAt": "2026-10-15T01:52:55.896Z",
+          "branch": "master",
+          "supersededAt": "2026-11-10T13:12:05.261Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ekollof/omarchy-osk",
+            "pluginIds": [
+              "ekollof.osk"
+            ],
+            "commit": "79d2a78105c506307a492b625f6fed605d76cc0c",
+            "checkedAt": "2026-10-15T01:52:55.896Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ekollof/omarchy-osk",
+            "pluginIds": [
+              "ekollof.osk"
+            ],
+            "commit": "79d2a78105c506307a492b625f6fed605d76cc0c",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-15T01:52:55.896Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-14T06:12:18.753Z",
+            "requestEventId": 33287795607,
+            "requestedAt": "2026-10-15T01:52:14Z",
+            "reviewedAt": "2026-10-15T01:52:55.896Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -196504,20 +196549,20 @@
         "pluginIds": [
           "ekollof.osk"
         ],
-        "commit": "79d2a78105c506307a492b625f6fed605d76cc0c",
+        "commit": "065846d7fca1c8b08a0f468acf47bfdf75a4519f",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-15T01:52:55.896Z",
+        "baselineCheckedAt": "2026-11-10T13:12:05.261Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "installer",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-14T06:12:18.753Z",
-        "requestEventId": 33287795607,
-        "requestedAt": "2026-10-15T01:52:14Z",
-        "reviewedAt": "2026-10-15T01:52:55.896Z",
+        "reviewedBaselineCheckedAt": "2026-11-10T12:57:32.458Z",
+        "requestEventId": 35682896962,
+        "requestedAt": "2026-11-10T13:04:33Z",
+        "reviewedAt": "2026-11-10T13:12:05.261Z",
         "reviewer": "HANCORE-linux"
       }
     },
