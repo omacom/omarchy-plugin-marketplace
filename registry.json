@@ -419248,6 +419248,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/satas20/omarchy-bg-tint",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T18:20:55.701Z",
+      "listingValidatedCommit": "734bbdab62b616bc0e499030c1836d9cee0a1d7e",
+      "listingValidatedAt": "2026-11-10T18:20:55.701Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "satas20/omarchy-bg-tint",
+        "pluginIds": [
+          "io.github.satas20.bg-tint"
+        ],
+        "commit": "734bbdab62b616bc0e499030c1836d9cee0a1d7e",
+        "checkedAt": "2026-11-10T18:20:55.541Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "satas20/omarchy-bg-tint",
+        "pluginIds": [
+          "io.github.satas20.bg-tint"
+        ],
+        "commit": "734bbdab62b616bc0e499030c1836d9cee0a1d7e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T18:20:55.541Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T18:15:37.448Z",
+        "requestEventId": 35714650562,
+        "requestedAt": "2026-11-10T18:20:09Z",
+        "reviewedAt": "2026-11-10T18:20:55.541Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.satas20.bg-tint": {
+          "category": "Appearance",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
