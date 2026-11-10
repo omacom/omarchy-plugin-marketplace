@@ -417127,8 +417127,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-08",
       "listedAt": "2026-11-08T20:49:52.333Z",
-      "listingValidatedCommit": "cc2d6f004fc68bf8c80a4329230fc1a7be29646c",
-      "listingValidatedAt": "2026-11-08T20:49:52.333Z",
+      "listingValidatedCommit": "681d414dcfa0cd0439c4c418646147c3d58cd637",
+      "listingValidatedAt": "2026-11-10T10:04:57.542Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -417137,8 +417137,8 @@
         "pluginIds": [
           "shaggyrs6.nearest-aircraft"
         ],
-        "commit": "cc2d6f004fc68bf8c80a4329230fc1a7be29646c",
-        "checkedAt": "2026-11-08T20:49:52.149Z",
+        "commit": "681d414dcfa0cd0439c4c418646147c3d58cd637",
+        "checkedAt": "2026-11-10T10:04:57.542Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -417154,7 +417154,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "cc2d6f004fc68bf8c80a4329230fc1a7be29646c",
+          "validatedAt": "2026-11-08T20:49:52.333Z",
+          "branch": "main",
+          "supersededAt": "2026-11-10T10:04:57.542Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "shaggyrs6-netizen/omarchy-nearest-aircraft",
+            "pluginIds": [
+              "shaggyrs6.nearest-aircraft"
+            ],
+            "commit": "cc2d6f004fc68bf8c80a4329230fc1a7be29646c",
+            "checkedAt": "2026-11-08T20:49:52.149Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/THouet/omarchy-cheaperinference-usage",
