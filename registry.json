@@ -417316,6 +417316,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JohnAndante/omarchy-cursor-dye",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T04:17:18.584Z",
+      "listingValidatedCommit": "0b95f31f89a54c2d93dfb40b5abc84d2a090adf6",
+      "listingValidatedAt": "2026-11-10T04:17:18.584Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "johnandante/omarchy-cursor-dye",
+        "pluginIds": [
+          "io.github.johnandante.cursor-dye"
+        ],
+        "commit": "0b95f31f89a54c2d93dfb40b5abc84d2a090adf6",
+        "checkedAt": "2026-11-10T04:17:18.410Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "johnandante/omarchy-cursor-dye",
+        "pluginIds": [
+          "io.github.johnandante.cursor-dye"
+        ],
+        "commit": "0b95f31f89a54c2d93dfb40b5abc84d2a090adf6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T04:17:18.410Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T04:11:47.601Z",
+        "requestEventId": 35643719088,
+        "requestedAt": "2026-11-10T04:16:36Z",
+        "reviewedAt": "2026-11-10T04:17:18.410Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.johnandante.cursor-dye": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
