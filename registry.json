@@ -417378,6 +417378,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JamesCaudill/macbook-charge-limit",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T04:46:02.193Z",
+      "listingValidatedCommit": "5e05978c1862b253bdadf2e01be69d83eed41de0",
+      "listingValidatedAt": "2026-11-10T04:46:02.193Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jamescaudill/macbook-charge-limit",
+        "pluginIds": [
+          "jamescaudill.mac-battery-charge-limit"
+        ],
+        "commit": "5e05978c1862b253bdadf2e01be69d83eed41de0",
+        "checkedAt": "2026-11-10T04:46:02.036Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jamescaudill/macbook-charge-limit",
+        "pluginIds": [
+          "jamescaudill.mac-battery-charge-limit"
+        ],
+        "commit": "5e05978c1862b253bdadf2e01be69d83eed41de0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T04:46:02.036Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T04:43:18.985Z",
+        "requestEventId": 35645296320,
+        "requestedAt": "2026-11-10T04:45:23Z",
+        "reviewedAt": "2026-11-10T04:46:02.036Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jamescaudill.mac-battery-charge-limit": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
