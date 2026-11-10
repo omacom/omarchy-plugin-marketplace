@@ -269169,8 +269169,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T14:30:49.138Z",
-      "listingValidatedCommit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
-      "listingValidatedAt": "2026-11-07T22:21:41.985Z",
+      "listingValidatedCommit": "7210f215b8a285f9c06d26c569041205e921521f",
+      "listingValidatedAt": "2026-11-10T07:56:33.679Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -269179,8 +269179,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.chroma"
         ],
-        "commit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
-        "checkedAt": "2026-11-07T22:21:41.985Z",
+        "commit": "7210f215b8a285f9c06d26c569041205e921521f",
+        "checkedAt": "2026-11-10T07:56:33.679Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -269461,6 +269461,57 @@
             "reviewedAt": "2026-11-07T20:34:55.964Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
+          "validatedAt": "2026-11-07T22:21:41.985Z",
+          "branch": "main",
+          "supersededAt": "2026-11-10T07:56:33.679Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/chroma",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.chroma"
+            ],
+            "commit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
+            "checkedAt": "2026-11-07T22:21:41.985Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "sudoers-modification",
+              "service-management",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alxwolfenstein97/chroma",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.chroma"
+            ],
+            "commit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-07T22:21:41.985Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "sudoers-modification",
+              "service-management",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-07T21:56:20.264Z",
+            "requestEventId": 35462841189,
+            "requestedAt": "2026-11-07T22:21:05Z",
+            "reviewedAt": "2026-11-07T22:21:41.985Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -269469,10 +269520,10 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.chroma"
         ],
-        "commit": "29e66a81f6b7d7be2f999c8c55fa0045523d3f56",
+        "commit": "7210f215b8a285f9c06d26c569041205e921521f",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-07T22:21:41.985Z",
+        "baselineCheckedAt": "2026-11-10T07:56:33.679Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -269482,10 +269533,10 @@
           "service-management",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-07T21:56:20.264Z",
-        "requestEventId": 35462841189,
-        "requestedAt": "2026-11-07T22:21:05Z",
-        "reviewedAt": "2026-11-07T22:21:41.985Z",
+        "reviewedBaselineCheckedAt": "2026-11-10T07:48:35.054Z",
+        "requestEventId": 35657094287,
+        "requestedAt": "2026-11-10T07:56:03Z",
+        "reviewedAt": "2026-11-10T07:56:33.679Z",
         "reviewer": "HANCORE-linux"
       }
     },
