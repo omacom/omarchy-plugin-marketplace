@@ -161074,8 +161074,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-07",
       "listedAt": "2026-09-07T11:22:17.027Z",
-      "listingValidatedCommit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
-      "listingValidatedAt": "2026-10-02T06:51:29.268Z",
+      "listingValidatedCommit": "2adf04e53a752292592697e25f501d5c4e9b8b9b",
+      "listingValidatedAt": "2026-11-10T15:04:38.818Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -161084,8 +161084,8 @@
         "pluginIds": [
           "io.github.aesko.ichi"
         ],
-        "commit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
-        "checkedAt": "2026-10-02T06:51:29.268Z",
+        "commit": "2adf04e53a752292592697e25f501d5c4e9b8b9b",
+        "checkedAt": "2026-11-10T15:04:38.818Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -161103,28 +161103,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "aesko/omarchy-ichi",
-        "pluginIds": [
-          "io.github.aesko.ichi"
-        ],
-        "commit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T06:51:29.268Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-19T10:06:36.695Z",
-        "requestEventId": 32313941118,
-        "requestedAt": "2026-10-02T06:32:06Z",
-        "reviewedAt": "2026-10-02T06:51:29.268Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -161169,8 +161147,75 @@
             "reviewedAt": "2026-09-07T11:22:16.956Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
+          "validatedAt": "2026-10-02T06:51:29.268Z",
+          "branch": "master",
+          "supersededAt": "2026-11-10T15:04:38.818Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "aesko/omarchy-ichi",
+            "pluginIds": [
+              "io.github.aesko.ichi"
+            ],
+            "commit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
+            "checkedAt": "2026-10-02T06:51:29.268Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "aesko/omarchy-ichi",
+            "pluginIds": [
+              "io.github.aesko.ichi"
+            ],
+            "commit": "e878de2d4f0b6639cba5ae5c4df0a23933d79665",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T06:51:29.268Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-19T10:06:36.695Z",
+            "requestEventId": 32313941118,
+            "requestedAt": "2026-10-02T06:32:06Z",
+            "reviewedAt": "2026-10-02T06:51:29.268Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aesko/omarchy-ichi",
+        "pluginIds": [
+          "io.github.aesko.ichi"
+        ],
+        "commit": "2adf04e53a752292592697e25f501d5c4e9b8b9b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T15:04:38.818Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T14:55:33.939Z",
+        "requestEventId": 35694789692,
+        "requestedAt": "2026-11-10T15:03:58Z",
+        "reviewedAt": "2026-11-10T15:04:38.818Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/ollywarren/sparks",
