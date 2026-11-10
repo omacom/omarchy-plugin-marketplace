@@ -417800,6 +417800,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jordi-adame/omarchy-display-arranger",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T06:59:17.189Z",
+      "listingValidatedCommit": "30078da220faef3097bfd4e71b484b0604843412",
+      "listingValidatedAt": "2026-11-10T06:59:17.189Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jordi-adame/omarchy-display-arranger",
+        "pluginIds": [
+          "io.github.jordi-adame.display-arranger"
+        ],
+        "commit": "30078da220faef3097bfd4e71b484b0604843412",
+        "checkedAt": "2026-11-10T06:59:17.006Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jordi-adame.display-arranger": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
