@@ -419341,6 +419341,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/john-c-houser-tech/ollama-launcher",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T18:46:06.690Z",
+      "listingValidatedCommit": "556feedcb9a586101e5818eb027caa20bb2b868e",
+      "listingValidatedAt": "2026-11-10T18:46:06.690Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "john-c-houser-tech/ollama-launcher",
+        "pluginIds": [
+          "io.github.john-c-houser-tech.ollama-launcher"
+        ],
+        "commit": "556feedcb9a586101e5818eb027caa20bb2b868e",
+        "checkedAt": "2026-11-10T18:46:06.488Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "john-c-houser-tech/ollama-launcher",
+        "pluginIds": [
+          "io.github.john-c-houser-tech.ollama-launcher"
+        ],
+        "commit": "556feedcb9a586101e5818eb027caa20bb2b868e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T18:46:06.488Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-09T20:40:47.230Z",
+        "requestEventId": 35717016393,
+        "requestedAt": "2026-11-10T18:45:32Z",
+        "reviewedAt": "2026-11-10T18:46:06.488Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.john-c-houser-tech.ollama-launcher": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
