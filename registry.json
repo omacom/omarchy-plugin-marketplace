@@ -417439,6 +417439,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/itsPoipoi/omawall-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T04:58:20.126Z",
+      "listingValidatedCommit": "c5ca351fe4c9389b1bb69998a5ffe533b641f7d4",
+      "listingValidatedAt": "2026-11-10T04:58:20.126Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "itspoipoi/omawall-plus",
+        "pluginIds": [
+          "poipoi.omawall"
+        ],
+        "commit": "c5ca351fe4c9389b1bb69998a5ffe533b641f7d4",
+        "checkedAt": "2026-11-10T04:58:20.006Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "itspoipoi/omawall-plus",
+        "pluginIds": [
+          "poipoi.omawall"
+        ],
+        "commit": "c5ca351fe4c9389b1bb69998a5ffe533b641f7d4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T04:58:20.006Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T04:56:28.869Z",
+        "requestEventId": 35645973950,
+        "requestedAt": "2026-11-10T04:57:50Z",
+        "reviewedAt": "2026-11-10T04:58:20.006Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "poipoi.omawall": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
