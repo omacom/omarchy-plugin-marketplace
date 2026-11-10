@@ -417995,6 +417995,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Assem130/omarchy-charge-limit",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T09:57:07.602Z",
+      "listingValidatedCommit": "b6007be5d8adadc0ffb18d31ad6d9d3a1a3423e7",
+      "listingValidatedAt": "2026-11-10T09:57:07.602Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "assem130/omarchy-charge-limit",
+        "pluginIds": [
+          "assem.charge-limit"
+        ],
+        "commit": "b6007be5d8adadc0ffb18d31ad6d9d3a1a3423e7",
+        "checkedAt": "2026-11-10T09:57:07.410Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "assem130/omarchy-charge-limit",
+        "pluginIds": [
+          "assem.charge-limit"
+        ],
+        "commit": "b6007be5d8adadc0ffb18d31ad6d9d3a1a3423e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T09:57:07.410Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T09:45:07.918Z",
+        "requestEventId": 35667041551,
+        "requestedAt": "2026-11-10T09:56:22Z",
+        "reviewedAt": "2026-11-10T09:57:07.410Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "assem.charge-limit": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
