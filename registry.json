@@ -418975,6 +418975,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/KeganHollern/omarchy-aranet4",
+      "type": "plugin-source",
+      "addedAt": "2026-11-10",
+      "listedAt": "2026-11-10T17:28:35.136Z",
+      "listingValidatedCommit": "abe43f8f9d180d7f9778819375d0dc7b55816aa6",
+      "listingValidatedAt": "2026-11-10T17:28:35.136Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "keganhollern/omarchy-aranet4",
+        "pluginIds": [
+          "kegan.aranet4"
+        ],
+        "commit": "abe43f8f9d180d7f9778819375d0dc7b55816aa6",
+        "checkedAt": "2026-11-10T17:28:34.969Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "keganhollern/omarchy-aranet4",
+        "pluginIds": [
+          "kegan.aranet4"
+        ],
+        "commit": "abe43f8f9d180d7f9778819375d0dc7b55816aa6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-10T17:28:34.969Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T17:24:06.554Z",
+        "requestEventId": 35709507866,
+        "requestedAt": "2026-11-10T17:27:56Z",
+        "reviewedAt": "2026-11-10T17:28:34.970Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kegan.aranet4": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
