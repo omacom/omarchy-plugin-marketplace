@@ -138547,8 +138547,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-04",
       "listedAt": "2026-09-04T00:59:50.683Z",
-      "listingValidatedCommit": "959a808d30cbf3961d9e8e72012e0ee9a734336b",
-      "listingValidatedAt": "2026-10-15T20:33:49.851Z",
+      "listingValidatedCommit": "e03b3ff4c5db3bbb287db256f4b267202172451d",
+      "listingValidatedAt": "2026-11-11T06:01:56.599Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -138557,8 +138557,8 @@
         "pluginIds": [
           "smartalb.roma-workspaces"
         ],
-        "commit": "959a808d30cbf3961d9e8e72012e0ee9a734336b",
-        "checkedAt": "2026-10-15T20:33:49.851Z",
+        "commit": "e03b3ff4c5db3bbb287db256f4b267202172451d",
+        "checkedAt": "2026-11-11T06:01:56.599Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -138590,6 +138590,26 @@
             ],
             "commit": "7726d8c7a5418aaece94730cc4759bed28cf9763",
             "checkedAt": "2026-09-04T00:59:50.625Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "959a808d30cbf3961d9e8e72012e0ee9a734336b",
+          "validatedAt": "2026-10-15T20:33:49.851Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T06:01:56.599Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "smartalb/omarchy-roma-workspaces",
+            "pluginIds": [
+              "smartalb.roma-workspaces"
+            ],
+            "commit": "959a808d30cbf3961d9e8e72012e0ee9a734336b",
+            "checkedAt": "2026-10-15T20:33:49.851Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
