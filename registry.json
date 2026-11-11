@@ -420105,6 +420105,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Myouboku/omaseerr",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T00:33:38.649Z",
+      "listingValidatedCommit": "eab1e32d366153195f265b1eebdf3ef2420526b4",
+      "listingValidatedAt": "2026-11-11T00:33:38.649Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "myouboku/omaseerr",
+        "pluginIds": [
+          "myouboku.omaseerr"
+        ],
+        "commit": "eab1e32d366153195f265b1eebdf3ef2420526b4",
+        "checkedAt": "2026-11-11T00:33:38.468Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "myouboku.omaseerr": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
