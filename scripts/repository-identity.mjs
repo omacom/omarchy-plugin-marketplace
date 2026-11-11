@@ -154,6 +154,16 @@ export function assertObservedRepositoryIdentity(source, observed) {
   }
 }
 
+export function isObservedRepositoryRename(source, observed) {
+  const identity = parseRepositoryIdentity(source?.repositoryIdentity);
+  if (!identity || !observed) return false;
+  const observedName = normalizedSlug(observed.nameWithOwner);
+  return Boolean(observedName)
+    && observed.nodeId === identity.nodeId
+    && observed.databaseId === identity.databaseId
+    && observedName.toLowerCase() !== parseGitHubRepository(source.repo).slug.toLowerCase();
+}
+
 export function validateRegistryRepositoryMigrations(registry) {
   const migrationsValue = registry?.repositoryMigrations;
   if (migrationsValue === undefined) {

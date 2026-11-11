@@ -6,6 +6,7 @@ import { test } from "node:test";
 import {
   assertRepositoryMigrationPreviousState,
   buildCatalog,
+  CatalogCheckError,
   catalogSourcePlan,
   resolveFullRefreshIdentities,
   resolveSnapshot,
@@ -672,7 +673,236 @@ test("GraphQL immutable repository ID mismatches are globally fatal", async () =
   }
 });
 
-async function withTargetedMigrationBuild(manifestId, callback) {
+test("full refresh isolation covers only a renamed repository whose immutable IDs still match", async () => {
+  const originalFetch = globalThis.fetch;
+  const originalToken = process.env.GITHUB_TOKEN;
+  process.env.GITHUB_TOKEN = "test-token";
+  let observed = {};
+  globalThis.fetch = async (_input, init = {}) => {
+    const request = JSON.parse(init.body);
+    if (request.query.includes("CatalogRefreshBudget")) {
+      return Response.json({ data: { rateLimit: graphqlRate() } });
+    }
+    return Response.json({
+      data: {
+        r0: graphqlRepository(observed),
+        rateLimit: graphqlRate(),
+      },
+    });
+  };
+  try {
+    observed = { nameWithOwner: "Example/third-name" };
+    const identities = await resolveFullRefreshIdentities([migratedSource()], {
+      isolateRenamedRepositories: true,
+    });
+    const identity = identities.get(newRepository.toLowerCase());
+    assert.ok(identity.error instanceof CatalogCheckError);
+    assert.equal(identity.error.code, "repository-unreachable");
+    assert.equal(identity.context, undefined);
+
+    for (const value of [
+      { id: "R_wrong" },
+      { databaseId: 987654321 },
+      { id: "R_wrong", nameWithOwner: "Example/third-name" },
+      { databaseId: 987654321, nameWithOwner: "Example/third-name" },
+      { nameWithOwner: "" },
+      { nameWithOwner: "third-name" },
+    ]) {
+      observed = value;
+      await assert.rejects(
+        resolveFullRefreshIdentities([migratedSource()], { isolateRenamedRepositories: true }),
+        /Immutable repository identity mismatch/,
+        JSON.stringify(value),
+      );
+    }
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (originalToken === undefined) delete process.env.GITHUB_TOKEN;
+    else process.env.GITHUB_TOKEN = originalToken;
+  }
+});
+
+async function withRenamedRepositoryRefresh(observed, callback) {
+  const directory = await mkdtemp(resolve(tmpdir(), "repository-rename-refresh-"));
+  const registryPath = resolve(directory, "registry.json");
+  const catalogPath = resolve(directory, "catalog.json");
+  const previewDirectory = resolve(directory, "plugins");
+  const healthyRepository = "Other/healthy";
+  const healthyUrl = `https://github.com/${healthyRepository}`;
+  const healthyId = "other.healthy";
+  const healthySource = source({
+    repo: healthyUrl,
+    automatedSecurityBaseline: baseline({
+      repository: healthyRepository.toLowerCase(),
+      pluginIds: [healthyId],
+    }),
+    plugins: {
+      [healthyId]: { category: "Other", tags: [] },
+    },
+  });
+  const registry = migratedRegistry({ sources: [migratedSource(), healthySource] });
+  const previous = {
+    generatedAt: checkedAt,
+    stateSchemaVersion: 2,
+    mode: "production",
+    plugins: [{
+      id: pluginId,
+      name: "Renamed plugin",
+      version: "0.9.0",
+      repo: newUrl,
+      sourceType: "community",
+      upstreamValidatedCommit: listedCommit,
+      upstreamCheckStatus: "passed",
+    }, {
+      id: healthyId,
+      name: "Healthy plugin",
+      version: "0.9.0",
+      repo: healthyUrl,
+      sourceType: "community",
+      upstreamValidatedCommit: listedCommit,
+      upstreamCheckStatus: "passed",
+    }],
+    warnings: [],
+  };
+  await mkdir(previewDirectory, { recursive: true });
+  await writeFile(registryPath, `${JSON.stringify(registry, null, 2)}\n`);
+  await writeFile(catalogPath, `${JSON.stringify(previous, null, 2)}\n`);
+
+  const manifest = {
+    schemaVersion: 1,
+    id: healthyId,
+    name: "Healthy plugin",
+    version: "1.0.0",
+    author: "Example",
+    description: "A bounded refresh fixture.",
+    license: "MIT",
+    kinds: ["overlay"],
+    entryPoints: { overlay: "Main.qml" },
+  };
+  const originalFetch = globalThis.fetch;
+  const originalToken = process.env.GITHUB_TOKEN;
+  process.env.GITHUB_TOKEN = "test-token";
+  const urls = [];
+  globalThis.fetch = async (input, init = {}) => {
+    const url = String(input);
+    urls.push(url);
+    if (url === "https://api.github.com/graphql") {
+      const request = JSON.parse(init.body);
+      if (request.query.includes("CatalogRefreshBudget")) {
+        return Response.json({ data: { rateLimit: graphqlRate() } });
+      }
+      const data = { rateLimit: graphqlRate() };
+      for (let index = 0; Object.hasOwn(request.variables, `owner${index}`); index += 1) {
+        const slug = `${request.variables[`owner${index}`]}/${request.variables[`name${index}`]}`;
+        data[`r${index}`] = slug === newRepository
+          ? graphqlRepository(observed)
+          : graphqlRepository({ id: "R_kgDOHealthy", databaseId: 222333444, nameWithOwner: slug });
+      }
+      return Response.json({ data });
+    }
+    if (url === "https://api.github.com/rate_limit") {
+      return Response.json({
+        resources: { core: { limit: 5000, remaining: 4999, reset: 1788012000 } },
+      });
+    }
+    if (url === `https://api.github.com/repos/${healthyRepository}/git/trees/${treeSha}?recursive=1`) {
+      return Response.json({
+        truncated: false,
+        tree: [
+          { path: "README.md", type: "blob", mode: "100644", size: 10 },
+          { path: "LICENSE", type: "blob", mode: "100644", size: 10 },
+          { path: "manifest.json", type: "blob", mode: "100644", size: 400 },
+          { path: "Main.qml", type: "blob", mode: "100644", size: 10 },
+        ],
+      });
+    }
+    if (url === `https://raw.githubusercontent.com/${healthyRepository}/${headCommit}/manifest.json`) {
+      return Response.json(manifest);
+    }
+    throw new Error(`Unexpected request: ${url}`);
+  };
+  try {
+    await callback({
+      registryPath,
+      catalogPath,
+      previewDirectory,
+      healthyId,
+      healthyUrl,
+      urls,
+    });
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (originalToken === undefined) delete process.env.GITHUB_TOKEN;
+    else process.env.GITHUB_TOKEN = originalToken;
+    await rm(directory, { recursive: true, force: true });
+  }
+}
+
+test("a full refresh keeps running when a migrated repository is renamed again", async () => {
+  await withRenamedRepositoryRefresh({ nameWithOwner: "Example/third-name" }, async ({
+    registryPath,
+    catalogPath,
+    previewDirectory,
+    healthyId,
+    healthyUrl,
+    urls,
+  }) => {
+    await buildCatalog({
+      registryPath,
+      catalogPath,
+      previewDirectory,
+      graphqlBudgetReserve: 0,
+      restBudgetReserve: 0,
+    });
+    const next = JSON.parse(await readFile(catalogPath, "utf8"));
+    assert.deepEqual(next.warnings, [`${newUrl}: repository-unreachable`]);
+    const renamed = next.plugins.find((plugin) => plugin.id === pluginId);
+    assert.equal(renamed.repo, newUrl);
+    assert.equal(renamed.version, "0.9.0");
+    assert.equal(renamed.upstreamCheckStatus, "unreachable");
+    assert.equal(renamed.upstreamCheckError, "repository-unreachable");
+    assert.equal(renamed.upstreamValidatedCommit, listedCommit);
+    assert.equal(renamed.status, "Status unknown");
+    const healthy = next.plugins.find((plugin) => plugin.id === healthyId);
+    assert.equal(healthy.repo, healthyUrl);
+    assert.equal(healthy.version, "1.0.0");
+    assert.equal(healthy.upstreamCheckStatus, "passed");
+    assert.equal(healthy.upstreamValidatedCommit, headCommit);
+    assert.equal(urls.filter((url) => url.includes("/git/trees/")).length, 1);
+    assert.equal(urls.some((url) => /new-plugin|third-name/i.test(url)), false);
+  });
+});
+
+test("a full refresh still aborts when a migrated repository name resolves to other immutable IDs", async () => {
+  for (const observed of [
+    { databaseId: 987654321 },
+    { id: "R_wrong", nameWithOwner: "Example/third-name" },
+  ]) {
+    await withRenamedRepositoryRefresh(observed, async ({
+      registryPath,
+      catalogPath,
+      previewDirectory,
+      urls,
+    }) => {
+      const before = await readFile(catalogPath);
+      await assert.rejects(
+        buildCatalog({
+          registryPath,
+          catalogPath,
+          previewDirectory,
+          graphqlBudgetReserve: 0,
+          restBudgetReserve: 0,
+        }),
+        /Immutable repository identity mismatch/,
+      );
+      assert.deepEqual(await readFile(catalogPath), before);
+      assert.deepEqual(await readdir(previewDirectory), []);
+      assert.equal(urls.some((url) => url.includes("/git/trees/")), false);
+    });
+  }
+});
+
+async function withTargetedMigrationBuild(manifestId, callback, observedRepository = {}) {
   const directory = await mkdtemp(resolve(tmpdir(), "repository-migration-build-"));
   const registryPath = resolve(directory, "registry.json");
   const catalogPath = resolve(directory, "catalog.json");
@@ -744,7 +974,7 @@ async function withTargetedMigrationBuild(manifestId, callback) {
         return Response.json({ data: { rateLimit: graphqlRate() } });
       }
       return Response.json({
-        data: { r0: graphqlRepository(), rateLimit: graphqlRate() },
+        data: { r0: graphqlRepository(observedRepository), rateLimit: graphqlRate() },
       });
     }
     if (url === "https://api.github.com/rate_limit") {
@@ -844,6 +1074,31 @@ test("targeted migration failures leave catalog and previews unchanged", async (
     assert.deepEqual(await readdir(previewDirectory), ["keep.webp"]);
     assert.equal(await readFile(resolve(previewDirectory, "keep.webp"), "utf8"), "unchanged");
   });
+});
+
+test("a targeted migration still fails globally when its target was renamed again", async () => {
+  await withTargetedMigrationBuild(pluginId, async ({
+    registryPath,
+    catalogPath,
+    previewDirectory,
+    urls,
+  }) => {
+    const before = await readFile(catalogPath);
+    await assert.rejects(
+      buildCatalog({
+        registryPath,
+        catalogPath,
+        previewDirectory,
+        repositoryMigrationTargets: [oldRepository],
+        graphqlBudgetReserve: 0,
+        restBudgetReserve: 0,
+      }),
+      /Immutable repository identity mismatch/,
+    );
+    assert.deepEqual(await readFile(catalogPath), before);
+    assert.deepEqual(await readdir(previewDirectory), []);
+    assert.equal(urls.some((url) => url.includes("/git/trees/")), false);
+  }, { nameWithOwner: "Example/third-name" });
 });
 
 test("migration output rejects a symlink ancestor that resolves into the worktree", async () => {
