@@ -372952,8 +372952,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-19",
       "listedAt": "2026-10-19T10:54:13.789Z",
-      "listingValidatedCommit": "71d2b959e443a1f9c57414ad7739e4bd1165a315",
-      "listingValidatedAt": "2026-10-29T13:35:22.311Z",
+      "listingValidatedCommit": "085a757a3d3e18b5ffb5e0d24208d4809c82b05a",
+      "listingValidatedAt": "2026-11-11T02:37:56.485Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -372962,8 +372962,8 @@
         "pluginIds": [
           "konochi.konoview"
         ],
-        "commit": "71d2b959e443a1f9c57414ad7739e4bd1165a315",
-        "checkedAt": "2026-10-29T13:35:22.311Z",
+        "commit": "085a757a3d3e18b5ffb5e0d24208d4809c82b05a",
+        "checkedAt": "2026-11-11T02:37:56.485Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -373015,6 +373015,26 @@
             ],
             "commit": "b8a823d66a0ba935cc88bfaf0508690247212254",
             "checkedAt": "2026-10-28T12:53:24.616Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "71d2b959e443a1f9c57414ad7739e4bd1165a315",
+          "validatedAt": "2026-10-29T13:35:22.311Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T02:37:56.485Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "xvvhang/omarchy-konoview-plugin",
+            "pluginIds": [
+              "konochi.konoview"
+            ],
+            "commit": "71d2b959e443a1f9c57414ad7739e4bd1165a315",
+            "checkedAt": "2026-10-29T13:35:22.311Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
