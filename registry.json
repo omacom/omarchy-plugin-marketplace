@@ -420158,6 +420158,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/frostmute/omaven",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T01:10:51.699Z",
+      "listingValidatedCommit": "0407ecc5f52cde29b044ae08116cfb645f92289b",
+      "listingValidatedAt": "2026-11-11T01:10:51.699Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frostmute/omaven",
+        "pluginIds": [
+          "omaven"
+        ],
+        "commit": "0407ecc5f52cde29b044ae08116cfb645f92289b",
+        "checkedAt": "2026-11-11T01:10:51.569Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omaven": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
