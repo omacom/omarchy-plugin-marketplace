@@ -12771,8 +12771,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-15",
       "listedAt": "2026-08-15T22:29:22.089Z",
-      "listingValidatedCommit": "55c5d9225e6a178f20e2b5465875026a57589937",
-      "listingValidatedAt": "2026-09-11T14:17:53.235Z",
+      "listingValidatedCommit": "932f9a1bd20bcf45e90a6675adcd0f996c56ec00",
+      "listingValidatedAt": "2026-11-11T15:42:21.556Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -12781,12 +12781,14 @@
         "pluginIds": [
           "devgtv.docker"
         ],
-        "commit": "55c5d9225e6a178f20e2b5465875026a57589937",
-        "checkedAt": "2026-09-11T14:17:53.235Z",
-        "outcome": "passed",
+        "commit": "932f9a1bd20bcf45e90a6675adcd0f996c56ec00",
+        "checkedAt": "2026-11-11T15:42:21.556Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "service-management"
+        ]
       },
       "plugins": {
         "devgtv.docker": {
@@ -12833,8 +12835,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "55c5d9225e6a178f20e2b5465875026a57589937",
+          "validatedAt": "2026-09-11T14:17:53.235Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T15:42:21.556Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "devgtv/omarchy-docker",
+            "pluginIds": [
+              "devgtv.docker"
+            ],
+            "commit": "55c5d9225e6a178f20e2b5465875026a57589937",
+            "checkedAt": "2026-09-11T14:17:53.235Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "devgtv/omarchy-docker",
+        "pluginIds": [
+          "devgtv.docker"
+        ],
+        "commit": "932f9a1bd20bcf45e90a6675adcd0f996c56ec00",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T15:42:21.556Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T11:22:26.492Z",
+        "requestEventId": 35815058096,
+        "requestedAt": "2026-11-11T15:39:39Z",
+        "reviewedAt": "2026-11-11T15:42:21.556Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/stappmus/Udder",
