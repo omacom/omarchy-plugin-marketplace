@@ -396941,8 +396941,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-28",
       "listedAt": "2026-10-28T23:06:42.936Z",
-      "listingValidatedCommit": "a270de418dbd1a72e356acaa1990576b4a17245d",
-      "listingValidatedAt": "2026-10-29T19:58:45.237Z",
+      "listingValidatedCommit": "5a243a1cfe0644faf92a0e5dc269bcdedf2a0edd",
+      "listingValidatedAt": "2026-11-11T05:13:15.327Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -396951,8 +396951,8 @@
         "pluginIds": [
           "eh0.headphones"
         ],
-        "commit": "a270de418dbd1a72e356acaa1990576b4a17245d",
-        "checkedAt": "2026-10-29T19:58:45.237Z",
+        "commit": "5a243a1cfe0644faf92a0e5dc269bcdedf2a0edd",
+        "checkedAt": "2026-11-11T05:13:15.327Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -396984,6 +396984,26 @@
             ],
             "commit": "9d39122d875a3f989b47b972c2e6e7f6b4b8b7c4",
             "checkedAt": "2026-10-28T23:06:42.760Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a270de418dbd1a72e356acaa1990576b4a17245d",
+          "validatedAt": "2026-10-29T19:58:45.237Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T05:13:15.327Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "hes0s/omarchy-headphones",
+            "pluginIds": [
+              "eh0.headphones"
+            ],
+            "commit": "a270de418dbd1a72e356acaa1990576b4a17245d",
+            "checkedAt": "2026-10-29T19:58:45.237Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
