@@ -397127,8 +397127,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-29",
       "listedAt": "2026-10-29T14:16:26.040Z",
-      "listingValidatedCommit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
-      "listingValidatedAt": "2026-11-02T22:17:03.535Z",
+      "listingValidatedCommit": "6ac310a9bceb7318ee368e7cf43f9edcc029abaa",
+      "listingValidatedAt": "2026-11-11T01:53:20.692Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -397137,8 +397137,8 @@
         "pluginIds": [
           "io.github.mattwolfgang.plugin-guard"
         ],
-        "commit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
-        "checkedAt": "2026-11-02T22:17:03.535Z",
+        "commit": "6ac310a9bceb7318ee368e7cf43f9edcc029abaa",
+        "checkedAt": "2026-11-11T01:53:20.692Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -397307,6 +397307,55 @@
             "reviewedAt": "2026-10-30T00:26:06.749Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
+          "validatedAt": "2026-11-02T22:17:03.535Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T01:53:20.692Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "mattwolfgang/omarchy-plugin-guard",
+            "pluginIds": [
+              "io.github.mattwolfgang.plugin-guard"
+            ],
+            "commit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
+            "checkedAt": "2026-11-02T22:17:03.535Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "sudoers-modification",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "mattwolfgang/omarchy-plugin-guard",
+            "pluginIds": [
+              "io.github.mattwolfgang.plugin-guard"
+            ],
+            "commit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-02T22:17:03.535Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "privilege",
+              "sudoers-modification",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-02T15:33:59.904Z",
+            "requestEventId": 34960419150,
+            "requestedAt": "2026-11-02T22:08:58Z",
+            "reviewedAt": "2026-11-02T22:17:03.535Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -397315,10 +397364,10 @@
         "pluginIds": [
           "io.github.mattwolfgang.plugin-guard"
         ],
-        "commit": "6900b0fa4db30848756d7ebcc9b59614a2491913",
+        "commit": "6ac310a9bceb7318ee368e7cf43f9edcc029abaa",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-02T22:17:03.535Z",
+        "baselineCheckedAt": "2026-11-11T01:53:20.692Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -397327,10 +397376,10 @@
           "sudoers-modification",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-02T15:33:59.904Z",
-        "requestEventId": 34960419150,
-        "requestedAt": "2026-11-02T22:08:58Z",
-        "reviewedAt": "2026-11-02T22:17:03.535Z",
+        "reviewedBaselineCheckedAt": "2026-11-11T01:21:44.999Z",
+        "requestEventId": 35751305381,
+        "requestedAt": "2026-11-11T01:52:46Z",
+        "reviewedAt": "2026-11-11T01:53:20.692Z",
         "reviewer": "HANCORE-linux"
       }
     },
