@@ -420545,6 +420545,61 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jitinworking/omarchy-tempmail",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T05:18:07.477Z",
+      "listingValidatedCommit": "02e6eaec6cc8d77cc358a23b4756a570aa8e12df",
+      "listingValidatedAt": "2026-11-11T05:18:07.477Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jitinworking/omarchy-tempmail",
+        "pluginIds": [
+          "io.github.jitinworking.omarchy-tempmail"
+        ],
+        "commit": "02e6eaec6cc8d77cc358a23b4756a570aa8e12df",
+        "checkedAt": "2026-11-11T05:18:07.290Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jitinworking/omarchy-tempmail",
+        "pluginIds": [
+          "io.github.jitinworking.omarchy-tempmail"
+        ],
+        "commit": "02e6eaec6cc8d77cc358a23b4756a570aa8e12df",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T05:18:07.290Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T05:11:47.715Z",
+        "requestEventId": 35763803263,
+        "requestedAt": "2026-11-11T05:16:48Z",
+        "reviewedAt": "2026-11-11T05:18:07.290Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jitinworking.omarchy-tempmail": {
+          "category": "Productivity",
+          "tags": [
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
