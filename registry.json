@@ -290295,8 +290295,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-01",
       "listedAt": "2026-10-01T01:11:24.853Z",
-      "listingValidatedCommit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
-      "listingValidatedAt": "2026-11-11T16:30:40.283Z",
+      "listingValidatedCommit": "648c5435fc53820085e5333244545ada45b75bc1",
+      "listingValidatedAt": "2026-11-11T18:16:34.559Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -290305,8 +290305,8 @@
         "pluginIds": [
           "io.github.ralphk-86.omarchy-proton"
         ],
-        "commit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
-        "checkedAt": "2026-11-11T16:30:40.283Z",
+        "commit": "648c5435fc53820085e5333244545ada45b75bc1",
+        "checkedAt": "2026-11-11T18:16:34.559Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -290486,6 +290486,57 @@
             "reviewedAt": "2026-10-14T21:00:04.227Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
+          "validatedAt": "2026-11-11T16:30:40.283Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T18:16:34.559Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ralphk-86/omarchy-proton",
+            "pluginIds": [
+              "io.github.ralphk-86.omarchy-proton"
+            ],
+            "commit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
+            "checkedAt": "2026-11-11T16:30:40.283Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "service-management",
+              "sudoers-modification",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ralphk-86/omarchy-proton",
+            "pluginIds": [
+              "io.github.ralphk-86.omarchy-proton"
+            ],
+            "commit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-11T16:30:40.283Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege",
+              "service-management",
+              "sudoers-modification",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-11T15:59:57.426Z",
+            "requestEventId": 35819481731,
+            "requestedAt": "2026-11-11T16:26:33Z",
+            "reviewedAt": "2026-11-11T16:30:40.283Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -290494,10 +290545,10 @@
         "pluginIds": [
           "io.github.ralphk-86.omarchy-proton"
         ],
-        "commit": "accb7cd7f4b2be8a5907dfb5a8520c03bcfd3e11",
+        "commit": "648c5435fc53820085e5333244545ada45b75bc1",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-11T16:30:40.283Z",
+        "baselineCheckedAt": "2026-11-11T18:16:34.559Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
@@ -290507,10 +290558,10 @@
           "sudoers-modification",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-11T15:59:57.426Z",
-        "requestEventId": 35819481731,
-        "requestedAt": "2026-11-11T16:26:33Z",
-        "reviewedAt": "2026-11-11T16:30:40.283Z",
+        "reviewedBaselineCheckedAt": "2026-11-11T18:07:40.088Z",
+        "requestEventId": 35829673518,
+        "requestedAt": "2026-11-11T18:15:46Z",
+        "reviewedAt": "2026-11-11T18:16:34.559Z",
         "reviewer": "HANCORE-linux"
       }
     },
