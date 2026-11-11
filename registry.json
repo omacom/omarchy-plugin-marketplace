@@ -315837,8 +315837,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-03",
       "listedAt": "2026-10-03T21:22:30.486Z",
-      "listingValidatedCommit": "e1b0ee504d36de2bb10dcef83be56029134d6b8a",
-      "listingValidatedAt": "2026-10-28T00:30:26.354Z",
+      "listingValidatedCommit": "83ffd8b1a6bbc782c38f94b70879e8264648b8dc",
+      "listingValidatedAt": "2026-11-11T15:57:14.640Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -315847,8 +315847,8 @@
         "pluginIds": [
           "io.github.qempexe.omatravel"
         ],
-        "commit": "e1b0ee504d36de2bb10dcef83be56029134d6b8a",
-        "checkedAt": "2026-10-28T00:30:26.354Z",
+        "commit": "83ffd8b1a6bbc782c38f94b70879e8264648b8dc",
+        "checkedAt": "2026-11-11T15:57:14.639Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -315919,6 +315919,26 @@
             ],
             "commit": "c9eb18308433013b29f092529749b2887e5da462",
             "checkedAt": "2026-10-15T02:13:20.289Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "e1b0ee504d36de2bb10dcef83be56029134d6b8a",
+          "validatedAt": "2026-10-28T00:30:26.354Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T15:57:14.640Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "qempexe/omarchy-omatravel",
+            "pluginIds": [
+              "io.github.qempexe.omatravel"
+            ],
+            "commit": "e1b0ee504d36de2bb10dcef83be56029134d6b8a",
+            "checkedAt": "2026-10-28T00:30:26.354Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
