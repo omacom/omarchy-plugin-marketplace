@@ -420464,6 +420464,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/matrix-node/klicky-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T04:52:35.655Z",
+      "listingValidatedCommit": "d573fd9de11f874347cab65f9e648c5c80fd4e24",
+      "listingValidatedAt": "2026-11-11T04:52:35.655Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matrix-node/klicky-omarchy-plugin",
+        "pluginIds": [
+          "io.github.matrix-node.klicky"
+        ],
+        "commit": "d573fd9de11f874347cab65f9e648c5c80fd4e24",
+        "checkedAt": "2026-11-11T04:52:35.503Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "matrix-node/klicky-omarchy-plugin",
+        "pluginIds": [
+          "io.github.matrix-node.klicky"
+        ],
+        "commit": "d573fd9de11f874347cab65f9e648c5c80fd4e24",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T04:52:35.503Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T04:48:57.447Z",
+        "requestEventId": 35762356236,
+        "requestedAt": "2026-11-11T04:52:05Z",
+        "reviewedAt": "2026-11-11T04:52:35.503Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.matrix-node.klicky": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
