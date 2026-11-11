@@ -420887,6 +420887,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/YassineSawahi/omarchy-gamemode",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T13:05:17.775Z",
+      "listingValidatedCommit": "478d97c70002a7028048c6b1c1be5f7c4c22a098",
+      "listingValidatedAt": "2026-11-11T13:05:17.775Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yassinesawahi/omarchy-gamemode",
+        "pluginIds": [
+          "io.github.yassinesawahi.gamemode"
+        ],
+        "commit": "478d97c70002a7028048c6b1c1be5f7c4c22a098",
+        "checkedAt": "2026-11-11T13:05:17.589Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yassinesawahi/omarchy-gamemode",
+        "pluginIds": [
+          "io.github.yassinesawahi.gamemode"
+        ],
+        "commit": "478d97c70002a7028048c6b1c1be5f7c4c22a098",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T13:05:17.589Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T08:31:19.475Z",
+        "requestEventId": 35800054297,
+        "requestedAt": "2026-11-11T13:04:30Z",
+        "reviewedAt": "2026-11-11T13:05:17.589Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.yassinesawahi.gamemode": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "games",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
