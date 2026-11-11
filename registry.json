@@ -421641,6 +421641,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Justcakenl/omarchy-cakesave",
+      "type": "plugin-source",
+      "addedAt": "2026-11-11",
+      "listedAt": "2026-11-11T21:50:15.866Z",
+      "listingValidatedCommit": "db393e251fd1d090b54e56682f886bb9d3833072",
+      "listingValidatedAt": "2026-11-11T21:50:15.866Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "justcakenl/omarchy-cakesave",
+        "pluginIds": [
+          "io.github.justcakenl.cakesave"
+        ],
+        "commit": "db393e251fd1d090b54e56682f886bb9d3833072",
+        "checkedAt": "2026-11-11T21:50:15.682Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "justcakenl/omarchy-cakesave",
+        "pluginIds": [
+          "io.github.justcakenl.cakesave"
+        ],
+        "commit": "db393e251fd1d090b54e56682f886bb9d3833072",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T21:50:15.682Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "remote-git-execution-unpinned"
+        ],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T21:39:17.975Z",
+        "requestEventId": 35846160006,
+        "requestedAt": "2026-11-11T21:43:42Z",
+        "reviewedAt": "2026-11-11T21:50:15.682Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.justcakenl.cakesave": {
+          "category": "Productivity",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
