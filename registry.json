@@ -116256,8 +116256,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-30",
       "listedAt": "2026-08-30T14:14:42.726Z",
-      "listingValidatedCommit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
-      "listingValidatedAt": "2026-08-30T14:14:42.726Z",
+      "listingValidatedCommit": "edc4967fff8b8efbcbf531e2a9e9e2b0f1b3c1b0",
+      "listingValidatedAt": "2026-11-11T21:44:11.550Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -116266,35 +116266,14 @@
         "pluginIds": [
           "io.github.ipastorsan.bujo"
         ],
-        "commit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
-        "checkedAt": "2026-08-30T14:14:42.675Z",
+        "commit": "edc4967fff8b8efbcbf531e2a9e9e2b0f1b3c1b0",
+        "checkedAt": "2026-11-11T21:44:11.550Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "ipastorsan/omarchy-plugin-bujo",
-        "pluginIds": [
-          "io.github.ipastorsan.bujo"
-        ],
-        "commit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-30T14:14:42.675Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-30T13:56:50.270Z",
-        "requestEventId": 30237808284,
-        "requestedAt": "2026-08-30T14:07:29Z",
-        "reviewedAt": "2026-08-30T14:14:42.675Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.ipastorsan.bujo": {
@@ -116305,7 +116284,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ipastorsan/omarchy-plugin-bujo",
+        "pluginIds": [
+          "io.github.ipastorsan.bujo"
+        ],
+        "commit": "edc4967fff8b8efbcbf531e2a9e9e2b0f1b3c1b0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T21:44:11.550Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T21:31:03.518Z",
+        "requestEventId": 35845947124,
+        "requestedAt": "2026-11-11T21:41:04Z",
+        "reviewedAt": "2026-11-11T21:44:11.550Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
+          "validatedAt": "2026-08-30T14:14:42.726Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T21:44:11.550Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ipastorsan/omarchy-plugin-bujo",
+            "pluginIds": [
+              "io.github.ipastorsan.bujo"
+            ],
+            "commit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
+            "checkedAt": "2026-08-30T14:14:42.675Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ipastorsan/omarchy-plugin-bujo",
+            "pluginIds": [
+              "io.github.ipastorsan.bujo"
+            ],
+            "commit": "70ef382c5bcaf34399656762dd2034c55c3ebe3f",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-30T14:14:42.675Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-30T13:56:50.270Z",
+            "requestEventId": 30237808284,
+            "requestedAt": "2026-08-30T14:07:29Z",
+            "reviewedAt": "2026-08-30T14:14:42.675Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/rsd/omaVNC",
