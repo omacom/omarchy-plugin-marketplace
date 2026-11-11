@@ -268500,8 +268500,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T13:41:33.664Z",
-      "listingValidatedCommit": "36d497226e565fc932543807cb90200bf408eef9",
-      "listingValidatedAt": "2026-11-07T16:40:02.772Z",
+      "listingValidatedCommit": "9484a3e3102d43c2575fc4849f6c7d5bbf635e34",
+      "listingValidatedAt": "2026-11-11T07:54:22.246Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -268510,12 +268510,15 @@
         "pluginIds": [
           "foamy.bolt"
         ],
-        "commit": "36d497226e565fc932543807cb90200bf408eef9",
-        "checkedAt": "2026-11-07T16:40:02.771Z",
-        "outcome": "passed",
+        "commit": "9484a3e3102d43c2575fc4849f6c7d5bbf635e34",
+        "checkedAt": "2026-11-11T07:54:22.246Z",
+        "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
-        "capabilities": []
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
       },
       "plugins": {
         "foamy.bolt": {
@@ -268591,8 +268594,50 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "36d497226e565fc932543807cb90200bf408eef9",
+          "validatedAt": "2026-11-07T16:40:02.772Z",
+          "branch": "main",
+          "supersededAt": "2026-11-11T07:54:22.246Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-bolt",
+            "pluginIds": [
+              "foamy.bolt"
+            ],
+            "commit": "36d497226e565fc932543807cb90200bf408eef9",
+            "checkedAt": "2026-11-07T16:40:02.771Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "foamrider/foamy-bolt",
+        "pluginIds": [
+          "foamy.bolt"
+        ],
+        "commit": "9484a3e3102d43c2575fc4849f6c7d5bbf635e34",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-11T07:54:22.246Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-11T07:33:39.552Z",
+        "requestEventId": 35774115349,
+        "requestedAt": "2026-11-11T07:53:53Z",
+        "reviewedAt": "2026-11-11T07:54:22.246Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/foamrider/foamy-idle-suspend",
