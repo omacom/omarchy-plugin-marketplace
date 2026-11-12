@@ -15,6 +15,7 @@ const localDateTime = new Intl.DateTimeFormat("en-GB", {
 });
 const localTime = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" });
 const svgNamespace = "http://www.w3.org/2000/svg";
+const graphFocusLimit = 180;
 const taxonomyCommunityFilters = Object.freeze([
   Object.freeze({
     id: "taxonomy:vpn",
@@ -66,6 +67,9 @@ let activeCluster = null;
 let matches = new Set();
 let query = "";
 let focusMode = true;
+let communityFocusMode = false;
+let communityFocusIndexes = new Set();
+let communityMembers = [];
 let growthGuideModel = null;
 let growthProjectionYear = null;
 let syncCommunityScrollFade = () => {};
@@ -130,12 +134,38 @@ function matchesActiveCommunity(node) {
 }
 
 function visible(node) {
-  const densityVisible = !focusMode || focusIndexes.has(node.index) || node === selected || matches.has(node.index);
+  const densityFocusMode = activeCluster ? communityFocusMode : focusMode;
+  const densityIndexes = activeCluster ? communityFocusIndexes : focusIndexes;
+  const densityVisible = !densityFocusMode || densityIndexes.has(node.index) || node === selected || matches.has(node.index);
   return matchesActiveCommunity(node) && densityVisible;
 }
 
 function emphasized(node) {
   return !query || matches.has(node.index);
+}
+
+function activeCommunityLabel() {
+  const taxonomyFilter = taxonomyCommunityFilters.find((filter) => filter.id === activeCluster);
+  return taxonomyFilter ? taxonomyFilter.label : clusterById.get(activeCluster).label;
+}
+
+function resetCommunityFocus() {
+  communityFocusMode = false;
+  communityMembers = activeCluster ? rankedNodes.filter(matchesActiveCommunity) : [];
+  communityFocusIndexes = new Set(communityMembers.slice(0, graphFocusLimit).map((node) => node.index));
+}
+
+function syncDensityControl() {
+  const densityFocusMode = activeCluster ? communityFocusMode : focusMode;
+  graphDensity.hidden = Boolean(activeCluster) && communityMembers.length <= graphFocusLimit;
+  graphDensity.textContent = densityFocusMode ? "Show all →" : "Focus view →";
+  graphDensity.setAttribute("aria-pressed", String(!densityFocusMode));
+}
+
+function updateGraphStatus() {
+  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  document.querySelector("#total-nodes").textContent = number.format(activeCluster ? communityMembers.length : explorer.nodes.length);
+  document.querySelector("#total-nodes-label").textContent = activeCluster ? `${activeCommunityLabel()} plugins` : "community plugins";
 }
 
 function resizeCanvas({ fit = false } = {}) {
@@ -470,6 +500,7 @@ function selectNode(node, center = false) {
 
 function setActiveCluster(clusterId) {
   activeCluster = activeCluster === clusterId ? null : clusterId;
+  resetCommunityFocus();
   document.querySelectorAll(".community-row").forEach((button) => {
     const active = button.dataset.cluster === activeCluster;
     button.classList.toggle("active", active);
@@ -478,7 +509,8 @@ function setActiveCluster(clusterId) {
   allCommunities.classList.toggle("active", !activeCluster);
   allCommunities.setAttribute("aria-pressed", String(!activeCluster));
   if (selected && !visible(selected)) selectNode(null);
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  syncDensityControl();
+  updateGraphStatus();
   fitGraph();
   drawGraph();
 }
@@ -487,13 +519,15 @@ function renderAnalysis() {
   allCommunities.setAttribute("aria-label", `Show all ${number.format(explorer.clusters.length)} communities`);
   allCommunities.addEventListener("click", () => {
     activeCluster = null;
+    resetCommunityFocus();
     document.querySelectorAll(".community-row").forEach((button) => {
       button.classList.remove("active");
       button.setAttribute("aria-pressed", "false");
     });
     allCommunities.classList.add("active");
     allCommunities.setAttribute("aria-pressed", "true");
-    document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+    syncDensityControl();
+    updateGraphStatus();
     fitGraph();
     drawGraph();
   });
@@ -547,11 +581,10 @@ function setupGraph() {
   graphPalette = readGraphPalette();
   clusterById = new Map(explorer.clusters.map((cluster) => [cluster.id, cluster]));
   rankedNodes = [...explorer.nodes].sort((first, second) => second.influence - first.influence);
-  focusIndexes = new Set(rankedNodes.slice(0, 180).map((node) => node.index));
+  focusIndexes = new Set(rankedNodes.slice(0, graphFocusLimit).map((node) => node.index));
   maximumInfluence = rankedNodes[0]?.influence || 1;
   renderAnalysis();
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
-  document.querySelector("#total-nodes").textContent = number.format(explorer.nodes.length);
+  updateGraphStatus();
   document.querySelector("#total-edges").textContent = number.format(explorer.edges.length);
   document.querySelector("#total-clusters").textContent = explorer.clusters.length;
   document.querySelector("#graph-method").setAttribute("aria-label", explorer.method || "Local semantic similarity");
@@ -573,13 +606,14 @@ graphSearch.addEventListener("input", () => {
   });
   graphMatchCount.hidden = !query;
   graphMatchCount.textContent = query ? `${number.format(matches.size)} match${matches.size === 1 ? "" : "es"}` : "";
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  updateGraphStatus();
   drawGraph();
 });
 
 graphSearch.addEventListener("keydown", (event) => {
   if (event.key !== "Enter" || !matches.size) return;
   activeCluster = null;
+  resetCommunityFocus();
   allCommunities.classList.add("active");
   allCommunities.setAttribute("aria-pressed", "true");
   document.querySelectorAll(".community-row").forEach((button) => {
@@ -587,20 +621,22 @@ graphSearch.addEventListener("keydown", (event) => {
     button.setAttribute("aria-pressed", "false");
   });
   selectNode(explorer.nodes[[...matches][0]], true);
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  syncDensityControl();
+  updateGraphStatus();
 });
 
 graphDensity.addEventListener("click", () => {
-  focusMode = !focusMode;
-  graphDensity.textContent = focusMode ? "Show all →" : "Focus view →";
-  graphDensity.setAttribute("aria-pressed", String(!focusMode));
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  if (activeCluster) communityFocusMode = !communityFocusMode;
+  else focusMode = !focusMode;
+  syncDensityControl();
+  updateGraphStatus();
   fitGraph();
   drawGraph();
 });
 
 graphReset.addEventListener("click", () => {
   activeCluster = null;
+  resetCommunityFocus();
   query = "";
   matches.clear();
   graphSearch.value = "";
@@ -613,7 +649,8 @@ graphReset.addEventListener("click", () => {
     button.setAttribute("aria-pressed", "false");
   });
   selectNode(null);
-  document.querySelector("#visible-nodes").textContent = number.format(explorer.nodes.filter(visible).length);
+  syncDensityControl();
+  updateGraphStatus();
   fitGraph();
   drawGraph();
 });
