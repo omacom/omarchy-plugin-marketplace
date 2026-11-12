@@ -547,6 +547,15 @@ test("explore page exposes graph and date-filtered growth views", () => {
   assert.match(page, /assets\/js\/explore\.js\?v=\d{8}-\d+/);
 });
 
+test("explore page opens on growth unless the graph view is requested", () => {
+  assert.match(page, /<button id="growth-tab" class="active"[^>]+aria-selected="true"[^>]+data-explore-view="growth">/);
+  assert.match(page, /<button id="graph-tab" type="button"[^>]+aria-selected="false"[^>]+data-explore-view="graph" tabindex="-1">/);
+  assert.equal((page.match(/role="tab"[^>]+aria-selected="true"/g) || []).length, 1);
+  assert.match(script, /\.get\("view"\) === "graph" \? "graph" : "growth", \{ updateUrl: false \}/);
+  assert.match(script, /url\.searchParams\.set\("view", "graph"\);\s+url\.searchParams\.delete\("from"\);\s+url\.searchParams\.delete\("to"\);/);
+  assert.match(script, /if \(growth\) renderGrowth\(\{ updateUrl \}\);/);
+});
+
 test("growth view preserves the source graphic's presentation hierarchy", () => {
   assert.match(page, /class="growth-poster"/);
   assert.match(page, /Community Registry[\s\S]*<h2>community plugins<\/h2>/);
