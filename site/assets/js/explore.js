@@ -1402,13 +1402,13 @@ function setView(view, { updateUrl = true } = {}) {
     const url = new URL(window.location.href);
     if (growth) url.searchParams.set("view", "growth");
     else {
-      url.searchParams.delete("view");
+      url.searchParams.set("view", "graph");
       url.searchParams.delete("from");
       url.searchParams.delete("to");
     }
     window.history.replaceState(null, "", url);
   }
-  if (growth) renderGrowth();
+  if (growth) renderGrowth({ updateUrl });
   else window.requestAnimationFrame(() => {
     resizeCanvas({ fit: false });
     syncCommunityScrollFade();
@@ -1449,7 +1449,7 @@ try {
   setupDataFreshness();
   setupGraph();
   setupGrowth();
-  setView(new URLSearchParams(window.location.search).get("view") === "growth" ? "growth" : "graph", { updateUrl: false });
+  setView(new URLSearchParams(window.location.search).get("view") === "graph" ? "graph" : "growth", { updateUrl: false });
 } catch (error) {
   console.error(error);
   loading.hidden = true;
