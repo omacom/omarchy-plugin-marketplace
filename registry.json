@@ -1774,6 +1774,21 @@
       "observedHeadCommit": "45077204d0f807c35a4e7a435a664d0b9c697a1e",
       "observedBranch": "main",
       "observedAt": "2026-11-02T10:49:08.655Z"
+    },
+    {
+      "schemaVersion": 1,
+      "fromRepository": "itchyfeetleech/OP1we-Control",
+      "toRepository": "HoppCX/OP1we-Control",
+      "nodeId": "R_kgDOURANGQ",
+      "databaseId": 1360006425,
+      "pluginIds": [
+        "hoppcx.op1we"
+      ],
+      "listedCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "previousValidatedCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "observedHeadCommit": "f4e25951f0182c0749bf6ad0abbb64d21f222602",
+      "observedBranch": "master",
+      "observedAt": "2026-11-12T10:00:36.789Z"
     }
   ],
   "sources": [
@@ -165568,13 +165583,14 @@
       ]
     },
     {
-      "repo": "https://github.com/itchyfeetleech/OP1we-Control",
+      "repo": "https://github.com/HoppCX/OP1we-Control",
       "repositoryIdentity": {
         "schemaVersion": 1,
         "nodeId": "R_kgDOURANGQ",
         "databaseId": 1360006425,
         "previousRepositories": [
-          "itchyfeetleech/omarchy-op1we"
+          "itchyfeetleech/omarchy-op1we",
+          "itchyfeetleech/OP1we-Control"
         ]
       },
       "type": "plugin-source",
