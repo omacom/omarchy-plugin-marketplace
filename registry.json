@@ -421813,6 +421813,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kryst-0/omarchy-sony-utility",
+      "type": "plugin-source",
+      "addedAt": "2026-11-12",
+      "listedAt": "2026-11-12T18:12:13.795Z",
+      "listingValidatedCommit": "2f75171c46cfa37713af680f9761c16291d0740a",
+      "listingValidatedAt": "2026-11-12T18:12:13.795Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kryst-0/omarchy-sony-utility",
+        "pluginIds": [
+          "krysto.sony-utility"
+        ],
+        "commit": "2f75171c46cfa37713af680f9761c16291d0740a",
+        "checkedAt": "2026-11-12T18:12:13.607Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kryst-0/omarchy-sony-utility",
+        "pluginIds": [
+          "krysto.sony-utility"
+        ],
+        "commit": "2f75171c46cfa37713af680f9761c16291d0740a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-12T18:12:13.607Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-10T16:14:42.431Z",
+        "requestEventId": 35945963317,
+        "requestedAt": "2026-11-12T18:11:41Z",
+        "reviewedAt": "2026-11-12T18:12:13.607Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "krysto.sony-utility": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
