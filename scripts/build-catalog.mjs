@@ -21,6 +21,7 @@ import {
 import { parseGitHubRepository } from "./github-repository.mjs";
 import {
   assertObservedRepositoryIdentity,
+  isObservedRepositoryRename,
   sourceRepositoryPluginIds,
   validateRegistryRepositoryMigrations,
 } from "./repository-identity.mjs";
@@ -446,7 +447,7 @@ function assertGraphqlRepositoryRef(value, label) {
   }
 }
 
-function graphqlSourceIdentity(entry, value) {
+function graphqlSourceIdentity(entry, value, { isolateRenamedRepositories = false } = {}) {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
     throw new CatalogBuildError(
       "github-graphql-invalid",
@@ -481,11 +482,18 @@ function graphqlSourceIdentity(entry, value) {
   }
   assertGraphqlRepositoryRef(value.defaultBranchRef, "default branch");
   assertGraphqlRepositoryRef(value.configuredRef, "configured branch");
-  assertObservedRepositoryIdentity(entry.source, {
+  const observed = {
     nodeId: value.id,
     databaseId: value.databaseId,
     nameWithOwner: value.nameWithOwner,
-  });
+  };
+  if (isolateRenamedRepositories && isObservedRepositoryRename(entry.source, observed)) {
+    checkError(
+      "repository-unreachable",
+      `${entry.repository.slug}: repository was renamed or transferred after its recorded migration`,
+    );
+  }
+  assertObservedRepositoryIdentity(entry.source, observed);
   if (
     value.nameWithOwner.toLowerCase() !== entry.key
     || value.isPrivate
@@ -616,7 +624,9 @@ export async function resolveFullRefreshIdentities(sources, options = {}) {
       }
       try {
         identities.set(entry.key, Object.freeze({
-          context: graphqlSourceIdentity(entry, result.data[entry.alias]),
+          context: graphqlSourceIdentity(entry, result.data[entry.alias], {
+            isolateRenamedRepositories: options.isolateRenamedRepositories === true,
+          }),
         }));
       } catch (error) {
         if (!(error instanceof CatalogCheckError)) throw error;
@@ -2095,6 +2105,7 @@ async function buildCatalogInternal(options = {}) {
       ...(registry.builtInSources || []),
     ];
     fullRefreshIdentities = await resolveFullRefreshIdentities(identitySources, {
+      isolateRenamedRepositories: true,
       ...(options.graphqlBatchSize ? { batchSize: options.graphqlBatchSize } : {}),
       ...(options.graphqlBudgetReserve !== undefined
         ? { budgetReserve: options.graphqlBudgetReserve }
