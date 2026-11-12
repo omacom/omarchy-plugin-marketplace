@@ -621,7 +621,7 @@ test("graph colors follow the active site theme and stay legible", () => {
   assert.match(script, /new MutationObserver\(\(\) => \{\s*applyGraphTheme\(\);/);
   assert.match(script, /const detailAccent = graphColor\(accentColor\(node\.accent\), "panel", 4\.5\)/);
   assert.match(script, /canvas\.addEventListener\("pointercancel", \(event\) => endPointer\(event, \{ select: false \}\)\)/);
-  assert.match(script, /selectNode\(explorer\.nodes\[\[\.\.\.matches\]\[0\]\], true\);\s*document\.querySelector\("#visible-nodes"\)/);
+  assert.match(script, /selectNode\(explorer\.nodes\[\[\.\.\.matches\]\[0\]\], true\);\s*syncDensityControl\(\);\s*updateGraphStatus\(\);/);
   assert.match(script, /element\("i", "neighbor-publisher", `@\$\{candidatePublisher\}`\)/);
 });
 
@@ -703,6 +703,22 @@ test("all semantic communities remain available in a compact labeled rail", () =
   assert.match(script, /button\.addEventListener\("click", \(\) => \{\s*if \(!matchesActiveCommunity\(candidate\)\) setActiveCluster\(null\);\s*selectNode\(candidate, true\);/);
   assert.match(styles, /\.detail-actions \.button\s*\{\s*justify-content:\s*center;\s*\}/);
   assert.doesNotMatch(styles, /\.explore-tabs button, \.explore-toolbar button\s*\{\s*transition:\s*none/);
+});
+
+test("community filters own their focus state and report their complete scope", () => {
+  assert.match(page, /<strong id="total-nodes">0<\/strong> <span id="total-nodes-label">community plugins<\/span>/);
+  assert.match(script, /const graphFocusLimit = 180;/);
+  assert.match(script, /focusIndexes = new Set\(rankedNodes\.slice\(0, graphFocusLimit\)/);
+  assert.doesNotMatch(script, /slice\(0, 180\)/);
+  assert.match(script, /let focusMode = true;\s*let communityFocusMode = false;\s*let communityFocusIndexes = new Set\(\);\s*let communityMembers = \[\];/);
+  assert.match(script, /function visible\(node\) \{\s*const densityFocusMode = activeCluster \? communityFocusMode : focusMode;\s*const densityIndexes = activeCluster \? communityFocusIndexes : focusIndexes;/);
+  assert.match(script, /function activeCommunityLabel\(\) \{[\s\S]*taxonomyFilter \? taxonomyFilter\.label : clusterById\.get\(activeCluster\)\.label/);
+  assert.match(script, /function resetCommunityFocus\(\) \{\s*communityFocusMode = false;\s*communityMembers = activeCluster \? rankedNodes\.filter\(matchesActiveCommunity\) : \[\];\s*communityFocusIndexes = new Set\(communityMembers\.slice\(0, graphFocusLimit\)/);
+  assert.match(script, /function syncDensityControl\(\) \{[\s\S]*graphDensity\.hidden = Boolean\(activeCluster\) && communityMembers\.length <= graphFocusLimit;[\s\S]*densityFocusMode \? "Show all →" : "Focus view →"/);
+  assert.match(script, /function updateGraphStatus\(\) \{[\s\S]*activeCluster \? communityMembers\.length : explorer\.nodes\.length[\s\S]*activeCluster \? `\$\{activeCommunityLabel\(\)\} plugins` : "community plugins"/);
+  assert.equal(script.match(/\bactiveCluster = /g)?.length, 5);
+  assert.equal(script.match(/\bactiveCluster = [^;]+;\s*resetCommunityFocus\(\);/g)?.length, 4);
+  assert.match(script, /graphDensity\.addEventListener\("click", \(\) => \{\s*if \(activeCluster\) communityFocusMode = !communityFocusMode;\s*else focusMode = !focusMode;\s*syncDensityControl\(\);\s*updateGraphStatus\(\);/);
 });
 
 test("selected plugins use a compact marketplace card hierarchy", () => {
