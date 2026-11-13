@@ -269616,8 +269616,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T14:16:58.823Z",
-      "listingValidatedCommit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
-      "listingValidatedAt": "2026-11-10T14:26:27.261Z",
+      "listingValidatedCommit": "69ee28bed2e507522a1d47056956ffca34c24c21",
+      "listingValidatedAt": "2026-11-13T11:13:41.314Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -269626,8 +269626,8 @@
         "pluginIds": [
           "foamy.media"
         ],
-        "commit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
-        "checkedAt": "2026-11-10T14:26:27.261Z",
+        "commit": "69ee28bed2e507522a1d47056956ffca34c24c21",
+        "checkedAt": "2026-11-13T11:13:41.314Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -269726,6 +269726,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
+          "validatedAt": "2026-11-10T14:26:27.261Z",
+          "branch": "main",
+          "supersededAt": "2026-11-13T11:13:41.314Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "foamrider/foamy-media",
+            "pluginIds": [
+              "foamy.media"
+            ],
+            "commit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
+            "checkedAt": "2026-11-10T14:26:27.261Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "foamrider/foamy-media",
+            "pluginIds": [
+              "foamy.media"
+            ],
+            "commit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-10T14:26:27.261Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "bundled-executable-binary"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-10T13:50:35.602Z",
+            "requestEventId": 35690704000,
+            "requestedAt": "2026-11-10T14:25:21Z",
+            "reviewedAt": "2026-11-10T14:26:27.261Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -269734,19 +269777,19 @@
         "pluginIds": [
           "foamy.media"
         ],
-        "commit": "59bb8ab0603437f171dab9fb434dc83bd5811cf2",
+        "commit": "69ee28bed2e507522a1d47056956ffca34c24c21",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-10T14:26:27.261Z",
+        "baselineCheckedAt": "2026-11-13T11:13:41.314Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "bundled-executable-binary"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-10T13:50:35.602Z",
-        "requestEventId": 35690704000,
-        "requestedAt": "2026-11-10T14:25:21Z",
-        "reviewedAt": "2026-11-10T14:26:27.261Z",
+        "reviewedBaselineCheckedAt": "2026-11-12T14:13:48.933Z",
+        "requestEventId": 36021302824,
+        "requestedAt": "2026-11-13T11:13:02Z",
+        "reviewedAt": "2026-11-13T11:13:41.314Z",
         "reviewer": "HANCORE-linux"
       }
     },
