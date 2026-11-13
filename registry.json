@@ -425256,6 +425256,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/meyert11/omarchy-gpu-fleet",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T18:40:19.355Z",
+      "listingValidatedCommit": "4d69457532b64ec266f102d58fe1787a4165251c",
+      "listingValidatedAt": "2026-11-13T18:40:19.355Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "meyert11/omarchy-gpu-fleet",
+        "pluginIds": [
+          "io.github.meyert11.gpu-fleet"
+        ],
+        "commit": "4d69457532b64ec266f102d58fe1787a4165251c",
+        "checkedAt": "2026-11-13T18:40:19.159Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.meyert11.gpu-fleet": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
