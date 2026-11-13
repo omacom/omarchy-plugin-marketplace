@@ -422499,6 +422499,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MrSlothuus/matrix.grid",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T10:04:07.812Z",
+      "listingValidatedCommit": "44b22e90b1c50862b0e53e4425433393224f1d75",
+      "listingValidatedAt": "2026-11-13T10:04:07.812Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mrslothuus/matrix.grid",
+        "pluginIds": [
+          "matrix.grid"
+        ],
+        "commit": "44b22e90b1c50862b0e53e4425433393224f1d75",
+        "checkedAt": "2026-11-13T10:04:07.695Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mrslothuus/matrix.grid",
+        "pluginIds": [
+          "matrix.grid"
+        ],
+        "commit": "44b22e90b1c50862b0e53e4425433393224f1d75",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T10:04:07.695Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T09:52:42.800Z",
+        "requestEventId": 36016022578,
+        "requestedAt": "2026-11-13T10:03:36Z",
+        "reviewedAt": "2026-11-13T10:04:07.695Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "matrix.grid": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
