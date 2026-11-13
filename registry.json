@@ -423676,6 +423676,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/na7hk3r/omarchy-lunar-garden",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:09:57.096Z",
+      "listingValidatedCommit": "07c8190682136c0284ef0765a91f92b3c81c0a91",
+      "listingValidatedAt": "2026-11-13T13:09:57.096Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "na7hk3r/omarchy-lunar-garden",
+        "pluginIds": [
+          "nathker.lunar-garden"
+        ],
+        "commit": "07c8190682136c0284ef0765a91f92b3c81c0a91",
+        "checkedAt": "2026-11-13T13:09:56.970Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nathker.lunar-garden": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
