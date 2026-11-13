@@ -426118,6 +426118,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/flugheim/omarchy-futo-notes-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:31:10.256Z",
+      "listingValidatedCommit": "2736cf77348400df9ec7d34c507f8afbedbd3f7f",
+      "listingValidatedAt": "2026-11-13T22:31:10.256Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "flugheim/omarchy-futo-notes-plugin",
+        "pluginIds": [
+          "flugheim.futo-notes"
+        ],
+        "commit": "2736cf77348400df9ec7d34c507f8afbedbd3f7f",
+        "checkedAt": "2026-11-13T22:31:10.055Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "flugheim/omarchy-futo-notes-plugin",
+        "pluginIds": [
+          "flugheim.futo-notes"
+        ],
+        "commit": "2736cf77348400df9ec7d34c507f8afbedbd3f7f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T22:31:10.055Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T21:22:37.557Z",
+        "requestEventId": 36079986252,
+        "requestedAt": "2026-11-13T22:23:13Z",
+        "reviewedAt": "2026-11-13T22:31:10.055Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "flugheim.futo-notes": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
