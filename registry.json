@@ -425769,6 +425769,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Gleasonmt/overtake-mode-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T21:05:58.678Z",
+      "listingValidatedCommit": "5b81ac4ef855f80eefa1c6ef16a1ad7a4757f161",
+      "listingValidatedAt": "2026-11-13T21:05:58.678Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gleasonmt/overtake-mode-omarchy",
+        "pluginIds": [
+          "gleasonmt.overtake-mode"
+        ],
+        "commit": "5b81ac4ef855f80eefa1c6ef16a1ad7a4757f161",
+        "checkedAt": "2026-11-13T21:05:58.552Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gleasonmt/overtake-mode-omarchy",
+        "pluginIds": [
+          "gleasonmt.overtake-mode"
+        ],
+        "commit": "5b81ac4ef855f80eefa1c6ef16a1ad7a4757f161",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T21:05:58.552Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T19:56:06.886Z",
+        "requestEventId": 36074038801,
+        "requestedAt": "2026-11-13T21:05:22Z",
+        "reviewedAt": "2026-11-13T21:05:58.552Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gleasonmt.overtake-mode": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
