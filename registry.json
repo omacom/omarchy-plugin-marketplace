@@ -424100,6 +424100,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ewweberlin/Omarchy-Touchbar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T14:14:54.735Z",
+      "listingValidatedCommit": "e4fb34c76dded1e9648aef22086a0b6b026d3467",
+      "listingValidatedAt": "2026-11-13T14:14:54.735Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ewweberlin/omarchy-touchbar",
+        "pluginIds": [
+          "ewweberlin.touchbar"
+        ],
+        "commit": "e4fb34c76dded1e9648aef22086a0b6b026d3467",
+        "checkedAt": "2026-11-13T14:14:54.607Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ewweberlin/omarchy-touchbar",
+        "pluginIds": [
+          "ewweberlin.touchbar"
+        ],
+        "commit": "e4fb34c76dded1e9648aef22086a0b6b026d3467",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T14:14:54.607Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T13:46:41.845Z",
+        "requestEventId": 36036566443,
+        "requestedAt": "2026-11-13T14:12:53Z",
+        "reviewedAt": "2026-11-13T14:14:54.607Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ewweberlin.touchbar": {
+          "category": "Desktop",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
