@@ -424067,6 +424067,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MohammedAjlan1/omarchy-prayer-times",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T14:09:40.658Z",
+      "listingValidatedCommit": "f145dcf3e1b1e1449058a9c34a98749906b10149",
+      "listingValidatedAt": "2026-11-13T14:09:40.658Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mohammedajlan1/omarchy-prayer-times",
+        "pluginIds": [
+          "moha.prayer"
+        ],
+        "commit": "f145dcf3e1b1e1449058a9c34a98749906b10149",
+        "checkedAt": "2026-11-13T14:09:40.455Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "moha.prayer": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
