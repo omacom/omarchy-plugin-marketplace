@@ -425021,6 +425021,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/meysamkay/omarchy-window-maximize",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T17:09:06.576Z",
+      "listingValidatedCommit": "eb41c81e8fa7d5c70d1212884fcbf01a7a43d0e3",
+      "listingValidatedAt": "2026-11-13T17:09:06.576Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "meysamkay/omarchy-window-maximize",
+        "pluginIds": [
+          "io.github.meysamkay.window-maximize"
+        ],
+        "commit": "eb41c81e8fa7d5c70d1212884fcbf01a7a43d0e3",
+        "checkedAt": "2026-11-13T17:09:06.379Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.meysamkay.window-maximize": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
