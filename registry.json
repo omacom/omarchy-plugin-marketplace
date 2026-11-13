@@ -425991,6 +425991,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/echox5938-sys/omarchy-now-playing",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:16:30.611Z",
+      "listingValidatedCommit": "8b6884454010324cc9bc1e068f0e35b63ff16e50",
+      "listingValidatedAt": "2026-11-13T22:16:30.611Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "echox5938-sys/omarchy-now-playing",
+        "pluginIds": [
+          "sahils.now-playing"
+        ],
+        "commit": "8b6884454010324cc9bc1e068f0e35b63ff16e50",
+        "checkedAt": "2026-11-13T22:16:30.453Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "echox5938-sys/omarchy-now-playing",
+        "pluginIds": [
+          "sahils.now-playing"
+        ],
+        "commit": "8b6884454010324cc9bc1e068f0e35b63ff16e50",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T22:16:30.453Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T21:06:38.889Z",
+        "requestEventId": 36079442112,
+        "requestedAt": "2026-11-13T22:15:43Z",
+        "reviewedAt": "2026-11-13T22:16:30.453Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sahils.now-playing": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
