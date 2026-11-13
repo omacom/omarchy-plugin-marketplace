@@ -425452,6 +425452,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/reinno/omarchy-default-apps",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T19:35:28.793Z",
+      "listingValidatedCommit": "8802873186916adec56facd4eac41f67f14a1c5f",
+      "listingValidatedAt": "2026-11-13T19:35:28.793Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "reinno/omarchy-default-apps",
+        "pluginIds": [
+          "reinno.default-apps"
+        ],
+        "commit": "8802873186916adec56facd4eac41f67f14a1c5f",
+        "checkedAt": "2026-11-13T19:35:28.676Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "reinno.default-apps": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
