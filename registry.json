@@ -423772,6 +423772,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/michaelsucks/DimWallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:18:14.790Z",
+      "listingValidatedCommit": "c54051f76d64131087581c30a9e8b8c4d339739d",
+      "listingValidatedAt": "2026-11-13T13:18:14.790Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "michaelsucks/dimwallpaper",
+        "pluginIds": [
+          "io.github.michaelsucks.dim-wallpaper"
+        ],
+        "commit": "c54051f76d64131087581c30a9e8b8c4d339739d",
+        "checkedAt": "2026-11-13T13:18:14.596Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.michaelsucks.dim-wallpaper": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
