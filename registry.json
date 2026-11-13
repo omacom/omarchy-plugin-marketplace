@@ -424010,6 +424010,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/vladimirstempel/omaprocess",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:48:52.989Z",
+      "listingValidatedCommit": "9f56d7302e996ab7f30254fe3caec30ffe4a0f81",
+      "listingValidatedAt": "2026-11-13T13:48:52.989Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vladimirstempel/omaprocess",
+        "pluginIds": [
+          "omaprocess"
+        ],
+        "commit": "9f56d7302e996ab7f30254fe3caec30ffe4a0f81",
+        "checkedAt": "2026-11-13T13:48:52.798Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vladimirstempel/omaprocess",
+        "pluginIds": [
+          "omaprocess"
+        ],
+        "commit": "9f56d7302e996ab7f30254fe3caec30ffe4a0f81",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T13:48:52.798Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T13:25:12.526Z",
+        "requestEventId": 36034258244,
+        "requestedAt": "2026-11-13T13:48:20Z",
+        "reviewedAt": "2026-11-13T13:48:52.798Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omaprocess": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
