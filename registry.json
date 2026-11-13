@@ -426467,6 +426467,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ilyamaximusaws/omarchy-live-lyrics",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T23:40:22.119Z",
+      "listingValidatedCommit": "1628b8b321b8c981a18aea0b866a050a19b39417",
+      "listingValidatedAt": "2026-11-13T23:40:22.119Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ilyamaximusaws/omarchy-live-lyrics",
+        "pluginIds": [
+          "angelos.lyrics"
+        ],
+        "commit": "1628b8b321b8c981a18aea0b866a050a19b39417",
+        "checkedAt": "2026-11-13T23:40:21.944Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ilyamaximusaws/omarchy-live-lyrics",
+        "pluginIds": [
+          "angelos.lyrics"
+        ],
+        "commit": "1628b8b321b8c981a18aea0b866a050a19b39417",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T23:40:21.944Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T22:46:42.165Z",
+        "requestEventId": 36085127880,
+        "requestedAt": "2026-11-13T23:39:48Z",
+        "reviewedAt": "2026-11-13T23:40:21.944Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "angelos.lyrics": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
