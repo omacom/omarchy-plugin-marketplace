@@ -421964,6 +421964,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/develroads/magnifier",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T01:25:49.907Z",
+      "listingValidatedCommit": "877e102e42b4e266611d9b853b9d78a5308a16df",
+      "listingValidatedAt": "2026-11-13T01:25:49.907Z",
+      "listingValidatedBranch": "trunk",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "develroads/magnifier",
+        "pluginIds": [
+          "io.github.develroads.smooth-magnifier"
+        ],
+        "commit": "877e102e42b4e266611d9b853b9d78a5308a16df",
+        "checkedAt": "2026-11-13T01:25:49.795Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.develroads.smooth-magnifier": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
