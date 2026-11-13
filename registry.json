@@ -425290,6 +425290,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LosokosG/omarchy-cve-ai-defense",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T18:46:06.336Z",
+      "listingValidatedCommit": "1dd19750e8a66b1a7338cfb7beaaf827e5081a82",
+      "listingValidatedAt": "2026-11-13T18:46:06.336Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "losokosg/omarchy-cve-ai-defense",
+        "pluginIds": [
+          "losokos.cve-ai-defense"
+        ],
+        "commit": "1dd19750e8a66b1a7338cfb7beaaf827e5081a82",
+        "checkedAt": "2026-11-13T18:46:06.216Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "losokos.cve-ai-defense": {
+          "category": "System",
+          "tags": [
+            "security",
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
