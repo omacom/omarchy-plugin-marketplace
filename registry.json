@@ -423262,6 +423262,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/odevvy/gitlabby",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T11:46:45.785Z",
+      "listingValidatedCommit": "e3053ee6f7c77fd01bffea10e545c14b5591be71",
+      "listingValidatedAt": "2026-11-13T11:46:45.785Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "odevvy/gitlabby",
+        "pluginIds": [
+          "odevvy.gitlabby"
+        ],
+        "commit": "e3053ee6f7c77fd01bffea10e545c14b5591be71",
+        "checkedAt": "2026-11-13T11:46:45.632Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "odevvy/gitlabby",
+        "pluginIds": [
+          "odevvy.gitlabby"
+        ],
+        "commit": "e3053ee6f7c77fd01bffea10e545c14b5591be71",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T11:46:45.632Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T11:40:00.274Z",
+        "requestEventId": 36023841365,
+        "requestedAt": "2026-11-13T11:45:56Z",
+        "reviewedAt": "2026-11-13T11:46:45.632Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "odevvy.gitlabby": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
