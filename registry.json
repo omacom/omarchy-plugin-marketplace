@@ -426214,6 +426214,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/thelaggingway/Instabox-Helper",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:52:43.993Z",
+      "listingValidatedCommit": "d403f6d5def3f58ee37d6a9ff56e2ad469fba7c7",
+      "listingValidatedAt": "2026-11-13T22:52:43.993Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thelaggingway/instabox-helper",
+        "pluginIds": [
+          "thelaggingway.instabox-helper"
+        ],
+        "commit": "d403f6d5def3f58ee37d6a9ff56e2ad469fba7c7",
+        "checkedAt": "2026-11-13T22:52:43.873Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "thelaggingway.instabox-helper": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
