@@ -421870,6 +421870,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/YassineSawahi/omarchy-phone",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T00:48:55.796Z",
+      "listingValidatedCommit": "cebd0775cdb457dd25e043ba7569bc73c07936a9",
+      "listingValidatedAt": "2026-11-13T00:48:55.796Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yassinesawahi/omarchy-phone",
+        "pluginIds": [
+          "io.github.yassinesawahi.phone"
+        ],
+        "commit": "cebd0775cdb457dd25e043ba7569bc73c07936a9",
+        "checkedAt": "2026-11-13T00:48:55.642Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yassinesawahi/omarchy-phone",
+        "pluginIds": [
+          "io.github.yassinesawahi.phone"
+        ],
+        "commit": "cebd0775cdb457dd25e043ba7569bc73c07936a9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T00:48:55.642Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-12T08:28:30.829Z",
+        "requestEventId": 35979359740,
+        "requestedAt": "2026-11-13T00:48:22Z",
+        "reviewedAt": "2026-11-13T00:48:55.642Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.yassinesawahi.phone": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
