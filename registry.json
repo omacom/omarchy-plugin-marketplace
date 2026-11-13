@@ -421998,6 +421998,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fire1/omarchy-clear-notifications",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T01:46:09.884Z",
+      "listingValidatedCommit": "1d574cda4f19489b81ab0ef68b2bcdbb12bb96f3",
+      "listingValidatedAt": "2026-11-13T01:46:09.884Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fire1/omarchy-clear-notifications",
+        "pluginIds": [
+          "fire1.clear-notifications"
+        ],
+        "commit": "1d574cda4f19489b81ab0ef68b2bcdbb12bb96f3",
+        "checkedAt": "2026-11-13T01:46:09.697Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "fire1.clear-notifications": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
