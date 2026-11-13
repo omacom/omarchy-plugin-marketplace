@@ -423134,6 +423134,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Dooooooks/ohsnap",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T11:36:58.907Z",
+      "listingValidatedCommit": "deaea6ceb47ed3d48f58ce39e083f95cc358e802",
+      "listingValidatedAt": "2026-11-13T11:36:58.907Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dooooooks/ohsnap",
+        "pluginIds": [
+          "dooooooks.ohsnap"
+        ],
+        "commit": "deaea6ceb47ed3d48f58ce39e083f95cc358e802",
+        "checkedAt": "2026-11-13T11:36:58.721Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dooooooks/ohsnap",
+        "pluginIds": [
+          "dooooooks.ohsnap"
+        ],
+        "commit": "deaea6ceb47ed3d48f58ce39e083f95cc358e802",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T11:36:58.721Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T11:30:09.767Z",
+        "requestEventId": 36023105955,
+        "requestedAt": "2026-11-13T11:36:16Z",
+        "reviewedAt": "2026-11-13T11:36:58.721Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dooooooks.ohsnap": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
