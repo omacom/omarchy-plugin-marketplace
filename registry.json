@@ -426181,6 +426181,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/lorenzo-vecchio/omarchy-github-repos",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:48:55.421Z",
+      "listingValidatedCommit": "05dc140ea33822b13b5f222fe2606fed0ce67a13",
+      "listingValidatedAt": "2026-11-13T22:48:55.421Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lorenzo-vecchio/omarchy-github-repos",
+        "pluginIds": [
+          "lorenzo-vecchio.github"
+        ],
+        "commit": "05dc140ea33822b13b5f222fe2606fed0ce67a13",
+        "checkedAt": "2026-11-13T22:48:55.300Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lorenzo-vecchio.github": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
