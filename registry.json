@@ -422198,6 +422198,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Z1Z0R/Logitech-Device-Manager",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T08:17:36.673Z",
+      "listingValidatedCommit": "e9c07163691c7b4c3507628cba9017283951bd4b",
+      "listingValidatedAt": "2026-11-13T08:17:36.673Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "z1z0r/logitech-device-manager",
+        "pluginIds": [
+          "logitech-device-manager"
+        ],
+        "commit": "e9c07163691c7b4c3507628cba9017283951bd4b",
+        "checkedAt": "2026-11-13T08:17:36.504Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "z1z0r/logitech-device-manager",
+        "pluginIds": [
+          "logitech-device-manager"
+        ],
+        "commit": "e9c07163691c7b4c3507628cba9017283951bd4b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T08:17:36.504Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T08:04:17.893Z",
+        "requestEventId": 36007245776,
+        "requestedAt": "2026-11-13T08:17:01Z",
+        "reviewedAt": "2026-11-13T08:17:36.504Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "logitech-device-manager": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
