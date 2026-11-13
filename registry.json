@@ -422787,6 +422787,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AlxWolfenstein97/omaweb",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T10:43:41.472Z",
+      "listingValidatedCommit": "2f143ef1777b48385c672f96518d7a152d35ffff",
+      "listingValidatedAt": "2026-11-13T10:43:41.472Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alxwolfenstein97/omaweb",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaweb"
+        ],
+        "commit": "2f143ef1777b48385c672f96518d7a152d35ffff",
+        "checkedAt": "2026-11-13T10:43:41.288Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omaweb",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaweb"
+        ],
+        "commit": "2f143ef1777b48385c672f96518d7a152d35ffff",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T10:43:41.288Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T10:00:52.018Z",
+        "requestEventId": 36018174952,
+        "requestedAt": "2026-11-13T10:33:21Z",
+        "reviewedAt": "2026-11-13T10:43:41.289Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.alxwolfenstein97.omaweb": {
+          "category": "Appearance",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
