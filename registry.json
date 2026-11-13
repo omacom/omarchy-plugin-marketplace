@@ -426434,6 +426434,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/JReis23/omarchy-keycheat",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T23:29:27.316Z",
+      "listingValidatedCommit": "3d2cbccc2b760d1f665f0925624ec8271d906023",
+      "listingValidatedAt": "2026-11-13T23:29:27.316Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jreis23/omarchy-keycheat",
+        "pluginIds": [
+          "jr.keycheat"
+        ],
+        "commit": "3d2cbccc2b760d1f665f0925624ec8271d906023",
+        "checkedAt": "2026-11-13T23:29:27.152Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jr.keycheat": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
