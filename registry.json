@@ -423709,6 +423709,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kartikkabadi/omafan",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:13:52.475Z",
+      "listingValidatedCommit": "34d57188f95cb9a660d0e649f34c52a80b50f493",
+      "listingValidatedAt": "2026-11-13T13:13:52.475Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kartikkabadi/omafan",
+        "pluginIds": [
+          "io.github.kartikkabadi.omafan"
+        ],
+        "commit": "34d57188f95cb9a660d0e649f34c52a80b50f493",
+        "checkedAt": "2026-11-13T13:13:52.348Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "sudoers-modification",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kartikkabadi/omafan",
+        "pluginIds": [
+          "io.github.kartikkabadi.omafan"
+        ],
+        "commit": "34d57188f95cb9a660d0e649f34c52a80b50f493",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T13:13:52.348Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "sudoers-modification",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T12:59:49.857Z",
+        "requestEventId": 36030691722,
+        "requestedAt": "2026-11-13T13:09:24Z",
+        "reviewedAt": "2026-11-13T13:13:52.348Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kartikkabadi.omafan": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
