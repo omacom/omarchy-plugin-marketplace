@@ -423561,6 +423561,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nacho1706/omarchy-dock-window-counter",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T12:53:52.725Z",
+      "listingValidatedCommit": "edb45ee5e41b77825af8b9bd8bddf38ca837c29d",
+      "listingValidatedAt": "2026-11-13T12:53:52.725Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nacho1706/omarchy-dock-window-counter",
+        "pluginIds": [
+          "chato.floating-apps"
+        ],
+        "commit": "edb45ee5e41b77825af8b9bd8bddf38ca837c29d",
+        "checkedAt": "2026-11-13T12:53:52.562Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "chato.floating-apps": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
