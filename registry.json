@@ -247075,8 +247075,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-22",
       "listedAt": "2026-09-22T17:58:01.397Z",
-      "listingValidatedCommit": "9f1bdb7c453aa7349024e60076ba70622dd1d14b",
-      "listingValidatedAt": "2026-09-22T17:58:01.397Z",
+      "listingValidatedCommit": "6893c890ce90e80aaf1b6d2008261dcdf542317f",
+      "listingValidatedAt": "2026-11-13T09:06:19.089Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -247085,8 +247085,8 @@
         "pluginIds": [
           "skal.title"
         ],
-        "commit": "9f1bdb7c453aa7349024e60076ba70622dd1d14b",
-        "checkedAt": "2026-09-22T17:58:01.295Z",
+        "commit": "6893c890ce90e80aaf1b6d2008261dcdf542317f",
+        "checkedAt": "2026-11-13T09:06:19.089Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -247101,7 +247101,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "9f1bdb7c453aa7349024e60076ba70622dd1d14b",
+          "validatedAt": "2026-09-22T17:58:01.397Z",
+          "branch": "master",
+          "supersededAt": "2026-11-13T09:06:19.089Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "outcrop-labs/skal-title",
+            "pluginIds": [
+              "skal.title"
+            ],
+            "commit": "9f1bdb7c453aa7349024e60076ba70622dd1d14b",
+            "checkedAt": "2026-09-22T17:58:01.295Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/devmercenario/omarchy-antigravity",
