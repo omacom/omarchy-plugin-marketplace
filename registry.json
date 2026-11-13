@@ -424703,6 +424703,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Bart3x225/omarchy-steelseries",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T15:45:06.875Z",
+      "listingValidatedCommit": "768e58a782100f9c8afcea634a79fcc289a271c0",
+      "listingValidatedAt": "2026-11-13T15:45:06.875Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bart3x225/omarchy-steelseries",
+        "pluginIds": [
+          "bart.steelseries"
+        ],
+        "commit": "768e58a782100f9c8afcea634a79fcc289a271c0",
+        "checkedAt": "2026-11-13T15:45:06.697Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bart3x225/omarchy-steelseries",
+        "pluginIds": [
+          "bart.steelseries"
+        ],
+        "commit": "768e58a782100f9c8afcea634a79fcc289a271c0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T15:45:06.697Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T15:27:30.142Z",
+        "requestEventId": 36045554926,
+        "requestedAt": "2026-11-13T15:41:14Z",
+        "reviewedAt": "2026-11-13T15:45:06.697Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bart.steelseries": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
