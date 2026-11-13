@@ -425486,6 +425486,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/braga1k/omarchy-squat-break",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T19:39:51.332Z",
+      "listingValidatedCommit": "bff077188a9aca0be42bb4b4369b50106739aa7b",
+      "listingValidatedAt": "2026-11-13T19:39:51.332Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "braga1k/omarchy-squat-break",
+        "pluginIds": [
+          "b1k.squats"
+        ],
+        "commit": "bff077188a9aca0be42bb4b4369b50106739aa7b",
+        "checkedAt": "2026-11-13T19:39:51.135Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "b1k.squats": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
