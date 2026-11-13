@@ -424601,6 +424601,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ShadowPJ/omarchy-autodock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T15:27:51.092Z",
+      "listingValidatedCommit": "0f0205ab424ff04c967384f1a3a7afee62ccacda",
+      "listingValidatedAt": "2026-11-13T15:27:51.092Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shadowpj/omarchy-autodock",
+        "pluginIds": [
+          "shadowpj.autodock"
+        ],
+        "commit": "0f0205ab424ff04c967384f1a3a7afee62ccacda",
+        "checkedAt": "2026-11-13T15:27:50.898Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "shadowpj.autodock": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
