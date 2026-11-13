@@ -426251,6 +426251,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/mstio/mst.polaris-curator",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:57:33.933Z",
+      "listingValidatedCommit": "e20d92a186cdf543f92418506f4a921c8ddef94a",
+      "listingValidatedAt": "2026-11-13T22:57:33.933Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mstio/mst.polaris-curator",
+        "pluginIds": [
+          "mst.polaris-curator"
+        ],
+        "commit": "e20d92a186cdf543f92418506f4a921c8ddef94a",
+        "checkedAt": "2026-11-13T22:57:33.748Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mstio/mst.polaris-curator",
+        "pluginIds": [
+          "mst.polaris-curator"
+        ],
+        "commit": "e20d92a186cdf543f92418506f4a921c8ddef94a",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T22:57:33.748Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T21:53:29.465Z",
+        "requestEventId": 36081194785,
+        "requestedAt": "2026-11-13T22:40:51Z",
+        "reviewedAt": "2026-11-13T22:57:33.748Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mst.polaris-curator": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
