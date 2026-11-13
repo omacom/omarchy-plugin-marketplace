@@ -422881,6 +422881,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CipherSar/omarchy-todo",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T10:53:35.420Z",
+      "listingValidatedCommit": "bcf16ca76d69a3a6045e791c1fc775d9cd053bbe",
+      "listingValidatedAt": "2026-11-13T10:53:35.420Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ciphersar/omarchy-todo",
+        "pluginIds": [
+          "ciphersar.todo"
+        ],
+        "commit": "bcf16ca76d69a3a6045e791c1fc775d9cd053bbe",
+        "checkedAt": "2026-11-13T10:53:35.216Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ciphersar/omarchy-todo",
+        "pluginIds": [
+          "ciphersar.todo"
+        ],
+        "commit": "bcf16ca76d69a3a6045e791c1fc775d9cd053bbe",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T10:53:35.216Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T10:43:12.993Z",
+        "requestEventId": 36019314310,
+        "requestedAt": "2026-11-13T10:48:10Z",
+        "reviewedAt": "2026-11-13T10:53:35.216Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ciphersar.todo": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
