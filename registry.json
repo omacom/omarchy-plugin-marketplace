@@ -424864,6 +424864,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cabaucom376/omasky",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T16:20:01.101Z",
+      "listingValidatedCommit": "c3d4a0fee483f642403f7cd86c58cf18b74ad835",
+      "listingValidatedAt": "2026-11-13T16:20:01.101Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cabaucom376/omasky",
+        "pluginIds": [
+          "omasky"
+        ],
+        "commit": "c3d4a0fee483f642403f7cd86c58cf18b74ad835",
+        "checkedAt": "2026-11-13T16:20:00.920Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omasky": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
