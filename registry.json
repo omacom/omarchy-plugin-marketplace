@@ -424340,6 +424340,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SmartALB/omarchy-branch-watch",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T14:45:26.757Z",
+      "listingValidatedCommit": "96e52421811ac7e66aca016f79ec93d1251514ee",
+      "listingValidatedAt": "2026-11-13T14:45:26.757Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smartalb/omarchy-branch-watch",
+        "pluginIds": [
+          "smartalb.branch-watch"
+        ],
+        "commit": "96e52421811ac7e66aca016f79ec93d1251514ee",
+        "checkedAt": "2026-11-13T14:45:26.566Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "smartalb.branch-watch": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
