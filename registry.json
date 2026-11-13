@@ -422409,6 +422409,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rugobal/omarchy-familiar-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T09:34:50.942Z",
+      "listingValidatedCommit": "db8c9872dd444ca3789c872cbd40098419d3333b",
+      "listingValidatedAt": "2026-11-13T09:34:50.942Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rugobal/omarchy-familiar-dock",
+        "pluginIds": [
+          "rugobal.familiar-dock"
+        ],
+        "commit": "db8c9872dd444ca3789c872cbd40098419d3333b",
+        "checkedAt": "2026-11-13T09:34:50.793Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rugobal.familiar-dock": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
