@@ -425222,6 +425222,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tomas-nicolorich/omarchy-navbar-valkiria",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T18:05:06.874Z",
+      "listingValidatedCommit": "f865fc5d9f4ada3a9727644159ca9acc50f9abc7",
+      "listingValidatedAt": "2026-11-13T18:05:06.874Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tomas-nicolorich/omarchy-navbar-valkiria",
+        "pluginIds": [
+          "tomas.valkiria"
+        ],
+        "commit": "f865fc5d9f4ada3a9727644159ca9acc50f9abc7",
+        "checkedAt": "2026-11-13T18:05:06.691Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tomas.valkiria": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
