@@ -424669,6 +424669,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Ex8-ca/omarchy-stock-ticker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T15:38:40.249Z",
+      "listingValidatedCommit": "b3480fe3339e6f9c11e5b4272b4879e746a91331",
+      "listingValidatedAt": "2026-11-13T15:38:40.249Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ex8-ca/omarchy-stock-ticker",
+        "pluginIds": [
+          "io.github.ex8-ca.stock-ticker"
+        ],
+        "commit": "b3480fe3339e6f9c11e5b4272b4879e746a91331",
+        "checkedAt": "2026-11-13T15:38:40.054Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ex8-ca.stock-ticker": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
