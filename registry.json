@@ -422972,6 +422972,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/culcat/ControlCenter",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T11:03:06.549Z",
+      "listingValidatedCommit": "415c18156b5687b5d3ffe13482b1a183dbf9f800",
+      "listingValidatedAt": "2026-11-13T11:03:06.549Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "culcat/controlcenter",
+        "pluginIds": [
+          "io.github.culcat.control-center"
+        ],
+        "commit": "415c18156b5687b5d3ffe13482b1a183dbf9f800",
+        "checkedAt": "2026-11-13T11:03:06.434Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.culcat.control-center": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
