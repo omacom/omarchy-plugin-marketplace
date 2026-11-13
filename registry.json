@@ -425644,6 +425644,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dfrost90/omarchy-keyboard-layout-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T20:19:11.617Z",
+      "listingValidatedCommit": "18ef626fd95bc6579d5cf02e379bf716eeb1578b",
+      "listingValidatedAt": "2026-11-13T20:19:11.617Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dfrost90/omarchy-keyboard-layout-plus",
+        "pluginIds": [
+          "io.github.dfrost90.keyboard-layout-plus"
+        ],
+        "commit": "18ef626fd95bc6579d5cf02e379bf716eeb1578b",
+        "checkedAt": "2026-11-13T20:19:11.459Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dfrost90/omarchy-keyboard-layout-plus",
+        "pluginIds": [
+          "io.github.dfrost90.keyboard-layout-plus"
+        ],
+        "commit": "18ef626fd95bc6579d5cf02e379bf716eeb1578b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T20:19:11.459Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T19:50:09.606Z",
+        "requestEventId": 36070224062,
+        "requestedAt": "2026-11-13T20:18:36Z",
+        "reviewedAt": "2026-11-13T20:19:11.459Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.dfrost90.keyboard-layout-plus": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
