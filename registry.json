@@ -419304,8 +419304,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-10",
       "listedAt": "2026-11-10T05:33:51.985Z",
-      "listingValidatedCommit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
-      "listingValidatedAt": "2026-11-10T05:33:51.985Z",
+      "listingValidatedCommit": "49ec389de17736d5755f26ded2f5e854f1a96eb5",
+      "listingValidatedAt": "2026-11-13T14:35:49.681Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -419314,8 +419314,8 @@
         "pluginIds": [
           "cantcode.app-binder"
         ],
-        "commit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
-        "checkedAt": "2026-11-10T05:33:51.831Z",
+        "commit": "49ec389de17736d5755f26ded2f5e854f1a96eb5",
+        "checkedAt": "2026-11-13T14:35:49.681Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -419331,7 +419331,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
+          "validatedAt": "2026-11-10T05:33:51.985Z",
+          "branch": "master",
+          "supersededAt": "2026-11-13T14:35:49.681Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "casey-cantcode/app-binder",
+            "pluginIds": [
+              "cantcode.app-binder"
+            ],
+            "commit": "455bfdb8d303594903ce2876c1578b5f8d195a1a",
+            "checkedAt": "2026-11-10T05:33:51.831Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/timsonner/nitty-griddy",
