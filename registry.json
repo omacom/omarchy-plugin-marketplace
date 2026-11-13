@@ -234985,8 +234985,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-21",
       "listedAt": "2026-09-21T22:19:41.088Z",
-      "listingValidatedCommit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
-      "listingValidatedAt": "2026-10-26T16:24:26.106Z",
+      "listingValidatedCommit": "88c1123b2f05cdc6cea8c468228606870750c135",
+      "listingValidatedAt": "2026-11-13T02:07:18.109Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -234995,8 +234995,8 @@
         "pluginIds": [
           "matthewjaybarr.app-grid"
         ],
-        "commit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
-        "checkedAt": "2026-10-26T16:24:26.106Z",
+        "commit": "88c1123b2f05cdc6cea8c468228606870750c135",
+        "checkedAt": "2026-11-13T02:07:18.109Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -235144,6 +235144,49 @@
             "reviewedAt": "2026-10-08T23:33:10.910Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
+          "validatedAt": "2026-10-26T16:24:26.106Z",
+          "branch": "main",
+          "supersededAt": "2026-11-13T02:07:18.109Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "matthewjaybarr-png/omarchy-app-grid",
+            "pluginIds": [
+              "matthewjaybarr.app-grid"
+            ],
+            "commit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
+            "checkedAt": "2026-10-26T16:24:26.106Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "matthewjaybarr-png/omarchy-app-grid",
+            "pluginIds": [
+              "matthewjaybarr.app-grid"
+            ],
+            "commit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T16:24:26.106Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-24T03:09:46.107Z",
+            "requestEventId": 34280641614,
+            "requestedAt": "2026-10-26T16:23:54Z",
+            "reviewedAt": "2026-10-26T16:24:26.106Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -235152,19 +235195,19 @@
         "pluginIds": [
           "matthewjaybarr.app-grid"
         ],
-        "commit": "e2d3733aaa23d7c637af1977d68bb3c91dabd34e",
+        "commit": "88c1123b2f05cdc6cea8c468228606870750c135",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T16:24:26.106Z",
+        "baselineCheckedAt": "2026-11-13T02:07:18.109Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-24T03:09:46.107Z",
-        "requestEventId": 34280641614,
-        "requestedAt": "2026-10-26T16:23:54Z",
-        "reviewedAt": "2026-10-26T16:24:26.106Z",
+        "reviewedBaselineCheckedAt": "2026-11-13T01:57:45.034Z",
+        "requestEventId": 35984352294,
+        "requestedAt": "2026-11-13T02:06:43Z",
+        "reviewedAt": "2026-11-13T02:07:18.109Z",
         "reviewer": "HANCORE-linux"
       }
     },
