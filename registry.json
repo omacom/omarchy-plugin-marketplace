@@ -422258,6 +422258,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/vyacheslav-voloshyn/omablink",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T08:32:14.319Z",
+      "listingValidatedCommit": "1e8fcd163908cff110fdf6e8856320b1d0f7e398",
+      "listingValidatedAt": "2026-11-13T08:32:14.319Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vyacheslav-voloshyn/omablink",
+        "pluginIds": [
+          "amsi.omablink"
+        ],
+        "commit": "1e8fcd163908cff110fdf6e8856320b1d0f7e398",
+        "checkedAt": "2026-11-13T08:32:14.163Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "amsi.omablink": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
