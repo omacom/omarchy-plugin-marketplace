@@ -424830,6 +424830,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/chillerno1/omarchy-cliproxy-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T16:14:32.895Z",
+      "listingValidatedCommit": "39499c0784213b32bb22cb5f5781132bb8bf98ea",
+      "listingValidatedAt": "2026-11-13T16:14:32.895Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chillerno1/omarchy-cliproxy-usage",
+        "pluginIds": [
+          "chillerno1.cliproxy-usage"
+        ],
+        "commit": "39499c0784213b32bb22cb5f5781132bb8bf98ea",
+        "checkedAt": "2026-11-13T16:14:32.739Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "chillerno1.cliproxy-usage": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
