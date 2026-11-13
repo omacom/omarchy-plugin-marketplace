@@ -423195,6 +423195,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/BenLewies/Accent",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T11:41:44.718Z",
+      "listingValidatedCommit": "d966d53ecc28f7e152f1c8c018b1af4cc124867d",
+      "listingValidatedAt": "2026-11-13T11:41:44.718Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "benlewies/accent",
+        "pluginIds": [
+          "bjl.accent"
+        ],
+        "commit": "d966d53ecc28f7e152f1c8c018b1af4cc124867d",
+        "checkedAt": "2026-11-13T11:41:44.600Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "benlewies/accent",
+        "pluginIds": [
+          "bjl.accent"
+        ],
+        "commit": "d966d53ecc28f7e152f1c8c018b1af4cc124867d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T11:41:44.600Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T11:34:49.997Z",
+        "requestEventId": 36023475399,
+        "requestedAt": "2026-11-13T11:41:11Z",
+        "reviewedAt": "2026-11-13T11:41:44.600Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bjl.accent": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
