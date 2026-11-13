@@ -426047,6 +426047,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/isHeSatoshi/omarchy-phonon",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T22:21:46.152Z",
+      "listingValidatedCommit": "2ed8b2de7b2d9fffc5499841414ba6530d8cdae3",
+      "listingValidatedAt": "2026-11-13T22:21:46.152Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ishesatoshi/omarchy-phonon",
+        "pluginIds": [
+          "io.github.ishesatoshi.phonon"
+        ],
+        "commit": "2ed8b2de7b2d9fffc5499841414ba6530d8cdae3",
+        "checkedAt": "2026-11-13T22:21:45.943Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ishesatoshi.phonon": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
