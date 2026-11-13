@@ -425059,6 +425059,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/iwasironman/omarchy-tablet-display",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T17:17:48.858Z",
+      "listingValidatedCommit": "773ff2bc2e7537946c1ea7ba21a5c9f740aabcc7",
+      "listingValidatedAt": "2026-11-13T17:17:48.858Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iwasironman/omarchy-tablet-display",
+        "pluginIds": [
+          "omarchy-tablet-display"
+        ],
+        "commit": "773ff2bc2e7537946c1ea7ba21a5c9f740aabcc7",
+        "checkedAt": "2026-11-13T17:17:48.653Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "iwasironman/omarchy-tablet-display",
+        "pluginIds": [
+          "omarchy-tablet-display"
+        ],
+        "commit": "773ff2bc2e7537946c1ea7ba21a5c9f740aabcc7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T17:17:48.653Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T16:45:23.498Z",
+        "requestEventId": 36054831761,
+        "requestedAt": "2026-11-13T17:17:14Z",
+        "reviewedAt": "2026-11-13T17:17:48.653Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omarchy-tablet-display": {
+          "category": "System",
+          "tags": [
+            "hyprland",
+            "system",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
