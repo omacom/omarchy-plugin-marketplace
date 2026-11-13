@@ -423806,6 +423806,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pohunekd/omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:23:50.866Z",
+      "listingValidatedCommit": "7b17221675f6714c7529ebbe7f6c1a9544e518eb",
+      "listingValidatedAt": "2026-11-13T13:23:50.866Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pohunekd/omarchy",
+        "pluginIds": [
+          "pohunek.sessions"
+        ],
+        "commit": "7b17221675f6714c7529ebbe7f6c1a9544e518eb",
+        "checkedAt": "2026-11-13T13:23:50.656Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pohunekd/omarchy",
+        "pluginIds": [
+          "pohunek.sessions"
+        ],
+        "commit": "7b17221675f6714c7529ebbe7f6c1a9544e518eb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T13:23:50.656Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T13:10:41.662Z",
+        "requestEventId": 36031607247,
+        "requestedAt": "2026-11-13T13:19:23Z",
+        "reviewedAt": "2026-11-13T13:23:50.656Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pohunek.sessions": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
