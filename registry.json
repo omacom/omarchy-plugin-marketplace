@@ -193712,8 +193712,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-13",
       "listedAt": "2026-09-13T17:14:27.339Z",
-      "listingValidatedCommit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
-      "listingValidatedAt": "2026-10-20T14:45:49.637Z",
+      "listingValidatedCommit": "bb66be02fdf6332941d58c72655d5e8df8973b6e",
+      "listingValidatedAt": "2026-11-13T12:39:17.175Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -193722,8 +193722,8 @@
         "pluginIds": [
           "io.github.bvisagie.what-changed"
         ],
-        "commit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
-        "checkedAt": "2026-10-20T14:45:49.637Z",
+        "commit": "bb66be02fdf6332941d58c72655d5e8df8973b6e",
+        "checkedAt": "2026-11-13T12:39:17.175Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -193833,6 +193833,51 @@
             "reviewedAt": "2026-10-02T13:47:22.246Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
+          "validatedAt": "2026-10-20T14:45:49.637Z",
+          "branch": "main",
+          "supersededAt": "2026-11-13T12:39:17.175Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bvisagie/omarchy-what-changed",
+            "pluginIds": [
+              "io.github.bvisagie.what-changed"
+            ],
+            "commit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
+            "checkedAt": "2026-10-20T14:45:49.637Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bvisagie/omarchy-what-changed",
+            "pluginIds": [
+              "io.github.bvisagie.what-changed"
+            ],
+            "commit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-20T14:45:49.637Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-20T06:48:10.712Z",
+            "requestEventId": 33752912558,
+            "requestedAt": "2026-10-20T14:45:16Z",
+            "reviewedAt": "2026-10-20T14:45:49.637Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -193841,20 +193886,20 @@
         "pluginIds": [
           "io.github.bvisagie.what-changed"
         ],
-        "commit": "9919e2cc4d25e667a10426ad2b2b2afde8932e18",
+        "commit": "bb66be02fdf6332941d58c72655d5e8df8973b6e",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-20T14:45:49.637Z",
+        "baselineCheckedAt": "2026-11-13T12:39:17.175Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "package-manager",
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-20T06:48:10.712Z",
-        "requestEventId": 33752912558,
-        "requestedAt": "2026-10-20T14:45:16Z",
-        "reviewedAt": "2026-10-20T14:45:49.637Z",
+        "reviewedBaselineCheckedAt": "2026-11-12T13:43:59.739Z",
+        "requestEventId": 36026493419,
+        "requestedAt": "2026-11-13T12:19:37Z",
+        "reviewedAt": "2026-11-13T12:39:17.175Z",
         "reviewer": "HANCORE-linux"
       }
     },
