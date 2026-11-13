@@ -424766,6 +424766,70 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/coricogit/omarchy-mini-screen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T15:50:46.278Z",
+      "listingValidatedCommit": "42ecb0d7eacde60cf66d7719700670264b268470",
+      "listingValidatedAt": "2026-11-13T15:50:46.278Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "coricogit/omarchy-mini-screen",
+        "pluginIds": [
+          "corico.minipantalla"
+        ],
+        "commit": "42ecb0d7eacde60cf66d7719700670264b268470",
+        "checkedAt": "2026-11-13T15:50:46.060Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "coricogit/omarchy-mini-screen",
+        "pluginIds": [
+          "corico.minipantalla"
+        ],
+        "commit": "42ecb0d7eacde60cf66d7719700670264b268470",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T15:50:46.060Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T15:34:10.337Z",
+        "requestEventId": 36045959458,
+        "requestedAt": "2026-11-13T15:45:27Z",
+        "reviewedAt": "2026-11-13T15:50:46.060Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "corico.minipantalla": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
