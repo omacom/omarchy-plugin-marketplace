@@ -422292,6 +422292,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JeoCrypto/omarchy-control-center",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T08:37:13.107Z",
+      "listingValidatedCommit": "a8b0e564e1e4a9c83b7edde02615ce5cf72d09b4",
+      "listingValidatedAt": "2026-11-13T08:37:13.107Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jeocrypto/omarchy-control-center",
+        "pluginIds": [
+          "io.github.jeocrypto.control-center"
+        ],
+        "commit": "a8b0e564e1e4a9c83b7edde02615ce5cf72d09b4",
+        "checkedAt": "2026-11-13T08:37:12.910Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jeocrypto.control-center": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
