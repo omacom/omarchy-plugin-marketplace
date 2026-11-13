@@ -422137,6 +422137,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/maprisma/omarchy-maprisma",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T08:09:17.360Z",
+      "listingValidatedCommit": "f9b63aa6235ad92f69b0d3b67021e7a73b52b57d",
+      "listingValidatedAt": "2026-11-13T08:09:17.360Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "maprisma/omarchy-maprisma",
+        "pluginIds": [
+          "ubruckhaus.maprisma"
+        ],
+        "commit": "f9b63aa6235ad92f69b0d3b67021e7a73b52b57d",
+        "checkedAt": "2026-11-13T08:09:17.198Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "maprisma/omarchy-maprisma",
+        "pluginIds": [
+          "ubruckhaus.maprisma"
+        ],
+        "commit": "f9b63aa6235ad92f69b0d3b67021e7a73b52b57d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T08:09:17.198Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T08:00:38.778Z",
+        "requestEventId": 36006600561,
+        "requestedAt": "2026-11-13T08:08:45Z",
+        "reviewedAt": "2026-11-13T08:09:17.198Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ubruckhaus.maprisma": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
