@@ -426375,6 +426375,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jaapie/openspec-pulse",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T23:08:34.834Z",
+      "listingValidatedCommit": "670794598dc643c272f505b166fab5700be1f6e7",
+      "listingValidatedAt": "2026-11-13T23:08:34.834Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jaapie/openspec-pulse",
+        "pluginIds": [
+          "io.github.jaapie.openspec-pulse"
+        ],
+        "commit": "670794598dc643c272f505b166fab5700be1f6e7",
+        "checkedAt": "2026-11-13T23:08:34.675Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jaapie/openspec-pulse",
+        "pluginIds": [
+          "io.github.jaapie.openspec-pulse"
+        ],
+        "commit": "670794598dc643c272f505b166fab5700be1f6e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T23:08:34.675Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T00:34:56.785Z",
+        "requestEventId": 36082512570,
+        "requestedAt": "2026-11-13T22:59:50Z",
+        "reviewedAt": "2026-11-13T23:08:34.675Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jaapie.openspec-pulse": {
+          "category": "Productivity",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
