@@ -422326,6 +422326,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/hljghost/omarchy-icdown-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T08:42:29.650Z",
+      "listingValidatedCommit": "bf75d49cde05e21273c320cb8da4a55b5eb887f5",
+      "listingValidatedAt": "2026-11-13T08:42:29.650Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hljghost/omarchy-icdown-plugin",
+        "pluginIds": [
+          "io.github.hljghost.icdown"
+        ],
+        "commit": "bf75d49cde05e21273c320cb8da4a55b5eb887f5",
+        "checkedAt": "2026-11-13T08:42:29.469Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hljghost/omarchy-icdown-plugin",
+        "pluginIds": [
+          "io.github.hljghost.icdown"
+        ],
+        "commit": "bf75d49cde05e21273c320cb8da4a55b5eb887f5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T08:42:29.469Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T07:00:35.479Z",
+        "requestEventId": 36008999781,
+        "requestedAt": "2026-11-13T08:40:20Z",
+        "reviewedAt": "2026-11-13T08:42:29.469Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.hljghost.icdown": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
