@@ -424222,6 +424222,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/a1local/omarchy-ambient-tone",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T14:28:56.009Z",
+      "listingValidatedCommit": "6f164567a7ec156414efda79177bf8db44e84210",
+      "listingValidatedAt": "2026-11-13T14:28:56.009Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "a1local/omarchy-ambient-tone",
+        "pluginIds": [
+          "a1local.ambient-tone"
+        ],
+        "commit": "6f164567a7ec156414efda79177bf8db44e84210",
+        "checkedAt": "2026-11-13T14:28:55.820Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "a1local.ambient-tone": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
