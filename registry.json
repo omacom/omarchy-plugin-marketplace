@@ -425704,6 +425704,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ipkalid/omarchy-settings",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T20:37:53.996Z",
+      "listingValidatedCommit": "19d62a9c8a6043062bc5f6795016205fce8efe91",
+      "listingValidatedAt": "2026-11-13T20:37:53.996Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ipkalid/omarchy-settings",
+        "pluginIds": [
+          "ipkalid.settings"
+        ],
+        "commit": "19d62a9c8a6043062bc5f6795016205fce8efe91",
+        "checkedAt": "2026-11-13T20:37:53.880Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ipkalid/omarchy-settings",
+        "pluginIds": [
+          "ipkalid.settings"
+        ],
+        "commit": "19d62a9c8a6043062bc5f6795016205fce8efe91",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T20:37:53.880Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T18:56:45.720Z",
+        "requestEventId": 36071837627,
+        "requestedAt": "2026-11-13T20:37:23Z",
+        "reviewedAt": "2026-11-13T20:37:53.880Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ipkalid.settings": {
+          "category": "System",
+          "tags": [
+            "system",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
