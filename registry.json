@@ -423875,6 +423875,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rafabertholdo/omarchy-temperature",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T13:29:37.218Z",
+      "listingValidatedCommit": "c9057412eaba03d170dc89d08c6388ce36f4174f",
+      "listingValidatedAt": "2026-11-13T13:29:37.218Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rafabertholdo/omarchy-temperature",
+        "pluginIds": [
+          "io.github.rafabertholdo.temperature"
+        ],
+        "commit": "c9057412eaba03d170dc89d08c6388ce36f4174f",
+        "checkedAt": "2026-11-13T13:29:37.096Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rafabertholdo.temperature": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
