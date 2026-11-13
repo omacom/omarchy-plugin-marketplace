@@ -421930,6 +421930,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/dtpietrzak/omarchy-dtp-workspace-control",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T01:06:06.443Z",
+      "listingValidatedCommit": "bf2f326779bb3b61963c4e2abfee980963d5f5d1",
+      "listingValidatedAt": "2026-11-13T01:06:06.443Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dtpietrzak/omarchy-dtp-workspace-control",
+        "pluginIds": [
+          "io.github.dtpietrzak.workspace-control"
+        ],
+        "commit": "bf2f326779bb3b61963c4e2abfee980963d5f5d1",
+        "checkedAt": "2026-11-13T01:06:06.266Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dtpietrzak.workspace-control": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
