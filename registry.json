@@ -425324,6 +425324,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Rockeyxx/omarchy-plugin-full-remove",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T18:57:56.067Z",
+      "listingValidatedCommit": "1865ec0dd1e32a08db812f698853ee9848822f99",
+      "listingValidatedAt": "2026-11-13T18:57:56.067Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rockeyxx/omarchy-plugin-full-remove",
+        "pluginIds": [
+          "io.github.rockeyxx.full-remove"
+        ],
+        "commit": "1865ec0dd1e32a08db812f698853ee9848822f99",
+        "checkedAt": "2026-11-13T18:57:55.936Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rockeyxx/omarchy-plugin-full-remove",
+        "pluginIds": [
+          "io.github.rockeyxx.full-remove"
+        ],
+        "commit": "1865ec0dd1e32a08db812f698853ee9848822f99",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T18:57:55.936Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T18:43:58.543Z",
+        "requestEventId": 36063467390,
+        "requestedAt": "2026-11-13T18:57:24Z",
+        "reviewedAt": "2026-11-13T18:57:55.936Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rockeyxx.full-remove": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
