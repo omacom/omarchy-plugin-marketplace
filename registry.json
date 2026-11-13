@@ -423358,6 +423358,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kaibur02/omarchy-f10-mute",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T12:34:23.977Z",
+      "listingValidatedCommit": "aaddd78c91822a2de7f9d12491fa3a2d5dea51c3",
+      "listingValidatedAt": "2026-11-13T12:34:23.977Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kaibur02/omarchy-f10-mute",
+        "pluginIds": [
+          "io.github.kaibur02.omarchy-f10-mute"
+        ],
+        "commit": "aaddd78c91822a2de7f9d12491fa3a2d5dea51c3",
+        "checkedAt": "2026-11-13T12:34:23.825Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kaibur02/omarchy-f10-mute",
+        "pluginIds": [
+          "io.github.kaibur02.omarchy-f10-mute"
+        ],
+        "commit": "aaddd78c91822a2de7f9d12491fa3a2d5dea51c3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T12:34:23.825Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T12:11:09.851Z",
+        "requestEventId": 36026320753,
+        "requestedAt": "2026-11-13T12:17:30Z",
+        "reviewedAt": "2026-11-13T12:34:23.825Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.kaibur02.omarchy-f10-mute": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
