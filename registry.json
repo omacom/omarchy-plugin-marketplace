@@ -422075,6 +422075,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/YassineSawahi/omarchy-voice",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T07:47:26.197Z",
+      "listingValidatedCommit": "ce868c432ca6a7ea9651a298d2a74b460a4b5e07",
+      "listingValidatedAt": "2026-11-13T07:47:26.197Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yassinesawahi/omarchy-voice",
+        "pluginIds": [
+          "io.github.yassinesawahi.voice"
+        ],
+        "commit": "ce868c432ca6a7ea9651a298d2a74b460a4b5e07",
+        "checkedAt": "2026-11-13T07:47:26.011Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yassinesawahi/omarchy-voice",
+        "pluginIds": [
+          "io.github.yassinesawahi.voice"
+        ],
+        "commit": "ce868c432ca6a7ea9651a298d2a74b460a4b5e07",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T07:47:26.011Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T07:41:58.669Z",
+        "requestEventId": 36005038610,
+        "requestedAt": "2026-11-13T07:46:53Z",
+        "reviewedAt": "2026-11-13T07:47:26.011Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.yassinesawahi.voice": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
