@@ -424373,6 +424373,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RubarMo/Omakeyboard-Layout",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T14:57:53.250Z",
+      "listingValidatedCommit": "f004a0f586b1b04738cf411f73f4b88e8249e41d",
+      "listingValidatedAt": "2026-11-13T14:57:53.250Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rubarmo/omakeyboard-layout",
+        "pluginIds": [
+          "rubar.omakeyboard-layout"
+        ],
+        "commit": "f004a0f586b1b04738cf411f73f4b88e8249e41d",
+        "checkedAt": "2026-11-13T14:57:53.077Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rubar.omakeyboard-layout": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
