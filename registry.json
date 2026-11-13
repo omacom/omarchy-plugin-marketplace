@@ -410895,8 +410895,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-03",
       "listedAt": "2026-11-03T19:49:17.782Z",
-      "listingValidatedCommit": "a48aea860c431bab56aa0fe810623bd48d27f563",
-      "listingValidatedAt": "2026-11-07T10:14:33.733Z",
+      "listingValidatedCommit": "6db78a575a8d431b6ff7cf52debbfa7bf094fca9",
+      "listingValidatedAt": "2026-11-13T13:00:46.973Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -410905,8 +410905,8 @@
         "pluginIds": [
           "jacker-nz.power-inside"
         ],
-        "commit": "a48aea860c431bab56aa0fe810623bd48d27f563",
-        "checkedAt": "2026-11-07T10:14:33.733Z",
+        "commit": "6db78a575a8d431b6ff7cf52debbfa7bf094fca9",
+        "checkedAt": "2026-11-13T13:00:46.973Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -410938,6 +410938,26 @@
             ],
             "commit": "0444eaf243634d2cb0349ef9184faa36e8c563a4",
             "checkedAt": "2026-11-03T19:49:17.607Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "a48aea860c431bab56aa0fe810623bd48d27f563",
+          "validatedAt": "2026-11-07T10:14:33.733Z",
+          "branch": "main",
+          "supersededAt": "2026-11-13T13:00:46.973Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "jacker-nz/omarchy-power-inside",
+            "pluginIds": [
+              "jacker-nz.power-inside"
+            ],
+            "commit": "a48aea860c431bab56aa0fe810623bd48d27f563",
+            "checkedAt": "2026-11-07T10:14:33.733Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
