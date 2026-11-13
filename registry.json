@@ -426524,6 +426524,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/OmaShelf",
+      "type": "plugin-source",
+      "addedAt": "2026-11-13",
+      "listedAt": "2026-11-13T23:49:56.202Z",
+      "listingValidatedCommit": "298a29eea97157a358d1e341edb2d2c5d0e5aeb3",
+      "listingValidatedAt": "2026-11-13T23:49:56.202Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/omashelf",
+        "pluginIds": [
+          "kel.omashelf"
+        ],
+        "commit": "298a29eea97157a358d1e341edb2d2c5d0e5aeb3",
+        "checkedAt": "2026-11-13T23:49:55.987Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kelmankenberg/omashelf",
+        "pluginIds": [
+          "kel.omashelf"
+        ],
+        "commit": "298a29eea97157a358d1e341edb2d2c5d0e5aeb3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-13T23:49:55.987Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T22:55:29.901Z",
+        "requestEventId": 36085713041,
+        "requestedAt": "2026-11-13T23:49:18Z",
+        "reviewedAt": "2026-11-13T23:49:55.987Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "kel.omashelf": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
