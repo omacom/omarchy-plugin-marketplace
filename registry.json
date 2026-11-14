@@ -227155,7 +227155,11 @@
             "bar",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Hermes Companion needs Hermes Agent 0.21.7 or newer, installed separately. Enabling the plugin opens its installer, which adds Hermes's voice extra, a systemd user service and keybindings. Follow the upstream installation instructions."
+          }
         }
       },
       "maintainerVerificationReview": {
