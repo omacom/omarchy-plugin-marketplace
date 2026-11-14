@@ -427644,6 +427644,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mstio/mst.agent-launchers",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T04:37:03.522Z",
+      "listingValidatedCommit": "3b731fd49d2d9eda5c4dc0b29c995bddafa213c5",
+      "listingValidatedAt": "2026-11-14T04:37:03.522Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mstio/mst.agent-launchers",
+        "pluginIds": [
+          "mst.agent-launchers"
+        ],
+        "commit": "3b731fd49d2d9eda5c4dc0b29c995bddafa213c5",
+        "checkedAt": "2026-11-14T04:37:03.363Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mst.agent-launchers": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "launcher",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
