@@ -429537,6 +429537,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/quantum0909/omarchy-dual-screen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T16:46:50.905Z",
+      "listingValidatedCommit": "58cf666306488f156ede2ca7350d6e40c52d8416",
+      "listingValidatedAt": "2026-11-14T16:46:50.905Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "quantum0909/omarchy-dual-screen",
+        "pluginIds": [
+          "io.github.quantum0909.dual-screen"
+        ],
+        "commit": "58cf666306488f156ede2ca7350d6e40c52d8416",
+        "checkedAt": "2026-11-14T16:46:50.720Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "quantum0909/omarchy-dual-screen",
+        "pluginIds": [
+          "io.github.quantum0909.dual-screen"
+        ],
+        "commit": "58cf666306488f156ede2ca7350d6e40c52d8416",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T16:46:50.720Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "package-manager",
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T16:04:05.666Z",
+        "requestEventId": 36137175733,
+        "requestedAt": "2026-11-14T16:39:28Z",
+        "reviewedAt": "2026-11-14T16:46:50.720Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.quantum0909.dual-screen": {
+          "category": "Widgets",
+          "tags": [
+            "workspaces",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
