@@ -428651,6 +428651,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/thegoodkhiid/omarchy-msi-center",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T09:42:46.710Z",
+      "listingValidatedCommit": "b39854d4cb2356041eff03836c081c9ce418a935",
+      "listingValidatedAt": "2026-11-14T09:42:46.710Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thegoodkhiid/omarchy-msi-center",
+        "pluginIds": [
+          "oma.msi-center"
+        ],
+        "commit": "b39854d4cb2356041eff03836c081c9ce418a935",
+        "checkedAt": "2026-11-14T09:42:46.559Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thegoodkhiid/omarchy-msi-center",
+        "pluginIds": [
+          "oma.msi-center"
+        ],
+        "commit": "b39854d4cb2356041eff03836c081c9ce418a935",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T09:42:46.559Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T08:58:18.004Z",
+        "requestEventId": 36114808750,
+        "requestedAt": "2026-11-14T09:42:10Z",
+        "reviewedAt": "2026-11-14T09:42:46.559Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "oma.msi-center": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
