@@ -427780,6 +427780,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mahdjalili/omaxrs",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T05:26:15.205Z",
+      "listingValidatedCommit": "206b6c70a3e18ca5380789eb2446313217d00513",
+      "listingValidatedAt": "2026-11-14T05:26:15.205Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mahdjalili/omaxrs",
+        "pluginIds": [
+          "io.github.mahdjalili.omaxrs"
+        ],
+        "commit": "206b6c70a3e18ca5380789eb2446313217d00513",
+        "checkedAt": "2026-11-14T05:26:15.086Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mahdjalili.omaxrs": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "vpn",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
