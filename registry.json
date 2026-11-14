@@ -428272,6 +428272,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hotoke62/hpfan",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:50:39.577Z",
+      "listingValidatedCommit": "0567e3ff65529240997dfd01da3bba7dd9eeaadb",
+      "listingValidatedAt": "2026-11-14T06:50:39.577Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hotoke62/hpfan",
+        "pluginIds": [
+          "vee.hpfan"
+        ],
+        "commit": "0567e3ff65529240997dfd01da3bba7dd9eeaadb",
+        "checkedAt": "2026-11-14T06:50:39.384Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "hotoke62/hpfan",
+        "pluginIds": [
+          "vee.hpfan"
+        ],
+        "commit": "0567e3ff65529240997dfd01da3bba7dd9eeaadb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T06:50:39.384Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T06:28:25.585Z",
+        "requestEventId": 36106096653,
+        "requestedAt": "2026-11-14T06:41:08Z",
+        "reviewedAt": "2026-11-14T06:50:39.384Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vee.hpfan": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
