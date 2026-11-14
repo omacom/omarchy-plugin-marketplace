@@ -428590,6 +428590,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Imanhri/omarchy-ps5-releases",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T09:03:39.859Z",
+      "listingValidatedCommit": "191058455ebce61a50219ca869250d69c60d43dc",
+      "listingValidatedAt": "2026-11-14T09:03:39.859Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imanhri/omarchy-ps5-releases",
+        "pluginIds": [
+          "io.github.imanhri.ps5-releases"
+        ],
+        "commit": "191058455ebce61a50219ca869250d69c60d43dc",
+        "checkedAt": "2026-11-14T09:03:39.666Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imanhri/omarchy-ps5-releases",
+        "pluginIds": [
+          "io.github.imanhri.ps5-releases"
+        ],
+        "commit": "191058455ebce61a50219ca869250d69c60d43dc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T09:03:39.666Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T08:22:34.446Z",
+        "requestEventId": 36112977095,
+        "requestedAt": "2026-11-14T09:03:06Z",
+        "reviewedAt": "2026-11-14T09:03:39.666Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.imanhri.ps5-releases": {
+          "category": "Widgets",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
