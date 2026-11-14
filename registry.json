@@ -427260,6 +427260,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/douglas/omarchy-kbd-backlight",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T03:17:05.509Z",
+      "listingValidatedCommit": "07a9322e366153d52080ee01352a222121363f96",
+      "listingValidatedAt": "2026-11-14T03:17:05.509Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "douglas/omarchy-kbd-backlight",
+        "pluginIds": [
+          "io.github.douglas.kbd-backlight"
+        ],
+        "commit": "07a9322e366153d52080ee01352a222121363f96",
+        "checkedAt": "2026-11-14T03:17:05.342Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.douglas.kbd-backlight": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
