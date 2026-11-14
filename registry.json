@@ -427002,6 +427002,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rastlyn80/omarchy-knowledge-base",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T02:39:13.931Z",
+      "listingValidatedCommit": "bb1a53fb453da44156c8ceb9fa5f2436faa648ab",
+      "listingValidatedAt": "2026-11-14T02:39:13.931Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rastlyn80/omarchy-knowledge-base",
+        "pluginIds": [
+          "io.github.rastlyn80.knowledge-base"
+        ],
+        "commit": "bb1a53fb453da44156c8ceb9fa5f2436faa648ab",
+        "checkedAt": "2026-11-14T02:39:13.745Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rastlyn80/omarchy-knowledge-base",
+        "pluginIds": [
+          "io.github.rastlyn80.knowledge-base"
+        ],
+        "commit": "bb1a53fb453da44156c8ceb9fa5f2436faa648ab",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T02:39:13.745Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T02:32:49.608Z",
+        "requestEventId": 36095121873,
+        "requestedAt": "2026-11-14T02:38:41Z",
+        "reviewedAt": "2026-11-14T02:39:13.745Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rastlyn80.knowledge-base": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
