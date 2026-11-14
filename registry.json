@@ -427452,6 +427452,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Bappoz/notchi-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T04:19:22.309Z",
+      "listingValidatedCommit": "3f08a030a5576465169860d304dcaf6c68c883aa",
+      "listingValidatedAt": "2026-11-14T04:19:22.309Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bappoz/notchi-omarchy",
+        "pluginIds": [
+          "bappoz.notch"
+        ],
+        "commit": "3f08a030a5576465169860d304dcaf6c68c883aa",
+        "checkedAt": "2026-11-14T04:19:22.132Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bappoz/notchi-omarchy",
+        "pluginIds": [
+          "bappoz.notch"
+        ],
+        "commit": "3f08a030a5576465169860d304dcaf6c68c883aa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T04:19:22.132Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T03:17:50.098Z",
+        "requestEventId": 36099589841,
+        "requestedAt": "2026-11-14T04:16:28Z",
+        "reviewedAt": "2026-11-14T04:19:22.132Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bappoz.notch": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
