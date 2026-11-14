@@ -426644,6 +426644,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jagritvats/omarchy-dolly",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T00:54:44.140Z",
+      "listingValidatedCommit": "d9f547a1134d2d21f6898087acc447e3a7cf3b26",
+      "listingValidatedAt": "2026-11-14T00:54:44.140Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jagritvats/omarchy-dolly",
+        "pluginIds": [
+          "io.github.jagritvats.dolly"
+        ],
+        "commit": "d9f547a1134d2d21f6898087acc447e3a7cf3b26",
+        "checkedAt": "2026-11-14T00:54:44.022Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jagritvats/omarchy-dolly",
+        "pluginIds": [
+          "io.github.jagritvats.dolly"
+        ],
+        "commit": "d9f547a1134d2d21f6898087acc447e3a7cf3b26",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T00:54:44.022Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T23:42:37.567Z",
+        "requestEventId": 36089428155,
+        "requestedAt": "2026-11-14T00:53:48Z",
+        "reviewedAt": "2026-11-14T00:54:44.022Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.jagritvats.dolly": {
+          "category": "Productivity",
+          "tags": [
+            "media",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
