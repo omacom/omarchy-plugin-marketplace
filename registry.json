@@ -428046,6 +428046,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AeonArcHQ/omarchy-logitech-panel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:29:47.750Z",
+      "listingValidatedCommit": "4141b245d5a9d44931da9204c6e55499672a2d31",
+      "listingValidatedAt": "2026-11-14T06:29:47.750Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aeonarchq/omarchy-logitech-panel",
+        "pluginIds": [
+          "com.aeonarc.logitech-panel"
+        ],
+        "commit": "4141b245d5a9d44931da9204c6e55499672a2d31",
+        "checkedAt": "2026-11-14T06:29:47.586Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aeonarchq/omarchy-logitech-panel",
+        "pluginIds": [
+          "com.aeonarc.logitech-panel"
+        ],
+        "commit": "4141b245d5a9d44931da9204c6e55499672a2d31",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T06:29:47.586Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T06:18:50.415Z",
+        "requestEventId": 36105349634,
+        "requestedAt": "2026-11-14T06:24:39Z",
+        "reviewedAt": "2026-11-14T06:29:47.586Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.aeonarc.logitech-panel": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
