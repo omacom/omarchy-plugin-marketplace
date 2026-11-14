@@ -428108,6 +428108,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/roonakyadav/omarchy-clipboard-bulk-paste",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:38:38.637Z",
+      "listingValidatedCommit": "c0127949b5830b9e760612e7e72e72dad319e839",
+      "listingValidatedAt": "2026-11-14T06:38:38.637Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "roonakyadav/omarchy-clipboard-bulk-paste",
+        "pluginIds": [
+          "roonakyadav.clipboard-bulk-paste"
+        ],
+        "commit": "c0127949b5830b9e760612e7e72e72dad319e839",
+        "checkedAt": "2026-11-14T06:38:38.471Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "roonakyadav.clipboard-bulk-paste": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "system",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
