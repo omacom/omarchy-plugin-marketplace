@@ -428142,6 +428142,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/orcawhisperer/omarchy-protonvpn",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:42:53.195Z",
+      "listingValidatedCommit": "7034c1b2473384a465c01e633ffe65543448894c",
+      "listingValidatedAt": "2026-11-14T06:42:53.195Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "orcawhisperer/omarchy-protonvpn",
+        "pluginIds": [
+          "io.github.orcawhisperer.protonvpn"
+        ],
+        "commit": "7034c1b2473384a465c01e633ffe65543448894c",
+        "checkedAt": "2026-11-14T06:42:53.063Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "orcawhisperer/omarchy-protonvpn",
+        "pluginIds": [
+          "io.github.orcawhisperer.protonvpn"
+        ],
+        "commit": "7034c1b2473384a465c01e633ffe65543448894c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T06:42:53.063Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T00:42:37.999Z",
+        "requestEventId": 36106018127,
+        "requestedAt": "2026-11-14T06:39:16Z",
+        "reviewedAt": "2026-11-14T06:42:53.063Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.orcawhisperer.protonvpn": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
