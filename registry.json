@@ -426969,6 +426969,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/PSthelyBlog/neon-train-screensaver",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T01:58:12.072Z",
+      "listingValidatedCommit": "996334b743b2b1de749e1402a12855c0a62eedb8",
+      "listingValidatedAt": "2026-11-14T01:58:12.072Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "psthelyblog/neon-train-screensaver",
+        "pluginIds": [
+          "io.github.psthelyblog.neon-train-screensaver"
+        ],
+        "commit": "996334b743b2b1de749e1402a12855c0a62eedb8",
+        "checkedAt": "2026-11-14T01:58:11.866Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.psthelyblog.neon-train-screensaver": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
