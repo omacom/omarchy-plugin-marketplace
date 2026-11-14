@@ -429156,6 +429156,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/statick88/omarchy-port-forward",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T13:29:27.899Z",
+      "listingValidatedCommit": "7c026270dba8760d51de23f6f9d31a503f475994",
+      "listingValidatedAt": "2026-11-14T13:29:27.899Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "statick88/omarchy-port-forward",
+        "pluginIds": [
+          "io.github.statick88.port-forward"
+        ],
+        "commit": "7c026270dba8760d51de23f6f9d31a503f475994",
+        "checkedAt": "2026-11-14T13:29:27.764Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.statick88.port-forward": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
