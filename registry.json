@@ -429193,6 +429193,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/MyNameIsDylan99/omarchy-wakingup",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T13:59:06.706Z",
+      "listingValidatedCommit": "8928894064436ff0497465b3ccda0b8ce615b22b",
+      "listingValidatedAt": "2026-11-14T13:59:06.706Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mynameisdylan99/omarchy-wakingup",
+        "pluginIds": [
+          "io.github.fresshnes.wakingup"
+        ],
+        "commit": "8928894064436ff0497465b3ccda0b8ce615b22b",
+        "checkedAt": "2026-11-14T13:59:06.514Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mynameisdylan99/omarchy-wakingup",
+        "pluginIds": [
+          "io.github.fresshnes.wakingup"
+        ],
+        "commit": "8928894064436ff0497465b3ccda0b8ce615b22b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T13:59:06.514Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T13:25:09.997Z",
+        "requestEventId": 36127158410,
+        "requestedAt": "2026-11-14T13:58:38Z",
+        "reviewedAt": "2026-11-14T13:59:06.514Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fresshnes.wakingup": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
