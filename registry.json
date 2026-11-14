@@ -428333,6 +428333,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimg4/fan-control",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:55:18.167Z",
+      "listingValidatedCommit": "95d9d96651c635b4486a2ad13fa15d60f543f080",
+      "listingValidatedAt": "2026-11-14T06:55:18.167Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimg4/fan-control",
+        "pluginIds": [
+          "dimef.fan-control"
+        ],
+        "commit": "95d9d96651c635b4486a2ad13fa15d60f543f080",
+        "checkedAt": "2026-11-14T06:55:17.981Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jimg4/fan-control",
+        "pluginIds": [
+          "dimef.fan-control"
+        ],
+        "commit": "95d9d96651c635b4486a2ad13fa15d60f543f080",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T06:55:17.981Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T20:47:12.312Z",
+        "requestEventId": 36106500562,
+        "requestedAt": "2026-11-14T06:50:08Z",
+        "reviewedAt": "2026-11-14T06:55:17.981Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dimef.fan-control": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
