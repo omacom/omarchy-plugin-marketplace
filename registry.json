@@ -426711,6 +426711,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jameydavis/led-hoops",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T01:08:10.554Z",
+      "listingValidatedCommit": "9212dba8727c100a56f6e5957f5030b4856b70aa",
+      "listingValidatedAt": "2026-11-14T01:08:10.554Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jameydavis/led-hoops",
+        "pluginIds": [
+          "jameydavis.led-hoops"
+        ],
+        "commit": "9212dba8727c100a56f6e5957f5030b4856b70aa",
+        "checkedAt": "2026-11-14T01:08:10.400Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jameydavis.led-hoops": {
+          "category": "Other",
+          "tags": [
+            "bar",
+            "quickshell",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
