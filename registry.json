@@ -427980,6 +427980,72 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/michielturmel-max/80procent",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T06:25:00.439Z",
+      "listingValidatedCommit": "070240a2f301b7806322ffe398578329eff64bf3",
+      "listingValidatedAt": "2026-11-14T06:25:00.439Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "michielturmel-max/80procent",
+        "pluginIds": [
+          "80procent"
+        ],
+        "commit": "070240a2f301b7806322ffe398578329eff64bf3",
+        "checkedAt": "2026-11-14T06:25:00.232Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "michielturmel-max/80procent",
+        "pluginIds": [
+          "80procent"
+        ],
+        "commit": "070240a2f301b7806322ffe398578329eff64bf3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T06:25:00.232Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T19:14:36.050Z",
+        "requestEventId": 36105285219,
+        "requestedAt": "2026-11-14T06:23:06Z",
+        "reviewedAt": "2026-11-14T06:25:00.232Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "80procent": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
