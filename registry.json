@@ -427419,6 +427419,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Raiden-MeixElysia/OmaIcon",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T04:14:45.790Z",
+      "listingValidatedCommit": "40d8af0a89283e78a578bdb42cca45e00391a4e1",
+      "listingValidatedAt": "2026-11-14T04:14:45.790Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "raiden-meixelysia/omaicon",
+        "pluginIds": [
+          "raiden-meixelysia.omaicon"
+        ],
+        "commit": "40d8af0a89283e78a578bdb42cca45e00391a4e1",
+        "checkedAt": "2026-11-14T04:14:45.585Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "raiden-meixelysia.omaicon": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
