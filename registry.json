@@ -428500,6 +428500,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/artshore/omapersian-datetime",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T08:13:50.428Z",
+      "listingValidatedCommit": "77a7c30421a8f2a8399a0e6799a690585b40a0f1",
+      "listingValidatedAt": "2026-11-14T08:13:50.428Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "artshore/omapersian-datetime",
+        "pluginIds": [
+          "artshore.clock"
+        ],
+        "commit": "77a7c30421a8f2a8399a0e6799a690585b40a0f1",
+        "checkedAt": "2026-11-14T08:13:50.222Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "artshore.clock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
