@@ -429606,6 +429606,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ricardozulian/omarchy-rebuild",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T17:11:57.314Z",
+      "listingValidatedCommit": "77302c62fd15db94dad3dcbf85e399cc42b0786b",
+      "listingValidatedAt": "2026-11-14T17:11:57.314Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ricardozulian/omarchy-rebuild",
+        "pluginIds": [
+          "ricardo.rebuild"
+        ],
+        "commit": "77302c62fd15db94dad3dcbf85e399cc42b0786b",
+        "checkedAt": "2026-11-14T17:11:57.119Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ricardozulian/omarchy-rebuild",
+        "pluginIds": [
+          "ricardo.rebuild"
+        ],
+        "commit": "77302c62fd15db94dad3dcbf85e399cc42b0786b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T17:11:57.119Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T17:07:13.933Z",
+        "requestEventId": 36139039816,
+        "requestedAt": "2026-11-14T17:11:25Z",
+        "reviewedAt": "2026-11-14T17:11:57.119Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ricardo.rebuild": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
