@@ -428959,6 +428959,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/PeterVinter/omarchy-hangar-store",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T12:30:51.259Z",
+      "listingValidatedCommit": "98e1aa9f0bb546f8d36d1f0e3fb1a33d098137cb",
+      "listingValidatedAt": "2026-11-14T12:30:51.259Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "petervinter/omarchy-hangar-store",
+        "pluginIds": [
+          "peter.hangar-store"
+        ],
+        "commit": "98e1aa9f0bb546f8d36d1f0e3fb1a33d098137cb",
+        "checkedAt": "2026-11-14T12:30:51.097Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "peter.hangar-store": {
+          "category": "Productivity",
+          "tags": [
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
