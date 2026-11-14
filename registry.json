@@ -428991,6 +428991,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/odaszek/omarchy-mqtt-notifier",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T12:35:11.657Z",
+      "listingValidatedCommit": "2b36226c8afe31310059073d4a73528409011738",
+      "listingValidatedAt": "2026-11-14T12:35:11.657Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "odaszek/omarchy-mqtt-notifier",
+        "pluginIds": [
+          "odach.mqtt-notifier"
+        ],
+        "commit": "2b36226c8afe31310059073d4a73528409011738",
+        "checkedAt": "2026-11-14T12:35:11.538Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "odaszek/omarchy-mqtt-notifier",
+        "pluginIds": [
+          "odach.mqtt-notifier"
+        ],
+        "commit": "2b36226c8afe31310059073d4a73528409011738",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T12:35:11.538Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T11:42:37.596Z",
+        "requestEventId": 36123088397,
+        "requestedAt": "2026-11-14T12:31:39Z",
+        "reviewedAt": "2026-11-14T12:35:11.538Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "odach.mqtt-notifier": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
