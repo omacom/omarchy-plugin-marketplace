@@ -429056,6 +429056,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/hassanaitnacer/omarchy-prayer-times",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T12:56:28.507Z",
+      "listingValidatedCommit": "aa9245ebee6476e197dbecfd79c5372ea7322b91",
+      "listingValidatedAt": "2026-11-14T12:56:28.507Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hassanaitnacer/omarchy-prayer-times",
+        "pluginIds": [
+          "io.github.hassanaitnacer.prayer-times"
+        ],
+        "commit": "aa9245ebee6476e197dbecfd79c5372ea7322b91",
+        "checkedAt": "2026-11-14T12:56:28.337Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.hassanaitnacer.prayer-times": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
