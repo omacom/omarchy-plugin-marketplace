@@ -429249,6 +429249,72 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/i4w7w4a/omarchy-google-calendar-oauth",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T14:22:50.886Z",
+      "listingValidatedCommit": "64f1b63cff1e504fd709fb2208fe9b48630c9985",
+      "listingValidatedAt": "2026-11-14T14:22:50.886Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "i4w7w4a/omarchy-google-calendar-oauth",
+        "pluginIds": [
+          "re_pick.google-calendar-clock"
+        ],
+        "commit": "64f1b63cff1e504fd709fb2208fe9b48630c9985",
+        "checkedAt": "2026-11-14T14:22:50.738Z",
+        "outcome": "needs-fixes",
+        "enforcementMode": "selective",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "i4w7w4a/omarchy-google-calendar-oauth",
+        "pluginIds": [
+          "re_pick.google-calendar-clock"
+        ],
+        "commit": "64f1b63cff1e504fd709fb2208fe9b48630c9985",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T14:22:50.738Z",
+        "baselineOutcome": "needs-fixes",
+        "findings": [
+          "curl-pipe-shell"
+        ],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T13:36:16.073Z",
+        "requestEventId": 36128566871,
+        "requestedAt": "2026-11-14T14:22:03Z",
+        "reviewedAt": "2026-11-14T14:22:50.738Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "re_pick.google-calendar-clock": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
