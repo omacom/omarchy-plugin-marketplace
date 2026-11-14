@@ -426581,6 +426581,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AmirAdelevich/omarchy-fan",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T00:33:20.604Z",
+      "listingValidatedCommit": "adc2ab9b77070a29d106e2d478c1f28cfb5c3d3c",
+      "listingValidatedAt": "2026-11-14T00:33:20.604Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "amiradelevich/omarchy-fan",
+        "pluginIds": [
+          "io.github.amiradelevich.fan"
+        ],
+        "commit": "adc2ab9b77070a29d106e2d478c1f28cfb5c3d3c",
+        "checkedAt": "2026-11-14T00:33:20.459Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "amiradelevich/omarchy-fan",
+        "pluginIds": [
+          "io.github.amiradelevich.fan"
+        ],
+        "commit": "adc2ab9b77070a29d106e2d478c1f28cfb5c3d3c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T00:33:20.459Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T00:15:17.081Z",
+        "requestEventId": 36088244401,
+        "requestedAt": "2026-11-14T00:32:40Z",
+        "reviewedAt": "2026-11-14T00:33:20.459Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.amiradelevich.fan": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "power-management",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
