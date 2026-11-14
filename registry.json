@@ -429474,6 +429474,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dmitriiweb/ngterm-ormachy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T16:41:33.396Z",
+      "listingValidatedCommit": "f6f4fc54514a075e74ad57838e765e05d38206e7",
+      "listingValidatedAt": "2026-11-14T16:41:33.396Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dmitriiweb/ngterm-ormachy-plugin",
+        "pluginIds": [
+          "dmitriiweb.ngterm"
+        ],
+        "commit": "f6f4fc54514a075e74ad57838e765e05d38206e7",
+        "checkedAt": "2026-11-14T16:41:33.197Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dmitriiweb/ngterm-ormachy-plugin",
+        "pluginIds": [
+          "dmitriiweb.ngterm"
+        ],
+        "commit": "f6f4fc54514a075e74ad57838e765e05d38206e7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T16:41:33.197Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T15:54:27.576Z",
+        "requestEventId": 36137029561,
+        "requestedAt": "2026-11-14T16:37:17Z",
+        "reviewedAt": "2026-11-14T16:41:33.197Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dmitriiweb.ngterm": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
