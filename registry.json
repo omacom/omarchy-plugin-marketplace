@@ -429123,6 +429123,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/42lizard/omarchy-github-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T13:05:26.069Z",
+      "listingValidatedCommit": "ba7ee4d908062a873912549f2df0a11f751575c0",
+      "listingValidatedAt": "2026-11-14T13:05:26.069Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "42lizard/omarchy-github-tracker",
+        "pluginIds": [
+          "42lizard.github-tracker"
+        ],
+        "commit": "ba7ee4d908062a873912549f2df0a11f751575c0",
+        "checkedAt": "2026-11-14T13:05:25.872Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "42lizard.github-tracker": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
