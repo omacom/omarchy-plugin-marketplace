@@ -427126,6 +427126,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Augusto2803/omafortivpn",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T02:55:43.336Z",
+      "listingValidatedCommit": "c98678d8b74300300ab842d588bb49bc42625931",
+      "listingValidatedAt": "2026-11-14T02:55:43.336Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "augusto2803/omafortivpn",
+        "pluginIds": [
+          "io.github.augusto2803.omafortivpn"
+        ],
+        "commit": "c98678d8b74300300ab842d588bb49bc42625931",
+        "checkedAt": "2026-11-14T02:55:43.201Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "augusto2803/omafortivpn",
+        "pluginIds": [
+          "io.github.augusto2803.omafortivpn"
+        ],
+        "commit": "c98678d8b74300300ab842d588bb49bc42625931",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T02:55:43.201Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T02:19:16.713Z",
+        "requestEventId": 36095941289,
+        "requestedAt": "2026-11-14T02:55:08Z",
+        "reviewedAt": "2026-11-14T02:55:43.201Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.augusto2803.omafortivpn": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "vpn"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
