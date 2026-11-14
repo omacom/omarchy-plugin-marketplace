@@ -428777,6 +428777,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ThibaudBerdin/omarchy-spotlight-files",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T10:19:58.855Z",
+      "listingValidatedCommit": "668d25ac5015c1ee3ad1b9e6e1874caaec96b571",
+      "listingValidatedAt": "2026-11-14T10:19:58.855Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thibaudberdin/omarchy-spotlight-files",
+        "pluginIds": [
+          "io.github.thibaudberdin.spotlight-files"
+        ],
+        "commit": "668d25ac5015c1ee3ad1b9e6e1874caaec96b571",
+        "checkedAt": "2026-11-14T10:19:58.708Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.thibaudberdin.spotlight-files": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
