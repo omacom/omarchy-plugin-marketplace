@@ -426778,6 +426778,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kambiz-aghaiepour/omarchy-neon-clock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T01:24:03.105Z",
+      "listingValidatedCommit": "266d41db638b5743ae097c47e0aae3c9abac8f5c",
+      "listingValidatedAt": "2026-11-14T01:24:03.105Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kambiz-aghaiepour/omarchy-neon-clock",
+        "pluginIds": [
+          "io.github.kambiz.neon-clock"
+        ],
+        "commit": "266d41db638b5743ae097c47e0aae3c9abac8f5c",
+        "checkedAt": "2026-11-14T01:24:02.962Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.kambiz.neon-clock": {
+          "category": "Desktop",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
