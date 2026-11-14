@@ -429315,6 +429315,72 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/sgatter/omatinuity",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T14:41:08.082Z",
+      "listingValidatedCommit": "cfac0e9062fea4186539a20596cd85abc83f692f",
+      "listingValidatedAt": "2026-11-14T14:41:08.082Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sgatter/omatinuity",
+        "pluginIds": [
+          "io.github.sgatter.omatinuity"
+        ],
+        "commit": "cfac0e9062fea4186539a20596cd85abc83f692f",
+        "checkedAt": "2026-11-14T14:41:07.924Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sgatter/omatinuity",
+        "pluginIds": [
+          "io.github.sgatter.omatinuity"
+        ],
+        "commit": "cfac0e9062fea4186539a20596cd85abc83f692f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T14:41:07.924Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T14:35:53.203Z",
+        "requestEventId": 36129695936,
+        "requestedAt": "2026-11-14T14:40:28Z",
+        "reviewedAt": "2026-11-14T14:41:07.924Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sgatter.omatinuity": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
