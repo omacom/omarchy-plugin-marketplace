@@ -426844,6 +426844,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vedix95/omarchy-hdr-plug",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T01:38:36.292Z",
+      "listingValidatedCommit": "6cc6dbf7e5389ecb635531f98c4910240c190a95",
+      "listingValidatedAt": "2026-11-14T01:38:36.292Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vedix95/omarchy-hdr-plug",
+        "pluginIds": [
+          "vedix.hdr"
+        ],
+        "commit": "6cc6dbf7e5389ecb635531f98c4910240c190a95",
+        "checkedAt": "2026-11-14T01:38:36.144Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vedix95/omarchy-hdr-plug",
+        "pluginIds": [
+          "vedix.hdr"
+        ],
+        "commit": "6cc6dbf7e5389ecb635531f98c4910240c190a95",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T01:38:36.144Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T07:43:46.340Z",
+        "requestEventId": 36091891935,
+        "requestedAt": "2026-11-14T01:38:00Z",
+        "reviewedAt": "2026-11-14T01:38:36.144Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "vedix.hdr": {
+          "category": "System",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
