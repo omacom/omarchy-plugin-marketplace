@@ -428533,6 +428533,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/bwag84/OmaTypeClass",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T08:18:43.449Z",
+      "listingValidatedCommit": "e828bf5c8b1962a718203cf0340834703eb7d4cb",
+      "listingValidatedAt": "2026-11-14T08:18:43.449Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bwag84/omatypeclass",
+        "pluginIds": [
+          "io.github.bwag84.omatypeclass"
+        ],
+        "commit": "e828bf5c8b1962a718203cf0340834703eb7d4cb",
+        "checkedAt": "2026-11-14T08:18:43.254Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bwag84/omatypeclass",
+        "pluginIds": [
+          "io.github.bwag84.omatypeclass"
+        ],
+        "commit": "e828bf5c8b1962a718203cf0340834703eb7d4cb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T08:18:43.254Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T07:50:37.960Z",
+        "requestEventId": 36110728879,
+        "requestedAt": "2026-11-14T08:15:57Z",
+        "reviewedAt": "2026-11-14T08:18:43.254Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.bwag84.omatypeclass": {
+          "category": "Kids",
+          "tags": [
+            "education",
+            "games",
+            "kids"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
