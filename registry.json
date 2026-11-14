@@ -428883,6 +428883,44 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ismoil77/omarchy-rtk",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T12:01:56.939Z",
+      "listingValidatedCommit": "703f2d0ee2c74dc2f639becfe1b7f89c2a8d2c69",
+      "listingValidatedAt": "2026-11-14T12:01:56.939Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ismoil77/omarchy-rtk",
+        "pluginIds": [
+          "ismoil.rtk"
+        ],
+        "commit": "703f2d0ee2c74dc2f639becfe1b7f89c2a8d2c69",
+        "checkedAt": "2026-11-14T12:01:56.795Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ismoil.rtk": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
