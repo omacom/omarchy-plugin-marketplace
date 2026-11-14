@@ -427511,6 +427511,72 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pxSean/omarchy-lumen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T04:24:05.355Z",
+      "listingValidatedCommit": "ca77214fbd5231792515d0c87bf03cb38236d158",
+      "listingValidatedAt": "2026-11-14T04:24:05.355Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pxsean/omarchy-lumen",
+        "pluginIds": [
+          "pxsean.lumen"
+        ],
+        "commit": "ca77214fbd5231792515d0c87bf03cb38236d158",
+        "checkedAt": "2026-11-14T04:24:05.233Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pxsean/omarchy-lumen",
+        "pluginIds": [
+          "pxsean.lumen"
+        ],
+        "commit": "ca77214fbd5231792515d0c87bf03cb38236d158",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T04:24:05.233Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-13T23:13:40.030Z",
+        "requestEventId": 36099771632,
+        "requestedAt": "2026-11-14T04:20:37Z",
+        "reviewedAt": "2026-11-14T04:24:05.233Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pxsean.lumen": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
