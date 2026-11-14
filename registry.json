@@ -427856,6 +427856,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SplashyMorningstar/omarchy-keyboard-shortcuts",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T05:47:28.922Z",
+      "listingValidatedCommit": "d1849331f58b06c6f898b83871cd5be688274bdd",
+      "listingValidatedAt": "2026-11-14T05:47:28.922Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "splashymorningstar/omarchy-keyboard-shortcuts",
+        "pluginIds": [
+          "io.github.splashymorningstar.keybindings"
+        ],
+        "commit": "d1849331f58b06c6f898b83871cd5be688274bdd",
+        "checkedAt": "2026-11-14T05:47:28.772Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "splashymorningstar/omarchy-keyboard-shortcuts",
+        "pluginIds": [
+          "io.github.splashymorningstar.keybindings"
+        ],
+        "commit": "d1849331f58b06c6f898b83871cd5be688274bdd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-14T05:47:28.772Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T05:27:25.685Z",
+        "requestEventId": 36103582793,
+        "requestedAt": "2026-11-14T05:46:51Z",
+        "reviewedAt": "2026-11-14T05:47:28.772Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.splashymorningstar.keybindings": {
+          "category": "System",
+          "tags": [
+            "system",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
