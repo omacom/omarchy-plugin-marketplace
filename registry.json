@@ -427385,6 +427385,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kolotov/omarchy-agents-statistics",
+      "type": "plugin-source",
+      "addedAt": "2026-11-14",
+      "listedAt": "2026-11-14T04:07:30.153Z",
+      "listingValidatedCommit": "c0decf5b10aba85739634fa7a0100af45c1bd626",
+      "listingValidatedAt": "2026-11-14T04:07:30.153Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kolotov/omarchy-agents-statistics",
+        "pluginIds": [
+          "gkdev.agents"
+        ],
+        "commit": "c0decf5b10aba85739634fa7a0100af45c1bd626",
+        "checkedAt": "2026-11-14T04:07:30.007Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gkdev.agents": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
