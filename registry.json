@@ -429960,6 +429960,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/seagleNet/omarchy-tminus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T21:01:06.580Z",
+      "listingValidatedCommit": "ab81f9bf202e3a3187bb8eb89864398c3eead263",
+      "listingValidatedAt": "2026-11-15T21:01:06.580Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "seaglenet/omarchy-tminus",
+        "pluginIds": [
+          "seaglenet.tminus"
+        ],
+        "commit": "ab81f9bf202e3a3187bb8eb89864398c3eead263",
+        "checkedAt": "2026-11-15T21:01:06.423Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "seaglenet/omarchy-tminus",
+        "pluginIds": [
+          "seaglenet.tminus"
+        ],
+        "commit": "ab81f9bf202e3a3187bb8eb89864398c3eead263",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-15T21:01:06.423Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-14T21:31:36.733Z",
+        "requestEventId": 36214266457,
+        "requestedAt": "2026-11-15T21:00:31Z",
+        "reviewedAt": "2026-11-15T21:01:06.423Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "seaglenet.tminus": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
