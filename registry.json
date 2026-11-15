@@ -38664,8 +38664,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-20",
       "listedAt": "2026-08-20T20:47:10.425Z",
-      "listingValidatedCommit": "91a3ba239705fab559a6b3f551636474211d5798",
-      "listingValidatedAt": "2026-10-28T10:27:28.175Z",
+      "listingValidatedCommit": "7386c1517b2f6ee3fa6194e9d3fb427be49ff0b4",
+      "listingValidatedAt": "2026-11-15T22:45:42.400Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -38674,8 +38674,8 @@
         "pluginIds": [
           "crmne.lyrics"
         ],
-        "commit": "91a3ba239705fab559a6b3f551636474211d5798",
-        "checkedAt": "2026-10-28T10:27:28.175Z",
+        "commit": "7386c1517b2f6ee3fa6194e9d3fb427be49ff0b4",
+        "checkedAt": "2026-11-15T22:45:42.400Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -38847,6 +38847,26 @@
             ],
             "commit": "f47ee40b49fdaa1d66f4434305fe28152a373157",
             "checkedAt": "2026-10-17T21:36:17.686Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "91a3ba239705fab559a6b3f551636474211d5798",
+          "validatedAt": "2026-10-28T10:27:28.175Z",
+          "branch": "main",
+          "supersededAt": "2026-11-15T22:45:42.400Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "crmne/omarchy-lyrics",
+            "pluginIds": [
+              "crmne.lyrics"
+            ],
+            "commit": "91a3ba239705fab559a6b3f551636474211d5798",
+            "checkedAt": "2026-10-28T10:27:28.175Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
