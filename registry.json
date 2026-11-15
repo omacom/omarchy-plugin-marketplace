@@ -429859,6 +429859,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/matthewjaybarr-png/omarchy-displays",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T01:27:05.512Z",
+      "listingValidatedCommit": "b2e57bec2ec2aa896a56c23d5adc0ddcda9a9caa",
+      "listingValidatedAt": "2026-11-15T01:27:05.512Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matthewjaybarr-png/omarchy-displays",
+        "pluginIds": [
+          "matthewjaybarr.displays"
+        ],
+        "commit": "b2e57bec2ec2aa896a56c23d5adc0ddcda9a9caa",
+        "checkedAt": "2026-11-15T01:27:05.387Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "matthewjaybarr.displays": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
