@@ -430112,6 +430112,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/twodxme/omarchy-tuck",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T22:36:33.633Z",
+      "listingValidatedCommit": "c4505e586b4ee73f1cf4dc58f4baeb1d2377d88b",
+      "listingValidatedAt": "2026-11-15T22:36:33.633Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "twodxme/omarchy-tuck",
+        "pluginIds": [
+          "tim.tuck"
+        ],
+        "commit": "c4505e586b4ee73f1cf4dc58f4baeb1d2377d88b",
+        "checkedAt": "2026-11-15T22:36:33.461Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tim.tuck": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
