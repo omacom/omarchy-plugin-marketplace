@@ -430145,6 +430145,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/punkmonday/omarchy-clash",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T22:41:38.342Z",
+      "listingValidatedCommit": "bff37f6cfc292f466201f9f205f7afd21c6b6398",
+      "listingValidatedAt": "2026-11-15T22:41:38.342Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "punkmonday/omarchy-clash",
+        "pluginIds": [
+          "punkmonday.clash"
+        ],
+        "commit": "bff37f6cfc292f466201f9f205f7afd21c6b6398",
+        "checkedAt": "2026-11-15T22:41:38.201Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "punkmonday.clash": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
