@@ -429665,6 +429665,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Adicodes270/sys-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T00:09:19.552Z",
+      "listingValidatedCommit": "02c140a5de210d17ef428a930c837f288bd6cde9",
+      "listingValidatedAt": "2026-11-15T00:09:19.552Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "adicodes270/sys-monitor",
+        "pluginIds": [
+          "aditya27003.sys-analytics"
+        ],
+        "commit": "02c140a5de210d17ef428a930c837f288bd6cde9",
+        "checkedAt": "2026-11-15T00:09:19.428Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aditya27003.sys-analytics": {
+          "category": "Widgets",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
