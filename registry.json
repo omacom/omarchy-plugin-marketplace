@@ -430020,6 +430020,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Z1Z0R/YAPM",
+      "type": "plugin-source",
+      "addedAt": "2026-11-15",
+      "listedAt": "2026-11-15T21:13:39.996Z",
+      "listingValidatedCommit": "0393dfe610058b26741eb42764e4bb96ce190724",
+      "listingValidatedAt": "2026-11-15T21:13:39.996Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "z1z0r/yapm",
+        "pluginIds": [
+          "yapm"
+        ],
+        "commit": "0393dfe610058b26741eb42764e4bb96ce190724",
+        "checkedAt": "2026-11-15T21:13:39.789Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "z1z0r/yapm",
+        "pluginIds": [
+          "yapm"
+        ],
+        "commit": "0393dfe610058b26741eb42764e4bb96ce190724",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-15T21:13:39.789Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-15T21:06:32.387Z",
+        "requestEventId": 36214924682,
+        "requestedAt": "2026-11-15T21:13:09Z",
+        "reviewedAt": "2026-11-15T21:13:39.789Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yapm": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
