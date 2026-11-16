@@ -431762,6 +431762,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/foamrider/foamy-todoist",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T20:44:24.428Z",
+      "listingValidatedCommit": "1d4fb0bc32755d2b36198d69df88745922d0384b",
+      "listingValidatedAt": "2026-11-16T20:44:24.428Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "foamrider/foamy-todoist",
+        "pluginIds": [
+          "foamy.todoist"
+        ],
+        "commit": "1d4fb0bc32755d2b36198d69df88745922d0384b",
+        "checkedAt": "2026-11-16T20:44:24.283Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "foamrider/foamy-todoist",
+        "pluginIds": [
+          "foamy.todoist"
+        ],
+        "commit": "1d4fb0bc32755d2b36198d69df88745922d0384b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T20:44:24.283Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "bundled-executable-binary"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T14:37:26.780Z",
+        "requestEventId": 36325357273,
+        "requestedAt": "2026-11-16T20:43:38Z",
+        "reviewedAt": "2026-11-16T20:44:24.283Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "foamy.todoist": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
