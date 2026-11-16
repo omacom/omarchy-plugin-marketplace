@@ -430496,6 +430496,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jeffsauer/omapong-bar-widget",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T04:54:17.320Z",
+      "listingValidatedCommit": "136ba5cf6fbc09f53ae8128e90d9251007f8abd7",
+      "listingValidatedAt": "2026-11-16T04:54:17.320Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jeffsauer/omapong-bar-widget",
+        "pluginIds": [
+          "io.github.jeffsauer.omapong"
+        ],
+        "commit": "136ba5cf6fbc09f53ae8128e90d9251007f8abd7",
+        "checkedAt": "2026-11-16T04:54:17.136Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jeffsauer.omapong": {
+          "category": "Widgets",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
