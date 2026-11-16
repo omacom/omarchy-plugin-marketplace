@@ -431567,6 +431567,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/PacAnimal/omarchy-retro-wall",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T19:16:04.937Z",
+      "listingValidatedCommit": "66ede069605db7e6e388facb38adef95ec821361",
+      "listingValidatedAt": "2026-11-16T19:16:04.937Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pacanimal/omarchy-retro-wall",
+        "pluginIds": [
+          "io.github.pacanimal.retro-wall"
+        ],
+        "commit": "66ede069605db7e6e388facb38adef95ec821361",
+        "checkedAt": "2026-11-16T19:16:04.774Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.pacanimal.retro-wall": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
