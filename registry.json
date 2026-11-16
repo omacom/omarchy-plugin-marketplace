@@ -430373,6 +430373,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/icameheretodance/omarchy-newtab",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T03:59:33.826Z",
+      "listingValidatedCommit": "2faa5f05d4c6e5494ea028ea09954c7f9dee0360",
+      "listingValidatedAt": "2026-11-16T03:59:33.826Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "icameheretodance/omarchy-newtab",
+        "pluginIds": [
+          "dance.newtab"
+        ],
+        "commit": "2faa5f05d4c6e5494ea028ea09954c7f9dee0360",
+        "checkedAt": "2026-11-16T03:59:33.655Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "icameheretodance/omarchy-newtab",
+        "pluginIds": [
+          "dance.newtab"
+        ],
+        "commit": "2faa5f05d4c6e5494ea028ea09954c7f9dee0360",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T03:59:33.655Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T02:21:56.040Z",
+        "requestEventId": 36235986740,
+        "requestedAt": "2026-11-16T03:59:05Z",
+        "reviewedAt": "2026-11-16T03:59:33.655Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dance.newtab": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
