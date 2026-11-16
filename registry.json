@@ -347328,8 +347328,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-10",
       "listedAt": "2026-10-10T17:09:24.781Z",
-      "listingValidatedCommit": "1604e1b5585a221c8100bb39fb9a92b8dfc0db4a",
-      "listingValidatedAt": "2026-10-26T15:12:05.375Z",
+      "listingValidatedCommit": "653751583b6e51950b31bb4d0c7bccb4c0ab6fd1",
+      "listingValidatedAt": "2026-11-16T07:19:08.509Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -347338,8 +347338,8 @@
         "pluginIds": [
           "ubruckhaus.hue-lights"
         ],
-        "commit": "1604e1b5585a221c8100bb39fb9a92b8dfc0db4a",
-        "checkedAt": "2026-10-26T15:12:05.375Z",
+        "commit": "653751583b6e51950b31bb4d0c7bccb4c0ab6fd1",
+        "checkedAt": "2026-11-16T07:19:08.509Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -347450,6 +347450,26 @@
             ],
             "commit": "5eb1d931babd81c9eed1e8e82eea7cbcda558a66",
             "checkedAt": "2026-10-22T11:41:37.665Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "1604e1b5585a221c8100bb39fb9a92b8dfc0db4a",
+          "validatedAt": "2026-10-26T15:12:05.375Z",
+          "branch": "main",
+          "supersededAt": "2026-11-16T07:19:08.509Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ubruckhaus/omarchy-hue-lights",
+            "pluginIds": [
+              "ubruckhaus.hue-lights"
+            ],
+            "commit": "1604e1b5585a221c8100bb39fb9a92b8dfc0db4a",
+            "checkedAt": "2026-10-26T15:12:05.375Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
