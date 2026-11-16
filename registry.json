@@ -430779,6 +430779,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rodrigondec/omarchy-claude-tokens",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T08:20:15.964Z",
+      "listingValidatedCommit": "8549a2703cbe7e5527263d41f2b3c2b4dbfc6675",
+      "listingValidatedAt": "2026-11-16T08:20:15.964Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rodrigondec/omarchy-claude-tokens",
+        "pluginIds": [
+          "io.github.rodrigondec.claude-tokens"
+        ],
+        "commit": "8549a2703cbe7e5527263d41f2b3c2b4dbfc6675",
+        "checkedAt": "2026-11-16T08:20:15.817Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.rodrigondec.claude-tokens": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
