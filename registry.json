@@ -432033,6 +432033,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/GitHub-Issue-Watch",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T21:45:17.179Z",
+      "listingValidatedCommit": "2d726be2e2ff0c2f9bd21567b9b195b41de20369",
+      "listingValidatedAt": "2026-11-16T21:45:17.179Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/github-issue-watch",
+        "pluginIds": [
+          "kel.github-reports"
+        ],
+        "commit": "2d726be2e2ff0c2f9bd21567b9b195b41de20369",
+        "checkedAt": "2026-11-16T21:45:17.069Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kel.github-reports": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
