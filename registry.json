@@ -430294,6 +430294,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/csnasci/omarchy-sessions",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T02:19:01.706Z",
+      "listingValidatedCommit": "775cff105a85217404a7dfbf984f3aa2107a5643",
+      "listingValidatedAt": "2026-11-16T02:19:01.706Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "csnasci/omarchy-sessions",
+        "pluginIds": [
+          "io.github.csnasci.sessions"
+        ],
+        "commit": "775cff105a85217404a7dfbf984f3aa2107a5643",
+        "checkedAt": "2026-11-16T02:19:01.511Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.csnasci.sessions": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
