@@ -431063,6 +431063,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/yass-gr/cool-agent-usage-omarchy-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T15:59:56.586Z",
+      "listingValidatedCommit": "9461e5472bcc126ee8ab45465da836cf0ccbab3c",
+      "listingValidatedAt": "2026-11-16T15:59:56.586Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yass-gr/cool-agent-usage-omarchy-bar",
+        "pluginIds": [
+          "io.github.yass-gr.agent-rings"
+        ],
+        "commit": "9461e5472bcc126ee8ab45465da836cf0ccbab3c",
+        "checkedAt": "2026-11-16T15:59:56.419Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.yass-gr.agent-rings": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
