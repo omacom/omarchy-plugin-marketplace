@@ -430260,6 +430260,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sickelmo/omarchy-berita",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T01:38:09.996Z",
+      "listingValidatedCommit": "e6c30f552708d0d06640b4a0fbf423b72fc17471",
+      "listingValidatedAt": "2026-11-16T01:38:09.996Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sickelmo/omarchy-berita",
+        "pluginIds": [
+          "skeemo.berita"
+        ],
+        "commit": "e6c30f552708d0d06640b4a0fbf423b72fc17471",
+        "checkedAt": "2026-11-16T01:38:09.791Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "skeemo.berita": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
