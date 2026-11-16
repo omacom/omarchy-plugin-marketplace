@@ -431818,6 +431818,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Juanmartin19l/omarchy-battery-care",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T20:56:43.762Z",
+      "listingValidatedCommit": "edf08c40e172968a863aef2be5c698ba814a4567",
+      "listingValidatedAt": "2026-11-16T20:56:43.762Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "juanmartin19l/omarchy-battery-care",
+        "pluginIds": [
+          "io.github.juanmartin19l.battery-care"
+        ],
+        "commit": "edf08c40e172968a863aef2be5c698ba814a4567",
+        "checkedAt": "2026-11-16T20:56:43.614Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "juanmartin19l/omarchy-battery-care",
+        "pluginIds": [
+          "io.github.juanmartin19l.battery-care"
+        ],
+        "commit": "edf08c40e172968a863aef2be5c698ba814a4567",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T20:56:43.614Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T15:24:44.379Z",
+        "requestEventId": 36326493672,
+        "requestedAt": "2026-11-16T20:55:47Z",
+        "reviewedAt": "2026-11-16T20:56:43.614Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.juanmartin19l.battery-care": {
+          "category": "Hardware",
+          "tags": [
+            "power-management",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
