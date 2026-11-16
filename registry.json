@@ -431881,6 +431881,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/toxusa/omarchy-yandex-disk",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T21:20:03.445Z",
+      "listingValidatedCommit": "ecfa3b658dbcc1ae6cfc24d53bbe2cc6d1431bd1",
+      "listingValidatedAt": "2026-11-16T21:20:03.445Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "toxusa/omarchy-yandex-disk",
+        "pluginIds": [
+          "toxusa.yandex-disk"
+        ],
+        "commit": "ecfa3b658dbcc1ae6cfc24d53bbe2cc6d1431bd1",
+        "checkedAt": "2026-11-16T21:20:03.233Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "toxusa/omarchy-yandex-disk",
+        "pluginIds": [
+          "toxusa.yandex-disk"
+        ],
+        "commit": "ecfa3b658dbcc1ae6cfc24d53bbe2cc6d1431bd1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T21:20:03.233Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T21:08:31.293Z",
+        "requestEventId": 36328815424,
+        "requestedAt": "2026-11-16T21:19:21Z",
+        "reviewedAt": "2026-11-16T21:20:03.233Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "toxusa.yandex-disk": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
