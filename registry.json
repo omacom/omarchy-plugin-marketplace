@@ -357445,8 +357445,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-13",
       "listedAt": "2026-10-13T22:35:34.580Z",
-      "listingValidatedCommit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
-      "listingValidatedAt": "2026-10-26T15:24:08.943Z",
+      "listingValidatedCommit": "d157d210bb6316a1a0704f9fea46ee80f66938dc",
+      "listingValidatedAt": "2026-11-16T07:10:16.546Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -357455,8 +357455,8 @@
         "pluginIds": [
           "ubruckhaus.bluetooth-monitor"
         ],
-        "commit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
-        "checkedAt": "2026-10-26T15:24:08.943Z",
+        "commit": "d157d210bb6316a1a0704f9fea46ee80f66938dc",
+        "checkedAt": "2026-11-16T07:10:16.546Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -357733,6 +357733,49 @@
             "reviewedAt": "2026-10-20T00:46:16.412Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
+          "validatedAt": "2026-10-26T15:24:08.943Z",
+          "branch": "main",
+          "supersededAt": "2026-11-16T07:10:16.546Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "ubruckhaus/omarchy-bluetooth-monitor",
+            "pluginIds": [
+              "ubruckhaus.bluetooth-monitor"
+            ],
+            "commit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
+            "checkedAt": "2026-10-26T15:24:08.943Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "ubruckhaus/omarchy-bluetooth-monitor",
+            "pluginIds": [
+              "ubruckhaus.bluetooth-monitor"
+            ],
+            "commit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-26T15:24:08.943Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-26T12:41:18.647Z",
+            "requestEventId": 34274651721,
+            "requestedAt": "2026-10-26T15:23:30Z",
+            "reviewedAt": "2026-10-26T15:24:08.943Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -357741,19 +357784,19 @@
         "pluginIds": [
           "ubruckhaus.bluetooth-monitor"
         ],
-        "commit": "55493dd325cf7891b77490c2a212f5b5e11b3fa1",
+        "commit": "d157d210bb6316a1a0704f9fea46ee80f66938dc",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-26T15:24:08.943Z",
+        "baselineCheckedAt": "2026-11-16T07:10:16.546Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-26T12:41:18.647Z",
-        "requestEventId": 34274651721,
-        "requestedAt": "2026-10-26T15:23:30Z",
-        "reviewedAt": "2026-10-26T15:24:08.943Z",
+        "reviewedBaselineCheckedAt": "2026-11-14T19:16:25.751Z",
+        "requestEventId": 36247875953,
+        "requestedAt": "2026-11-16T07:09:39Z",
+        "reviewedAt": "2026-11-16T07:10:16.546Z",
         "reviewer": "HANCORE-linux"
       }
     },
