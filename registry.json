@@ -430880,6 +430880,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aitorcalero/omarchy-package-updates",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T15:07:18.230Z",
+      "listingValidatedCommit": "cc0c94192fd540f2329ab10c326a0d4f4d3b4972",
+      "listingValidatedAt": "2026-11-16T15:07:18.230Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aitorcalero/omarchy-package-updates",
+        "pluginIds": [
+          "aitor.package-updates"
+        ],
+        "commit": "cc0c94192fd540f2329ab10c326a0d4f4d3b4972",
+        "checkedAt": "2026-11-16T15:07:18.080Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aitorcalero/omarchy-package-updates",
+        "pluginIds": [
+          "aitor.package-updates"
+        ],
+        "commit": "cc0c94192fd540f2329ab10c326a0d4f4d3b4972",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T15:07:18.080Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-15T23:11:36.769Z",
+        "requestEventId": 36291252087,
+        "requestedAt": "2026-11-16T15:06:37Z",
+        "reviewedAt": "2026-11-16T15:07:18.080Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "aitor.package-updates": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
