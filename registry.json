@@ -430846,6 +430846,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/skrilexxx/omarchy-pixel-pets",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T08:50:56.891Z",
+      "listingValidatedCommit": "406930911e6ed7315e5baabfe55912adbe448c1e",
+      "listingValidatedAt": "2026-11-16T08:50:56.891Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "skrilexxx/omarchy-pixel-pets",
+        "pluginIds": [
+          "skrilexxx.pixel-pets"
+        ],
+        "commit": "406930911e6ed7315e5baabfe55912adbe448c1e",
+        "checkedAt": "2026-11-16T08:50:56.745Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "skrilexxx.pixel-pets": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
