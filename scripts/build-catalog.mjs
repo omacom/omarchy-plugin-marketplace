@@ -1081,7 +1081,7 @@ export function previewFileBase(repository) {
   return `${owner.length}-${owner}-${name}`;
 }
 
-export function validatePreviewMetadata(metadata, label = "Preview") {
+export function validatePreviewMetadata(metadata, label = "Preview", code = "preview-invalid") {
   if (
     !supportedPreviewFormats.has(metadata?.format)
     || !Number.isSafeInteger(metadata.width)
@@ -1091,7 +1091,7 @@ export function validatePreviewMetadata(metadata, label = "Preview") {
     || metadata.width > previewPixelLimit / metadata.height
   ) {
     checkError(
-      "preview-invalid",
+      code,
       `${label} must be a valid PNG, JPEG, WebP, or AVIF image within the ${previewPixelLimit}-pixel limit`,
     );
   }
@@ -1165,6 +1165,7 @@ export async function optimizeIconBuffer(buffer, repository) {
     const metadata = validatePreviewMetadata(
       await image.metadata(),
       `${repository.slug} icon`,
+      "icon-invalid",
     );
     const icon = await image
       .clone()

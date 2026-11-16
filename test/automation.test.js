@@ -1468,7 +1468,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
   assert.equal(keys[0], "20261116-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261112-02");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261116-01");
   assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261116-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
@@ -4333,6 +4333,14 @@ test("listing icons are normalized into square WebP assets", async () => {
   assert.equal(optimized.metadata.iconSourceWidth, 640);
   await assert.rejects(
     optimizeIconBuffer(Buffer.from("not an image"), repository),
+    (error) => error instanceof CatalogCheckError && error.code === "icon-invalid",
+  );
+  assert.throws(
+    () => validatePreviewMetadata(
+      { format: "gif", width: 128, height: 128 },
+      "example/plugin icon",
+      "icon-invalid",
+    ),
     (error) => error instanceof CatalogCheckError && error.code === "icon-invalid",
   );
 });
