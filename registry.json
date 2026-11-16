@@ -431604,6 +431604,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Plapie690/omarchy-owee",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T19:36:08.120Z",
+      "listingValidatedCommit": "0cf3925676739c3dd9fe5d0c78ceec87feacc0e3",
+      "listingValidatedAt": "2026-11-16T19:36:08.120Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "plapie690/omarchy-owee",
+        "pluginIds": [
+          "owee.weather"
+        ],
+        "commit": "0cf3925676739c3dd9fe5d0c78ceec87feacc0e3",
+        "checkedAt": "2026-11-16T19:36:07.974Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "plapie690/omarchy-owee",
+        "pluginIds": [
+          "owee.weather"
+        ],
+        "commit": "0cf3925676739c3dd9fe5d0c78ceec87feacc0e3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T19:36:07.974Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T16:52:08.200Z",
+        "requestEventId": 36318658051,
+        "requestedAt": "2026-11-16T19:35:16Z",
+        "reviewedAt": "2026-11-16T19:36:07.974Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "owee.weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
