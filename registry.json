@@ -430203,6 +430203,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Bira-oliverio/lenovo-battery-limit",
+      "type": "plugin-source",
+      "addedAt": "2026-11-16",
+      "listedAt": "2026-11-16T01:03:57.492Z",
+      "listingValidatedCommit": "630d019ac5ee127ad01580f08a620804f794118b",
+      "listingValidatedAt": "2026-11-16T01:03:57.492Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bira-oliverio/lenovo-battery-limit",
+        "pluginIds": [
+          "bira.battery-limit"
+        ],
+        "commit": "630d019ac5ee127ad01580f08a620804f794118b",
+        "checkedAt": "2026-11-16T01:03:57.350Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bira-oliverio/lenovo-battery-limit",
+        "pluginIds": [
+          "bira.battery-limit"
+        ],
+        "commit": "630d019ac5ee127ad01580f08a620804f794118b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-16T01:03:57.350Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T00:45:52.737Z",
+        "requestEventId": 36226456953,
+        "requestedAt": "2026-11-16T01:03:15Z",
+        "reviewedAt": "2026-11-16T01:03:57.350Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bira.battery-limit": {
+          "category": "Hardware",
+          "tags": [
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
