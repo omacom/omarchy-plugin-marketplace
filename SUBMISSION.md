@@ -12,8 +12,11 @@ Before submitting, confirm that the repository:
 - Contains a root license file and documents external dependencies
 - Uses a globally unique plugin ID outside the reserved `omarchy.*` namespace
 - Optionally contains one root preview named `preview.png`, `preview.jpg`, `preview.jpeg`, `preview.webp`, or `preview.avif`
+- Optionally contains one square root listing icon named `icon.png`, `icon.jpg`, `icon.jpeg`, `icon.webp`, or `icon.avif`
 
 The marketplace removes preview metadata and generates optimized card and detail images automatically. Normal screenshots need no manual resizing or compression. Preview input is limited to 50 MB and 40 megapixels to protect the build runner from malformed or exceptionally large images.
+
+Listing icons are optional and rendered beside the plugin name on the detail page. The marketplace normalizes one square icon asset per repository and falls back to the plugin initials when no icon exists. Invalid icon files block the listing check in the same way as invalid previews, so export the icon from your own artwork instead of committing an unsupported or broken file.
 
 Marketplace validation checks repository structure and Omarchy Quattro compatibility. It is not a security review, and plugins run as unsandboxed upstream code.
 

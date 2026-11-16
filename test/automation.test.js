@@ -29,7 +29,9 @@ import {
   discoveredPlugins,
   isListedPlugin,
   manifestFieldLimits,
+  listingIconSize,
   maximumManifestVersionLength,
+  optimizeIconBuffer,
   optimizePreviewBuffer,
   parseGitHubRepository,
   previewCardLimit,
@@ -1465,15 +1467,15 @@ test("entry modules and their shared dependency use one cache key", async () => 
   ];
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
-  assert.equal(keys[0], "20261105-05");
+  assert.equal(keys[0], "20261116-01");
   assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261112-02");
-  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261105-05");
+  assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261116-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/style\.css\?v=([^"']+)/)?.[1]);
   assert.ok(styleKeys.every(Boolean));
   assert.equal(new Set(styleKeys).size, 1);
-  assert.equal(styleKeys[0], "20261105-05");
+  assert.equal(styleKeys[0], "20261116-01");
   assert.match(files.sharedJs, /from "\.\/themes\.js\?v=20260920-05"/);
   const faviconKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
     .map((html) => html.match(/favicon\.svg\?v=([^"']+)/)?.[1]);
@@ -4303,6 +4305,35 @@ test("preview images are bounded and converted into optimized WebP variants", as
       height: 2,
     }),
     /pixel limit/,
+  );
+});
+
+test("listing icons are normalized into square WebP assets", async () => {
+  const input = await sharp({
+    create: {
+      width: 640,
+      height: 320,
+      channels: 4,
+      background: { r: 200, g: 120, b: 40, alpha: 1 },
+    },
+  }).png().toBuffer();
+  const repository = { owner: "example", repository: "plugin", slug: "example/plugin" };
+  const optimized = await optimizeIconBuffer(input, repository);
+  assert.deepEqual(
+    optimized.outputs.map((output) => output.fileName),
+    ["7-example-plugin-icon.webp"],
+  );
+  const icon = await sharp(optimized.outputs[0].buffer).metadata();
+  assert.equal(icon.format, "webp");
+  assert.equal(icon.width, listingIconSize);
+  assert.equal(icon.height, listingIconSize);
+  assert.equal(optimized.metadata.iconImage, "assets/img/plugins/7-example-plugin-icon.webp");
+  assert.equal(optimized.metadata.iconWidth, listingIconSize);
+  assert.equal(optimized.metadata.iconHeight, listingIconSize);
+  assert.equal(optimized.metadata.iconSourceWidth, 640);
+  await assert.rejects(
+    optimizeIconBuffer(Buffer.from("not an image"), repository),
+    (error) => error instanceof CatalogCheckError && error.code === "icon-invalid",
   );
 });
 

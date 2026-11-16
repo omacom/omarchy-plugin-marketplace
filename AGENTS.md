@@ -161,6 +161,8 @@ GitHub API rate-limit exhaustion and forbidden API access are fatal build errors
 
 Optional source previews may use root `preview.png`, `preview.jpg`, `preview.jpeg`, `preview.webp`, or `preview.avif`. The build enforces a 50 MB and 40 megapixel input limit, strips metadata, and generates separate card and detail WebP files. Do not optimize source screenshots manually or preserve unreferenced generated previews.
 
+Optional listing icons may use one root `icon.png`, `icon.jpg`, `icon.jpeg`, `icon.webp`, or `icon.avif`. The build normalizes each icon into a square transparent 128 px WebP asset under the same generated preview directory, records `iconImage`, `iconWidth`, `iconHeight`, `iconSourceWidth`, and `iconSourceHeight` in the catalog, and reports invalid icons as `icon-invalid`. The detail title renders the icon when present and keeps the initials tile as the fallback; listings without an icon stay unchanged.
+
 Never commit credentials, GitHub tokens, temporary issue bodies, downloaded audit data, or local screenshots.
 
 Standard-installation approval may reuse an existing valid, non-revoked installer-only maintainer verification for the exact listed snapshot when a fresh scan matches the accepted evidence under the current policy. Preserve the original attestation and baseline; do not create a new review from the installation label. Findings and additional capabilities remain ineligible for this exception.

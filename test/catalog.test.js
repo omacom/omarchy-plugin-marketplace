@@ -16,13 +16,14 @@ import {
   currentCatalogApiUsage,
   failedSourcePlugins,
   githubApiFailure,
+  iconPathFor,
   parseGitHubRepository,
   readLimitedBuffer,
   repositoryReleaseForRefresh,
   snapshotHttpErrorCode,
   successfulState,
   upstreamCheckErrorCodes,
-  validateBeforeStagingPreview,
+  validateBeforeStagingAssets,
 } from "../scripts/build-catalog.mjs";
 import {
   securityBaselineEnforcementMode,
@@ -1402,39 +1403,58 @@ test("interrupted snapshot bodies remain recoverable repository failures", async
   );
 });
 
-test("previews are staged only after the complete source validates", async () => {
+test("listing icons resolve from exactly one root icon file", () => {
+  const blob = (path, mode = "100644") => ({ path, type: "blob", mode });
+  assert.equal(iconPathFor({ tree: [] }), "");
+  assert.equal(
+    iconPathFor({
+      tree: [
+        blob("docs/icon.png"),
+        blob("icon.svg"),
+        blob("icon.avif"),
+        blob("icon.png"),
+      ],
+    }),
+    "icon.png",
+  );
+  assert.equal(iconPathFor({ tree: [blob("icon.webp")] }), "icon.webp");
+  assert.equal(iconPathFor({ tree: [blob("icon.png", "120000")] }), "");
+});
+
+test("assets are staged only after the complete source validates", async () => {
   const calls = [];
   const snapshot = { metadata: { previewImage: "preview.png" } };
+  const assets = { snapshots: [snapshot], metadata: snapshot.metadata };
   await assert.rejects(
-    validateBeforeStagingPreview({
-      loadPreview: async () => {
+    validateBeforeStagingAssets({
+      loadAssets: async () => {
         calls.push("load");
-        return snapshot;
+        return assets;
       },
       validateSource: async () => {
         calls.push("validate");
         throw new CatalogCheckError("manifest-invalid", "invalid");
       },
-      stagePreview: async () => calls.push("stage"),
+      stageAssets: async () => calls.push("stage"),
     }),
     /invalid/,
   );
   assert.deepEqual(calls, ["load", "validate"]);
 
   calls.length = 0;
-  const result = await validateBeforeStagingPreview({
-    loadPreview: async () => {
+  const result = await validateBeforeStagingAssets({
+    loadAssets: async () => {
       calls.push("load");
-      return snapshot;
+      return assets;
     },
-    validateSource: async (preview) => {
+    validateSource: async (metadata) => {
       calls.push("validate");
-      assert.equal(preview, snapshot.metadata);
+      assert.equal(metadata, snapshot.metadata);
       return ["plugin"];
     },
-    stagePreview: async (loaded) => {
+    stageAssets: async (loaded) => {
       calls.push("stage");
-      assert.equal(loaded, snapshot);
+      assert.equal(loaded, assets);
     },
   });
   assert.deepEqual(result, ["plugin"]);
