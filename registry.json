@@ -406536,8 +406536,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T15:33:14.635Z",
-      "listingValidatedCommit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
-      "listingValidatedAt": "2026-11-03T00:28:27.296Z",
+      "listingValidatedCommit": "7804cf201a75fec879b3cae637c6ad1ae13fa75c",
+      "listingValidatedAt": "2026-11-17T02:57:29.442Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -406546,8 +406546,8 @@
         "pluginIds": [
           "apach.switcher"
         ],
-        "commit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
-        "checkedAt": "2026-11-06T21:51:06.249Z",
+        "commit": "7804cf201a75fec879b3cae637c6ad1ae13fa75c",
+        "checkedAt": "2026-11-17T02:57:29.442Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -406606,6 +406606,26 @@
             "requestedAt": "2026-11-01T15:28:25Z",
             "reviewedAt": "2026-11-01T15:33:14.459Z",
             "reviewer": "HANCORE-linux"
+          }
+        },
+        {
+          "commit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
+          "validatedAt": "2026-11-03T00:28:27.296Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T02:57:29.442Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-switcher",
+            "pluginIds": [
+              "apach.switcher"
+            ],
+            "commit": "79c142ca2c5cbc224d4a5b5013070c5e008a7ea0",
+            "checkedAt": "2026-11-06T21:51:06.249Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
           }
         }
       ]
