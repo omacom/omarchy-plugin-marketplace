@@ -432295,6 +432295,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/terrerovgh/omarchy-translate",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T02:16:53.379Z",
+      "listingValidatedCommit": "5a3d7c671ce000da6435f8dce771bd6a328cfd42",
+      "listingValidatedAt": "2026-11-17T02:16:53.379Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "terrerovgh/omarchy-translate",
+        "pluginIds": [
+          "io.github.terrerovgh.translate-selection"
+        ],
+        "commit": "5a3d7c671ce000da6435f8dce771bd6a328cfd42",
+        "checkedAt": "2026-11-17T02:16:53.166Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.terrerovgh.translate-selection": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
