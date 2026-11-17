@@ -268477,8 +268477,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-27",
       "listedAt": "2026-09-27T12:11:55.465Z",
-      "listingValidatedCommit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
-      "listingValidatedAt": "2026-10-01T11:40:48.178Z",
+      "listingValidatedCommit": "056c40a25a60dbff71a791cd3308a0713304efd8",
+      "listingValidatedAt": "2026-11-17T06:25:32.686Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -268487,8 +268487,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.omatty"
         ],
-        "commit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
-        "checkedAt": "2026-10-01T11:40:48.178Z",
+        "commit": "056c40a25a60dbff71a791cd3308a0713304efd8",
+        "checkedAt": "2026-11-17T06:25:32.686Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -268512,30 +268512,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alxwolfenstein97/omatty",
-        "pluginIds": [
-          "io.github.alxwolfenstein97.omatty"
-        ],
-        "commit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T11:40:48.178Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-28T06:35:34.619Z",
-        "requestEventId": 32245836370,
-        "requestedAt": "2026-10-01T11:19:20Z",
-        "reviewedAt": "2026-10-01T11:40:48.178Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -268586,8 +268562,81 @@
             "reviewedAt": "2026-09-27T12:11:55.361Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
+          "validatedAt": "2026-10-01T11:40:48.178Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T06:25:32.686Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/omatty",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omatty"
+            ],
+            "commit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
+            "checkedAt": "2026-10-01T11:40:48.178Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alxwolfenstein97/omatty",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omatty"
+            ],
+            "commit": "c10f1158651c3e63d60c6c9b885987b6ac80dab7",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T11:40:48.178Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-28T06:35:34.619Z",
+            "requestEventId": 32245836370,
+            "requestedAt": "2026-10-01T11:19:20Z",
+            "reviewedAt": "2026-10-01T11:40:48.178Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omatty",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omatty"
+        ],
+        "commit": "056c40a25a60dbff71a791cd3308a0713304efd8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T06:25:32.686Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T14:46:43.893Z",
+        "requestEventId": 36372133898,
+        "requestedAt": "2026-11-17T06:23:38Z",
+        "reviewedAt": "2026-11-17T06:25:32.686Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/AlxWolfenstein97/omahud",
