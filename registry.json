@@ -432986,6 +432986,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/777Business/omarchy-ai-sentinel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T08:11:07.176Z",
+      "listingValidatedCommit": "76fb208207fa6fad9e76087e957a48f03ae17377",
+      "listingValidatedAt": "2026-11-17T08:11:07.176Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "777business/omarchy-ai-sentinel",
+        "pluginIds": [
+          "omarchy-ai-sentinel"
+        ],
+        "commit": "76fb208207fa6fad9e76087e957a48f03ae17377",
+        "checkedAt": "2026-11-17T08:11:07.028Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "777business/omarchy-ai-sentinel",
+        "pluginIds": [
+          "omarchy-ai-sentinel"
+        ],
+        "commit": "76fb208207fa6fad9e76087e957a48f03ae17377",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T08:11:07.028Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-17T07:56:43.798Z",
+        "requestEventId": 36379889363,
+        "requestedAt": "2026-11-17T08:10:09Z",
+        "reviewedAt": "2026-11-17T08:11:07.028Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omarchy-ai-sentinel": {
+          "category": "System",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
