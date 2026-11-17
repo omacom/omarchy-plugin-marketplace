@@ -432200,6 +432200,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/sica07/omarchy_pws_weather",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T01:31:14.540Z",
+      "listingValidatedCommit": "03d9e4f034ee75ed74ed3346a95a333139af85de",
+      "listingValidatedAt": "2026-11-17T01:31:14.540Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sica07/omarchy_pws_weather",
+        "pluginIds": [
+          "omarchy_pws_weather"
+        ],
+        "commit": "03d9e4f034ee75ed74ed3346a95a333139af85de",
+        "checkedAt": "2026-11-17T01:31:14.378Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "omarchy_pws_weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
