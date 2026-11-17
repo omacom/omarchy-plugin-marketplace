@@ -432413,6 +432413,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Gleasonmt/omarchy-dfw-mtb",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T03:02:16.908Z",
+      "listingValidatedCommit": "736e73c9c623c26bb4debaf72fce4b017707dcd3",
+      "listingValidatedAt": "2026-11-17T03:02:16.908Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gleasonmt/omarchy-dfw-mtb",
+        "pluginIds": [
+          "gleasonmt.dfw-mtb"
+        ],
+        "commit": "736e73c9c623c26bb4debaf72fce4b017707dcd3",
+        "checkedAt": "2026-11-17T03:02:16.775Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gleasonmt.dfw-mtb": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
