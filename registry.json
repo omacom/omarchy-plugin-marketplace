@@ -432664,6 +432664,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/shayanshahravi/OmaClick",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T04:14:35.218Z",
+      "listingValidatedCommit": "b61166a19681275cfb1ec5d41258fdba8cbfc1a5",
+      "listingValidatedAt": "2026-11-17T04:14:35.218Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shayanshahravi/omaclick",
+        "pluginIds": [
+          "io.github.shayanshahravi.omaclick"
+        ],
+        "commit": "b61166a19681275cfb1ec5d41258fdba8cbfc1a5",
+        "checkedAt": "2026-11-17T04:14:35.074Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shayanshahravi/omaclick",
+        "pluginIds": [
+          "io.github.shayanshahravi.omaclick"
+        ],
+        "commit": "b61166a19681275cfb1ec5d41258fdba8cbfc1a5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T04:14:35.074Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T22:02:52.311Z",
+        "requestEventId": 36362656710,
+        "requestedAt": "2026-11-17T04:13:42Z",
+        "reviewedAt": "2026-11-17T04:14:35.074Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.shayanshahravi.omaclick": {
+          "category": "Desktop",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
