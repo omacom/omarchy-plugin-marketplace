@@ -432133,6 +432133,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/nixoslinuxb/omarchy-remote-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T01:01:12.650Z",
+      "listingValidatedCommit": "67e156ef836537ee828219506211202beecaecf8",
+      "listingValidatedAt": "2026-11-17T01:01:12.650Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nixoslinuxb/omarchy-remote-plugin",
+        "pluginIds": [
+          "yhcramo.remote"
+        ],
+        "commit": "67e156ef836537ee828219506211202beecaecf8",
+        "checkedAt": "2026-11-17T01:01:12.498Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nixoslinuxb/omarchy-remote-plugin",
+        "pluginIds": [
+          "yhcramo.remote"
+        ],
+        "commit": "67e156ef836537ee828219506211202beecaecf8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T01:01:12.498Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T10:02:13.259Z",
+        "requestEventId": 36347847516,
+        "requestedAt": "2026-11-17T01:00:32Z",
+        "reviewedAt": "2026-11-17T01:01:12.498Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yhcramo.remote": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
