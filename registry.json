@@ -405936,8 +405936,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-01",
       "listedAt": "2026-11-01T10:58:34.173Z",
-      "listingValidatedCommit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
-      "listingValidatedAt": "2026-11-03T23:25:22.694Z",
+      "listingValidatedCommit": "01ef47a0523392544219985fdb1cab01d0d79700",
+      "listingValidatedAt": "2026-11-17T03:18:18.115Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -405946,8 +405946,8 @@
         "pluginIds": [
           "apach.dropdown"
         ],
-        "commit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
-        "checkedAt": "2026-11-03T23:25:22.694Z",
+        "commit": "01ef47a0523392544219985fdb1cab01d0d79700",
+        "checkedAt": "2026-11-17T03:18:18.115Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -406057,6 +406057,51 @@
             "reviewedAt": "2026-11-01T13:02:56.467Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
+          "validatedAt": "2026-11-03T23:25:22.694Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T03:18:18.115Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "apachaiz/omarchy-dropdown",
+            "pluginIds": [
+              "apach.dropdown"
+            ],
+            "commit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
+            "checkedAt": "2026-11-03T23:25:22.694Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "apachaiz/omarchy-dropdown",
+            "pluginIds": [
+              "apach.dropdown"
+            ],
+            "commit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-03T23:25:22.694Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-03T21:20:15.330Z",
+            "requestEventId": 35072421875,
+            "requestedAt": "2026-11-03T22:40:55Z",
+            "reviewedAt": "2026-11-03T23:25:22.694Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -406065,20 +406110,20 @@
         "pluginIds": [
           "apach.dropdown"
         ],
-        "commit": "2ba70c5d364594bb4fa9b1298ff53699c190c8f6",
+        "commit": "01ef47a0523392544219985fdb1cab01d0d79700",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-03T23:25:22.694Z",
+        "baselineCheckedAt": "2026-11-17T03:18:18.115Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "remote-build",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-03T21:20:15.330Z",
-        "requestEventId": 35072421875,
-        "requestedAt": "2026-11-03T22:40:55Z",
-        "reviewedAt": "2026-11-03T23:25:22.694Z",
+        "reviewedBaselineCheckedAt": "2026-11-14T17:43:55.902Z",
+        "requestEventId": 36358429732,
+        "requestedAt": "2026-11-17T03:17:25Z",
+        "reviewedAt": "2026-11-17T03:18:18.115Z",
         "reviewer": "HANCORE-linux"
       }
     },
