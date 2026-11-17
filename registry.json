@@ -67994,8 +67994,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-24",
       "listedAt": "2026-08-24T00:18:31.539Z",
-      "listingValidatedCommit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
-      "listingValidatedAt": "2026-08-24T00:18:31.539Z",
+      "listingValidatedCommit": "a97bdf1bb52c0396c6928c4f6c32f736782252ed",
+      "listingValidatedAt": "2026-11-17T15:03:48.272Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -68004,8 +68004,8 @@
         "pluginIds": [
           "io.github.bogard1.doom"
         ],
-        "commit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
-        "checkedAt": "2026-08-24T00:18:31.505Z",
+        "commit": "a97bdf1bb52c0396c6928c4f6c32f736782252ed",
+        "checkedAt": "2026-11-17T15:03:48.272Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -68013,28 +68013,6 @@
           "package-manager",
           "remote-build"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "bogard1/omarchy-doom-plugin",
-        "pluginIds": [
-          "io.github.bogard1.doom"
-        ],
-        "commit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-08-24T00:18:31.505Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager",
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-08-23T22:20:53.703Z",
-        "requestEventId": 29885109372,
-        "requestedAt": "2026-08-24T00:18:13Z",
-        "reviewedAt": "2026-08-24T00:18:31.505Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.bogard1.doom": {
@@ -68050,7 +68028,76 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bogard1/omarchy-doom-plugin",
+        "pluginIds": [
+          "io.github.bogard1.doom"
+        ],
+        "commit": "a97bdf1bb52c0396c6928c4f6c32f736782252ed",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T15:03:48.272Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-17T02:07:07.006Z",
+        "requestEventId": 36419419132,
+        "requestedAt": "2026-11-17T15:03:05Z",
+        "reviewedAt": "2026-11-17T15:03:48.272Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
+          "validatedAt": "2026-08-24T00:18:31.539Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T15:03:48.272Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bogard1/omarchy-doom-plugin",
+            "pluginIds": [
+              "io.github.bogard1.doom"
+            ],
+            "commit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
+            "checkedAt": "2026-08-24T00:18:31.505Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bogard1/omarchy-doom-plugin",
+            "pluginIds": [
+              "io.github.bogard1.doom"
+            ],
+            "commit": "88546efec76dd8b2eb6e1afa4988a0c4c2fe634d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-08-24T00:18:31.505Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager",
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-08-23T22:20:53.703Z",
+            "requestEventId": 29885109372,
+            "requestedAt": "2026-08-24T00:18:13Z",
+            "reviewedAt": "2026-08-24T00:18:31.505Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/SeeSharpSi/omarchy-vct-scoreline",
