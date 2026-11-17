@@ -30073,8 +30073,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T17:00:39.979Z",
-      "listingValidatedCommit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
-      "listingValidatedAt": "2026-10-02T16:26:50.777Z",
+      "listingValidatedCommit": "5d3fd95f5ce6d6a0bb37b5bde262f8f550881b1b",
+      "listingValidatedAt": "2026-11-17T02:04:15.239Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -30083,8 +30083,8 @@
         "pluginIds": [
           "deda.workspaces-icons"
         ],
-        "commit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
-        "checkedAt": "2026-10-02T16:26:50.777Z",
+        "commit": "5d3fd95f5ce6d6a0bb37b5bde262f8f550881b1b",
+        "checkedAt": "2026-11-17T02:04:15.239Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -30102,27 +30102,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "deda/omarchy-workspaces-icons",
-        "pluginIds": [
-          "deda.workspaces-icons"
-        ],
-        "commit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-02T16:26:50.777Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "remote-build"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-01T21:03:08.853Z",
-        "requestEventId": 32348340733,
-        "requestedAt": "2026-10-02T16:13:48Z",
-        "reviewedAt": "2026-10-02T16:26:50.777Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -30146,8 +30125,72 @@
               "remote-build"
             ]
           }
+        },
+        {
+          "commit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
+          "validatedAt": "2026-10-02T16:26:50.777Z",
+          "branch": "master",
+          "supersededAt": "2026-11-17T02:04:15.239Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "deda/omarchy-workspaces-icons",
+            "pluginIds": [
+              "deda.workspaces-icons"
+            ],
+            "commit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
+            "checkedAt": "2026-10-02T16:26:50.777Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "deda/omarchy-workspaces-icons",
+            "pluginIds": [
+              "deda.workspaces-icons"
+            ],
+            "commit": "5cbb4fdc0c990e7b1f23308494f8c51933cb9ef6",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-02T16:26:50.777Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-01T21:03:08.853Z",
+            "requestEventId": 32348340733,
+            "requestedAt": "2026-10-02T16:13:48Z",
+            "reviewedAt": "2026-10-02T16:26:50.777Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "deda/omarchy-workspaces-icons",
+        "pluginIds": [
+          "deda.workspaces-icons"
+        ],
+        "commit": "5d3fd95f5ce6d6a0bb37b5bde262f8f550881b1b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T02:04:15.239Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T17:54:05.349Z",
+        "requestEventId": 36352779421,
+        "requestedAt": "2026-11-17T02:03:24Z",
+        "reviewedAt": "2026-11-17T02:04:15.239Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/miguelRibeir0/omarchy-cliamp-nowplaying",
