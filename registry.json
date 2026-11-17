@@ -433286,6 +433286,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/shayanshahravi/OmaFolder",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T18:26:19.121Z",
+      "listingValidatedCommit": "023b2f175cc478c49cc9b650b5a7b6ed7be3b58e",
+      "listingValidatedAt": "2026-11-17T18:26:19.121Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shayanshahravi/omafolder",
+        "pluginIds": [
+          "io.github.shayanshahravi.omafolder"
+        ],
+        "commit": "023b2f175cc478c49cc9b650b5a7b6ed7be3b58e",
+        "checkedAt": "2026-11-17T18:26:18.997Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shayanshahravi/omafolder",
+        "pluginIds": [
+          "io.github.shayanshahravi.omafolder"
+        ],
+        "commit": "023b2f175cc478c49cc9b650b5a7b6ed7be3b58e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T18:26:18.997Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T22:02:22.267Z",
+        "requestEventId": 36440550620,
+        "requestedAt": "2026-11-17T18:24:53Z",
+        "reviewedAt": "2026-11-17T18:26:18.997Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.shayanshahravi.omafolder": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
