@@ -263341,8 +263341,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-26",
       "listedAt": "2026-09-26T07:33:57.053Z",
-      "listingValidatedCommit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
-      "listingValidatedAt": "2026-10-01T11:30:35.773Z",
+      "listingValidatedCommit": "55da1705dc24e8c1f2e7f9e99dfe23ace301775d",
+      "listingValidatedAt": "2026-11-17T06:43:17.399Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -263351,8 +263351,8 @@
         "pluginIds": [
           "io.github.alxwolfenstein97.omaboot"
         ],
-        "commit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
-        "checkedAt": "2026-10-01T11:30:35.773Z",
+        "commit": "55da1705dc24e8c1f2e7f9e99dfe23ace301775d",
+        "checkedAt": "2026-11-17T06:43:17.399Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -263375,29 +263375,6 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "alxwolfenstein97/omaboot",
-        "pluginIds": [
-          "io.github.alxwolfenstein97.omaboot"
-        ],
-        "commit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-01T11:30:35.773Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "package-manager",
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-09-28T06:35:21.443Z",
-        "requestEventId": 32245536384,
-        "requestedAt": "2026-10-01T11:14:23Z",
-        "reviewedAt": "2026-10-01T11:30:35.773Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -263446,8 +263423,78 @@
             "reviewedAt": "2026-09-26T07:33:56.947Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
+          "validatedAt": "2026-10-01T11:30:35.773Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T06:43:17.399Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "alxwolfenstein97/omaboot",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omaboot"
+            ],
+            "commit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
+            "checkedAt": "2026-10-01T11:30:35.773Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "alxwolfenstein97/omaboot",
+            "pluginIds": [
+              "io.github.alxwolfenstein97.omaboot"
+            ],
+            "commit": "6c8baaffaae6e0c2c429aae0798bfd1cddca3f94",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-01T11:30:35.773Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-09-28T06:35:21.443Z",
+            "requestEventId": 32245536384,
+            "requestedAt": "2026-10-01T11:14:23Z",
+            "reviewedAt": "2026-10-01T11:30:35.773Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alxwolfenstein97/omaboot",
+        "pluginIds": [
+          "io.github.alxwolfenstein97.omaboot"
+        ],
+        "commit": "55da1705dc24e8c1f2e7f9e99dfe23ace301775d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T06:43:17.399Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-16T14:46:36.638Z",
+        "requestEventId": 36373430756,
+        "requestedAt": "2026-11-17T06:42:41Z",
+        "reviewedAt": "2026-11-17T06:43:17.399Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/AlxWolfenstein97/omaobs",
