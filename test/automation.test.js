@@ -2523,10 +2523,13 @@ test("automation deploys refreshed catalogs and uses listing-specific approval",
     assert.match(workflow, /pages_artifact_name: \$\{\{ steps\.artifacts\.outputs\.pages_name \}\}/);
     assert.match(workflow, /name: \$\{\{ needs\.(?:approve|refresh)\.outputs\.publication_artifact_name \}\}/);
     assert.match(workflow, /artifact_name: \$\{\{ needs\.(?:approve|refresh)\.outputs\.pages_artifact_name \}\}/);
-    assert.match(workflow, /retention-days: 7/);
     assert.match(workflow, /fetch-depth: 0/);
     assert.match(workflow, /persist-credentials: false/);
   }
+  // Each approval uploads two full-site artifacts of about 370 MB. Only the
+  // run's first attempt reads them, minutes later: a rerun skips approve.
+  assert.deepEqual(approve.match(/retention-days: \d+/g), ["retention-days: 1", "retention-days: 1"]);
+  assert.match(refresh, /retention-days: 7/);
   for (const workflow of [approve, refresh, deploy]) {
     assert.match(
       workflow,
