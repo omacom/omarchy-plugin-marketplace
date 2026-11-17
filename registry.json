@@ -419102,8 +419102,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-08",
       "listedAt": "2026-11-08T18:51:59.754Z",
-      "listingValidatedCommit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
-      "listingValidatedAt": "2026-11-08T18:51:59.754Z",
+      "listingValidatedCommit": "a49bcebeacb657e82f8cb8e8adcf806375d69ba7",
+      "listingValidatedAt": "2026-11-17T03:34:01.045Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -419112,8 +419112,8 @@
         "pluginIds": [
           "io.github.destrukt1v.omarchy-buddy"
         ],
-        "commit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
-        "checkedAt": "2026-11-08T18:51:59.638Z",
+        "commit": "a49bcebeacb657e82f8cb8e8adcf806375d69ba7",
+        "checkedAt": "2026-11-17T03:34:01.045Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -419122,29 +419122,6 @@
           "installer",
           "privilege"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "destrukt1v/omarchy-buddy",
-        "pluginIds": [
-          "io.github.destrukt1v.omarchy-buddy"
-        ],
-        "commit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-08T18:51:59.638Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management",
-          "installer",
-          "privilege"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-08T02:33:54.221Z",
-        "requestEventId": 35507741692,
-        "requestedAt": "2026-11-08T18:51:28Z",
-        "reviewedAt": "2026-11-08T18:51:59.638Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.destrukt1v.omarchy-buddy": {
@@ -419160,7 +419137,79 @@
             "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
           }
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "destrukt1v/omarchy-buddy",
+        "pluginIds": [
+          "io.github.destrukt1v.omarchy-buddy"
+        ],
+        "commit": "a49bcebeacb657e82f8cb8e8adcf806375d69ba7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-17T03:34:01.045Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-15T15:40:36.678Z",
+        "requestEventId": 36359666760,
+        "requestedAt": "2026-11-17T03:33:04Z",
+        "reviewedAt": "2026-11-17T03:34:01.045Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
+          "validatedAt": "2026-11-08T18:51:59.754Z",
+          "branch": "main",
+          "supersededAt": "2026-11-17T03:34:01.045Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "destrukt1v/omarchy-buddy",
+            "pluginIds": [
+              "io.github.destrukt1v.omarchy-buddy"
+            ],
+            "commit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
+            "checkedAt": "2026-11-08T18:51:59.638Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer",
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "destrukt1v/omarchy-buddy",
+            "pluginIds": [
+              "io.github.destrukt1v.omarchy-buddy"
+            ],
+            "commit": "392271fc738b0ef95273d94f4667ca71b83b3fac",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-08T18:51:59.638Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "installer",
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-08T02:33:54.221Z",
+            "requestEventId": 35507741692,
+            "requestedAt": "2026-11-08T18:51:28Z",
+            "reviewedAt": "2026-11-08T18:51:59.638Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/coricogit/corico.monitor",
