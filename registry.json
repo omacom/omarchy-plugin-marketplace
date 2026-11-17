@@ -432630,6 +432630,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/terrerovgh/omarchy-prompt",
+      "type": "plugin-source",
+      "addedAt": "2026-11-17",
+      "listedAt": "2026-11-17T04:02:12.908Z",
+      "listingValidatedCommit": "141d01185c8b0dabacd9fae12ca193482170fa7e",
+      "listingValidatedAt": "2026-11-17T04:02:12.908Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "terrerovgh/omarchy-prompt",
+        "pluginIds": [
+          "io.github.terrerovgh.prompt-improver"
+        ],
+        "commit": "141d01185c8b0dabacd9fae12ca193482170fa7e",
+        "checkedAt": "2026-11-17T04:02:12.702Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.terrerovgh.prompt-improver": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
