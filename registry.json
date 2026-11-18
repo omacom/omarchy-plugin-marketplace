@@ -434582,6 +434582,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wfoyt/Omarchy-Audio-Control",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T23:29:53.196Z",
+      "listingValidatedCommit": "63c196eb4d71c9acdbdea5ea1d6cae942d4d6f91",
+      "listingValidatedAt": "2026-11-18T23:29:53.196Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wfoyt/omarchy-audio-control",
+        "pluginIds": [
+          "wfo.media"
+        ],
+        "commit": "63c196eb4d71c9acdbdea5ea1d6cae942d4d6f91",
+        "checkedAt": "2026-11-18T23:29:53.072Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "wfo.media": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
