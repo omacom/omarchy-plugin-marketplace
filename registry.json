@@ -409590,8 +409590,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-02",
       "listedAt": "2026-11-02T15:35:55.546Z",
-      "listingValidatedCommit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
-      "listingValidatedAt": "2026-11-17T15:26:44.852Z",
+      "listingValidatedCommit": "3f02c270e2eabe66da367067ce0c0ab2a06f546e",
+      "listingValidatedAt": "2026-11-18T08:41:30.411Z",
       "listingValidatedBranch": "new-release",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -409600,8 +409600,8 @@
         "pluginIds": [
           "dragos.hyprdrive"
         ],
-        "commit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
-        "checkedAt": "2026-11-17T15:26:44.852Z",
+        "commit": "3f02c270e2eabe66da367067ce0c0ab2a06f546e",
+        "checkedAt": "2026-11-18T08:41:30.410Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -409768,6 +409768,51 @@
             "reviewedAt": "2026-11-16T03:23:43.501Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
+          "validatedAt": "2026-11-17T15:26:44.852Z",
+          "branch": "new-release",
+          "supersededAt": "2026-11-18T08:41:30.411Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "dragosol/hyprdrive-omarchy",
+            "pluginIds": [
+              "dragos.hyprdrive"
+            ],
+            "commit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
+            "checkedAt": "2026-11-17T15:26:44.852Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "dragosol/hyprdrive-omarchy",
+            "pluginIds": [
+              "dragos.hyprdrive"
+            ],
+            "commit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-17T15:26:44.852Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "remote-build",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-17T14:47:18.661Z",
+            "requestEventId": 36422039513,
+            "requestedAt": "2026-11-17T15:26:11Z",
+            "reviewedAt": "2026-11-17T15:26:44.852Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -409776,20 +409821,20 @@
         "pluginIds": [
           "dragos.hyprdrive"
         ],
-        "commit": "6361cdf5512546cb70ab558d114ec1e9ea0b6f12",
+        "commit": "3f02c270e2eabe66da367067ce0c0ab2a06f546e",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-17T15:26:44.852Z",
+        "baselineCheckedAt": "2026-11-18T08:41:30.410Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "remote-build",
           "installer"
         ],
-        "reviewedBaselineCheckedAt": "2026-11-17T14:47:18.661Z",
-        "requestEventId": 36422039513,
-        "requestedAt": "2026-11-17T15:26:11Z",
-        "reviewedAt": "2026-11-17T15:26:44.852Z",
+        "reviewedBaselineCheckedAt": "2026-11-17T16:22:40.113Z",
+        "requestEventId": 36504900784,
+        "requestedAt": "2026-11-18T08:40:58Z",
+        "reviewedAt": "2026-11-18T08:41:30.411Z",
         "reviewer": "HANCORE-linux"
       }
     },
