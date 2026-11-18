@@ -433931,6 +433931,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fsdias/omarchy-simplex-music-player",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T15:30:49.102Z",
+      "listingValidatedCommit": "6faebddd72986a366d619e14c50793f83188f6ff",
+      "listingValidatedAt": "2026-11-18T15:30:49.102Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fsdias/omarchy-simplex-music-player",
+        "pluginIds": [
+          "io.github.fsdias.simplex-music-player"
+        ],
+        "commit": "6faebddd72986a366d619e14c50793f83188f6ff",
+        "checkedAt": "2026-11-18T15:30:48.897Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.fsdias.simplex-music-player": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
