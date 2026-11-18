@@ -433830,6 +433830,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/Omarchy-Plugin-Manager",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T14:49:15.791Z",
+      "listingValidatedCommit": "57fe5dd2d2d3c9ebf1e7bd2b4f88f18fdae63c31",
+      "listingValidatedAt": "2026-11-18T14:49:15.791Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/omarchy-plugin-manager",
+        "pluginIds": [
+          "kel.plugin-manager"
+        ],
+        "commit": "57fe5dd2d2d3c9ebf1e7bd2b4f88f18fdae63c31",
+        "checkedAt": "2026-11-18T14:49:15.604Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kel.plugin-manager": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
