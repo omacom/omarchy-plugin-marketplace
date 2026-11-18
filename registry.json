@@ -433796,6 +433796,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Aashutosh31/omarchy-media-deck",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T14:27:10.432Z",
+      "listingValidatedCommit": "2d03c854d163ed4042385992c39ea2c4cba1e924",
+      "listingValidatedAt": "2026-11-18T14:27:10.432Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aashutosh31/omarchy-media-deck",
+        "pluginIds": [
+          "aashutosh31.media"
+        ],
+        "commit": "2d03c854d163ed4042385992c39ea2c4cba1e924",
+        "checkedAt": "2026-11-18T14:27:10.237Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aashutosh31.media": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
