@@ -433343,6 +433343,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sette7blo/omaservarr",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T07:27:03.690Z",
+      "listingValidatedCommit": "9291d0815ba65286b1f6008ed2fdade6279244bb",
+      "listingValidatedAt": "2026-11-18T07:27:03.690Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sette7blo/omaservarr",
+        "pluginIds": [
+          "io.github.sette7blo.omaservarr"
+        ],
+        "commit": "9291d0815ba65286b1f6008ed2fdade6279244bb",
+        "checkedAt": "2026-11-18T07:27:03.482Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sette7blo/omaservarr",
+        "pluginIds": [
+          "io.github.sette7blo.omaservarr"
+        ],
+        "commit": "9291d0815ba65286b1f6008ed2fdade6279244bb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-18T07:27:03.482Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-17T18:28:02.899Z",
+        "requestEventId": 36498862259,
+        "requestedAt": "2026-11-18T07:26:28Z",
+        "reviewedAt": "2026-11-18T07:27:03.482Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sette7blo.omaservarr": {
+          "category": "Productivity",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
