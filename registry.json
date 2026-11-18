@@ -434548,6 +434548,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/erfoip/kanibar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T22:56:23.832Z",
+      "listingValidatedCommit": "0bed70cedcd8369a46d0e3a339a50192212ceb03",
+      "listingValidatedAt": "2026-11-18T22:56:23.832Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "erfoip/kanibar",
+        "pluginIds": [
+          "io.github.erfoip.kanibar"
+        ],
+        "commit": "0bed70cedcd8369a46d0e3a339a50192212ceb03",
+        "checkedAt": "2026-11-18T22:56:23.642Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.erfoip.kanibar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
