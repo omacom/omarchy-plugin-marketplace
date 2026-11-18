@@ -434034,6 +434034,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mitschabaude/omarchy-side-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T16:15:33.177Z",
+      "listingValidatedCommit": "b115739135c6c4a9f4894b081aa808ec252893a9",
+      "listingValidatedAt": "2026-11-18T16:15:33.177Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mitschabaude/omarchy-side-dock",
+        "pluginIds": [
+          "mitschabaude.side-dock"
+        ],
+        "commit": "b115739135c6c4a9f4894b081aa808ec252893a9",
+        "checkedAt": "2026-11-18T16:15:33.040Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mitschabaude.side-dock": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
