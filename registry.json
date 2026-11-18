@@ -434389,6 +434389,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dumbld0re/omarchy-speed",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T20:57:32.793Z",
+      "listingValidatedCommit": "2f0a2f53aa1c6d6c5201c4a2863f58c968e832f5",
+      "listingValidatedAt": "2026-11-18T20:57:32.793Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dumbld0re/omarchy-speed",
+        "pluginIds": [
+          "danny-miguel.speed"
+        ],
+        "commit": "2f0a2f53aa1c6d6c5201c4a2863f58c968e832f5",
+        "checkedAt": "2026-11-18T20:57:32.640Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dumbld0re/omarchy-speed",
+        "pluginIds": [
+          "danny-miguel.speed"
+        ],
+        "commit": "2f0a2f53aa1c6d6c5201c4a2863f58c968e832f5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-18T20:57:32.640Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-18T20:53:35.969Z",
+        "requestEventId": 36577968469,
+        "requestedAt": "2026-11-18T20:57:01Z",
+        "reviewedAt": "2026-11-18T20:57:32.640Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "danny-miguel.speed": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
