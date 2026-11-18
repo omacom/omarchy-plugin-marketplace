@@ -434301,6 +434301,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/feature-ninja/per-monitor-workspace-toggle",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T19:34:32.173Z",
+      "listingValidatedCommit": "8b1de9dbe001042eaf017e061d0a3f92d15cab0f",
+      "listingValidatedAt": "2026-11-18T19:34:32.173Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "feature-ninja/per-monitor-workspace-toggle",
+        "pluginIds": [
+          "feature-ninja.per-monitor-workspaces"
+        ],
+        "commit": "8b1de9dbe001042eaf017e061d0a3f92d15cab0f",
+        "checkedAt": "2026-11-18T19:34:31.991Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "feature-ninja.per-monitor-workspaces": {
+          "category": "System",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
