@@ -434067,6 +434067,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/menelaostX99/ripe",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T16:26:49.985Z",
+      "listingValidatedCommit": "a105454488979098f47b808bb5092210addde627",
+      "listingValidatedAt": "2026-11-18T16:26:49.985Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "menelaostx99/ripe",
+        "pluginIds": [
+          "menelaostx99.ripe"
+        ],
+        "commit": "a105454488979098f47b808bb5092210addde627",
+        "checkedAt": "2026-11-18T16:26:49.822Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "menelaostx99/ripe",
+        "pluginIds": [
+          "menelaostx99.ripe"
+        ],
+        "commit": "a105454488979098f47b808bb5092210addde627",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-18T16:26:49.822Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-17T17:21:46.089Z",
+        "requestEventId": 36551462422,
+        "requestedAt": "2026-11-18T16:26:04Z",
+        "reviewedAt": "2026-11-18T16:26:49.822Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "menelaostx99.ripe": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
