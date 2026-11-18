@@ -433476,6 +433476,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aitorcalero/omarchy-home-browser",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T08:57:02.537Z",
+      "listingValidatedCommit": "bb29279db93a139df091d4356dd13c7c2224502b",
+      "listingValidatedAt": "2026-11-18T08:57:02.537Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aitorcalero/omarchy-home-browser",
+        "pluginIds": [
+          "aitor.home-browser"
+        ],
+        "commit": "bb29279db93a139df091d4356dd13c7c2224502b",
+        "checkedAt": "2026-11-18T08:57:02.422Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aitor.home-browser": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
