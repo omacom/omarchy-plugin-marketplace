@@ -434450,6 +434450,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/metacatdud/omarchy-drive-health",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T21:38:04.492Z",
+      "listingValidatedCommit": "0cab96f9ee079e8ae7618415247402780d62deb5",
+      "listingValidatedAt": "2026-11-18T21:38:04.492Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "metacatdud/omarchy-drive-health",
+        "pluginIds": [
+          "community.drive-health"
+        ],
+        "commit": "0cab96f9ee079e8ae7618415247402780d62deb5",
+        "checkedAt": "2026-11-18T21:38:04.331Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "metacatdud/omarchy-drive-health",
+        "pluginIds": [
+          "community.drive-health"
+        ],
+        "commit": "0cab96f9ee079e8ae7618415247402780d62deb5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-18T21:38:04.331Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-18T21:29:14.898Z",
+        "requestEventId": 36581765643,
+        "requestedAt": "2026-11-18T21:37:19Z",
+        "reviewedAt": "2026-11-18T21:38:04.331Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "community.drive-health": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
