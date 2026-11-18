@@ -28810,8 +28810,8 @@
       "type": "plugin-source",
       "addedAt": "2026-08-19",
       "listedAt": "2026-08-19T15:44:28.519Z",
-      "listingValidatedCommit": "dd99cd47f4590ee2090184db2c759afb9964156a",
-      "listingValidatedAt": "2026-08-19T15:44:28.519Z",
+      "listingValidatedCommit": "30b877fba1bdbab890011cacd84b272ee4cf8c06",
+      "listingValidatedAt": "2026-11-18T20:14:14.484Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -28820,8 +28820,8 @@
         "pluginIds": [
           "i3-workspaces"
         ],
-        "commit": "dd99cd47f4590ee2090184db2c759afb9964156a",
-        "checkedAt": "2026-08-19T09:18:07.951Z",
+        "commit": "30b877fba1bdbab890011cacd84b272ee4cf8c06",
+        "checkedAt": "2026-11-18T20:14:14.484Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -28835,7 +28835,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "dd99cd47f4590ee2090184db2c759afb9964156a",
+          "validatedAt": "2026-08-19T15:44:28.519Z",
+          "branch": "master",
+          "supersededAt": "2026-11-18T20:14:14.484Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "coquer/i3-workspaces",
+            "pluginIds": [
+              "i3-workspaces"
+            ],
+            "commit": "dd99cd47f4590ee2090184db2c759afb9964156a",
+            "checkedAt": "2026-08-19T09:18:07.951Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/seshna/quick-translate",
