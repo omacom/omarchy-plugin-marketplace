@@ -433398,6 +433398,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LucasDaRY/Greek-Letters-Picker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-18",
+      "listedAt": "2026-11-18T08:02:38.901Z",
+      "listingValidatedCommit": "a8988096b7010e03283d3719c03c9344e4aa1459",
+      "listingValidatedAt": "2026-11-18T08:02:38.901Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lucasdary/greek-letters-picker",
+        "pluginIds": [
+          "lucas.greek"
+        ],
+        "commit": "a8988096b7010e03283d3719c03c9344e4aa1459",
+        "checkedAt": "2026-11-18T08:02:38.708Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lucas.greek": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
