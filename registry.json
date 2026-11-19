@@ -435159,6 +435159,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/InsightfulAnalytics/omarchy_ytmusic",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:52:35.053Z",
+      "listingValidatedCommit": "5a8ee7075149f0e9742d52dc9d13f5b097da61cd",
+      "listingValidatedAt": "2026-11-19T09:52:35.053Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "insightfulanalytics/omarchy_ytmusic",
+        "pluginIds": [
+          "tim.ytmusic"
+        ],
+        "commit": "5a8ee7075149f0e9742d52dc9d13f5b097da61cd",
+        "checkedAt": "2026-11-19T09:52:34.907Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "insightfulanalytics/omarchy_ytmusic",
+        "pluginIds": [
+          "tim.ytmusic"
+        ],
+        "commit": "5a8ee7075149f0e9742d52dc9d13f5b097da61cd",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T09:52:34.907Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T09:34:34.205Z",
+        "requestEventId": 36633054104,
+        "requestedAt": "2026-11-19T09:40:16Z",
+        "reviewedAt": "2026-11-19T09:52:34.908Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tim.ytmusic": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
