@@ -437141,6 +437141,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dmajerus6/omarchy-tailnet-files",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T14:12:08.679Z",
+      "listingValidatedCommit": "c95f1b7bf446304b6c8826b149f6d94ca719ac69",
+      "listingValidatedAt": "2026-11-19T14:12:08.679Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dmajerus6/omarchy-tailnet-files",
+        "pluginIds": [
+          "dmaje.tailfiles"
+        ],
+        "commit": "c95f1b7bf446304b6c8826b149f6d94ca719ac69",
+        "checkedAt": "2026-11-19T14:12:08.465Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dmaje.tailfiles": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "vpn"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
