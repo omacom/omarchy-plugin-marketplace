@@ -434773,6 +434773,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sirferra/omarchy-workspaces-icons",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:03:06.784Z",
+      "listingValidatedCommit": "d9cd3ef714f296205b2dfd14a07f0f8d397c8199",
+      "listingValidatedAt": "2026-11-19T09:03:06.784Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sirferra/omarchy-workspaces-icons",
+        "pluginIds": [
+          "sirferra.workspaces"
+        ],
+        "commit": "d9cd3ef714f296205b2dfd14a07f0f8d397c8199",
+        "checkedAt": "2026-11-19T09:03:06.626Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sirferra.workspaces": {
+          "category": "Appearance",
+          "tags": [
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
