@@ -435403,6 +435403,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/robi42/AllesBuien",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T10:33:44.002Z",
+      "listingValidatedCommit": "de63548eb21584ee657ab8e9edb4e00708b04a64",
+      "listingValidatedAt": "2026-11-19T10:33:44.002Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "robi42/allesbuien",
+        "pluginIds": [
+          "io.github.robi42.allesbuien"
+        ],
+        "commit": "de63548eb21584ee657ab8e9edb4e00708b04a64",
+        "checkedAt": "2026-11-19T10:33:43.852Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "robi42/allesbuien",
+        "pluginIds": [
+          "io.github.robi42.allesbuien"
+        ],
+        "commit": "de63548eb21584ee657ab8e9edb4e00708b04a64",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T10:33:43.852Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-18T14:11:46.028Z",
+        "requestEventId": 36637904918,
+        "requestedAt": "2026-11-19T10:32:49Z",
+        "reviewedAt": "2026-11-19T10:33:43.852Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.robi42.allesbuien": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
