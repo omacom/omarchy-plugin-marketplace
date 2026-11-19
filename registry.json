@@ -437361,6 +437361,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rsd/omarchy-msi-mux-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T15:23:02.993Z",
+      "listingValidatedCommit": "eec71bbe751ad4e9fb074b440cd1c60f2e8a3137",
+      "listingValidatedAt": "2026-11-19T15:23:02.993Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rsd/omarchy-msi-mux-plugin",
+        "pluginIds": [
+          "io.github.rsd.msi-mux"
+        ],
+        "commit": "eec71bbe751ad4e9fb074b440cd1c60f2e8a3137",
+        "checkedAt": "2026-11-19T15:23:02.796Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rsd/omarchy-msi-mux-plugin",
+        "pluginIds": [
+          "io.github.rsd.msi-mux"
+        ],
+        "commit": "eec71bbe751ad4e9fb074b440cd1c60f2e8a3137",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T15:23:02.796Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T15:17:04.742Z",
+        "requestEventId": 36666533632,
+        "requestedAt": "2026-11-19T15:22:20Z",
+        "reviewedAt": "2026-11-19T15:23:02.796Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rsd.msi-mux": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "hyprland",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
