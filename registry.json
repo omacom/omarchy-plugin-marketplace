@@ -435999,6 +435999,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Grenyx42/ModelManager",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T11:38:07.364Z",
+      "listingValidatedCommit": "51f21a3d4c2b24b3408b388774daa16099194a8b",
+      "listingValidatedAt": "2026-11-19T11:38:07.364Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "grenyx42/modelmanager",
+        "pluginIds": [
+          "io.github.grenyx42.modelmanager"
+        ],
+        "commit": "51f21a3d4c2b24b3408b388774daa16099194a8b",
+        "checkedAt": "2026-11-19T11:38:07.158Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "grenyx42/modelmanager",
+        "pluginIds": [
+          "io.github.grenyx42.modelmanager"
+        ],
+        "commit": "51f21a3d4c2b24b3408b388774daa16099194a8b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T11:38:07.158Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-18T22:40:16.613Z",
+        "requestEventId": 36642252008,
+        "requestedAt": "2026-11-19T11:20:43Z",
+        "reviewedAt": "2026-11-19T11:38:07.158Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.grenyx42.modelmanager": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
