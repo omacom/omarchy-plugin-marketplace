@@ -435086,6 +435086,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/jmihbay/omarchy-amneziavpn",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:43:26.555Z",
+      "listingValidatedCommit": "250ff822ae61331b045c914ca291e8f52297e026",
+      "listingValidatedAt": "2026-11-19T09:43:26.555Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmihbay/omarchy-amneziavpn",
+        "pluginIds": [
+          "jmihbay.amneziavpn"
+        ],
+        "commit": "250ff822ae61331b045c914ca291e8f52297e026",
+        "checkedAt": "2026-11-19T09:43:26.406Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jmihbay.amneziavpn": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
