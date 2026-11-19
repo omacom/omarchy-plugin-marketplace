@@ -436342,6 +436342,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/mulmlord/omarchy-github",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T12:11:42.465Z",
+      "listingValidatedCommit": "4a3060c08cad6a13146f12de939960e933c16f89",
+      "listingValidatedAt": "2026-11-19T12:11:42.465Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mulmlord/omarchy-github",
+        "pluginIds": [
+          "mulm.github"
+        ],
+        "commit": "4a3060c08cad6a13146f12de939960e933c16f89",
+        "checkedAt": "2026-11-19T12:11:42.312Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mulm.github": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
