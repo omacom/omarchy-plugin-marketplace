@@ -434899,6 +434899,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/astorrer/omarchy-dji",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:24:49.162Z",
+      "listingValidatedCommit": "94fa80f1d6dbf2cf019b12d8c2a40abbf8ecc99e",
+      "listingValidatedAt": "2026-11-19T09:24:49.162Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "astorrer/omarchy-dji",
+        "pluginIds": [
+          "io.github.astorrer.omarchy-dji"
+        ],
+        "commit": "94fa80f1d6dbf2cf019b12d8c2a40abbf8ecc99e",
+        "checkedAt": "2026-11-19T09:24:48.973Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.astorrer.omarchy-dji": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
