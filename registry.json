@@ -435220,6 +435220,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/amlucent/omarchy-ma-bar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T10:04:28.186Z",
+      "listingValidatedCommit": "47ee3a8b17909b11f3d94cc908c1c2895318d9ec",
+      "listingValidatedAt": "2026-11-19T10:04:28.186Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "amlucent/omarchy-ma-bar",
+        "pluginIds": [
+          "io.github.amlucent.ma-bar"
+        ],
+        "commit": "47ee3a8b17909b11f3d94cc908c1c2895318d9ec",
+        "checkedAt": "2026-11-19T10:04:28.030Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "amlucent/omarchy-ma-bar",
+        "pluginIds": [
+          "io.github.amlucent.ma-bar"
+        ],
+        "commit": "47ee3a8b17909b11f3d94cc908c1c2895318d9ec",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T10:04:28.030Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T09:46:40.295Z",
+        "requestEventId": 36635233411,
+        "requestedAt": "2026-11-19T10:03:52Z",
+        "reviewedAt": "2026-11-19T10:04:28.030Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.amlucent.ma-bar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
