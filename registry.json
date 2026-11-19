@@ -436556,6 +436556,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/snouhaud/omarchy-agenda",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T12:30:42.905Z",
+      "listingValidatedCommit": "3c175ca5e825877d51b7aaa2d47792e995e3adff",
+      "listingValidatedAt": "2026-11-19T12:30:42.905Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "snouhaud/omarchy-agenda",
+        "pluginIds": [
+          "io.github.snouhaud.agenda"
+        ],
+        "commit": "3c175ca5e825877d51b7aaa2d47792e995e3adff",
+        "checkedAt": "2026-11-19T12:30:42.749Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.snouhaud.agenda": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
