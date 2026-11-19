@@ -437023,6 +437023,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Maxsh/omarchy-pulse",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T13:56:17.982Z",
+      "listingValidatedCommit": "c80a4b185ca8dea1650289ccac29bef4f18a0f99",
+      "listingValidatedAt": "2026-11-19T13:56:17.982Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "maxsh/omarchy-pulse",
+        "pluginIds": [
+          "maxsh.pulse"
+        ],
+        "commit": "c80a4b185ca8dea1650289ccac29bef4f18a0f99",
+        "checkedAt": "2026-11-19T13:56:17.791Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "maxsh/omarchy-pulse",
+        "pluginIds": [
+          "maxsh.pulse"
+        ],
+        "commit": "c80a4b185ca8dea1650289ccac29bef4f18a0f99",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T13:56:17.791Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T13:27:32.972Z",
+        "requestEventId": 36655385231,
+        "requestedAt": "2026-11-19T13:40:05Z",
+        "reviewedAt": "2026-11-19T13:56:17.791Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "maxsh.pulse": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
