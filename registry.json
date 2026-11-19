@@ -436803,6 +436803,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Somnius/oma.top.menu",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T13:01:08.223Z",
+      "listingValidatedCommit": "27a2919f363ebe69933fcf3c695f3e19fdd8a6fb",
+      "listingValidatedAt": "2026-11-19T13:01:08.223Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "somnius/oma.top.menu",
+        "pluginIds": [
+          "com.lefteros.somnius.oma-top-menu"
+        ],
+        "commit": "27a2919f363ebe69933fcf3c695f3e19fdd8a6fb",
+        "checkedAt": "2026-11-19T13:01:08.028Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "somnius/oma.top.menu",
+        "pluginIds": [
+          "com.lefteros.somnius.oma-top-menu"
+        ],
+        "commit": "27a2919f363ebe69933fcf3c695f3e19fdd8a6fb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T13:01:08.028Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T11:53:11.029Z",
+        "requestEventId": 36648560099,
+        "requestedAt": "2026-11-19T12:29:50Z",
+        "reviewedAt": "2026-11-19T13:01:08.028Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.lefteros.somnius.oma-top-menu": {
+          "category": "Desktop",
+          "tags": [
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
