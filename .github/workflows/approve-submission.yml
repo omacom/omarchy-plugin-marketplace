@@ -151,7 +151,8 @@ jobs:
           name: ${{ steps.artifacts.outputs.publication_name }}
           path: ${{ runner.temp }}/approved-publication
           if-no-files-found: error
-          retention-days: 7
+          # Only this run's first attempt reads it, minutes after upload.
+          retention-days: 1
 
       - name: Upload tested Pages artifact
         id: pages-artifact
@@ -159,7 +160,7 @@ jobs:
         with:
           name: ${{ steps.artifacts.outputs.pages_name }}
           path: site
-          retention-days: 7
+          retention-days: 1
 
       - name: Recheck approval, evidence, and exact upstream commit after artifact creation
         id: recheck
