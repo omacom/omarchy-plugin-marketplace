@@ -436432,6 +436432,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/misza-one/meshtastic_omarchy_plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T12:20:32.683Z",
+      "listingValidatedCommit": "14f163feba6bfaaef5563e28e753ff5c5754a2c0",
+      "listingValidatedAt": "2026-11-19T12:20:32.683Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "misza-one/meshtastic_omarchy_plugin",
+        "pluginIds": [
+          "miszarchy.meshtastic"
+        ],
+        "commit": "14f163feba6bfaaef5563e28e753ff5c5754a2c0",
+        "checkedAt": "2026-11-19T12:20:32.490Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "misza-one/meshtastic_omarchy_plugin",
+        "pluginIds": [
+          "miszarchy.meshtastic"
+        ],
+        "commit": "14f163feba6bfaaef5563e28e753ff5c5754a2c0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T12:20:32.490Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T11:40:10.014Z",
+        "requestEventId": 36646081430,
+        "requestedAt": "2026-11-19T12:03:34Z",
+        "reviewedAt": "2026-11-19T12:20:32.491Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "miszarchy.meshtastic": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
