@@ -437235,6 +437235,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/azizuysal/omarchy-gauges",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T14:53:37.687Z",
+      "listingValidatedCommit": "33268b60d172d7141d51a33b7672271c77ba139c",
+      "listingValidatedAt": "2026-11-19T14:53:37.687Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "azizuysal/omarchy-gauges",
+        "pluginIds": [
+          "azizuysal.gauges"
+        ],
+        "commit": "33268b60d172d7141d51a33b7672271c77ba139c",
+        "checkedAt": "2026-11-19T14:53:37.536Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "azizuysal/omarchy-gauges",
+        "pluginIds": [
+          "azizuysal.gauges"
+        ],
+        "commit": "33268b60d172d7141d51a33b7672271c77ba139c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T14:53:37.536Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T14:41:38.074Z",
+        "requestEventId": 36663148409,
+        "requestedAt": "2026-11-19T14:51:32Z",
+        "reviewedAt": "2026-11-19T14:53:37.536Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "azizuysal.gauges": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
