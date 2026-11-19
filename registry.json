@@ -435688,6 +435688,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/guirossibrum/LittleLetters",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T11:02:29.460Z",
+      "listingValidatedCommit": "6207a40be3653331918968952c3a02234dac036c",
+      "listingValidatedAt": "2026-11-19T11:02:29.460Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "guirossibrum/littleletters",
+        "pluginIds": [
+          "grbrum.littleletters"
+        ],
+        "commit": "6207a40be3653331918968952c3a02234dac036c",
+        "checkedAt": "2026-11-19T11:02:29.263Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "grbrum.littleletters": {
+          "category": "Kids",
+          "tags": [
+            "education",
+            "kids"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
