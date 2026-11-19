@@ -435889,7 +435889,7 @@
           "io.github.bselleslagh.gh-actions"
         ],
         "commit": "16f900c478bf743f278183f808ace5c8037b2804",
-        "checkedAt": "2026-11-19T11:22:54.833Z",
+        "checkedAt": "2026-11-19T14:03:30.838Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -435902,11 +435902,7 @@
             "bar",
             "quickshell"
           ],
-          "manifestPath": "manifest.json",
-          "installation": {
-            "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
-          }
+          "manifestPath": "manifest.json"
         }
       }
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T13:56:18.830Z",
+  "generatedAt": "2026-11-19T14:03:30.838Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -374147,14 +374147,14 @@
       "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
       "verificationCommit": "16f900c478bf743f278183f808ace5c8037b2804",
-      "verificationCheckedAt": "2026-11-19T11:22:54.833Z",
+      "verificationCheckedAt": "2026-11-19T14:03:30.838Z",
       "manifestPath": "manifest.json",
       "addedAt": "2026-11-19",
       "listedAt": "2026-11-19T11:22:54.994Z",
       "repositoryLayout": "root-plugin",
-      "installAvailable": false,
-      "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/bselleslagh/omarchy-gh-actions.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
       "category": "Developer Tools",
       "tags": [
         "bar",
@@ -374185,7 +374185,7 @@
       "upstreamValidatedAt": "2026-11-19T11:22:55.774Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "7d1296b9b726d6bf3270bbe9f118e513c49780ef63667fd9cbe669aceeffe7f5",
-      "status": "Manual setup"
+      "status": "Available"
     },
     {
       "id": "io.github.alexdont.chameleon",
