@@ -437458,6 +437458,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hiutaky/omarchy-synology-chat",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T15:53:24.016Z",
+      "listingValidatedCommit": "ba13a5e8bc506638fd8b97c4d258920b43cb2ca0",
+      "listingValidatedAt": "2026-11-19T15:53:24.016Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hiutaky/omarchy-synology-chat",
+        "pluginIds": [
+          "hiutaky.synology-chat"
+        ],
+        "commit": "ba13a5e8bc506638fd8b97c4d258920b43cb2ca0",
+        "checkedAt": "2026-11-19T15:53:23.852Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "hiutaky.synology-chat": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
