@@ -436712,6 +436712,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/quacknode/omarchy-g14",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T12:49:31.960Z",
+      "listingValidatedCommit": "cf6058fe64e4cb119e42a8486348f1bc260b17e1",
+      "listingValidatedAt": "2026-11-19T12:49:31.960Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "quacknode/omarchy-g14",
+        "pluginIds": [
+          "io.github.quacknode.g14"
+        ],
+        "commit": "cf6058fe64e4cb119e42a8486348f1bc260b17e1",
+        "checkedAt": "2026-11-19T12:49:31.781Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.quacknode.g14": {
+          "category": "System",
+          "tags": [
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
