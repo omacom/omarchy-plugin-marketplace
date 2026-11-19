@@ -434989,6 +434989,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/calmasacow/omarchy-agent-one",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:34:49.550Z",
+      "listingValidatedCommit": "dfcb6dbc981ee3e1db88a7df68b907b2e85f35ef",
+      "listingValidatedAt": "2026-11-19T09:34:49.550Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "calmasacow/omarchy-agent-one",
+        "pluginIds": [
+          "calmasacow.agent-one"
+        ],
+        "commit": "dfcb6dbc981ee3e1db88a7df68b907b2e85f35ef",
+        "checkedAt": "2026-11-19T09:34:49.424Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "calmasacow.agent-one": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
