@@ -435754,6 +435754,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dincercelik/omarchy-tv-atlas",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T11:13:01.825Z",
+      "listingValidatedCommit": "2269b9aae9159447f5862b0db2de79e1df933c7d",
+      "listingValidatedAt": "2026-11-19T11:13:01.825Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dincercelik/omarchy-tv-atlas",
+        "pluginIds": [
+          "dincercelik.tv-atlas"
+        ],
+        "commit": "2269b9aae9159447f5862b0db2de79e1df933c7d",
+        "checkedAt": "2026-11-19T11:13:01.626Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dincercelik/omarchy-tv-atlas",
+        "pluginIds": [
+          "dincercelik.tv-atlas"
+        ],
+        "commit": "2269b9aae9159447f5862b0db2de79e1df933c7d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T11:13:01.626Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T10:03:54.594Z",
+        "requestEventId": 36640174366,
+        "requestedAt": "2026-11-19T10:58:06Z",
+        "reviewedAt": "2026-11-19T11:13:01.626Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dincercelik.tv-atlas": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
