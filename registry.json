@@ -435123,6 +435123,42 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/gurvindersingh-web/omalation",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:47:45.557Z",
+      "listingValidatedCommit": "953798a5773005d1974cb83392e8cb2a8bdbb34f",
+      "listingValidatedAt": "2026-11-19T09:47:45.557Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gurvindersingh-web/omalation",
+        "pluginIds": [
+          "gurvindersingh-web.omalation"
+        ],
+        "commit": "953798a5773005d1974cb83392e8cb2a8bdbb34f",
+        "checkedAt": "2026-11-19T09:47:45.413Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gurvindersingh-web.omalation": {
+          "category": "Productivity",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
