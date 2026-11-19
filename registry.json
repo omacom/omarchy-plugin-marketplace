@@ -435627,6 +435627,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alshareedah22/omavolume",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T10:57:22.431Z",
+      "listingValidatedCommit": "008b7699a53b76d9e749724942fa51662d8d11fb",
+      "listingValidatedAt": "2026-11-19T10:57:22.431Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alshareedah22/omavolume",
+        "pluginIds": [
+          "blackcode.omavolume"
+        ],
+        "commit": "008b7699a53b76d9e749724942fa51662d8d11fb",
+        "checkedAt": "2026-11-19T10:57:22.219Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alshareedah22/omavolume",
+        "pluginIds": [
+          "blackcode.omavolume"
+        ],
+        "commit": "008b7699a53b76d9e749724942fa51662d8d11fb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-19T10:57:22.219Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T09:47:50.145Z",
+        "requestEventId": 36639342508,
+        "requestedAt": "2026-11-19T10:48:58Z",
+        "reviewedAt": "2026-11-19T10:57:22.219Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "blackcode.omavolume": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
