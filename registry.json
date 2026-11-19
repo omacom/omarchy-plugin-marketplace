@@ -434866,6 +434866,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/robotkilla/LCARS-Launcher",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T09:12:00.024Z",
+      "listingValidatedCommit": "a7fa5c24cfb1c70593da14f7f1b86821e81948f6",
+      "listingValidatedAt": "2026-11-19T09:12:00.024Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "robotkilla/lcars-launcher",
+        "pluginIds": [
+          "robotkilla.lcars-launcher"
+        ],
+        "commit": "a7fa5c24cfb1c70593da14f7f1b86821e81948f6",
+        "checkedAt": "2026-11-19T09:11:59.899Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "robotkilla.lcars-launcher": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
