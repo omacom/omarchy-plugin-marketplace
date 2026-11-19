@@ -435332,6 +435332,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chrisstroud/jobhunt-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T10:14:47.587Z",
+      "listingValidatedCommit": "b1f5ad44cdcdb4ea33d3bfae5c39e6df835250f1",
+      "listingValidatedAt": "2026-11-19T10:14:47.587Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chrisstroud/jobhunt-omarchy",
+        "pluginIds": [
+          "jobhunt.app"
+        ],
+        "commit": "b1f5ad44cdcdb4ea33d3bfae5c39e6df835250f1",
+        "checkedAt": "2026-11-19T10:14:47.391Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jobhunt.app": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
