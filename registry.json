@@ -436645,6 +436645,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/quebecstudio-mods/omarchy-qexpose",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T12:39:56.414Z",
+      "listingValidatedCommit": "a19c051b0de88317075805b228e616559d0c2223",
+      "listingValidatedAt": "2026-11-19T12:39:56.414Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "quebecstudio-mods/omarchy-qexpose",
+        "pluginIds": [
+          "quebecstudio.qexpose"
+        ],
+        "commit": "a19c051b0de88317075805b228e616559d0c2223",
+        "checkedAt": "2026-11-19T12:39:56.250Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "quebecstudio.qexpose": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
