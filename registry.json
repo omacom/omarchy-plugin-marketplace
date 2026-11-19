@@ -435721,6 +435721,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ahiggins1039/omarchy-youtrack",
+      "type": "plugin-source",
+      "addedAt": "2026-11-19",
+      "listedAt": "2026-11-19T11:07:39.088Z",
+      "listingValidatedCommit": "336b0e16881319a0215347e72c5f16d54f2d6de2",
+      "listingValidatedAt": "2026-11-19T11:07:39.088Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ahiggins1039/omarchy-youtrack",
+        "pluginIds": [
+          "ahiggins1039.youtrack"
+        ],
+        "commit": "336b0e16881319a0215347e72c5f16d54f2d6de2",
+        "checkedAt": "2026-11-19T11:07:38.882Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "ahiggins1039.youtrack": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
