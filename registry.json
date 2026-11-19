@@ -376965,8 +376965,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-20",
       "listedAt": "2026-10-20T16:37:28.082Z",
-      "listingValidatedCommit": "e4a35e122e2d42891eb794b719d988eb1a94d36c",
-      "listingValidatedAt": "2026-10-20T16:37:28.082Z",
+      "listingValidatedCommit": "34b717c7a4bd651d9b2c90791b9362b3250bbafe",
+      "listingValidatedAt": "2026-11-19T21:33:42.604Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -376975,8 +376975,8 @@
         "pluginIds": [
           "device-battery-levels"
         ],
-        "commit": "e4a35e122e2d42891eb794b719d988eb1a94d36c",
-        "checkedAt": "2026-10-20T16:37:27.958Z",
+        "commit": "34b717c7a4bd651d9b2c90791b9362b3250bbafe",
+        "checkedAt": "2026-11-19T21:33:42.604Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -376992,7 +376992,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "e4a35e122e2d42891eb794b719d988eb1a94d36c",
+          "validatedAt": "2026-10-20T16:37:28.082Z",
+          "branch": "main",
+          "supersededAt": "2026-11-19T21:33:42.604Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "z1z0r/device-battery-levels",
+            "pluginIds": [
+              "device-battery-levels"
+            ],
+            "commit": "e4a35e122e2d42891eb794b719d988eb1a94d36c",
+            "checkedAt": "2026-10-20T16:37:27.958Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/L0adn9/omaface-widget",
