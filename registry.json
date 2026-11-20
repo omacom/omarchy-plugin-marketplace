@@ -438234,6 +438234,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/yaroshevych/omarchy-bypass",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T01:50:56.927Z",
+      "listingValidatedCommit": "1e9edb9ce2fbdd24c6ce25fdef51f7da1bac1505",
+      "listingValidatedAt": "2026-11-20T01:50:56.927Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yaroshevych/omarchy-bypass",
+        "pluginIds": [
+          "bypass.widget"
+        ],
+        "commit": "1e9edb9ce2fbdd24c6ce25fdef51f7da1bac1505",
+        "checkedAt": "2026-11-20T01:50:56.725Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yaroshevych/omarchy-bypass",
+        "pluginIds": [
+          "bypass.widget"
+        ],
+        "commit": "1e9edb9ce2fbdd24c6ce25fdef51f7da1bac1505",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T01:50:56.725Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T22:12:37.156Z",
+        "requestEventId": 36722318152,
+        "requestedAt": "2026-11-20T01:50:27Z",
+        "reviewedAt": "2026-11-20T01:50:56.725Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bypass.widget": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
