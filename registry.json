@@ -439634,6 +439634,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/pkouts/omarchy-radio-garden",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T16:50:20.448Z",
+      "listingValidatedCommit": "3d0c1a3a578c6db216012b8abd1fac49ef2c9532",
+      "listingValidatedAt": "2026-11-20T16:50:20.448Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pkouts/omarchy-radio-garden",
+        "pluginIds": [
+          "pkouts.radio-garden"
+        ],
+        "commit": "3d0c1a3a578c6db216012b8abd1fac49ef2c9532",
+        "checkedAt": "2026-11-20T16:50:20.256Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "pkouts.radio-garden": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
