@@ -438486,6 +438486,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/zzhang1979/omarchy-window-dots",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T02:19:48.935Z",
+      "listingValidatedCommit": "ba50725a48932162a61fbfe3f4a2ac6ba992b156",
+      "listingValidatedAt": "2026-11-20T02:19:48.935Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zzhang1979/omarchy-window-dots",
+        "pluginIds": [
+          "anthony.window-dots"
+        ],
+        "commit": "ba50725a48932162a61fbfe3f4a2ac6ba992b156",
+        "checkedAt": "2026-11-20T02:19:48.771Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anthony.window-dots": {
+          "category": "System",
+          "tags": [
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
