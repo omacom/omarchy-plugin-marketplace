@@ -440126,6 +440126,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/megga-ernesto/omaupdate",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T22:59:58.631Z",
+      "listingValidatedCommit": "cff78f7a4e6cded7b025be49d50592b53ec58efc",
+      "listingValidatedAt": "2026-11-20T22:59:58.631Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "megga-ernesto/omaupdate",
+        "pluginIds": [
+          "elmegga.omaupdate"
+        ],
+        "commit": "cff78f7a4e6cded7b025be49d50592b53ec58efc",
+        "checkedAt": "2026-11-20T22:59:58.434Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "megga-ernesto/omaupdate",
+        "pluginIds": [
+          "elmegga.omaupdate"
+        ],
+        "commit": "cff78f7a4e6cded7b025be49d50592b53ec58efc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T22:59:58.434Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T22:07:14.354Z",
+        "requestEventId": 36820387343,
+        "requestedAt": "2026-11-20T22:55:40Z",
+        "reviewedAt": "2026-11-20T22:59:58.434Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "elmegga.omaupdate": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
