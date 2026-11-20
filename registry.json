@@ -439170,6 +439170,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rodrigoboni/omarchy-daily-wallpaper",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T14:48:02.086Z",
+      "listingValidatedCommit": "094127a8469565a101e33b5f3389aab311202ebe",
+      "listingValidatedAt": "2026-11-20T14:48:02.086Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rodrigoboni/omarchy-daily-wallpaper",
+        "pluginIds": [
+          "rodrigoboni.daily-wallpaper"
+        ],
+        "commit": "094127a8469565a101e33b5f3389aab311202ebe",
+        "checkedAt": "2026-11-20T14:48:01.878Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "rodrigoboni.daily-wallpaper": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
