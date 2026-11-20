@@ -439667,6 +439667,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/douglas/omarchy-ekvm",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T17:05:39.550Z",
+      "listingValidatedCommit": "19bad91087ae63f13e8904d96f09d1d10dd7d003",
+      "listingValidatedAt": "2026-11-20T17:05:39.550Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "douglas/omarchy-ekvm",
+        "pluginIds": [
+          "io.github.douglas.omarchy-ekvm"
+        ],
+        "commit": "19bad91087ae63f13e8904d96f09d1d10dd7d003",
+        "checkedAt": "2026-11-20T17:05:39.391Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.douglas.omarchy-ekvm": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
