@@ -437759,6 +437759,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/douglas/netdeck",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T00:30:25.371Z",
+      "listingValidatedCommit": "8edf5fc1bd046e349ba51dd9126f1006932c7ba4",
+      "listingValidatedAt": "2026-11-20T00:30:25.371Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "douglas/netdeck",
+        "pluginIds": [
+          "io.github.douglas.netdeck"
+        ],
+        "commit": "8edf5fc1bd046e349ba51dd9126f1006932c7ba4",
+        "checkedAt": "2026-11-20T00:30:25.185Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.douglas.netdeck": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
