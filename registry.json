@@ -440067,6 +440067,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/AventurineDream/Ohm-My-Usage-archy-Pi",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T22:46:55.904Z",
+      "listingValidatedCommit": "1e2751cd271266a6bc8f882ca70b95074a574694",
+      "listingValidatedAt": "2026-11-20T22:46:55.904Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aventurinedream/ohm-my-usage-archy-pi",
+        "pluginIds": [
+          "aven.omp-usage"
+        ],
+        "commit": "1e2751cd271266a6bc8f882ca70b95074a574694",
+        "checkedAt": "2026-11-20T22:46:55.738Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aven.omp-usage": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
