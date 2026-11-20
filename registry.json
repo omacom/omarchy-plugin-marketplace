@@ -439795,6 +439795,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/sorydi3/kindle-send",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T17:49:28.792Z",
+      "listingValidatedCommit": "613279a24336a201915cf09e194e59e957e8c5ea",
+      "listingValidatedAt": "2026-11-20T17:49:28.792Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sorydi3/kindle-send",
+        "pluginIds": [
+          "sorydi3.kindle-send"
+        ],
+        "commit": "613279a24336a201915cf09e194e59e957e8c5ea",
+        "checkedAt": "2026-11-20T17:49:28.597Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sorydi3/kindle-send",
+        "pluginIds": [
+          "sorydi3.kindle-send"
+        ],
+        "commit": "613279a24336a201915cf09e194e59e957e8c5ea",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T17:49:28.597Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T17:28:17.657Z",
+        "requestEventId": 36796848799,
+        "requestedAt": "2026-11-20T17:48:49Z",
+        "reviewedAt": "2026-11-20T17:49:28.598Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sorydi3.kindle-send": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
