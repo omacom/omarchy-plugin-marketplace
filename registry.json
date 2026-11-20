@@ -260932,8 +260932,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-25",
       "listedAt": "2026-09-25T17:23:08.969Z",
-      "listingValidatedCommit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
-      "listingValidatedAt": "2026-09-25T17:23:08.969Z",
+      "listingValidatedCommit": "3cff67175d62830dbd97b3384fecd7c68626dee0",
+      "listingValidatedAt": "2026-11-20T18:19:55.273Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -260942,8 +260942,8 @@
         "pluginIds": [
           "andersdosen.nrkreviews"
         ],
-        "commit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
-        "checkedAt": "2026-09-25T17:23:08.868Z",
+        "commit": "3cff67175d62830dbd97b3384fecd7c68626dee0",
+        "checkedAt": "2026-11-20T18:19:55.273Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -260958,7 +260958,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
+          "validatedAt": "2026-09-25T17:23:08.969Z",
+          "branch": "master",
+          "supersededAt": "2026-11-20T18:19:55.273Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "andersdosen/omarchy-nrkreviews",
+            "pluginIds": [
+              "andersdosen.nrkreviews"
+            ],
+            "commit": "942f38b8fde726be62f2f822f49dee8c199deb4c",
+            "checkedAt": "2026-09-25T17:23:08.868Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/chyld/omarchy-vault-sync",
