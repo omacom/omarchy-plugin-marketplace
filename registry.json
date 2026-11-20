@@ -438621,6 +438621,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/tsmithscott/omarchy-wireguard",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T02:57:46.986Z",
+      "listingValidatedCommit": "f9874e4630f5c7f9c4883c8e081d7f8ab25aea90",
+      "listingValidatedAt": "2026-11-20T02:57:46.986Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tsmithscott/omarchy-wireguard",
+        "pluginIds": [
+          "tsmithscott.wireguard"
+        ],
+        "commit": "f9874e4630f5c7f9c4883c8e081d7f8ab25aea90",
+        "checkedAt": "2026-11-20T02:57:46.781Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tsmithscott/omarchy-wireguard",
+        "pluginIds": [
+          "tsmithscott.wireguard"
+        ],
+        "commit": "f9874e4630f5c7f9c4883c8e081d7f8ab25aea90",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T02:57:46.781Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "sudoers-modification",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T02:22:42.694Z",
+        "requestEventId": 36726373023,
+        "requestedAt": "2026-11-20T02:57:00Z",
+        "reviewedAt": "2026-11-20T02:57:46.781Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tsmithscott.wireguard": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
