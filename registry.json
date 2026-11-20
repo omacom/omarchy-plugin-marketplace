@@ -439104,6 +439104,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danielmrdev/omarchy-simplenote",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T14:03:39.231Z",
+      "listingValidatedCommit": "f4f5036da88748d20cd38fe33ad208180d214794",
+      "listingValidatedAt": "2026-11-20T14:03:39.231Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danielmrdev/omarchy-simplenote",
+        "pluginIds": [
+          "danielmrdev.simplenote"
+        ],
+        "commit": "f4f5036da88748d20cd38fe33ad208180d214794",
+        "checkedAt": "2026-11-20T14:03:39.067Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "danielmrdev.simplenote": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [

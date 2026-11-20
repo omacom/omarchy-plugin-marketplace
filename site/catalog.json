@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T13:55:10.912Z",
+  "generatedAt": "2026-11-20T14:03:40.031Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -377699,6 +377699,55 @@
       "upstreamValidatedAt": "2026-11-20T13:55:10.912Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "939a19d6f3ec1e9b3b29843ea6a9482388581ce08f16da33ea3a18c16e53d74e",
+      "status": "Available"
+    },
+    {
+      "id": "danielmrdev.simplenote",
+      "name": "Simple Note",
+      "description": "One local plain-text note",
+      "author": "Daniel",
+      "version": "0.1.0",
+      "repo": "https://github.com/danielmrdev/omarchy-simplenote",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "f4f5036da88748d20cd38fe33ad208180d214794",
+      "verificationCheckedAt": "2026-11-20T14:03:39.067Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T14:03:39.231Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/danielmrdev/omarchy-simplenote.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Productivity",
+      "tags": [
+        "bar",
+        "quickshell"
+      ],
+      "license": "See repository",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-11-20T13:44:47Z",
+      "repositoryRelease": {
+        "tag": "v0.1.0",
+        "url": "https://github.com/danielmrdev/omarchy-simplenote/tree/v0.1.0"
+      },
+      "accent": "cyan",
+      "initials": "SN",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "f4f5036da88748d20cd38fe33ad208180d214794",
+      "listingValidatedAt": "2026-11-20T14:03:39.231Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "f4f5036da88748d20cd38fe33ad208180d214794",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-20T14:03:40.031Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "f4f5036da88748d20cd38fe33ad208180d214794",
+      "upstreamValidatedAt": "2026-11-20T14:03:40.031Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "9b8ead58c9e3e933dfd362b8e0c7c3f886cf0731bd27650ab1629285d1e9cb47",
       "status": "Available"
     },
     {
