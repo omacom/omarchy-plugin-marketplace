@@ -604,6 +604,17 @@ test("an unparseable push leaves the detection window alone", () => {
   }, Date.parse("2026-11-06T00:00:00Z")), false);
 });
 
+test("built-in, placeholder, and version-less plugins stay unbadged", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  const fresh = {
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-11-05T11:00:00Z",
+  };
+  assert.equal(isRecentlyUpdated({ ...fresh, builtIn: true }, now), false);
+  assert.equal(isRecentlyUpdated({ ...fresh, placeholder: true }, now), false);
+  assert.equal(isRecentlyUpdated({ repositoryUpdatedAt: "2026-11-05T11:30:00Z" }, now), false);
+});
+
 test("updated listings and their order use the real update time", () => {
   const now = Date.parse("2026-11-05T12:00:00Z");
   const plugin = (id, versionUpdatedAt, repositoryUpdatedAt) => ({
