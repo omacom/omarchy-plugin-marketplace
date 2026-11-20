@@ -430137,8 +430137,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-14",
       "listedAt": "2026-11-14T12:30:51.259Z",
-      "listingValidatedCommit": "575d52640a02caca10cb6ede99b322b215ae0669",
-      "listingValidatedAt": "2026-11-19T23:49:59.798Z",
+      "listingValidatedCommit": "976bde88b42ec95adf47ec61c489d9ae22e48a9d",
+      "listingValidatedAt": "2026-11-20T16:24:56.914Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -430147,8 +430147,8 @@
         "pluginIds": [
           "peter.hangar-store"
         ],
-        "commit": "575d52640a02caca10cb6ede99b322b215ae0669",
-        "checkedAt": "2026-11-19T23:49:59.798Z",
+        "commit": "976bde88b42ec95adf47ec61c489d9ae22e48a9d",
+        "checkedAt": "2026-11-20T16:24:56.914Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -430178,6 +430178,26 @@
             ],
             "commit": "98e1aa9f0bb546f8d36d1f0e3fb1a33d098137cb",
             "checkedAt": "2026-11-14T12:30:51.097Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        },
+        {
+          "commit": "575d52640a02caca10cb6ede99b322b215ae0669",
+          "validatedAt": "2026-11-19T23:49:59.798Z",
+          "branch": "main",
+          "supersededAt": "2026-11-20T16:24:56.914Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "petervinter/omarchy-hangar-store",
+            "pluginIds": [
+              "peter.hangar-store"
+            ],
+            "commit": "575d52640a02caca10cb6ede99b322b215ae0669",
+            "checkedAt": "2026-11-19T23:49:59.798Z",
             "outcome": "passed",
             "enforcementMode": "selective",
             "findings": [],
