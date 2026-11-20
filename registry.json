@@ -356562,8 +356562,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-13",
       "listedAt": "2026-10-13T17:55:48.169Z",
-      "listingValidatedCommit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
-      "listingValidatedAt": "2026-10-13T17:55:48.169Z",
+      "listingValidatedCommit": "8fb2df0239e1d28be871b864ed6636dae8325cf1",
+      "listingValidatedAt": "2026-11-20T23:15:30.189Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -356572,35 +356572,14 @@
         "pluginIds": [
           "bakugo.cliamp"
         ],
-        "commit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
-        "checkedAt": "2026-10-13T17:55:48.023Z",
+        "commit": "8fb2df0239e1d28be871b864ed6636dae8325cf1",
+        "checkedAt": "2026-11-20T23:15:30.189Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "callmebakugo/omarchy-cliamp",
-        "pluginIds": [
-          "bakugo.cliamp"
-        ],
-        "commit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-13T17:55:48.023Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-10-13T10:48:36.884Z",
-        "requestEventId": 33158440732,
-        "requestedAt": "2026-10-13T17:55:08Z",
-        "reviewedAt": "2026-10-13T17:55:48.024Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "bakugo.cliamp": {
@@ -356612,7 +356591,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "callmebakugo/omarchy-cliamp",
+        "pluginIds": [
+          "bakugo.cliamp"
+        ],
+        "commit": "8fb2df0239e1d28be871b864ed6636dae8325cf1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T23:15:30.189Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-18T10:59:32.908Z",
+        "requestEventId": 36821486773,
+        "requestedAt": "2026-11-20T23:13:17Z",
+        "reviewedAt": "2026-11-20T23:15:30.189Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
+          "validatedAt": "2026-10-13T17:55:48.169Z",
+          "branch": "master",
+          "supersededAt": "2026-11-20T23:15:30.189Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "callmebakugo/omarchy-cliamp",
+            "pluginIds": [
+              "bakugo.cliamp"
+            ],
+            "commit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
+            "checkedAt": "2026-10-13T17:55:48.023Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "callmebakugo/omarchy-cliamp",
+            "pluginIds": [
+              "bakugo.cliamp"
+            ],
+            "commit": "da6a78eb53b1c2cdb809019dd39d50a0495960b3",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-13T17:55:48.023Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-13T10:48:36.884Z",
+            "requestEventId": 33158440732,
+            "requestedAt": "2026-10-13T17:55:08Z",
+            "reviewedAt": "2026-10-13T17:55:48.024Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/blazejkapala/omarchy-bananilio",
