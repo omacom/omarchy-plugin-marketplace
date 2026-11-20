@@ -439734,6 +439734,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sliday/vizamp",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T17:40:02.199Z",
+      "listingValidatedCommit": "0c19cc8eb0dcdfe33fc97af3602129cec833bfa1",
+      "listingValidatedAt": "2026-11-20T17:40:02.199Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sliday/vizamp",
+        "pluginIds": [
+          "sliday.vizamp"
+        ],
+        "commit": "0c19cc8eb0dcdfe33fc97af3602129cec833bfa1",
+        "checkedAt": "2026-11-20T17:40:01.999Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sliday/vizamp",
+        "pluginIds": [
+          "sliday.vizamp"
+        ],
+        "commit": "0c19cc8eb0dcdfe33fc97af3602129cec833bfa1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T17:40:01.999Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T17:34:39.815Z",
+        "requestEventId": 36796063921,
+        "requestedAt": "2026-11-20T17:39:26Z",
+        "reviewedAt": "2026-11-20T17:40:01.999Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sliday.vizamp": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
