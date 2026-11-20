@@ -568,6 +568,18 @@ test("version update time is the earlier of detection and last push", () => {
   assert.ok(Number.isNaN(versionUpdateTime({ repositoryUpdatedAt: "2026-11-05T05:00:00Z" })));
 });
 
+test("a push older than the window clears the updated badge", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-10-05T00:00:00Z",
+  }, now), false);
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-11-05T11:00:00Z",
+  }, now), true);
+});
+
 test("updated listings and their order use the real update time", () => {
   const now = Date.parse("2026-11-05T12:00:00Z");
   const plugin = (id, versionUpdatedAt, repositoryUpdatedAt) => ({
