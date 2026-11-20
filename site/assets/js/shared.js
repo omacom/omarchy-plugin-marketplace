@@ -378,7 +378,9 @@ export function isRecentlyAdded(plugin, now = Date.now(), windowHours = 12) {
 
 export function isRecentlyUpdated(plugin, now = Date.now(), windowHours = 12) {
   if (!plugin?.versionUpdatedAt || plugin?.builtIn || plugin?.placeholder) return false;
-  const updatedAt = Date.parse(plugin.versionUpdatedAt);
+  // Same clock as the updated feed: a late detection of an old push is not a
+  // fresh update, and a later unrelated push does not stretch the window.
+  const updatedAt = versionUpdateTime(plugin);
   if (!Number.isFinite(updatedAt)) return false;
   const age = now - updatedAt;
   return age >= 0 && age < windowHours * 60 * 60 * 1000;
