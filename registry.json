@@ -438714,6 +438714,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jasoncromwell/omarchy-headset-battery",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T03:50:07.136Z",
+      "listingValidatedCommit": "82bb244f7d85580912866acba4f449e17206159a",
+      "listingValidatedAt": "2026-11-20T03:50:07.136Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jasoncromwell/omarchy-headset-battery",
+        "pluginIds": [
+          "io.github.jasoncromwell.headset-battery"
+        ],
+        "commit": "82bb244f7d85580912866acba4f449e17206159a",
+        "checkedAt": "2026-11-20T03:50:06.993Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jasoncromwell.headset-battery": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
