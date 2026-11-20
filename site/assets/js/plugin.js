@@ -21,7 +21,7 @@ import {
   showToast,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261105-05";
+} from "./shared.js?v=20261116-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
@@ -29,8 +29,8 @@ import {
   recordPluginCopy,
   recordPluginHeart,
   recordPluginView,
-} from "./engagement.js?v=20261105-05";
-import { repositoryPublisher } from "./search.js?v=20261105-05";
+} from "./engagement.js?v=20261116-01";
+import { repositoryPublisher } from "./search.js?v=20261116-01";
 
 function safeGitHubWebUrl(value) {
   try {
@@ -164,6 +164,9 @@ export function detailTemplate(plugin, engagement, {
   const preview = plugin.previewImage
     ? `<button class="detail-preview" type="button" data-preview-open data-full-src="${escapeHtml(plugin.previewImage)}" aria-label="${escapeHtml(`Open ${plugin.name} preview`)}"><img src="${escapeHtml(plugin.previewImage)}" alt="${escapeHtml(plugin.name)} desktop preview" width="${Number(plugin.previewWidth) || 1600}" height="${Number(plugin.previewHeight) || 900}"></button>`
     : "";
+  const titleIcon = plugin.iconImage
+    ? `<span class="detail-icon detail-icon-art"><img src="${escapeHtml(plugin.iconImage)}" alt="" width="${Number(plugin.iconWidth) || 128}" height="${Number(plugin.iconHeight) || 128}" loading="lazy" decoding="async"></span>`
+    : `<span class="detail-icon">${escapeHtml(plugin.initials)}</span>`;
   const installAvailable = marketplaceInstallAvailable(plugin);
   const pluginStatus = displayedStatus(plugin);
   const command = plugin.builtIn
@@ -306,7 +309,7 @@ export function detailTemplate(plugin, engagement, {
   return `
     <article class="plugin-detail-article" style="--card-accent:${accentColor(plugin.accent)}">
       <header class="page-header" id="overview"><div class="page-eyebrow">${escapeHtml(plugin.category)}</div>
-        <div class="detail-title"><span class="detail-icon">${escapeHtml(plugin.initials)}</span><h1>${escapeHtml(plugin.name)}</h1></div>
+        <div class="detail-title">${titleIcon}<h1>${escapeHtml(plugin.name)}</h1></div>
         <div class="page-meta"><span>${escapeHtml(plugin.id)}</span>${manifestVersion}<span>by ${authorLink(plugin)}</span><span class="detail-status-meta"><span class="status ${statusTone(plugin)}"><i class="status-dot" aria-hidden="true"></i>${escapeHtml(pluginStatus)}</span>${verificationBadge}</span></div>
         ${engagementEnabled ? `<div class="detail-engagement-cluster">
           ${engagementSummary(plugin, engagement, { detail: true, pending: pendingEngagement })}

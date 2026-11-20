@@ -14,6 +14,7 @@ import {
 import {
   applyRepositoryMigrationPlan,
   assertMigrationOutputBoundary,
+  catalogPreviewPaths,
 } from "../scripts/migrate-repositories.mjs";
 import { githubRepositoryKey } from "../scripts/github-repository.mjs";
 import { promotePluginUpdateSource } from "../scripts/plugin-update.mjs";
@@ -1049,6 +1050,31 @@ test("targeted migration refreshes only exact sources and preserves unrelated st
     assert.equal(urls.filter((url) => url.includes("/git/trees/")).length, 1);
     assert.equal(urls.some((url) => url.includes("Other/repository")), false);
   });
+});
+
+test("migration preview identity includes listing icons", () => {
+  const catalog = {
+    plugins: [{
+      id: pluginId,
+      previewImage: "assets/img/plugins/example-detail.webp",
+      previewThumbnail: "assets/img/plugins/example-card.webp",
+      iconImage: "assets/img/plugins/example-icon.webp",
+    }, {
+      id: "example.unrelated",
+      previewImage: "assets/img/plugins/unrelated-detail.webp",
+    }],
+  };
+  assert.deepEqual([...catalogPreviewPaths(catalog, [pluginId, "example.unrelated"])].sort(), [
+    "example-card.webp",
+    "example-detail.webp",
+    "example-icon.webp",
+    "unrelated-detail.webp",
+  ]);
+  assert.deepEqual([...catalogPreviewPaths(catalog, [pluginId])].sort(), [
+    "example-card.webp",
+    "example-detail.webp",
+    "example-icon.webp",
+  ]);
 });
 
 test("targeted migration failures leave catalog and previews unchanged", async () => {

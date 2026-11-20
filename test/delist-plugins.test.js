@@ -39,6 +39,7 @@ function plugin(id, repo, previewStem = id.replaceAll(".", "-")) {
     sourceType: "community",
     previewImage: `assets/img/plugins/${previewStem}-detail.webp`,
     previewThumbnail: `assets/img/plugins/${previewStem}-card.webp`,
+    iconImage: `assets/img/plugins/${previewStem}-icon.webp`,
   };
 }
 
@@ -111,6 +112,7 @@ test("a delisting plan retires one complete source without unrelated drift", () 
     removedPreviewPaths: [
       "assets/img/plugins/example-target-card.webp",
       "assets/img/plugins/example-target-detail.webp",
+      "assets/img/plugins/example-target-icon.webp",
     ],
     commitSubject: "Delist example.target",
   });
@@ -206,6 +208,7 @@ test("the delisting writer removes only the planned preview files", async () => 
     for (const entry of value.catalog.plugins) {
       await writeFile(path.join(directory, "site", entry.previewImage), `${entry.id} detail\n`);
       await writeFile(path.join(directory, "site", entry.previewThumbnail), `${entry.id} card\n`);
+      await writeFile(path.join(directory, "site", entry.iconImage), `${entry.id} icon\n`);
     }
 
     const report = await applyPluginDelisting({
@@ -224,8 +227,10 @@ test("the delisting writer removes only the planned preview files", async () => 
     assert.equal(nextCatalog.plugins.some(({ id }) => id === "example.target"), false);
     assert.equal(existsSync(path.join(previewDirectory, "example-target-card.webp")), false);
     assert.equal(existsSync(path.join(previewDirectory, "example-target-detail.webp")), false);
+    assert.equal(existsSync(path.join(previewDirectory, "example-target-icon.webp")), false);
     assert.equal(existsSync(path.join(previewDirectory, "example-retained-card.webp")), true);
     assert.equal(existsSync(path.join(previewDirectory, "example-retained-detail.webp")), true);
+    assert.equal(existsSync(path.join(previewDirectory, "example-retained-icon.webp")), true);
   } finally {
     await rm(directory, { recursive: true, force: true });
   }
@@ -284,6 +289,7 @@ test("the delisting CLI binds environment input to its report", async () => {
     for (const entry of value.catalog.plugins) {
       await writeFile(path.join(directory, "site", entry.previewImage), "detail\n");
       await writeFile(path.join(directory, "site", entry.previewThumbnail), "card\n");
+      await writeFile(path.join(directory, "site", entry.iconImage), "icon\n");
     }
     execFileSync(process.execPath, [
       new URL("../scripts/delist-plugins.mjs", import.meta.url).pathname,
