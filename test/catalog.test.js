@@ -592,6 +592,18 @@ test("a later push does not stretch the updated badge", () => {
   }, Date.parse("2026-11-05T23:00:00Z")), false);
 });
 
+test("an unparseable push leaves the detection window alone", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "not-a-date",
+  }, now), true);
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "not-a-date",
+  }, Date.parse("2026-11-06T00:00:00Z")), false);
+});
+
 test("updated listings and their order use the real update time", () => {
   const now = Date.parse("2026-11-05T12:00:00Z");
   const plugin = (id, versionUpdatedAt, repositoryUpdatedAt) => ({
