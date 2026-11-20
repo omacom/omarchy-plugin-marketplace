@@ -438884,6 +438884,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/megga-ernesto/omavitals-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T09:00:40.345Z",
+      "listingValidatedCommit": "d73d169912aee04800b00920bfe5c3461335bb83",
+      "listingValidatedAt": "2026-11-20T09:00:40.345Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "megga-ernesto/omavitals-monitor",
+        "pluginIds": [
+          "elmegga.omavitals-monitor"
+        ],
+        "commit": "d73d169912aee04800b00920bfe5c3461335bb83",
+        "checkedAt": "2026-11-20T09:00:40.167Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "elmegga.omavitals-monitor": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
