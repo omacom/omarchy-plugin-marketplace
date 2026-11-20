@@ -438042,6 +438042,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/GittyIO/omarchy-onedrive",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T01:19:01.644Z",
+      "listingValidatedCommit": "9199e94a6147485ea12521b6e7211bbb2fb20bcb",
+      "listingValidatedAt": "2026-11-20T01:19:01.644Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gittyio/omarchy-onedrive",
+        "pluginIds": [
+          "gittyio.onedrive"
+        ],
+        "commit": "9199e94a6147485ea12521b6e7211bbb2fb20bcb",
+        "checkedAt": "2026-11-20T01:19:01.486Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gittyio/omarchy-onedrive",
+        "pluginIds": [
+          "gittyio.onedrive"
+        ],
+        "commit": "9199e94a6147485ea12521b6e7211bbb2fb20bcb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T01:19:01.486Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T19:12:16.910Z",
+        "requestEventId": 36720057153,
+        "requestedAt": "2026-11-20T01:15:13Z",
+        "reviewedAt": "2026-11-20T01:19:01.486Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "gittyio.onedrive": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
