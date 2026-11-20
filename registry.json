@@ -438354,6 +438354,75 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/rogertobler/omarchy-ballroom",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T02:05:36.319Z",
+      "listingValidatedCommit": "322a030417e2c27dc86db071744bea2762e40812",
+      "listingValidatedAt": "2026-11-20T02:05:36.319Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rogertobler/omarchy-ballroom",
+        "pluginIds": [
+          "rogertobler.ballroom"
+        ],
+        "commit": "322a030417e2c27dc86db071744bea2762e40812",
+        "checkedAt": "2026-11-20T02:05:36.163Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rogertobler/omarchy-ballroom",
+        "pluginIds": [
+          "rogertobler.ballroom"
+        ],
+        "commit": "322a030417e2c27dc86db071744bea2762e40812",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T02:05:36.163Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T22:15:52.742Z",
+        "requestEventId": 36723199129,
+        "requestedAt": "2026-11-20T02:04:52Z",
+        "reviewedAt": "2026-11-20T02:05:36.163Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "rogertobler.ballroom": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
