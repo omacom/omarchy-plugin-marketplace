@@ -437955,6 +437955,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Greasydann/aria",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T01:08:07.618Z",
+      "listingValidatedCommit": "89c5c997c7b5a9bd1e3f78429c0812b97f5dd95e",
+      "listingValidatedAt": "2026-11-20T01:08:07.618Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "greasydann/aria",
+        "pluginIds": [
+          "aria"
+        ],
+        "commit": "89c5c997c7b5a9bd1e3f78429c0812b97f5dd95e",
+        "checkedAt": "2026-11-20T01:08:07.453Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "greasydann/aria",
+        "pluginIds": [
+          "aria"
+        ],
+        "commit": "89c5c997c7b5a9bd1e3f78429c0812b97f5dd95e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T01:08:07.453Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T17:47:51.687Z",
+        "requestEventId": 36719500586,
+        "requestedAt": "2026-11-20T01:07:33Z",
+        "reviewedAt": "2026-11-20T01:08:07.454Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "aria": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
