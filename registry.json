@@ -438135,6 +438135,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/batuhanmeral/omarchy-development-dashboard",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T01:36:55.097Z",
+      "listingValidatedCommit": "f77129063bb9293e97407cc8a8a8d8dd8d5ee71f",
+      "listingValidatedAt": "2026-11-20T01:36:55.097Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "batuhanmeral/omarchy-development-dashboard",
+        "pluginIds": [
+          "io.github.batuhanmeral.development-dashboard"
+        ],
+        "commit": "f77129063bb9293e97407cc8a8a8d8dd8d5ee71f",
+        "checkedAt": "2026-11-20T01:36:54.909Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.batuhanmeral.development-dashboard": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
