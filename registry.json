@@ -427238,8 +427238,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-13",
       "listedAt": "2026-11-13T22:26:04.889Z",
-      "listingValidatedCommit": "866286a0bf5afc5665d9f6af21100b74e2e797b8",
-      "listingValidatedAt": "2026-11-13T22:26:04.889Z",
+      "listingValidatedCommit": "68b4afdc696cc6e751549a6c9395e38d6ed7245b",
+      "listingValidatedAt": "2026-11-20T22:55:21.204Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -427248,8 +427248,8 @@
         "pluginIds": [
           "io.github.linar46.bar-double-click-toggle"
         ],
-        "commit": "866286a0bf5afc5665d9f6af21100b74e2e797b8",
-        "checkedAt": "2026-11-13T22:26:04.677Z",
+        "commit": "68b4afdc696cc6e751549a6c9395e38d6ed7245b",
+        "checkedAt": "2026-11-20T22:55:21.204Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -427264,7 +427264,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "866286a0bf5afc5665d9f6af21100b74e2e797b8",
+          "validatedAt": "2026-11-13T22:26:04.889Z",
+          "branch": "main",
+          "supersededAt": "2026-11-20T22:55:21.204Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "linar46/omarchy-bar-double-click-toggle",
+            "pluginIds": [
+              "io.github.linar46.bar-double-click-toggle"
+            ],
+            "commit": "866286a0bf5afc5665d9f6af21100b74e2e797b8",
+            "checkedAt": "2026-11-13T22:26:04.677Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/flugheim/omarchy-futo-notes-plugin",
