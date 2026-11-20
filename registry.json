@@ -438557,6 +438557,70 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rastermanden/omastoic",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T02:50:21.892Z",
+      "listingValidatedCommit": "1ca9351c18cb1f60e6f45c91ca3ef5193006efa5",
+      "listingValidatedAt": "2026-11-20T02:50:21.892Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rastermanden/omastoic",
+        "pluginIds": [
+          "io.github.rastermanden.omastoic"
+        ],
+        "commit": "1ca9351c18cb1f60e6f45c91ca3ef5193006efa5",
+        "checkedAt": "2026-11-20T02:50:21.703Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rastermanden/omastoic",
+        "pluginIds": [
+          "io.github.rastermanden.omastoic"
+        ],
+        "commit": "1ca9351c18cb1f60e6f45c91ca3ef5193006efa5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T02:50:21.703Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T00:48:10.096Z",
+        "requestEventId": 36725871852,
+        "requestedAt": "2026-11-20T02:49:35Z",
+        "reviewedAt": "2026-11-20T02:50:21.703Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rastermanden.omastoic": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
