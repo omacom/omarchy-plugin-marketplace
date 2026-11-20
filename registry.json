@@ -438786,6 +438786,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/0w3n-N/omarchy-local-llm",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T04:54:55.172Z",
+      "listingValidatedCommit": "bfd79146469369d87a6352001ec73fd3355dbbab",
+      "listingValidatedAt": "2026-11-20T04:54:55.172Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0w3n-n/omarchy-local-llm",
+        "pluginIds": [
+          "io.github.0w3n-n.local-llm"
+        ],
+        "commit": "bfd79146469369d87a6352001ec73fd3355dbbab",
+        "checkedAt": "2026-11-20T04:54:54.984Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "0w3n-n/omarchy-local-llm",
+        "pluginIds": [
+          "io.github.0w3n-n.local-llm"
+        ],
+        "commit": "bfd79146469369d87a6352001ec73fd3355dbbab",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T04:54:54.984Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T04:36:40.122Z",
+        "requestEventId": 36733421982,
+        "requestedAt": "2026-11-20T04:54:13Z",
+        "reviewedAt": "2026-11-20T04:54:54.984Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.0w3n-n.local-llm": {
+          "category": "System",
+          "tags": [
+            "ai",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
