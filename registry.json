@@ -439296,6 +439296,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jmihbay/omarchy-better-than-better-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T15:37:17.175Z",
+      "listingValidatedCommit": "b0060623f6914fba3a26cd4c115dfdef4843faf1",
+      "listingValidatedAt": "2026-11-20T15:37:17.175Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmihbay/omarchy-better-than-better-lock",
+        "pluginIds": [
+          "jmihbay.better-lock"
+        ],
+        "commit": "b0060623f6914fba3a26cd4c115dfdef4843faf1",
+        "checkedAt": "2026-11-20T15:37:16.963Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jmihbay/omarchy-better-than-better-lock",
+        "pluginIds": [
+          "jmihbay.better-lock"
+        ],
+        "commit": "b0060623f6914fba3a26cd4c115dfdef4843faf1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T15:37:16.963Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T13:31:38.388Z",
+        "requestEventId": 36784782345,
+        "requestedAt": "2026-11-20T15:36:43Z",
+        "reviewedAt": "2026-11-20T15:37:16.963Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jmihbay.better-lock": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
