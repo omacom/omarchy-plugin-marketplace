@@ -439010,6 +439010,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zfoong/omarchy-craftbot-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T11:15:57.695Z",
+      "listingValidatedCommit": "e79f3269860d84720cc9481a2f6bfd912f726bc3",
+      "listingValidatedAt": "2026-11-20T11:15:57.695Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zfoong/omarchy-craftbot-plugin",
+        "pluginIds": [
+          "craftbot.status"
+        ],
+        "commit": "e79f3269860d84720cc9481a2f6bfd912f726bc3",
+        "checkedAt": "2026-11-20T11:15:57.539Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zfoong/omarchy-craftbot-plugin",
+        "pluginIds": [
+          "craftbot.status"
+        ],
+        "commit": "e79f3269860d84720cc9481a2f6bfd912f726bc3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T11:15:57.539Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T11:01:19.183Z",
+        "requestEventId": 36761900938,
+        "requestedAt": "2026-11-20T11:15:19Z",
+        "reviewedAt": "2026-11-20T11:15:57.539Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "craftbot.status": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
