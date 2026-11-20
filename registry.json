@@ -437921,6 +437921,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/singhbrahmroop-hash/omarchy-workspaces-no-layout-click",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T00:58:56.254Z",
+      "listingValidatedCommit": "c79633e0142283680260b47cefb4cdedc2abce7f",
+      "listingValidatedAt": "2026-11-20T00:58:56.254Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "singhbrahmroop-hash/omarchy-workspaces-no-layout-click",
+        "pluginIds": [
+          "io.github.singhbrahmroop-hash.workspaces-no-layout-click"
+        ],
+        "commit": "c79633e0142283680260b47cefb4cdedc2abce7f",
+        "checkedAt": "2026-11-20T00:58:56.052Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.singhbrahmroop-hash.workspaces-no-layout-click": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
