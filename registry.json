@@ -437664,6 +437664,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/PeterVinter/omarchy-snap-to-agent",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T00:13:55.561Z",
+      "listingValidatedCommit": "f490afe0f7d7c71b381a3fb9a5afbefbfaad0efe",
+      "listingValidatedAt": "2026-11-20T00:13:55.561Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "petervinter/omarchy-snap-to-agent",
+        "pluginIds": [
+          "io.github.petervinter.snap-to-agent"
+        ],
+        "commit": "f490afe0f7d7c71b381a3fb9a5afbefbfaad0efe",
+        "checkedAt": "2026-11-20T00:13:55.375Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.petervinter.snap-to-agent": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
