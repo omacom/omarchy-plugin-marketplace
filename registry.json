@@ -438169,6 +438169,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Neotech3000/omadictate-pdf-reader",
+      "type": "plugin-source",
+      "addedAt": "2026-11-20",
+      "listedAt": "2026-11-20T01:43:37.993Z",
+      "listingValidatedCommit": "faa4dc6ae1010fb3f4b08b7ed4bf18cca3e691ea",
+      "listingValidatedAt": "2026-11-20T01:43:37.993Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "neotech3000/omadictate-pdf-reader",
+        "pluginIds": [
+          "neotech3000.omadictate-pdf-reader"
+        ],
+        "commit": "faa4dc6ae1010fb3f4b08b7ed4bf18cca3e691ea",
+        "checkedAt": "2026-11-20T01:43:37.874Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "neotech3000/omadictate-pdf-reader",
+        "pluginIds": [
+          "neotech3000.omadictate-pdf-reader"
+        ],
+        "commit": "faa4dc6ae1010fb3f4b08b7ed4bf18cca3e691ea",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-20T01:43:37.874Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-19T21:56:37.257Z",
+        "requestEventId": 36721846895,
+        "requestedAt": "2026-11-20T01:43:10Z",
+        "reviewedAt": "2026-11-20T01:43:37.874Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "neotech3000.omadictate-pdf-reader": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "education",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
