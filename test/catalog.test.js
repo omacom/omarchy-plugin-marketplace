@@ -568,6 +568,53 @@ test("version update time is the earlier of detection and last push", () => {
   assert.ok(Number.isNaN(versionUpdateTime({ repositoryUpdatedAt: "2026-11-05T05:00:00Z" })));
 });
 
+test("a push older than the window clears the updated badge", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-10-05T00:00:00Z",
+  }, now), false);
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-11-05T11:00:00Z",
+  }, now), true);
+});
+
+test("a later push does not stretch the updated badge", () => {
+  const detected = "2026-11-05T11:30:00Z";
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: detected,
+    repositoryUpdatedAt: "2026-11-05T18:00:00Z",
+  }, Date.parse("2026-11-06T00:00:00Z")), false);
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: detected,
+    repositoryUpdatedAt: "2026-11-05T11:00:00Z",
+  }, Date.parse("2026-11-05T23:00:00Z")), false);
+});
+
+test("an unparseable push leaves the detection window alone", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "not-a-date",
+  }, now), true);
+  assert.equal(isRecentlyUpdated({
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "not-a-date",
+  }, Date.parse("2026-11-06T00:00:00Z")), false);
+});
+
+test("built-in, placeholder, and version-less plugins stay unbadged", () => {
+  const now = Date.parse("2026-11-05T12:00:00Z");
+  const fresh = {
+    versionUpdatedAt: "2026-11-05T11:30:00Z",
+    repositoryUpdatedAt: "2026-11-05T11:00:00Z",
+  };
+  assert.equal(isRecentlyUpdated({ ...fresh, builtIn: true }, now), false);
+  assert.equal(isRecentlyUpdated({ ...fresh, placeholder: true }, now), false);
+  assert.equal(isRecentlyUpdated({ repositoryUpdatedAt: "2026-11-05T11:30:00Z" }, now), false);
+});
+
 test("updated listings and their order use the real update time", () => {
   const now = Date.parse("2026-11-05T12:00:00Z");
   const plugin = (id, versionUpdatedAt, repositoryUpdatedAt) => ({
