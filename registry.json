@@ -440628,6 +440628,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AventurineDream/Terminal-Breather",
+      "type": "plugin-source",
+      "addedAt": "2026-11-21",
+      "listedAt": "2026-11-21T03:35:07.859Z",
+      "listingValidatedCommit": "a53514d25d6e05cf1585b02b2a0359705e187e74",
+      "listingValidatedAt": "2026-11-21T03:35:07.859Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aventurinedream/terminal-breather",
+        "pluginIds": [
+          "aven.terminal-breather"
+        ],
+        "commit": "a53514d25d6e05cf1585b02b2a0359705e187e74",
+        "checkedAt": "2026-11-21T03:35:07.673Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aventurinedream/terminal-breather",
+        "pluginIds": [
+          "aven.terminal-breather"
+        ],
+        "commit": "a53514d25d6e05cf1585b02b2a0359705e187e74",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-21T03:35:07.673Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-21T03:30:02.444Z",
+        "requestEventId": 36835466709,
+        "requestedAt": "2026-11-21T03:34:36Z",
+        "reviewedAt": "2026-11-21T03:35:07.673Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "aven.terminal-breather": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
