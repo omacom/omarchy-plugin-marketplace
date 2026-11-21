@@ -238495,7 +238495,11 @@
             "bar",
             "quickshell"
           ],
-          "manifestPath": "manifest.json"
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "Manual setup: install the Hermes CLI and run 'hermes profile create botty' before the widget can answer; ffmpeg, grim, wl-clipboard and openssl are also required (see README)."
+          }
         }
       },
       "listingValidationHistory": [
