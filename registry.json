@@ -442044,6 +442044,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nydevel/omarchy-downloads-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T14:52:25.034Z",
+      "listingValidatedCommit": "b0b2c00e5094fc5fcd501d810b29e633ceebdd2c",
+      "listingValidatedAt": "2026-11-22T14:52:25.034Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nydevel/omarchy-downloads-monitor",
+        "pluginIds": [
+          "io.github.nydevel.downloads-monitor"
+        ],
+        "commit": "b0b2c00e5094fc5fcd501d810b29e633ceebdd2c",
+        "checkedAt": "2026-11-22T14:52:24.839Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nydevel/omarchy-downloads-monitor",
+        "pluginIds": [
+          "io.github.nydevel.downloads-monitor"
+        ],
+        "commit": "b0b2c00e5094fc5fcd501d810b29e633ceebdd2c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T14:52:24.839Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T14:26:28.067Z",
+        "requestEventId": 36929370923,
+        "requestedAt": "2026-11-22T14:51:57Z",
+        "reviewedAt": "2026-11-22T14:52:24.839Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nydevel.downloads-monitor": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
