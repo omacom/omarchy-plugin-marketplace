@@ -441566,6 +441566,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/avillagran/omarchy-device-guide",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T11:48:56.568Z",
+      "listingValidatedCommit": "1390c701a2b2f640debb56d176ceb9e1b4c3b4eb",
+      "listingValidatedAt": "2026-11-22T11:48:56.568Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "avillagran/omarchy-device-guide",
+        "pluginIds": [
+          "io.github.avillagran.device-guide"
+        ],
+        "commit": "1390c701a2b2f640debb56d176ceb9e1b4c3b4eb",
+        "checkedAt": "2026-11-22T11:48:56.380Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.avillagran.device-guide": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
