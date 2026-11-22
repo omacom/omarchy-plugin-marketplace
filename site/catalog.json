@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T13:26:07.032Z",
+  "generatedAt": "2026-11-22T13:30:48.967Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -380899,6 +380899,55 @@
       "upstreamValidatedAt": "2026-11-22T13:26:07.032Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "ad03f0d7502a6ff2d918bd27a881343396d6fb12eb606787b346f6a5da2b1036",
+      "status": "Available"
+    },
+    {
+      "id": "io.github.devanshu.updatecheck",
+      "name": "Updates",
+      "description": "Check Arch, Omarchy and AUR updates in one flyout and launch the Omarchy update.",
+      "author": "Devanshu",
+      "version": "1.1.0",
+      "repo": "https://github.com/DeV-433/Updates",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "86e4737914ea02954ce9babff87136ad61623624",
+      "verificationCheckedAt": "2026-11-22T13:30:48.232Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T13:30:48.389Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/DeV-433/Updates.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "System",
+      "tags": [
+        "system"
+      ],
+      "license": "MIT",
+      "stars": 1,
+      "repositoryUpdatedAt": "2026-11-21T11:32:54Z",
+      "repositoryRelease": {
+        "tag": "v1.1.0",
+        "url": "https://github.com/DeV-433/Updates/releases/tag/v1.1.0",
+        "publishedAt": "2026-11-21T11:32:56Z"
+      },
+      "accent": "violet",
+      "initials": "U",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "86e4737914ea02954ce9babff87136ad61623624",
+      "listingValidatedAt": "2026-11-22T13:30:48.389Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "86e4737914ea02954ce9babff87136ad61623624",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-22T13:30:48.967Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "86e4737914ea02954ce9babff87136ad61623624",
+      "upstreamValidatedAt": "2026-11-22T13:30:48.967Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "afd69f9c390d63933c7b8c2d2414b1da98af52fcf58c1ae7f85a6c7b2a7e67b6",
       "status": "Available"
     },
     {
