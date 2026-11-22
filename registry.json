@@ -441986,6 +441986,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nydevel/omarchy-sensors-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T14:44:44.710Z",
+      "listingValidatedCommit": "2bd73dc622ec86484e710323bae78cb4c66c9d32",
+      "listingValidatedAt": "2026-11-22T14:44:44.710Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nydevel/omarchy-sensors-monitor",
+        "pluginIds": [
+          "io.github.nydevel.sensors-monitor"
+        ],
+        "commit": "2bd73dc622ec86484e710323bae78cb4c66c9d32",
+        "checkedAt": "2026-11-22T14:44:44.575Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nydevel/omarchy-sensors-monitor",
+        "pluginIds": [
+          "io.github.nydevel.sensors-monitor"
+        ],
+        "commit": "2bd73dc622ec86484e710323bae78cb4c66c9d32",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T14:44:44.575Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T14:26:31.316Z",
+        "requestEventId": 36928984802,
+        "requestedAt": "2026-11-22T14:44:14Z",
+        "reviewedAt": "2026-11-22T14:44:44.575Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nydevel.sensors-monitor": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
