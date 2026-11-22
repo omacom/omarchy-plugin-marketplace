@@ -441787,6 +441787,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TheRock892/omarchy-soft-brightness",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T13:21:49.150Z",
+      "listingValidatedCommit": "24659ae2ef8f782a1afff54dd807a5a9930e5574",
+      "listingValidatedAt": "2026-11-22T13:21:49.150Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "therock892/omarchy-soft-brightness",
+        "pluginIds": [
+          "io.github.therock892.soft-brightness"
+        ],
+        "commit": "24659ae2ef8f782a1afff54dd807a5a9930e5574",
+        "checkedAt": "2026-11-22T13:21:48.993Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "therock892/omarchy-soft-brightness",
+        "pluginIds": [
+          "io.github.therock892.soft-brightness"
+        ],
+        "commit": "24659ae2ef8f782a1afff54dd807a5a9930e5574",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T13:21:48.993Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T07:53:14.170Z",
+        "requestEventId": 36925092445,
+        "requestedAt": "2026-11-22T13:21:14Z",
+        "reviewedAt": "2026-11-22T13:21:48.993Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.therock892.soft-brightness": {
+          "category": "Hardware",
+          "tags": [
+            "hyprland",
+            "system",
+            "power-management"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
