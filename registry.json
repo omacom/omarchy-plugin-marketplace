@@ -441499,6 +441499,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/gilav21/omarchy-windows-list",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T11:23:48.604Z",
+      "listingValidatedCommit": "5fa31ce208f3b164d412f0414a4c84e033550edf",
+      "listingValidatedAt": "2026-11-22T11:23:48.604Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gilav21/omarchy-windows-list",
+        "pluginIds": [
+          "gilav21.windows"
+        ],
+        "commit": "5fa31ce208f3b164d412f0414a4c84e033550edf",
+        "checkedAt": "2026-11-22T11:23:48.460Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "gilav21.windows": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
