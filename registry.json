@@ -442578,6 +442578,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/rickeyfaneite/omapegui",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T20:05:30.023Z",
+      "listingValidatedCommit": "f8d3cea37d8d55d8df2ee73115bc237e3313704e",
+      "listingValidatedAt": "2026-11-22T20:05:30.023Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rickeyfaneite/omapegui",
+        "pluginIds": [
+          "io.github.rickeyfaneite.omapegui"
+        ],
+        "commit": "f8d3cea37d8d55d8df2ee73115bc237e3313704e",
+        "checkedAt": "2026-11-22T20:05:29.829Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rickeyfaneite/omapegui",
+        "pluginIds": [
+          "io.github.rickeyfaneite.omapegui"
+        ],
+        "commit": "f8d3cea37d8d55d8df2ee73115bc237e3313704e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T20:05:29.829Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T19:49:42.529Z",
+        "requestEventId": 36944658617,
+        "requestedAt": "2026-11-22T20:04:55Z",
+        "reviewedAt": "2026-11-22T20:05:29.829Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.rickeyfaneite.omapegui": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
