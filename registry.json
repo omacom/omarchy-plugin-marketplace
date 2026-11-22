@@ -441403,6 +441403,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/shrobin13/omarchy-global-window-tree",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T10:26:55.860Z",
+      "listingValidatedCommit": "4f406e773c4bc8c63ec4964cfd6ffcee9d2e6748",
+      "listingValidatedAt": "2026-11-22T10:26:55.860Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shrobin13/omarchy-global-window-tree",
+        "pluginIds": [
+          "io.github.shrobin13.global-window-tree"
+        ],
+        "commit": "4f406e773c4bc8c63ec4964cfd6ffcee9d2e6748",
+        "checkedAt": "2026-11-22T10:26:55.666Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shrobin13/omarchy-global-window-tree",
+        "pluginIds": [
+          "io.github.shrobin13.global-window-tree"
+        ],
+        "commit": "4f406e773c4bc8c63ec4964cfd6ffcee9d2e6748",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T10:26:55.666Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T08:58:41.762Z",
+        "requestEventId": 36917608489,
+        "requestedAt": "2026-11-22T10:26:19Z",
+        "reviewedAt": "2026-11-22T10:26:55.666Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.shrobin13.global-window-tree": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
