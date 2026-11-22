@@ -442367,6 +442367,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/iverbovoy/shades",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T17:34:10.873Z",
+      "listingValidatedCommit": "5275230b999c579c27ac153bafc4474695b7b4b3",
+      "listingValidatedAt": "2026-11-22T17:34:10.873Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "iverbovoy/shades",
+        "pluginIds": [
+          "verbovoy.shades"
+        ],
+        "commit": "5275230b999c579c27ac153bafc4474695b7b4b3",
+        "checkedAt": "2026-11-22T17:34:10.675Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "iverbovoy/shades",
+        "pluginIds": [
+          "verbovoy.shades"
+        ],
+        "commit": "5275230b999c579c27ac153bafc4474695b7b4b3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T17:34:10.675Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T17:12:37.315Z",
+        "requestEventId": 36937249939,
+        "requestedAt": "2026-11-22T17:33:39Z",
+        "reviewedAt": "2026-11-22T17:34:10.675Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "verbovoy.shades": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
