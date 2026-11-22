@@ -442517,6 +442517,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/alexsbryan/svrngs-fam",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T18:48:26.273Z",
+      "listingValidatedCommit": "db9be961eb2ab838c780373676e19a614bfe5d5d",
+      "listingValidatedAt": "2026-11-22T18:48:26.273Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alexsbryan/svrngs-fam",
+        "pluginIds": [
+          "svrngs.fam"
+        ],
+        "commit": "db9be961eb2ab838c780373676e19a614bfe5d5d",
+        "checkedAt": "2026-11-22T18:48:26.108Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "alexsbryan/svrngs-fam",
+        "pluginIds": [
+          "svrngs.fam"
+        ],
+        "commit": "db9be961eb2ab838c780373676e19a614bfe5d5d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-22T18:48:26.108Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-22T18:20:39.908Z",
+        "requestEventId": 36940823169,
+        "requestedAt": "2026-11-22T18:47:41Z",
+        "reviewedAt": "2026-11-22T18:48:26.108Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "svrngs.fam": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
