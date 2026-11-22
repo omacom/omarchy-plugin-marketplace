@@ -441914,6 +441914,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AledLewis/omarchy-tiling-hints",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T13:37:30.199Z",
+      "listingValidatedCommit": "d95018c464a613e72ec73bf1be62b2b6d6d55ad6",
+      "listingValidatedAt": "2026-11-22T13:37:30.199Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aledlewis/omarchy-tiling-hints",
+        "pluginIds": [
+          "aledlewis.tiling-hints"
+        ],
+        "commit": "d95018c464a613e72ec73bf1be62b2b6d6d55ad6",
+        "checkedAt": "2026-11-22T13:37:30.034Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aledlewis.tiling-hints": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
