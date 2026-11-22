@@ -441716,6 +441716,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/drakahari/omarchy-drakops",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T12:56:48.345Z",
+      "listingValidatedCommit": "761eaedec45da3dc75d2609a1ec0ebe692100c07",
+      "listingValidatedAt": "2026-11-22T12:56:48.345Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "drakahari/omarchy-drakops",
+        "pluginIds": [
+          "io.github.drakahari.drakops"
+        ],
+        "commit": "761eaedec45da3dc75d2609a1ec0ebe692100c07",
+        "checkedAt": "2026-11-22T12:56:48.195Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.drakahari.drakops": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
