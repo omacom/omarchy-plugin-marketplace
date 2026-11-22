@@ -441848,6 +441848,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kinosaur/omarchy-gentle-nightlight",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T13:26:06.284Z",
+      "listingValidatedCommit": "c1806b26f6f4e6633b263e2dad6b7623bca26de2",
+      "listingValidatedAt": "2026-11-22T13:26:06.284Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kinosaur/omarchy-gentle-nightlight",
+        "pluginIds": [
+          "kino.nightlight"
+        ],
+        "commit": "c1806b26f6f4e6633b263e2dad6b7623bca26de2",
+        "checkedAt": "2026-11-22T13:26:06.115Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kino.nightlight": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
