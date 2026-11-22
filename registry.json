@@ -441461,6 +441461,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/paulgrove/omarchy-window-fade",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T11:05:52.137Z",
+      "listingValidatedCommit": "bf836ff505b342814b24a3ea4967254a0eb158cb",
+      "listingValidatedAt": "2026-11-22T11:05:52.137Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "paulgrove/omarchy-window-fade",
+        "pluginIds": [
+          "pgrove.window-fade"
+        ],
+        "commit": "bf836ff505b342814b24a3ea4967254a0eb158cb",
+        "checkedAt": "2026-11-22T11:05:51.990Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "pgrove.window-fade": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
