@@ -442100,6 +442100,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimjonesbr/omarchy-checkmk",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T15:01:10.990Z",
+      "listingValidatedCommit": "4007d8839165151ad052c8c26225ddbbe253c68e",
+      "listingValidatedAt": "2026-11-22T15:01:10.990Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimjonesbr/omarchy-checkmk",
+        "pluginIds": [
+          "jimjonesbr.checkmk"
+        ],
+        "commit": "4007d8839165151ad052c8c26225ddbbe253c68e",
+        "checkedAt": "2026-11-22T15:01:10.803Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jimjonesbr.checkmk": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
