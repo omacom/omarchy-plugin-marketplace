@@ -442333,6 +442333,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/SampleBias/ProtOmaView",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T16:20:00.186Z",
+      "listingValidatedCommit": "fe6768b477d9fafd4c9674b734e8bad54f7597c5",
+      "listingValidatedAt": "2026-11-22T16:20:00.186Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "samplebias/protomaview",
+        "pluginIds": [
+          "io.github.samplebias.protomaview"
+        ],
+        "commit": "fe6768b477d9fafd4c9674b734e8bad54f7597c5",
+        "checkedAt": "2026-11-22T16:20:00.057Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.samplebias.protomaview": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
