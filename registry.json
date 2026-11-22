@@ -442638,6 +442638,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/newjordan/omarchy-myradio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T20:30:33.549Z",
+      "listingValidatedCommit": "acbeec8d9457669380c76a484bd4742832deb240",
+      "listingValidatedAt": "2026-11-22T20:30:33.549Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "newjordan/omarchy-myradio",
+        "pluginIds": [
+          "newjordan.myradio"
+        ],
+        "commit": "acbeec8d9457669380c76a484bd4742832deb240",
+        "checkedAt": "2026-11-22T20:30:33.351Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "newjordan.myradio": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
