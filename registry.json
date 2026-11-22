@@ -442167,6 +442167,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Frihet-io/frihet-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-22",
+      "listedAt": "2026-11-22T15:16:34.900Z",
+      "listingValidatedCommit": "2eb8d7fed4e748e2a1e544a6b99dc7398ec4617f",
+      "listingValidatedAt": "2026-11-22T15:16:34.900Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frihet-io/frihet-omarchy",
+        "pluginIds": [
+          "io.frihet.erp"
+        ],
+        "commit": "2eb8d7fed4e748e2a1e544a6b99dc7398ec4617f",
+        "checkedAt": "2026-11-22T15:16:34.743Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.frihet.erp": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
