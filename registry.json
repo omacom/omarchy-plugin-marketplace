@@ -443159,6 +443159,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/timsonner/git-tree",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T10:05:47.325Z",
+      "listingValidatedCommit": "e2a1a409753267aeecf3d10ee2330e57bc8cd893",
+      "listingValidatedAt": "2026-11-23T10:05:47.325Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "timsonner/git-tree",
+        "pluginIds": [
+          "timsonner.git-tree"
+        ],
+        "commit": "e2a1a409753267aeecf3d10ee2330e57bc8cd893",
+        "checkedAt": "2026-11-23T10:05:47.110Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "timsonner.git-tree": {
+          "category": "Desktop",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
