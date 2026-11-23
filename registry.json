@@ -443727,6 +443727,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/neotyk/omarchy-buienradar-rain",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T11:16:52.045Z",
+      "listingValidatedCommit": "3ec6143e4712b0844624969d94a44584a7a21af3",
+      "listingValidatedAt": "2026-11-23T11:16:52.045Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "neotyk/omarchy-buienradar-rain",
+        "pluginIds": [
+          "io.github.neotyk.buienradar-rain"
+        ],
+        "commit": "3ec6143e4712b0844624969d94a44584a7a21af3",
+        "checkedAt": "2026-11-23T11:16:51.851Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.neotyk.buienradar-rain": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
