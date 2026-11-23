@@ -1466,7 +1466,7 @@ test("entry modules and their shared dependency use one cache key", async () => 
   assert.ok(keys.every(Boolean));
   assert.equal(new Set(keys).size, 1);
   assert.equal(keys[0], "20261123-01");
-  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261112-02");
+  assert.equal(files.explore.match(/explore\.js\?v=([^"']+)/)?.[1], "20261123-01");
   assert.equal(files.exploreJs.match(/explore-search\.js\?v=([^"']+)/)?.[1], "20261123-01");
   assert.equal(files.exploreJs.match(/growth-range\.js\?v=([^"']+)/)?.[1], "20260828-18");
   const styleKeys = [files.index, files.plugin, files.publish, files.develop, files.explore]
@@ -2352,6 +2352,18 @@ test("split view keeps the original card and adds tiles with an overall rank", a
   assert.match(styles, /\.catalog-split \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 352px;/);
   assert.match(styles, /\.split-grid \{[^}]*minmax\(140px, 1fr\)/);
   assert.match(styles, /@media \(max-width: 1100px\) \{\s*\.catalog-split \{ grid-template-columns: minmax\(0, 1fr\); \}/);
+});
+
+test("hero and header browse links focus the search field after plain clicks", async () => {
+  const root = new URL("../", import.meta.url);
+  const html = await readFile(new URL("site/index.html", root), "utf8");
+  const app = await readFile(new URL("site/assets/js/app.js", root), "utf8");
+  assert.match(html, /<nav class="market-nav"[^>]*>[\s\S]*?<a class="active" href="#catalog"/);
+  assert.match(html, /<div class="market-hero-actions">\s*<a class="button market-primary" href="#catalog">/);
+  assert.match(html, /<nav class="mobile-bottom"[^>]*>[\s\S]*?<a href="#catalog">/);
+  assert.match(app, /document\.querySelectorAll\("\.market-hero \.market-primary, \.market-nav a\[href='#catalog'\]"\)/);
+  assert.doesNotMatch(app, /\.mobile-bottom a\[href='#catalog'\]/);
+  assert.match(app, /if \(event\.ctrlKey \|\| event\.metaKey \|\| event\.shiftKey \|\| event\.button !== 0\) return;\s*\/\/[^\n]*\n\s*window\.setTimeout\(\(\) => search\.focus\(\{ preventScroll: true \}\), 0\);/);
 });
 
 test("theme text and accent surfaces meet WCAG AA contrast", async () => {

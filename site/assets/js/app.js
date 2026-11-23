@@ -2128,7 +2128,9 @@ async function init() {
   });
 
   for (const link of document.querySelectorAll(".market-hero .market-primary, .market-nav a[href='#catalog']")) {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
+      // Modifier clicks open the catalog elsewhere and must not move focus in this tab.
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0) return;
       // Defer until fragment navigation has moved focus to #catalog, then keep the smooth scroll.
       window.setTimeout(() => search.focus({ preventScroll: true }), 0);
     });
