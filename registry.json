@@ -445902,6 +445902,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fleveque/omarchy-quantic",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:23:11.822Z",
+      "listingValidatedCommit": "685a9a4a512e9cd40be1b4e17a9af426bf96ae30",
+      "listingValidatedAt": "2026-11-23T23:23:11.822Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fleveque/omarchy-quantic",
+        "pluginIds": [
+          "io.github.fleveque.quantic"
+        ],
+        "commit": "685a9a4a512e9cd40be1b4e17a9af426bf96ae30",
+        "checkedAt": "2026-11-23T23:23:11.608Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fleveque/omarchy-quantic",
+        "pluginIds": [
+          "io.github.fleveque.quantic"
+        ],
+        "commit": "685a9a4a512e9cd40be1b4e17a9af426bf96ae30",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T23:23:11.608Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T22:51:35.151Z",
+        "requestEventId": 37069274693,
+        "requestedAt": "2026-11-23T23:16:48Z",
+        "reviewedAt": "2026-11-23T23:23:11.608Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fleveque.quantic": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
