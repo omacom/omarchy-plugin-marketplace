@@ -443103,6 +443103,62 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/dleadmanps/omarchy-windows-like",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T09:37:14.794Z",
+      "listingValidatedCommit": "8fbb069dd645c7b27bfe507f5a3790ea75be68bc",
+      "listingValidatedAt": "2026-11-23T09:37:14.794Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dleadmanps/omarchy-windows-like",
+        "pluginIds": [
+          "dleadmanps.windows-like"
+        ],
+        "commit": "8fbb069dd645c7b27bfe507f5a3790ea75be68bc",
+        "checkedAt": "2026-11-23T09:37:14.587Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dleadmanps/omarchy-windows-like",
+        "pluginIds": [
+          "dleadmanps.windows-like"
+        ],
+        "commit": "8fbb069dd645c7b27bfe507f5a3790ea75be68bc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T09:37:14.587Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T03:52:57.363Z",
+        "requestEventId": 36990849733,
+        "requestedAt": "2026-11-23T09:34:37Z",
+        "reviewedAt": "2026-11-23T09:37:14.587Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dleadmanps.windows-like": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
