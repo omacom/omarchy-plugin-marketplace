@@ -442888,6 +442888,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/matthewjaybarr-png/omarchy-git-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T02:32:35.714Z",
+      "listingValidatedCommit": "a6a67d1ff6cff5a8b011a7d02c24fda858b9c058",
+      "listingValidatedAt": "2026-11-23T02:32:35.714Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matthewjaybarr-png/omarchy-git-tracker",
+        "pluginIds": [
+          "matthewjaybarr.git-tracker"
+        ],
+        "commit": "a6a67d1ff6cff5a8b011a7d02c24fda858b9c058",
+        "checkedAt": "2026-11-23T02:32:35.547Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "matthewjaybarr.git-tracker": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
