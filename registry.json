@@ -426361,8 +426361,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-13",
       "listedAt": "2026-11-13T17:41:30.414Z",
-      "listingValidatedCommit": "fee256793d67998867de273f2233d2a1b718237a",
-      "listingValidatedAt": "2026-11-13T17:41:30.414Z",
+      "listingValidatedCommit": "0d907c1d9dae225668debf1857a71c902891293e",
+      "listingValidatedAt": "2026-11-23T01:14:20.831Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -426371,8 +426371,8 @@
         "pluginIds": [
           "io.github.bliggs1984.agent-activity"
         ],
-        "commit": "fee256793d67998867de273f2233d2a1b718237a",
-        "checkedAt": "2026-11-13T17:41:30.262Z",
+        "commit": "0d907c1d9dae225668debf1857a71c902891293e",
+        "checkedAt": "2026-11-23T01:14:20.831Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -426380,28 +426380,6 @@
           "privilege",
           "service-management"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "bliggs1984/omarchy-agent-activity",
-        "pluginIds": [
-          "io.github.bliggs1984.agent-activity"
-        ],
-        "commit": "fee256793d67998867de273f2233d2a1b718237a",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-13T17:41:30.262Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "privilege",
-          "service-management"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-13T07:37:23.455Z",
-        "requestEventId": 36056634432,
-        "requestedAt": "2026-11-13T17:37:12Z",
-        "reviewedAt": "2026-11-13T17:41:30.263Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.bliggs1984.agent-activity": {
@@ -426413,7 +426391,76 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "bliggs1984/omarchy-agent-activity",
+        "pluginIds": [
+          "io.github.bliggs1984.agent-activity"
+        ],
+        "commit": "0d907c1d9dae225668debf1857a71c902891293e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T01:14:20.831Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-20T01:44:20.913Z",
+        "requestEventId": 36959584657,
+        "requestedAt": "2026-11-23T01:13:36Z",
+        "reviewedAt": "2026-11-23T01:14:20.831Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "fee256793d67998867de273f2233d2a1b718237a",
+          "validatedAt": "2026-11-13T17:41:30.414Z",
+          "branch": "main",
+          "supersededAt": "2026-11-23T01:14:20.831Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "bliggs1984/omarchy-agent-activity",
+            "pluginIds": [
+              "io.github.bliggs1984.agent-activity"
+            ],
+            "commit": "fee256793d67998867de273f2233d2a1b718237a",
+            "checkedAt": "2026-11-13T17:41:30.262Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "bliggs1984/omarchy-agent-activity",
+            "pluginIds": [
+              "io.github.bliggs1984.agent-activity"
+            ],
+            "commit": "fee256793d67998867de273f2233d2a1b718237a",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-13T17:41:30.262Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege",
+              "service-management"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-13T07:37:23.455Z",
+            "requestEventId": 36056634432,
+            "requestedAt": "2026-11-13T17:37:12Z",
+            "reviewedAt": "2026-11-13T17:41:30.263Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/tomas-nicolorich/omarchy-navbar-valkiria",
