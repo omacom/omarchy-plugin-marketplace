@@ -444887,6 +444887,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jimjeffers/omarchy-lumen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T18:37:48.531Z",
+      "listingValidatedCommit": "ee5d2f8312ad73c1d627e9c877ace4e63d9c8c87",
+      "listingValidatedAt": "2026-11-23T18:37:48.531Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jimjeffers/omarchy-lumen",
+        "pluginIds": [
+          "io.github.jimjeffers.lumen"
+        ],
+        "commit": "ee5d2f8312ad73c1d627e9c877ace4e63d9c8c87",
+        "checkedAt": "2026-11-23T18:37:48.369Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jimjeffers.lumen": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "hyprland",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
