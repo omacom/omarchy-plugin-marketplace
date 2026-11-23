@@ -42,14 +42,14 @@ import {
   storeCatalogView,
   updateEngagementSummary,
   updatePluginHeart
-} from "./shared.js?v=20261105-05";
+} from "./shared.js?v=20261123-01";
 import {
   engagementApiBaseUrl,
   hasPluginHeart,
   loadEngagementStats,
   recordPluginCopy,
   recordPluginHeart,
-} from "./engagement.js?v=20261105-05";
+} from "./engagement.js?v=20261123-01";
 import {
   appendSearchState,
   committedTermsFromDraft,
@@ -78,13 +78,13 @@ import {
   searchTermInputValue,
   searchTermKey,
   selectSearchCompletions,
-} from "./search.js?v=20261105-05";
+} from "./search.js?v=20261123-01";
 import {
   catalogCategoryTotals,
   matchesBarTaxonomy,
   matchesKidsTaxonomy,
   matchesVpnTaxonomy,
-} from "./taxonomy.js?v=20261105-05";
+} from "./taxonomy.js?v=20261123-01";
 
 const pluginsPerPage = 9;
 const splitViewRows = 3;
@@ -2126,6 +2126,13 @@ async function init() {
       search.focus();
     }
   });
+
+  for (const link of document.querySelectorAll(".market-hero .market-primary, .market-nav a[href='#catalog']")) {
+    link.addEventListener("click", () => {
+      // Defer until fragment navigation has moved focus to #catalog, then keep the smooth scroll.
+      window.setTimeout(() => search.focus({ preventScroll: true }), 0);
+    });
+  }
 
   searchClear.addEventListener("click", () => clearSearchTerms());
 
