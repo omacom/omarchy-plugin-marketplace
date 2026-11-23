@@ -443192,6 +443192,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tjtuom/omaleader",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T10:11:05.273Z",
+      "listingValidatedCommit": "2c755386622b3b9153c347494aca6f47f50016f8",
+      "listingValidatedAt": "2026-11-23T10:11:05.273Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tjtuom/omaleader",
+        "pluginIds": [
+          "tjtuom.omaleader"
+        ],
+        "commit": "2c755386622b3b9153c347494aca6f47f50016f8",
+        "checkedAt": "2026-11-23T10:11:05.104Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tjtuom.omaleader": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
