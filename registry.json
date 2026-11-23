@@ -445962,6 +445962,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/aletgdev/omarchy-pokemon-companion",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:32:25.024Z",
+      "listingValidatedCommit": "7d6d1e1842760e45c7b8b5121ead1e3cf4e39f3c",
+      "listingValidatedAt": "2026-11-23T23:32:25.024Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aletgdev/omarchy-pokemon-companion",
+        "pluginIds": [
+          "aletgdev.pokemon-companion"
+        ],
+        "commit": "7d6d1e1842760e45c7b8b5121ead1e3cf4e39f3c",
+        "checkedAt": "2026-11-23T23:32:24.807Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aletgdev.pokemon-companion": {
+          "category": "Widgets",
+          "tags": [
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
