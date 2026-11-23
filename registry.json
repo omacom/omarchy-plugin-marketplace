@@ -445579,6 +445579,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brokemac79/omarock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T22:16:55.740Z",
+      "listingValidatedCommit": "f24923efa6770fbeabd25d60dca215a9e16b7e19",
+      "listingValidatedAt": "2026-11-23T22:16:55.740Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brokemac79/omarock",
+        "pluginIds": [
+          "io.github.brokemac79.omarock"
+        ],
+        "commit": "f24923efa6770fbeabd25d60dca215a9e16b7e19",
+        "checkedAt": "2026-11-23T22:16:55.590Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brokemac79/omarock",
+        "pluginIds": [
+          "io.github.brokemac79.omarock"
+        ],
+        "commit": "f24923efa6770fbeabd25d60dca215a9e16b7e19",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T22:16:55.590Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T20:52:46.869Z",
+        "requestEventId": 37064475894,
+        "requestedAt": "2026-11-23T22:15:54Z",
+        "reviewedAt": "2026-11-23T22:16:55.590Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.brokemac79.omarock": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
