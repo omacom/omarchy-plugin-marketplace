@@ -443006,6 +443006,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/cwilliams5/omarchy-legato",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T09:10:36.280Z",
+      "listingValidatedCommit": "ce22e65edb3ec32fe2a844ef416eb012842e2304",
+      "listingValidatedAt": "2026-11-23T09:10:36.280Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cwilliams5/omarchy-legato",
+        "pluginIds": [
+          "io.github.cwilliams5.legato"
+        ],
+        "commit": "ce22e65edb3ec32fe2a844ef416eb012842e2304",
+        "checkedAt": "2026-11-23T09:10:36.135Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cwilliams5/omarchy-legato",
+        "pluginIds": [
+          "io.github.cwilliams5.legato"
+        ],
+        "commit": "ce22e65edb3ec32fe2a844ef416eb012842e2304",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T09:10:36.135Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T04:25:54.916Z",
+        "requestEventId": 36988663046,
+        "requestedAt": "2026-11-23T09:09:46Z",
+        "reviewedAt": "2026-11-23T09:10:36.135Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cwilliams5.legato": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
