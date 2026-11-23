@@ -444986,6 +444986,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/nejcm/omarchy-ai-usage",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T19:16:26.644Z",
+      "listingValidatedCommit": "c981d4746805a6abe4673f6c93580a99e70d3d0d",
+      "listingValidatedAt": "2026-11-23T19:16:26.644Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nejcm/omarchy-ai-usage",
+        "pluginIds": [
+          "io.github.nejcm.ai-usage"
+        ],
+        "commit": "c981d4746805a6abe4673f6c93580a99e70d3d0d",
+        "checkedAt": "2026-11-23T19:16:26.477Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nejcm/omarchy-ai-usage",
+        "pluginIds": [
+          "io.github.nejcm.ai-usage"
+        ],
+        "commit": "c981d4746805a6abe4673f6c93580a99e70d3d0d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T19:16:26.477Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T18:36:47.575Z",
+        "requestEventId": 37047997654,
+        "requestedAt": "2026-11-23T19:15:52Z",
+        "reviewedAt": "2026-11-23T19:16:26.477Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nejcm.ai-usage": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
