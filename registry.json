@@ -445485,6 +445485,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Carloj005/omarchy-glovo-tracker",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T21:42:59.451Z",
+      "listingValidatedCommit": "7a6df3777f64255466ee465a19a36d0ea78d3100",
+      "listingValidatedAt": "2026-11-23T21:42:59.451Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "carloj005/omarchy-glovo-tracker",
+        "pluginIds": [
+          "io.github.carloj005.glovo-tracker"
+        ],
+        "commit": "7a6df3777f64255466ee465a19a36d0ea78d3100",
+        "checkedAt": "2026-11-23T21:42:59.259Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.carloj005.glovo-tracker": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
