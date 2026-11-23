@@ -445081,6 +445081,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/07dcolem/mellow-ip-scanner",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T19:27:39.837Z",
+      "listingValidatedCommit": "a8d03ace098e3bbfda93c002df27adad85baa1aa",
+      "listingValidatedAt": "2026-11-23T19:27:39.837Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "07dcolem/mellow-ip-scanner",
+        "pluginIds": [
+          "io.github.07dcolem.mellow-ip-scan"
+        ],
+        "commit": "a8d03ace098e3bbfda93c002df27adad85baa1aa",
+        "checkedAt": "2026-11-23T19:27:39.640Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.07dcolem.mellow-ip-scan": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
