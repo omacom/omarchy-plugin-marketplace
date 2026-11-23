@@ -445219,6 +445219,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/spconley98/omarchy-nv-radio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T20:23:35.406Z",
+      "listingValidatedCommit": "c35ef1efe585c36b2a3ec88bd3d91b2c64ba33aa",
+      "listingValidatedAt": "2026-11-23T20:23:35.406Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "spconley98/omarchy-nv-radio",
+        "pluginIds": [
+          "io.github.spconley98.nv-radio"
+        ],
+        "commit": "c35ef1efe585c36b2a3ec88bd3d91b2c64ba33aa",
+        "checkedAt": "2026-11-23T20:23:35.240Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.spconley98.nv-radio": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
