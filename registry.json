@@ -444654,6 +444654,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/JeanpiDev/omapose",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T18:06:12.362Z",
+      "listingValidatedCommit": "08f88712ba3ed57b5eac52a851573274056ed44a",
+      "listingValidatedAt": "2026-11-23T18:06:12.362Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jeanpidev/omapose",
+        "pluginIds": [
+          "io.github.jeanpidev.omapose"
+        ],
+        "commit": "08f88712ba3ed57b5eac52a851573274056ed44a",
+        "checkedAt": "2026-11-23T18:06:12.147Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jeanpidev.omapose": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
