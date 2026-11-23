@@ -443815,6 +443815,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nouseridz/Athaan",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T11:27:39.292Z",
+      "listingValidatedCommit": "31f20748974f63d61f3451a60c7bb5b9f5756923",
+      "listingValidatedAt": "2026-11-23T11:27:39.292Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nouseridz/athaan",
+        "pluginIds": [
+          "io.github.nouseridz.athaan"
+        ],
+        "commit": "31f20748974f63d61f3451a60c7bb5b9f5756923",
+        "checkedAt": "2026-11-23T11:27:39.133Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nouseridz/athaan",
+        "pluginIds": [
+          "io.github.nouseridz.athaan"
+        ],
+        "commit": "31f20748974f63d61f3451a60c7bb5b9f5756923",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T11:27:39.133Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T11:07:15.055Z",
+        "requestEventId": 36999813567,
+        "requestedAt": "2026-11-23T11:14:44Z",
+        "reviewedAt": "2026-11-23T11:27:39.133Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nouseridz.athaan": {
+          "category": "Other",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
