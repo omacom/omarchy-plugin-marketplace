@@ -445320,6 +445320,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/absoluteKander/breakerbox",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T20:57:36.197Z",
+      "listingValidatedCommit": "3b46af225a75d6c2c29cd3c8fea56b9deb9dcd48",
+      "listingValidatedAt": "2026-11-23T20:57:36.197Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "absolutekander/breakerbox",
+        "pluginIds": [
+          "io.github.absolutekander.breakerbox"
+        ],
+        "commit": "3b46af225a75d6c2c29cd3c8fea56b9deb9dcd48",
+        "checkedAt": "2026-11-23T20:57:35.995Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.absolutekander.breakerbox": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
