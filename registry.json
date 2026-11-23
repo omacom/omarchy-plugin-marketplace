@@ -443663,6 +443663,70 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/okox/omarchy-run-coach",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T11:11:43.686Z",
+      "listingValidatedCommit": "19b700f2d38c4201769cd91525b547aaabdf8d43",
+      "listingValidatedAt": "2026-11-23T11:11:43.686Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "okox/omarchy-run-coach",
+        "pluginIds": [
+          "okox.run-coach"
+        ],
+        "commit": "19b700f2d38c4201769cd91525b547aaabdf8d43",
+        "checkedAt": "2026-11-23T11:11:43.471Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "okox/omarchy-run-coach",
+        "pluginIds": [
+          "okox.run-coach"
+        ],
+        "commit": "19b700f2d38c4201769cd91525b547aaabdf8d43",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T11:11:43.471Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T10:35:06.698Z",
+        "requestEventId": 36998596344,
+        "requestedAt": "2026-11-23T11:01:21Z",
+        "reviewedAt": "2026-11-23T11:11:43.471Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "okox.run-coach": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
