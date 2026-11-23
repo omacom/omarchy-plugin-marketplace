@@ -444258,6 +444258,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Akshad135/clipnest",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T15:20:55.042Z",
+      "listingValidatedCommit": "24d951a2409be9f9edce98d61aa86be0102fbd3e",
+      "listingValidatedAt": "2026-11-23T15:20:55.042Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "akshad135/clipnest",
+        "pluginIds": [
+          "akshad135.clipnest"
+        ],
+        "commit": "24d951a2409be9f9edce98d61aa86be0102fbd3e",
+        "checkedAt": "2026-11-23T15:20:54.916Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "akshad135/clipnest",
+        "pluginIds": [
+          "akshad135.clipnest"
+        ],
+        "commit": "24d951a2409be9f9edce98d61aa86be0102fbd3e",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T15:20:54.916Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T15:12:43.032Z",
+        "requestEventId": 37024217237,
+        "requestedAt": "2026-11-23T15:18:55Z",
+        "reviewedAt": "2026-11-23T15:20:54.916Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "akshad135.clipnest": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
