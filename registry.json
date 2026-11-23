@@ -442921,6 +442921,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/frank-blueview-ai/bvos-read-aloud-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T02:42:13.235Z",
+      "listingValidatedCommit": "33eea723712ea941558823c751110130e487d409",
+      "listingValidatedAt": "2026-11-23T02:42:13.235Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frank-blueview-ai/bvos-read-aloud-omarchy",
+        "pluginIds": [
+          "blueview.read-aloud"
+        ],
+        "commit": "33eea723712ea941558823c751110130e487d409",
+        "checkedAt": "2026-11-23T02:42:13.089Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "frank-blueview-ai/bvos-read-aloud-omarchy",
+        "pluginIds": [
+          "blueview.read-aloud"
+        ],
+        "commit": "33eea723712ea941558823c751110130e487d409",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T02:42:13.089Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T02:28:04.486Z",
+        "requestEventId": 36964094971,
+        "requestedAt": "2026-11-23T02:41:38Z",
+        "reviewedAt": "2026-11-23T02:42:13.089Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "blueview.read-aloud": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
