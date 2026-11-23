@@ -443419,6 +443419,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/eusener/omarchy-redmi-phone",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T10:51:43.762Z",
+      "listingValidatedCommit": "a58e0ac3dae23c04088fe9d57686789685ad4aba",
+      "listingValidatedAt": "2026-11-23T10:51:43.762Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eusener/omarchy-redmi-phone",
+        "pluginIds": [
+          "eusener.headphones"
+        ],
+        "commit": "a58e0ac3dae23c04088fe9d57686789685ad4aba",
+        "checkedAt": "2026-11-23T10:51:43.598Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "eusener/omarchy-redmi-phone",
+        "pluginIds": [
+          "eusener.headphones"
+        ],
+        "commit": "a58e0ac3dae23c04088fe9d57686789685ad4aba",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T10:51:43.598Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T10:14:45.622Z",
+        "requestEventId": 36997423692,
+        "requestedAt": "2026-11-23T10:48:22Z",
+        "reviewedAt": "2026-11-23T10:51:43.598Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "eusener.headphones": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
