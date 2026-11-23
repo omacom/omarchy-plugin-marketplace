@@ -443935,6 +443935,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Goomba41/omarchy-scrollmode",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T11:50:48.773Z",
+      "listingValidatedCommit": "2a75ac41bcb8c3fbbf207514259f41a0d95b0892",
+      "listingValidatedAt": "2026-11-23T11:50:48.773Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "goomba41/omarchy-scrollmode",
+        "pluginIds": [
+          "anton.scrollmode"
+        ],
+        "commit": "2a75ac41bcb8c3fbbf207514259f41a0d95b0892",
+        "checkedAt": "2026-11-23T11:50:48.562Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "goomba41/omarchy-scrollmode",
+        "pluginIds": [
+          "anton.scrollmode"
+        ],
+        "commit": "2a75ac41bcb8c3fbbf207514259f41a0d95b0892",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T11:50:48.562Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "remote-build",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T11:31:17.047Z",
+        "requestEventId": 37003054109,
+        "requestedAt": "2026-11-23T11:50:11Z",
+        "reviewedAt": "2026-11-23T11:50:48.562Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "anton.scrollmode": {
+          "category": "Hardware",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
