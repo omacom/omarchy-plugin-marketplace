@@ -445770,6 +445770,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zoltanf/omarchy-agents",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:08:35.030Z",
+      "listingValidatedCommit": "57177388617bf1f9f0d18cbe3632a942a1e222c9",
+      "listingValidatedAt": "2026-11-23T23:08:35.030Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zoltanf/omarchy-agents",
+        "pluginIds": [
+          "zoltanf.agents"
+        ],
+        "commit": "57177388617bf1f9f0d18cbe3632a942a1e222c9",
+        "checkedAt": "2026-11-23T23:08:34.841Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "zoltanf.agents": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
