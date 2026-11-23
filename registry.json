@@ -445388,6 +445388,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jmr85/omarchy-taskbar-plus",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T21:08:36.780Z",
+      "listingValidatedCommit": "f668bc090f1f4ccda239877ca2b6908c01e29076",
+      "listingValidatedAt": "2026-11-23T21:08:36.780Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jmr85/omarchy-taskbar-plus",
+        "pluginIds": [
+          "io.github.jmr85.taskbar"
+        ],
+        "commit": "f668bc090f1f4ccda239877ca2b6908c01e29076",
+        "checkedAt": "2026-11-23T21:08:36.579Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.jmr85.taskbar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "launcher",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
