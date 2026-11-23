@@ -442739,6 +442739,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/douglas/gamedeals",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T01:05:51.536Z",
+      "listingValidatedCommit": "ed58a351b629f29782f2da5bc511e4551da2056c",
+      "listingValidatedAt": "2026-11-23T01:05:51.536Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "douglas/gamedeals",
+        "pluginIds": [
+          "io.github.douglas.gamedeals"
+        ],
+        "commit": "ed58a351b629f29782f2da5bc511e4551da2056c",
+        "checkedAt": "2026-11-23T01:05:51.341Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "douglas/gamedeals",
+        "pluginIds": [
+          "io.github.douglas.gamedeals"
+        ],
+        "commit": "ed58a351b629f29782f2da5bc511e4551da2056c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T01:05:51.341Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T00:48:53.474Z",
+        "requestEventId": 36959176940,
+        "requestedAt": "2026-11-23T01:05:18Z",
+        "reviewedAt": "2026-11-23T01:05:51.341Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.douglas.gamedeals": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
