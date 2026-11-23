@@ -443382,6 +443382,43 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jvlianodorneles/tinyasr-indicator",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T10:45:28.941Z",
+      "listingValidatedCommit": "f567cdec136990e31f9383d9dd6e55af946f469a",
+      "listingValidatedAt": "2026-11-23T10:45:28.941Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jvlianodorneles/tinyasr-indicator",
+        "pluginIds": [
+          "dorneles.tinyasr-indicator"
+        ],
+        "commit": "f567cdec136990e31f9383d9dd6e55af946f469a",
+        "checkedAt": "2026-11-23T10:45:28.778Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dorneles.tinyasr-indicator": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
