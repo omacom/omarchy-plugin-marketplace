@@ -444620,6 +444620,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fihuza/omani",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T17:30:14.951Z",
+      "listingValidatedCommit": "c86c522ab39d01359bfaa1bfdddf4fa45bffea03",
+      "listingValidatedAt": "2026-11-23T17:30:14.951Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fihuza/omani",
+        "pluginIds": [
+          "io.github.fihuza.omani"
+        ],
+        "commit": "c86c522ab39d01359bfaa1bfdddf4fa45bffea03",
+        "checkedAt": "2026-11-23T17:30:14.779Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.fihuza.omani": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
