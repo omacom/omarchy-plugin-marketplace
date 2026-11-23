@@ -444441,6 +444441,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Magonox/omarchy-goop",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T16:46:52.675Z",
+      "listingValidatedCommit": "dcda1b329a2b863ed204fbf346e6f4ac919b01e3",
+      "listingValidatedAt": "2026-11-23T16:46:52.675Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "magonox/omarchy-goop",
+        "pluginIds": [
+          "io.github.magonox.goop"
+        ],
+        "commit": "dcda1b329a2b863ed204fbf346e6f4ac919b01e3",
+        "checkedAt": "2026-11-23T16:46:52.516Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "magonox/omarchy-goop",
+        "pluginIds": [
+          "io.github.magonox.goop"
+        ],
+        "commit": "dcda1b329a2b863ed204fbf346e6f4ac919b01e3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T16:46:52.516Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T10:14:22.550Z",
+        "requestEventId": 37033382435,
+        "requestedAt": "2026-11-23T16:45:10Z",
+        "reviewedAt": "2026-11-23T16:46:52.516Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.magonox.goop": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "education",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
