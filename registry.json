@@ -443226,6 +443226,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/joetheshmoe/omarchy-tv",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T10:15:44.900Z",
+      "listingValidatedCommit": "c9f673ffb9df3694b5a1cfa5198ef7e0a598ec02",
+      "listingValidatedAt": "2026-11-23T10:15:44.900Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joetheshmoe/omarchy-tv",
+        "pluginIds": [
+          "joetheshmoe.tv"
+        ],
+        "commit": "c9f673ffb9df3694b5a1cfa5198ef7e0a598ec02",
+        "checkedAt": "2026-11-23T10:15:44.703Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "joetheshmoe/omarchy-tv",
+        "pluginIds": [
+          "joetheshmoe.tv"
+        ],
+        "commit": "c9f673ffb9df3694b5a1cfa5198ef7e0a598ec02",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T10:15:44.703Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T09:52:05.442Z",
+        "requestEventId": 36993915603,
+        "requestedAt": "2026-11-23T10:09:23Z",
+        "reviewedAt": "2026-11-23T10:15:44.703Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "joetheshmoe.tv": {
+          "category": "Desktop",
+          "tags": [
+            "media",
+            "games",
+            "ai"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
