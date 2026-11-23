@@ -445994,6 +445994,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/devfrp/omarchy-speaker-sim",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:37:44.801Z",
+      "listingValidatedCommit": "4ce138cdc4b2b0c95b7091b0479f17720e08d84d",
+      "listingValidatedAt": "2026-11-23T23:37:44.801Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "devfrp/omarchy-speaker-sim",
+        "pluginIds": [
+          "devfrp.speaker-sim"
+        ],
+        "commit": "4ce138cdc4b2b0c95b7091b0479f17720e08d84d",
+        "checkedAt": "2026-11-23T23:37:44.611Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "devfrp/omarchy-speaker-sim",
+        "pluginIds": [
+          "devfrp.speaker-sim"
+        ],
+        "commit": "4ce138cdc4b2b0c95b7091b0479f17720e08d84d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T23:37:44.611Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T23:18:56.769Z",
+        "requestEventId": 37070595102,
+        "requestedAt": "2026-11-23T23:35:04Z",
+        "reviewedAt": "2026-11-23T23:37:44.611Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "devfrp.speaker-sim": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
