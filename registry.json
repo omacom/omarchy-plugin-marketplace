@@ -444224,6 +444224,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TammyX44/Signpost",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T14:23:42.804Z",
+      "listingValidatedCommit": "dd1069ea512e99e2ed4270ac722dcbf6c7536b01",
+      "listingValidatedAt": "2026-11-23T14:23:42.804Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tammyx44/signpost",
+        "pluginIds": [
+          "io.github.tammyx44.signpost"
+        ],
+        "commit": "dd1069ea512e99e2ed4270ac722dcbf6c7536b01",
+        "checkedAt": "2026-11-23T14:23:42.602Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.tammyx44.signpost": {
+          "category": "Productivity",
+          "tags": [
+            "workspaces",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
