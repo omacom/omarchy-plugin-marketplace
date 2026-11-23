@@ -444133,6 +444133,64 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/nixsh5/convertio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T12:48:56.121Z",
+      "listingValidatedCommit": "0b8fc64c31960061905be53993414649220b6664",
+      "listingValidatedAt": "2026-11-23T12:48:56.121Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nixsh5/convertio",
+        "pluginIds": [
+          "io.github.nixsh5.convertio"
+        ],
+        "commit": "0b8fc64c31960061905be53993414649220b6664",
+        "checkedAt": "2026-11-23T12:48:55.932Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nixsh5/convertio",
+        "pluginIds": [
+          "io.github.nixsh5.convertio"
+        ],
+        "commit": "0b8fc64c31960061905be53993414649220b6664",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T12:48:55.932Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T12:38:10.484Z",
+        "requestEventId": 37008578904,
+        "requestedAt": "2026-11-23T12:48:18Z",
+        "reviewedAt": "2026-11-23T12:48:55.932Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nixsh5.convertio": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
