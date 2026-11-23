@@ -445838,6 +445838,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/DanMacDonald/fleetpods",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:17:53.665Z",
+      "listingValidatedCommit": "6cc77a412d63f00c911a948890346c04213e6404",
+      "listingValidatedAt": "2026-11-23T23:17:53.665Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danmacdonald/fleetpods",
+        "pluginIds": [
+          "io.github.danmacdonald.fleetpods"
+        ],
+        "commit": "6cc77a412d63f00c911a948890346c04213e6404",
+        "checkedAt": "2026-11-23T23:17:53.493Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "danmacdonald/fleetpods",
+        "pluginIds": [
+          "io.github.danmacdonald.fleetpods"
+        ],
+        "commit": "6cc77a412d63f00c911a948890346c04213e6404",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T23:17:53.493Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T22:41:59.034Z",
+        "requestEventId": 37069061220,
+        "requestedAt": "2026-11-23T23:14:00Z",
+        "reviewedAt": "2026-11-23T23:17:53.493Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.danmacdonald.fleetpods": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
