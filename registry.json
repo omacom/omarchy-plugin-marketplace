@@ -445518,6 +445518,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/s3pp3ku/omarchy-daemons",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T22:06:23.000Z",
+      "listingValidatedCommit": "9afd70038ace6f73723c8c8efa417c306385c4fc",
+      "listingValidatedAt": "2026-11-23T22:06:23.000Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "s3pp3ku/omarchy-daemons",
+        "pluginIds": [
+          "io.github.s3pp3ku.omarchy-daemons"
+        ],
+        "commit": "9afd70038ace6f73723c8c8efa417c306385c4fc",
+        "checkedAt": "2026-11-23T22:06:22.834Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "s3pp3ku/omarchy-daemons",
+        "pluginIds": [
+          "io.github.s3pp3ku.omarchy-daemons"
+        ],
+        "commit": "9afd70038ace6f73723c8c8efa417c306385c4fc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T22:06:22.834Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T21:22:31.602Z",
+        "requestEventId": 37063603069,
+        "requestedAt": "2026-11-23T22:05:50Z",
+        "reviewedAt": "2026-11-23T22:06:22.834Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.s3pp3ku.omarchy-daemons": {
+          "category": "Other",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
