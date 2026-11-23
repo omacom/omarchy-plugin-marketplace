@@ -445736,6 +445736,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/alexwest1981/omario",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T23:04:20.455Z",
+      "listingValidatedCommit": "4a5cd941fa9fc604eb86c536dc65bdb15beba283",
+      "listingValidatedAt": "2026-11-23T23:04:20.455Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "alexwest1981/omario",
+        "pluginIds": [
+          "io.github.alexwest1981.omario"
+        ],
+        "commit": "4a5cd941fa9fc604eb86c536dc65bdb15beba283",
+        "checkedAt": "2026-11-23T23:04:20.295Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.alexwest1981.omario": {
+          "category": "Widgets",
+          "tags": [
+            "games",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
