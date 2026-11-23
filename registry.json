@@ -443870,6 +443870,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sahal9229/Omarchy_system_monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-23",
+      "listedAt": "2026-11-23T11:32:44.348Z",
+      "listingValidatedCommit": "8b91ca481b4c484313299e1ec8a7ec47326c6791",
+      "listingValidatedAt": "2026-11-23T11:32:44.348Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sahal9229/omarchy_system_monitor",
+        "pluginIds": [
+          "sahal.sysmon"
+        ],
+        "commit": "8b91ca481b4c484313299e1ec8a7ec47326c6791",
+        "checkedAt": "2026-11-23T11:32:44.197Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sahal9229/omarchy_system_monitor",
+        "pluginIds": [
+          "sahal.sysmon"
+        ],
+        "commit": "8b91ca481b4c484313299e1ec8a7ec47326c6791",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-23T11:32:44.197Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T11:10:01.263Z",
+        "requestEventId": 37000101646,
+        "requestedAt": "2026-11-23T11:17:58Z",
+        "reviewedAt": "2026-11-23T11:32:44.197Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "sahal.sysmon": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
