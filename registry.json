@@ -448893,6 +448893,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/ExeQue/omarchy-window-snap",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T13:40:44.468Z",
+      "listingValidatedCommit": "243b83e8297de0fff3adc3d79fb15380fa8e43ae",
+      "listingValidatedAt": "2026-11-24T13:40:44.468Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "exeque/omarchy-window-snap",
+        "pluginIds": [
+          "exeque.omarchy-window-snap"
+        ],
+        "commit": "243b83e8297de0fff3adc3d79fb15380fa8e43ae",
+        "checkedAt": "2026-11-24T13:40:44.345Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "exeque/omarchy-window-snap",
+        "pluginIds": [
+          "exeque.omarchy-window-snap"
+        ],
+        "commit": "243b83e8297de0fff3adc3d79fb15380fa8e43ae",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T13:40:44.345Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T13:27:08.680Z",
+        "requestEventId": 37135037453,
+        "requestedAt": "2026-11-24T13:40:07Z",
+        "reviewedAt": "2026-11-24T13:40:44.345Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "exeque.omarchy-window-snap": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
