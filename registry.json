@@ -446115,6 +446115,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Tiedeyez/halo",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T00:49:38.100Z",
+      "listingValidatedCommit": "9bc5e049c3d18b4868ef09a9932c551c9260272d",
+      "listingValidatedAt": "2026-11-24T00:49:38.100Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiedeyez/halo",
+        "pluginIds": [
+          "tiedeyez.halo"
+        ],
+        "commit": "9bc5e049c3d18b4868ef09a9932c551c9260272d",
+        "checkedAt": "2026-11-24T00:49:37.900Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tiedeyez/halo",
+        "pluginIds": [
+          "tiedeyez.halo"
+        ],
+        "commit": "9bc5e049c3d18b4868ef09a9932c551c9260272d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T00:49:37.900Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-23T23:53:48.352Z",
+        "requestEventId": 37075566101,
+        "requestedAt": "2026-11-24T00:49:04Z",
+        "reviewedAt": "2026-11-24T00:49:37.900Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "tiedeyez.halo": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
