@@ -448360,6 +448360,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RidgetopAi/backstory-panel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T11:16:11.739Z",
+      "listingValidatedCommit": "27106cd078a116f123c60d59014626a47256ec9f",
+      "listingValidatedAt": "2026-11-24T11:16:11.739Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ridgetopai/backstory-panel",
+        "pluginIds": [
+          "ridgetopai.backstory"
+        ],
+        "commit": "27106cd078a116f123c60d59014626a47256ec9f",
+        "checkedAt": "2026-11-24T11:16:11.575Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ridgetopai/backstory-panel",
+        "pluginIds": [
+          "ridgetopai.backstory"
+        ],
+        "commit": "27106cd078a116f123c60d59014626a47256ec9f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T11:16:11.575Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T10:22:42.019Z",
+        "requestEventId": 37121333393,
+        "requestedAt": "2026-11-24T11:15:31Z",
+        "reviewedAt": "2026-11-24T11:16:11.575Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ridgetopai.backstory": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
