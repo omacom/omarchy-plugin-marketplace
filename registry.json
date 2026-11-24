@@ -446247,6 +446247,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danieljohnmorris/matrix-squid",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T01:03:13.728Z",
+      "listingValidatedCommit": "0be2c7b1b3b53407d4a9b819009b1bb41ea07f39",
+      "listingValidatedAt": "2026-11-24T01:03:13.728Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danieljohnmorris/matrix-squid",
+        "pluginIds": [
+          "io.github.danieljohnmorris.matrix-squid"
+        ],
+        "commit": "0be2c7b1b3b53407d4a9b819009b1bb41ea07f39",
+        "checkedAt": "2026-11-24T01:03:13.601Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "danieljohnmorris/matrix-squid",
+        "pluginIds": [
+          "io.github.danieljohnmorris.matrix-squid"
+        ],
+        "commit": "0be2c7b1b3b53407d4a9b819009b1bb41ea07f39",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T01:03:13.601Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T00:51:05.730Z",
+        "requestEventId": 37076385416,
+        "requestedAt": "2026-11-24T01:01:25Z",
+        "reviewedAt": "2026-11-24T01:03:13.601Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.danieljohnmorris.matrix-squid": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
