@@ -448102,6 +448102,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/symonbaikov/omarchy-music-player",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T10:15:12.445Z",
+      "listingValidatedCommit": "2bcf545e6b389f71de7a904fe144a47bbac78a98",
+      "listingValidatedAt": "2026-11-24T10:15:12.445Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "symonbaikov/omarchy-music-player",
+        "pluginIds": [
+          "io.github.symonbaikov.ytmusic-mpv"
+        ],
+        "commit": "2bcf545e6b389f71de7a904fe144a47bbac78a98",
+        "checkedAt": "2026-11-24T10:15:12.301Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "symonbaikov/omarchy-music-player",
+        "pluginIds": [
+          "io.github.symonbaikov.ytmusic-mpv"
+        ],
+        "commit": "2bcf545e6b389f71de7a904fe144a47bbac78a98",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T10:15:12.301Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T09:40:35.516Z",
+        "requestEventId": 37115716411,
+        "requestedAt": "2026-11-24T10:14:31Z",
+        "reviewedAt": "2026-11-24T10:15:12.301Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.symonbaikov.ytmusic-mpv": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
