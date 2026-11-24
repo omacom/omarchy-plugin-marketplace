@@ -448954,6 +448954,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Pieter-Uys/omarchy-system-monitor",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T13:48:40.898Z",
+      "listingValidatedCommit": "9308b1b3a26363ee0ce85cf52606c6b46421f691",
+      "listingValidatedAt": "2026-11-24T13:48:40.898Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pieter-uys/omarchy-system-monitor",
+        "pluginIds": [
+          "io.github.pieter-uys.system-monitor"
+        ],
+        "commit": "9308b1b3a26363ee0ce85cf52606c6b46421f691",
+        "checkedAt": "2026-11-24T13:48:40.698Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.pieter-uys.system-monitor": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
