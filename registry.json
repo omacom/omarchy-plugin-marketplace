@@ -449763,6 +449763,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jpenagg/omarchy-lawn",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T19:14:26.189Z",
+      "listingValidatedCommit": "ae4a42fe493fc502936e4d4986a8d089fe06e263",
+      "listingValidatedAt": "2026-11-24T19:14:26.189Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jpenagg/omarchy-lawn",
+        "pluginIds": [
+          "jpenagg.lawn"
+        ],
+        "commit": "ae4a42fe493fc502936e4d4986a8d089fe06e263",
+        "checkedAt": "2026-11-24T19:14:25.970Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jpenagg.lawn": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
