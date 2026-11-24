@@ -447141,6 +447141,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/aronbohl/popout-weather",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T05:40:11.184Z",
+      "listingValidatedCommit": "cbe411c1520662559df3474f50b980c85ba465be",
+      "listingValidatedAt": "2026-11-24T05:40:11.184Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aronbohl/popout-weather",
+        "pluginIds": [
+          "io.github.aronbohl.popout-weather"
+        ],
+        "commit": "cbe411c1520662559df3474f50b980c85ba465be",
+        "checkedAt": "2026-11-24T05:40:10.964Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.aronbohl.popout-weather": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
