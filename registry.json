@@ -447467,6 +447467,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/7eleven77/Aeye",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T07:07:17.702Z",
+      "listingValidatedCommit": "29509f1cd2a06403d0530959db19c9c1c396ec89",
+      "listingValidatedAt": "2026-11-24T07:07:17.702Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "7eleven77/aeye",
+        "pluginIds": [
+          "io.github.7eleven77.aeye"
+        ],
+        "commit": "29509f1cd2a06403d0530959db19c9c1c396ec89",
+        "checkedAt": "2026-11-24T07:07:17.508Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.7eleven77.aeye": {
+          "category": "Productivity",
+          "tags": [
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
