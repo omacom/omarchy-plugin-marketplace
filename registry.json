@@ -446515,6 +446515,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Denizwsa/omarchy-superlig",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T03:27:20.242Z",
+      "listingValidatedCommit": "8685197d0d7ee78400ee665d4e05538a10029fb3",
+      "listingValidatedAt": "2026-11-24T03:27:20.242Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "denizwsa/omarchy-superlig",
+        "pluginIds": [
+          "superlig.futbol"
+        ],
+        "commit": "8685197d0d7ee78400ee665d4e05538a10029fb3",
+        "checkedAt": "2026-11-24T03:27:20.085Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "superlig.futbol": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
