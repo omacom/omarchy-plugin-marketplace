@@ -449434,6 +449434,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/frank-blueview-ai/omarchy-network-dns",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T16:28:44.699Z",
+      "listingValidatedCommit": "9b03aa5a01667ccb043dadc4a2af9791066743a7",
+      "listingValidatedAt": "2026-11-24T16:28:44.699Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "frank-blueview-ai/omarchy-network-dns",
+        "pluginIds": [
+          "blueview.network-dns"
+        ],
+        "commit": "9b03aa5a01667ccb043dadc4a2af9791066743a7",
+        "checkedAt": "2026-11-24T16:28:44.515Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "frank-blueview-ai/omarchy-network-dns",
+        "pluginIds": [
+          "blueview.network-dns"
+        ],
+        "commit": "9b03aa5a01667ccb043dadc4a2af9791066743a7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T16:28:44.515Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T16:15:11.991Z",
+        "requestEventId": 37153743210,
+        "requestedAt": "2026-11-24T16:28:09Z",
+        "reviewedAt": "2026-11-24T16:28:44.516Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "blueview.network-dns": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
