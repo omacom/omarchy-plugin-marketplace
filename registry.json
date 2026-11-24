@@ -447695,6 +447695,63 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/YashmitVaish/oma-spotify-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T08:53:58.331Z",
+      "listingValidatedCommit": "6ea5c163c802b25a14633a5e4463c3e3cf5d234c",
+      "listingValidatedAt": "2026-11-24T08:53:58.331Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "yashmitvaish/oma-spotify-plugin",
+        "pluginIds": [
+          "yash.spotify"
+        ],
+        "commit": "6ea5c163c802b25a14633a5e4463c3e3cf5d234c",
+        "checkedAt": "2026-11-24T08:53:58.132Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "yashmitvaish/oma-spotify-plugin",
+        "pluginIds": [
+          "yash.spotify"
+        ],
+        "commit": "6ea5c163c802b25a14633a5e4463c3e3cf5d234c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T08:53:58.132Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T08:31:07.247Z",
+        "requestEventId": 37108049874,
+        "requestedAt": "2026-11-24T08:53:24Z",
+        "reviewedAt": "2026-11-24T08:53:58.132Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "yash.spotify": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
