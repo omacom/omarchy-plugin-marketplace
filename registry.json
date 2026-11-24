@@ -447884,6 +447884,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/VivatVibe/omarchy-catrun",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T09:30:20.829Z",
+      "listingValidatedCommit": "15ce7376d04ace343a61a8f0b6f542695562be04",
+      "listingValidatedAt": "2026-11-24T09:30:20.829Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vivatvibe/omarchy-catrun",
+        "pluginIds": [
+          "mrnv.catrun"
+        ],
+        "commit": "15ce7376d04ace343a61a8f0b6f542695562be04",
+        "checkedAt": "2026-11-24T09:30:20.668Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mrnv.catrun": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
