@@ -446481,6 +446481,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/makehasteslowly/omarchy-elementa-spaces",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T03:19:57.214Z",
+      "listingValidatedCommit": "778278a97cd206fe6e88bb354f9a772c7a47c60b",
+      "listingValidatedAt": "2026-11-24T03:19:57.214Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "makehasteslowly/omarchy-elementa-spaces",
+        "pluginIds": [
+          "makehasteslowly.elementa"
+        ],
+        "commit": "778278a97cd206fe6e88bb354f9a772c7a47c60b",
+        "checkedAt": "2026-11-24T03:19:57.050Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "makehasteslowly.elementa": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "workspaces",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
