@@ -447918,6 +447918,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ekollof/blockwatch",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T09:38:17.013Z",
+      "listingValidatedCommit": "f6db051f3ae700bdcb0123b7b0c883cdf8c7f6d1",
+      "listingValidatedAt": "2026-11-24T09:38:17.013Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ekollof/blockwatch",
+        "pluginIds": [
+          "io.github.ekollof.blockwatch"
+        ],
+        "commit": "f6db051f3ae700bdcb0123b7b0c883cdf8c7f6d1",
+        "checkedAt": "2026-11-24T09:38:16.814Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.ekollof.blockwatch": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
