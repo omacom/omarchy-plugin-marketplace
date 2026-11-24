@@ -449276,6 +449276,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/davycardinaal/omarchy-eufy-doorbell",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T15:36:28.259Z",
+      "listingValidatedCommit": "b4eff0d5b9c56372f39a741a9c6b31662c8be4ad",
+      "listingValidatedAt": "2026-11-24T15:36:28.259Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "davycardinaal/omarchy-eufy-doorbell",
+        "pluginIds": [
+          "davycardinaal.eufy-doorbell"
+        ],
+        "commit": "b4eff0d5b9c56372f39a741a9c6b31662c8be4ad",
+        "checkedAt": "2026-11-24T15:36:28.057Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "davycardinaal/omarchy-eufy-doorbell",
+        "pluginIds": [
+          "davycardinaal.eufy-doorbell"
+        ],
+        "commit": "b4eff0d5b9c56372f39a741a9c6b31662c8be4ad",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T15:36:28.057Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T15:17:47.758Z",
+        "requestEventId": 37147994845,
+        "requestedAt": "2026-11-24T15:34:37Z",
+        "reviewedAt": "2026-11-24T15:36:28.057Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "davycardinaal.eufy-doorbell": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "media",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
