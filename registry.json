@@ -447245,6 +447245,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Meshwa428/quicky",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T06:16:18.301Z",
+      "listingValidatedCommit": "0f142144ae2d8da0e063a28483a6358e9e4a808c",
+      "listingValidatedAt": "2026-11-24T06:16:18.301Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "meshwa428/quicky",
+        "pluginIds": [
+          "meshwa.oma-quicky"
+        ],
+        "commit": "0f142144ae2d8da0e063a28483a6358e9e4a808c",
+        "checkedAt": "2026-11-24T06:16:18.108Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "meshwa428/quicky",
+        "pluginIds": [
+          "meshwa.oma-quicky"
+        ],
+        "commit": "0f142144ae2d8da0e063a28483a6358e9e4a808c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T06:16:18.108Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T05:36:46.338Z",
+        "requestEventId": 37096118999,
+        "requestedAt": "2026-11-24T06:15:42Z",
+        "reviewedAt": "2026-11-24T06:16:18.109Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "meshwa.oma-quicky": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
