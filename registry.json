@@ -449092,6 +449092,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/codesdilkhush/omarchy-sysmon",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T14:23:00.966Z",
+      "listingValidatedCommit": "0f34b3d50f3c3c9d42b45261e037178760fff4d0",
+      "listingValidatedAt": "2026-11-24T14:23:00.966Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "codesdilkhush/omarchy-sysmon",
+        "pluginIds": [
+          "codesdilkhush.sysmon"
+        ],
+        "commit": "0f34b3d50f3c3c9d42b45261e037178760fff4d0",
+        "checkedAt": "2026-11-24T14:23:00.793Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "codesdilkhush.sysmon": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
