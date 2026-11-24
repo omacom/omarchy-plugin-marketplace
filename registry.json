@@ -446696,6 +446696,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/fluxCapacitated/omarchy-ascii-screensaver-studio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T03:59:49.911Z",
+      "listingValidatedCommit": "b79b376183323b83e4a60115225a4886977cc0f4",
+      "listingValidatedAt": "2026-11-24T03:59:49.911Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fluxcapacitated/omarchy-ascii-screensaver-studio",
+        "pluginIds": [
+          "io.github.fluxcapacitated.ascii-screensaver-studio"
+        ],
+        "commit": "b79b376183323b83e4a60115225a4886977cc0f4",
+        "checkedAt": "2026-11-24T03:59:49.790Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fluxcapacitated/omarchy-ascii-screensaver-studio",
+        "pluginIds": [
+          "io.github.fluxcapacitated.ascii-screensaver-studio"
+        ],
+        "commit": "b79b376183323b83e4a60115225a4886977cc0f4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T03:59:49.790Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T03:21:23.827Z",
+        "requestEventId": 37087778713,
+        "requestedAt": "2026-11-24T03:59:20Z",
+        "reviewedAt": "2026-11-24T03:59:49.790Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fluxcapacitated.ascii-screensaver-studio": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
