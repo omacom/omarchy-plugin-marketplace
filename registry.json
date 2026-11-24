@@ -446973,6 +446973,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/benwillems/omarchy-spacex-sky",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T05:02:19.667Z",
+      "listingValidatedCommit": "8c5b8f3a103c2148c5a3a7e3199c87cbe86a64d7",
+      "listingValidatedAt": "2026-11-24T05:02:19.667Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "benwillems/omarchy-spacex-sky",
+        "pluginIds": [
+          "bjw.spacex-sky"
+        ],
+        "commit": "8c5b8f3a103c2148c5a3a7e3199c87cbe86a64d7",
+        "checkedAt": "2026-11-24T05:02:19.478Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "benwillems/omarchy-spacex-sky",
+        "pluginIds": [
+          "bjw.spacex-sky"
+        ],
+        "commit": "8c5b8f3a103c2148c5a3a7e3199c87cbe86a64d7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T05:02:19.478Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T04:06:02.962Z",
+        "requestEventId": 37091446359,
+        "requestedAt": "2026-11-24T05:01:49Z",
+        "reviewedAt": "2026-11-24T05:02:19.478Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "bjw.spacex-sky": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "kids"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
