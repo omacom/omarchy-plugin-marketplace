@@ -207092,8 +207092,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-16",
       "listedAt": "2026-09-16T10:19:58.367Z",
-      "listingValidatedCommit": "bf0590408588bf6873c526e40592b53098b2a0ec",
-      "listingValidatedAt": "2026-10-20T18:42:03.768Z",
+      "listingValidatedCommit": "f0cee6985cf0012b70a1a3d99540b8b5e940fc6a",
+      "listingValidatedAt": "2026-11-24T11:49:02.451Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -207102,17 +207102,18 @@
         "pluginIds": [
           "io.github.nobledoodle.omarchroma"
         ],
-        "commit": "bf0590408588bf6873c526e40592b53098b2a0ec",
-        "checkedAt": "2026-10-20T18:42:03.768Z",
+        "commit": "f0cee6985cf0012b70a1a3d99540b8b5e940fc6a",
+        "checkedAt": "2026-11-24T11:49:02.451Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "service-management",
-          "remote-build",
           "privilege",
           "package-manager",
-          "installer"
+          "remote-build",
+          "installer",
+          "sudoers-modification"
         ]
       },
       "plugins": {
@@ -207277,6 +207278,57 @@
             "reviewedAt": "2026-10-11T05:06:49.772Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "bf0590408588bf6873c526e40592b53098b2a0ec",
+          "validatedAt": "2026-10-20T18:42:03.768Z",
+          "branch": "main",
+          "supersededAt": "2026-11-24T11:49:02.451Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "nobledoodle/omarchroma",
+            "pluginIds": [
+              "io.github.nobledoodle.omarchroma"
+            ],
+            "commit": "bf0590408588bf6873c526e40592b53098b2a0ec",
+            "checkedAt": "2026-10-20T18:42:03.768Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "privilege",
+              "package-manager",
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "nobledoodle/omarchroma",
+            "pluginIds": [
+              "io.github.nobledoodle.omarchroma"
+            ],
+            "commit": "bf0590408588bf6873c526e40592b53098b2a0ec",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-20T18:42:03.768Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "service-management",
+              "remote-build",
+              "privilege",
+              "package-manager",
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-18T21:21:05.169Z",
+            "requestEventId": 33773429107,
+            "requestedAt": "2026-10-20T18:41:03Z",
+            "reviewedAt": "2026-10-20T18:42:03.768Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -207285,23 +207337,24 @@
         "pluginIds": [
           "io.github.nobledoodle.omarchroma"
         ],
-        "commit": "bf0590408588bf6873c526e40592b53098b2a0ec",
+        "commit": "f0cee6985cf0012b70a1a3d99540b8b5e940fc6a",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-20T18:42:03.768Z",
+        "baselineCheckedAt": "2026-11-24T11:49:02.451Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "service-management",
-          "remote-build",
           "privilege",
           "package-manager",
-          "installer"
+          "remote-build",
+          "installer",
+          "sudoers-modification"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-18T21:21:05.169Z",
-        "requestEventId": 33773429107,
-        "requestedAt": "2026-10-20T18:41:03Z",
-        "reviewedAt": "2026-10-20T18:42:03.768Z",
+        "reviewedBaselineCheckedAt": "2026-11-16T19:16:53.352Z",
+        "requestEventId": 37124205534,
+        "requestedAt": "2026-11-24T11:48:31Z",
+        "reviewedAt": "2026-11-24T11:49:02.451Z",
         "reviewer": "HANCORE-linux"
       }
     },
