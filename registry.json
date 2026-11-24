@@ -449020,6 +449020,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/codesdilkhush/omarchy-monitor-arrange",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T14:11:39.205Z",
+      "listingValidatedCommit": "02223dc966f281af46eef379e0cc90474464fe18",
+      "listingValidatedAt": "2026-11-24T14:11:39.205Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "codesdilkhush/omarchy-monitor-arrange",
+        "pluginIds": [
+          "codesdilkhush.monitor-arrange"
+        ],
+        "commit": "02223dc966f281af46eef379e0cc90474464fe18",
+        "checkedAt": "2026-11-24T14:11:39.002Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "codesdilkhush.monitor-arrange": {
+          "category": "Hardware",
+          "tags": [
+            "system",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
