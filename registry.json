@@ -446303,6 +446303,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imdevan/glassy.bar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T01:23:09.969Z",
+      "listingValidatedCommit": "1076bcb2efc859bef7bc1b97b2ecf39110fef636",
+      "listingValidatedAt": "2026-11-24T01:23:09.969Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imdevan/glassy.bar",
+        "pluginIds": [
+          "glassy.bar"
+        ],
+        "commit": "1076bcb2efc859bef7bc1b97b2ecf39110fef636",
+        "checkedAt": "2026-11-24T01:23:09.850Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "glassy.bar": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
