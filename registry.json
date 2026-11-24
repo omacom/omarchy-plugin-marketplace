@@ -447596,6 +447596,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Juanstudy/oma-type",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T08:33:25.140Z",
+      "listingValidatedCommit": "0d4724104b4d223c21a233dc9863331011d04daa",
+      "listingValidatedAt": "2026-11-24T08:33:25.140Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "juanstudy/oma-type",
+        "pluginIds": [
+          "juanstudy.oma-type"
+        ],
+        "commit": "0d4724104b4d223c21a233dc9863331011d04daa",
+        "checkedAt": "2026-11-24T08:33:24.941Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "juanstudy.oma-type": {
+          "category": "Productivity",
+          "tags": [
+            "quickshell",
+            "hyprland",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
