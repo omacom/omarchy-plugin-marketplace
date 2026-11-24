@@ -449126,6 +449126,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/uBruckhaus/omarchy-ai-playground",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T14:28:32.550Z",
+      "listingValidatedCommit": "92f2bd0d602d608c45850033fce01a371e2031d6",
+      "listingValidatedAt": "2026-11-24T14:28:32.550Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ubruckhaus/omarchy-ai-playground",
+        "pluginIds": [
+          "ubruckhaus.ai-playground"
+        ],
+        "commit": "92f2bd0d602d608c45850033fce01a371e2031d6",
+        "checkedAt": "2026-11-24T14:28:32.390Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ubruckhaus/omarchy-ai-playground",
+        "pluginIds": [
+          "ubruckhaus.ai-playground"
+        ],
+        "commit": "92f2bd0d602d608c45850033fce01a371e2031d6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T14:28:32.390Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T13:06:10.830Z",
+        "requestEventId": 37139170201,
+        "requestedAt": "2026-11-24T14:17:47Z",
+        "reviewedAt": "2026-11-24T14:28:32.390Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ubruckhaus.ai-playground": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "games"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
