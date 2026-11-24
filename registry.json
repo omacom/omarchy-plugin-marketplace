@@ -446662,6 +446662,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/koetsuji/omarchy-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T03:50:17.071Z",
+      "listingValidatedCommit": "ba5133cccd1b1f8addc26965f2f0df57d9b80d43",
+      "listingValidatedAt": "2026-11-24T03:50:17.071Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "koetsuji/omarchy-dock",
+        "pluginIds": [
+          "koetsuji.dock"
+        ],
+        "commit": "ba5133cccd1b1f8addc26965f2f0df57d9b80d43",
+        "checkedAt": "2026-11-24T03:50:16.917Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "koetsuji.dock": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
