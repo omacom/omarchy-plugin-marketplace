@@ -449953,6 +449953,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kkaattssuu/omarchy-connectivity",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T20:13:29.567Z",
+      "listingValidatedCommit": "1d91ac0b8620b571c433051078d6f68c9c91835b",
+      "listingValidatedAt": "2026-11-24T20:13:29.567Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kkaattssuu/omarchy-connectivity",
+        "pluginIds": [
+          "osean.connectivity"
+        ],
+        "commit": "1d91ac0b8620b571c433051078d6f68c9c91835b",
+        "checkedAt": "2026-11-24T20:13:29.408Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kkaattssuu/omarchy-connectivity",
+        "pluginIds": [
+          "osean.connectivity"
+        ],
+        "commit": "1d91ac0b8620b571c433051078d6f68c9c91835b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T20:13:29.408Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T19:42:03.601Z",
+        "requestEventId": 37175391741,
+        "requestedAt": "2026-11-24T20:12:51Z",
+        "reviewedAt": "2026-11-24T20:13:29.408Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "osean.connectivity": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
