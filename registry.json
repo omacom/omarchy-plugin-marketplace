@@ -447363,6 +447363,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/danyakmallun9999/omarchy-openbot",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T06:42:00.940Z",
+      "listingValidatedCommit": "ebdcc6abd378c3e5b26f8bb8d3376956e1305a21",
+      "listingValidatedAt": "2026-11-24T06:42:00.940Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "danyakmallun9999/omarchy-openbot",
+        "pluginIds": [
+          "danyakmallun.openbot"
+        ],
+        "commit": "ebdcc6abd378c3e5b26f8bb8d3376956e1305a21",
+        "checkedAt": "2026-11-24T06:42:00.743Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "danyakmallun.openbot": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
