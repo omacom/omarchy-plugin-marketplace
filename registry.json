@@ -446789,6 +446789,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/CornillieJ/omarchy-glyphs",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T04:14:46.761Z",
+      "listingValidatedCommit": "e4ae4c5185373fbf733248019a18bb65e03d8fdd",
+      "listingValidatedAt": "2026-11-24T04:14:46.761Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cornilliej/omarchy-glyphs",
+        "pluginIds": [
+          "jeffrey.glyphs"
+        ],
+        "commit": "e4ae4c5185373fbf733248019a18bb65e03d8fdd",
+        "checkedAt": "2026-11-24T04:14:46.562Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "jeffrey.glyphs": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
