@@ -446425,6 +446425,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Compourri/OmaWheel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T02:26:36.348Z",
+      "listingValidatedCommit": "819015a69195b6a822d24d83a9745d6db9be38e1",
+      "listingValidatedAt": "2026-11-24T02:26:36.348Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "compourri/omawheel",
+        "pluginIds": [
+          "oma.wheel"
+        ],
+        "commit": "819015a69195b6a822d24d83a9745d6db9be38e1",
+        "checkedAt": "2026-11-24T02:26:36.154Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "compourri/omawheel",
+        "pluginIds": [
+          "oma.wheel"
+        ],
+        "commit": "819015a69195b6a822d24d83a9745d6db9be38e1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T02:26:36.154Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T02:00:09.596Z",
+        "requestEventId": 37082027525,
+        "requestedAt": "2026-11-24T02:26:05Z",
+        "reviewedAt": "2026-11-24T02:26:36.154Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "oma.wheel": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
