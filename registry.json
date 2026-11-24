@@ -449729,6 +449729,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/BVisagie/omarchy-hueometry-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T19:05:36.831Z",
+      "listingValidatedCommit": "5279641a7dfdea8da812bb8106150c5eb7b70679",
+      "listingValidatedAt": "2026-11-24T19:05:36.831Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "bvisagie/omarchy-hueometry-plugin",
+        "pluginIds": [
+          "io.github.bvisagie.hueometry"
+        ],
+        "commit": "5279641a7dfdea8da812bb8106150c5eb7b70679",
+        "checkedAt": "2026-11-24T19:05:36.662Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.bvisagie.hueometry": {
+          "category": "Kids",
+          "tags": [
+            "games",
+            "kids",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
