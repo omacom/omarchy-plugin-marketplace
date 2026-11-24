@@ -448822,6 +448822,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/simanga-dev/omarchy-harvest",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T12:47:34.583Z",
+      "listingValidatedCommit": "57bb253ff8921a5852bb1e834fef93af84642c1e",
+      "listingValidatedAt": "2026-11-24T12:47:34.583Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "simanga-dev/omarchy-harvest",
+        "pluginIds": [
+          "simanga.harvest"
+        ],
+        "commit": "57bb253ff8921a5852bb1e834fef93af84642c1e",
+        "checkedAt": "2026-11-24T12:47:34.394Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "simanga.harvest": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
