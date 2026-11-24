@@ -448217,6 +448217,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jankeesvw/omarchy-unifi-protect-webcam",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T10:42:38.204Z",
+      "listingValidatedCommit": "98014762b7b90d11e09eed4435ec050d741761f5",
+      "listingValidatedAt": "2026-11-24T10:42:38.204Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jankeesvw/omarchy-unifi-protect-webcam",
+        "pluginIds": [
+          "jankeesvw.unifi-protect-webcam"
+        ],
+        "commit": "98014762b7b90d11e09eed4435ec050d741761f5",
+        "checkedAt": "2026-11-24T10:42:38.041Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jankeesvw/omarchy-unifi-protect-webcam",
+        "pluginIds": [
+          "jankeesvw.unifi-protect-webcam"
+        ],
+        "commit": "98014762b7b90d11e09eed4435ec050d741761f5",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T10:42:38.041Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T10:28:08.742Z",
+        "requestEventId": 37118242055,
+        "requestedAt": "2026-11-24T10:41:58Z",
+        "reviewedAt": "2026-11-24T10:42:38.041Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "jankeesvw.unifi-protect-webcam": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
