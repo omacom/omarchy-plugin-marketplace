@@ -446605,6 +446605,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sette7blo/omacrate",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T03:42:16.436Z",
+      "listingValidatedCommit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+      "listingValidatedAt": "2026-11-24T03:42:16.436Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sette7blo/omacrate",
+        "pluginIds": [
+          "io.github.sette7blo.omacrate"
+        ],
+        "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+        "checkedAt": "2026-11-24T03:42:16.222Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sette7blo/omacrate",
+        "pluginIds": [
+          "io.github.sette7blo.omacrate"
+        ],
+        "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T03:42:16.222Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T03:03:56.692Z",
+        "requestEventId": 37086747564,
+        "requestedAt": "2026-11-24T03:41:42Z",
+        "reviewedAt": "2026-11-24T03:42:16.222Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.sette7blo.omacrate": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
