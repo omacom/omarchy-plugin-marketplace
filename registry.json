@@ -448421,6 +448421,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Shaik-Nihal/omasaver",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T11:23:55.232Z",
+      "listingValidatedCommit": "2e9ef798e1c119612b37633179adc3f05c63ea75",
+      "listingValidatedAt": "2026-11-24T11:23:55.232Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "shaik-nihal/omasaver",
+        "pluginIds": [
+          "nihal.omasaver"
+        ],
+        "commit": "2e9ef798e1c119612b37633179adc3f05c63ea75",
+        "checkedAt": "2026-11-24T11:23:55.043Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "shaik-nihal/omasaver",
+        "pluginIds": [
+          "nihal.omasaver"
+        ],
+        "commit": "2e9ef798e1c119612b37633179adc3f05c63ea75",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T11:23:55.043Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T08:42:22.586Z",
+        "requestEventId": 37122018127,
+        "requestedAt": "2026-11-24T11:23:21Z",
+        "reviewedAt": "2026-11-24T11:23:55.043Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "nihal.omasaver": {
+          "category": "Appearance",
+          "tags": [
+            "launcher"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
