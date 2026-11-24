@@ -447951,6 +447951,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/omara256/omarchy-linux-learning-hub",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T09:46:45.042Z",
+      "listingValidatedCommit": "f7888c5d054f16115d9bf3d8dcf84872a8dda611",
+      "listingValidatedAt": "2026-11-24T09:46:45.042Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "omara256/omarchy-linux-learning-hub",
+        "pluginIds": [
+          "learn.linux"
+        ],
+        "commit": "f7888c5d054f16115d9bf3d8dcf84872a8dda611",
+        "checkedAt": "2026-11-24T09:46:44.910Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "sudoers-modification",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "omara256/omarchy-linux-learning-hub",
+        "pluginIds": [
+          "learn.linux"
+        ],
+        "commit": "f7888c5d054f16115d9bf3d8dcf84872a8dda611",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T09:46:44.910Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "sudoers-modification",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T09:39:41.556Z",
+        "requestEventId": 37112987338,
+        "requestedAt": "2026-11-24T09:46:15Z",
+        "reviewedAt": "2026-11-24T09:46:44.910Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "learn.linux": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
