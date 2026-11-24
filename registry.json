@@ -448480,6 +448480,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/layolayo/omarchy-mc-4bars",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T11:32:10.646Z",
+      "listingValidatedCommit": "d11b8b1deae444f814c6ff01a45e4db1f8bc737a",
+      "listingValidatedAt": "2026-11-24T11:32:10.646Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "layolayo/omarchy-mc-4bars",
+        "pluginIds": [
+          "io.github.layolayo.mc-4bars"
+        ],
+        "commit": "d11b8b1deae444f814c6ff01a45e4db1f8bc737a",
+        "checkedAt": "2026-11-24T11:32:10.488Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.layolayo.mc-4bars": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
