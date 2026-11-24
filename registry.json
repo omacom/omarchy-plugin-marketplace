@@ -446335,6 +446335,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/NinDaniel/omarchy-ac-music",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T02:10:36.943Z",
+      "listingValidatedCommit": "851248b4637c7889deb928a8b65f98a93f513f87",
+      "listingValidatedAt": "2026-11-24T02:10:36.943Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nindaniel/omarchy-ac-music",
+        "pluginIds": [
+          "io.github.nindaniel.ac-music"
+        ],
+        "commit": "851248b4637c7889deb928a8b65f98a93f513f87",
+        "checkedAt": "2026-11-24T02:10:36.747Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.nindaniel.ac-music": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
