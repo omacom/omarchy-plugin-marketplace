@@ -447174,6 +447174,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/smmmsmo/omarchy-prayer-times",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T05:58:19.378Z",
+      "listingValidatedCommit": "eef8812a6f8ca9fa92b7e7ecfb9390a236deaebf",
+      "listingValidatedAt": "2026-11-24T05:58:19.378Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smmmsmo/omarchy-prayer-times",
+        "pluginIds": [
+          "mo.prayer"
+        ],
+        "commit": "eef8812a6f8ca9fa92b7e7ecfb9390a236deaebf",
+        "checkedAt": "2026-11-24T05:58:19.214Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mo.prayer": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
