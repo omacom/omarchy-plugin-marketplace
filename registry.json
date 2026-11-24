@@ -449337,6 +449337,66 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Lik1ch/omarchy-steam-theme-sync",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T15:44:45.383Z",
+      "listingValidatedCommit": "a45db3f767f56f46e86d91c91367928e6b155f4c",
+      "listingValidatedAt": "2026-11-24T15:44:45.383Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lik1ch/omarchy-steam-theme-sync",
+        "pluginIds": [
+          "io.github.lik1ch.steam-theme-sync"
+        ],
+        "commit": "a45db3f767f56f46e86d91c91367928e6b155f4c",
+        "checkedAt": "2026-11-24T15:44:45.211Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "lik1ch/omarchy-steam-theme-sync",
+        "pluginIds": [
+          "io.github.lik1ch.steam-theme-sync"
+        ],
+        "commit": "a45db3f767f56f46e86d91c91367928e6b155f4c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T15:44:45.211Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T15:20:35.084Z",
+        "requestEventId": 37148526968,
+        "requestedAt": "2026-11-24T15:39:31Z",
+        "reviewedAt": "2026-11-24T15:44:45.211Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.lik1ch.steam-theme-sync": {
+          "category": "Appearance",
+          "tags": [
+            "games",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
