@@ -446911,6 +446911,68 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/AryanHamedani/jalali-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T04:51:35.127Z",
+      "listingValidatedCommit": "720342781da0c2200b9870e22682096039eb2f77",
+      "listingValidatedAt": "2026-11-24T04:51:35.127Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aryanhamedani/jalali-calendar",
+        "pluginIds": [
+          "io.github.aryanhamedani.jalali-calendar"
+        ],
+        "commit": "720342781da0c2200b9870e22682096039eb2f77",
+        "checkedAt": "2026-11-24T04:51:34.973Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "aryanhamedani/jalali-calendar",
+        "pluginIds": [
+          "io.github.aryanhamedani.jalali-calendar"
+        ],
+        "commit": "720342781da0c2200b9870e22682096039eb2f77",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T04:51:34.973Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer",
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T04:01:55.342Z",
+        "requestEventId": 37090805383,
+        "requestedAt": "2026-11-24T04:50:56Z",
+        "reviewedAt": "2026-11-24T04:51:34.973Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.aryanhamedani.jalali-calendar": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
