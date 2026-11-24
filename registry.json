@@ -449796,6 +449796,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/kelmankenberg/AppDeck",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T19:39:32.175Z",
+      "listingValidatedCommit": "d43b00ef118acd9223f15041c8d285f83d83cf7a",
+      "listingValidatedAt": "2026-11-24T19:39:32.175Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kelmankenberg/appdeck",
+        "pluginIds": [
+          "kelmankenberg.appdeck"
+        ],
+        "commit": "d43b00ef118acd9223f15041c8d285f83d83cf7a",
+        "checkedAt": "2026-11-24T19:39:31.975Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kelmankenberg.appdeck": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
