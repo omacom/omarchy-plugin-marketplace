@@ -448281,6 +448281,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Kunush/omarchy-minimized-windows",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T11:02:02.671Z",
+      "listingValidatedCommit": "3153b5147e832857c4566268f9a72ab22307bc90",
+      "listingValidatedAt": "2026-11-24T11:02:02.671Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kunush/omarchy-minimized-windows",
+        "pluginIds": [
+          "kunush.minimized-windows"
+        ],
+        "commit": "3153b5147e832857c4566268f9a72ab22307bc90",
+        "checkedAt": "2026-11-24T11:02:02.471Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "kunush.minimized-windows": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
