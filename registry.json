@@ -448159,6 +448159,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/brianbaldock/omarchy-handheld-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T10:32:10.919Z",
+      "listingValidatedCommit": "3028c33df9beb7b9e7693110afa2548e8db89000",
+      "listingValidatedAt": "2026-11-24T10:32:10.919Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "brianbaldock/omarchy-handheld-lock",
+        "pluginIds": [
+          "handheld.lock"
+        ],
+        "commit": "3028c33df9beb7b9e7693110afa2548e8db89000",
+        "checkedAt": "2026-11-24T10:32:10.728Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "brianbaldock/omarchy-handheld-lock",
+        "pluginIds": [
+          "handheld.lock"
+        ],
+        "commit": "3028c33df9beb7b9e7693110afa2548e8db89000",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T10:32:10.728Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T06:50:53.722Z",
+        "requestEventId": 37117283683,
+        "requestedAt": "2026-11-24T10:31:30Z",
+        "reviewedAt": "2026-11-24T10:32:10.728Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "handheld.lock": {
+          "category": "System",
+          "tags": [
+            "quickshell",
+            "security"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
