@@ -448757,6 +448757,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/chriopter/omarchy-siriremote",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T12:25:58.868Z",
+      "listingValidatedCommit": "30423ee7d865bce88e8f1027c2b44e386ebc2ba9",
+      "listingValidatedAt": "2026-11-24T12:25:58.868Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "chriopter/omarchy-siriremote",
+        "pluginIds": [
+          "chriopter.siriremote"
+        ],
+        "commit": "30423ee7d865bce88e8f1027c2b44e386ebc2ba9",
+        "checkedAt": "2026-11-24T12:25:58.672Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "chriopter/omarchy-siriremote",
+        "pluginIds": [
+          "chriopter.siriremote"
+        ],
+        "commit": "30423ee7d865bce88e8f1027c2b44e386ebc2ba9",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T12:25:58.672Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T11:41:41.208Z",
+        "requestEventId": 37127159478,
+        "requestedAt": "2026-11-24T12:19:44Z",
+        "reviewedAt": "2026-11-24T12:25:58.672Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "chriopter.siriremote": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
