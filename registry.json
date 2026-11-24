@@ -449499,6 +449499,67 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/fasi96/lumen",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T17:12:08.509Z",
+      "listingValidatedCommit": "a6082da54a92697b3904f9a8c7c9040606ceaee2",
+      "listingValidatedAt": "2026-11-24T17:12:08.509Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "fasi96/lumen",
+        "pluginIds": [
+          "io.github.fasi96.lumen"
+        ],
+        "commit": "a6082da54a92697b3904f9a8c7c9040606ceaee2",
+        "checkedAt": "2026-11-24T17:12:08.307Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "fasi96/lumen",
+        "pluginIds": [
+          "io.github.fasi96.lumen"
+        ],
+        "commit": "a6082da54a92697b3904f9a8c7c9040606ceaee2",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T17:12:08.307Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T16:43:13.839Z",
+        "requestEventId": 37158182203,
+        "requestedAt": "2026-11-24T17:11:10Z",
+        "reviewedAt": "2026-11-24T17:12:08.307Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.fasi96.lumen": {
+          "category": "Productivity",
+          "tags": [
+            "media",
+            "bar",
+            "ai"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
