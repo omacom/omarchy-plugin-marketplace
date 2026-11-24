@@ -448855,6 +448855,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/BenLewies/omarchy-yogurt",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T13:22:20.516Z",
+      "listingValidatedCommit": "e6d4bb5a8adb6c5fe33be705438e0c4d66120ba4",
+      "listingValidatedAt": "2026-11-24T13:22:20.516Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "benlewies/omarchy-yogurt",
+        "pluginIds": [
+          "bjl.yogurt"
+        ],
+        "commit": "e6d4bb5a8adb6c5fe33be705438e0c4d66120ba4",
+        "checkedAt": "2026-11-24T13:22:20.352Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "bjl.yogurt": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
