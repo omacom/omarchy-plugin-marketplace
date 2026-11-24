@@ -447306,6 +447306,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/wicky14/notification-center",
+      "type": "plugin-source",
+      "addedAt": "2026-11-24",
+      "listedAt": "2026-11-24T06:31:35.826Z",
+      "listingValidatedCommit": "2dc8297d790c3b876004cb47d1c963b079b1c741",
+      "listingValidatedAt": "2026-11-24T06:31:35.826Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "wicky14/notification-center",
+        "pluginIds": [
+          "wicky14.notification-center"
+        ],
+        "commit": "2dc8297d790c3b876004cb47d1c963b079b1c741",
+        "checkedAt": "2026-11-24T06:31:35.628Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "wicky14/notification-center",
+        "pluginIds": [
+          "wicky14.notification-center"
+        ],
+        "commit": "2dc8297d790c3b876004cb47d1c963b079b1c741",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-24T06:31:35.628Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T05:19:10.000Z",
+        "requestEventId": 37097155282,
+        "requestedAt": "2026-11-24T06:30:53Z",
+        "reviewedAt": "2026-11-24T06:31:35.628Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "wicky14.notification-center": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
