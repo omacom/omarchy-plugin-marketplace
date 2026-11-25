@@ -451601,6 +451601,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/RajShimpi/omarchy-dbsnap",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T21:04:23.545Z",
+      "listingValidatedCommit": "fd7b255df0a57aaaffcb70faf4d09c4526915aaa",
+      "listingValidatedAt": "2026-11-25T21:04:23.545Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rajshimpi/omarchy-dbsnap",
+        "pluginIds": [
+          "techspawn.dbsnap"
+        ],
+        "commit": "fd7b255df0a57aaaffcb70faf4d09c4526915aaa",
+        "checkedAt": "2026-11-25T21:04:23.382Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "rajshimpi/omarchy-dbsnap",
+        "pluginIds": [
+          "techspawn.dbsnap"
+        ],
+        "commit": "fd7b255df0a57aaaffcb70faf4d09c4526915aaa",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T21:04:23.382Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T06:39:59.847Z",
+        "requestEventId": 37299342180,
+        "requestedAt": "2026-11-25T21:03:48Z",
+        "reviewedAt": "2026-11-25T21:04:23.382Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "techspawn.dbsnap": {
+          "category": "Developer Tools",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
