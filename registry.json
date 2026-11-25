@@ -451120,6 +451120,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mattiasbrandt/sidepulse-omarchy-plugin",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T19:13:59.397Z",
+      "listingValidatedCommit": "e1e7509bed67b7e95a836d2f3dfa58135c86ddd4",
+      "listingValidatedAt": "2026-11-25T19:13:59.397Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mattiasbrandt/sidepulse-omarchy-plugin",
+        "pluginIds": [
+          "io.github.mattiasbrandt.sidepulse"
+        ],
+        "commit": "e1e7509bed67b7e95a836d2f3dfa58135c86ddd4",
+        "checkedAt": "2026-11-25T19:13:59.206Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mattiasbrandt/sidepulse-omarchy-plugin",
+        "pluginIds": [
+          "io.github.mattiasbrandt.sidepulse"
+        ],
+        "commit": "e1e7509bed67b7e95a836d2f3dfa58135c86ddd4",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T19:13:59.206Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "service-management",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T18:53:26.917Z",
+        "requestEventId": 37289400664,
+        "requestedAt": "2026-11-25T19:09:21Z",
+        "reviewedAt": "2026-11-25T19:13:59.206Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.mattiasbrandt.sidepulse": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
