@@ -450753,6 +450753,67 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cempack/omarchy-nextdns",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T17:07:35.140Z",
+      "listingValidatedCommit": "1c15929f0a4c3b8c04f23eb4c51de51f4862a561",
+      "listingValidatedAt": "2026-11-25T17:07:35.140Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cempack/omarchy-nextdns",
+        "pluginIds": [
+          "io.github.cempack.nextdns"
+        ],
+        "commit": "1c15929f0a4c3b8c04f23eb4c51de51f4862a561",
+        "checkedAt": "2026-11-25T17:07:34.932Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cempack/omarchy-nextdns",
+        "pluginIds": [
+          "io.github.cempack.nextdns"
+        ],
+        "commit": "1c15929f0a4c3b8c04f23eb4c51de51f4862a561",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T17:07:34.932Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T10:45:31.924Z",
+        "requestEventId": 37278014211,
+        "requestedAt": "2026-11-25T17:07:00Z",
+        "reviewedAt": "2026-11-25T17:07:34.932Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cempack.nextdns": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
