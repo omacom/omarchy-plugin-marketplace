@@ -440532,8 +440532,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-20",
       "listedAt": "2026-11-20T23:10:28.834Z",
-      "listingValidatedCommit": "f6b4f0365e8a9b64d101344fbe0a170cf75d883d",
-      "listingValidatedAt": "2026-11-20T23:10:28.834Z",
+      "listingValidatedCommit": "9e28a51e04d725605fcd441a61369cc34bf328a2",
+      "listingValidatedAt": "2026-11-25T22:42:52.771Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -440542,8 +440542,8 @@
         "pluginIds": [
           "io.github.neshath.snowfx"
         ],
-        "commit": "f6b4f0365e8a9b64d101344fbe0a170cf75d883d",
-        "checkedAt": "2026-11-20T23:10:28.706Z",
+        "commit": "9e28a51e04d725605fcd441a61369cc34bf328a2",
+        "checkedAt": "2026-11-25T22:42:52.771Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -440559,7 +440559,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "f6b4f0365e8a9b64d101344fbe0a170cf75d883d",
+          "validatedAt": "2026-11-20T23:10:28.834Z",
+          "branch": "main",
+          "supersededAt": "2026-11-25T22:42:52.771Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "neshath/omarchy-snowfx",
+            "pluginIds": [
+              "io.github.neshath.snowfx"
+            ],
+            "commit": "f6b4f0365e8a9b64d101344fbe0a170cf75d883d",
+            "checkedAt": "2026-11-20T23:10:28.706Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/kill74/omarchy-scenes",
