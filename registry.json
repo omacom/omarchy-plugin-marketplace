@@ -451567,6 +451567,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/RajShimpi/omarchy-tips",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T20:52:48.966Z",
+      "listingValidatedCommit": "09c6d1fe35ceb9f8baf49c9d0e63dd90d753d0cb",
+      "listingValidatedAt": "2026-11-25T20:52:48.966Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "rajshimpi/omarchy-tips",
+        "pluginIds": [
+          "techspawn.tips"
+        ],
+        "commit": "09c6d1fe35ceb9f8baf49c9d0e63dd90d753d0cb",
+        "checkedAt": "2026-11-25T20:52:48.803Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "techspawn.tips": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
