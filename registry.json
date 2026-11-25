@@ -450109,6 +450109,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/LeninZapata/omarchy-super-folder-lock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T12:00:19.008Z",
+      "listingValidatedCommit": "2ae4918fbcfa139b2ce5dc6f17498a35c0a15307",
+      "listingValidatedAt": "2026-11-25T12:00:19.008Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "leninzapata/omarchy-super-folder-lock",
+        "pluginIds": [
+          "leninzapata.super-folder-lock"
+        ],
+        "commit": "2ae4918fbcfa139b2ce5dc6f17498a35c0a15307",
+        "checkedAt": "2026-11-25T12:00:18.802Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "leninzapata/omarchy-super-folder-lock",
+        "pluginIds": [
+          "leninzapata.super-folder-lock"
+        ],
+        "commit": "2ae4918fbcfa139b2ce5dc6f17498a35c0a15307",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T12:00:18.802Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T19:33:09.923Z",
+        "requestEventId": 37247866373,
+        "requestedAt": "2026-11-25T11:59:47Z",
+        "reviewedAt": "2026-11-25T12:00:18.802Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "leninzapata.super-folder-lock": {
+          "category": "System",
+          "tags": [
+            "security",
+            "system",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
