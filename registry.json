@@ -450433,6 +450433,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TeXaCoNy/spinbloom",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T14:45:25.644Z",
+      "listingValidatedCommit": "37917f73ed372db638f24cdb1fc477bf8c2d7f9d",
+      "listingValidatedAt": "2026-11-25T14:45:25.644Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "texacony/spinbloom",
+        "pluginIds": [
+          "spinbloom"
+        ],
+        "commit": "37917f73ed372db638f24cdb1fc477bf8c2d7f9d",
+        "checkedAt": "2026-11-25T14:45:25.483Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "texacony/spinbloom",
+        "pluginIds": [
+          "spinbloom"
+        ],
+        "commit": "37917f73ed372db638f24cdb1fc477bf8c2d7f9d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T14:45:25.483Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T23:42:12.034Z",
+        "requestEventId": 37261941144,
+        "requestedAt": "2026-11-25T14:19:50Z",
+        "reviewedAt": "2026-11-25T14:45:25.483Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "spinbloom": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
