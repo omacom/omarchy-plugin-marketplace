@@ -450659,6 +450659,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Pillartheman1/omarchy-quickpanel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T15:55:11.575Z",
+      "listingValidatedCommit": "16d391f625cb73d4e8e19d11cce36cd70ed1feb0",
+      "listingValidatedAt": "2026-11-25T15:55:11.575Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pillartheman1/omarchy-quickpanel",
+        "pluginIds": [
+          "daniel.quickpanel"
+        ],
+        "commit": "16d391f625cb73d4e8e19d11cce36cd70ed1feb0",
+        "checkedAt": "2026-11-25T15:55:11.413Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "daniel.quickpanel": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
