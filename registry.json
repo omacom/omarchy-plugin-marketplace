@@ -450075,6 +450075,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dumpsteredition/omarky",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T11:47:54.959Z",
+      "listingValidatedCommit": "fe16db417e766b502d08b97a9dda314123958c08",
+      "listingValidatedAt": "2026-11-25T11:47:54.959Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dumpsteredition/omarky",
+        "pluginIds": [
+          "io.github.dumpsteredition.omarky"
+        ],
+        "commit": "fe16db417e766b502d08b97a9dda314123958c08",
+        "checkedAt": "2026-11-25T11:47:54.796Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.dumpsteredition.omarky": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
