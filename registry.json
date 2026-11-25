@@ -451823,6 +451823,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Hapiest7310/omarchy-translit",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T23:07:26.007Z",
+      "listingValidatedCommit": "047b3a82d4e197934f041672afc07aee8a6620a4",
+      "listingValidatedAt": "2026-11-25T23:07:26.007Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hapiest7310/omarchy-translit",
+        "pluginIds": [
+          "hallucination.translit"
+        ],
+        "commit": "047b3a82d4e197934f041672afc07aee8a6620a4",
+        "checkedAt": "2026-11-25T23:07:25.792Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "hallucination.translit": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
