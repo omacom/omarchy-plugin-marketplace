@@ -450490,6 +450490,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tlemoss/omarchy-events",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T14:50:46.183Z",
+      "listingValidatedCommit": "19d2ab110fa44ab016cb8b9d1f72da13a30095f7",
+      "listingValidatedAt": "2026-11-25T14:50:46.183Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tlemoss/omarchy-events",
+        "pluginIds": [
+          "tlemoss.events"
+        ],
+        "commit": "19d2ab110fa44ab016cb8b9d1f72da13a30095f7",
+        "checkedAt": "2026-11-25T14:50:45.983Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tlemoss.events": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
