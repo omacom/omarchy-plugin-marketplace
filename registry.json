@@ -450559,6 +450559,73 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/pl0xuee/proton-for-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T15:27:34.555Z",
+      "listingValidatedCommit": "98916ca285b6f1d61bda05031e2904cb0e7e10f7",
+      "listingValidatedAt": "2026-11-25T15:27:34.555Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "pl0xuee/proton-for-omarchy",
+        "pluginIds": [
+          "pl0xuee.proton-for-omarchy"
+        ],
+        "commit": "98916ca285b6f1d61bda05031e2904cb0e7e10f7",
+        "checkedAt": "2026-11-25T15:27:34.400Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "pl0xuee/proton-for-omarchy",
+        "pluginIds": [
+          "pl0xuee.proton-for-omarchy"
+        ],
+        "commit": "98916ca285b6f1d61bda05031e2904cb0e7e10f7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T15:27:34.400Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T05:09:39.164Z",
+        "requestEventId": 37269194732,
+        "requestedAt": "2026-11-25T15:26:49Z",
+        "reviewedAt": "2026-11-25T15:27:34.400Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "pl0xuee.proton-for-omarchy": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "security"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
