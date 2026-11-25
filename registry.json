@@ -451439,6 +451439,71 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Cause-of-a-Kind/omapreview",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T20:21:59.983Z",
+      "listingValidatedCommit": "f7b435d19e288334b6106d8975fd41c61af78584",
+      "listingValidatedAt": "2026-11-25T20:21:59.983Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cause-of-a-kind/omapreview",
+        "pluginIds": [
+          "coak.omapreview"
+        ],
+        "commit": "f7b435d19e288334b6106d8975fd41c61af78584",
+        "checkedAt": "2026-11-25T20:21:59.827Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cause-of-a-kind/omapreview",
+        "pluginIds": [
+          "coak.omapreview"
+        ],
+        "commit": "f7b435d19e288334b6106d8975fd41c61af78584",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T20:21:59.827Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T14:48:48.875Z",
+        "requestEventId": 37295714251,
+        "requestedAt": "2026-11-25T20:21:27Z",
+        "reviewedAt": "2026-11-25T20:21:59.827Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "coak.omapreview": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
