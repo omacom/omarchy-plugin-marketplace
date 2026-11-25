@@ -451015,6 +451015,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/swaits/omarchy-freespace",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T18:34:45.199Z",
+      "listingValidatedCommit": "9f11e92949167768a45be388c14d12ea17eef928",
+      "listingValidatedAt": "2026-11-25T18:34:45.199Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "swaits/omarchy-freespace",
+        "pluginIds": [
+          "io.github.swaits.freespace"
+        ],
+        "commit": "9f11e92949167768a45be388c14d12ea17eef928",
+        "checkedAt": "2026-11-25T18:34:44.997Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.swaits.freespace": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
