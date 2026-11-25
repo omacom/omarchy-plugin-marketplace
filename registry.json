@@ -451504,6 +451504,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Dusec82/omarchy-sstp-manager",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T20:39:58.987Z",
+      "listingValidatedCommit": "898744f8e22c5cf387e793434b68c5b77fb05285",
+      "listingValidatedAt": "2026-11-25T20:39:58.987Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dusec82/omarchy-sstp-manager",
+        "pluginIds": [
+          "org.dusec.sstp-manager"
+        ],
+        "commit": "898744f8e22c5cf387e793434b68c5b77fb05285",
+        "checkedAt": "2026-11-25T20:39:58.769Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dusec82/omarchy-sstp-manager",
+        "pluginIds": [
+          "org.dusec.sstp-manager"
+        ],
+        "commit": "898744f8e22c5cf387e793434b68c5b77fb05285",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T20:39:58.769Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T20:10:21.969Z",
+        "requestEventId": 37297257547,
+        "requestedAt": "2026-11-25T20:39:24Z",
+        "reviewedAt": "2026-11-25T20:39:58.769Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "org.dusec.sstp-manager": {
+          "category": "Productivity",
+          "tags": [
+            "vpn"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
