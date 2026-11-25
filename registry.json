@@ -450814,6 +450814,77 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/NobleDoodle/letitsnow",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T17:26:51.534Z",
+      "listingValidatedCommit": "e07d73022d166f43db703ef6e8ea66b527d825f1",
+      "listingValidatedAt": "2026-11-25T17:26:51.534Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nobledoodle/letitsnow",
+        "pluginIds": [
+          "io.github.nobledoodle.letitsnow"
+        ],
+        "commit": "e07d73022d166f43db703ef6e8ea66b527d825f1",
+        "checkedAt": "2026-11-25T17:26:51.371Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "sudoers-modification"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nobledoodle/letitsnow",
+        "pluginIds": [
+          "io.github.nobledoodle.letitsnow"
+        ],
+        "commit": "e07d73022d166f43db703ef6e8ea66b527d825f1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T17:26:51.371Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "privilege",
+          "remote-build",
+          "installer",
+          "package-manager",
+          "sudoers-modification"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T04:22:38.054Z",
+        "requestEventId": 37279919793,
+        "requestedAt": "2026-11-25T17:26:14Z",
+        "reviewedAt": "2026-11-25T17:26:51.371Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nobledoodle.letitsnow": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
