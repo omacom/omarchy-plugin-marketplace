@@ -451086,6 +451086,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/HackerO112/omarchy-coverflow-menu",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T19:08:14.480Z",
+      "listingValidatedCommit": "d2f4f913fed38bec467e2c1b615c6e0bbca87af0",
+      "listingValidatedAt": "2026-11-25T19:08:14.480Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "hackero112/omarchy-coverflow-menu",
+        "pluginIds": [
+          "nothing.menu"
+        ],
+        "commit": "d2f4f913fed38bec467e2c1b615c6e0bbca87af0",
+        "checkedAt": "2026-11-25T19:08:14.286Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "nothing.menu": {
+          "category": "Desktop",
+          "tags": [
+            "launcher",
+            "quickshell",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
