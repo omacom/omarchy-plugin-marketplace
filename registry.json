@@ -450342,6 +450342,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Smilecry44/ardoise",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T13:18:40.382Z",
+      "listingValidatedCommit": "f304fab90169e429736e5197fd99a05771cd9da7",
+      "listingValidatedAt": "2026-11-25T13:18:40.382Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "smilecry44/ardoise",
+        "pluginIds": [
+          "io.github.smilecry44.ardoise"
+        ],
+        "commit": "f304fab90169e429736e5197fd99a05771cd9da7",
+        "checkedAt": "2026-11-25T13:18:40.170Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "smilecry44/ardoise",
+        "pluginIds": [
+          "io.github.smilecry44.ardoise"
+        ],
+        "commit": "f304fab90169e429736e5197fd99a05771cd9da7",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T13:18:40.170Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T08:45:45.327Z",
+        "requestEventId": 37255406794,
+        "requestedAt": "2026-11-25T13:18:03Z",
+        "reviewedAt": "2026-11-25T13:18:40.170Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.smilecry44.ardoise": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
