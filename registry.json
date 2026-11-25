@@ -450693,6 +450693,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/tiagovicente2/omarchy-glance",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T16:50:49.818Z",
+      "listingValidatedCommit": "67376da4f1fa23ed4d194b329d0f55dc4494599f",
+      "listingValidatedAt": "2026-11-25T16:50:49.818Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiagovicente2/omarchy-glance",
+        "pluginIds": [
+          "omarchy-glance"
+        ],
+        "commit": "67376da4f1fa23ed4d194b329d0f55dc4494599f",
+        "checkedAt": "2026-11-25T16:50:49.649Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "tiagovicente2/omarchy-glance",
+        "pluginIds": [
+          "omarchy-glance"
+        ],
+        "commit": "67376da4f1fa23ed4d194b329d0f55dc4494599f",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T16:50:49.649Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T16:34:42.845Z",
+        "requestEventId": 37276271079,
+        "requestedAt": "2026-11-25T16:50:08Z",
+        "reviewedAt": "2026-11-25T16:50:49.649Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "omarchy-glance": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
