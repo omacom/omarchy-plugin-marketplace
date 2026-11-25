@@ -451948,6 +451948,61 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zacksolver/too-busy-to-click",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T23:38:51.496Z",
+      "listingValidatedCommit": "9f7d17e83f909337d1f7fef277ef4523d9db1b02",
+      "listingValidatedAt": "2026-11-25T23:38:51.496Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zacksolver/too-busy-to-click",
+        "pluginIds": [
+          "zacksolver.too-busy-to-click"
+        ],
+        "commit": "9f7d17e83f909337d1f7fef277ef4523d9db1b02",
+        "checkedAt": "2026-11-25T23:38:51.296Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zacksolver/too-busy-to-click",
+        "pluginIds": [
+          "zacksolver.too-busy-to-click"
+        ],
+        "commit": "9f7d17e83f909337d1f7fef277ef4523d9db1b02",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T23:38:51.296Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T17:25:58.915Z",
+        "requestEventId": 37311102020,
+        "requestedAt": "2026-11-25T23:38:14Z",
+        "reviewedAt": "2026-11-25T23:38:51.296Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "zacksolver.too-busy-to-click": {
+          "category": "Appearance",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
