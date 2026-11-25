@@ -451048,6 +451048,44 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/eludif/omarchy-anki-review",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T18:47:38.815Z",
+      "listingValidatedCommit": "3af779175228683378a45982b5ecc085346e15a5",
+      "listingValidatedAt": "2026-11-25T18:47:38.815Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "eludif/omarchy-anki-review",
+        "pluginIds": [
+          "anki.review"
+        ],
+        "commit": "3af779175228683378a45982b5ecc085346e15a5",
+        "checkedAt": "2026-11-25T18:47:38.648Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anki.review": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
