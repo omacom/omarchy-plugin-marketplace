@@ -451889,6 +451889,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dadoux01/omarchy-homelab",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T23:30:51.074Z",
+      "listingValidatedCommit": "8511cdeb2bbcd163044b45f46f9cec6f83bca5b0",
+      "listingValidatedAt": "2026-11-25T23:30:51.074Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dadoux01/omarchy-homelab",
+        "pluginIds": [
+          "dadoux01.homelab"
+        ],
+        "commit": "8511cdeb2bbcd163044b45f46f9cec6f83bca5b0",
+        "checkedAt": "2026-11-25T23:30:50.880Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "dadoux01/omarchy-homelab",
+        "pluginIds": [
+          "dadoux01.homelab"
+        ],
+        "commit": "8511cdeb2bbcd163044b45f46f9cec6f83bca5b0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T23:30:50.880Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T16:38:08.033Z",
+        "requestEventId": 37310527940,
+        "requestedAt": "2026-11-25T23:30:19Z",
+        "reviewedAt": "2026-11-25T23:30:50.880Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "dadoux01.homelab": {
+          "category": "System",
+          "tags": [
+            "system",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
