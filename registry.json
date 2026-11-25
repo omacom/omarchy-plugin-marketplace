@@ -450016,6 +450016,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mirecad/omakeepick",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T11:28:17.298Z",
+      "listingValidatedCommit": "062056123f10714bd7186b775ba912bcf7e7c11d",
+      "listingValidatedAt": "2026-11-25T11:28:17.298Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mirecad/omakeepick",
+        "pluginIds": [
+          "mirecad.omakeepick"
+        ],
+        "commit": "062056123f10714bd7186b775ba912bcf7e7c11d",
+        "checkedAt": "2026-11-25T11:28:17.096Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mirecad/omakeepick",
+        "pluginIds": [
+          "mirecad.omakeepick"
+        ],
+        "commit": "062056123f10714bd7186b775ba912bcf7e7c11d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T11:28:17.096Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-24T20:45:10.377Z",
+        "requestEventId": 37244992961,
+        "requestedAt": "2026-11-25T11:27:41Z",
+        "reviewedAt": "2026-11-25T11:28:17.097Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mirecad.omakeepick": {
+          "category": "Productivity",
+          "tags": [
+            "security",
+            "launcher",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
