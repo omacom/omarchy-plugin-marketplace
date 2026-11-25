@@ -450946,6 +450946,75 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/kub0-ai/kub0-agent",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T18:15:50.106Z",
+      "listingValidatedCommit": "08a591c3e3470ad95f4cd71cde24a1d8c92009ae",
+      "listingValidatedAt": "2026-11-25T18:15:50.106Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "kub0-ai/kub0-agent",
+        "pluginIds": [
+          "ai.kub0.agent"
+        ],
+        "commit": "08a591c3e3470ad95f4cd71cde24a1d8c92009ae",
+        "checkedAt": "2026-11-25T18:15:49.899Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "kub0-ai/kub0-agent",
+        "pluginIds": [
+          "ai.kub0.agent"
+        ],
+        "commit": "08a591c3e3470ad95f4cd71cde24a1d8c92009ae",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-25T18:15:49.899Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "remote-build",
+          "service-management",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T13:36:07.359Z",
+        "requestEventId": 37284505096,
+        "requestedAt": "2026-11-25T18:15:12Z",
+        "reviewedAt": "2026-11-25T18:15:49.899Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ai.kub0.agent": {
+          "category": "System",
+          "tags": [
+            "security",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
