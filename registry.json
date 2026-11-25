@@ -450399,6 +450399,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/advocu/omarchy-periodic-table",
+      "type": "plugin-source",
+      "addedAt": "2026-11-25",
+      "listedAt": "2026-11-25T13:44:33.827Z",
+      "listingValidatedCommit": "6497f3772a3eea51efe13c04fe99ad25471f59aa",
+      "listingValidatedAt": "2026-11-25T13:44:33.827Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "advocu/omarchy-periodic-table",
+        "pluginIds": [
+          "io.github.advocu.periodic-table"
+        ],
+        "commit": "6497f3772a3eea51efe13c04fe99ad25471f59aa",
+        "checkedAt": "2026-11-25T13:44:33.671Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.advocu.periodic-table": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
