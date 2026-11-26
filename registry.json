@@ -136116,8 +136116,8 @@
       "type": "plugin-source",
       "addedAt": "2026-09-02",
       "listedAt": "2026-09-02T16:28:36.912Z",
-      "listingValidatedCommit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
-      "listingValidatedAt": "2026-10-06T16:08:15.721Z",
+      "listingValidatedCommit": "35d49954384a0f34c534afdd8446fd1c216c18ab",
+      "listingValidatedAt": "2026-11-26T22:28:00.861Z",
       "listingValidatedBranch": "master",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -136126,8 +136126,8 @@
         "pluginIds": [
           "io.github.calebhat.workscape"
         ],
-        "commit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
-        "checkedAt": "2026-10-06T16:08:15.721Z",
+        "commit": "35d49954384a0f34c534afdd8446fd1c216c18ab",
+        "checkedAt": "2026-11-26T22:28:00.861Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -136190,6 +136190,49 @@
             "findings": [],
             "capabilities": []
           }
+        },
+        {
+          "commit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
+          "validatedAt": "2026-10-06T16:08:15.721Z",
+          "branch": "master",
+          "supersededAt": "2026-11-26T22:28:00.861Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "calebhat/omarchy-workscape",
+            "pluginIds": [
+              "io.github.calebhat.workscape"
+            ],
+            "commit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
+            "checkedAt": "2026-10-06T16:08:15.721Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "calebhat/omarchy-workscape",
+            "pluginIds": [
+              "io.github.calebhat.workscape"
+            ],
+            "commit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-10-06T16:08:15.721Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "privilege"
+            ],
+            "reviewedBaselineCheckedAt": "2026-10-06T15:34:21.444Z",
+            "requestEventId": 32616604082,
+            "requestedAt": "2026-10-06T16:07:41Z",
+            "reviewedAt": "2026-10-06T16:08:15.721Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
       ],
       "maintainerVerificationReview": {
@@ -136198,19 +136241,19 @@
         "pluginIds": [
           "io.github.calebhat.workscape"
         ],
-        "commit": "397f10625c2eb9bb33b1032ed6e0b626ea48ae99",
+        "commit": "35d49954384a0f34c534afdd8446fd1c216c18ab",
         "baselineVersion": "3",
         "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-10-06T16:08:15.721Z",
+        "baselineCheckedAt": "2026-11-26T22:28:00.861Z",
         "baselineOutcome": "review-required",
         "findings": [],
         "capabilities": [
           "privilege"
         ],
-        "reviewedBaselineCheckedAt": "2026-10-06T15:34:21.444Z",
-        "requestEventId": 32616604082,
-        "requestedAt": "2026-10-06T16:07:41Z",
-        "reviewedAt": "2026-10-06T16:08:15.721Z",
+        "reviewedBaselineCheckedAt": "2026-11-26T20:53:39.035Z",
+        "requestEventId": 37415509990,
+        "requestedAt": "2026-11-26T22:26:54Z",
+        "reviewedAt": "2026-11-26T22:28:00.861Z",
         "reviewer": "HANCORE-linux"
       }
     },
