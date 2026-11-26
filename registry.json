@@ -452294,6 +452294,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sadsfae/nota",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T02:03:19.192Z",
+      "listingValidatedCommit": "a12e31ec8ce62e93611d57ba8593e623e020b19e",
+      "listingValidatedAt": "2026-11-26T02:03:19.192Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sadsfae/nota",
+        "pluginIds": [
+          "io.github.sadsfae.nota"
+        ],
+        "commit": "a12e31ec8ce62e93611d57ba8593e623e020b19e",
+        "checkedAt": "2026-11-26T02:03:18.999Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.sadsfae.nota": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
