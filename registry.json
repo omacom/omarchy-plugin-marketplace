@@ -453209,6 +453209,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/zigmoo/webcamtuner",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T08:25:53.705Z",
+      "listingValidatedCommit": "be2f866871575dadefc0b4feff4d62257d197624",
+      "listingValidatedAt": "2026-11-26T08:25:53.705Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zigmoo/webcamtuner",
+        "pluginIds": [
+          "moo.webcamtuner"
+        ],
+        "commit": "be2f866871575dadefc0b4feff4d62257d197624",
+        "checkedAt": "2026-11-26T08:25:53.538Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zigmoo/webcamtuner",
+        "pluginIds": [
+          "moo.webcamtuner"
+        ],
+        "commit": "be2f866871575dadefc0b4feff4d62257d197624",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T08:25:53.538Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T07:47:27.618Z",
+        "requestEventId": 37344654132,
+        "requestedAt": "2026-11-26T08:25:23Z",
+        "reviewedAt": "2026-11-26T08:25:53.538Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "moo.webcamtuner": {
+          "category": "Hardware",
+          "tags": [
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
