@@ -453522,6 +453522,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/atifkhan161/club-hub-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T10:21:15.101Z",
+      "listingValidatedCommit": "f203471f6b44bac2006b456534b561c341f8b958",
+      "listingValidatedAt": "2026-11-26T10:21:15.101Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "atifkhan161/club-hub-omarchy",
+        "pluginIds": [
+          "atifkhan161.club-hub"
+        ],
+        "commit": "f203471f6b44bac2006b456534b561c341f8b958",
+        "checkedAt": "2026-11-26T10:21:14.977Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "atifkhan161.club-hub": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
