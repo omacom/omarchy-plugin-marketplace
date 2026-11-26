@@ -453489,6 +453489,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/baskb/omarchy-feedback-studio",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T09:52:35.564Z",
+      "listingValidatedCommit": "eec8ff3f58854545875cf0eebaf3347de3c8b399",
+      "listingValidatedAt": "2026-11-26T09:52:35.564Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "baskb/omarchy-feedback-studio",
+        "pluginIds": [
+          "baskb.feedback-studio"
+        ],
+        "commit": "eec8ff3f58854545875cf0eebaf3347de3c8b399",
+        "checkedAt": "2026-11-26T09:52:35.360Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "baskb.feedback-studio": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
