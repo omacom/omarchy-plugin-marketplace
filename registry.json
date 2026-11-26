@@ -452074,6 +452074,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/z19r/omarculator",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T00:19:20.710Z",
+      "listingValidatedCommit": "a1969bcd6409ca88af07a8ab595937c54ccf307c",
+      "listingValidatedAt": "2026-11-26T00:19:20.710Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "z19r/omarculator",
+        "pluginIds": [
+          "z19r.omarculator"
+        ],
+        "commit": "a1969bcd6409ca88af07a8ab595937c54ccf307c",
+        "checkedAt": "2026-11-26T00:19:20.510Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "z19r.omarculator": {
+          "category": "Productivity",
+          "tags": [
+            "launcher",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
