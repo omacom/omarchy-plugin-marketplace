@@ -453176,6 +453176,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/dadoux01/omarchy-agenda",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T07:57:02.924Z",
+      "listingValidatedCommit": "b2367d87bc374d6f978784929f12dec33f962d6d",
+      "listingValidatedAt": "2026-11-26T07:57:02.924Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "dadoux01/omarchy-agenda",
+        "pluginIds": [
+          "dadoux01.agenda"
+        ],
+        "commit": "b2367d87bc374d6f978784929f12dec33f962d6d",
+        "checkedAt": "2026-11-26T07:57:02.753Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "dadoux01.agenda": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
