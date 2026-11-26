@@ -452925,6 +452925,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/XimmersiveX/omarchy-snapback",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T06:21:24.115Z",
+      "listingValidatedCommit": "6f8f548c15914928100b6c887e02fe223ce8a295",
+      "listingValidatedAt": "2026-11-26T06:21:24.115Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ximmersivex/omarchy-snapback",
+        "pluginIds": [
+          "io.github.ximmersivex.snapback"
+        ],
+        "commit": "6f8f548c15914928100b6c887e02fe223ce8a295",
+        "checkedAt": "2026-11-26T06:21:23.949Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ximmersivex/omarchy-snapback",
+        "pluginIds": [
+          "io.github.ximmersivex.snapback"
+        ],
+        "commit": "6f8f548c15914928100b6c887e02fe223ce8a295",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T06:21:23.949Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T05:39:47.038Z",
+        "requestEventId": 37335577071,
+        "requestedAt": "2026-11-26T06:20:30Z",
+        "reviewedAt": "2026-11-26T06:21:23.949Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.ximmersivex.snapback": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
