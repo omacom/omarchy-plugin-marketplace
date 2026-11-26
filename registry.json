@@ -446945,8 +446945,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-24",
       "listedAt": "2026-11-24T03:42:16.436Z",
-      "listingValidatedCommit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
-      "listingValidatedAt": "2026-11-24T03:42:16.436Z",
+      "listingValidatedCommit": "d914f54fa5c669d117aeabf8aa4477df3d9f6e4b",
+      "listingValidatedAt": "2026-11-26T23:21:54.404Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -446955,35 +446955,14 @@
         "pluginIds": [
           "io.github.sette7blo.omacrate"
         ],
-        "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
-        "checkedAt": "2026-11-24T03:42:16.222Z",
+        "commit": "d914f54fa5c669d117aeabf8aa4477df3d9f6e4b",
+        "checkedAt": "2026-11-26T23:21:54.404Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
         "capabilities": [
           "installer"
         ]
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "sette7blo/omacrate",
-        "pluginIds": [
-          "io.github.sette7blo.omacrate"
-        ],
-        "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-24T03:42:16.222Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "installer"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-24T03:03:56.692Z",
-        "requestEventId": 37086747564,
-        "requestedAt": "2026-11-24T03:41:42Z",
-        "reviewedAt": "2026-11-24T03:42:16.222Z",
-        "reviewer": "HANCORE-linux"
       },
       "plugins": {
         "io.github.sette7blo.omacrate": {
@@ -446995,7 +446974,73 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "sette7blo/omacrate",
+        "pluginIds": [
+          "io.github.sette7blo.omacrate"
+        ],
+        "commit": "d914f54fa5c669d117aeabf8aa4477df3d9f6e4b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T23:21:54.404Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T17:45:41.778Z",
+        "requestEventId": 37418422195,
+        "requestedAt": "2026-11-26T23:21:22Z",
+        "reviewedAt": "2026-11-26T23:21:54.404Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+          "validatedAt": "2026-11-24T03:42:16.436Z",
+          "branch": "main",
+          "supersededAt": "2026-11-26T23:21:54.404Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "sette7blo/omacrate",
+            "pluginIds": [
+              "io.github.sette7blo.omacrate"
+            ],
+            "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+            "checkedAt": "2026-11-24T03:42:16.222Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "sette7blo/omacrate",
+            "pluginIds": [
+              "io.github.sette7blo.omacrate"
+            ],
+            "commit": "a5d3e8e4355ac501941ca550ec4e35f29076c6eb",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-24T03:42:16.222Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "installer"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-24T03:03:56.692Z",
+            "requestEventId": 37086747564,
+            "requestedAt": "2026-11-24T03:41:42Z",
+            "reviewedAt": "2026-11-24T03:42:16.222Z",
+            "reviewer": "HANCORE-linux"
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/koetsuji/omarchy-dock",
