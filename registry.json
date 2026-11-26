@@ -403247,8 +403247,8 @@
       "type": "plugin-source",
       "addedAt": "2026-10-30",
       "listedAt": "2026-10-30T23:11:44.208Z",
-      "listingValidatedCommit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
-      "listingValidatedAt": "2026-11-19T21:15:48.417Z",
+      "listingValidatedCommit": "bcfcaa05fb0af09f34c4a482bf7ebbf60411a2e6",
+      "listingValidatedAt": "2026-11-26T23:34:26.531Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -403257,8 +403257,8 @@
         "pluginIds": [
           "liambeck99.update-center"
         ],
-        "commit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
-        "checkedAt": "2026-11-19T21:15:48.417Z",
+        "commit": "bcfcaa05fb0af09f34c4a482bf7ebbf60411a2e6",
+        "checkedAt": "2026-11-26T23:34:26.531Z",
         "outcome": "review-required",
         "enforcementMode": "selective",
         "findings": [],
@@ -403276,27 +403276,6 @@
           ],
           "manifestPath": "manifest.json"
         }
-      },
-      "maintainerVerificationReview": {
-        "schemaVersion": 1,
-        "repository": "liambeck99/omarchy-update-center",
-        "pluginIds": [
-          "liambeck99.update-center"
-        ],
-        "commit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
-        "baselineVersion": "3",
-        "enforcementMode": "selective",
-        "baselineCheckedAt": "2026-11-19T21:15:48.417Z",
-        "baselineOutcome": "review-required",
-        "findings": [],
-        "capabilities": [
-          "package-manager"
-        ],
-        "reviewedBaselineCheckedAt": "2026-11-16T13:14:58.689Z",
-        "requestEventId": 36701126691,
-        "requestedAt": "2026-11-19T21:15:13Z",
-        "reviewedAt": "2026-11-19T21:15:48.417Z",
-        "reviewer": "HANCORE-linux"
       },
       "listingValidationHistory": [
         {
@@ -403341,8 +403320,72 @@
             "reviewedAt": "2026-10-30T23:11:44.026Z",
             "reviewer": "HANCORE-linux"
           }
+        },
+        {
+          "commit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
+          "validatedAt": "2026-11-19T21:15:48.417Z",
+          "branch": "main",
+          "supersededAt": "2026-11-26T23:34:26.531Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "liambeck99/omarchy-update-center",
+            "pluginIds": [
+              "liambeck99.update-center"
+            ],
+            "commit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
+            "checkedAt": "2026-11-19T21:15:48.417Z",
+            "outcome": "review-required",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ]
+          },
+          "maintainerVerificationReview": {
+            "schemaVersion": 1,
+            "repository": "liambeck99/omarchy-update-center",
+            "pluginIds": [
+              "liambeck99.update-center"
+            ],
+            "commit": "904c4f1f605d3aa16e98abaccc39ee46a1820a7d",
+            "baselineVersion": "3",
+            "enforcementMode": "selective",
+            "baselineCheckedAt": "2026-11-19T21:15:48.417Z",
+            "baselineOutcome": "review-required",
+            "findings": [],
+            "capabilities": [
+              "package-manager"
+            ],
+            "reviewedBaselineCheckedAt": "2026-11-16T13:14:58.689Z",
+            "requestEventId": 36701126691,
+            "requestedAt": "2026-11-19T21:15:13Z",
+            "reviewedAt": "2026-11-19T21:15:48.417Z",
+            "reviewer": "HANCORE-linux"
+          }
         }
-      ]
+      ],
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "liambeck99/omarchy-update-center",
+        "pluginIds": [
+          "liambeck99.update-center"
+        ],
+        "commit": "bcfcaa05fb0af09f34c4a482bf7ebbf60411a2e6",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T23:34:26.531Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T17:35:45.792Z",
+        "requestEventId": 37419082850,
+        "requestedAt": "2026-11-26T23:33:58Z",
+        "reviewedAt": "2026-11-26T23:34:26.531Z",
+        "reviewer": "HANCORE-linux"
+      }
     },
     {
       "repo": "https://github.com/Fantomas175/omarchy-island-plugin",
