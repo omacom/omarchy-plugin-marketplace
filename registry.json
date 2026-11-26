@@ -453273,6 +453273,68 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/zigmoo/omathemectl",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T08:40:30.404Z",
+      "listingValidatedCommit": "d1d62c663cb9b71afd6a31db8d56ff806989cc13",
+      "listingValidatedAt": "2026-11-26T08:40:30.404Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "zigmoo/omathemectl",
+        "pluginIds": [
+          "moo.omathemectl"
+        ],
+        "commit": "d1d62c663cb9b71afd6a31db8d56ff806989cc13",
+        "checkedAt": "2026-11-26T08:40:30.265Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "zigmoo/omathemectl",
+        "pluginIds": [
+          "moo.omathemectl"
+        ],
+        "commit": "d1d62c663cb9b71afd6a31db8d56ff806989cc13",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T08:40:30.265Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T07:47:18.389Z",
+        "requestEventId": 37345991182,
+        "requestedAt": "2026-11-26T08:39:55Z",
+        "reviewedAt": "2026-11-26T08:40:30.265Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "moo.omathemectl": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
