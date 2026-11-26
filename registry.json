@@ -452139,6 +452139,64 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/heelgueta/omacheat",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T00:46:11.157Z",
+      "listingValidatedCommit": "3eb32ab245d4796df98ff7b19713063cc43e7b1d",
+      "listingValidatedAt": "2026-11-26T00:46:11.157Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "heelgueta/omacheat",
+        "pluginIds": [
+          "heelgueta.omacheat"
+        ],
+        "commit": "3eb32ab245d4796df98ff7b19713063cc43e7b1d",
+        "checkedAt": "2026-11-26T00:46:10.990Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "heelgueta/omacheat",
+        "pluginIds": [
+          "heelgueta.omacheat"
+        ],
+        "commit": "3eb32ab245d4796df98ff7b19713063cc43e7b1d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T00:46:10.990Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-25T23:18:12.980Z",
+        "requestEventId": 37315556089,
+        "requestedAt": "2026-11-26T00:45:41Z",
+        "reviewedAt": "2026-11-26T00:46:10.990Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "heelgueta.omacheat": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
