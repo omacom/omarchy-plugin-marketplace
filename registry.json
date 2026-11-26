@@ -453692,6 +453692,40 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/advocu/omarchy-grokipedia",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T13:13:10.865Z",
+      "listingValidatedCommit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
+      "listingValidatedAt": "2026-11-26T13:13:10.865Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "advocu/omarchy-grokipedia",
+        "pluginIds": [
+          "io.github.advocu.grokipedia"
+        ],
+        "commit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
+        "checkedAt": "2026-11-26T13:13:10.700Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.advocu.grokipedia": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "education"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
