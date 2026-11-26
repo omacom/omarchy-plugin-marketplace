@@ -453848,6 +453848,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Edoomaan/tinyhand-omarchy",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T14:35:26.272Z",
+      "listingValidatedCommit": "0ef14b08fd409d8aa9c5db8e3b256de3c6629402",
+      "listingValidatedAt": "2026-11-26T14:35:26.272Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "edoomaan/tinyhand-omarchy",
+        "pluginIds": [
+          "edooman-tinyhand"
+        ],
+        "commit": "0ef14b08fd409d8aa9c5db8e3b256de3c6629402",
+        "checkedAt": "2026-11-26T14:35:26.065Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "edooman-tinyhand": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
