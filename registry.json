@@ -452520,6 +452520,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sddamico/omarchy-sundown",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T03:21:43.290Z",
+      "listingValidatedCommit": "9ab541b75e20f6915f0a150231a976b4284a091b",
+      "listingValidatedAt": "2026-11-26T03:21:43.290Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sddamico/omarchy-sundown",
+        "pluginIds": [
+          "sddamico.sundown"
+        ],
+        "commit": "9ab541b75e20f6915f0a150231a976b4284a091b",
+        "checkedAt": "2026-11-26T03:21:43.124Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sddamico.sundown": {
+          "category": "Appearance",
+          "tags": [
+            "hyprland",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
