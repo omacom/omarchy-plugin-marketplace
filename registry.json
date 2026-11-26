@@ -453017,6 +453017,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/a77lic7ion/omarchy-wallpaper-rotator",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T06:55:21.029Z",
+      "listingValidatedCommit": "02bb58fe26d46b4a47af081f86519564bcc6a569",
+      "listingValidatedAt": "2026-11-26T06:55:21.029Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "a77lic7ion/omarchy-wallpaper-rotator",
+        "pluginIds": [
+          "shaun.wallpaper-rotator"
+        ],
+        "commit": "02bb58fe26d46b4a47af081f86519564bcc6a569",
+        "checkedAt": "2026-11-26T06:55:20.827Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "a77lic7ion/omarchy-wallpaper-rotator",
+        "pluginIds": [
+          "shaun.wallpaper-rotator"
+        ],
+        "commit": "02bb58fe26d46b4a47af081f86519564bcc6a569",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T06:55:20.827Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T05:58:11.348Z",
+        "requestEventId": 37337865406,
+        "requestedAt": "2026-11-26T06:54:51Z",
+        "reviewedAt": "2026-11-26T06:55:20.827Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "shaun.wallpaper-rotator": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "bar",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
