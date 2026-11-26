@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T15:02:05.105Z",
+  "generatedAt": "2026-11-26T15:50:03.152Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -392949,7 +392949,7 @@
       "repositoryLayout": "root-plugin",
       "installAvailable": false,
       "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installNote": "Use the guide at https://vadim82.github.io/panora/ to add Panora's signed package repository. Update Omarchy, install the Panora package, then open Panora from the launcher. On Omarchy 4.5, the bar widget appears on first launch.",
       "category": "Appearance",
       "tags": [
         "bar",
@@ -392958,7 +392958,7 @@
       ],
       "license": "MIT",
       "stars": 0,
-      "repositoryUpdatedAt": "2026-11-26T01:07:11Z",
+      "repositoryUpdatedAt": "2026-11-26T15:35:27Z",
       "repositoryRelease": {
         "tag": "v0.7.2",
         "url": "https://github.com/vadim82/panora/releases/tag/v0.7.2",
@@ -392980,12 +392980,12 @@
       "listingValidatedBranch": "main",
       "upstreamObservedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-11-26T13:55:24.463Z",
+      "upstreamCheckedAt": "2026-11-26T15:50:03.152Z",
       "upstreamCheckStatus": "passed",
       "upstreamValidatedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
-      "upstreamValidatedAt": "2026-11-26T02:11:11.210Z",
+      "upstreamValidatedAt": "2026-11-26T15:50:03.152Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "344225caad15e15e9fad3b2965621935a2712049f6547f8d57a4500839e27ddd",
+      "upstreamSourceFingerprint": "f6a9eccbc1e838b965f8c2097f678c97bebcdf11d13120a6d73273a09cc026fa",
       "status": "Manual setup"
     },
     {

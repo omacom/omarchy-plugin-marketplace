@@ -452453,7 +452453,7 @@
           "manifestPath": "manifest.json",
           "installation": {
             "mode": "manual",
-            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+            "note": "Use the guide at https://vadim82.github.io/panora/ to add Panora's signed package repository. Update Omarchy, install the Panora package, then open Panora from the launcher. On Omarchy 4.5, the bar widget appears on first launch."
           }
         }
       }
