@@ -452327,6 +452327,73 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/vadim82/panora",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T02:11:10.353Z",
+      "listingValidatedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
+      "listingValidatedAt": "2026-11-26T02:11:10.353Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "vadim82/panora",
+        "pluginIds": [
+          "io.github.vadim82.panora"
+        ],
+        "commit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
+        "checkedAt": "2026-11-26T02:11:10.151Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "vadim82/panora",
+        "pluginIds": [
+          "io.github.vadim82.panora"
+        ],
+        "commit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T02:11:10.151Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "package-manager",
+          "privilege",
+          "installer",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T01:56:52.405Z",
+        "requestEventId": 37320837066,
+        "requestedAt": "2026-11-26T02:10:37Z",
+        "reviewedAt": "2026-11-26T02:11:10.151Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.vadim82.panora": {
+          "category": "Appearance",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
