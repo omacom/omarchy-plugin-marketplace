@@ -452426,6 +452426,66 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/caiomsantos95/omarchy-personal-agents-drawer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T02:50:33.577Z",
+      "listingValidatedCommit": "e4d093c6028ad4bf3878447da70a8b742c29e340",
+      "listingValidatedAt": "2026-11-26T02:50:33.577Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "caiomsantos95/omarchy-personal-agents-drawer",
+        "pluginIds": [
+          "io.github.caiomsantos95.personal-agents-drawer"
+        ],
+        "commit": "e4d093c6028ad4bf3878447da70a8b742c29e340",
+        "checkedAt": "2026-11-26T02:50:33.370Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "caiomsantos95/omarchy-personal-agents-drawer",
+        "pluginIds": [
+          "io.github.caiomsantos95.personal-agents-drawer"
+        ],
+        "commit": "e4d093c6028ad4bf3878447da70a8b742c29e340",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-26T02:50:33.370Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T02:23:29.458Z",
+        "requestEventId": 37323190258,
+        "requestedAt": "2026-11-26T02:49:58Z",
+        "reviewedAt": "2026-11-26T02:50:33.370Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.caiomsantos95.personal-agents-drawer": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
