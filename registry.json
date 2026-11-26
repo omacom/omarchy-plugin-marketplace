@@ -452394,6 +452394,38 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/supergeoffofohio/omajellymusic",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T02:28:46.491Z",
+      "listingValidatedCommit": "0e3ec556770967bcb0c64bdef17bf6e1b482bd98",
+      "listingValidatedAt": "2026-11-26T02:28:46.491Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "supergeoffofohio/omajellymusic",
+        "pluginIds": [
+          "io.github.supergeoffofohio.omajellymusic"
+        ],
+        "commit": "0e3ec556770967bcb0c64bdef17bf6e1b482bd98",
+        "checkedAt": "2026-11-26T02:28:46.330Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.supergeoffofohio.omajellymusic": {
+          "category": "Widgets",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
