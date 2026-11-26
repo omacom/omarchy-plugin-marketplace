@@ -453655,6 +453655,43 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/anstlichstudent/agents-account-switcher",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T12:37:59.923Z",
+      "listingValidatedCommit": "d626c1a3d67891a34e7de6723274ef537bf12e56",
+      "listingValidatedAt": "2026-11-26T12:37:59.923Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anstlichstudent/agents-account-switcher",
+        "pluginIds": [
+          "agent-tools.account-switcher"
+        ],
+        "commit": "d626c1a3d67891a34e7de6723274ef537bf12e56",
+        "checkedAt": "2026-11-26T12:37:59.733Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "agent-tools.account-switcher": {
+          "category": "Developer Tools",
+          "tags": [
+            "ai",
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
