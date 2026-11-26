@@ -453142,6 +453142,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ArchGuima/omarchy-speedtest",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T07:31:43.887Z",
+      "listingValidatedCommit": "f39adf456d199acd321b205a0e6f6fef3ef1b8a2",
+      "listingValidatedAt": "2026-11-26T07:31:43.887Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "archguima/omarchy-speedtest",
+        "pluginIds": [
+          "archguima.speedtest"
+        ],
+        "commit": "f39adf456d199acd321b205a0e6f6fef3ef1b8a2",
+        "checkedAt": "2026-11-26T07:31:43.740Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "archguima.speedtest": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
