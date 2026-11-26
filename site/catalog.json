@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T00:19:21.608Z",
+  "generatedAt": "2026-11-26T00:26:22.541Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -392619,6 +392619,55 @@
       "upstreamValidatedAt": "2026-11-26T00:19:21.608Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "aa6e4d70d4e699099a73126de39c9279815da22cf689df27aa7a3da92b18a94d",
+      "status": "Available"
+    },
+    {
+      "id": "canseyran.overdue",
+      "name": "Overdue",
+      "description": "Tasks with natural-language quick add that nag you until they're done.",
+      "author": "canseyran",
+      "version": "0.1.1",
+      "repo": "https://github.com/canseyran/overdue",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+      "verificationCheckedAt": "2026-11-26T00:26:21.438Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T00:26:21.661Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/canseyran/overdue.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Productivity",
+      "tags": [
+        "bar"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-11-25T20:28:47Z",
+      "repositoryRelease": {
+        "tag": "v0.1.1",
+        "url": "https://github.com/canseyran/overdue/releases/tag/v0.1.1",
+        "publishedAt": "2026-11-25T20:20:19Z"
+      },
+      "accent": "coral",
+      "initials": "O",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+      "listingValidatedAt": "2026-11-26T00:26:21.661Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-26T00:26:22.541Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+      "upstreamValidatedAt": "2026-11-26T00:26:22.541Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "a1354a915965b570026f4b908cbdb6074684db6e15361a9f2f0b8536aa4fe8b3",
       "status": "Available"
     },
     {

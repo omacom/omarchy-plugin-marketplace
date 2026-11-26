@@ -452107,6 +452107,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/canseyran/overdue",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T00:26:21.661Z",
+      "listingValidatedCommit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+      "listingValidatedAt": "2026-11-26T00:26:21.661Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "canseyran/overdue",
+        "pluginIds": [
+          "canseyran.overdue"
+        ],
+        "commit": "9b187dbd5d96f45beb07ddb54e0f5340d1b396e6",
+        "checkedAt": "2026-11-26T00:26:21.438Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "canseyran.overdue": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
