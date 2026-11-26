@@ -453398,6 +453398,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/itscallssh/omarchy-flurry",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T09:11:20.740Z",
+      "listingValidatedCommit": "8959a4b75b7df60d4078aa73159c2859f02d1e91",
+      "listingValidatedAt": "2026-11-26T09:11:20.740Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "itscallssh/omarchy-flurry",
+        "pluginIds": [
+          "itscallssh.flurry"
+        ],
+        "commit": "8959a4b75b7df60d4078aa73159c2859f02d1e91",
+        "checkedAt": "2026-11-26T09:11:20.578Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "itscallssh.flurry": {
+          "category": "Appearance",
+          "tags": [
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
