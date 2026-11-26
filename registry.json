@@ -452984,6 +452984,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/sup3rbuck/omarchy-solar-system",
+      "type": "plugin-source",
+      "addedAt": "2026-11-26",
+      "listedAt": "2026-11-26T06:40:52.463Z",
+      "listingValidatedCommit": "d4e3829e89200f84e997dd430f6e2c84cbf7dc31",
+      "listingValidatedAt": "2026-11-26T06:40:52.463Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "sup3rbuck/omarchy-solar-system",
+        "pluginIds": [
+          "mog.solar-system"
+        ],
+        "commit": "d4e3829e89200f84e997dd430f6e2c84cbf7dc31",
+        "checkedAt": "2026-11-26T06:40:52.297Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "mog.solar-system": {
+          "category": "Desktop",
+          "tags": [
+            "education",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
