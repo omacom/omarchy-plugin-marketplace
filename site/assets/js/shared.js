@@ -6,7 +6,7 @@ import {
   themeById,
   themePreviewPath,
 } from "./themes.js?v=20260920-05";
-import { repositoryPublisher } from "./search.js?v=20261105-05";
+import { repositoryPublisher } from "./search.js?v=20261123-01";
 
 const accentColors = {
   lime: "#b7ef51",
