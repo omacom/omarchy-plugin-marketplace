@@ -455918,6 +455918,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mokk/omappraise",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T17:25:04.739Z",
+      "listingValidatedCommit": "d8c87d8939379102eda26933c4741be45cd29fb4",
+      "listingValidatedAt": "2026-11-27T17:25:04.739Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mokk/omappraise",
+        "pluginIds": [
+          "io.github.mokk.omappraise"
+        ],
+        "commit": "d8c87d8939379102eda26933c4741be45cd29fb4",
+        "checkedAt": "2026-11-27T17:25:04.582Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.mokk.omappraise": {
+          "category": "Other",
+          "tags": [
+            "games",
+            "hyprland",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
