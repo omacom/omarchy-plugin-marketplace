@@ -454297,6 +454297,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/Aashutosh31/omarchy-task-coach",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T01:07:25.102Z",
+      "listingValidatedCommit": "f0c9b744cb2b11010d8eadde929b4eb9c1922492",
+      "listingValidatedAt": "2026-11-27T01:07:25.102Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "aashutosh31/omarchy-task-coach",
+        "pluginIds": [
+          "aashutosh31.taskcoach"
+        ],
+        "commit": "f0c9b744cb2b11010d8eadde929b4eb9c1922492",
+        "checkedAt": "2026-11-27T01:07:24.908Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "aashutosh31.taskcoach": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
