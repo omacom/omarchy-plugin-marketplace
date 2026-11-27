@@ -454585,6 +454585,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/GitMaxi24/omarchy-timer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T03:15:01.991Z",
+      "listingValidatedCommit": "32a98109e7ef34d3c707fe98cad670428189b2f0",
+      "listingValidatedAt": "2026-11-27T03:15:01.991Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "gitmaxi24/omarchy-timer",
+        "pluginIds": [
+          "maxi.timer"
+        ],
+        "commit": "32a98109e7ef34d3c707fe98cad670428189b2f0",
+        "checkedAt": "2026-11-27T03:15:01.828Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "gitmaxi24/omarchy-timer",
+        "pluginIds": [
+          "maxi.timer"
+        ],
+        "commit": "32a98109e7ef34d3c707fe98cad670428189b2f0",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T03:15:01.828Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T03:07:44.787Z",
+        "requestEventId": 37431107372,
+        "requestedAt": "2026-11-27T03:14:26Z",
+        "reviewedAt": "2026-11-27T03:15:01.828Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "maxi.timer": {
+          "category": "Widgets",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
