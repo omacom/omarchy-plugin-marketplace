@@ -454776,6 +454776,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/lipionix/omarchy-word-capture",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T05:14:01.946Z",
+      "listingValidatedCommit": "4d5d7d5c0ecd32c6acddd46963552f5c1810850d",
+      "listingValidatedAt": "2026-11-27T05:14:01.946Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "lipionix/omarchy-word-capture",
+        "pluginIds": [
+          "lipionix.word-capture"
+        ],
+        "commit": "4d5d7d5c0ecd32c6acddd46963552f5c1810850d",
+        "checkedAt": "2026-11-27T05:14:01.782Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "lipionix.word-capture": {
+          "category": "Productivity",
+          "tags": [
+            "education",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
