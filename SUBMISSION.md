@@ -19,6 +19,35 @@ Marketplace validation checks repository structure and Omarchy Quattro compatibi
 
 Plugin IDs are permanent marketplace identifiers and must be unique across all repositories, not only within your repository. IDs from retired or renamed listings remain unavailable and cannot be reused. Prefer a namespaced lowercase ID such as `io.github.yourname.plugin-name`. Before submission, search the marketplace for the intended ID. If you change it, also update commands and documentation that reference the old ID.
 
+## Optional archive packages
+
+Keep tests, fixtures and development notes in the source repository. Authors who also want a smaller installed plugin can commit Git's standard `.gitattributes` exclusions:
+
+```gitattributes
+/tests export-ignore
+/.github export-ignore
+/docs/development export-ignore
+```
+
+Keep the root manifest, README and license, every QML import, helper, default configuration and runtime asset in the export. Exclude documentation selectively so installed README links remain useful. `.omarchy-package.json` is reserved for the archive installer's source and revision record.
+
+From a checkout of this marketplace with its normal `npm ci` dependencies installed, validate a local plugin's exact commit:
+
+```sh
+npm run validate:package -- /path/to/plugin <commit-sha>
+```
+
+The command uses `git archive`, reads the committed attributes and applies the existing community manifest, entry-point and root-document checks to the exported tree. It prints the commit SHA, plugin ID, packaged file list and total file bytes. It does not run plugin code. Uncommitted files and attributes do not affect the result.
+
+For an author or reviewer checking an archive release:
+
+1. Run the existing source tests and submission checks against the chosen commit.
+2. Run the package check above against that same commit and inspect the file list.
+3. Exercise the exported plugin using the author's runtime tests to catch omitted dynamically loaded helpers and assets.
+4. Keep the full source available for the existing exact-commit capability review, including files marked `export-ignore`.
+
+This is an additional, opt-in packaging check. It does not change listing eligibility, approval labels, source scanning, or the marketplace's existing install commands. `.gitattributes` alone does not trim a Git clone. On Omarchy versions with archive installation support, users can select it with `omarchy plugin add <repository-url> --archive`; ordinary installs and existing Git checkouts keep their current behavior. Archive installs record their source commit, use the same export rules on update, and refuse to overwrite local changes. See [Omarchy's plugin installation guide](https://github.com/omacom/omarchy/blob/quattro/manual/32-shell-plugins.md) for version-specific installation and update behavior.
+
 ## Choose listing metadata
 
 Choose one category:
