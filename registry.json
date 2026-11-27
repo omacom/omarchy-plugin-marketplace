@@ -455411,6 +455411,62 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/jarstelfox/omarchy-lumon",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T12:44:52.664Z",
+      "listingValidatedCommit": "48ed70253e89e2664f48ef7571dcc4c10b5f60d8",
+      "listingValidatedAt": "2026-11-27T12:44:52.664Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "jarstelfox/omarchy-lumon",
+        "pluginIds": [
+          "lumon.lock"
+        ],
+        "commit": "48ed70253e89e2664f48ef7571dcc4c10b5f60d8",
+        "checkedAt": "2026-11-27T12:44:52.491Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "jarstelfox/omarchy-lumon",
+        "pluginIds": [
+          "lumon.lock"
+        ],
+        "commit": "48ed70253e89e2664f48ef7571dcc4c10b5f60d8",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T12:44:52.491Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T12:22:26.321Z",
+        "requestEventId": 37470535250,
+        "requestedAt": "2026-11-27T12:44:14Z",
+        "reviewedAt": "2026-11-27T12:44:52.491Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "lumon.lock": {
+          "category": "Appearance",
+          "tags": [
+            "security",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
