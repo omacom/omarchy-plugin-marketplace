@@ -455310,6 +455310,42 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/anavarre/omarchy-zoom-events-google-calendar",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T11:36:19.051Z",
+      "listingValidatedCommit": "0147dfa696ac1f42a14017362e1d64dd682c96bb",
+      "listingValidatedAt": "2026-11-27T11:36:19.051Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "anavarre/omarchy-zoom-events-google-calendar",
+        "pluginIds": [
+          "anavarre.zoom-events-google-calendar"
+        ],
+        "commit": "0147dfa696ac1f42a14017362e1d64dd682c96bb",
+        "checkedAt": "2026-11-27T11:36:18.828Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "anavarre.zoom-events-google-calendar": {
+          "category": "Productivity",
+          "tags": [
+            "bar"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
