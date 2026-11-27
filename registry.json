@@ -455467,6 +455467,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/mcamara/omarchy-aerial-screensaver",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T13:00:14.550Z",
+      "listingValidatedCommit": "9d912e1abf8374b2c0bbb830af29ab61e723c6fb",
+      "listingValidatedAt": "2026-11-27T13:00:14.550Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "mcamara/omarchy-aerial-screensaver",
+        "pluginIds": [
+          "mcamara.aerial-screensaver"
+        ],
+        "commit": "9d912e1abf8374b2c0bbb830af29ab61e723c6fb",
+        "checkedAt": "2026-11-27T13:00:14.421Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "mcamara/omarchy-aerial-screensaver",
+        "pluginIds": [
+          "mcamara.aerial-screensaver"
+        ],
+        "commit": "9d912e1abf8374b2c0bbb830af29ab61e723c6fb",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T13:00:14.421Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T12:53:20.139Z",
+        "requestEventId": 37471813577,
+        "requestedAt": "2026-11-27T12:59:42Z",
+        "reviewedAt": "2026-11-27T13:00:14.421Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "mcamara.aerial-screensaver": {
+          "category": "Appearance",
+          "tags": [
+            "media",
+            "quickshell",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
