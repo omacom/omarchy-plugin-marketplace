@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T17:25:05.346Z",
+  "generatedAt": "2026-11-27T19:36:24.329Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -392977,9 +392977,9 @@
       "version": "0.1.0",
       "repo": "https://github.com/vadim82/panora",
       "sourceType": "community",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "verificationSnapshotStatus": "verified",
-      "verificationCoverage": "update-unverified",
+      "verificationCoverage": "snapshot-verified",
       "verificationBaselineVersion": "3",
       "verificationCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
       "verificationCheckedAt": "2026-11-26T02:11:10.151Z",
@@ -392992,7 +392992,7 @@
       "repositoryLayout": "root-plugin",
       "installAvailable": false,
       "installCommand": "",
-      "installNote": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions.",
+      "installNote": "Use the guide at https://vadim82.github.io/panora/ to add Panora's signed package repository. Update Omarchy, install the Panora package, then open Panora from the launcher. On Omarchy 4.5, the bar widget appears on first launch.",
       "category": "Appearance",
       "tags": [
         "bar",
@@ -393001,11 +393001,11 @@
       ],
       "license": "MIT",
       "stars": 0,
-      "repositoryUpdatedAt": "2026-11-27T14:04:08Z",
+      "repositoryUpdatedAt": "2026-11-27T19:35:32Z",
       "repositoryRelease": {
-        "tag": "v0.7.2",
-        "url": "https://github.com/vadim82/panora/releases/tag/v0.7.2",
-        "publishedAt": "2026-11-26T00:39:32Z"
+        "tag": "v0.7.4",
+        "url": "https://github.com/vadim82/panora/releases/tag/v0.7.4",
+        "publishedAt": "2026-11-27T14:22:07Z"
       },
       "accent": "cyan",
       "initials": "P",
@@ -393021,14 +393021,14 @@
       "listingValidatedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
       "listingValidatedAt": "2026-11-26T02:11:10.353Z",
       "listingValidatedBranch": "main",
-      "upstreamObservedCommit": "07360d006b80910feafa971657c1dfb582e48bff",
+      "upstreamObservedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
       "upstreamObservedBranch": "main",
-      "upstreamCheckedAt": "2026-11-27T13:50:52.771Z",
+      "upstreamCheckedAt": "2026-11-27T19:36:24.329Z",
       "upstreamCheckStatus": "passed",
-      "upstreamValidatedCommit": "07360d006b80910feafa971657c1dfb582e48bff",
-      "upstreamValidatedAt": "2026-11-27T13:50:52.771Z",
+      "upstreamValidatedCommit": "5af2dfc3324b7721659b52ab80d9e849ceb2f45d",
+      "upstreamValidatedAt": "2026-11-27T19:36:24.329Z",
       "upstreamValidationVersion": 1,
-      "upstreamSourceFingerprint": "344225caad15e15e9fad3b2965621935a2712049f6547f8d57a4500839e27ddd",
+      "upstreamSourceFingerprint": "f6a9eccbc1e838b965f8c2097f678c97bebcdf11d13120a6d73273a09cc026fa",
       "status": "Manual setup"
     },
     {
