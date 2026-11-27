@@ -455785,6 +455785,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/0xBreadguy/mood",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T14:52:27.896Z",
+      "listingValidatedCommit": "a08997f6febaaf7f752c363dd24d8f0125ac7dd5",
+      "listingValidatedAt": "2026-11-27T14:52:27.896Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "0xbreadguy/mood",
+        "pluginIds": [
+          "0xbreadguy.mood"
+        ],
+        "commit": "a08997f6febaaf7f752c363dd24d8f0125ac7dd5",
+        "checkedAt": "2026-11-27T14:52:27.721Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "0xbreadguy.mood": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
