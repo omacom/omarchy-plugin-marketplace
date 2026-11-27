@@ -455885,6 +455885,39 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TiagoPortfolio/omarchy-quiver",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T17:14:50.276Z",
+      "listingValidatedCommit": "c7bf4cac09c1e93100319675f4ae6dad7e499cc1",
+      "listingValidatedAt": "2026-11-27T17:14:50.276Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "tiagoportfolio/omarchy-quiver",
+        "pluginIds": [
+          "tiago.scratchpad"
+        ],
+        "commit": "c7bf4cac09c1e93100319675f4ae6dad7e499cc1",
+        "checkedAt": "2026-11-27T17:14:50.129Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "tiago.scratchpad": {
+          "category": "Productivity",
+          "tags": [
+            "ai",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
