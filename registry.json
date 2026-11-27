@@ -455184,6 +455184,69 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/imcmurray/omarchy-freenet-explorer",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T10:14:15.393Z",
+      "listingValidatedCommit": "032a711d357147e1fe02b928d61d027222e9e75c",
+      "listingValidatedAt": "2026-11-27T10:14:15.393Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "imcmurray/omarchy-freenet-explorer",
+        "pluginIds": [
+          "io.mcmurray.freenet-explorer"
+        ],
+        "commit": "032a711d357147e1fe02b928d61d027222e9e75c",
+        "checkedAt": "2026-11-27T10:14:15.192Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "imcmurray/omarchy-freenet-explorer",
+        "pluginIds": [
+          "io.mcmurray.freenet-explorer"
+        ],
+        "commit": "032a711d357147e1fe02b928d61d027222e9e75c",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T10:14:15.192Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T09:56:13.110Z",
+        "requestEventId": 37458244357,
+        "requestedAt": "2026-11-27T10:13:26Z",
+        "reviewedAt": "2026-11-27T10:14:15.192Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.mcmurray.freenet-explorer": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
