@@ -454809,6 +454809,65 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Thedocwhocode/omarchy-eclipse-island",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T05:35:18.994Z",
+      "listingValidatedCommit": "3dd1e4dd255fcc0ae85337b6db3b2acd30f62eb3",
+      "listingValidatedAt": "2026-11-27T05:35:18.994Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "thedocwhocode/omarchy-eclipse-island",
+        "pluginIds": [
+          "io.github.thedocwhocode.eclipse-island"
+        ],
+        "commit": "3dd1e4dd255fcc0ae85337b6db3b2acd30f62eb3",
+        "checkedAt": "2026-11-27T05:35:18.828Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "thedocwhocode/omarchy-eclipse-island",
+        "pluginIds": [
+          "io.github.thedocwhocode.eclipse-island"
+        ],
+        "commit": "3dd1e4dd255fcc0ae85337b6db3b2acd30f62eb3",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T05:35:18.828Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T04:43:50.409Z",
+        "requestEventId": 37438538131,
+        "requestedAt": "2026-11-27T05:34:34Z",
+        "reviewedAt": "2026-11-27T05:35:18.828Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.thedocwhocode.eclipse-island": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
