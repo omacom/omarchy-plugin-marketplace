@@ -454644,6 +454644,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/Beginner2026-de/Audio-Share",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T03:28:42.931Z",
+      "listingValidatedCommit": "ada1bd628ba34f0fca3b6b84e4e8ef341bc50fd7",
+      "listingValidatedAt": "2026-11-27T03:28:42.931Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "beginner2026-de/audio-share",
+        "pluginIds": [
+          "io.github.beginner2026-de.audio-share"
+        ],
+        "commit": "ada1bd628ba34f0fca3b6b84e4e8ef341bc50fd7",
+        "checkedAt": "2026-11-27T03:28:42.796Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.beginner2026-de.audio-share": {
+          "category": "Hardware",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
