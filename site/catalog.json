@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T04:30:43.368Z",
+  "generatedAt": "2026-11-27T04:52:35.569Z",
   "stateSchemaVersion": 2,
   "mode": "production",
   "plugins": [
@@ -395252,6 +395252,56 @@
       "upstreamValidatedAt": "2026-11-27T04:30:43.368Z",
       "upstreamValidationVersion": 1,
       "upstreamSourceFingerprint": "d795808c2046043ecf7dac356da5dfb611856c888f8e9431ca1f583e0ebbeaac",
+      "status": "Available"
+    },
+    {
+      "id": "servicem8.suppliers",
+      "name": "Supplier Quick Access",
+      "description": "Search, create, edit and delete ServiceM8 suppliers, with quick contact actions.",
+      "author": "Ian Horne",
+      "version": "1.3.6",
+      "repo": "https://github.com/Ianhorne73/omarchy-servicem8-suppliers",
+      "sourceType": "community",
+      "verificationStatus": "verified",
+      "verificationSnapshotStatus": "verified",
+      "verificationCoverage": "snapshot-verified",
+      "verificationBaselineVersion": "3",
+      "verificationCommit": "68d4038b7ee9202e44663ee5768c792b4163c4cd",
+      "verificationCheckedAt": "2026-11-27T04:52:34.547Z",
+      "manifestPath": "manifest.json",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T04:52:34.726Z",
+      "repositoryLayout": "root-plugin",
+      "installAvailable": true,
+      "installCommand": "omarchy plugin add https://github.com/Ianhorne73/omarchy-servicem8-suppliers.git --enable",
+      "installNote": "Omarchy clones the current upstream repository, validates it locally, and only then installs and enables the plugin.",
+      "category": "Productivity",
+      "tags": [
+        "bar",
+        "quickshell"
+      ],
+      "license": "MIT",
+      "stars": 0,
+      "repositoryUpdatedAt": "2026-11-22T12:36:43Z",
+      "repositoryRelease": {
+        "tag": "v1.3.4",
+        "url": "https://github.com/Ianhorne73/omarchy-servicem8-suppliers/releases/tag/v1.3.4",
+        "publishedAt": "2026-11-10T11:59:33Z"
+      },
+      "accent": "cyan",
+      "initials": "SQ",
+      "kind": "Bar widget",
+      "listingValidatedCommit": "68d4038b7ee9202e44663ee5768c792b4163c4cd",
+      "listingValidatedAt": "2026-11-27T04:52:34.726Z",
+      "listingValidatedBranch": "main",
+      "upstreamObservedCommit": "68d4038b7ee9202e44663ee5768c792b4163c4cd",
+      "upstreamObservedBranch": "main",
+      "upstreamCheckedAt": "2026-11-27T04:52:35.569Z",
+      "upstreamCheckStatus": "passed",
+      "upstreamValidatedCommit": "68d4038b7ee9202e44663ee5768c792b4163c4cd",
+      "upstreamValidatedAt": "2026-11-27T04:52:35.569Z",
+      "upstreamValidationVersion": 1,
+      "upstreamSourceFingerprint": "2b044662d16de535531a39d1671976cddd89f9a2f01e97a6c9957abf91531fb9",
       "status": "Available"
     },
     {
