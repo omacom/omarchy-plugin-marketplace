@@ -455059,6 +455059,63 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/ilyamiro/serp-omarchy-music",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T08:29:37.621Z",
+      "listingValidatedCommit": "50cac3db87aece303fd7dc751be3cf10d01953d1",
+      "listingValidatedAt": "2026-11-27T08:29:37.621Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "ilyamiro/serp-omarchy-music",
+        "pluginIds": [
+          "ilyamiro.serpantinum-music"
+        ],
+        "commit": "50cac3db87aece303fd7dc751be3cf10d01953d1",
+        "checkedAt": "2026-11-27T08:29:37.480Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "ilyamiro/serp-omarchy-music",
+        "pluginIds": [
+          "ilyamiro.serpantinum-music"
+        ],
+        "commit": "50cac3db87aece303fd7dc751be3cf10d01953d1",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T08:29:37.480Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T07:42:04.234Z",
+        "requestEventId": 37449762693,
+        "requestedAt": "2026-11-27T08:29:04Z",
+        "reviewedAt": "2026-11-27T08:29:37.480Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "ilyamiro.serpantinum-music": {
+          "category": "Widgets",
+          "tags": [
+            "media",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
