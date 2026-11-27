@@ -455379,6 +455379,38 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/canseyran/tint",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T12:39:31.260Z",
+      "listingValidatedCommit": "aafa09fa944e8da7f90ff2eddebb5ac7c458ccc0",
+      "listingValidatedAt": "2026-11-27T12:39:31.260Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "canseyran/tint",
+        "pluginIds": [
+          "canseyran.tint"
+        ],
+        "commit": "aafa09fa944e8da7f90ff2eddebb5ac7c458ccc0",
+        "checkedAt": "2026-11-27T12:39:31.091Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "canseyran.tint": {
+          "category": "Developer Tools",
+          "tags": [
+            "media"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
