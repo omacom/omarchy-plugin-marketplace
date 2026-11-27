@@ -898,6 +898,8 @@ svg {
 /* Detail and publishing content */
 .detail-title { display: flex; align-items: center; gap: 15px; }
 .detail-title .detail-icon { width: 52px; height: 52px; }
+.detail-icon-art { overflow: hidden; padding: 0; background: var(--bg); }
+.detail-icon-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .detail-description { margin: 26px 0; font-size: 16px; line-height: 1.75; text-wrap: pretty; }
 .detail-preview {
   display: block; width: 100%; padding: 0; margin: 24px 0; border: 1px solid var(--line);

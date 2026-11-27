@@ -5,7 +5,7 @@
     <meta name="description" content="Publish an Omarchy plugin to the community marketplace.">
     <meta name="theme-color" content="#000000">
     <title>Publish a Plugin | Omarchy Plugins</title>
-    <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css?v=20261105-05">
+    <link rel="icon" href="favicon.svg?v=20260728-9" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css?v=20261116-01">
     <script>(function(){var t=null;try{t=localStorage.getItem("omarchy-theme")}catch(e){}document.documentElement.dataset.theme=/^[a-z0-9-]{1,32}$/.test(t||"")?t:"dark";})();</script>
   </head>
   <body>
@@ -23,13 +23,14 @@
       <div class="center-panel">
         <header class="doc-topbar"><div class="crumbs"><span>Omarchy / Marketplace / </span><b>Publish</b></div><div class="top-actions"><a class="square-action desktop-only" href="index.html">Browse</a><button class="square-action theme-toggle" type="button" aria-label="Choose color theme"><svg class="palette-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-1 .9-1.8 2-1.8H17a4 4 0 0 0 4-4c0-4.4-4-7.7-9-7.7Z"/><circle cx="7.5" cy="11" r="1.3"/><circle cx="10.5" cy="7" r="1.3"/><circle cx="15" cy="7.5" r="1.3"/></svg><span class="theme-toggle-label">Theme</span></button></div></header>
         <main id="main-content" class="page-content" tabindex="-1">
-          <header class="page-header" id="overview"><div class="page-eyebrow">Publishing</div><h1>Publish your plugin</h1><div class="page-meta"><span><time datetime="2026-08-20">Updated 20 Aug 2026</time></span><span>3 min read</span><span class="status"><i class="status-dot" aria-hidden="true"></i>Stable</span></div></header>
+          <header class="page-header" id="overview"><div class="page-eyebrow">Publishing</div><h1>Publish your plugin</h1><div class="page-meta"><span><time datetime="2026-11-16">Updated 16 Nov 2026</time></span><span>3 min read</span><span class="status"><i class="status-dot" aria-hidden="true"></i>Stable</span></div></header>
           <p class="intro">List your plugin in three steps. Keep the code in a public GitHub repository and add a valid <code class="inline-code" translate="no">manifest.json</code>.</p>
           <p class="official-reference">Still building? Start with the <a href="develop.html">custom plugin development guide →</a>.</p>
           <div class="callout prominent-callout"><strong>The marketplace validates listings, not plugin security.</strong><p>Plugins run unsandboxed. You remain responsible for your code, assets, documentation, and license.</p></div>
 
           <section class="docs-section" id="requirements"><span class="step-number">01</span><h2>Prepare the repository</h2><p>Prepare these files before you submit:</p>
-            <ul class="check-list compact-check-list"><li><span aria-hidden="true">✓</span><div><strong>Public GitHub repository</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>Valid <code class="inline-code" translate="no">manifest.json</code> in the repository root</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>README and license</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>Safe install and removal</strong></div></li><li><span aria-hidden="true">+</span><div><strong>Optional preview, optimized automatically</strong></div></li></ul>
+            <ul class="check-list compact-check-list"><li><span aria-hidden="true">✓</span><div><strong>Public GitHub repository</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>Valid <code class="inline-code" translate="no">manifest.json</code> in the repository root</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>README and license</strong></div></li><li><span aria-hidden="true">✓</span><div><strong>Safe install and removal</strong></div></li><li><span aria-hidden="true">+</span><div><strong>Optional preview, optimized automatically</strong></div></li><li><span aria-hidden="true">+</span><div><strong>Optional square listing icon, optimized automatically</strong></div></li></ul>
+            <p class="official-reference">Listing icon: add <code class="inline-code" translate="no">icon.png</code> to the repository root (or <code class="inline-code" translate="no">icon.webp</code>, <code class="inline-code" translate="no">icon.jpg</code>, <code class="inline-code" translate="no">icon.avif</code>) at 128 × 128 px or larger, square, exported from your own artwork. The marketplace generates the displayed copy, so do not pre-resize it, and falls back to the plugin initials when no icon is present. Invalid icon files block the listing check, just like invalid previews.</p>
           </section>
 
           <section class="docs-section" id="manifest"><span class="step-number">02</span><h2>Add a manifest</h2><p>Create and validate the manifest before you submit.</p>
@@ -52,10 +53,10 @@
           <section class="docs-section" id="submit"><span class="step-number">03</span><h2>Submit your plugin</h2><p>Open the issue form with your repository link, category, and tags. Automated validation checks the current commit before a maintainer approves the listing.</p><p class="submit-action"><a class="button publish-primary" href="https://github.com/omacom/omarchy-plugin-marketplace/issues/new?template=submit-plugin.yml" target="_blank" rel="noreferrer">Submit your plugin <span aria-hidden="true">↗</span></a></p></section>
         </main>
       </div>
-      <aside class="right-aside"><div class="aside-block"><span class="aside-title">On this page</span><a class="aside-link active" href="#overview">Overview</a><a class="aside-link" href="#requirements">Prepare</a><a class="aside-link" href="#manifest">Manifest</a><a class="aside-link" href="#submit">Submit</a></div><div class="aside-block"><span class="aside-title">Metadata</span><dl class="aside-meta"><div><dt>Status</dt><dd><span class="status-label">Stable</span></dd></div><div><dt>Owner</dt><dd><a href="https://github.com/HANCORE-linux" target="_blank" rel="noreferrer">HANCORE</a></dd></div><div><dt>Visibility</dt><dd>Public</dd></div><div><dt>Updated</dt><dd><time datetime="2026-08-20T10:00:00+02:00"><span>20 Aug 2026</span><small>10:00 CEST</small></time></dd></div></dl></div></aside>
+      <aside class="right-aside"><div class="aside-block"><span class="aside-title">On this page</span><a class="aside-link active" href="#overview">Overview</a><a class="aside-link" href="#requirements">Prepare</a><a class="aside-link" href="#manifest">Manifest</a><a class="aside-link" href="#submit">Submit</a></div><div class="aside-block"><span class="aside-title">Metadata</span><dl class="aside-meta"><div><dt>Status</dt><dd><span class="status-label">Stable</span></dd></div><div><dt>Owner</dt><dd><a href="https://github.com/HANCORE-linux" target="_blank" rel="noreferrer">HANCORE</a></dd></div><div><dt>Visibility</dt><dd>Public</dd></div><div><dt>Updated</dt><dd><time datetime="2026-11-16T10:00:00+01:00"><span>16 Nov 2026</span><small>10:00 CET</small></time></dd></div></dl></div></aside>
     </div>
     <nav class="mobile-bottom" aria-label="Mobile navigation"><a href="index.html">Browse</a><a class="active" href="#overview" data-section-ids="overview requirements">Guide</a><a href="#manifest">Manifest</a><a href="#submit">Submit</a></nav>
     <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
-    <script type="module" src="assets/js/publish.js?v=20261105-05"></script>
+    <script type="module" src="assets/js/publish.js?v=20261116-01"></script>
   </body>
 </html>

@@ -83,6 +83,21 @@ test("plugin preview uses an escaped native button", () => {
   assert.doesNotMatch(html, /<figure class="detail-preview"|<span data-injected>/);
 });
 
+test("detail title shows the listing icon and falls back to initials", () => {
+  const withoutIcon = render();
+  assert.match(withoutIcon, /<div class="detail-title"><span class="detail-icon">CP<\/span><h1>Community Plugin<\/h1><\/div>/);
+
+  const withIcon = render({
+    iconImage: `assets/img/plugins/example-icon.webp\"><span data-injected>Unsafe</span>`,
+    iconWidth: 128,
+    iconHeight: 128,
+  });
+  assert.match(withIcon, /<div class="detail-title"><span class="detail-icon detail-icon-art"><img src="assets\/img\/plugins\/example-icon\.webp&quot;&gt;&lt;span data-injected&gt;Unsafe&lt;\/span&gt;"/);
+  assert.match(withIcon, /alt="" width="128" height="128" loading="lazy" decoding="async">/);
+  assert.doesNotMatch(withIcon, /<span data-injected>/);
+  assert.doesNotMatch(withIcon, /<span class="detail-icon">CP<\/span>/);
+});
+
 test("preview lightbox keeps untrusted alt text inert and restores focus", () => {
   const listenersFor = (element) => {
     element.listeners = new Map();

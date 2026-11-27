@@ -46,7 +46,7 @@ export const catalogRefreshGraphqlPointsPerBatchReserve = 10;
 const catalogRefreshGraphqlAttempts = 3;
 const catalogRefreshRestBudgetAttempts = 3;
 export const catalogRefreshRestBudgetReserve = 500;
-export const catalogSourceValidationVersion = 1;
+export const catalogSourceValidationVersion = 2;
 const accents = ["lime", "amber", "coral", "cyan", "violet", "rose"];
 const supportedKinds = new Set(["bar", "bar-widget", "menu", "overlay", "panel", "service"]);
 const supportedPreviewFormats = new Set(["png", "jpeg", "webp", "avif", "heif"]);
@@ -55,6 +55,8 @@ const builtInTaxonomyTags = Object.freeze({
   "omarchy.polkit": ["security"],
 });
 const defaultPreviewPattern = /^preview\.(?:png|jpe?g|webp|avif)$/i;
+const defaultIconPattern = /^icon\.(?:png|jpe?g|webp|avif)$/i;
+export const listingIconSize = 128;
 export const manifestFieldLimits = Object.freeze({
   id: 128,
   name: 120,
@@ -72,6 +74,7 @@ const errorCodes = new Set([
   "readme-missing",
   "license-missing",
   "preview-invalid",
+  "icon-invalid",
   "unsupported-repository-layout",
 ]);
 
@@ -1060,13 +1063,25 @@ function previewExtension(path) {
   checkError("preview-invalid", `Unsupported preview image extension: ${extension || "none"}`);
 }
 
+export function iconPathFor(context) {
+  const candidates = context.tree
+    .filter((entry) => !entry.path.includes("/") && isBlob(entry) && defaultIconPattern.test(entry.path))
+    .map((entry) => entry.path);
+  const priority = ["icon.png", "icon.webp", "icon.jpg", "icon.jpeg", "icon.avif"];
+  return candidates.sort((left, right) => {
+    const leftIndex = priority.indexOf(left.toLowerCase());
+    const rightIndex = priority.indexOf(right.toLowerCase());
+    return leftIndex - rightIndex || left.localeCompare(right);
+  })[0] || "";
+}
+
 export function previewFileBase(repository) {
   const owner = repository.owner.toLowerCase();
   const name = repository.repository.toLowerCase();
   return `${owner.length}-${owner}-${name}`;
 }
 
-export function validatePreviewMetadata(metadata, label = "Preview") {
+export function validatePreviewMetadata(metadata, label = "Preview", code = "preview-invalid") {
   if (
     !supportedPreviewFormats.has(metadata?.format)
     || !Number.isSafeInteger(metadata.width)
@@ -1076,7 +1091,7 @@ export function validatePreviewMetadata(metadata, label = "Preview") {
     || metadata.width > previewPixelLimit / metadata.height
   ) {
     checkError(
-      "preview-invalid",
+      code,
       `${label} must be a valid PNG, JPEG, WebP, or AVIF image within the ${previewPixelLimit}-pixel limit`,
     );
   }
@@ -1141,6 +1156,45 @@ export async function optimizePreviewBuffer(buffer, repository) {
   }
 }
 
+export async function optimizeIconBuffer(buffer, repository) {
+  try {
+    const image = sharp(buffer, {
+      failOn: "error",
+      limitInputPixels: previewPixelLimit,
+    });
+    const metadata = validatePreviewMetadata(
+      await image.metadata(),
+      `${repository.slug} icon`,
+      "icon-invalid",
+    );
+    const icon = await image
+      .clone()
+      .rotate()
+      .resize({
+        width: listingIconSize,
+        height: listingIconSize,
+        fit: "contain",
+        background: { r: 0, g: 0, b: 0, alpha: 0 },
+      })
+      .webp({ quality: 88, alphaQuality: 95, effort: 4, smartSubsample: true })
+      .toBuffer({ resolveWithObject: true });
+    const fileName = `${previewFileBase(repository)}-icon.webp`;
+    return {
+      outputs: [{ fileName, buffer: icon.data }],
+      metadata: {
+        iconImage: `assets/img/plugins/${fileName}`,
+        iconWidth: icon.info.width,
+        iconHeight: icon.info.height,
+        iconSourceWidth: metadata.width,
+        iconSourceHeight: metadata.height,
+      },
+    };
+  } catch (error) {
+    if (error instanceof CatalogCheckError) throw error;
+    checkError("icon-invalid", `${repository.slug}: icon could not be decoded safely`);
+  }
+}
+
 async function loadSnapshotPreview(source, context) {
   const path = previewPathFor(source, context);
   if (!path) return null;
@@ -1159,21 +1213,53 @@ async function loadSnapshotPreview(source, context) {
   return optimizePreviewBuffer(buffer, context.repository);
 }
 
-async function stageSnapshotPreview(snapshot, stageDirectory) {
-  if (!snapshot) return;
-  for (const output of snapshot.outputs) {
-    await writeFile(resolve(stageDirectory, output.fileName), output.buffer);
+async function loadSnapshotIcon(context) {
+  const path = iconPathFor(context);
+  if (!path) return null;
+  const entry = treeEntry(context, path);
+  if (!isBlob(entry) || !Number.isFinite(entry.size) || entry.size < 1 || entry.size > previewByteLimit) {
+    checkError("icon-invalid", `${context.repository.slug}: ${path} is missing, linked, or too large`);
+  }
+  const buffer = await readSnapshotBuffer(
+    context.repository,
+    path,
+    context.commitSha,
+    previewByteLimit,
+    "icon-invalid",
+  );
+  return optimizeIconBuffer(buffer, context.repository);
+}
+
+export async function loadSnapshotAssets(source, context) {
+  const preview = await loadSnapshotPreview(source, context);
+  const icon = await loadSnapshotIcon(context);
+  return {
+    preview,
+    icon,
+    snapshots: [preview, icon].filter(Boolean),
+    metadata: {
+      ...(preview?.metadata || {}),
+      ...(icon?.metadata || {}),
+    },
+  };
+}
+
+async function stageSnapshotAssets(assets, stageDirectory) {
+  for (const snapshot of assets.snapshots) {
+    for (const output of snapshot.outputs) {
+      await writeFile(resolve(stageDirectory, output.fileName), output.buffer);
+    }
   }
 }
 
-export async function validateBeforeStagingPreview({
-  loadPreview,
+export async function validateBeforeStagingAssets({
+  loadAssets,
   validateSource,
-  stagePreview,
+  stageAssets,
 }) {
-  const snapshot = await loadPreview();
-  const result = await validateSource(snapshot?.metadata || null);
-  if (snapshot) await stagePreview(snapshot);
+  const assets = await loadAssets();
+  const result = await validateSource(assets?.metadata || null);
+  if (assets) await stageAssets(assets);
   return result;
 }
 
@@ -1463,7 +1549,7 @@ export function applyVersionState(plugins, previousPlugins, checkedAt) {
   });
 }
 
-function suitePlugin(source, context, preview) {
+function suitePlugin(source, context, assets) {
   if (!source.catalog?.id || !source.catalog?.name) {
     checkError("unsupported-repository-layout", `${context.repository.slug}: suite metadata is incomplete`);
   }
@@ -1486,11 +1572,11 @@ function suitePlugin(source, context, preview) {
     license: "See repository",
     ...repositoryMetadata(context.metadata),
     ...(context.repositoryRelease ? { repositoryRelease: context.repositoryRelease } : {}),
-    ...(preview || {}),
+    ...(assets || {}),
   };
 }
 
-export async function discoveredPlugins(source, context, preview) {
+export async function discoveredPlugins(source, context, assets) {
   const manifestPaths = context.tree
     .filter((entry) => isBlob(entry) && /^(?:[^/]+\/)?manifest\.json$/i.test(entry.path))
     .map((entry) => entry.path)
@@ -1556,7 +1642,7 @@ export async function discoveredPlugins(source, context, preview) {
       accent: accentFor(manifest.id),
       initials: initials(manifest.name),
       kind: kindFor(kinds),
-      ...(preview || {}),
+      ...(assets || {}),
       ...registryPresentation(overrides),
     });
   }
@@ -1751,7 +1837,7 @@ export async function inspectSubmission(repoUrl) {
   const context = await resolveSnapshot(source);
   validateRepositoryDocs(context);
   const manifests = await inspectPluginManifests(context, { submission: true });
-  const preview = await loadSnapshotPreview(source, context);
+  const assets = await loadSnapshotAssets(source, context);
   return {
     repository: context.repository.slug,
     defaultBranch: context.branch,
@@ -1759,7 +1845,8 @@ export async function inspectSubmission(repoUrl) {
     treeSha: context.treeSha,
     description: context.metadata.description || "",
     license: "repository-file",
-    preview: Boolean(preview),
+    preview: Boolean(assets.preview),
+    icon: Boolean(assets.icon),
     manifests,
   };
 }
@@ -1782,6 +1869,7 @@ export async function inspectListedPluginSource(source) {
     description: context.metadata.description || "",
     license: "repository-file",
     preview: false,
+    icon: false,
     manifests,
   };
 }
@@ -1802,7 +1890,7 @@ async function seedPreviewStage(stageDirectory, sourceDirectory = previewDirecto
 async function prunePreviewStage(stageDirectory, plugins) {
   const referenced = new Set();
   for (const plugin of plugins) {
-    for (const field of ["previewImage", "previewThumbnail"]) {
+    for (const field of ["previewImage", "previewThumbnail", "iconImage"]) {
       const value = plugin[field];
       if (typeof value === "string" && value.startsWith("assets/img/plugins/")) {
         referenced.add(value.slice("assets/img/plugins/".length));
@@ -2260,16 +2348,16 @@ async function buildCatalogInternal(options = {}) {
           sourcePlan.incremental,
         );
         validateRepositoryDocs(context);
-        const discovered = await validateBeforeStagingPreview({
-          loadPreview: () => loadSnapshotPreview(source, context),
-          validateSource: (preview) => (
+        const discovered = await validateBeforeStagingAssets({
+          loadAssets: () => loadSnapshotAssets(source, context),
+          validateSource: (assets) => (
             source.type === "suite"
-              ? [suitePlugin(source, context, preview)]
+              ? [suitePlugin(source, context, assets)]
               : source.type === "plugin-source"
-                ? discoveredPlugins(source, context, preview)
+                ? discoveredPlugins(source, context, assets)
                 : checkError("unsupported-repository-layout", `${source.repo}: unsupported source type`)
           ),
-          stagePreview: (snapshot) => stageSnapshotPreview(snapshot, stageDirectory),
+          stageAssets: (assets) => stageSnapshotAssets(assets, stageDirectory),
         });
         plugins.push(...discovered.map((plugin) => successfulState(
           plugin,

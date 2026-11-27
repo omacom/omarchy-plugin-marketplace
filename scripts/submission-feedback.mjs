@@ -68,6 +68,10 @@ const feedback = Object.freeze({
     reason: "The optional preview image is invalid or exceeds the supported limits.",
     action: "Replace or remove the root preview and edit the issue to retry.",
   },
+  "icon-invalid": {
+    reason: "The optional listing icon is invalid or exceeds the supported limits.",
+    action: "Replace or remove the root icon and edit the issue to retry.",
+  },
   "unsupported-repository-layout": {
     reason: "New submissions require one plugin with `manifest.json` in the repository root.",
     action: "Move the plugin to the supported repository layout and edit the issue to retry.",
@@ -237,6 +241,7 @@ export function publicSubmissionFailure(error, { phase = "validation" } = {}) {
     "readme-missing",
     "license-missing",
     "preview-invalid",
+    "icon-invalid",
     "unsupported-repository-layout",
     "plugin-id-listed",
     "plugin-id-retired",
