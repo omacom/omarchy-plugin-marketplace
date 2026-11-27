@@ -454427,6 +454427,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/nkoder1820-lang/keyglow",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T02:14:45.791Z",
+      "listingValidatedCommit": "3c73d1fb06c19c715502baad56ee52877ab6ec71",
+      "listingValidatedAt": "2026-11-27T02:14:45.791Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "nkoder1820-lang/keyglow",
+        "pluginIds": [
+          "io.github.nkoder1820-lang.keyglow"
+        ],
+        "commit": "3c73d1fb06c19c715502baad56ee52877ab6ec71",
+        "checkedAt": "2026-11-27T02:14:45.586Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "nkoder1820-lang/keyglow",
+        "pluginIds": [
+          "io.github.nkoder1820-lang.keyglow"
+        ],
+        "commit": "3c73d1fb06c19c715502baad56ee52877ab6ec71",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T02:14:45.586Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-26T20:00:05.036Z",
+        "requestEventId": 37427719085,
+        "requestedAt": "2026-11-27T02:14:13Z",
+        "reviewedAt": "2026-11-27T02:14:45.586Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.nkoder1820-lang.keyglow": {
+          "category": "Hardware",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
