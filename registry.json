@@ -455654,6 +455654,71 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/MatyasHolba/omarchy-bandwidth-limiter",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T14:16:04.716Z",
+      "listingValidatedCommit": "df0c2f96a8b59698cbf2d1ca2430350465cef72b",
+      "listingValidatedAt": "2026-11-27T14:16:04.716Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "matyasholba/omarchy-bandwidth-limiter",
+        "pluginIds": [
+          "io.github.matyasholba.bandwidth-limiter"
+        ],
+        "commit": "df0c2f96a8b59698cbf2d1ca2430350465cef72b",
+        "checkedAt": "2026-11-27T14:16:04.564Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "matyasholba/omarchy-bandwidth-limiter",
+        "pluginIds": [
+          "io.github.matyasholba.bandwidth-limiter"
+        ],
+        "commit": "df0c2f96a8b59698cbf2d1ca2430350465cef72b",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T14:16:04.564Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T13:52:08.129Z",
+        "requestEventId": 37477099767,
+        "requestedAt": "2026-11-27T14:00:18Z",
+        "reviewedAt": "2026-11-27T14:16:04.564Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.matyasholba.bandwidth-limiter": {
+          "category": "System",
+          "tags": [
+            "bar",
+            "quickshell",
+            "system"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
