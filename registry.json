@@ -454991,6 +454991,40 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/TouchSeyha/omarchy-quick-start",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T07:38:27.785Z",
+      "listingValidatedCommit": "5b644f03aa88c7eef62df219bd7141cb86f1b1d0",
+      "listingValidatedAt": "2026-11-27T07:38:27.785Z",
+      "listingValidatedBranch": "master",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "touchseyha/omarchy-quick-start",
+        "pluginIds": [
+          "touchseyha.quick-start"
+        ],
+        "commit": "5b644f03aa88c7eef62df219bd7141cb86f1b1d0",
+        "checkedAt": "2026-11-27T07:38:27.603Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "touchseyha.quick-start": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
