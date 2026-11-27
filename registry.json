@@ -454932,6 +454932,65 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/t4t5/omarchy-spaces",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T07:19:31.938Z",
+      "listingValidatedCommit": "aa12ba1bde26ad9ca08507986428439b6bc4b0be",
+      "listingValidatedAt": "2026-11-27T07:19:31.938Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "t4t5/omarchy-spaces",
+        "pluginIds": [
+          "com.t4t5.spaces"
+        ],
+        "commit": "aa12ba1bde26ad9ca08507986428439b6bc4b0be",
+        "checkedAt": "2026-11-27T07:19:31.722Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "t4t5/omarchy-spaces",
+        "pluginIds": [
+          "com.t4t5.spaces"
+        ],
+        "commit": "aa12ba1bde26ad9ca08507986428439b6bc4b0be",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T07:19:31.722Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "installer",
+          "package-manager"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T06:30:54.697Z",
+        "requestEventId": 37444877145,
+        "requestedAt": "2026-11-27T07:18:52Z",
+        "reviewedAt": "2026-11-27T07:19:31.722Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "com.t4t5.spaces": {
+          "category": "Productivity",
+          "tags": [
+            "hyprland",
+            "quickshell",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
