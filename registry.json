@@ -454552,6 +454552,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/joonsp/omarchy-numbrero",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T02:45:59.543Z",
+      "listingValidatedCommit": "2efd50d9a1bb284f7f70b4c50772a4379aa25379",
+      "listingValidatedAt": "2026-11-27T02:45:59.543Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "joonsp/omarchy-numbrero",
+        "pluginIds": [
+          "io.github.joonsp.numbrero"
+        ],
+        "commit": "2efd50d9a1bb284f7f70b4c50772a4379aa25379",
+        "checkedAt": "2026-11-27T02:45:59.362Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "io.github.joonsp.numbrero": {
+          "category": "Productivity",
+          "tags": [
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
