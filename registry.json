@@ -455530,6 +455530,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/andrecards/openbot-agent-dock",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T13:16:08.417Z",
+      "listingValidatedCommit": "037c8133eb6ba436454ed5e093e41f5ad33548cc",
+      "listingValidatedAt": "2026-11-27T13:16:08.417Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "andrecards/openbot-agent-dock",
+        "pluginIds": [
+          "io.github.andrecards.openbot-dock"
+        ],
+        "commit": "037c8133eb6ba436454ed5e093e41f5ad33548cc",
+        "checkedAt": "2026-11-27T13:16:08.252Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "andrecards/openbot-agent-dock",
+        "pluginIds": [
+          "io.github.andrecards.openbot-dock"
+        ],
+        "commit": "037c8133eb6ba436454ed5e093e41f5ad33548cc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T13:16:08.252Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "remote-build",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T05:10:33.149Z",
+        "requestEventId": 37473178724,
+        "requestedAt": "2026-11-27T13:15:31Z",
+        "reviewedAt": "2026-11-27T13:16:08.252Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.andrecards.openbot-dock": {
+          "category": "Widgets",
+          "tags": [
+            "ai",
+            "bar",
+            "hyprland"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
