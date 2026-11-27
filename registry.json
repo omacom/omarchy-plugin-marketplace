@@ -455247,6 +455247,69 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/krhr5/omarchy-tailnet",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T11:06:40.851Z",
+      "listingValidatedCommit": "40c82a0d5a0a83554386c23060cd86bb05a736dc",
+      "listingValidatedAt": "2026-11-27T11:06:40.851Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "krhr5/omarchy-tailnet",
+        "pluginIds": [
+          "io.github.krhr5.omarchy-tailnet"
+        ],
+        "commit": "40c82a0d5a0a83554386c23060cd86bb05a736dc",
+        "checkedAt": "2026-11-27T11:06:40.643Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "krhr5/omarchy-tailnet",
+        "pluginIds": [
+          "io.github.krhr5.omarchy-tailnet"
+        ],
+        "commit": "40c82a0d5a0a83554386c23060cd86bb05a736dc",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T11:06:40.643Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "service-management"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T10:52:49.097Z",
+        "requestEventId": 37462565314,
+        "requestedAt": "2026-11-27T11:06:04Z",
+        "reviewedAt": "2026-11-27T11:06:40.643Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.krhr5.omarchy-tailnet": {
+          "category": "Widgets",
+          "tags": [
+            "vpn",
+            "bar",
+            "quickshell"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
