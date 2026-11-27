@@ -454868,6 +454868,70 @@
           "manifestPath": "manifest.json"
         }
       }
+    },
+    {
+      "repo": "https://github.com/cjdotson12/omarchy-ytmusic-panel",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T05:57:30.808Z",
+      "listingValidatedCommit": "2a1ca642d671e7c1e8ff8114da21b661293a8a1d",
+      "listingValidatedAt": "2026-11-27T05:57:30.808Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "cjdotson12/omarchy-ytmusic-panel",
+        "pluginIds": [
+          "io.github.cjdotson12.ytmusic-panel"
+        ],
+        "commit": "2a1ca642d671e7c1e8ff8114da21b661293a8a1d",
+        "checkedAt": "2026-11-27T05:57:30.607Z",
+        "outcome": "review-required",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ]
+      },
+      "maintainerVerificationReview": {
+        "schemaVersion": 1,
+        "repository": "cjdotson12/omarchy-ytmusic-panel",
+        "pluginIds": [
+          "io.github.cjdotson12.ytmusic-panel"
+        ],
+        "commit": "2a1ca642d671e7c1e8ff8114da21b661293a8a1d",
+        "baselineVersion": "3",
+        "enforcementMode": "selective",
+        "baselineCheckedAt": "2026-11-27T05:57:30.607Z",
+        "baselineOutcome": "review-required",
+        "findings": [],
+        "capabilities": [
+          "privilege",
+          "package-manager",
+          "installer"
+        ],
+        "reviewedBaselineCheckedAt": "2026-11-27T01:03:15.443Z",
+        "requestEventId": 37439790610,
+        "requestedAt": "2026-11-27T05:56:41Z",
+        "reviewedAt": "2026-11-27T05:57:30.607Z",
+        "reviewer": "HANCORE-linux"
+      },
+      "plugins": {
+        "io.github.cjdotson12.ytmusic-panel": {
+          "category": "Widgets",
+          "tags": [
+            "bar",
+            "media"
+          ],
+          "manifestPath": "manifest.json",
+          "installation": {
+            "mode": "manual",
+            "note": "This plugin requires additional setup before it can be enabled. Follow the upstream installation instructions."
+          }
+        }
+      }
     }
   ],
   "builtInSources": [
