@@ -455346,6 +455346,39 @@
           }
         }
       }
+    },
+    {
+      "repo": "https://github.com/OrzSabaku/omarchy-dock-indicator",
+      "type": "plugin-source",
+      "addedAt": "2026-11-27",
+      "listedAt": "2026-11-27T11:47:31.081Z",
+      "listingValidatedCommit": "b551f76cabcf83629b5e781be50062e78bf2fdc7",
+      "listingValidatedAt": "2026-11-27T11:47:31.081Z",
+      "listingValidatedBranch": "main",
+      "automatedSecurityBaseline": {
+        "schemaVersion": 1,
+        "version": "3",
+        "repository": "orzsabaku/omarchy-dock-indicator",
+        "pluginIds": [
+          "sabaku.dock"
+        ],
+        "commit": "b551f76cabcf83629b5e781be50062e78bf2fdc7",
+        "checkedAt": "2026-11-27T11:47:30.863Z",
+        "outcome": "passed",
+        "enforcementMode": "selective",
+        "findings": [],
+        "capabilities": []
+      },
+      "plugins": {
+        "sabaku.dock": {
+          "category": "Desktop",
+          "tags": [
+            "hyprland",
+            "workspaces"
+          ],
+          "manifestPath": "manifest.json"
+        }
+      }
     }
   ],
   "builtInSources": [
