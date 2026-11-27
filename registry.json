@@ -453958,8 +453958,8 @@
       "type": "plugin-source",
       "addedAt": "2026-11-26",
       "listedAt": "2026-11-26T13:13:10.865Z",
-      "listingValidatedCommit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
-      "listingValidatedAt": "2026-11-26T13:13:10.865Z",
+      "listingValidatedCommit": "2213ce261dd54153a92221feb28121a34328a552",
+      "listingValidatedAt": "2026-11-26T23:58:44.246Z",
       "listingValidatedBranch": "main",
       "automatedSecurityBaseline": {
         "schemaVersion": 1,
@@ -453968,8 +453968,8 @@
         "pluginIds": [
           "io.github.advocu.grokipedia"
         ],
-        "commit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
-        "checkedAt": "2026-11-26T13:13:10.700Z",
+        "commit": "2213ce261dd54153a92221feb28121a34328a552",
+        "checkedAt": "2026-11-26T23:58:44.246Z",
         "outcome": "passed",
         "enforcementMode": "selective",
         "findings": [],
@@ -453985,7 +453985,29 @@
           ],
           "manifestPath": "manifest.json"
         }
-      }
+      },
+      "listingValidationHistory": [
+        {
+          "commit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
+          "validatedAt": "2026-11-26T13:13:10.865Z",
+          "branch": "main",
+          "supersededAt": "2026-11-26T23:58:44.246Z",
+          "automatedSecurityBaseline": {
+            "schemaVersion": 1,
+            "version": "3",
+            "repository": "advocu/omarchy-grokipedia",
+            "pluginIds": [
+              "io.github.advocu.grokipedia"
+            ],
+            "commit": "0b260bdb7cfb3a49f63c625b33253373315ffe1f",
+            "checkedAt": "2026-11-26T13:13:10.700Z",
+            "outcome": "passed",
+            "enforcementMode": "selective",
+            "findings": [],
+            "capabilities": []
+          }
+        }
+      ]
     },
     {
       "repo": "https://github.com/dragosol/hyprpillbar",
